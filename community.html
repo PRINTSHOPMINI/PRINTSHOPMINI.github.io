@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>공지사항 - 프린트샵미니</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#1B8AC4;--blue-hover:#1470A8;--blue-light:#E8F4FC;--blue-mid:#4AAAD6;
+  --text:#111827;--text2:#374151;--text3:#6B7280;--border:#E5E7EB;
+  --bg:#F9FAFB;--white:#FFFFFF;--radius:14px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--white);line-height:1.7;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:70px;display:flex;align-items:center;padding:0 6%}
+.nav-logo{display:flex;align-items:center;gap:10px;flex-shrink:0;margin-right:48px}
+.nav-logo-name{font-size:17px;font-weight:900;color:var(--blue);letter-spacing:-0.5px}
+.nav-links{display:flex;list-style:none;gap:2px;flex:1}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);padding:8px 16px;border-radius:8px;transition:all .18s}
+.nav-links a:hover,.nav-links a.active{color:var(--blue);background:var(--blue-light)}
+.nav-right{display:flex;align-items:center;gap:0;margin-left:auto}
+.nav-cta{background:var(--blue);color:white;font-size:13px;font-weight:700;padding:9px 22px;border-radius:50px;transition:background .2s;white-space:nowrap}
+.nav-cta:hover{background:var(--blue-hover)}
+.nav-raccoon{width:56px;height:56px;flex-shrink:0;margin-left:6px;position:relative;top:2px}
+.nav-raccoon img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.15));transition:transform .3s}
+.nav-raccoon:hover img{transform:rotate(-8deg) scale(1.08)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{width:22px;height:2px;background:var(--text);border-radius:2px;display:block}
+
+/* PAGE HEADER */
+.page-header{margin-top:70px;background:var(--white);border-bottom:1px solid var(--border);padding:52px 6% 44px}
+.ph-inner{max-width:1160px;margin:0 auto}
+.ph-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:var(--blue);letter-spacing:1px;margin-bottom:14px}
+.ph-eyebrow::before{content:'';width:20px;height:2px;background:var(--blue);border-radius:2px}
+.ph-h1{font-size:clamp(28px,4vw,48px);font-weight:900;letter-spacing:-2px;margin-bottom:10px}
+.ph-sub{font-size:15px;color:var(--text3)}
+
+/* MAIN LAYOUT */
+.comm-wrap{max-width:1160px;margin:0 auto;padding:48px 6%;display:grid;grid-template-columns:1fr 300px;gap:40px}
+
+/* BOARD */
+.board-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:12px}
+.board-title{font-size:20px;font-weight:900;letter-spacing:-.5px}
+.write-btn{background:var(--blue);color:white;font-size:13px;font-weight:700;padding:9px 22px;border-radius:50px;border:none;cursor:pointer;transition:background .2s;font-family:'Noto Sans KR',sans-serif}
+.write-btn:hover{background:var(--blue-hover)}
+
+/* CATEGORY TABS */
+.cat-tabs{display:flex;gap:6px;margin-bottom:20px;flex-wrap:wrap}
+.cat-tab{font-size:13px;font-weight:700;padding:7px 18px;border-radius:50px;border:1.5px solid var(--border);color:var(--text3);cursor:pointer;transition:all .2s;background:var(--white)}
+.cat-tab:hover{border-color:var(--blue);color:var(--blue)}
+.cat-tab.on{background:var(--blue);color:white;border-color:var(--blue)}
+
+/* SEARCH */
+.search-bar{display:flex;gap:8px;margin-bottom:24px}
+.search-input{flex:1;border:1.5px solid var(--border);border-radius:10px;padding:10px 16px;font-size:14px;font-family:'Noto Sans KR',sans-serif;outline:none;transition:border-color .2s}
+.search-input:focus{border-color:var(--blue)}
+.search-btn{background:var(--blue);color:white;border:none;border-radius:10px;padding:10px 20px;font-size:14px;font-weight:700;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:background .2s}
+.search-btn:hover{background:var(--blue-hover)}
+
+/* POST LIST */
+.post-list{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.post-list-hd{display:grid;grid-template-columns:80px 1fr 80px 80px 60px;gap:12px;padding:12px 20px;background:var(--bg);font-size:12px;font-weight:700;color:var(--text3);border-bottom:1px solid var(--border)}
+.post-row{display:grid;grid-template-columns:80px 1fr 80px 80px 60px;gap:12px;padding:14px 20px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .15s;align-items:center}
+.post-row:last-child{border-bottom:none}
+.post-row:hover{background:var(--blue-light)}
+.pb{font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;display:inline-block;text-align:center}
+.pn{background:var(--blue);color:white}
+.pr{background:#FFF3E0;color:#E65100}
+.pq{background:#E8F5E9;color:#2E7D32}
+.pp{background:#F3E8FF;color:#6B21A8}
+.pt{font-size:14px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pt .new{display:inline-block;width:6px;height:6px;background:#EF4444;border-radius:50%;margin-left:5px;vertical-align:middle}
+.pm{font-size:12px;color:var(--text3)}
+.pv{font-size:12px;color:var(--text3);text-align:center}
+.pl{font-size:12px;color:var(--text3);text-align:center}
+
+/* NOTICE PINNED */
+.post-row.notice{background:#FAFBFF}
+.post-row.notice .pt{color:var(--blue)}
+
+/* PAGINATION */
+.pagination{display:flex;justify-content:center;gap:4px;margin-top:24px}
+.pg-btn{width:36px;height:36px;border:1.5px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;background:var(--white);color:var(--text2)}
+.pg-btn:hover,.pg-btn.on{background:var(--blue);color:white;border-color:var(--blue)}
+
+/* SIDEBAR */
+.sidebar{display:flex;flex-direction:column;gap:20px}
+.side-box{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px}
+.side-box-title{font-size:15px;font-weight:900;letter-spacing:-.5px;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.side-box-title::before{content:'';width:4px;height:18px;background:var(--blue);border-radius:2px;display:block}
+
+/* HOT POSTS */
+.hot-list{display:flex;flex-direction:column;gap:10px}
+.hot-item{display:flex;align-items:flex-start;gap:10px;cursor:pointer;padding:8px;border-radius:8px;transition:background .15s}
+.hot-item:hover{background:var(--bg)}
+.hot-num{font-size:20px;font-weight:900;color:var(--border);line-height:1;flex-shrink:0;width:24px}
+.hot-num.top{color:var(--blue)}
+.hot-t{font-size:13px;line-height:1.5;font-weight:500}
+.hot-m{font-size:11px;color:var(--text3);margin-top:2px}
+
+/* STATS */
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stat-item{background:var(--bg);border-radius:10px;padding:14px;text-align:center}
+.stat-n{font-size:22px;font-weight:900;color:var(--blue)}
+.stat-l{font-size:11px;color:var(--text3);margin-top:2px}
+
+/* NOTICE BOX */
+.notice-list{display:flex;flex-direction:column;gap:8px}
+.notice-item{display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer;padding:6px;border-radius:8px;transition:background .15s}
+.notice-item:hover{background:var(--bg)}
+.notice-item::before{content:'📌';font-size:12px;flex-shrink:0}
+
+/* WRITE MODAL */
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:500;align-items:center;justify-content:center}
+.modal-bg.open{display:flex}
+.modal{background:white;border-radius:20px;padding:36px;width:90%;max-width:600px;max-height:90vh;overflow-y:auto;position:relative}
+.modal-close{position:absolute;top:16px;right:20px;background:none;border:none;font-size:24px;cursor:pointer;color:var(--text3);line-height:1}
+.modal-title{font-size:22px;font-weight:900;letter-spacing:-.5px;margin-bottom:24px}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:13px;font-weight:700;margin-bottom:6px;color:var(--text2)}
+.form-group input,.form-group select,.form-group textarea{width:100%;border:1.5px solid var(--border);border-radius:10px;padding:10px 14px;font-size:14px;font-family:'Noto Sans KR',sans-serif;outline:none;transition:border-color .2s;color:var(--text)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--blue)}
+.form-group textarea{resize:vertical;min-height:140px}
+.modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:24px}
+.btn-cancel{background:var(--bg);color:var(--text2);border:none;padding:11px 24px;border-radius:50px;font-size:14px;font-weight:700;cursor:pointer;font-family:'Noto Sans KR',sans-serif}
+.btn-submit{background:var(--blue);color:white;border:none;padding:11px 28px;border-radius:50px;font-size:14px;font-weight:700;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:background .2s}
+.btn-submit:hover{background:var(--blue-hover)}
+
+/* TOAST */
+.toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#111;color:white;padding:12px 28px;border-radius:50px;font-size:14px;font-weight:700;z-index:999;transition:transform .3s;pointer-events:none}
+.toast.show{transform:translateX(-50%) translateY(0)}
+
+/* FOOTER */
+footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
+.ft-inner{max-width:1160px;margin:0 auto}
+.ft-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+.ft-brand-name{font-size:17px;font-weight:900;color:white;margin-bottom:12px}
+.ft-col p{font-size:13px;line-height:1.9}
+.ft-col h4{font-size:14px;font-weight:700;color:white;margin-bottom:14px}
+.ft-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.ft-col ul li a{font-size:13px;transition:color .2s}
+.ft-col ul li a:hover{color:white}
+.ft-bottom{border-top:1px solid #374151;padding-top:24px;display:flex;justify-content:space-between;font-size:12px;flex-wrap:wrap;gap:8px}
+
+/* CHAT FAB */
+.chat-fab{position:fixed;bottom:28px;right:28px;width:52px;height:52px;background:var(--blue);border:none;border-radius:50%;font-size:20px;cursor:pointer;box-shadow:0 4px 20px rgba(27,138,196,0.4);z-index:200;display:flex;align-items:center;justify-content:center;transition:transform .2s}
+.chat-fab:hover{transform:scale(1.1)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .comm-wrap{grid-template-columns:1fr;padding:32px 5%}
+  .sidebar{display:none}
+  .post-list-hd{grid-template-columns:70px 1fr 70px 50px;display:none}
+  .post-row{grid-template-columns:70px 1fr 70px 50px}
+  .pl{display:none}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+}
+@media(max-width:600px){
+  .post-row{grid-template-columns:auto 1fr auto}
+  .pm,.pv{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-name">🦝 프린트샵미니</div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="services.html">서비스</a></li>
+    <li><a href="about.html">소개</a></li>
+    <li><a href="branches.html">지점찾기</a></li>
+    <li><a href="community.html" class="active">커뮤니티</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="branches.html" class="nav-cta">지점 찾기</a>
+    <div class="nav-raccoon">
+      <img src="https://api.dicebear.com/7.x/bottts/svg?seed=raccoon&backgroundColor=b6e3f4" alt="라쿤">
+    </div>
+  </div>
+  <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="ph-inner">
+    <div class="ph-eyebrow">COMMUNITY</div>
+    <h1 class="ph-h1">공지사항</h1>
+    <p class="ph-sub">프린트샵미니의 최신 공지사항을 확인하세요</p>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="comm-wrap">
+  <!-- 게시판 영역 -->
+  <div>
+    <div class="board-top">
+      <div class="board-title">공지사항</div>
+    </div>
+
+    <!-- 검색 -->
+    <div class="search-bar">
+      <input class="search-input" type="text" placeholder="공지사항 검색..." id="searchInput" onkeydown="if(event.key==='Enter')doSearch()">
+      <button class="search-btn" onclick="doSearch()">검색</button>
+    </div>
+
+    <!-- 게시글 목록 -->
+    <div class="post-list">
+      <div class="post-list-hd">
+        <div>분류</div>
+        <div>제목</div>
+        <div>작성자</div>
+        <div>날짜</div>
+        <div style="text-align:center">조회</div>
+      </div>
+
+      <div class="post-row notice" onclick="openPost('신규 지점 오픈 안내 – 평택 서정리역점')">
+        <div><span class="pb pn">공지</span></div>
+        <div class="pt">신규 지점 오픈 안내 – 평택 서정리역점<span class="new"></span></div>
+        <div class="pm">관리자</div>
+        <div class="pm">2026.04.16</div>
+        <div class="pv">0</div>
+      </div>
+      <div class="post-row notice" onclick="openPost('프린트샵미니 서비스 이용 안내 (필독)')">
+        <div><span class="pb pn">공지</span></div>
+        <div class="pt">프린트샵미니 서비스 이용 시 매장 내 안내된 사용방법 반드시 먼저 확인 후 이용해주세요!</div>
+        <div class="pm">관리자</div>
+        <div class="pm">2026.04.16</div>
+        <div class="pv">0</div>
+      </div>
+      <div class="post-row notice" onclick="openPost('결제 후 출력물 미출력 시 안내')">
+        <div><span class="pb pn">공지</span></div>
+        <div class="pt">결제 후 출력물이 안나오는 경우 절대 재결제 하지 말고 매장에 안내된 연락처로 전화 또는 메시지 주세요!</div>
+        <div class="pm">관리자</div>
+        <div class="pm">2026.04.16</div>
+        <div class="pv">0</div>
+      </div>
+    </div>
+
+    <!-- 페이지네이션 -->
+    <div class="pagination">
+      <div class="pg-btn">‹</div>
+      <div class="pg-btn on">1</div>
+      <div class="pg-btn">›</div>
+    </div>
+  </div>
+
+  <!-- 사이드바 -->
+  <aside class="sidebar">
+    <!-- 공지사항 빠른 링크 -->
+    <div class="side-box">
+      <div class="side-box-title">공지사항</div>
+      <div class="notice-list">
+        <div class="notice-item" onclick="openPost('신규 지점 오픈 안내 – 평택 서정리역점')">신규 지점 오픈 안내 – 평택 서정리역점</div>
+        <div class="notice-item" onclick="openPost('프린트샵미니 서비스 이용 안내 (필독)')">서비스 이용 시 사용방법 먼저 확인해주세요!</div>
+        <div class="notice-item" onclick="openPost('결제 후 출력물 미출력 시 안내')">결제 후 출력 안될 시 재결제 금지!</div>
+      </div>
+    </div>
+
+    <!-- 고객센터 -->
+    <div class="side-box">
+      <div class="side-box-title">고객센터</div>
+      <!-- 전화번호 -->
+      <a href="tel:07088881912" style="display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;background:var(--blue);color:white;font-size:15px;font-weight:900;padding:13px 16px;border-radius:10px;letter-spacing:.5px;transition:background .2s"
+         onmouseover="this.style.background='var(--blue-hover)'" onmouseout="this.style.background='var(--blue)'">
+        📞 070-8888-1912
+      </a>
+      <!-- 운영시간 안내 -->
+      <div style="margin-top:14px;display:flex;flex-direction:column;gap:7px">
+        <div style="display:flex;justify-content:space-between;font-size:12px;padding:8px 12px;background:var(--bg);border-radius:8px">
+          <span style="font-weight:700;color:var(--text2)">🏪 매장 운영</span>
+          <span style="color:var(--blue);font-weight:700">365일 24시간</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:12px;padding:8px 12px;background:var(--bg);border-radius:8px">
+          <span style="font-weight:700;color:var(--text2)">📞 전화 문의</span>
+          <span style="color:var(--text2);font-weight:700">월~금 09:00~18:00</span>
+        </div>
+      </div>
+      <p style="font-size:11px;color:var(--text3);margin-top:10px;line-height:1.7;text-align:center">※ 전화 문의는 평일 오전 9시~오후 6시<br>운영됩니다. (주말·공휴일 제외)</p>
+    </div>
+  </aside>
+</div>
+
+<!-- 글쓰기 모달 -->
+<div class="modal-bg" id="writeModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <div class="modal-title">✏️ 글쓰기</div>
+    <div class="form-group">
+      <label>분류</label>
+      <select id="postCat">
+        <option>이용후기</option>
+        <option>질문</option>
+        <option>꿀팁</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>제목</label>
+      <input type="text" id="postTitle" placeholder="제목을 입력하세요">
+    </div>
+    <div class="form-group">
+      <label>내용</label>
+      <textarea id="postContent" placeholder="내용을 입력하세요. 개인정보(전화번호, 주소 등)는 포함하지 마세요."></textarea>
+    </div>
+    <div class="form-group">
+      <label>닉네임</label>
+      <input type="text" id="postNick" placeholder="홍**">
+    </div>
+    <div class="modal-actions">
+      <button class="btn-cancel" onclick="closeModal()">취소</button>
+      <button class="btn-submit" onclick="submitPost()">등록하기</button>
+    </div>
+  </div>
+</div>
+
+<!-- 토스트 -->
+<div class="toast" id="toast">게시글이 등록되었습니다!</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-inner">
+    <div class="ft-grid">
+      <div class="ft-col">
+        <div class="ft-brand-name">🦝 프린트샵미니</div>
+        <p>24시간 365일 운영되는<br>무인 셀프 프린트 전문점입니다.</p>
+      </div>
+      <div class="ft-col">
+        <h4>서비스</h4>
+        <ul>
+          <li><a href="services.html">인쇄 · 복사 · 스캔</a></li>
+          <li><a href="services.html">팩스 · 코팅 · 제본</a></li>
+          <li><a href="branches.html">지점 찾기</a></li>
+          <li><a href="community.html">커뮤니티</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>고객센터</h4>
+        <ul>
+          <li><a href="#">이메일 문의</a></li>
+          <li><a href="#">채팅 문의</a></li>
+          <li><a href="#">운영: 24시간 연중무휴</a></li>
+          <li><a href="#">사업자: 000-00-00000</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <p>© 2025 프린트샵미니. All rights reserved.</p>
+      <p>개인정보처리방침 · 이용약관</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){var w=window;if(w.ChannelIO){return;}var ch=function(){ch.c(arguments);};ch.q=[];ch.c=function(args){ch.q.push(args);};w.ChannelIO=ch;function l(){if(w.ChannelIOInitialized){return;}w.ChannelIOInitialized=true;var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="https://cdn.channel.io/plugin/ch-plugin-web.js";var x=document.getElementsByTagName("script")[0];if(x.parentNode){x.parentNode.insertBefore(s,x);}}if(document.readyState==="complete"){l();}else{w.addEventListener("DOMContentLoaded",l);w.addEventListener("load",l);}})();
+ChannelIO('boot', {"pluginKey": "d251d797-1c31-4bed-bfda-4cfce1cf127a"});
+</script>
+
+<script>
+function openModal(){document.getElementById('writeModal').classList.add('open')}
+function closeModal(){document.getElementById('writeModal').classList.remove('open')}
+function openPost(title){showToast('준비 중: '+title.substring(0,20)+'...')}
+function submitPost(){
+  var t=document.getElementById('postTitle').value.trim();
+  var c=document.getElementById('postContent').value.trim();
+  if(!t||!c){alert('제목과 내용을 입력해 주세요.');return;}
+  closeModal();
+  showToast('게시글이 등록되었습니다!');
+  document.getElementById('postTitle').value='';
+  document.getElementById('postContent').value='';
+  document.getElementById('postNick').value='';
+}
+function showToast(msg){
+  var t=document.getElementById('toast');
+  t.textContent=msg;t.classList.add('show');
+  setTimeout(function(){t.classList.remove('show')},2500);
+}
+function filterCat(el,cat){
+  document.querySelectorAll('.cat-tab').forEach(function(t){t.classList.remove('on')});
+  el.classList.add('on');
+}
+function doSearch(){
+  var q=document.getElementById('searchInput').value.trim();
+  if(q) showToast('"'+q+'" 검색 결과입니다 (데모)');
+}
+function toggleMenu(){
+  var m=document.querySelector('.nav-links');
+  if(m.style.display==='flex'){m.style.display='';return;}
+  Object.assign(m.style,{display:'flex',flexDirection:'column',position:'fixed',top:'70px',left:'0',right:'0',background:'white',padding:'16px 6%',borderBottom:'1px solid #E5E7EB',zIndex:'299',gap:'2px'});
+}
+document.getElementById('writeModal').addEventListener('click',function(e){if(e.target===this)closeModal()});
+</script>
+</body>
+</html>

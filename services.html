@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>서비스 안내 - 프린트샵미니</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#1B8AC4;--blue-hover:#1470A8;--blue-light:#E8F4FC;--blue-mid:#4AAAD6;
+  --text:#111827;--text2:#374151;--text3:#6B7280;--border:#E5E7EB;
+  --bg:#F9FAFB;--white:#FFFFFF;--radius:14px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--white);line-height:1.7;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:70px;display:flex;align-items:center;padding:0 6%}
+.nav-logo{display:flex;align-items:center;gap:10px;flex-shrink:0;margin-right:48px}
+.nav-logo-name{font-size:17px;font-weight:900;color:var(--blue);letter-spacing:-0.5px}
+.nav-links{display:flex;list-style:none;gap:2px;flex:1}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);padding:8px 16px;border-radius:8px;transition:all .18s}
+.nav-links a:hover,.nav-links a.active{color:var(--blue);background:var(--blue-light)}
+.nav-right{display:flex;align-items:center;gap:0;margin-left:auto}
+.nav-cta{background:var(--blue);color:white;font-size:13px;font-weight:700;padding:9px 22px;border-radius:50px;transition:background .2s;white-space:nowrap}
+.nav-cta:hover{background:var(--blue-hover)}
+.nav-raccoon{width:56px;height:56px;flex-shrink:0;margin-left:6px;position:relative;top:2px}
+.nav-raccoon img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.15));transition:transform .3s}
+.nav-raccoon:hover img{transform:rotate(-8deg) scale(1.08)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{width:22px;height:2px;background:var(--text);border-radius:2px;display:block}
+
+/* PAGE HEADER */
+.page-header{margin-top:70px;background:var(--white);border-bottom:1px solid var(--border);padding:52px 6% 44px}
+.ph-inner{max-width:1160px;margin:0 auto}
+.ph-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:var(--blue);letter-spacing:1px;margin-bottom:14px}
+.ph-eyebrow::before{content:'';width:20px;height:2px;background:var(--blue);border-radius:2px}
+.ph-h1{font-size:clamp(28px,4vw,48px);font-weight:900;letter-spacing:-2px;margin-bottom:10px}
+.ph-sub{font-size:15px;color:var(--text3)}
+
+/* SERVICE NAV (quick jump) */
+.svc-nav{background:var(--bg);border-bottom:1px solid var(--border);padding:0 6%;position:sticky;top:70px;z-index:100}
+.svc-nav-inner{max-width:1160px;margin:0 auto;display:flex;gap:0;overflow-x:auto}
+.svc-nav-inner::-webkit-scrollbar{display:none}
+.svc-nav-item{padding:16px 20px;font-size:13px;font-weight:700;color:var(--text3);white-space:nowrap;cursor:pointer;border-bottom:2px solid transparent;transition:all .2s}
+.svc-nav-item:hover,.svc-nav-item.on{color:var(--blue);border-bottom-color:var(--blue)}
+
+/* SECTION */
+.svc-section{padding:80px 6%;border-bottom:1px solid var(--border)}
+.svc-section:last-of-type{border-bottom:none}
+.svc-section.alt{background:var(--bg)}
+.sec-inner{max-width:1160px;margin:0 auto}
+.svc-top{display:flex;align-items:flex-start;gap:60px;margin-bottom:48px;flex-wrap:wrap}
+.svc-info{flex:1;min-width:260px}
+.svc-badge{display:inline-flex;align-items:center;gap:10px;margin-bottom:20px}
+.svc-icon-big{width:64px;height:64px;background:var(--blue-light);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:32px}
+.svc-num-label{font-size:12px;font-weight:700;color:var(--blue);letter-spacing:1.5px}
+.svc-h2{font-size:clamp(24px,3vw,38px);font-weight:900;letter-spacing:-1.5px;margin-bottom:12px}
+.svc-desc-long{font-size:15px;color:var(--text2);line-height:1.9;margin-bottom:24px;max-width:480px}
+.svc-price-box{background:var(--blue-light);border-radius:12px;padding:20px 24px;display:inline-flex;flex-direction:column;gap:8px}
+.svc-price-row{display:flex;gap:16px;align-items:center}
+.svc-price-label{font-size:13px;color:var(--text2);font-weight:700;width:100px}
+.svc-price-val{font-size:14px;font-weight:900;color:var(--blue)}
+
+/* STEPS */
+.steps-title-small{font-size:16px;font-weight:900;margin-bottom:20px;letter-spacing:-.5px}
+.step-flow{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.step-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px 20px;position:relative;transition:border-color .2s,transform .2s}
+.step-card:hover{border-color:var(--blue);transform:translateY(-3px)}
+.step-badge{width:32px;height:32px;background:var(--blue);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;margin-bottom:12px}
+.step-heading{font-size:14px;font-weight:900;margin-bottom:8px;letter-spacing:-.3px}
+.step-body{font-size:12px;color:var(--text3);line-height:1.8;padding-left:14px}
+.step-body li{margin-bottom:2px}
+.step-note{margin-top:10px;font-size:11px;color:var(--blue);background:var(--blue-light);padding:6px 10px;border-radius:6px;line-height:1.6}
+
+/* TIPS BOX */
+.tips-box{background:var(--white);border:1.5px solid var(--blue);border-radius:12px;padding:20px 24px;margin-top:28px}
+.tips-title{font-size:13px;font-weight:900;color:var(--blue);margin-bottom:10px}
+.tips-list{display:flex;flex-direction:column;gap:6px}
+.tips-item{font-size:13px;color:var(--text2);display:flex;gap:8px;align-items:flex-start}
+.tips-item::before{content:'✓';color:var(--blue);font-weight:900;flex-shrink:0;margin-top:1px}
+
+/* PRICE TABLE */
+.price-section{padding:80px 6%;background:var(--bg)}
+.price-inner{max-width:1160px;margin:0 auto}
+.sec-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:var(--blue);letter-spacing:1px;margin-bottom:14px}
+.sec-eyebrow::before{content:'';width:20px;height:2px;background:var(--blue);border-radius:2px}
+.sec-h2{font-size:clamp(24px,3vw,38px);font-weight:900;letter-spacing:-1.5px;margin-bottom:40px}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.price-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:28px 24px;transition:border-color .2s,box-shadow .2s}
+.price-card:hover{border-color:var(--blue);box-shadow:0 8px 32px rgba(27,138,196,.1)}
+.price-card-icon{font-size:28px;margin-bottom:12px}
+.price-card-title{font-size:16px;font-weight:900;margin-bottom:16px;letter-spacing:-.5px}
+.price-rows{display:flex;flex-direction:column;gap:8px}
+.price-r{display:flex;justify-content:space-between;align-items:center;font-size:13px;padding:6px 0;border-bottom:1px dashed var(--border)}
+.price-r:last-child{border-bottom:none}
+.price-r-label{color:var(--text2)}
+.price-r-val{font-weight:700;color:var(--blue)}
+
+/* FAQ */
+.faq-section{padding:80px 6%}
+.faq-inner{max-width:800px;margin:0 auto}
+.faq-list{display:flex;flex-direction:column;gap:12px}
+.faq-item{border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;cursor:pointer;font-size:15px;font-weight:700;background:var(--white);transition:background .15s}
+.faq-q:hover{background:var(--blue-light)}
+.faq-q .q-icon{color:var(--blue);font-size:18px;font-weight:900;flex-shrink:0;transition:transform .25s}
+.faq-a{display:none;padding:16px 24px 20px;font-size:14px;color:var(--text2);line-height:1.9;background:var(--bg);border-top:1px solid var(--border)}
+.faq-item.open .faq-a{display:block}
+.faq-item.open .q-icon{transform:rotate(45deg)}
+
+/* FOOTER */
+footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
+.ft-inner{max-width:1160px;margin:0 auto}
+.ft-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+.ft-brand-name{font-size:17px;font-weight:900;color:white;margin-bottom:12px}
+.ft-col p{font-size:13px;line-height:1.9}
+.ft-col h4{font-size:14px;font-weight:700;color:white;margin-bottom:14px}
+.ft-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.ft-col ul li a{font-size:13px;transition:color .2s}
+.ft-col ul li a:hover{color:white}
+.ft-bottom{border-top:1px solid #374151;padding-top:24px;display:flex;justify-content:space-between;font-size:12px;flex-wrap:wrap;gap:8px}
+
+.chat-fab{position:fixed;bottom:28px;right:28px;width:52px;height:52px;background:var(--blue);border:none;border-radius:50%;font-size:20px;cursor:pointer;box-shadow:0 4px 20px rgba(27,138,196,0.4);z-index:200;display:flex;align-items:center;justify-content:center;transition:transform .2s}
+.chat-fab:hover{transform:scale(1.1)}
+
+@media(max-width:900px){
+  .price-grid{grid-template-columns:1fr 1fr}
+  .step-flow{grid-template-columns:repeat(2,1fr)}
+  .svc-top{gap:32px}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+}
+@media(max-width:600px){
+  .price-grid{grid-template-columns:1fr}
+  .step-flow{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo"><a href="index.html" class="nav-logo-name">🦝 프린트샵미니</a></div>
+  <ul class="nav-links">
+    <li><a href="services.html" class="active">서비스</a></li>
+    <li><a href="about.html">소개</a></li>
+    <li><a href="branches.html">지점찾기</a></li>
+    <li><a href="community.html">커뮤니티</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="branches.html" class="nav-cta">지점 찾기</a>
+    <div class="nav-raccoon"><img src="https://api.dicebear.com/7.x/bottts/svg?seed=raccoon&backgroundColor=b6e3f4" alt="라쿤"></div>
+  </div>
+  <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="ph-inner">
+    <div class="ph-eyebrow">SERVICES</div>
+    <h1 class="ph-h1">서비스 안내</h1>
+    <p class="ph-sub">6가지 셀프 서비스 — 영상과 사진 안내로 누구나 처음부터 혼자서 OK!</p>
+  </div>
+</div>
+
+<!-- 서비스 빠른 이동 -->
+<div class="svc-nav">
+  <div class="svc-nav-inner">
+    <div class="svc-nav-item on" onclick="goSection('print',this)">🖨️ 인쇄</div>
+    <div class="svc-nav-item" onclick="goSection('copy',this)">📋 복사</div>
+    <div class="svc-nav-item" onclick="goSection('scan',this)">📄 스캔</div>
+    <div class="svc-nav-item" onclick="goSection('fax',this)">📠 팩스</div>
+    <div class="svc-nav-item" onclick="goSection('coat',this)">✨ 코팅</div>
+    <div class="svc-nav-item" onclick="goSection('bind',this)">📚 제본</div>
+    <div class="svc-nav-item" onclick="goSection('price',this)">💰 요금표</div>
+    <div class="svc-nav-item" onclick="goSection('faq',this)">❓ FAQ</div>
+  </div>
+</div>
+
+<!-- 01 인쇄 -->
+<div class="svc-section" id="print">
+  <div class="sec-inner">
+    <div class="svc-top">
+      <div class="svc-info">
+        <div class="svc-badge">
+          <div class="svc-icon-big">🖨️</div>
+        </div>
+        <div class="svc-num-label">SERVICE 01</div>
+        <h2 class="svc-h2">인쇄</h2>
+        <p class="svc-desc-long">PC에서 파일을 전송하고 복합기에서 PIN번호로 찾아 출력하는 셀프 인쇄 서비스입니다. 흑백·컬러·증명서 출력이 모두 가능하며, 결제는 카드(IC, 삼성페이, 애플페이)로 하실 수 있습니다.</p>
+        <div class="svc-price-box">
+          <div class="svc-price-row"><span class="svc-price-label">흑백 A4</span><span class="svc-price-val">70원/면</span></div>
+          <div class="svc-price-row"><span class="svc-price-label">컬러 A4</span><span class="svc-price-val">250원/면</span></div>
+          <div class="svc-price-row"><span class="svc-price-label">흑백 A3</span><span class="svc-price-val">140원/면</span></div>
+          <div class="svc-price-row"><span class="svc-price-label">컬러 A3</span><span class="svc-price-val">500원/면</span></div>
+        </div>
+      </div>
+      <div style="flex:2;min-width:280px">
+        <div class="steps-title-small">이용방법 6단계</div>
+        <div class="step-flow">
+          <div class="step-card"><div class="step-badge">1</div><div class="step-heading">프린터 선택</div><ul class="step-body"><li>PC에서 파일 OPEN → 프린터 선택</li><li>흑백 / 컬러 / 증명서전용(PIN9999) 선택</li></ul></div>
+          <div class="step-card"><div class="step-badge">2</div><div class="step-heading">PIN번호 입력</div><ul class="step-body"><li>핸드폰 뒷 4자리 번호 입력</li><li>증명서전용은 자동으로 9999 입력</li></ul></div>
+          <div class="step-card"><div class="step-badge">3</div><div class="step-heading">복합기로 이동</div><ul class="step-body"><li>매장 내 복합기로 이동</li><li>인쇄(PRINT) 메뉴 선택</li><li>절전모드라면 터치하여 해제</li></ul></div>
+          <div class="step-card"><div class="step-badge">4</div><div class="step-heading">PIN번호 검색</div><ul class="step-body"><li>PC에서 입력한 PIN 입력 후 OK</li><li>목록에서 파일 선택 → 시작 터치</li></ul><div class="step-note">용지 사이즈가 Letter면 PC에서 A4로 재설정 필요</div></div>
+          <div class="step-card"><div class="step-badge">5</div><div class="step-heading">과금정보 확인</div><ul class="step-body"><li>총 가격·페이지수·컬러 여부 확인</li><li>내용 맞으면 [확인] 터치</li></ul></div>
+          <div class="step-card"><div class="step-badge">6</div><div class="step-heading">카드 결제</div><ul class="step-body"><li>단말기 음성 나오면 IC카드 꽂기</li><li>삼성페이·애플페이: 와이파이 표시 면에 터치</li></ul><div class="step-note">삼성페이·애플페이는 현대카드 마스터만 가능</div></div>
+        </div>
+        <div class="tips-box">
+          <div class="tips-title">💡 인쇄 꿀팁</div>
+          <div class="tips-list">
+            <div class="tips-item">용지 사이즈를 반드시 A4로 설정하세요 (Letter 사이즈 인식 불가)</div>
+            <div class="tips-item">전송 후 복합기에서 30분 내 출력하지 않으면 파일이 자동 삭제됩니다</div>
+            <div class="tips-item">PDF 파일로 저장 후 전송하면 폰트 깨짐 없이 출력됩니다</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 02 복사 -->
+<div class="svc-section alt" id="copy">
+  <div class="sec-inner">
+    <div class="svc-top">
+      <div class="svc-info">
+        <div class="svc-badge"><div class="svc-icon-big">📋</div></div>
+        <div class="svc-num-label">SERVICE 02</div>
+        <h2 class="svc-h2">복사</h2>
+        <p class="svc-desc-long">원본을 스캔부에 올리고 옵션을 설정한 뒤 카드로 결제하는 셀프 복사 서비스입니다. 흑백·컬러, A4·A3, 단면·양면, 확대·축소 등 다양한 옵션을 직접 설정하실 수 있습니다.</p>
+        <div class="svc-price-box">
+          <div class="svc-price-row"><span class="svc-price-label">흑백 A4</span><span class="svc-price-val">70원/면</span></div>
+          <div class="svc-price-row"><span class="svc-price-label">컬러 A4</span><span class="svc-price-val">250원/면</span></div>
+          <div class="svc-price-row"><span class="svc-price-label">흑백 A3</span><span class="svc-price-val">140원/면</span></div>
+          <div class="svc-price-row"><span class="svc-price-label">컬러 A3</span><span class="svc-price-val">500원/면</span></div>
+        </div>
+      </div>
+      <div style="flex:2;min-width:280px">
+        <div class="steps-title-small">이용방법 6단계</div>
+        <div class="step-flow">
+          <div class="step-card"><div class="step-badge">1</div><div class="step-heading">원본 올리기</div><ul class="step-body"><li>원본 문서를 유리판(스캔부)에 올리기</li><li>원고대(ADF)에 여러 장 한번에 투입 가능</li></ul></div>
+          <div class="step-card"><div class="step-badge">2</div><div class="step-heading">복사 메뉴 선택</div><ul class="step-body"><li>복합기 화면에서 복사(COPY) 메뉴 선택</li></ul></div>
+          <div class="step-card"><div class="step-badge">3</div><div class="step-heading">옵션 설정</div><ul class="step-body"><li>흑백/컬러 선택</li><li>용지 사이즈(A4/A3) 선택</li><li>단면/양면, 부수, 배율 설정</li></ul></div>
+          <div class="step-card"><div class="step-badge">4</div><div class="step-heading">금액 확인</div><ul class="step-body"><li>설정한 옵션 기준 금액 확인</li><li>내용 맞으면 [시작] 터치</li></ul></div>
+          <div class="step-card"><div class="step-badge">5</div><div class="step-heading">카드 결제</div><ul class="step-body"><li>단말기 음성 나오면 카드 결제</li></ul></div>
+          <div class="step-card"><div class="step-badge">6</div><div class="step-heading">출력 완료</div><ul class="step-body"><li>출력 트레이에서 복사본 수령</li><li>원본 잊지 말고 가져가세요!</li></ul></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 03 스캔 -->
+<div class="svc-section" id="scan">
+  <div class="sec-inner">
+    <div class="svc-top">
+      <div class="svc-info">
+        <div class="svc-badge"><div class="svc-icon-big">📄</div></div>
+        <div class="svc-num-label">SERVICE 03</div>
+        <h2 class="svc-h2">스캔</h2>
+        <p class="svc-desc-long">원본을 스캔부에 올리고 결제 후 PC 폴더에서 파일을 확인하는 셀프 스캔 서비스입니다. 스캔한 파일은 매장 내 PC에서 USB·이메일로 저장하거나 전송하실 수 있습니다.</p>
+        <div class="svc-price-box">
+          <div class="svc-price-row"><span class="svc-price-label">스캔 A4</span><span class="svc-price-val">100원/면</span></div>
+          <div class="svc-price-row"><span class="svc-price-label">스캔 A3</span><span class="svc-price-val">100원/면</span></div>
+        </div>
+      </div>
+      <div style="flex:2;min-width:280px">
+        <div class="steps-title-small">이용방법 5단계</div>
+        <div class="step-flow">
+          <div class="step-card"><div class="step-badge">1</div><div class="step-heading">원본 올리기</div><ul class="step-body"><li>원본 문서를 유리판 또는 ADF에 올리기</li></ul></div>
+          <div class="step-card"><div class="step-badge">2</div><div class="step-heading">스캔 메뉴 선택</div><ul class="step-body"><li>복합기 화면에서 스캔(SCAN) 메뉴 선택</li><li>해상도, 파일형식(PDF/JPG) 선택</li></ul></div>
+          <div class="step-card"><div class="step-badge">3</div><div class="step-heading">금액 확인</div><ul class="step-body"><li>스캔 매수 기준 금액 확인</li></ul></div>
+          <div class="step-card"><div class="step-badge">4</div><div class="step-heading">카드 결제</div><ul class="step-body"><li>결제 후 스캔 시작</li></ul></div>
+          <div class="step-card"><div class="step-badge">5</div><div class="step-heading">파일 확인</div><ul class="step-body"><li>PC 스캔 폴더에서 파일 확인</li><li>USB로 복사 또는 이메일 전송</li></ul><div class="step-note">스캔 파일은 30분 후 자동 삭제됩니다</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 04 팩스 -->
+<div class="svc-section alt" id="fax">
+  <div class="sec-inner">
+    <div class="svc-top">
+      <div class="svc-info">
+        <div class="svc-badge"><div class="svc-icon-big">📠</div></div>
+        <div class="svc-num-label">SERVICE 04</div>
+        <h2 class="svc-h2">팩스</h2>
+        <p class="svc-desc-long">원본을 스캔 후 팩스번호를 입력하고 결제하면 발송되며, QR코드로 발송 결과를 확인하실 수 있는 셀프 팩스 서비스입니다.</p>
+        <div class="svc-price-box">
+          <div class="svc-price-row"><span class="svc-price-label">국내 팩스</span><span class="svc-price-val">500원/면</span></div>
+          <div class="svc-price-row"><span class="svc-price-label">국제 팩스</span><span class="svc-price-val" style="color:#EF4444">국제팩스 안됨</span></div>
+        </div>
+        <div style="margin-top:12px;background:#FFF3E0;border:1.5px solid #F97316;border-radius:10px;padding:12px 16px;font-size:13px;color:#92400E;line-height:1.8">
+          📤 <strong>발신(보내기)만 가능</strong>합니다<br>
+          📵 수신(받기)은 불가합니다
+        </div>
+      </div>
+      <div style="flex:2;min-width:280px">
+        <div class="steps-title-small">이용방법 6단계</div>
+        <div class="step-flow">
+          <div class="step-card"><div class="step-badge">1</div><div class="step-heading">원본 올리기</div><ul class="step-body"><li>보낼 문서를 ADF에 넣기</li></ul></div>
+          <div class="step-card"><div class="step-badge">2</div><div class="step-heading">팩스 메뉴 선택</div><ul class="step-body"><li>복합기 화면에서 팩스(FAX) 메뉴 선택</li></ul></div>
+          <div class="step-card"><div class="step-badge">3</div><div class="step-heading">팩스번호 입력</div><ul class="step-body"><li>수신처 팩스번호 입력</li><li>지역번호 포함하여 입력</li></ul></div>
+          <div class="step-card"><div class="step-badge">4</div><div class="step-heading">옵션 설정</div><ul class="step-body"><li>해상도(표준/정밀) 선택</li></ul></div>
+          <div class="step-card"><div class="step-badge">5</div><div class="step-heading">금액 확인</div><ul class="step-body"><li>매수 기준 금액 확인 후 [시작]</li></ul></div>
+          <div class="step-card"><div class="step-badge">6</div><div class="step-heading">결제 · 발송 확인</div><ul class="step-body"><li>카드 결제 후 발송 완료</li><li>QR코드 스캔으로 발송 결과 확인</li></ul></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 05 코팅 -->
+<div class="svc-section" id="coat">
+  <div class="sec-inner">
+    <div class="svc-top">
+      <div class="svc-info">
+        <div class="svc-badge"><div class="svc-icon-big">✨</div></div>
+        <div class="svc-num-label">SERVICE 05</div>
+        <h2 class="svc-h2">코팅</h2>
+        <p class="svc-desc-long">결제 먼저 하고 전원을 켠 뒤 예열이 완료되면 코팅지를 투입하는 셀프 코팅 서비스입니다. 사용 후 반드시 전원을 꺼주세요.</p>
+        <div class="svc-price-box">
+          <div class="svc-price-row"><span class="svc-price-label">A4 코팅</span><span class="svc-price-val">400원/장</span></div>
+          <div class="svc-price-row"><span class="svc-price-label">A3 코팅</span><span class="svc-price-val">800원/장</span></div>
+        </div>
+      </div>
+      <div style="flex:2;min-width:280px">
+        <div class="steps-title-small">이용방법 4단계</div>
+        <div class="step-flow">
+          <div class="step-card"><div class="step-badge">1</div><div class="step-heading">결제 먼저!</div><ul class="step-body"><li>기계 옆 키오스크에서 매수 선택 후 카드 결제</li></ul><div class="step-note">⚠️ 반드시 결제를 먼저 하세요</div></div>
+          <div class="step-card"><div class="step-badge">2</div><div class="step-heading">전원 켜기 · 예열</div><ul class="step-body"><li>코팅기 전원 버튼 ON</li><li>예열 완료 표시등 점등까지 대기(약 3분)</li></ul></div>
+          <div class="step-card"><div class="step-badge">3</div><div class="step-heading">코팅지 투입</div><ul class="step-body"><li>문서를 코팅 파우치에 넣기</li><li>봉합된 쪽부터 기계에 투입</li></ul></div>
+          <div class="step-card"><div class="step-badge">4</div><div class="step-heading">전원 OFF</div><ul class="step-body"><li>사용 완료 후 반드시 전원 끄기</li></ul><div class="step-note">전원 미종료 시 다음 이용자 피해 발생</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 06 제본 -->
+<div class="svc-section alt" id="bind">
+  <div class="sec-inner">
+    <div class="svc-top">
+      <div class="svc-info">
+        <div class="svc-badge"><div class="svc-icon-big">📚</div></div>
+        <div class="svc-num-label">SERVICE 06</div>
+        <h2 class="svc-h2">제본</h2>
+        <p class="svc-desc-long">전원을 켜고 예열 후 제본용지를 투입해 열제본을 완료하고 10분간 냉각하는 셀프 제본 서비스입니다. 논문, 보고서, 계약서 등에 활용하실 수 있습니다.</p>
+        <div class="svc-price-box">
+          <div class="svc-price-row"><span class="svc-price-label">열제본표지</span><span class="svc-price-val">1,500원/1개</span></div>
+        </div>
+      </div>
+      <div style="flex:2;min-width:280px">
+        <div class="steps-title-small">이용방법 6단계</div>
+        <div class="step-flow">
+          <div class="step-card"><div class="step-badge">1</div><div class="step-heading">전원 켜기 · 예열</div><ul class="step-body"><li>제본기 전원 ON</li><li>예열 완료 표시등까지 대기(약 5분)</li></ul></div>
+          <div class="step-card"><div class="step-badge">2</div><div class="step-heading">투입구 개방</div><ul class="step-body"><li>뚜껑 열고 투입구 개방 상태 확인</li></ul></div>
+          <div class="step-card"><div class="step-badge">3</div><div class="step-heading">용지 삽입</div><ul class="step-body"><li>인쇄된 문서를 제본 표지 안에 삽입</li><li>페이지 순서 확인 필수!</li></ul></div>
+          <div class="step-card"><div class="step-badge">4</div><div class="step-heading">기계에 투입</div><ul class="step-body"><li>제본 표지를 기계에 투입</li><li>카드 결제 후 자동으로 작동</li></ul></div>
+          <div class="step-card"><div class="step-badge">5</div><div class="step-heading">타이머 대기</div><ul class="step-body"><li>기계 작동 중 타이머 표시</li><li>완료 신호음 대기</li></ul></div>
+          <div class="step-card"><div class="step-badge">6</div><div class="step-heading">10분 냉각 후 완료</div><ul class="step-body"><li>꺼낸 후 평평한 곳에 놓고 10분 냉각</li><li>냉각 전 힘을 가하면 분리될 수 있음</li></ul><div class="step-note">냉각 필수! 급하게 확인하면 제본 분리됩니다</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 요금표 -->
+<div class="price-section" id="price">
+  <div class="price-inner">
+    <div class="sec-eyebrow">PRICE</div>
+    <h2 class="sec-h2">서비스 요금표</h2>
+    <div class="price-grid" style="grid-template-columns:repeat(2,1fr)">
+      <div class="price-card">
+        <div class="price-card-icon">🖨️</div>
+        <div class="price-card-title">인쇄 · 복사 (1면당)</div>
+        <div class="price-rows">
+          <div class="price-r"><span class="price-r-label">흑백 A4</span><span class="price-r-val">70원</span></div>
+          <div class="price-r"><span class="price-r-label">컬러 A4</span><span class="price-r-val">250원</span></div>
+          <div class="price-r"><span class="price-r-label">흑백 B4</span><span class="price-r-val">120원</span></div>
+          <div class="price-r"><span class="price-r-label">컬러 B4</span><span class="price-r-val">400원</span></div>
+          <div class="price-r"><span class="price-r-label">흑백 A3</span><span class="price-r-val">140원</span></div>
+          <div class="price-r"><span class="price-r-label">컬러 A3</span><span class="price-r-val">500원</span></div>
+        </div>
+      </div>
+      <div class="price-card">
+        <div class="price-card-icon">📄</div>
+        <div class="price-card-title">스캔 (1면당)</div>
+        <div class="price-rows">
+          <div class="price-r"><span class="price-r-label">스캔 A4</span><span class="price-r-val">100원</span></div>
+          <div class="price-r"><span class="price-r-label">스캔 B4</span><span class="price-r-val">100원</span></div>
+          <div class="price-r"><span class="price-r-label">스캔 A3</span><span class="price-r-val">100원</span></div>
+        </div>
+      </div>
+      <div class="price-card">
+        <div class="price-card-icon">📠</div>
+        <div class="price-card-title">팩스 (1면당)</div>
+        <div class="price-rows">
+          <div class="price-r"><span class="price-r-label">팩스 A4</span><span class="price-r-val">500원</span></div>
+        </div>
+      </div>
+      <div class="price-card">
+        <div class="price-card-icon">✨</div>
+        <div class="price-card-title">코팅 · 제본 · 기타</div>
+        <div class="price-rows">
+          <div class="price-r"><span class="price-r-label">코팅지 A4</span><span class="price-r-val">400원/장</span></div>
+          <div class="price-r"><span class="price-r-label">코팅지 A3</span><span class="price-r-val">800원/장</span></div>
+          <div class="price-r"><span class="price-r-label">L홀더 A4</span><span class="price-r-val">400원/장</span></div>
+          <div class="price-r"><span class="price-r-label">폴대파일 A4</span><span class="price-r-val">600원/개</span></div>
+          <div class="price-r"><span class="price-r-label">서류봉투 A4</span><span class="price-r-val">400원/장</span></div>
+          <div class="price-r"><span class="price-r-label">열제본표지 A4</span><span class="price-r-val">1,500원/1개</span></div>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top:20px;font-size:13px;color:var(--text3)">※ 요금은 지점별로 상이할 수 있으며, 사전 예고 없이 변경될 수 있습니다.</p>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="faq-section" id="faq">
+  <div class="faq-inner">
+    <div class="sec-eyebrow">FAQ</div>
+    <h2 class="sec-h2">자주 묻는 질문</h2>
+    <div class="faq-list">
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">현금 결제도 되나요? <span class="q-icon">+</span></div>
+        <div class="faq-a">프린트샵미니는 카드 전용 결제 시스템을 운영합니다. IC카드(신용·체크), 삼성페이, 애플페이를 사용하실 수 있습니다. 단, 삼성페이·애플페이는 현대카드 마스터만 가능합니다.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">파일 전송 후 복합기에 파일이 보이지 않아요 <span class="q-icon">+</span></div>
+        <div class="faq-a">PC에서 흑백출력 또는 컬러출력 작업목록 대화상자에 목록이 남아 있으면 복합기로 전송이 아직 안된 겁니다. 작업목록이 스풀링 걸려 있으면 복합기에서 조회가 되지 않습니다. 파일 사이즈가 큰 경우 조금 기다려 주시고, 그렇지 않은 경우 PC를 재부팅 후 다시 인쇄 작업을 진행해 주세요. 또한 PIN번호를 동일하게 입력했는지 확인하세요. 전송 후 30분이 지나면 파일이 자동 삭제됩니다.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">A3 출력도 가능한가요? <span class="q-icon">+</span></div>
+        <div class="faq-a">모든 지점은 A4, B4, A3 사이즈로 인쇄 및 복사 가능합니다. 각 매장에 비치된 복합기 중 1번은 A4, B4 인쇄·복사 출력이 가능하며, 2번 복합기는 A4, A3 사이즈로 인쇄·복사 출력이 가능합니다.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">이용 중 복합기 고장이 생겼을 때 어떻게 하나요? <span class="q-icon">+</span></div>
+        <div class="faq-a">매장에 안내된 전화번호 또는 네이버 톡톡으로 연락 주세요. 오전 8시부터 오후 9시까지는 전화 문의가 가능합니다. 그 외 시간에는 네이버 톡톡으로 매장명 + 복합기 번호 + 고장내용 + 연락처를 보내주시면 확인 후 개별 연락 드립니다.<br><br>전화 또는 네이버 톡톡 연락 후 별다른 안내를 받지 못한 경우, PC 바탕화면의 환불신청 아이콘을 통해 환불 접수 후 다른 날 방문하여 이용을 부탁드립니다.<br><br>⚠️ 결제 후 인쇄가 안 되는 경우 절대 중복 결제하지 마세요! 여러 파일을 동시에 결제하거나 파일 사이즈가 큰 경우 결제 후 출력까지 10분 이상 걸릴 수 있습니다. 재결제 도중 먼저 결제한 인쇄물이 출력될 수 있으며, 그 경우 환불이 안 됩니다. 반드시 연락 먼저 주시기 바랍니다.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">핸드폰으로 파일을 바로 인쇄할 수 있나요? <span class="q-icon">+</span></div>
+        <div class="faq-a">매장에 인터넷 연결이 가능한 PC가 있습니다. 핸드폰에 있는 파일을 이메일 또는 카카오톡 같은 메신저로 먼저 보낸 후, 매장 PC에서 이메일 또는 메신저에 접속하여 인쇄하려는 파일을 다운로드 받은 후 인쇄 작업을 진행해 주세요.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">영수증이 필요한데 발급이 되나요? <span class="q-icon">+</span></div>
+        <div class="faq-a">매장에 비치된 PC 바탕화면에 영수증신청 아이콘이 있습니다. 접속하여 결제 정보를 입력하면 거래명세서를 파일로 다운 받으실 수 있습니다. 더 자세한 사항은 영수증신청 사이트에 접속하여 안내된 내용을 꼼꼼히 읽은 후 이용해 주시기 바랍니다.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-inner">
+    <div class="ft-grid">
+      <div class="ft-col"><div class="ft-brand-name">🦝 프린트샵미니</div><p>24시간 365일 운영되는<br>무인 셀프 프린트 전문점입니다.</p></div>
+      <div class="ft-col"><h4>서비스</h4><ul><li><a href="services.html">인쇄 · 복사 · 스캔</a></li><li><a href="services.html">팩스 · 코팅 · 제본</a></li><li><a href="branches.html">지점 찾기</a></li><li><a href="community.html">커뮤니티</a></li></ul></div>
+      <div class="ft-col"><h4>고객센터</h4><ul><li><a href="#">이메일 문의</a></li><li><a href="#">채팅 문의</a></li><li><a href="#">운영: 24시간 연중무휴</a></li><li><a href="#">사업자: 000-00-00000</a></li></ul></div>
+    </div>
+    <div class="ft-bottom"><p>© 2025 프린트샵미니. All rights reserved.</p><p>개인정보처리방침 · 이용약관</p></div>
+  </div>
+</footer>
+<script>
+(function(){var w=window;if(w.ChannelIO){return;}var ch=function(){ch.c(arguments);};ch.q=[];ch.c=function(args){ch.q.push(args);};w.ChannelIO=ch;function l(){if(w.ChannelIOInitialized){return;}w.ChannelIOInitialized=true;var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="https://cdn.channel.io/plugin/ch-plugin-web.js";var x=document.getElementsByTagName("script")[0];if(x.parentNode){x.parentNode.insertBefore(s,x);}}if(document.readyState==="complete"){l();}else{w.addEventListener("DOMContentLoaded",l);w.addEventListener("load",l);}})();
+ChannelIO('boot', {"pluginKey": "d251d797-1c31-4bed-bfda-4cfce1cf127a"});
+</script>
+
+<script>
+function toggleFaq(item){item.classList.toggle('open')}
+function goSection(id,el){
+  var target=document.getElementById(id);
+  if(!target)return;
+  var offset=target.getBoundingClientRect().top+window.pageYOffset-140;
+  window.scrollTo({top:offset,behavior:'smooth'});
+  document.querySelectorAll('.svc-nav-item').forEach(function(i){i.classList.remove('on')});
+  el.classList.add('on');
+}
+function toggleMenu(){
+  var m=document.querySelector('.nav-links');
+  if(m.style.display==='flex'){m.style.display='';return;}
+  Object.assign(m.style,{display:'flex',flexDirection:'column',position:'fixed',top:'70px',left:'0',right:'0',background:'white',padding:'16px 6%',borderBottom:'1px solid #E5E7EB',zIndex:'299',gap:'2px'});
+}
+</script>
+</body>
+</html>

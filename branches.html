@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>지점 찾기 - 프린트샵미니</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#1B8AC4;--blue-hover:#1470A8;--blue-light:#E8F4FC;
+  --text:#111827;--text2:#374151;--text3:#6B7280;--border:#E5E7EB;
+  --bg:#F9FAFB;--white:#FFFFFF;--radius:14px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--white);line-height:1.7;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:70px;display:flex;align-items:center;padding:0 6%}
+.nav-logo{display:flex;align-items:center;gap:10px;flex-shrink:0;margin-right:48px}
+.nav-logo-name{font-size:17px;font-weight:900;color:var(--blue);letter-spacing:-0.5px}
+.nav-links{display:flex;list-style:none;gap:2px;flex:1}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);padding:8px 16px;border-radius:8px;transition:all .18s}
+.nav-links a:hover,.nav-links a.active{color:var(--blue);background:var(--blue-light)}
+.nav-right{display:flex;align-items:center;gap:0;margin-left:auto}
+.nav-cta{background:var(--blue);color:white;font-size:13px;font-weight:700;padding:9px 22px;border-radius:50px;transition:background .2s;white-space:nowrap}
+.nav-cta:hover{background:var(--blue-hover)}
+.nav-raccoon{width:56px;height:56px;flex-shrink:0;margin-left:6px;position:relative;top:2px}
+.nav-raccoon img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.15));transition:transform .3s}
+.nav-raccoon:hover img{transform:rotate(-8deg) scale(1.08)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{width:22px;height:2px;background:var(--text);border-radius:2px;display:block}
+
+.page-header{margin-top:70px;background:var(--white);border-bottom:1px solid var(--border);padding:52px 6% 44px}
+.ph-inner{max-width:1160px;margin:0 auto}
+.ph-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:var(--blue);letter-spacing:1px;margin-bottom:14px}
+.ph-eyebrow::before{content:'';width:20px;height:2px;background:var(--blue);border-radius:2px}
+.ph-h1{font-size:clamp(28px,4vw,48px);font-weight:900;letter-spacing:-2px;margin-bottom:10px}
+.ph-sub{font-size:15px;color:var(--text3)}
+
+/* FILTER BAR */
+.filter-bar{padding:24px 6%;border-bottom:1px solid var(--border);background:var(--white)}
+.filter-inner{max-width:1160px;margin:0 auto;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.filter-label{font-size:13px;font-weight:700;color:var(--text2)}
+.region-btns{display:flex;gap:6px;flex-wrap:wrap}
+.region-btn{font-size:13px;font-weight:700;padding:7px 18px;border-radius:50px;border:1.5px solid var(--border);color:var(--text3);cursor:pointer;background:var(--white);transition:all .2s}
+.region-btn:hover{border-color:var(--blue);color:var(--blue)}
+.region-btn.on{background:var(--blue);color:white;border-color:var(--blue)}
+.filter-count{margin-left:auto;font-size:13px;color:var(--text3)}
+.filter-count strong{color:var(--blue)}
+
+/* MAIN LAYOUT */
+.branches-wrap{max-width:1160px;margin:0 auto;padding:48px 6%;display:grid;grid-template-columns:380px 1fr;gap:28px;align-items:start}
+
+/* BRANCH LIST */
+.branch-list{display:flex;flex-direction:column;gap:0;max-height:720px;overflow-y:auto;border:1px solid var(--border);border-radius:var(--radius)}
+.branch-list::-webkit-scrollbar{width:4px}
+.branch-list::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+.region-header{padding:10px 16px;font-size:11px;font-weight:700;color:var(--blue);letter-spacing:1px;background:var(--blue-light);border-bottom:1px solid var(--border);position:sticky;top:0}
+.branch-card{padding:18px 20px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .15s;background:var(--white)}
+.branch-card:last-child{border-bottom:none}
+.branch-card:hover,.branch-card.active{background:var(--blue-light)}
+.branch-card.active .bc-name{color:var(--blue)}
+.bc-name{font-size:15px;font-weight:700;margin-bottom:4px;transition:color .2s}
+.bc-addr{font-size:12px;color:var(--text3);margin-bottom:8px}
+.bc-tags{display:flex;gap:5px;flex-wrap:wrap}
+.bc-t{font-size:10px;font-weight:700;padding:2px 8px;border-radius:50px}
+.t24{background:#ECFDF5;color:#065F46}
+.tpark{background:#FFF7ED;color:#92400E}
+.topen{background:var(--blue-light);color:var(--blue)}
+.ta3{background:#F3E8FF;color:#6B21A8}
+
+/* MAP / DETAIL PANEL */
+.detail-panel{position:sticky;top:110px}
+.map-box{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;min-height:340px;display:flex;flex-direction:column}
+.map-visual{flex:1;position:relative;overflow:hidden;min-height:280px;background:linear-gradient(135deg,#E8F4FC 0%,#F0F9FF 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px}
+.map-pin{font-size:48px;animation:bounce 1.2s ease-in-out infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.map-name{font-size:18px;font-weight:900;color:var(--blue)}
+.map-addr-text{font-size:13px;color:var(--text3)}
+.map-btns{display:flex;gap:10px;padding:16px 20px;border-top:1px solid var(--border);background:var(--white)}
+.map-btn{flex:1;text-align:center;padding:10px;border-radius:8px;font-size:13px;font-weight:700;border:1px solid var(--border);transition:all .2s;cursor:pointer}
+.map-btn:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-light)}
+.map-btn.primary{background:var(--blue);color:white;border-color:var(--blue)}
+.map-btn.primary:hover{background:var(--blue-hover)}
+
+/* BRANCH DETAIL CARD */
+.branch-detail{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:28px;margin-top:16px}
+.bd-title{font-size:18px;font-weight:900;margin-bottom:16px;letter-spacing:-.5px}
+.bd-rows{display:flex;flex-direction:column;gap:10px}
+.bd-row{display:flex;gap:12px;font-size:13px}
+.bd-key{width:60px;font-weight:700;color:var(--text2);flex-shrink:0}
+.bd-val{color:var(--text3);line-height:1.6}
+.bd-services{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+
+/* STATS ROW */
+.stats-row{max-width:1160px;margin:0 auto;padding:0 6% 40px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stat-item{background:var(--bg);border-radius:var(--radius);padding:20px 24px;text-align:center;border:1px solid var(--border)}
+.stat-n{font-size:32px;font-weight:900;color:var(--blue)}
+.stat-l{font-size:12px;color:var(--text3);margin-top:4px}
+
+footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
+.ft-inner{max-width:1160px;margin:0 auto}
+.ft-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+.ft-brand-name{font-size:17px;font-weight:900;color:white;margin-bottom:12px}
+.ft-col p{font-size:13px;line-height:1.9}
+.ft-col h4{font-size:14px;font-weight:700;color:white;margin-bottom:14px}
+.ft-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.ft-col ul li a{font-size:13px;transition:color .2s}
+.ft-col ul li a:hover{color:white}
+.ft-bottom{border-top:1px solid #374151;padding-top:24px;display:flex;justify-content:space-between;font-size:12px;flex-wrap:wrap;gap:8px}
+
+.chat-fab{position:fixed;bottom:28px;right:28px;width:52px;height:52px;background:var(--blue);border:none;border-radius:50%;font-size:20px;cursor:pointer;box-shadow:0 4px 20px rgba(27,138,196,0.4);z-index:200;display:flex;align-items:center;justify-content:center;transition:transform .2s}
+.chat-fab:hover{transform:scale(1.1)}
+
+@media(max-width:900px){
+  .branches-wrap{grid-template-columns:1fr;padding:32px 5%}
+  .detail-panel{position:static}
+  .stats-row{grid-template-columns:repeat(2,1fr);padding:0 5% 32px}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><div class="nav-logo-name">🦝 프린트샵미니</div></div>
+  <ul class="nav-links">
+    <li><a href="services.html">서비스</a></li>
+    <li><a href="about.html">소개</a></li>
+    <li><a href="branches.html" class="active">지점찾기</a></li>
+    <li><a href="community.html">커뮤니티</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="branches.html" class="nav-cta">지점 찾기</a>
+    <div class="nav-raccoon"><img src="https://api.dicebear.com/7.x/bottts/svg?seed=raccoon&backgroundColor=b6e3f4" alt="라쿤"></div>
+  </div>
+  <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="page-header">
+  <div class="ph-inner">
+    <div class="ph-eyebrow">BRANCHES</div>
+    <h1 class="ph-h1">지점 찾기</h1>
+    <p class="ph-sub">경기권 15개 지점 — 가장 가까운 프린트샵미니를 찾아보세요</p>
+  </div>
+</div>
+
+<!-- 통계 -->
+<div class="stats-row">
+  <div class="stat-item"><div class="stat-n">15</div><div class="stat-l">전체 지점 수</div></div>
+  <div class="stat-item"><div class="stat-n">24H</div><div class="stat-l">연중무휴 운영</div></div>
+  <div class="stat-item"><div class="stat-n">4</div><div class="stat-l">운영 지역</div></div>
+  <div class="stat-item"><div class="stat-n">6</div><div class="stat-l">셀프 서비스</div></div>
+</div>
+
+<!-- 필터 -->
+<div class="filter-bar">
+  <div class="filter-inner">
+    <span class="filter-label">지역 선택</span>
+    <div class="region-btns">
+      <div class="region-btn on" onclick="filterRegion('전체',this)">전체</div>
+      <div class="region-btn" onclick="filterRegion('수원',this)">📍 수원 (7)</div>
+      <div class="region-btn" onclick="filterRegion('화성',this)">📍 화성 (5)</div>
+      <div class="region-btn" onclick="filterRegion('용인',this)">📍 용인 (2)</div>
+      <div class="region-btn" onclick="filterRegion('평택',this)">📍 평택 (1)</div>
+    </div>
+    <span class="filter-count">총 <strong id="visibleCount">15</strong>개 지점</span>
+  </div>
+</div>
+
+<!-- 지점 목록 + 지도 -->
+<div class="branches-wrap">
+  <!-- 지점 목록 -->
+  <div class="branch-list" id="branchList">
+
+    <!-- 수원 -->
+    <div class="region-header" data-region="수원">수원 · 8개 지점</div>
+    <div class="branch-card" data-region="수원" onclick="selectBranch(this,'망포역점','1838485730','2031379616')">
+      <div class="bc-name">프린트샵미니 망포역점</div>
+      <div class="bc-tags"><span class="bc-t t24">24시간</span><span class="bc-t topen">역세권</span><span class="bc-t tpark">주차가능</span></div>
+    </div>
+    <div class="branch-card" data-region="수원" onclick="selectBranch(this,'영통역점','1838485730','1257714656')">
+      <div class="bc-name">프린트샵미니 영통역점</div>
+      <div class="bc-tags"><span class="bc-t t24">24시간</span><span class="bc-t topen">역세권</span><span class="bc-t tpark">주차가능</span></div>
+    </div>
+    <div class="branch-card" data-region="수원" onclick="selectBranch(this,'신영통점','1838485730','1242041268')">
+      <div class="bc-name">프린트샵미니 신영통점</div>
+      <div class="bc-tags"><span class="bc-t t24">24시간</span><span class="bc-t tpark">주차가능</span></div>
+    </div>
+    <div class="branch-card" data-region="수원" onclick="selectBranch(this,'수원시청역점','1838485730','1754507454')">
+      <div class="bc-name">프린트샵미니 수원시청역점</div>
+      <div class="bc-tags"><span class="bc-t t24">24시간</span><span class="bc-t topen">역세권</span><span class="bc-t tpark">주차가능</span></div>
+    </div>
+    <div class="branch-card" data-region="수원" onclick="selectBranch(this,'권선점','1838485730','1486420184')">
+      <div class="bc-name">프린트샵미니 권선점</div>
+      <div class="bc-tags"><span class="bc-t t24">24시간</span></div>
+    </div>
+    <div class="branch-card" data-region="수원" onclick="selectBranch(this,'광교점','1838485730','1591220382')">
+      <div class="bc-name">프린트샵미니 광교점</div>
+      <div class="bc-tags"><span class="bc-t t24">24시간</span><span class="bc-t tpark">주차가능</span></div>
+    </div>
+    <div class="branch-card" data-region="수원" onclick="selectBranch(this,'수원정자점','1838485730','1608093989')">
+      <div class="bc-name">프린트샵미니 수원정자점</div>
+      <div class="bc-tags"><span class="bc-t t24">24시간</span><span class="bc-t tpark">주차가능</span></div>
+    </div>
+    <div class="branch-card" data-region="수원" onclick="selectBranch(this,'호매실점','1838485730','1813654540')">
+      <div class="bc-name">프린트샵미니 호매실점</div>
+      <div class="bc-tags"><span class="bc-t t24">24시간</span><span class="bc-t tpark">주차가능</span></div>
+    </div>
+
+    <!-- 화성 -->
+    <div class="region-header" data-region="화성">화성 · 4개 지점</div>
+    <div class="branch-card" data-region="화성" onclick="selectBranch(this,'병점역점','1838485730','1022835538')">
+      <div class="bc-name">프린트샵미니 병점역점</div>
+      <div class="bc-tags"><span class="bc-t t24">24시간</span><span class="bc-t topen">역세권</span><span class="bc-t tpark">주차가능</span></div>
+    </div>
+    <div class="branch-card" data-region="화성" onclick="selectBranch(this,'동탄남광장점','1838485730','1298473058')">
+      <div class="bc-name">프린트샵미니 동탄남광장점</div>
+      <div class="bc-tags"><span class="bc-t t24">24시간</span><span class="bc-t tpark">주차가능</span></div>
+    </div>
+    <div class="branch-card" data-region="화성" onclick="selectBranch(this,'동탄역점','1838485730','1873853322')">
+      <div class="bc-name">프린트샵미니 동탄역점</div>
+      <div class="bc-tags"><span class="bc-t t24">24시간</span><span class="bc-t topen">역세권</span><span class="bc-t tpark">주차가능</span></div>
+    </div>
+    <div class="branch-card" data-region="화성" onclick="selectBranch(this,'동탄호수점','1838485730','1413519775')">
+      <div class="bc-name">프린트샵미니 동탄호수점</div>
+      <div class="bc-tags"><span class="bc-t t24">24시간</span><span class="bc-t tpark">주차가능</span></div>
+    </div>
+
+    <!-- 용인 -->
+    <div class="region-header" data-region="용인">용인 · 2개 지점</div>
+    <div class="branch-card" data-region="용인" onclick="selectBranch(this,'기흥구청점','1838485730','2047415825')">
+      <div class="bc-name">프린트샵미니 기흥구청점</div>
+      <div class="bc-tags"><span class="bc-t t24">24시간</span><span class="bc-t tpark">주차가능</span></div>
+    </div>
+    <div class="branch-card" data-region="용인" onclick="selectBranch(this,'동백역점','1838485730','2090941825')">
+      <div class="bc-name">프린트샵미니 동백역점</div>
+      <div class="bc-tags"><span class="bc-t t24">24시간</span><span class="bc-t topen">역세권</span></div>
+    </div>
+
+    <!-- 평택 -->
+    <div class="region-header" data-region="평택">평택 · 1개 지점</div>
+    <div class="branch-card" data-region="평택" onclick="selectBranch(this,'서정리역점','1838485730','2061644793')">
+      <div class="bc-name">프린트샵미니 서정리역점</div>
+      <div class="bc-tags"><span class="bc-t t24">24시간</span><span class="bc-t topen">역세권</span><span class="bc-t tpark">주차가능</span></div>
+    </div>
+  </div>
+
+  <!-- 상세 패널 -->
+  <div class="detail-panel">
+    <div class="map-box">
+      <div id="mapIframeWrap" class="map-visual">
+        <div class="map-pin">📍</div>
+        <div class="map-name" id="mapName">지점을 선택해 주세요</div>
+        <div class="map-addr-text" id="mapAddr">왼쪽 목록에서 원하는 지점을 클릭하세요</div>
+      </div>
+      <div class="map-btns">
+        <a id="naverMapBtn" class="map-btn" href="#" target="_blank" style="pointer-events:none;opacity:0.4">🗺️ 네이버 지도로 보기</a>
+      </div>
+    </div>
+
+    <div class="branch-detail" id="branchDetail" style="display:none">
+      <div class="bd-title" id="detailName">지점명</div>
+      <div class="bd-rows">
+        <div class="bd-row"><span class="bd-key">⏰ 운영</span><span class="bd-val">24시간 365일 연중무휴</span></div>
+        <div class="bd-row"><span class="bd-key">🖨️ 서비스</span><span class="bd-val">인쇄 · 복사 · 스캔 · 팩스 · 코팅 · 제본</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-inner">
+    <div class="ft-grid">
+      <div class="ft-col"><div class="ft-brand-name">🦝 프린트샵미니</div><p>24시간 365일 운영되는<br>무인 셀프 프린트 전문점입니다.</p></div>
+      <div class="ft-col"><h4>서비스</h4><ul><li><a href="services.html">인쇄 · 복사 · 스캔</a></li><li><a href="services.html">팩스 · 코팅 · 제본</a></li><li><a href="branches.html">지점 찾기</a></li><li><a href="community.html">커뮤니티</a></li></ul></div>
+      <div class="ft-col"><h4>고객센터</h4><ul><li><a href="#">이메일 문의</a></li><li><a href="#">채팅 문의</a></li><li><a href="#">운영: 24시간 연중무휴</a></li><li><a href="#">사업자: 000-00-00000</a></li></ul></div>
+    </div>
+    <div class="ft-bottom"><p>© 2025 프린트샵미니. All rights reserved.</p><p>개인정보처리방침 · 이용약관</p></div>
+  </div>
+</footer>
+<script>
+(function(){var w=window;if(w.ChannelIO){return w.console.error("ChannelIO script included twice.");}var ch=function(){ch.c(arguments);};ch.q=[];ch.c=function(args){ch.q.push(args);};w.ChannelIO=ch;function l(){if(w.ChannelIOInitialized){return;}w.ChannelIOInitialized=true;var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="https://cdn.channel.io/plugin/ch-plugin-web.js";var x=document.getElementsByTagName("script")[0];if(x.parentNode){x.parentNode.insertBefore(s,x);}}if(document.readyState==="complete"){l();}else{w.addEventListener("DOMContentLoaded",l);w.addEventListener("load",l);}})();
+ChannelIO('boot', {"pluginKey": "d251d797-1c31-4bed-bfda-4cfce1cf127a"});
+</script>
+
+<script>
+function selectBranch(el, name, channelId, placeId) {
+  document.querySelectorAll('.branch-card').forEach(function(c){c.classList.remove('active')});
+  el.classList.add('active');
+
+  var naverUrl = 'https://map.naver.com/p/entry/place/' + placeId;
+
+  // 지도 iframe으로 교체
+  var wrap = document.getElementById('mapIframeWrap');
+  wrap.innerHTML = '<iframe src="' + naverUrl + '" width="100%" height="320" frameborder="0" style="border:0;display:block"></iframe>';
+
+  // 네이버 지도 버튼 활성화
+  var btn = document.getElementById('naverMapBtn');
+  btn.href = naverUrl;
+  btn.style.pointerEvents = 'auto';
+  btn.style.opacity = '1';
+
+  // 상세 정보
+  var d = document.getElementById('branchDetail');
+  d.style.display = 'block';
+  document.getElementById('detailName').textContent = '프린트샵미니 ' + name;
+}
+function filterRegion(region,btn){
+  document.querySelectorAll('.region-btn').forEach(function(b){b.classList.remove('on')});
+  btn.classList.add('on');
+  var cards=document.querySelectorAll('.branch-card');
+  var headers=document.querySelectorAll('.region-header');
+  var count=0;
+  cards.forEach(function(c){
+    var show=region==='전체'||c.dataset.region===region;
+    c.style.display=show?'':'none';
+    if(show)count++;
+  });
+  headers.forEach(function(h){
+    var show=region==='전체'||h.dataset.region===region;
+    h.style.display=show?'':'none';
+  });
+  document.getElementById('visibleCount').textContent=count;
+}
+function toggleMenu(){
+  var m=document.querySelector('.nav-links');
+  if(m.style.display==='flex'){m.style.display='';return;}
+  Object.assign(m.style,{display:'flex',flexDirection:'column',position:'fixed',top:'70px',left:'0',right:'0',background:'white',padding:'16px 6%',borderBottom:'1px solid #E5E7EB',zIndex:'299',gap:'2px'});
+}
+</script>
+</body>
+</html>
