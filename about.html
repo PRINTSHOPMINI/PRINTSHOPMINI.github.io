@@ -64,11 +64,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .story-text .sec-h2{margin-bottom:24px}
 .story-text p{font-size:15px;color:var(--text2);line-height:1.95;margin-bottom:16px}
 .story-text p:last-child{margin-bottom:0}
-.story-visual{background:var(--white);border-radius:20px;padding:40px;border:1px solid var(--border);display:flex;flex-direction:column;gap:20px}
-.story-highlight{display:flex;align-items:flex-start;gap:16px;padding:20px;background:var(--bg);border-radius:12px}
-.sh-icon{font-size:28px;flex-shrink:0}
-.sh-text h4{font-size:15px;font-weight:900;margin-bottom:4px}
-.sh-text p{font-size:13px;color:var(--text3);line-height:1.7}
+.story-visual{border-radius:20px;overflow:hidden;box-shadow:0 8px 40px rgba(27,138,196,0.13);}
+.story-visual svg{width:100%;height:auto;display:block;}
 
 /* VALUES */
 .values-section{padding:96px 6%;background:var(--white)}
@@ -93,18 +90,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .tl-title{font-size:15px;font-weight:900;margin-bottom:4px}
 .tl-desc{font-size:13px;color:var(--text3);line-height:1.7}
 
-/* TEAM */
-.team-section{padding:96px 6%;background:var(--white)}
-.team-inner{max-width:1160px;margin:0 auto}
-.team-banner{background:linear-gradient(135deg,var(--blue) 0%,var(--blue-mid) 100%);border-radius:20px;padding:60px 48px;color:white;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
-.tb-left h3{font-size:28px;font-weight:900;letter-spacing:-1px;margin-bottom:12px}
-.tb-left p{font-size:15px;opacity:.85;max-width:440px;line-height:1.8}
-.tb-right{display:flex;gap:12px;flex-wrap:wrap}
-.tb-btn{padding:12px 28px;border-radius:50px;font-size:14px;font-weight:700;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:all .2s}
-.tb-btn.white{background:white;color:var(--blue);border:none}
-.tb-btn.white:hover{background:var(--blue-light)}
-.tb-btn.outline{background:transparent;color:white;border:2px solid rgba(255,255,255,.5)}
-.tb-btn.outline:hover{background:rgba(255,255,255,.1)}
+
 
 /* FOOTER */
 footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
@@ -126,7 +112,6 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
   .values-grid{grid-template-columns:repeat(2,1fr)}
   .story-inner{grid-template-columns:1fr;gap:40px}
   .ah-kpi{gap:28px}
-  .team-banner{flex-direction:column}
   .nav-links{display:none}
   .hamburger{display:flex}
 }
@@ -148,7 +133,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
   </ul>
   <div class="nav-right">
     <a href="branches.html" class="nav-cta">지점 찾기</a>
-    <div class="nav-raccoon"><img src="https://api.dicebear.com/7.x/bottts/svg?seed=raccoon&backgroundColor=b6e3f4" alt="라쿤"></div>
+    <div class="nav-raccoon"><img src="raccoon1.png" alt="라쿤"></div>
   </div>
   <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
 </nav>
@@ -207,18 +192,114 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
       <p>현재는 수원·화성·용인·평택 4개 지역, 15개 지점을 운영 중이며, 매달 수천 명의 고객이 이용하고 계십니다.</p>
     </div>
     <div class="story-visual">
-      <div class="story-highlight">
-        <div class="sh-icon">🌙</div>
-        <div class="sh-text"><h4>새벽에도 열려있는</h4><p>24시간 365일, 명절에도 쉬지 않습니다. 필요한 그 순간, 언제나 열려있습니다.</p></div>
-      </div>
-      <div class="story-highlight">
-        <div class="sh-icon">🤝</div>
-        <div class="sh-text"><h4>직원 없어도 쉬운</h4><p>단계별 사진 안내, 화면 가이드, 채팅 문의까지. 처음 방문해도 혼자서 OK!</p></div>
-      </div>
-      <div class="story-highlight">
-        <div class="sh-icon">💰</div>
-        <div class="sh-text"><h4>합리적인 가격으로</h4><p>불필요한 거품 없이 필요한 만큼만, 투명하고 합리적인 요금제로 운영합니다.</p></div>
-      </div>
+      <svg viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans KR', sans-serif">
+        <defs>
+          <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#E8F4FC"/>
+            <stop offset="100%" style="stop-color:#F0F8FF"/>
+          </linearGradient>
+          <filter id="cardShadow">
+            <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#1B8AC4" flood-opacity="0.15"/>
+          </filter>
+          <filter id="softShadow">
+            <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.08"/>
+          </filter>
+        </defs>
+
+        <!-- 배경 -->
+        <rect width="520" height="420" fill="url(#bgGrad)"/>
+
+        <!-- ── 건물 전체 그룹 (중앙 정렬) ── -->
+        <!-- 바닥 -->
+        <rect x="100" y="355" width="320" height="14" rx="4" fill="#1B8AC4"/>
+        <rect x="88"  y="362" width="344" height="8"  rx="4" fill="#1470A8"/>
+
+        <!-- 건물 외벽 -->
+        <rect x="118" y="185" width="284" height="172" rx="4" fill="#F3F8FC" stroke="#1B8AC4" stroke-width="3" filter="url(#cardShadow)"/>
+
+        <!-- 간판 (상단 띠) -->
+        <rect x="118" y="150" width="284" height="40" rx="4" fill="#1B8AC4"/>
+        <rect x="118" y="150" width="284" height="40" rx="4" fill="none" stroke="#1470A8" stroke-width="3"/>
+        <text x="260" y="176" text-anchor="middle" font-size="16" font-weight="900" fill="white" letter-spacing="1">프린트샵미니 🦝</text>
+
+        <!-- ── 차양 (어닝) ── -->
+        <!-- 차양 베이스 곡선 -->
+        <path d="M112,190 L408,190 L408,210 Q370,240 332,210 Q314,196 296,210 Q278,226 260,210 Q242,196 224,210 Q206,226 188,210 Q170,196 152,210 Q134,226 112,210 Z"
+              fill="#4AAAD6" stroke="#1B8AC4" stroke-width="2.5"/>
+        <!-- 차양 줄무늬 (흰줄) -->
+        <path d="M140,190 Q134,210 128,225" stroke="white" stroke-width="8" stroke-linecap="round" opacity="0.45"/>
+        <path d="M175,190 Q172,215 168,232" stroke="white" stroke-width="8" stroke-linecap="round" opacity="0.45"/>
+        <path d="M224,190 Q224,216 222,233" stroke="white" stroke-width="8" stroke-linecap="round" opacity="0.45"/>
+        <path d="M260,190 Q260,218 260,235" stroke="white" stroke-width="8" stroke-linecap="round" opacity="0.45"/>
+        <path d="M296,190 Q296,216 298,233" stroke="white" stroke-width="8" stroke-linecap="round" opacity="0.45"/>
+        <path d="M345,190 Q348,215 352,232" stroke="white" stroke-width="8" stroke-linecap="round" opacity="0.45"/>
+        <path d="M380,190 Q386,210 392,225" stroke="white" stroke-width="8" stroke-linecap="round" opacity="0.45"/>
+
+        <!-- 차양 하단 스캘럽 (물결 장식) -->
+        <path d="M112,210 Q126,230 140,210 Q154,192 168,210 Q182,230 196,210 Q210,192 224,210 Q238,230 252,210 Q266,192 280,210 Q294,230 308,210 Q322,192 336,210 Q350,230 364,210 Q378,192 392,210 Q406,230 408,210"
+              fill="#1B8AC4" stroke="#1470A8" stroke-width="1.5"/>
+
+        <!-- ── 왼쪽 쇼윈도 ── -->
+        <rect x="132" y="248" width="100" height="90" rx="3" fill="#DCEEFA" stroke="#4AAAD6" stroke-width="2.5"/>
+        <!-- 창문 프레임 십자 -->
+        <line x1="182" y1="248" x2="182" y2="338" stroke="#4AAAD6" stroke-width="2"/>
+        <line x1="132" y1="293" x2="232" y2="293" stroke="#4AAAD6" stroke-width="2"/>
+        <!-- 창문 광택 -->
+        <rect x="136" y="252" width="42" height="37" rx="2" fill="white" opacity="0.35"/>
+        <rect x="186" y="252" width="42" height="37" rx="2" fill="white" opacity="0.2"/>
+
+        <!-- ── 오른쪽 쇼윈도 ── -->
+        <rect x="288" y="248" width="100" height="90" rx="3" fill="#DCEEFA" stroke="#4AAAD6" stroke-width="2.5"/>
+        <line x1="338" y1="248" x2="338" y2="338" stroke="#4AAAD6" stroke-width="2"/>
+        <line x1="288" y1="293" x2="388" y2="293" stroke="#4AAAD6" stroke-width="2"/>
+        <rect x="292" y="252" width="42" height="37" rx="2" fill="white" opacity="0.35"/>
+        <rect x="342" y="252" width="42" height="37" rx="2" fill="white" opacity="0.2"/>
+
+        <!-- ── 자동문 (중앙) ── -->
+        <rect x="218" y="268" width="84" height="87" rx="3" fill="#B8DCF0" stroke="#4AAAD6" stroke-width="2.5"/>
+        <!-- 왼쪽 문짝 -->
+        <rect x="221" y="271" width="38" height="81" rx="2" fill="#DCEEFA" opacity="0.85"/>
+        <!-- 오른쪽 문짝 -->
+        <rect x="261" y="271" width="38" height="81" rx="2" fill="#DCEEFA" opacity="0.85"/>
+        <!-- 문 중앙선 -->
+        <line x1="260" y1="271" x2="260" y2="352" stroke="#4AAAD6" stroke-width="2"/>
+        <!-- 손잡이 -->
+        <rect x="251" y="308" width="7" height="18" rx="3.5" fill="#1B8AC4" opacity="0.6"/>
+        <rect x="263" y="308" width="7" height="18" rx="3.5" fill="#1B8AC4" opacity="0.6"/>
+        <!-- AUTO 센서 -->
+        <rect x="238" y="260" width="44" height="10" rx="5" fill="#1B8AC4" opacity="0.5"/>
+        <text x="260" y="268" text-anchor="middle" font-size="6.5" font-weight="700" fill="white">AUTO</text>
+
+        <!-- ── 성장 타임라인 (상단) ── -->
+        <rect x="82" y="48" width="80" height="48" rx="10" fill="white" filter="url(#softShadow)"/>
+        <text x="122" y="70" text-anchor="middle" font-size="12" font-weight="900" fill="#1B8AC4">2021</text>
+        <text x="122" y="86" text-anchor="middle" font-size="9" fill="#6B7280">광교 1호점</text>
+
+        <polygon points="169,72 178,68 178,76" fill="#4AAAD6"/>
+        <line x1="162" y1="72" x2="178" y2="72" stroke="#4AAAD6" stroke-width="2"/>
+
+        <rect x="180" y="48" width="80" height="48" rx="10" fill="white" filter="url(#softShadow)"/>
+        <text x="220" y="70" text-anchor="middle" font-size="12" font-weight="900" fill="#1B8AC4">2023</text>
+        <text x="220" y="86" text-anchor="middle" font-size="9" fill="#6B7280">10개 지점</text>
+
+        <polygon points="267,72 276,68 276,76" fill="#4AAAD6"/>
+        <line x1="260" y1="72" x2="276" y2="72" stroke="#4AAAD6" stroke-width="2"/>
+
+        <rect x="278" y="42" width="90" height="54" rx="10" fill="#1B8AC4" filter="url(#softShadow)"/>
+        <text x="323" y="65" text-anchor="middle" font-size="12" font-weight="900" fill="white">현재</text>
+        <text x="323" y="83" text-anchor="middle" font-size="10" font-weight="700" fill="white" opacity="0.9">4도시 15지점</text>
+
+        <!-- ── 플로팅 뱃지 ── -->
+        <rect x="30" y="230" width="74" height="68" rx="12" fill="white" filter="url(#softShadow)"/>
+        <text x="67" y="256" text-anchor="middle" font-size="15" font-weight="900" fill="#1B8AC4">24H</text>
+        <text x="67" y="272" text-anchor="middle" font-size="8" font-weight="700" fill="#6B7280">연중무휴</text>
+        <text x="67" y="285" text-anchor="middle" font-size="8" fill="#6B7280">365일 운영</text>
+
+        <rect x="416" y="230" width="74" height="68" rx="12" fill="white" filter="url(#softShadow)"/>
+        <text x="453" y="256" text-anchor="middle" font-size="13" font-weight="900" fill="#1B8AC4">무인</text>
+        <text x="453" y="272" text-anchor="middle" font-size="8" font-weight="700" fill="#6B7280">셀프운영</text>
+        <text x="453" y="285" text-anchor="middle" font-size="8" fill="#6B7280">직원 불필요</text>
+      </svg>
     </div>
   </div>
 </div>
@@ -303,37 +384,17 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
   </div>
 </div>
 
-<!-- TEAM BANNER -->
-<div class="team-section">
-  <div class="team-inner">
-    <div class="team-banner">
-      <div class="tb-left">
-        <h3>함께 성장할 파트너를 찾고 있어요</h3>
-        <p>프린트샵미니와 함께 지점을 운영하거나, 제휴를 원하시는 분들의 연락을 기다립니다. 창업 문의부터 제휴 제안까지 편하게 연락해 주세요.</p>
-      </div>
-      <div class="tb-right">
-        <button class="tb-btn white" onclick="alert('이메일 문의: printshop@mini.kr')">이메일 문의</button>
-        <button class="tb-btn outline" onclick="alert('채팅 문의 시스템으로 연결됩니다')">채팅 문의</button>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- FOOTER -->
 <footer>
   <div class="ft-inner">
     <div class="ft-grid">
       <div class="ft-col"><div class="ft-brand-name">🦝 프린트샵미니</div><p>24시간 365일 운영되는<br>무인 셀프 프린트 전문점입니다.</p></div>
       <div class="ft-col"><h4>서비스</h4><ul><li><a href="services.html">인쇄 · 복사 · 스캔</a></li><li><a href="services.html">팩스 · 코팅 · 제본</a></li><li><a href="branches.html">지점 찾기</a></li><li><a href="community.html">커뮤니티</a></li></ul></div>
-      <div class="ft-col"><h4>고객센터</h4><ul><li><a href="#">이메일 문의</a></li><li><a href="#">채팅 문의</a></li><li><a href="#">운영: 24시간 연중무휴</a></li><li><a href="#">사업자: 000-00-00000</a></li></ul></div>
+      <div class="ft-col"><h4>고객센터</h4><ul><li><a href="#" onclick="openEmailPopup();return false;">이메일 문의</a></li><li><a href="#">매장운영: 24시간 연중무휴</a></li><li><a href="#">사업자: 000-00-00000</a></li></ul></div>
     </div>
     <div class="ft-bottom"><p>© 2025 프린트샵미니. All rights reserved.</p><p>개인정보처리방침 · 이용약관</p></div>
   </div>
 </footer>
-<script>
-(function(){var w=window;if(w.ChannelIO){return;}var ch=function(){ch.c(arguments);};ch.q=[];ch.c=function(args){ch.q.push(args);};w.ChannelIO=ch;function l(){if(w.ChannelIOInitialized){return;}w.ChannelIOInitialized=true;var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="https://cdn.channel.io/plugin/ch-plugin-web.js";var x=document.getElementsByTagName("script")[0];if(x.parentNode){x.parentNode.insertBefore(s,x);}}if(document.readyState==="complete"){l();}else{w.addEventListener("DOMContentLoaded",l);w.addEventListener("load",l);}})();
-ChannelIO('boot', {"pluginKey": "d251d797-1c31-4bed-bfda-4cfce1cf127a"});
-</script>
 
 <script>
 function toggleMenu(){
@@ -341,6 +402,85 @@ function toggleMenu(){
   if(m.style.display==='flex'){m.style.display='';return;}
   Object.assign(m.style,{display:'flex',flexDirection:'column',position:'fixed',top:'70px',left:'0',right:'0',background:'white',padding:'16px 6%',borderBottom:'1px solid #E5E7EB',zIndex:'299',gap:'2px'});
 }
+</script>
+
+<!-- 이메일 문의 팝업 -->
+<div id="emailPopup" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:9999;align-items:center;justify-content:center;">
+  <div style="background:white;border-radius:16px;padding:36px 32px;width:90%;max-width:460px;box-shadow:0 20px 60px rgba(0,0,0,0.2);position:relative;">
+    <button onclick="closeEmailPopup()" style="position:absolute;top:16px;right:16px;background:none;border:none;font-size:20px;cursor:pointer;color:#6B7280;">✕</button>
+    <h3 style="font-size:18px;font-weight:900;color:#111827;margin-bottom:6px;">이메일 문의</h3>
+    <p style="font-size:13px;color:#6B7280;margin-bottom:24px;">아래 양식을 작성하시면 이메일로 연결됩니다.</p>
+    <div style="margin-bottom:14px;">
+      <label style="font-size:12px;font-weight:700;color:#374151;display:block;margin-bottom:6px;">이름</label>
+      <input id="emailName" type="text" placeholder="이름을 입력해 주세요" style="width:100%;padding:10px 14px;border:1.5px solid #E5E7EB;border-radius:8px;font-size:14px;box-sizing:border-box;font-family:'Noto Sans KR',sans-serif;outline:none;" onfocus="this.style.borderColor='#1B8AC4'" onblur="this.style.borderColor='#E5E7EB'"/>
+    </div>
+    <div style="margin-bottom:14px;">
+      <label style="font-size:12px;font-weight:700;color:#374151;display:block;margin-bottom:6px;">이메일 주소</label>
+      <input id="emailReply" type="email" placeholder="답장받을 이메일을 입력해 주세요" style="width:100%;padding:10px 14px;border:1.5px solid #E5E7EB;border-radius:8px;font-size:14px;box-sizing:border-box;font-family:'Noto Sans KR',sans-serif;outline:none;" onfocus="this.style.borderColor='#1B8AC4'" onblur="this.style.borderColor='#E5E7EB'"/>
+    </div>
+    <div style="margin-bottom:14px;">
+      <label style="font-size:12px;font-weight:700;color:#374151;display:block;margin-bottom:6px;">제목</label>
+      <input id="emailTitle" type="text" placeholder="문의 제목을 입력해 주세요" style="width:100%;padding:10px 14px;border:1.5px solid #E5E7EB;border-radius:8px;font-size:14px;box-sizing:border-box;font-family:'Noto Sans KR',sans-serif;outline:none;" onfocus="this.style.borderColor='#1B8AC4'" onblur="this.style.borderColor='#E5E7EB'"/>
+    </div>
+    <div style="margin-bottom:22px;">
+      <label style="font-size:12px;font-weight:700;color:#374151;display:block;margin-bottom:6px;">내용</label>
+      <textarea id="emailMessage" rows="5" placeholder="문의 내용을 입력해 주세요" style="width:100%;padding:10px 14px;border:1.5px solid #E5E7EB;border-radius:8px;font-size:14px;box-sizing:border-box;resize:vertical;font-family:'Noto Sans KR',sans-serif;outline:none;" onfocus="this.style.borderColor='#1B8AC4'" onblur="this.style.borderColor='#E5E7EB'"></textarea>
+    </div>
+    <div id="emailStatus" style="display:none;margin-bottom:14px;padding:10px 14px;border-radius:8px;font-size:13px;text-align:center;"></div>
+    <button onclick="sendEmailJS()" id="emailSendBtn" style="width:100%;padding:13px;background:#1B8AC4;color:white;border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Noto Sans KR',sans-serif;">이메일 보내기</button>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+emailjs.init('7Dt86T55VtSlMqDs0');
+function openEmailPopup(){
+  document.getElementById('emailPopup').style.display='flex';
+  document.getElementById('emailStatus').style.display='none';
+  document.getElementById('emailName').value='';
+  document.getElementById('emailReply').value='';
+  document.getElementById('emailTitle').value='';
+  document.getElementById('emailMessage').value='';
+}
+function closeEmailPopup(){document.getElementById('emailPopup').style.display='none';}
+function sendEmailJS(){
+  var name=document.getElementById('emailName').value.trim();
+  var reply=document.getElementById('emailReply').value.trim();
+  var title=document.getElementById('emailTitle').value.trim();
+  var message=document.getElementById('emailMessage').value.trim();
+  var status=document.getElementById('emailStatus');
+  var btn=document.getElementById('emailSendBtn');
+  if(!name||!reply||!title||!message){
+    status.style.display='block';
+    status.style.background='#FEF2F2';
+    status.style.color='#DC2626';
+    status.textContent='모든 항목을 입력해 주세요.';
+    return;
+  }
+  btn.textContent='전송 중...';
+  btn.disabled=true;
+  emailjs.send('service_m2ellqn','template_iszcjio',{
+    name: name,
+    email: reply,
+    title: title,
+    message: message
+  }).then(function(){
+    status.style.display='block';
+    status.style.background='#F0FDF4';
+    status.style.color='#16A34A';
+    status.textContent='✅ 문의가 성공적으로 전송되었습니다!';
+    btn.textContent='이메일 보내기';
+    btn.disabled=false;
+    setTimeout(closeEmailPopup, 2000);
+  },function(error){
+    status.style.display='block';
+    status.style.background='#FEF2F2';
+    status.style.color='#DC2626';
+    status.textContent='❌ 전송에 실패했습니다. 다시 시도해 주세요.';
+    btn.textContent='이메일 보내기';
+    btn.disabled=false;
+  });
+}
+document.getElementById('emailPopup').addEventListener('click',function(e){if(e.target===this)closeEmailPopup();});
 </script>
 </body>
 </html>

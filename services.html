@@ -152,7 +152,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
   </ul>
   <div class="nav-right">
     <a href="branches.html" class="nav-cta">지점 찾기</a>
-    <div class="nav-raccoon"><img src="https://api.dicebear.com/7.x/bottts/svg?seed=raccoon&backgroundColor=b6e3f4" alt="라쿤"></div>
+    <div class="nav-raccoon"><img src="raccoon1.png" alt="라쿤"></div>
   </div>
   <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
 </nav>
@@ -459,15 +459,11 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
     <div class="ft-grid">
       <div class="ft-col"><div class="ft-brand-name">🦝 프린트샵미니</div><p>24시간 365일 운영되는<br>무인 셀프 프린트 전문점입니다.</p></div>
       <div class="ft-col"><h4>서비스</h4><ul><li><a href="services.html">인쇄 · 복사 · 스캔</a></li><li><a href="services.html">팩스 · 코팅 · 제본</a></li><li><a href="branches.html">지점 찾기</a></li><li><a href="community.html">커뮤니티</a></li></ul></div>
-      <div class="ft-col"><h4>고객센터</h4><ul><li><a href="#">이메일 문의</a></li><li><a href="#">채팅 문의</a></li><li><a href="#">운영: 24시간 연중무휴</a></li><li><a href="#">사업자: 000-00-00000</a></li></ul></div>
+      <div class="ft-col"><h4>고객센터</h4><ul><li><a href="#" onclick="openEmailPopup();return false;">이메일 문의</a></li><li><a href="#">매장운영: 24시간 연중무휴</a></li><li><a href="#">사업자: 000-00-00000</a></li></ul></div>
     </div>
     <div class="ft-bottom"><p>© 2025 프린트샵미니. All rights reserved.</p><p>개인정보처리방침 · 이용약관</p></div>
   </div>
 </footer>
-<script>
-(function(){var w=window;if(w.ChannelIO){return;}var ch=function(){ch.c(arguments);};ch.q=[];ch.c=function(args){ch.q.push(args);};w.ChannelIO=ch;function l(){if(w.ChannelIOInitialized){return;}w.ChannelIOInitialized=true;var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="https://cdn.channel.io/plugin/ch-plugin-web.js";var x=document.getElementsByTagName("script")[0];if(x.parentNode){x.parentNode.insertBefore(s,x);}}if(document.readyState==="complete"){l();}else{w.addEventListener("DOMContentLoaded",l);w.addEventListener("load",l);}})();
-ChannelIO('boot', {"pluginKey": "d251d797-1c31-4bed-bfda-4cfce1cf127a"});
-</script>
 
 <script>
 function toggleFaq(item){item.classList.toggle('open')}
@@ -484,6 +480,85 @@ function toggleMenu(){
   if(m.style.display==='flex'){m.style.display='';return;}
   Object.assign(m.style,{display:'flex',flexDirection:'column',position:'fixed',top:'70px',left:'0',right:'0',background:'white',padding:'16px 6%',borderBottom:'1px solid #E5E7EB',zIndex:'299',gap:'2px'});
 }
+</script>
+
+<!-- 이메일 문의 팝업 -->
+<div id="emailPopup" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:9999;align-items:center;justify-content:center;">
+  <div style="background:white;border-radius:16px;padding:36px 32px;width:90%;max-width:460px;box-shadow:0 20px 60px rgba(0,0,0,0.2);position:relative;">
+    <button onclick="closeEmailPopup()" style="position:absolute;top:16px;right:16px;background:none;border:none;font-size:20px;cursor:pointer;color:#6B7280;">✕</button>
+    <h3 style="font-size:18px;font-weight:900;color:#111827;margin-bottom:6px;">이메일 문의</h3>
+    <p style="font-size:13px;color:#6B7280;margin-bottom:24px;">아래 양식을 작성하시면 이메일로 연결됩니다.</p>
+    <div style="margin-bottom:14px;">
+      <label style="font-size:12px;font-weight:700;color:#374151;display:block;margin-bottom:6px;">이름</label>
+      <input id="emailName" type="text" placeholder="이름을 입력해 주세요" style="width:100%;padding:10px 14px;border:1.5px solid #E5E7EB;border-radius:8px;font-size:14px;box-sizing:border-box;font-family:'Noto Sans KR',sans-serif;outline:none;" onfocus="this.style.borderColor='#1B8AC4'" onblur="this.style.borderColor='#E5E7EB'"/>
+    </div>
+    <div style="margin-bottom:14px;">
+      <label style="font-size:12px;font-weight:700;color:#374151;display:block;margin-bottom:6px;">이메일 주소</label>
+      <input id="emailReply" type="email" placeholder="답장받을 이메일을 입력해 주세요" style="width:100%;padding:10px 14px;border:1.5px solid #E5E7EB;border-radius:8px;font-size:14px;box-sizing:border-box;font-family:'Noto Sans KR',sans-serif;outline:none;" onfocus="this.style.borderColor='#1B8AC4'" onblur="this.style.borderColor='#E5E7EB'"/>
+    </div>
+    <div style="margin-bottom:14px;">
+      <label style="font-size:12px;font-weight:700;color:#374151;display:block;margin-bottom:6px;">제목</label>
+      <input id="emailTitle" type="text" placeholder="문의 제목을 입력해 주세요" style="width:100%;padding:10px 14px;border:1.5px solid #E5E7EB;border-radius:8px;font-size:14px;box-sizing:border-box;font-family:'Noto Sans KR',sans-serif;outline:none;" onfocus="this.style.borderColor='#1B8AC4'" onblur="this.style.borderColor='#E5E7EB'"/>
+    </div>
+    <div style="margin-bottom:22px;">
+      <label style="font-size:12px;font-weight:700;color:#374151;display:block;margin-bottom:6px;">내용</label>
+      <textarea id="emailMessage" rows="5" placeholder="문의 내용을 입력해 주세요" style="width:100%;padding:10px 14px;border:1.5px solid #E5E7EB;border-radius:8px;font-size:14px;box-sizing:border-box;resize:vertical;font-family:'Noto Sans KR',sans-serif;outline:none;" onfocus="this.style.borderColor='#1B8AC4'" onblur="this.style.borderColor='#E5E7EB'"></textarea>
+    </div>
+    <div id="emailStatus" style="display:none;margin-bottom:14px;padding:10px 14px;border-radius:8px;font-size:13px;text-align:center;"></div>
+    <button onclick="sendEmailJS()" id="emailSendBtn" style="width:100%;padding:13px;background:#1B8AC4;color:white;border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Noto Sans KR',sans-serif;">이메일 보내기</button>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+emailjs.init('7Dt86T55VtSlMqDs0');
+function openEmailPopup(){
+  document.getElementById('emailPopup').style.display='flex';
+  document.getElementById('emailStatus').style.display='none';
+  document.getElementById('emailName').value='';
+  document.getElementById('emailReply').value='';
+  document.getElementById('emailTitle').value='';
+  document.getElementById('emailMessage').value='';
+}
+function closeEmailPopup(){document.getElementById('emailPopup').style.display='none';}
+function sendEmailJS(){
+  var name=document.getElementById('emailName').value.trim();
+  var reply=document.getElementById('emailReply').value.trim();
+  var title=document.getElementById('emailTitle').value.trim();
+  var message=document.getElementById('emailMessage').value.trim();
+  var status=document.getElementById('emailStatus');
+  var btn=document.getElementById('emailSendBtn');
+  if(!name||!reply||!title||!message){
+    status.style.display='block';
+    status.style.background='#FEF2F2';
+    status.style.color='#DC2626';
+    status.textContent='모든 항목을 입력해 주세요.';
+    return;
+  }
+  btn.textContent='전송 중...';
+  btn.disabled=true;
+  emailjs.send('service_m2ellqn','template_iszcjio',{
+    name: name,
+    email: reply,
+    title: title,
+    message: message
+  }).then(function(){
+    status.style.display='block';
+    status.style.background='#F0FDF4';
+    status.style.color='#16A34A';
+    status.textContent='✅ 문의가 성공적으로 전송되었습니다!';
+    btn.textContent='이메일 보내기';
+    btn.disabled=false;
+    setTimeout(closeEmailPopup, 2000);
+  },function(error){
+    status.style.display='block';
+    status.style.background='#FEF2F2';
+    status.style.color='#DC2626';
+    status.textContent='❌ 전송에 실패했습니다. 다시 시도해 주세요.';
+    btn.textContent='이메일 보내기';
+    btn.disabled=false;
+  });
+}
+document.getElementById('emailPopup').addEventListener('click',function(e){if(e.target===this)closeEmailPopup();});
 </script>
 </body>
 </html>
