@@ -128,7 +128,7 @@ body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--bg
 <div class="login-wrap" id="loginWrap">
   <div class="login-box">
     <div class="login-logo">
-      <img src="raccoon_admin.png" alt="프린트샵미니">
+      <img src="raccoon_admin.png" alt="프린트샵미니" class="rm-bg">
       <div class="login-logo-badge">⚙️</div>
     </div>
     <div class="login-title">관리자 로그인</div>
@@ -142,7 +142,7 @@ body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--bg
 <!-- 관리 화면 -->
 <div class="admin-wrap" id="adminWrap">
   <div class="admin-header">
-    <div class="admin-title">🦝 프린트샵미니 <span>통합관리</span> 시스템</div>
+    <div class="admin-title"><img src="raccoon_admin.png" class="rm-bg" style="width:36px;height:36px;object-fit:contain;vertical-align:middle;margin-right:6px"> 프린트샵미니 <span>통합관리</span> 시스템</div>
     <div style="display:flex;gap:8px">
       <a href="community.html" class="home-btn">← 홈페이지로</a>
       <button class="logout-btn" onclick="doLogout()">로그아웃</button>
@@ -599,6 +599,27 @@ var SB_URL='https://wbcfciiuiootbdezxfwy.supabase.co';
 var SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndiY2ZjaWl1aW9vdGJkZXp4Znd5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc1MjkyMTQsImV4cCI6MjA5MzEwNTIxNH0.UV4ukUXuAYKAqq85B4FTHO2BtIOqPaBHgAJN5lqyU5s';
 var SB_HDR={'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Content-Type':'application/json','Prefer':'return=representation'};
 var ADMIN_PW='printshop1234';
+
+function removeBg(img){
+  try{
+    var c=document.createElement('canvas');
+    c.width=img.naturalWidth;c.height=img.naturalHeight;
+    var ctx=c.getContext('2d');
+    ctx.drawImage(img,0,0);
+    var d=ctx.getImageData(0,0,c.width,c.height),px=d.data;
+    for(var i=0;i<px.length;i+=4){
+      if(px[i]<45&&px[i+1]<45&&px[i+2]<45)px[i+3]=0;
+    }
+    ctx.putImageData(d,0,0);
+    img.src=c.toDataURL('image/png');
+  }catch(e){}
+}
+window.addEventListener('load',function(){
+  document.querySelectorAll('img.rm-bg').forEach(function(img){
+    if(img.complete)removeBg(img);
+    else img.addEventListener('load',function(){removeBg(img);});
+  });
+});
 
 function doLogin(){
   var pw=document.getElementById('pwInput').value;
