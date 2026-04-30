@@ -603,12 +603,34 @@ var ADMIN_PW='printshop1234';
 function removeBg(img){
   try{
     var c=document.createElement('canvas');
-    c.width=img.naturalWidth;c.height=img.naturalHeight;
+    var w=img.naturalWidth,h=img.naturalHeight;
+    c.width=w;c.height=h;
     var ctx=c.getContext('2d');
     ctx.drawImage(img,0,0);
-    var d=ctx.getImageData(0,0,c.width,c.height),px=d.data;
-    for(var i=0;i<px.length;i+=4){
-      if(px[i]<45&&px[i+1]<45&&px[i+2]<45)px[i+3]=0;
+    var d=ctx.getImageData(0,0,w,h),px=d.data;
+    var vis=new Uint8Array(w*h);
+    var stack=[];
+    var thr=30;
+    function isBg(i4){return px[i4]<thr&&px[i4+1]<thr&&px[i4+2]<thr;}
+    // 가장자리 픽셀에서 시작
+    for(var x=0;x<w;x++){
+      [0,h-1].forEach(function(y){var i=y*w+x;if(!vis[i]&&isBg(i*4)){vis[i]=1;stack.push(i);}});
+    }
+    for(var y=0;y<h;y++){
+      [0,w-1].forEach(function(x){var i=y*w+x;if(!vis[i]&&isBg(i*4)){vis[i]=1;stack.push(i);}});
+    }
+    // flood fill (DFS)
+    while(stack.length){
+      var i=stack.pop();
+      px[i*4+3]=0;
+      var x=i%w,y=Math.floor(i/w);
+      [[x-1,y],[x+1,y],[x,y-1],[x,y+1]].forEach(function(p){
+        var nx=p[0],ny=p[1];
+        if(nx>=0&&nx<w&&ny>=0&&ny<h){
+          var ni=ny*w+nx;
+          if(!vis[ni]&&isBg(ni*4)){vis[ni]=1;stack.push(ni);}
+        }
+      });
     }
     ctx.putImageData(d,0,0);
     img.src=c.toDataURL('image/png');
@@ -616,7 +638,7 @@ function removeBg(img){
 }
 window.addEventListener('load',function(){
   document.querySelectorAll('img.rm-bg').forEach(function(img){
-    if(img.complete)removeBg(img);
+    if(img.complete&&img.naturalWidth)removeBg(img);
     else img.addEventListener('load',function(){removeBg(img);});
   });
 });
