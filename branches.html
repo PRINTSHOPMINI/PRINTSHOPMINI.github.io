@@ -264,6 +264,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
     <div class="branch-detail" id="branchDetail" style="display:none">
       <div class="bd-title" id="detailName">지점명</div>
       <div class="bd-rows">
+        <div class="bd-row"><span class="bd-key">📍 주소</span><span class="bd-val" id="detailAddr" style="line-height:1.6">-</span></div>
         <div class="bd-row"><span class="bd-key">⏰ 운영</span><span class="bd-val">24시간 365일 연중무휴</span></div>
         <div class="bd-row"><span class="bd-key">🖨️ 서비스</span><span class="bd-val">인쇄 · 복사 · 스캔 · 팩스 · 코팅 · 제본</span></div>
       </div>
@@ -284,26 +285,47 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 </footer>
 
 <script>
+var BRANCH_ADDR = {
+  '망포역점':'경기도 수원시 영통구 덕영대로1556번길 16 영통디지털엠파이어 1층 B동 197호',
+  '영통역점':'경기도 수원시 영통구 봉영로 1569 뉴월드프라자 408호',
+  '신영통점':'경기도 화성시 병점구 영통로60번길 7 헤센아이티타워 4층 421호',
+  '수원시청역점':'경기도 수원시 팔달구 효원로 278 파비오더씨타 2층 236호',
+  '권선점':'경기도 수원시 권선구 동수원로177번길 90 수원아이파크시티9단지 상가 106호',
+  '광교점':'경기도 수원시 영통구 도청로18번길 26 힐스테이트광교중앙역 상가 단지 1층 175호',
+  '동탄남광장점':'경기도 화성시 동탄구 메타폴리스로 47-7 서해더블루 제2층 제207호',
+  '병점역점':'경기도 화성시 병점구 병점노을5로 20 골든스퀘어2차 510호',
+  '동탄역점':'경기도 화성시 동탄구 동탄대로21길 10 더퍼스트타워 1층 155호',
+  '기흥구청점':'경기도 용인시 기흥구 구갈로 74 구갈스포츠센타 1층 119호',
+  '수원정자점':'경기도 수원시 장안구 대평로 80 정연메이저빌딩 B104호',
+  '호매실점':'경기도 용인시 기흥구 구갈로 74 구갈스포츠센타 1층 119호',
+  '동탄호수점':'경기도 화성시 동탄구 동탄대로5길 15 그랑파샤쥬 1층 1039-1호',
+  '동백역점':'경기도 용인시 기흥구 동백3로11번길 12 브릭스타워 1층 142호',
+  '서정리역점':'경기도 평택시 고덕갈평6길 23 서정타워2차 3층 311호'
+};
 function selectBranch(el, name, channelId, placeId) {
   document.querySelectorAll('.branch-card').forEach(function(c){c.classList.remove('active')});
   el.classList.add('active');
-
+  var addr = BRANCH_ADDR[name] || '';
   var naverUrl = 'https://map.naver.com/p/entry/place/' + placeId;
-
-  // 지도 iframe으로 교체
   var wrap = document.getElementById('mapIframeWrap');
-  wrap.innerHTML = '<iframe src="' + naverUrl + '" width="100%" height="320" frameborder="0" style="border:0;display:block"></iframe>';
-
-  // 네이버 지도 버튼 활성화
-  var btn = document.getElementById('naverMapBtn');
-  btn.href = naverUrl;
-  btn.style.pointerEvents = 'auto';
-  btn.style.opacity = '1';
-
-  // 상세 정보
+  wrap.style.cssText = '';
+  wrap.innerHTML =
+    '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:36px 24px;width:100%;text-align:center">' +
+      '<div style="font-size:54px;filter:drop-shadow(0 4px 12px rgba(27,138,196,0.25))">📍</div>' +
+      '<div style="font-size:17px;font-weight:900;color:#1B8AC4;letter-spacing:-.3px">프린트샵미니 ' + name + '</div>' +
+      '<div style="font-size:12px;color:#6B7280;line-height:1.9;max-width:300px;word-break:keep-all">' + addr + '</div>' +
+      '<a href="' + naverUrl + '" target="_blank" ' +
+        'style="margin-top:8px;background:#03C75A;color:white;font-size:14px;font-weight:700;padding:13px 32px;border-radius:10px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 16px rgba(3,199,90,0.35);transition:transform .15s,box-shadow .15s" ' +
+        'onmouseover="this.style.transform=\'scale(1.04)\';this.style.boxShadow=\'0 6px 20px rgba(3,199,90,0.45)\'" ' +
+        'onmouseout="this.style.transform=\'scale(1)\';this.style.boxShadow=\'0 4px 16px rgba(3,199,90,0.35)\'">' +
+        '🗺️ 네이버 지도로 보기' +
+      '</a>' +
+    '</div>';
+  document.getElementById('naverMapBtn').style.display = 'none';
   var d = document.getElementById('branchDetail');
   d.style.display = 'block';
   document.getElementById('detailName').textContent = '프린트샵미니 ' + name;
+  document.getElementById('detailAddr').textContent = addr;
 }
 function filterRegion(region,btn){
   document.querySelectorAll('.region-btn').forEach(function(b){b.classList.remove('on')});
