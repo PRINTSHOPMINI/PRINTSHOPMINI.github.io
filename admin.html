@@ -1329,7 +1329,7 @@ async function uploadGuideFile(input){
     if(!dbRes.ok){var db=await dbRes.text();throw new Error('db:'+dbRes.status+':'+db);}
     showStatus(st,'ok','✅ 업로드되었습니다!');
     await loadGuideFilesAdmin(currentGuideSvc);
-  }catch(e){showStatus(st,'err','❌ 업로드 실패: '+e.message);}
+  }catch(e){showStatus(st,'err','❌ 업로드 실패: '+e.message);alert('업로드 실패:\n'+e.message);}
 }
 
 async function deleteGuideFile(id,fileUrl){
