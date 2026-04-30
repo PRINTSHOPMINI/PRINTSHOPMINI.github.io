@@ -128,7 +128,7 @@ body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--bg
 <div class="login-wrap" id="loginWrap">
   <div class="login-box">
     <div class="login-logo">
-      <img src="raccoon_admin.png" alt="프린트샵미니" class="rm-bg">
+      <img src="raccoon_admin.png" alt="프린트샵미니">
       <div class="login-logo-badge">⚙️</div>
     </div>
     <div class="login-title">관리자 로그인</div>
@@ -142,7 +142,7 @@ body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--bg
 <!-- 관리 화면 -->
 <div class="admin-wrap" id="adminWrap">
   <div class="admin-header">
-    <div class="admin-title"><img src="raccoon_admin.png" class="rm-bg" style="width:36px;height:36px;object-fit:contain;vertical-align:middle;margin-right:6px"> 프린트샵미니 <span>통합관리</span> 시스템</div>
+    <div class="admin-title"><img src="raccoon_admin.png" style="width:36px;height:36px;object-fit:contain;vertical-align:middle;margin-right:6px"> 프린트샵미니 <span>통합관리</span> 시스템</div>
     <div style="display:flex;gap:8px">
       <a href="community.html" class="home-btn">← 홈페이지로</a>
       <button class="logout-btn" onclick="doLogout()">로그아웃</button>
@@ -600,48 +600,6 @@ var SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI
 var SB_HDR={'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Content-Type':'application/json','Prefer':'return=representation'};
 var ADMIN_PW='printshop1234';
 
-function removeBg(img){
-  try{
-    var c=document.createElement('canvas');
-    var w=img.naturalWidth,h=img.naturalHeight;
-    c.width=w;c.height=h;
-    var ctx=c.getContext('2d');
-    ctx.drawImage(img,0,0);
-    var d=ctx.getImageData(0,0,w,h),px=d.data;
-    var vis=new Uint8Array(w*h);
-    var stack=[];
-    var thr=30;
-    function isBg(i4){return px[i4]<thr&&px[i4+1]<thr&&px[i4+2]<thr;}
-    // 가장자리 픽셀에서 시작
-    for(var x=0;x<w;x++){
-      [0,h-1].forEach(function(y){var i=y*w+x;if(!vis[i]&&isBg(i*4)){vis[i]=1;stack.push(i);}});
-    }
-    for(var y=0;y<h;y++){
-      [0,w-1].forEach(function(x){var i=y*w+x;if(!vis[i]&&isBg(i*4)){vis[i]=1;stack.push(i);}});
-    }
-    // flood fill (DFS)
-    while(stack.length){
-      var i=stack.pop();
-      px[i*4+3]=0;
-      var x=i%w,y=Math.floor(i/w);
-      [[x-1,y],[x+1,y],[x,y-1],[x,y+1]].forEach(function(p){
-        var nx=p[0],ny=p[1];
-        if(nx>=0&&nx<w&&ny>=0&&ny<h){
-          var ni=ny*w+nx;
-          if(!vis[ni]&&isBg(ni*4)){vis[ni]=1;stack.push(ni);}
-        }
-      });
-    }
-    ctx.putImageData(d,0,0);
-    img.src=c.toDataURL('image/png');
-  }catch(e){}
-}
-window.addEventListener('load',function(){
-  document.querySelectorAll('img.rm-bg').forEach(function(img){
-    if(img.complete&&img.naturalWidth)removeBg(img);
-    else img.addEventListener('load',function(){removeBg(img);});
-  });
-});
 
 function doLogin(){
   var pw=document.getElementById('pwInput').value;
