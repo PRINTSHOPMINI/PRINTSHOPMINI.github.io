@@ -82,6 +82,20 @@ body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--bg
 /* TOAST */
 .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#111;color:white;padding:12px 28px;border-radius:50px;font-size:14px;font-weight:700;z-index:999;transition:transform .3s;pointer-events:none}
 .toast.show{transform:translateX(-50%) translateY(0)}
+
+/* EMOJI PICKER */
+.emoji-label-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.emoji-label-row label{font-size:12px;font-weight:700;color:var(--text2)}
+.emoji-toggle-btn{background:var(--blue-light);color:var(--blue);border:none;border-radius:8px;padding:4px 12px;font-size:12px;font-weight:700;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:background .2s}
+.emoji-toggle-btn:hover{background:#d0e8f6}
+.emoji-panel{display:none;background:white;border:1.5px solid var(--border);border-radius:14px;padding:16px;margin-bottom:8px;box-shadow:0 8px 32px rgba(0,0,0,0.12)}
+.emoji-panel.open{display:block}
+.emoji-cats{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.emoji-cat-btn{font-size:11px;font-weight:700;padding:4px 12px;border-radius:50px;border:1.5px solid var(--border);color:var(--text3);cursor:pointer;background:white;transition:all .15s}
+.emoji-cat-btn:hover,.emoji-cat-btn.on{background:var(--blue);color:white;border-color:var(--blue)}
+.emoji-grid{display:flex;flex-wrap:wrap;gap:4px}
+.emoji-item{font-size:22px;width:38px;height:38px;display:flex;align-items:center;justify-content:center;border-radius:8px;cursor:pointer;transition:background .15s;border:none;background:none}
+.emoji-item:hover{background:var(--blue-light)}
 </style>
 </head>
 <body>
@@ -121,7 +135,11 @@ body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--bg
       <input type="text" id="addDate" placeholder="예: 2026.04.30">
     </div>
     <div class="form-row">
-      <label>내용</label>
+      <div class="emoji-label-row">
+        <label>내용</label>
+        <button class="emoji-toggle-btn" type="button" onclick="toggleEmoji('addEmoji','addBody')">😊 이모지</button>
+      </div>
+      <div class="emoji-panel" id="addEmoji"></div>
       <textarea id="addBody" placeholder="공지사항 내용을 입력하세요&#10;줄바꿈은 Enter로 입력하세요"></textarea>
     </div>
     <div class="form-actions">
@@ -155,7 +173,11 @@ body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--bg
       <input type="text" id="editDate">
     </div>
     <div class="form-row">
-      <label>내용</label>
+      <div class="emoji-label-row">
+        <label>내용</label>
+        <button class="emoji-toggle-btn" type="button" onclick="toggleEmoji('editEmoji','editBody')">😊 이모지</button>
+      </div>
+      <div class="emoji-panel" id="editEmoji"></div>
       <textarea id="editBody" style="min-height:220px"></textarea>
     </div>
     <div class="form-actions">
@@ -302,6 +324,63 @@ function showToast(msg){
 }
 function escHtml(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 function escAttr(s){return String(s).replace(/'/g,"\\'");}
+
+/* ===== 이모지 피커 ===== */
+var EMOJI_CATS={
+  '자주쓰는':['😊','🦝','✅','⚠️','🚫','📋','📍','📞','💬','🎉','🔔','📢'],
+  '안내/경고':['⚠️','🚫','❌','✅','ℹ️','📢','📣','🔴','🟡','🟢','⛔','🆗'],
+  '시간/장소':['📍','🕐','⏱️','📅','🗓️','🏪','🏢','🅿️','🗺️','🏠','🚗','🚶'],
+  '번호/기호':['①','②','③','④','⑤','⑥','⑦','⑧','⑨','⑩','·','•','→','▶','◆','★'],
+  '강조/포인트':['💡','🔑','📌','⭐','🌟','👉','👆','☝️','🎯','🔥','💯','🆕'],
+  '소통/연락':['📱','💬','📞','✉️','📧','📲','🖥️','💻','🖨️','📠','📡','🔗']
+};
+var currentEmojiTarget=null;
+
+function toggleEmoji(panelId, targetId){
+  var panel=document.getElementById(panelId);
+  var isOpen=panel.classList.contains('open');
+  // 다른 패널 닫기
+  document.querySelectorAll('.emoji-panel').forEach(function(p){p.classList.remove('open');});
+  if(isOpen)return;
+  currentEmojiTarget=document.getElementById(targetId);
+  if(!panel.innerHTML){
+    var cats=Object.keys(EMOJI_CATS);
+    var catHtml='<div class="emoji-cats">';
+    cats.forEach(function(c,i){
+      catHtml+='<button class="emoji-cat-btn'+(i===0?' on':'')+'" onclick="switchCat(this,\''+c+'\',\''+panelId+'\')">'+ c+'</button>';
+    });
+    catHtml+='</div><div class="emoji-grid" id="'+panelId+'Grid">'+renderEmojiGrid(cats[0])+'</div>';
+    panel.innerHTML=catHtml;
+  }
+  panel.classList.add('open');
+}
+function switchCat(btn,cat,panelId){
+  var panel=document.getElementById(panelId);
+  panel.querySelectorAll('.emoji-cat-btn').forEach(function(b){b.classList.remove('on');});
+  btn.classList.add('on');
+  document.getElementById(panelId+'Grid').innerHTML=renderEmojiGrid(cat);
+}
+function renderEmojiGrid(cat){
+  return EMOJI_CATS[cat].map(function(e){
+    return '<button class="emoji-item" onclick="insertEmoji(\''+e+'\')" title="'+e+'">'+e+'</button>';
+  }).join('');
+}
+function insertEmoji(emoji){
+  if(!currentEmojiTarget)return;
+  var el=currentEmojiTarget;
+  var start=el.selectionStart;
+  var end=el.selectionEnd;
+  var val=el.value;
+  el.value=val.slice(0,start)+emoji+val.slice(end);
+  el.selectionStart=el.selectionEnd=start+emoji.length;
+  el.focus();
+}
+document.addEventListener('click',function(e){
+  if(!e.target.closest('.emoji-panel')&&!e.target.closest('.emoji-toggle-btn')){
+    document.querySelectorAll('.emoji-panel').forEach(function(p){p.classList.remove('open');});
+  }
+});
+/* ====================== */
 
 document.getElementById('editModal').addEventListener('click',function(e){if(e.target===this)closeEditModal();});
 document.getElementById('pwInput').focus();
