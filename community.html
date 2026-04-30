@@ -259,27 +259,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
         <div style="text-align:center">조회</div>
       </div>
 
-      <div class="post-row notice" onclick="openPost('신규 지점 오픈 안내 – 평택 서정리역점')">
-        <div><span class="pb pn">공지</span></div>
-        <div class="pt">신규 지점 오픈 안내 – 평택 서정리역점<span class="new"></span></div>
-        <div class="pm">관리자</div>
-        <div class="pm">2026.04.16</div>
-        <div class="pv">0</div>
-      </div>
-<div class="post-row notice" onclick="openPost('프린트샵미니 서비스 이용 안내 (필독)')">
-        <div><span class="pb pn">공지</span></div>
-        <div class="pt">프린트샵미니 서비스 이용 시 매장 내 안내된 사용 방법을 반드시 먼저 확인 후 이용해 주세요!</div>
-        <div class="pm">관리자</div>
-        <div class="pm">2026.04.16</div>
-        <div class="pv">0</div>
-      </div>
-      <div class="post-row notice" onclick="openPost('결제 후 출력물 미출력 시 안내')">
-        <div><span class="pb pn">공지</span></div>
-        <div class="pt">결제 후 출력물이 나오지 않을 경우, 절대로 재결제하지 마세요!</div>
-        <div class="pm">관리자</div>
-        <div class="pm">2026.04.16</div>
-        <div class="pv">0</div>
-      </div>
+      <div id="postListBody"><div style="padding:32px;text-align:center;color:var(--text3)">공지사항을 불러오는 중...</div></div>
     </div>
 
     <!-- 페이지네이션 -->
@@ -295,11 +275,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
     <!-- 공지사항 빠른 링크 -->
     <div class="side-box">
       <div class="side-box-title">공지사항</div>
-      <div class="notice-list">
-        <div class="notice-item" onclick="openPost('신규 지점 오픈 안내 – 평택 서정리역점')">신규 지점 오픈 안내 – 평택 서정리역점</div>
-        <div class="notice-item" onclick="openPost('프린트샵미니 서비스 이용 안내 (필독)')">서비스 이용 시 사용 방법 먼저 확인해 주세요!</div>
-        <div class="notice-item" onclick="openPost('결제 후 출력물 미출력 시 안내')">🚫 출력 안될 시 절대 재결제 금지!</div>
-      </div>
+      <div class="notice-list" id="sidebarNoticeList"></div>
     </div>
 
     <!-- 고객센터 -->
@@ -416,89 +392,53 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 
 
 <script>
-function openModal(){document.getElementById('writeModal').classList.add('open')}
-function closeModal(){document.getElementById('writeModal').classList.remove('open')}
-var POSTS={
-  '신규 지점 오픈 안내 – 평택 서정리역점':{
-    title:'신규 지점 오픈 안내 – 평택 서정리역점',
-    date:'2026.04.16',
-    view:'0',
-    body:`안녕하세요, 프린트샵미니입니다. 😊
+var SB_URL='https://wbcfciiuiootbdezxfwy.supabase.co';
+var SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndiY2ZjaWl1aW9vdGJkZXp4Znd5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc1MjkyMTQsImV4cCI6MjA5MzEwNTIxNH0.UV4ukUXuAYKAqq85B4FTHO2BtIOqPaBHgAJN5lqyU5s';
+var SB_HDR={'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Content-Type':'application/json'};
+var noticesCache=[];
 
-새로운 지점이 문을 열었습니다!
-
-📍 프린트샵미니 서정리역점
-경기도 평택시 고덕갈평6길 23 서정타워2차 3층 311호
-
-🕐 운영시간: 24시간 365일 연중무휴 (무인 셀프 운영)
-🅿️ 주차: 건물 내 주차 가능
-
-서정리역 인근에서도 언제든지 인쇄·복사·스캔·팩스·코팅·제본 서비스를 이용하실 수 있습니다.
-
-더 가까운 곳에서 편리하게 이용해 주세요!
-앞으로도 프린트샵미니를 많이 이용해 주시기 바랍니다.
-
-감사합니다. 🦝 프린트샵미니`
-  },
-  '프린트샵미니 서비스 이용 안내 (필독)':{
-    title:'프린트샵미니 서비스 이용 시 매장 내 안내된 사용 방법을 반드시 먼저 확인 후 이용해 주세요!',
-    date:'2026.04.16',
-    view:'0',
-    body:`안녕하세요, 프린트샵미니입니다.
-
-보다 원활한 서비스 이용을 위해 아래 사항을 꼭 확인해 주세요!
-
-📋 이용 전 필수 확인 사항
-
-① 매장 입장 후 벽면 및 장비에 부착된 이용 안내문을 먼저 읽어 주세요.
-② 인쇄·복사·스캔 등 이용하실 서비스에 맞는 장비를 선택해 주세요.
-③ USB, 이메일, QR코드 등 파일 전송 방법을 사전에 확인해 주세요.
-④ 결제는 카드 및 간편 결제(카카오페이, 네이버페이 등)가 가능합니다.
-
-⚠️ 주의 사항
-
-- 장비 이용 중 문제가 발생하면 재시도 전에 매장 내 안내된 연락처로 먼저 문의해 주세요.
-- 출력 설정(컬러/흑백, 용지 크기 등)을 결제 전에 반드시 확인해 주세요.
-- 개인정보(주민등록증, 통장 사본 등)가 담긴 문서는 스캔 후 장비에서 반드시 삭제해 주세요.
-
-궁금한 사항은 매장 내 안내된 연락처 또는 홈페이지 이메일 문의를 이용해 주세요.
-
-감사합니다. 🦝 프린트샵미니`
-  },
-  '결제 후 출력물 미출력 시 안내':{
-    title:'결제 후 출력물이 나오지 않을 경우, 절대로 재결제하지 마세요!',
-    date:'2026.04.16',
-    view:'0',
-    body:`안녕하세요, 프린트샵미니입니다.
-
-🚫 결제 후 출력물이 나오지 않을 경우, 절대로 재결제하지 마세요!
-
-📶 통신 상태와 파일 용량에 따라 인쇄 또는 복사가 지연될 수 있습니다.
-⏱️ 우선 최대 10분 기다려 보시고, 출력되지 않는 경우 아래의 내용과 같이 진행해 주세요!
-
-⚠️ 연락 없이 재결제 후 1차·2차 결제 건이 모두 인쇄된 경우 환불이 불가합니다.
-🚫 중복 결제는 절대 하지 마세요.
-
-📞 문의 방법
-
-① 📱 매장 내 안내된 연락처로 전화해 주세요.
-② 💬 전화 연결이 안 되는 경우, 매장에 안내된 네이버 톡톡 QR을 스캔하여
-   채팅창에 아래 내용을 보내 주세요.
-   · 🏪 매장명
-   · 🔧 고장 내용
-   · 📞 연락처
-
-✅ 확인 후 메시지 또는 전화로 개별 연락 드립니다.
-
-감사합니다. 🦝 프린트샵미니`
+async function loadNotices(){
+  try{
+    var r=await fetch(SB_URL+'/rest/v1/notices?order=created_at.desc',{headers:SB_HDR});
+    var data=await r.json();
+    if(!Array.isArray(data)) throw new Error();
+    noticesCache=data;
+    renderNotices(data);
+    renderSidebarNotices(data);
+  }catch(e){
+    document.getElementById('postListBody').innerHTML='<div style="padding:32px;text-align:center;color:var(--text3)">공지사항을 불러오지 못했습니다.</div>';
   }
-};
-function openPost(key){
-  var p=POSTS[key];
+}
+function renderNotices(notices){
+  var el=document.getElementById('postListBody');
+  if(!notices.length){
+    el.innerHTML='<div style="padding:32px;text-align:center;color:var(--text3)">등록된 공지사항이 없습니다.</div>';
+    return;
+  }
+  el.innerHTML=notices.map(function(n){
+    return '<div class="post-row notice" onclick="openPost('+n.id+')">'+
+      '<div><span class="pb pn">공지</span></div>'+
+      '<div class="pt">'+escHtml(n.title)+'</div>'+
+      '<div class="pm">관리자</div>'+
+      '<div class="pm">'+escHtml(n.date)+'</div>'+
+      '<div class="pv">'+(n.views||0)+'</div>'+
+      '</div>';
+  }).join('');
+}
+function renderSidebarNotices(notices){
+  var el=document.getElementById('sidebarNoticeList');
+  if(!el)return;
+  if(!notices.length){el.innerHTML='<div style="font-size:13px;color:var(--text3)">등록된 공지가 없습니다.</div>';return;}
+  el.innerHTML=notices.slice(0,5).map(function(n){
+    return '<div class="notice-item" onclick="openPost('+n.id+')">'+escHtml(n.title)+'</div>';
+  }).join('');
+}
+function openPost(id){
+  var p=noticesCache.find(function(n){return n.id===id;});
   if(!p){showToast('해당 공지를 찾을 수 없습니다.');return;}
   document.getElementById('pmTitle').textContent=p.title;
   document.getElementById('pmDate').textContent='📅 '+p.date;
-  document.getElementById('pmView').textContent='👁 조회 '+p.view;
+  document.getElementById('pmView').textContent='👁 조회 '+(p.views||0);
   document.getElementById('pmBody').textContent=p.body;
   document.getElementById('postModal').classList.add('open');
   document.body.style.overflow='hidden';
@@ -507,36 +447,18 @@ function closePostModal(){
   document.getElementById('postModal').classList.remove('open');
   document.body.style.overflow='';
 }
-function submitPost(){
-  var t=document.getElementById('postTitle').value.trim();
-  var c=document.getElementById('postContent').value.trim();
-  if(!t||!c){alert('제목과 내용을 입력해 주세요.');return;}
-  closeModal();
-  showToast('게시글이 등록되었습니다!');
-  document.getElementById('postTitle').value='';
-  document.getElementById('postContent').value='';
-  document.getElementById('postNick').value='';
-}
 function showToast(msg){
   var t=document.getElementById('toast');
   t.textContent=msg;t.classList.add('show');
   setTimeout(function(){t.classList.remove('show')},2500);
 }
-function filterCat(el,cat){
-  document.querySelectorAll('.cat-tab').forEach(function(t){t.classList.remove('on')});
-  el.classList.add('on');
-}
 function doSearch(){
   var q=document.getElementById('searchInput').value.trim();
   if(!q){showToast('검색어를 입력해 주세요.');return;}
-  var results=[];
-  Object.keys(POSTS).forEach(function(key){
-    var p=POSTS[key];
-    var ql=q.toLowerCase();
-    if(p.title.toLowerCase().indexOf(ql)!==-1||p.body.toLowerCase().indexOf(ql)!==-1){
-      results.push({key:key,post:p});
-    }
-  });
+  var ql=q.toLowerCase();
+  var results=noticesCache.filter(function(n){
+    return n.title.toLowerCase().indexOf(ql)!==-1||n.body.toLowerCase().indexOf(ql)!==-1;
+  }).map(function(n){return {key:n.id,post:n};});
   openSearchModal(q,results);
 }
 function openSearchModal(q,results){
@@ -545,15 +467,15 @@ function openSearchModal(q,results){
   title.innerHTML='<span style="color:var(--blue)">\''+escHtml(q)+'\'</span> 검색 결과 <span style="font-size:14px;font-weight:500;color:var(--text3)">('+results.length+'건)</span>';
   if(results.length===0){
     body.innerHTML='<div class="search-no-result"><div class="icon">🔍</div><p>검색 결과가 없습니다</p><span>\''+escHtml(q)+'\'에 해당하는 공지사항이 없습니다.</span></div>';
-  } else {
+  }else{
     var html='';
     results.forEach(function(r){
       var excerpt=makeExcerpt(r.post.body,q);
-      html+='<div class="search-result-item" onclick="closeSearchModal();openPost(\''+escAttr(r.key)+'\')">'+
+      html+='<div class="search-result-item" onclick="closeSearchModal();openPost('+r.key+')">'+
         '<div class="search-result-badge"><span class="pb pn">공지</span></div>'+
         '<div class="search-result-title">'+highlightKw(escHtml(r.post.title),q)+'</div>'+
         '<div class="search-result-excerpt">'+highlightKw(escHtml(excerpt),q)+'</div>'+
-        '<div class="search-result-meta">📅 '+r.post.date+'</div>'+
+        '<div class="search-result-meta">📅 '+escHtml(r.post.date)+'</div>'+
         '</div>';
     });
     body.innerHTML=html;
@@ -576,17 +498,16 @@ function highlightKw(html,q){
   var re=new RegExp('('+escReg(escHtml(q))+')','gi');
   return html.replace(re,'<span class="search-kw">$1</span>');
 }
-function escHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
-function escAttr(s){return s.replace(/'/g,"\\'");}
+function escHtml(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 function escReg(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');}
 function toggleMenu(){
   var m=document.querySelector('.nav-links');
   if(m.style.display==='flex'){m.style.display='';return;}
   Object.assign(m.style,{display:'flex',flexDirection:'column',position:'fixed',top:'70px',left:'0',right:'0',background:'white',padding:'16px 6%',borderBottom:'1px solid #E5E7EB',zIndex:'299',gap:'2px'});
 }
-document.getElementById('writeModal').addEventListener('click',function(e){if(e.target===this)closeModal()});
 document.getElementById('postModal').addEventListener('click',function(e){if(e.target===this)closePostModal()});
 document.getElementById('searchModal').addEventListener('click',function(e){if(e.target===this)closeSearchModal()});
+loadNotices();
 </script>
 
 <!-- 이메일 문의 팝업 -->
