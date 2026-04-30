@@ -79,6 +79,13 @@ body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--bg
 .status-bar.ok{background:var(--green-light);color:var(--green)}
 .status-bar.err{background:var(--red-light);color:var(--red)}
 
+/* TABS */
+.tab-nav{display:flex;gap:4px;margin-bottom:28px;background:white;border:1px solid var(--border);border-radius:12px;padding:4px}
+.tab-btn{flex:1;padding:10px;border:none;border-radius:9px;font-size:14px;font-weight:700;cursor:pointer;font-family:'Noto Sans KR',sans-serif;color:var(--text3);background:none;transition:all .2s}
+.tab-btn.on{background:var(--blue);color:white}
+.tab-panel{display:none}
+.tab-panel.on{display:block}
+
 /* TOAST */
 .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#111;color:white;padding:12px 28px;border-radius:50px;font-size:14px;font-weight:700;z-index:999;transition:transform .3s;pointer-events:none}
 .toast.show{transform:translateX(-50%) translateY(0)}
@@ -122,6 +129,15 @@ body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--bg
     </div>
   </div>
 
+  <!-- 탭 -->
+  <div class="tab-nav">
+    <button class="tab-btn on" onclick="switchTab('notice',this)">📋 공지사항 관리</button>
+    <button class="tab-btn" onclick="switchTab('branch',this)">📍 지점 관리</button>
+  </div>
+
+  <!-- 공지 탭 -->
+  <div class="tab-panel on" id="tabNotice">
+
   <!-- 공지 등록 -->
   <div class="add-box">
     <div class="add-box-title">새 공지사항 등록</div>
@@ -155,9 +171,101 @@ body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--bg
     </div>
     <div id="noticeList"><div class="list-empty">불러오는 중...</div></div>
   </div>
+
+  </div><!-- /tabNotice -->
+
+  <!-- 지점 탭 -->
+  <div class="tab-panel" id="tabBranch">
+
+  <!-- 지점 등록 -->
+  <div class="add-box">
+    <div class="add-box-title">새 지점 등록</div>
+    <div class="status-bar" id="branchAddStatus"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div class="form-row" style="margin-bottom:0">
+        <label>지점명 <span style="font-weight:400;color:var(--text3)">(예: 망포역점)</span></label>
+        <input type="text" id="bAddName" placeholder="망포역점">
+      </div>
+      <div class="form-row" style="margin-bottom:0">
+        <label>지역</label>
+        <input type="text" id="bAddRegion" placeholder="수원 / 화성 / 용인 / 평택">
+      </div>
+    </div>
+    <div class="form-row" style="margin-top:12px">
+      <label>주소</label>
+      <input type="text" id="bAddAddr" placeholder="경기도 수원시 영통구 ...">
+    </div>
+    <div class="form-row">
+      <label>네이버 플레이스 ID <span style="font-weight:400;color:var(--text3)">(지도 URL 끝 숫자)</span></label>
+      <input type="text" id="bAddPlaceId" placeholder="예: 2031379616">
+    </div>
+    <div style="display:flex;gap:20px;margin-bottom:16px">
+      <label style="display:flex;align-items:center;gap:8px;font-size:14px;cursor:pointer">
+        <input type="checkbox" id="bAddSubway" style="width:16px;height:16px;accent-color:var(--blue)"> 🚇 역세권
+      </label>
+      <label style="display:flex;align-items:center;gap:8px;font-size:14px;cursor:pointer">
+        <input type="checkbox" id="bAddParking" style="width:16px;height:16px;accent-color:var(--blue)"> 🅿️ 주차 가능
+      </label>
+    </div>
+    <div class="form-actions">
+      <button class="btn-primary" id="bAddBtn" onclick="addBranch()">지점 등록</button>
+    </div>
+  </div>
+
+  <!-- 지점 목록 -->
+  <div class="list-box">
+    <div class="list-header">
+      <div class="list-title">등록된 지점</div>
+      <div class="notice-count" id="branchCount"></div>
+    </div>
+    <div id="branchList"><div class="list-empty">불러오는 중...</div></div>
+  </div>
+
+  </div><!-- /tabBranch -->
+
 </div>
 
-<!-- 수정 모달 -->
+<!-- 지점 수정 모달 -->
+<div class="modal-bg" id="branchEditModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeBranchEditModal()">×</button>
+    <div class="modal-title">📍 지점 수정</div>
+    <div class="status-bar" id="branchEditStatus"></div>
+    <input type="hidden" id="bEditId">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div class="form-row" style="margin-bottom:0">
+        <label>지점명</label>
+        <input type="text" id="bEditName">
+      </div>
+      <div class="form-row" style="margin-bottom:0">
+        <label>지역</label>
+        <input type="text" id="bEditRegion">
+      </div>
+    </div>
+    <div class="form-row" style="margin-top:12px">
+      <label>주소</label>
+      <input type="text" id="bEditAddr">
+    </div>
+    <div class="form-row">
+      <label>네이버 플레이스 ID</label>
+      <input type="text" id="bEditPlaceId">
+    </div>
+    <div style="display:flex;gap:20px;margin-bottom:20px">
+      <label style="display:flex;align-items:center;gap:8px;font-size:14px;cursor:pointer">
+        <input type="checkbox" id="bEditSubway" style="width:16px;height:16px;accent-color:var(--blue)"> 🚇 역세권
+      </label>
+      <label style="display:flex;align-items:center;gap:8px;font-size:14px;cursor:pointer">
+        <input type="checkbox" id="bEditParking" style="width:16px;height:16px;accent-color:var(--blue)"> 🅿️ 주차 가능
+      </label>
+    </div>
+    <div class="form-actions">
+      <button class="btn-cancel" onclick="closeBranchEditModal()">취소</button>
+      <button class="btn-primary" id="bEditBtn" onclick="saveBranchEdit()">저장하기</button>
+    </div>
+  </div>
+</div>
+
+<!-- 공지 수정 모달 -->
 <div class="modal-bg" id="editModal">
   <div class="modal">
     <button class="modal-close" onclick="closeEditModal()">×</button>
@@ -202,6 +310,7 @@ function doLogin(){
     document.getElementById('adminWrap').style.display='block';
     setTodayDate();
     loadNotices();
+    loadBranches();
   }else{
     document.getElementById('loginErr').style.display='block';
     document.getElementById('pwInput').value='';
@@ -383,7 +492,115 @@ document.addEventListener('click',function(e){
 /* ====================== */
 
 document.getElementById('editModal').addEventListener('click',function(e){if(e.target===this)closeEditModal();});
+document.getElementById('branchEditModal').addEventListener('click',function(e){if(e.target===this)closeBranchEditModal();});
 document.getElementById('pwInput').focus();
+
+/* ===== 탭 전환 ===== */
+function switchTab(tab, btn){
+  document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('on');});
+  document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('on');});
+  btn.classList.add('on');
+  document.getElementById('tab'+tab.charAt(0).toUpperCase()+tab.slice(1)).classList.add('on');
+}
+
+/* ===== 지점 관리 ===== */
+async function loadBranches(){
+  var r=await fetch(SB_URL+'/rest/v1/branches?order=region,sort_order,name',{headers:SB_HDR});
+  var data=await r.json();
+  document.getElementById('branchCount').textContent='총 '+data.length+'개';
+  if(!data.length){document.getElementById('branchList').innerHTML='<div class="list-empty">등록된 지점이 없습니다.</div>';return;}
+  document.getElementById('branchList').innerHTML=data.map(function(b){
+    return '<div class="notice-card">'+
+      '<div class="nc-top">'+
+        '<div class="nc-title">📍 프린트샵미니 '+escHtml(b.name)+' <span style="font-size:12px;font-weight:500;color:var(--text3)">['+escHtml(b.region)+']</span></div>'+
+        '<div class="nc-actions">'+
+          '<button class="btn-edit" onclick="openBranchEditModal('+b.id+')">수정</button>'+
+          '<button class="btn-del" onclick="deleteBranch('+b.id+',\''+escAttr(b.name)+'\')">삭제</button>'+
+        '</div>'+
+      '</div>'+
+      '<div class="nc-meta">'+escHtml(b.address)+'</div>'+
+      '<div class="nc-meta" style="margin-top:4px">'+
+        '<span style="margin-right:8px">⏰ 24H</span>'+
+        (b.subway?'<span style="margin-right:8px">🚇 역세권</span>':'')+
+        (b.parking?'<span>🅿️ 주차</span>':'')+
+      '</div>'+
+    '</div>';
+  }).join('');
+}
+
+async function addBranch(){
+  var name=document.getElementById('bAddName').value.trim();
+  var region=document.getElementById('bAddRegion').value.trim();
+  var addr=document.getElementById('bAddAddr').value.trim();
+  var placeId=document.getElementById('bAddPlaceId').value.trim();
+  var subway=document.getElementById('bAddSubway').checked;
+  var parking=document.getElementById('bAddParking').checked;
+  var st=document.getElementById('branchAddStatus');
+  if(!name||!region||!addr||!placeId){showStatus(st,'err','모든 항목을 입력해 주세요.');return;}
+  var btn=document.getElementById('bAddBtn');
+  btn.disabled=true;btn.textContent='등록 중...';
+  try{
+    var r=await fetch(SB_URL+'/rest/v1/branches',{method:'POST',headers:SB_HDR,body:JSON.stringify({name:name,region:region,address:addr,naver_place_id:placeId,subway:subway,parking:parking,sort_order:0})});
+    if(!r.ok)throw new Error();
+    showStatus(st,'ok','✅ 지점이 등록되었습니다!');
+    document.getElementById('bAddName').value='';
+    document.getElementById('bAddAddr').value='';
+    document.getElementById('bAddPlaceId').value='';
+    document.getElementById('bAddSubway').checked=false;
+    document.getElementById('bAddParking').checked=false;
+    loadBranches();
+  }catch(e){showStatus(st,'err','❌ 등록에 실패했습니다.');}
+  btn.disabled=false;btn.textContent='지점 등록';
+}
+
+async function openBranchEditModal(id){
+  var r=await fetch(SB_URL+'/rest/v1/branches?id=eq.'+id,{headers:SB_HDR});
+  var data=await r.json();
+  if(!data.length)return;
+  var b=data[0];
+  document.getElementById('bEditId').value=b.id;
+  document.getElementById('bEditName').value=b.name;
+  document.getElementById('bEditRegion').value=b.region;
+  document.getElementById('bEditAddr').value=b.address;
+  document.getElementById('bEditPlaceId').value=b.naver_place_id;
+  document.getElementById('bEditSubway').checked=b.subway;
+  document.getElementById('bEditParking').checked=b.parking;
+  document.getElementById('branchEditStatus').style.display='none';
+  document.getElementById('branchEditModal').classList.add('open');
+}
+function closeBranchEditModal(){document.getElementById('branchEditModal').classList.remove('open');}
+
+async function saveBranchEdit(){
+  var id=document.getElementById('bEditId').value;
+  var name=document.getElementById('bEditName').value.trim();
+  var region=document.getElementById('bEditRegion').value.trim();
+  var addr=document.getElementById('bEditAddr').value.trim();
+  var placeId=document.getElementById('bEditPlaceId').value.trim();
+  var subway=document.getElementById('bEditSubway').checked;
+  var parking=document.getElementById('bEditParking').checked;
+  var st=document.getElementById('branchEditStatus');
+  if(!name||!region||!addr||!placeId){showStatus(st,'err','모든 항목을 입력해 주세요.');return;}
+  var btn=document.getElementById('bEditBtn');
+  btn.disabled=true;btn.textContent='저장 중...';
+  try{
+    var r=await fetch(SB_URL+'/rest/v1/branches?id=eq.'+id,{method:'PATCH',headers:SB_HDR,body:JSON.stringify({name:name,region:region,address:addr,naver_place_id:placeId,subway:subway,parking:parking})});
+    if(!r.ok)throw new Error();
+    showToast('지점 정보가 수정되었습니다.');
+    closeBranchEditModal();
+    loadBranches();
+  }catch(e){showStatus(st,'err','❌ 수정에 실패했습니다.');}
+  btn.disabled=false;btn.textContent='저장하기';
+}
+
+async function deleteBranch(id,name){
+  if(!confirm('['+name+']\n\n이 지점을 삭제하시겠습니까?'))return;
+  try{
+    var r=await fetch(SB_URL+'/rest/v1/branches?id=eq.'+id,{method:'DELETE',headers:SB_HDR});
+    if(!r.ok)throw new Error();
+    showToast('지점이 삭제되었습니다.');
+    loadBranches();
+  }catch(e){showToast('삭제에 실패했습니다.');}
+}
 </script>
 </body>
 </html>

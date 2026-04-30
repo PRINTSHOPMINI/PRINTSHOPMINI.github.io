@@ -149,9 +149,9 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 
 <!-- 통계 -->
 <div class="stats-row">
-  <div class="stat-item"><div class="stat-n">15</div><div class="stat-l">전체 지점 수</div></div>
+  <div class="stat-item"><div class="stat-n" id="statTotal">-</div><div class="stat-l">전체 지점 수</div></div>
   <div class="stat-item"><div class="stat-n">24H</div><div class="stat-l">연중무휴 운영</div></div>
-  <div class="stat-item"><div class="stat-n">4</div><div class="stat-l">운영 지역</div></div>
+  <div class="stat-item"><div class="stat-n" id="statRegions">-</div><div class="stat-l">운영 지역</div></div>
   <div class="stat-item"><div class="stat-n">6</div><div class="stat-l">셀프 서비스</div></div>
 </div>
 
@@ -159,14 +159,10 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 <div class="filter-bar">
   <div class="filter-inner">
     <span class="filter-label">지역 선택</span>
-    <div class="region-btns">
+    <div class="region-btns" id="regionBtns">
       <div class="region-btn on" onclick="filterRegion('전체',this)">전체</div>
-      <div class="region-btn" onclick="filterRegion('수원',this)">📍 수원 (7)</div>
-      <div class="region-btn" onclick="filterRegion('화성',this)">📍 화성 (5)</div>
-      <div class="region-btn" onclick="filterRegion('용인',this)">📍 용인 (2)</div>
-      <div class="region-btn" onclick="filterRegion('평택',this)">📍 평택 (1)</div>
     </div>
-    <span class="filter-count">총 <strong id="visibleCount">15</strong>개 지점</span>
+    <span class="filter-count">총 <strong id="visibleCount">-</strong>개 지점</span>
   </div>
 </div>
 
@@ -174,78 +170,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 <div class="branches-wrap">
   <!-- 지점 목록 -->
   <div class="branch-list" id="branchList">
-
-    <!-- 수원 -->
-    <div class="region-header" data-region="수원">수원 · 8개 지점</div>
-    <div class="branch-card" data-region="수원" onclick="selectBranch(this,'망포역점','1838485730','2031379616')">
-      <div class="bc-name">프린트샵미니 망포역점</div>
-      <div class="bc-tags"><span class="bc-t t24">⏰ 24H</span><span class="bc-t topen">🚇 역세권</span><span class="bc-t tpark">🅿️ 주차</span></div>
-    </div>
-    <div class="branch-card" data-region="수원" onclick="selectBranch(this,'영통역점','1838485730','1257714656')">
-      <div class="bc-name">프린트샵미니 영통역점</div>
-      <div class="bc-tags"><span class="bc-t t24">⏰ 24H</span><span class="bc-t topen">🚇 역세권</span><span class="bc-t tpark">🅿️ 주차</span></div>
-    </div>
-    <div class="branch-card" data-region="수원" onclick="selectBranch(this,'신영통점','1838485730','1242041268')">
-      <div class="bc-name">프린트샵미니 신영통점</div>
-      <div class="bc-tags"><span class="bc-t t24">⏰ 24H</span><span class="bc-t tpark">🅿️ 주차</span></div>
-    </div>
-    <div class="branch-card" data-region="수원" onclick="selectBranch(this,'수원시청역점','1838485730','1754507454')">
-      <div class="bc-name">프린트샵미니 수원시청역점</div>
-      <div class="bc-tags"><span class="bc-t t24">⏰ 24H</span><span class="bc-t topen">🚇 역세권</span><span class="bc-t tpark">🅿️ 주차</span></div>
-    </div>
-    <div class="branch-card" data-region="수원" onclick="selectBranch(this,'권선점','1838485730','1486420184')">
-      <div class="bc-name">프린트샵미니 권선점</div>
-      <div class="bc-tags"><span class="bc-t t24">⏰ 24H</span></div>
-    </div>
-    <div class="branch-card" data-region="수원" onclick="selectBranch(this,'광교점','1838485730','1591220382')">
-      <div class="bc-name">프린트샵미니 광교점</div>
-      <div class="bc-tags"><span class="bc-t t24">⏰ 24H</span><span class="bc-t tpark">🅿️ 주차</span></div>
-    </div>
-    <div class="branch-card" data-region="수원" onclick="selectBranch(this,'수원정자점','1838485730','1608093989')">
-      <div class="bc-name">프린트샵미니 수원정자점</div>
-      <div class="bc-tags"><span class="bc-t t24">⏰ 24H</span><span class="bc-t tpark">🅿️ 주차</span></div>
-    </div>
-    <div class="branch-card" data-region="수원" onclick="selectBranch(this,'호매실점','1838485730','1813654540')">
-      <div class="bc-name">프린트샵미니 호매실점</div>
-      <div class="bc-tags"><span class="bc-t t24">⏰ 24H</span><span class="bc-t tpark">🅿️ 주차</span></div>
-    </div>
-
-    <!-- 화성 -->
-    <div class="region-header" data-region="화성">화성 · 4개 지점</div>
-    <div class="branch-card" data-region="화성" onclick="selectBranch(this,'병점역점','1838485730','1022835538')">
-      <div class="bc-name">프린트샵미니 병점역점</div>
-      <div class="bc-tags"><span class="bc-t t24">⏰ 24H</span><span class="bc-t topen">🚇 역세권</span><span class="bc-t tpark">🅿️ 주차</span></div>
-    </div>
-    <div class="branch-card" data-region="화성" onclick="selectBranch(this,'동탄남광장점','1838485730','1298473058')">
-      <div class="bc-name">프린트샵미니 동탄남광장점</div>
-      <div class="bc-tags"><span class="bc-t t24">⏰ 24H</span><span class="bc-t tpark">🅿️ 주차</span></div>
-    </div>
-    <div class="branch-card" data-region="화성" onclick="selectBranch(this,'동탄역점','1838485730','1873853322')">
-      <div class="bc-name">프린트샵미니 동탄역점</div>
-      <div class="bc-tags"><span class="bc-t t24">⏰ 24H</span><span class="bc-t topen">🚇 역세권</span><span class="bc-t tpark">🅿️ 주차</span></div>
-    </div>
-    <div class="branch-card" data-region="화성" onclick="selectBranch(this,'동탄호수점','1838485730','1413519775')">
-      <div class="bc-name">프린트샵미니 동탄호수점</div>
-      <div class="bc-tags"><span class="bc-t t24">⏰ 24H</span><span class="bc-t tpark">🅿️ 주차</span></div>
-    </div>
-
-    <!-- 용인 -->
-    <div class="region-header" data-region="용인">용인 · 2개 지점</div>
-    <div class="branch-card" data-region="용인" onclick="selectBranch(this,'기흥구청점','1838485730','2047415825')">
-      <div class="bc-name">프린트샵미니 기흥구청점</div>
-      <div class="bc-tags"><span class="bc-t t24">⏰ 24H</span><span class="bc-t tpark">🅿️ 주차</span></div>
-    </div>
-    <div class="branch-card" data-region="용인" onclick="selectBranch(this,'동백역점','1838485730','2090941825')">
-      <div class="bc-name">프린트샵미니 동백역점</div>
-      <div class="bc-tags"><span class="bc-t t24">⏰ 24H</span><span class="bc-t topen">🚇 역세권</span></div>
-    </div>
-
-    <!-- 평택 -->
-    <div class="region-header" data-region="평택">평택 · 1개 지점</div>
-    <div class="branch-card" data-region="평택" onclick="selectBranch(this,'서정리역점','1838485730','2061644793')">
-      <div class="bc-name">프린트샵미니 서정리역점</div>
-      <div class="bc-tags"><span class="bc-t t24">⏰ 24H</span><span class="bc-t topen">🚇 역세권</span><span class="bc-t tpark">🅿️ 주차</span></div>
-    </div>
+    <div style="padding:32px;text-align:center;color:var(--text3)">지점 정보를 불러오는 중...</div>
   </div>
 
   <!-- 상세 패널 -->
@@ -285,48 +210,95 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 </footer>
 
 <script>
-var BRANCH_ADDR = {
-  '망포역점':'경기도 수원시 영통구 덕영대로1556번길 16 영통디지털엠파이어 1층 B동 197호',
-  '영통역점':'경기도 수원시 영통구 봉영로 1569 뉴월드프라자 408호',
-  '신영통점':'경기도 화성시 병점구 영통로60번길 7 헤센아이티타워 4층 421호',
-  '수원시청역점':'경기도 수원시 팔달구 효원로 278 파비오더씨타 2층 236호',
-  '권선점':'경기도 수원시 권선구 동수원로177번길 90 수원아이파크시티9단지 상가 106호',
-  '광교점':'경기도 수원시 영통구 도청로18번길 26 힐스테이트광교중앙역 상가 단지 1층 175호',
-  '동탄남광장점':'경기도 화성시 동탄구 메타폴리스로 47-7 서해더블루 제2층 제207호',
-  '병점역점':'경기도 화성시 병점구 병점노을5로 20 골든스퀘어2차 510호',
-  '동탄역점':'경기도 화성시 동탄구 동탄대로21길 10 더퍼스트타워 1층 155호',
-  '기흥구청점':'경기도 용인시 기흥구 구갈로 74 구갈스포츠센타 1층 119호',
-  '수원정자점':'경기도 수원시 장안구 대평로 80 정연메이저빌딩 B104호',
-  '호매실점':'경기도 용인시 기흥구 구갈로 74 구갈스포츠센타 1층 119호',
-  '동탄호수점':'경기도 화성시 동탄구 동탄대로5길 15 그랑파샤쥬 1층 1039-1호',
-  '동백역점':'경기도 용인시 기흥구 동백3로11번길 12 브릭스타워 1층 142호',
-  '서정리역점':'경기도 평택시 고덕갈평6길 23 서정타워2차 3층 311호'
-};
-function selectBranch(el, name, channelId, placeId) {
+var SB_URL='https://wbcfciiuiootbdezxfwy.supabase.co';
+var SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndiY2ZjaWl1aW9vdGJkZXp4Znd5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc1MjkyMTQsImV4cCI6MjA5MzEwNTIxNH0.UV4ukUXuAYKAqq85B4FTHO2BtIOqPaBHgAJN5lqyU5s';
+var SB_HDR={'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY};
+var branchesCache=[];
+
+async function loadBranches(){
+  try{
+    var r=await fetch(SB_URL+'/rest/v1/branches?order=region,sort_order,name',{headers:SB_HDR});
+    var data=await r.json();
+    if(!Array.isArray(data))throw new Error();
+    branchesCache=data;
+    renderBranches(data);
+    renderFilterBtns(data);
+    renderStats(data);
+  }catch(e){
+    document.getElementById('branchList').innerHTML='<div style="padding:32px;text-align:center;color:var(--text3)">지점 정보를 불러오지 못했습니다.</div>';
+  }
+}
+
+function renderBranches(branches){
+  var list=document.getElementById('branchList');
+  if(!branches.length){list.innerHTML='<div style="padding:32px;text-align:center;color:var(--text3)">등록된 지점이 없습니다.</div>';return;}
+  var regions={};
+  var regionOrder=[];
+  branches.forEach(function(b){
+    if(!regions[b.region]){regions[b.region]=[];regionOrder.push(b.region);}
+    regions[b.region].push(b);
+  });
+  var html='';
+  regionOrder.forEach(function(region){
+    var list=regions[region];
+    html+='<div class="region-header" data-region="'+region+'">'+region+' · '+list.length+'개 지점</div>';
+    list.forEach(function(b){
+      html+='<div class="branch-card" data-id="'+b.id+'" data-region="'+escHtml(b.region)+'" onclick="selectBranchById(this,'+b.id+')">'+
+        '<div class="bc-name">프린트샵미니 '+escHtml(b.name)+'</div>'+
+        '<div class="bc-tags">'+
+          '<span class="bc-t t24">⏰ 24H</span>'+
+          (b.subway?'<span class="bc-t topen">🚇 역세권</span>':'')+
+          (b.parking?'<span class="bc-t tpark">🅿️ 주차</span>':'')+
+        '</div>'+
+      '</div>';
+    });
+  });
+  document.getElementById('branchList').innerHTML=html;
+}
+
+function renderFilterBtns(branches){
+  var regions={};
+  branches.forEach(function(b){regions[b.region]=(regions[b.region]||0)+1;});
+  var html='<div class="region-btn on" onclick="filterRegion(\'전체\',this)">전체</div>';
+  Object.keys(regions).forEach(function(r){
+    html+='<div class="region-btn" onclick="filterRegion(\''+r+'\',this)">📍 '+r+' ('+regions[r]+')</div>';
+  });
+  document.getElementById('regionBtns').innerHTML=html;
+  document.getElementById('visibleCount').textContent=branches.length;
+}
+
+function renderStats(branches){
+  var regions=new Set(branches.map(function(b){return b.region;}));
+  document.getElementById('statTotal').textContent=branches.length;
+  document.getElementById('statRegions').textContent=regions.size;
+}
+
+function selectBranchById(el,id){
+  var b=branchesCache.find(function(x){return x.id===id;});
+  if(!b)return;
   document.querySelectorAll('.branch-card').forEach(function(c){c.classList.remove('active')});
   el.classList.add('active');
-  var addr = BRANCH_ADDR[name] || '';
-  var naverUrl = 'https://map.naver.com/p/entry/place/' + placeId;
-  var wrap = document.getElementById('mapIframeWrap');
-  wrap.style.cssText = '';
-  wrap.innerHTML =
-    '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:36px 24px;width:100%;text-align:center">' +
-      '<div style="font-size:54px;filter:drop-shadow(0 4px 12px rgba(27,138,196,0.25))">📍</div>' +
-      '<div style="font-size:17px;font-weight:900;color:#1B8AC4;letter-spacing:-.3px">프린트샵미니 ' + name + '</div>' +
-      '<div style="font-size:12px;color:#6B7280;line-height:1.9;max-width:300px;word-break:keep-all">' + addr + '</div>' +
-      '<a href="' + naverUrl + '" target="_blank" ' +
-        'style="margin-top:8px;background:#03C75A;color:white;font-size:14px;font-weight:700;padding:13px 32px;border-radius:10px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 16px rgba(3,199,90,0.35);transition:transform .15s,box-shadow .15s" ' +
-        'onmouseover="this.style.transform=\'scale(1.04)\';this.style.boxShadow=\'0 6px 20px rgba(3,199,90,0.45)\'" ' +
-        'onmouseout="this.style.transform=\'scale(1)\';this.style.boxShadow=\'0 4px 16px rgba(3,199,90,0.35)\'">' +
-        '🗺️ 네이버 지도로 보기' +
-      '</a>' +
+  var naverUrl='https://map.naver.com/p/entry/place/'+b.naver_place_id;
+  var wrap=document.getElementById('mapIframeWrap');
+  wrap.style.cssText='';
+  wrap.innerHTML=
+    '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:36px 24px;width:100%;text-align:center">'+
+      '<div style="font-size:54px;filter:drop-shadow(0 4px 12px rgba(27,138,196,0.25))">📍</div>'+
+      '<div style="font-size:17px;font-weight:900;color:#1B8AC4;letter-spacing:-.3px">프린트샵미니 '+escHtml(b.name)+'</div>'+
+      '<div style="font-size:12px;color:#6B7280;line-height:1.9;max-width:300px;word-break:keep-all">'+escHtml(b.address)+'</div>'+
+      '<a href="'+naverUrl+'" target="_blank" '+
+        'style="margin-top:8px;background:#03C75A;color:white;font-size:14px;font-weight:700;padding:13px 32px;border-radius:10px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 16px rgba(3,199,90,0.35);transition:transform .15s,box-shadow .15s" '+
+        'onmouseover="this.style.transform=\'scale(1.04)\';this.style.boxShadow=\'0 6px 20px rgba(3,199,90,0.45)\'" '+
+        'onmouseout="this.style.transform=\'scale(1)\';this.style.boxShadow=\'0 4px 16px rgba(3,199,90,0.35)\'">'+'🗺️ 네이버 지도로 보기'+
+      '</a>'+
     '</div>';
-  document.getElementById('naverMapBtn').style.display = 'none';
-  var d = document.getElementById('branchDetail');
-  d.style.display = 'block';
-  document.getElementById('detailName').textContent = '프린트샵미니 ' + name;
-  document.getElementById('detailAddr').textContent = addr;
+  document.getElementById('naverMapBtn').style.display='none';
+  var d=document.getElementById('branchDetail');
+  d.style.display='block';
+  document.getElementById('detailName').textContent='프린트샵미니 '+b.name;
+  document.getElementById('detailAddr').textContent=b.address;
 }
+
 function filterRegion(region,btn){
   document.querySelectorAll('.region-btn').forEach(function(b){b.classList.remove('on')});
   btn.classList.add('on');
@@ -344,11 +316,16 @@ function filterRegion(region,btn){
   });
   document.getElementById('visibleCount').textContent=count;
 }
+
+function escHtml(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+
 function toggleMenu(){
   var m=document.querySelector('.nav-links');
   if(m.style.display==='flex'){m.style.display='';return;}
   Object.assign(m.style,{display:'flex',flexDirection:'column',position:'fixed',top:'70px',left:'0',right:'0',background:'white',padding:'16px 6%',borderBottom:'1px solid #E5E7EB',zIndex:'299',gap:'2px'});
 }
+
+loadBranches();
 </script>
 
 <!-- 이메일 문의 팝업 -->
