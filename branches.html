@@ -246,7 +246,7 @@ function renderBranches(branches){
       html+='<div class="branch-card" data-id="'+b.id+'" data-region="'+escHtml(b.region)+'" onclick="selectBranchById(this,'+b.id+')">'+
         '<div class="bc-name">프린트샵미니 '+escHtml(b.name)+'</div>'+
         '<div class="bc-tags">'+
-          '<span class="bc-t t24">⏰ 24H</span>'+
+          (b.hours24!==false?'<span class="bc-t t24">⏰ 24H</span>':'')+
           (b.subway?'<span class="bc-t topen">🚇 역세권</span>':'')+
           (b.parking?'<span class="bc-t tpark">🅿️ 주차</span>':'')+
         '</div>'+
