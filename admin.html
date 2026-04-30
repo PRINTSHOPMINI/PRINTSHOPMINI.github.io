@@ -103,6 +103,21 @@ body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--bg
 .emoji-grid{display:flex;flex-wrap:wrap;gap:4px}
 .emoji-item{font-size:22px;width:38px;height:38px;display:flex;align-items:center;justify-content:center;border-radius:8px;cursor:pointer;transition:background .15s;border:none;background:none}
 .emoji-item:hover{background:var(--blue-light)}
+
+/* SELECT */
+.form-row select{width:100%;border:1.5px solid var(--border);border-radius:10px;padding:10px 14px;font-size:14px;font-family:'Noto Sans KR',sans-serif;outline:none;transition:border-color .2s;background:white;cursor:pointer;color:var(--text)}
+.form-row select:focus{border-color:var(--blue)}
+
+/* MANAGE ROWS */
+.manage-row{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;border-bottom:1px solid var(--border);font-size:14px}
+.manage-row:last-child{border-bottom:none}
+.manage-row-text{font-weight:700;flex:1}
+.manage-row-sub{font-size:12px;color:var(--text3);margin-left:8px}
+.manage-actions{display:flex;gap:6px;flex-shrink:0}
+.manage-list{border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-top:12px;background:white}
+.manage-empty{padding:20px;text-align:center;color:var(--text3);font-size:13px}
+.inline-add{display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap;margin-bottom:4px}
+.inline-add .form-row{margin-bottom:0;flex:1;min-width:140px}
 </style>
 </head>
 <body>
@@ -231,38 +246,84 @@ body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--bg
   <!-- 요금표 탭 -->
   <div class="tab-panel" id="tabPrice">
 
+  <!-- 카테고리 관리 -->
+  <div class="add-box">
+    <div class="add-box-title">카테고리 관리</div>
+    <div class="status-bar" id="catAddStatus"></div>
+    <div class="inline-add">
+      <div class="form-row" style="flex:0 0 auto">
+        <label>아이콘</label>
+        <div style="display:flex;gap:6px;align-items:center">
+          <input type="text" id="catAddIcon" placeholder="🖨️" style="width:64px;text-align:center;font-size:18px;padding:8px">
+          <button class="emoji-toggle-btn" type="button" onclick="toggleEmoji('catAddEmoji','catAddIcon')">😊</button>
+        </div>
+        <div class="emoji-panel" id="catAddEmoji"></div>
+      </div>
+      <div class="form-row" style="flex:1;min-width:160px">
+        <label>카테고리명</label>
+        <input type="text" id="catAddName" placeholder="인쇄·복사 (1면당)">
+      </div>
+      <div class="form-row" style="flex:0 0 80px">
+        <label>순서</label>
+        <input type="number" id="catAddSort" value="1" min="1" style="max-width:80px">
+      </div>
+      <div style="padding-bottom:14px">
+        <button class="btn-primary" id="catAddBtn" onclick="addCategory()">추가</button>
+      </div>
+    </div>
+    <div class="manage-list" id="catList"><div class="manage-empty">불러오는 중...</div></div>
+  </div>
+
+  <!-- 항목명 관리 -->
+  <div class="add-box">
+    <div class="add-box-title">항목명 관리</div>
+    <div class="status-bar" id="labelAddStatus"></div>
+    <div class="inline-add">
+      <div class="form-row" style="flex:1;min-width:160px">
+        <label>항목명</label>
+        <input type="text" id="labelAddName" placeholder="흑백 A4">
+      </div>
+      <div class="form-row" style="flex:0 0 80px">
+        <label>순서</label>
+        <input type="number" id="labelAddSort" value="1" min="1" style="max-width:80px">
+      </div>
+      <div style="padding-bottom:14px">
+        <button class="btn-primary" id="labelAddBtn" onclick="addLabel()">추가</button>
+      </div>
+    </div>
+    <div class="manage-list" id="labelList"><div class="manage-empty">불러오는 중...</div></div>
+  </div>
+
+  <!-- 요금 항목 추가 -->
   <div class="add-box">
     <div class="add-box-title">요금 항목 추가</div>
     <div class="status-bar" id="priceAddStatus"></div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
       <div class="form-row" style="margin-bottom:0">
-        <label>카테고리 <span style="font-weight:400;color:var(--text3)">(예: 인쇄·복사 (1면당))</span></label>
-        <input type="text" id="pAddCategory" placeholder="인쇄·복사 (1면당)">
+        <label>카테고리</label>
+        <select id="pAddCategory"><option value="">-- 카테고리 선택 --</option></select>
       </div>
       <div class="form-row" style="margin-bottom:0">
-        <label>아이콘 이모지</label>
-        <input type="text" id="pAddIcon" placeholder="🖨️" style="max-width:100px">
+        <label>항목명</label>
+        <select id="pAddLabel"><option value="">-- 항목명 선택 --</option></select>
       </div>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
-      <div class="form-row" style="margin-bottom:0">
-        <label>항목명 <span style="font-weight:400;color:var(--text3)">(예: 흑백 A4)</span></label>
-        <input type="text" id="pAddLabel" placeholder="흑백 A4">
-      </div>
+    <div style="display:grid;grid-template-columns:1fr 80px;gap:12px;margin-top:12px">
       <div class="form-row" style="margin-bottom:0">
         <label>금액 <span style="font-weight:400;color:var(--text3)">(예: 70원)</span></label>
         <input type="text" id="pAddValue" placeholder="70원">
       </div>
+      <div class="form-row" style="margin-bottom:0">
+        <label>순서</label>
+        <input type="number" id="pAddSort" value="1" min="1">
+      </div>
     </div>
-    <div class="form-row" style="margin-top:12px">
-      <label>정렬 순서 <span style="font-weight:400;color:var(--text3)">(카테고리 내 순서, 숫자가 낮을수록 위)</span></label>
-      <input type="number" id="pAddSort" placeholder="1" value="1" style="max-width:100px">
-    </div>
-    <div class="form-actions">
+    <div class="form-actions" style="margin-top:16px">
       <button class="btn-primary" id="pAddBtn" onclick="addPriceItem()">항목 추가</button>
     </div>
   </div>
 
+  <!-- 등록된 요금 항목 -->
   <div class="list-box">
     <div class="list-header">
       <div class="list-title">등록된 요금 항목</div>
@@ -351,6 +412,60 @@ body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--bg
   </div>
 </div>
 
+<!-- 카테고리 수정 모달 -->
+<div class="modal-bg" id="catEditModal">
+  <div class="modal" style="max-width:480px">
+    <button class="modal-close" onclick="closeCatEditModal()">×</button>
+    <div class="modal-title">카테고리 수정</div>
+    <div class="status-bar" id="catEditStatus"></div>
+    <input type="hidden" id="cEditId">
+    <div style="display:flex;gap:12px;align-items:flex-end;flex-wrap:wrap">
+      <div class="form-row" style="flex:0 0 auto;margin-bottom:0">
+        <label>아이콘</label>
+        <div style="display:flex;gap:6px;align-items:center">
+          <input type="text" id="cEditIcon" style="width:64px;text-align:center;font-size:18px;padding:8px">
+          <button class="emoji-toggle-btn" type="button" onclick="toggleEmoji('catEditEmoji','cEditIcon')">😊</button>
+        </div>
+        <div class="emoji-panel" id="catEditEmoji"></div>
+      </div>
+      <div class="form-row" style="flex:1;min-width:160px;margin-bottom:0">
+        <label>카테고리명</label>
+        <input type="text" id="cEditName">
+      </div>
+      <div class="form-row" style="flex:0 0 80px;margin-bottom:0">
+        <label>순서</label>
+        <input type="number" id="cEditSort" min="1">
+      </div>
+    </div>
+    <div class="form-actions" style="margin-top:20px">
+      <button class="btn-cancel" onclick="closeCatEditModal()">취소</button>
+      <button class="btn-primary" id="cEditBtn" onclick="saveCatEdit()">저장하기</button>
+    </div>
+  </div>
+</div>
+
+<!-- 항목명 수정 모달 -->
+<div class="modal-bg" id="labelEditModal">
+  <div class="modal" style="max-width:400px">
+    <button class="modal-close" onclick="closeLabelEditModal()">×</button>
+    <div class="modal-title">항목명 수정</div>
+    <div class="status-bar" id="labelEditStatus"></div>
+    <input type="hidden" id="lEditId">
+    <div class="form-row">
+      <label>항목명</label>
+      <input type="text" id="lEditName">
+    </div>
+    <div class="form-row">
+      <label>순서</label>
+      <input type="number" id="lEditSort" min="1" style="max-width:100px">
+    </div>
+    <div class="form-actions">
+      <button class="btn-cancel" onclick="closeLabelEditModal()">취소</button>
+      <button class="btn-primary" id="lEditBtn" onclick="saveLabelEdit()">저장하기</button>
+    </div>
+  </div>
+</div>
+
 <!-- 요금표 수정 모달 -->
 <div class="modal-bg" id="priceEditModal">
   <div class="modal">
@@ -361,28 +476,24 @@ body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--bg
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
       <div class="form-row" style="margin-bottom:0">
         <label>카테고리</label>
-        <input type="text" id="pEditCategory">
+        <select id="pEditCategory"><option value="">-- 카테고리 선택 --</option></select>
       </div>
-      <div class="form-row" style="margin-bottom:0">
-        <label>아이콘 이모지</label>
-        <input type="text" id="pEditIcon" style="max-width:100px">
-      </div>
-    </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
       <div class="form-row" style="margin-bottom:0">
         <label>항목명</label>
-        <input type="text" id="pEditLabel">
+        <select id="pEditLabel"><option value="">-- 항목명 선택 --</option></select>
       </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 80px;gap:12px;margin-top:12px">
       <div class="form-row" style="margin-bottom:0">
         <label>금액</label>
         <input type="text" id="pEditValue">
       </div>
+      <div class="form-row" style="margin-bottom:0">
+        <label>순서</label>
+        <input type="number" id="pEditSort" min="1">
+      </div>
     </div>
-    <div class="form-row" style="margin-top:12px">
-      <label>정렬 순서</label>
-      <input type="number" id="pEditSort" style="max-width:100px">
-    </div>
-    <div class="form-actions">
+    <div class="form-actions" style="margin-top:16px">
       <button class="btn-cancel" onclick="closePriceEditModal()">취소</button>
       <button class="btn-primary" id="pEditBtn" onclick="savePriceEdit()">저장하기</button>
     </div>
@@ -461,6 +572,8 @@ function doLogin(){
     setTodayDate();
     loadNotices();
     loadBranches();
+    loadCategories();
+    loadLabels();
     loadPriceItems();
     loadFaqs();
   }else{
@@ -651,6 +764,8 @@ document.getElementById('editModal').addEventListener('click',function(e){if(e.t
 document.getElementById('branchEditModal').addEventListener('click',function(e){if(e.target===this)closeBranchEditModal();});
 document.getElementById('priceEditModal').addEventListener('click',function(e){if(e.target===this)closePriceEditModal();});
 document.getElementById('faqEditModal').addEventListener('click',function(e){if(e.target===this)closeFaqEditModal();});
+document.getElementById('catEditModal').addEventListener('click',function(e){if(e.target===this)closeCatEditModal();});
+document.getElementById('labelEditModal').addEventListener('click',function(e){if(e.target===this)closeLabelEditModal();});
 document.getElementById('pwInput').focus();
 
 /* ===== 탭 전환 ===== */
@@ -763,6 +878,199 @@ async function deleteBranch(id,name){
   }catch(e){showToast('삭제에 실패했습니다.');}
 }
 
+/* ===== 카테고리 관리 ===== */
+var categoriesCache=[];
+
+async function loadCategories(){
+  var r=await fetch(SB_URL+'/rest/v1/price_categories?order=sort_order',{headers:SB_HDR});
+  categoriesCache=await r.json();
+  renderCatList();
+  refreshPriceSelects();
+}
+
+function renderCatList(){
+  var el=document.getElementById('catList');
+  if(!el)return;
+  if(!categoriesCache.length){el.innerHTML='<div class="manage-empty">등록된 카테고리가 없습니다.</div>';return;}
+  el.innerHTML=categoriesCache.map(function(c){
+    return '<div class="manage-row">'+
+      '<span style="font-size:20px;margin-right:8px">'+escHtml(c.icon||'')+'</span>'+
+      '<span class="manage-row-text">'+escHtml(c.name)+'</span>'+
+      '<span class="manage-row-sub">순서 '+c.sort_order+'</span>'+
+      '<div class="manage-actions">'+
+        '<button class="btn-edit" onclick="openCatEditModal('+c.id+')">수정</button>'+
+        '<button class="btn-del" onclick="deleteCategory('+c.id+',\''+escAttr(c.name)+'\')">삭제</button>'+
+      '</div>'+
+    '</div>';
+  }).join('');
+}
+
+async function addCategory(){
+  var icon=document.getElementById('catAddIcon').value.trim();
+  var name=document.getElementById('catAddName').value.trim();
+  var sort=parseInt(document.getElementById('catAddSort').value)||1;
+  var st=document.getElementById('catAddStatus');
+  if(!name){showStatus(st,'err','카테고리명을 입력해 주세요.');return;}
+  var btn=document.getElementById('catAddBtn');btn.disabled=true;btn.textContent='추가 중...';
+  try{
+    var r=await fetch(SB_URL+'/rest/v1/price_categories',{method:'POST',headers:SB_HDR,body:JSON.stringify({name:name,icon:icon,sort_order:sort})});
+    if(!r.ok)throw new Error();
+    showStatus(st,'ok','✅ 카테고리가 추가되었습니다!');
+    document.getElementById('catAddIcon').value='';
+    document.getElementById('catAddName').value='';
+    document.getElementById('catAddSort').value='1';
+    await loadCategories();
+  }catch(e){showStatus(st,'err','❌ 추가에 실패했습니다.');}
+  btn.disabled=false;btn.textContent='추가';
+}
+
+async function openCatEditModal(id){
+  var c=categoriesCache.find(function(x){return x.id===id;});
+  if(!c)return;
+  document.getElementById('cEditId').value=c.id;
+  document.getElementById('cEditIcon').value=c.icon||'';
+  document.getElementById('cEditName').value=c.name;
+  document.getElementById('cEditSort').value=c.sort_order;
+  document.getElementById('catEditStatus').style.display='none';
+  document.getElementById('catEditModal').classList.add('open');
+}
+function closeCatEditModal(){document.getElementById('catEditModal').classList.remove('open');}
+
+async function saveCatEdit(){
+  var id=document.getElementById('cEditId').value;
+  var icon=document.getElementById('cEditIcon').value.trim();
+  var name=document.getElementById('cEditName').value.trim();
+  var sort=parseInt(document.getElementById('cEditSort').value)||1;
+  var st=document.getElementById('catEditStatus');
+  if(!name){showStatus(st,'err','카테고리명을 입력해 주세요.');return;}
+  var btn=document.getElementById('cEditBtn');btn.disabled=true;btn.textContent='저장 중...';
+  try{
+    var r=await fetch(SB_URL+'/rest/v1/price_categories?id=eq.'+id,{method:'PATCH',headers:SB_HDR,body:JSON.stringify({name:name,icon:icon,sort_order:sort})});
+    if(!r.ok)throw new Error();
+    showToast('카테고리가 수정되었습니다.');
+    closeCatEditModal();
+    await loadCategories();
+  }catch(e){showStatus(st,'err','❌ 수정에 실패했습니다.');}
+  btn.disabled=false;btn.textContent='저장하기';
+}
+
+async function deleteCategory(id,name){
+  if(!confirm('['+name+']\n\n카테고리를 삭제하시겠습니까?\n이 카테고리로 등록된 요금 항목은 영향을 받지 않습니다.'))return;
+  try{
+    var r=await fetch(SB_URL+'/rest/v1/price_categories?id=eq.'+id,{method:'DELETE',headers:SB_HDR});
+    if(!r.ok)throw new Error();
+    showToast('카테고리가 삭제되었습니다.');
+    await loadCategories();
+  }catch(e){showToast('삭제에 실패했습니다.');}
+}
+
+/* ===== 항목명 관리 ===== */
+var labelsCache=[];
+
+async function loadLabels(){
+  var r=await fetch(SB_URL+'/rest/v1/price_labels?order=sort_order',{headers:SB_HDR});
+  labelsCache=await r.json();
+  renderLabelList();
+  refreshPriceSelects();
+}
+
+function renderLabelList(){
+  var el=document.getElementById('labelList');
+  if(!el)return;
+  if(!labelsCache.length){el.innerHTML='<div class="manage-empty">등록된 항목명이 없습니다.</div>';return;}
+  el.innerHTML=labelsCache.map(function(l){
+    return '<div class="manage-row">'+
+      '<span class="manage-row-text">'+escHtml(l.label)+'</span>'+
+      '<span class="manage-row-sub">순서 '+l.sort_order+'</span>'+
+      '<div class="manage-actions">'+
+        '<button class="btn-edit" onclick="openLabelEditModal('+l.id+')">수정</button>'+
+        '<button class="btn-del" onclick="deleteLabel('+l.id+',\''+escAttr(l.label)+'\')">삭제</button>'+
+      '</div>'+
+    '</div>';
+  }).join('');
+}
+
+async function addLabel(){
+  var label=document.getElementById('labelAddName').value.trim();
+  var sort=parseInt(document.getElementById('labelAddSort').value)||1;
+  var st=document.getElementById('labelAddStatus');
+  if(!label){showStatus(st,'err','항목명을 입력해 주세요.');return;}
+  var btn=document.getElementById('labelAddBtn');btn.disabled=true;btn.textContent='추가 중...';
+  try{
+    var r=await fetch(SB_URL+'/rest/v1/price_labels',{method:'POST',headers:SB_HDR,body:JSON.stringify({label:label,sort_order:sort})});
+    if(!r.ok)throw new Error();
+    showStatus(st,'ok','✅ 항목명이 추가되었습니다!');
+    document.getElementById('labelAddName').value='';
+    document.getElementById('labelAddSort').value='1';
+    await loadLabels();
+  }catch(e){showStatus(st,'err','❌ 추가에 실패했습니다.');}
+  btn.disabled=false;btn.textContent='추가';
+}
+
+async function openLabelEditModal(id){
+  var l=labelsCache.find(function(x){return x.id===id;});
+  if(!l)return;
+  document.getElementById('lEditId').value=l.id;
+  document.getElementById('lEditName').value=l.label;
+  document.getElementById('lEditSort').value=l.sort_order;
+  document.getElementById('labelEditStatus').style.display='none';
+  document.getElementById('labelEditModal').classList.add('open');
+}
+function closeLabelEditModal(){document.getElementById('labelEditModal').classList.remove('open');}
+
+async function saveLabelEdit(){
+  var id=document.getElementById('lEditId').value;
+  var label=document.getElementById('lEditName').value.trim();
+  var sort=parseInt(document.getElementById('lEditSort').value)||1;
+  var st=document.getElementById('labelEditStatus');
+  if(!label){showStatus(st,'err','항목명을 입력해 주세요.');return;}
+  var btn=document.getElementById('lEditBtn');btn.disabled=true;btn.textContent='저장 중...';
+  try{
+    var r=await fetch(SB_URL+'/rest/v1/price_labels?id=eq.'+id,{method:'PATCH',headers:SB_HDR,body:JSON.stringify({label:label,sort_order:sort})});
+    if(!r.ok)throw new Error();
+    showToast('항목명이 수정되었습니다.');
+    closeLabelEditModal();
+    await loadLabels();
+  }catch(e){showStatus(st,'err','❌ 수정에 실패했습니다.');}
+  btn.disabled=false;btn.textContent='저장하기';
+}
+
+async function deleteLabel(id,label){
+  if(!confirm('['+label+']\n\n항목명을 삭제하시겠습니까?'))return;
+  try{
+    var r=await fetch(SB_URL+'/rest/v1/price_labels?id=eq.'+id,{method:'DELETE',headers:SB_HDR});
+    if(!r.ok)throw new Error();
+    showToast('항목명이 삭제되었습니다.');
+    await loadLabels();
+  }catch(e){showToast('삭제에 실패했습니다.');}
+}
+
+/* 드롭다운 동기화 */
+function refreshPriceSelects(){
+  var selIds=['pAddCategory','pEditCategory'];
+  selIds.forEach(function(sid){
+    var sel=document.getElementById(sid);
+    if(!sel)return;
+    var cur=sel.value;
+    sel.innerHTML='<option value="">-- 카테고리 선택 --</option>'+
+      categoriesCache.map(function(c){
+        return '<option value="'+escAttr(c.name)+'" data-icon="'+escAttr(c.icon||'')+'">'+(c.icon?c.icon+' ':'')+escHtml(c.name)+'</option>';
+      }).join('');
+    if(cur)sel.value=cur;
+  });
+  var lblIds=['pAddLabel','pEditLabel'];
+  lblIds.forEach(function(sid){
+    var sel=document.getElementById(sid);
+    if(!sel)return;
+    var cur=sel.value;
+    sel.innerHTML='<option value="">-- 항목명 선택 --</option>'+
+      labelsCache.map(function(l){
+        return '<option value="'+escAttr(l.label)+'">'+escHtml(l.label)+'</option>';
+      }).join('');
+    if(cur)sel.value=cur;
+  });
+}
+
 /* ===== 요금표 관리 ===== */
 async function loadPriceItems(){
   var r=await fetch(SB_URL+'/rest/v1/price_items?order=category,sort_order',{headers:SB_HDR});
@@ -772,7 +1080,7 @@ async function loadPriceItems(){
   document.getElementById('priceList').innerHTML=data.map(function(p){
     return '<div class="notice-card">'+
       '<div class="nc-top">'+
-        '<div class="nc-title">'+escHtml(p.icon||'')+'&nbsp;'+escHtml(p.label)+'&nbsp;<span class="price-r-val" style="font-size:14px;font-weight:900;color:var(--blue)">'+escHtml(p.value)+'</span></div>'+
+        '<div class="nc-title">'+escHtml(p.icon||'')+'&nbsp;'+escHtml(p.label)+'&nbsp;<span style="font-size:14px;font-weight:900;color:var(--blue)">'+escHtml(p.value)+'</span></div>'+
         '<div class="nc-actions">'+
           '<button class="btn-edit" onclick="openPriceEditModal('+p.id+')">수정</button>'+
           '<button class="btn-del" onclick="deletePriceItem('+p.id+',\''+escAttr(p.label)+'\')">삭제</button>'+
@@ -784,21 +1092,20 @@ async function loadPriceItems(){
 }
 
 async function addPriceItem(){
-  var category=document.getElementById('pAddCategory').value.trim();
-  var icon=document.getElementById('pAddIcon').value.trim();
-  var label=document.getElementById('pAddLabel').value.trim();
+  var catSel=document.getElementById('pAddCategory');
+  var catName=catSel.value;
+  var catIcon=(catSel.options[catSel.selectedIndex]&&catSel.options[catSel.selectedIndex].dataset.icon)||'';
+  var label=document.getElementById('pAddLabel').value;
   var value=document.getElementById('pAddValue').value.trim();
   var sort=parseInt(document.getElementById('pAddSort').value)||1;
   var st=document.getElementById('priceAddStatus');
-  if(!category||!label||!value){showStatus(st,'err','카테고리, 항목명, 금액을 입력해 주세요.');return;}
-  var btn=document.getElementById('pAddBtn');
-  btn.disabled=true;btn.textContent='추가 중...';
+  if(!catName||!label||!value){showStatus(st,'err','카테고리, 항목명, 금액을 모두 선택/입력해 주세요.');return;}
+  var btn=document.getElementById('pAddBtn');btn.disabled=true;btn.textContent='추가 중...';
   try{
-    var r=await fetch(SB_URL+'/rest/v1/price_items',{method:'POST',headers:SB_HDR,body:JSON.stringify({category:category,icon:icon,label:label,value:value,sort_order:sort})});
+    var r=await fetch(SB_URL+'/rest/v1/price_items',{method:'POST',headers:SB_HDR,body:JSON.stringify({category:catName,icon:catIcon,label:label,value:value,sort_order:sort})});
     if(!r.ok)throw new Error();
     showStatus(st,'ok','✅ 요금 항목이 추가되었습니다!');
     document.getElementById('pAddCategory').value='';
-    document.getElementById('pAddIcon').value='';
     document.getElementById('pAddLabel').value='';
     document.getElementById('pAddValue').value='';
     document.getElementById('pAddSort').value='1';
@@ -813,29 +1120,29 @@ async function openPriceEditModal(id){
   if(!data.length)return;
   var p=data[0];
   document.getElementById('pEditId').value=p.id;
-  document.getElementById('pEditCategory').value=p.category;
-  document.getElementById('pEditIcon').value=p.icon||'';
-  document.getElementById('pEditLabel').value=p.label;
   document.getElementById('pEditValue').value=p.value;
   document.getElementById('pEditSort').value=p.sort_order;
   document.getElementById('priceEditStatus').style.display='none';
+  refreshPriceSelects();
+  document.getElementById('pEditCategory').value=p.category||'';
+  document.getElementById('pEditLabel').value=p.label||'';
   document.getElementById('priceEditModal').classList.add('open');
 }
 function closePriceEditModal(){document.getElementById('priceEditModal').classList.remove('open');}
 
 async function savePriceEdit(){
   var id=document.getElementById('pEditId').value;
-  var category=document.getElementById('pEditCategory').value.trim();
-  var icon=document.getElementById('pEditIcon').value.trim();
-  var label=document.getElementById('pEditLabel').value.trim();
+  var catSel=document.getElementById('pEditCategory');
+  var catName=catSel.value;
+  var catIcon=(catSel.options[catSel.selectedIndex]&&catSel.options[catSel.selectedIndex].dataset.icon)||'';
+  var label=document.getElementById('pEditLabel').value;
   var value=document.getElementById('pEditValue').value.trim();
   var sort=parseInt(document.getElementById('pEditSort').value)||1;
   var st=document.getElementById('priceEditStatus');
-  if(!category||!label||!value){showStatus(st,'err','카테고리, 항목명, 금액을 입력해 주세요.');return;}
-  var btn=document.getElementById('pEditBtn');
-  btn.disabled=true;btn.textContent='저장 중...';
+  if(!catName||!label||!value){showStatus(st,'err','카테고리, 항목명, 금액을 모두 선택/입력해 주세요.');return;}
+  var btn=document.getElementById('pEditBtn');btn.disabled=true;btn.textContent='저장 중...';
   try{
-    var r=await fetch(SB_URL+'/rest/v1/price_items?id=eq.'+id,{method:'PATCH',headers:SB_HDR,body:JSON.stringify({category:category,icon:icon,label:label,value:value,sort_order:sort})});
+    var r=await fetch(SB_URL+'/rest/v1/price_items?id=eq.'+id,{method:'PATCH',headers:SB_HDR,body:JSON.stringify({category:catName,icon:catIcon,label:label,value:value,sort_order:sort})});
     if(!r.ok)throw new Error();
     showToast('요금 항목이 수정되었습니다.');
     closePriceEditModal();
