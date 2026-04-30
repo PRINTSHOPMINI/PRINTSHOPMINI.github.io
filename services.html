@@ -501,14 +501,61 @@ function openGuideModal(url,name){
   }else{
     body.innerHTML='<div style="padding:40px;text-align:center"><a href="'+url+'" target="_blank" style="color:var(--blue);font-weight:700">파일 열기 →</a></div>';
   }
-  document.getElementById('guideModal').style.display='flex';
-  document.body.style.overflow='hidden';
+  var box=document.getElementById('guideModalBox');
+  var w=Math.min(window.innerWidth*0.92,900);
+  var h=Math.round(window.innerHeight*0.88);
+  box.style.width=w+'px';
+  box.style.height=h+'px';
+  box.style.left=Math.round((window.innerWidth-w)/2)+'px';
+  box.style.top=Math.round((window.innerHeight-h)/2)+'px';
+  box.style.display='flex';
+  document.getElementById('guideModalOverlay').style.display='block';
 }
 function closeGuideModal(){
-  document.getElementById('guideModal').style.display='none';
+  document.getElementById('guideModalBox').style.display='none';
+  document.getElementById('guideModalOverlay').style.display='none';
   document.getElementById('guideModalBody').innerHTML='';
-  document.body.style.overflow='';
 }
+
+(function(){
+  var box,hdr,drag=null;
+  function init(){
+    box=document.getElementById('guideModalBox');
+    hdr=document.getElementById('guideModalHeader');
+    hdr.addEventListener('mousedown',onDown);
+    hdr.addEventListener('touchstart',onTouchDown,{passive:false});
+    document.addEventListener('mousemove',onMove);
+    document.addEventListener('mouseup',onUp);
+    document.addEventListener('touchmove',onTouchMove,{passive:false});
+    document.addEventListener('touchend',onUp);
+  }
+  function onDown(e){
+    if(e.target.tagName==='BUTTON')return;
+    var r=box.getBoundingClientRect();
+    drag={sx:e.clientX,sy:e.clientY,sl:r.left,st:r.top};
+    e.preventDefault();
+  }
+  function onTouchDown(e){
+    if(e.target.tagName==='BUTTON')return;
+    var t=e.touches[0],r=box.getBoundingClientRect();
+    drag={sx:t.clientX,sy:t.clientY,sl:r.left,st:r.top};
+    e.preventDefault();
+  }
+  function onMove(e){
+    if(!drag)return;
+    box.style.left=(drag.sl+e.clientX-drag.sx)+'px';
+    box.style.top=(drag.st+e.clientY-drag.sy)+'px';
+  }
+  function onTouchMove(e){
+    if(!drag)return;
+    var t=e.touches[0];
+    box.style.left=(drag.sl+t.clientX-drag.sx)+'px';
+    box.style.top=(drag.st+t.clientY-drag.sy)+'px';
+    e.preventDefault();
+  }
+  function onUp(){drag=null;}
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+})();
 
 function toggleFaq(item){item.classList.toggle('open')}
 function goSection(id,el){
@@ -527,14 +574,16 @@ function toggleMenu(){
 </script>
 
 <!-- 이용안내 파일 뷰어 팝업 -->
-<div id="guideModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:9998;align-items:center;justify-content:center">
-  <div style="background:white;border-radius:16px;width:92%;max-width:900px;height:88vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.3)">
-    <div style="padding:16px 24px;border-bottom:1px solid #E5E7EB;display:flex;justify-content:space-between;align-items:center;flex-shrink:0">
-      <span id="guideModalTitle" style="font-weight:900;font-size:16px;color:#111827;font-family:'Noto Sans KR',sans-serif"></span>
-      <button onclick="closeGuideModal()" style="background:none;border:none;font-size:26px;cursor:pointer;color:#6B7280;line-height:1">×</button>
+<div id="guideModalOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:9997" onclick="closeGuideModal()"></div>
+<div id="guideModalBox" style="display:none;position:fixed;z-index:9998;background:white;border-radius:16px;flex-direction:column;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.3);resize:both;min-width:320px;min-height:200px">
+  <div id="guideModalHeader" style="padding:13px 20px;border-bottom:1px solid #E5E7EB;display:flex;justify-content:space-between;align-items:center;flex-shrink:0;cursor:move;user-select:none;-webkit-user-select:none">
+    <div style="display:flex;align-items:center;gap:10px;overflow:hidden">
+      <span style="color:#9CA3AF;font-size:15px;flex-shrink:0">⠿⠿</span>
+      <span id="guideModalTitle" style="font-weight:900;font-size:15px;color:#111827;font-family:'Noto Sans KR',sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap"></span>
     </div>
-    <div id="guideModalBody" style="flex:1;overflow:auto;min-height:0"></div>
+    <button onclick="closeGuideModal()" style="background:none;border:none;font-size:26px;cursor:pointer;color:#6B7280;line-height:1;flex-shrink:0;margin-left:12px">×</button>
   </div>
+  <div id="guideModalBody" style="flex:1;overflow:auto;min-height:0"></div>
 </div>
 
 <!-- 이메일 문의 팝업 -->
@@ -614,7 +663,6 @@ function sendEmailJS(){
   });
 }
 document.getElementById('emailPopup').addEventListener('click',function(e){if(e.target===this)closeEmailPopup();});
-document.getElementById('guideModal').addEventListener('click',function(e){if(e.target===this)closeGuideModal();});
 </script>
 </body>
 </html>
