@@ -261,7 +261,8 @@ body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--bg
       </div>
       <div class="form-row" style="flex:1;min-width:160px">
         <label>카테고리명</label>
-        <input type="text" id="catAddName" placeholder="인쇄·복사 (1면당)">
+        <input type="text" id="catAddName" list="catNameList" placeholder="인쇄·복사 (1면당)">
+        <datalist id="catNameList"></datalist>
       </div>
       <div class="form-row" style="flex:0 0 80px">
         <label>순서</label>
@@ -430,7 +431,7 @@ body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--bg
       </div>
       <div class="form-row" style="flex:1;min-width:160px;margin-bottom:0">
         <label>카테고리명</label>
-        <input type="text" id="cEditName">
+        <input type="text" id="cEditName" list="catNameList">
       </div>
       <div class="form-row" style="flex:0 0 80px;margin-bottom:0">
         <label>순서</label>
@@ -889,6 +890,8 @@ async function loadCategories(){
 }
 
 function renderCatList(){
+  var dl=document.getElementById('catNameList');
+  if(dl)dl.innerHTML=categoriesCache.map(function(c){return '<option value="'+escAttr(c.name)+'">';}).join('');
   var el=document.getElementById('catList');
   if(!el)return;
   if(!categoriesCache.length){el.innerHTML='<div class="manage-empty">등록된 카테고리가 없습니다.</div>';return;}
