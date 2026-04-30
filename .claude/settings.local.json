@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git stash *)",
+      "Bash(git pull *)",
+      "Bash(git fetch *)",
+      "Bash(git reset *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(cp \"C:\\\\Users\\\\Seol\\\\OneDrive\\\\바탕화면\\\\클로드\\\\홈피v4\\\\printshopmini\\\\admin.html\" \"D:\\\\git\\\\PRINTSHOPMINI.github.io\\\\.claude\\\\worktrees\\\\confident-lamarr-695f82\\\\admin.html\")",
+      "Bash(cp \"C:\\\\Users\\\\Seol\\\\OneDrive\\\\바탕화면\\\\클로드\\\\홈피v4\\\\printshopmini\\\\services.html\" \"D:\\\\git\\\\PRINTSHOPMINI.github.io\\\\.claude\\\\worktrees\\\\confident-lamarr-695f82\\\\services.html\")",
+      "Bash(git commit *)"
+    ]
+  }
+}
