@@ -1174,8 +1174,8 @@ function selectBranch(el, name, placeId) {
   el.classList.add('active');
   var addr = BRANCH_ADDR[name] || '';
   var naverUrl = 'https://map.naver.com/p/entry/place/' + placeId;
-  var mapQuery = encodeURIComponent('프린트샵미니 ' + name + ' ' + addr);
-  var mapEmbedUrl = 'https://maps.google.com/maps?q=' + mapQuery + '&output=embed&hl=ko';
+  var mapQuery = encodeURIComponent(addr);
+  var mapEmbedUrl = 'https://maps.google.com/maps?q=' + mapQuery + '&output=embed&hl=ko&z=17';
   var wrap = document.getElementById('mapIframeWrap');
   wrap.style.cssText = 'display:block;min-height:300px';
   wrap.innerHTML = '<iframe src="' + mapEmbedUrl + '" width="100%" height="300" frameborder="0" style="border:0;display:block" allowfullscreen loading="lazy"></iframe>';
