@@ -196,8 +196,8 @@ body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--bg
       <input type="text" id="bAddAddr" placeholder="경기도 수원시 영통구 ...">
     </div>
     <div class="form-row">
-      <label>네이버 플레이스 ID <span style="font-weight:400;color:var(--text3)">(지도 URL 끝 숫자)</span></label>
-      <input type="text" id="bAddPlaceId" placeholder="예: 2031379616">
+      <label>네이버 지도 URL <span style="font-weight:400;color:var(--text3)">(URL 전체 또는 끝 숫자)</span></label>
+      <input type="text" id="bAddPlaceId" placeholder="https://map.naver.com/p/entry/place/2031379616">
     </div>
     <div style="display:flex;gap:20px;margin-bottom:16px;flex-wrap:wrap">
       <label style="display:flex;align-items:center;gap:8px;font-size:14px;cursor:pointer">
@@ -250,7 +250,7 @@ body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--bg
       <input type="text" id="bEditAddr">
     </div>
     <div class="form-row">
-      <label>네이버 플레이스 ID</label>
+      <label>네이버 지도 URL <span style="font-weight:400;color:var(--text3)">(URL 전체 또는 끝 숫자)</span></label>
       <input type="text" id="bEditPlaceId">
     </div>
     <div style="display:flex;gap:20px;margin-bottom:20px;flex-wrap:wrap">
@@ -437,6 +437,10 @@ function showToast(msg){
   t.textContent=msg;t.classList.add('show');
   setTimeout(function(){t.classList.remove('show');},2500);
 }
+function extractPlaceId(val){
+  var m=val.match(/(\d{7,})/);
+  return m?m[1]:val.trim();
+}
 function escHtml(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 function escAttr(s){return String(s).replace(/'/g,"\\'");}
 
@@ -538,7 +542,7 @@ async function addBranch(){
   var name=document.getElementById('bAddName').value.trim();
   var region=document.getElementById('bAddRegion').value.trim();
   var addr=document.getElementById('bAddAddr').value.trim();
-  var placeId=document.getElementById('bAddPlaceId').value.trim();
+  var placeId=extractPlaceId(document.getElementById('bAddPlaceId').value);
   var hours24=document.getElementById('bAddHours24').checked;
   var subway=document.getElementById('bAddSubway').checked;
   var parking=document.getElementById('bAddParking').checked;
@@ -583,7 +587,7 @@ async function saveBranchEdit(){
   var name=document.getElementById('bEditName').value.trim();
   var region=document.getElementById('bEditRegion').value.trim();
   var addr=document.getElementById('bEditAddr').value.trim();
-  var placeId=document.getElementById('bEditPlaceId').value.trim();
+  var placeId=extractPlaceId(document.getElementById('bEditPlaceId').value);
   var hours24=document.getElementById('bEditHours24').checked;
   var subway=document.getElementById('bEditSubway').checked;
   var parking=document.getElementById('bEditParking').checked;
