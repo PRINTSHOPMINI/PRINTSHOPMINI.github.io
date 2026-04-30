@@ -150,6 +150,28 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(80px);background:#111;color:white;padding:12px 28px;border-radius:50px;font-size:14px;font-weight:700;z-index:999;transition:transform .3s;pointer-events:none}
 .toast.show{transform:translateX(-50%) translateY(0)}
 
+/* SEARCH RESULT MODAL */
+.search-modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:700;align-items:center;justify-content:center}
+.search-modal-bg.open{display:flex}
+.search-modal{background:white;border-radius:20px;width:90%;max-width:680px;max-height:85vh;overflow-y:auto;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.2)}
+.search-modal-header{padding:28px 32px 18px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.search-modal-title{font-size:18px;font-weight:900;letter-spacing:-.5px}
+.search-modal-close{background:none;border:none;font-size:26px;cursor:pointer;color:var(--text3);line-height:1;padding:4px}
+.search-modal-close:hover{color:var(--text)}
+.search-modal-body{padding:20px 32px 28px}
+.search-kw{color:var(--blue);background:var(--blue-light);padding:0 4px;border-radius:4px;font-weight:700}
+.search-result-item{border:1.5px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:12px;cursor:pointer;transition:all .18s}
+.search-result-item:last-child{margin-bottom:0}
+.search-result-item:hover{border-color:var(--blue);background:var(--blue-light)}
+.search-result-badge{margin-bottom:8px}
+.search-result-title{font-size:15px;font-weight:700;line-height:1.5;margin-bottom:8px;color:var(--text)}
+.search-result-excerpt{font-size:13px;color:var(--text3);line-height:1.7;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.search-result-meta{font-size:11px;color:var(--text3);margin-top:8px}
+.search-no-result{text-align:center;padding:48px 0;color:var(--text3)}
+.search-no-result .icon{font-size:40px;margin-bottom:12px}
+.search-no-result p{font-size:15px;font-weight:700;color:var(--text2);margin-bottom:6px}
+.search-no-result span{font-size:13px}
+
 /* FOOTER */
 footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 .ft-inner{max-width:1160px;margin:0 auto}
@@ -309,6 +331,17 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
     <div class="pm-footer">
       <button class="pm-back" onclick="closePostModal()">← 목록으로</button>
     </div>
+  </div>
+</div>
+
+<!-- 검색 결과 모달 -->
+<div class="search-modal-bg" id="searchModal">
+  <div class="search-modal">
+    <div class="search-modal-header">
+      <div class="search-modal-title" id="searchModalTitle">검색 결과</div>
+      <button class="search-modal-close" onclick="closeSearchModal()">×</button>
+    </div>
+    <div class="search-modal-body" id="searchModalBody"></div>
   </div>
 </div>
 
@@ -495,8 +528,57 @@ function filterCat(el,cat){
 }
 function doSearch(){
   var q=document.getElementById('searchInput').value.trim();
-  if(q) showToast('"'+q+'" 검색 결과입니다 (데모)');
+  if(!q){showToast('검색어를 입력해 주세요.');return;}
+  var results=[];
+  Object.keys(POSTS).forEach(function(key){
+    var p=POSTS[key];
+    var ql=q.toLowerCase();
+    if(p.title.toLowerCase().indexOf(ql)!==-1||p.body.toLowerCase().indexOf(ql)!==-1){
+      results.push({key:key,post:p});
+    }
+  });
+  openSearchModal(q,results);
 }
+function openSearchModal(q,results){
+  var title=document.getElementById('searchModalTitle');
+  var body=document.getElementById('searchModalBody');
+  title.innerHTML='<span style="color:var(--blue)">\''+escHtml(q)+'\'</span> 검색 결과 <span style="font-size:14px;font-weight:500;color:var(--text3)">('+results.length+'건)</span>';
+  if(results.length===0){
+    body.innerHTML='<div class="search-no-result"><div class="icon">🔍</div><p>검색 결과가 없습니다</p><span>\''+escHtml(q)+'\'에 해당하는 공지사항이 없습니다.</span></div>';
+  } else {
+    var html='';
+    results.forEach(function(r){
+      var excerpt=makeExcerpt(r.post.body,q);
+      html+='<div class="search-result-item" onclick="closeSearchModal();openPost(\''+escAttr(r.key)+'\')">'+
+        '<div class="search-result-badge"><span class="pb pn">공지</span></div>'+
+        '<div class="search-result-title">'+highlightKw(escHtml(r.post.title),q)+'</div>'+
+        '<div class="search-result-excerpt">'+highlightKw(escHtml(excerpt),q)+'</div>'+
+        '<div class="search-result-meta">📅 '+r.post.date+'</div>'+
+        '</div>';
+    });
+    body.innerHTML=html;
+  }
+  document.getElementById('searchModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeSearchModal(){
+  document.getElementById('searchModal').classList.remove('open');
+  document.body.style.overflow='';
+}
+function makeExcerpt(text,q){
+  var idx=text.toLowerCase().indexOf(q.toLowerCase());
+  if(idx===-1)return text.slice(0,120)+'…';
+  var start=Math.max(0,idx-40);
+  var end=Math.min(text.length,idx+q.length+80);
+  return (start>0?'…':'')+text.slice(start,end)+(end<text.length?'…':'');
+}
+function highlightKw(html,q){
+  var re=new RegExp('('+escReg(escHtml(q))+')','gi');
+  return html.replace(re,'<span class="search-kw">$1</span>');
+}
+function escHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function escAttr(s){return s.replace(/'/g,"\\'");}
+function escReg(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');}
 function toggleMenu(){
   var m=document.querySelector('.nav-links');
   if(m.style.display==='flex'){m.style.display='';return;}
@@ -504,6 +586,7 @@ function toggleMenu(){
 }
 document.getElementById('writeModal').addEventListener('click',function(e){if(e.target===this)closeModal()});
 document.getElementById('postModal').addEventListener('click',function(e){if(e.target===this)closePostModal()});
+document.getElementById('searchModal').addEventListener('click',function(e){if(e.target===this)closeSearchModal()});
 </script>
 
 <!-- 이메일 문의 팝업 -->
