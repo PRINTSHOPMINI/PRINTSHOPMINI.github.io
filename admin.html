@@ -1313,23 +1313,24 @@ async function uploadGuideFile(input){
   var st=document.getElementById('guideUploadStatus');
   if(guideFilesCache.length>=4){showStatus(st,'err','최대 4개까지 업로드 가능합니다.');return;}
   showStatus(st,'ok','⏳ 업로드 중...');
-  var path=currentGuideSvc+'/'+Date.now()+'_'+file.name;
-  var encodedPath=path.split('/').map(encodeURIComponent).join('/');
+  var ext=file.name.lastIndexOf('.')>=0?file.name.slice(file.name.lastIndexOf('.')):'';
+  var safeName=Date.now()+ext;
+  var path=currentGuideSvc+'/'+safeName;
   try{
-    var upRes=await fetch(SB_URL+'/storage/v1/object/service-guides/'+encodedPath,{
+    var upRes=await fetch(SB_URL+'/storage/v1/object/service-guides/'+path,{
       method:'POST',
       headers:{'Authorization':'Bearer '+SB_KEY,'Content-Type':(file.type||'application/octet-stream'),'x-upsert':'false'},
       body:file
     });
     if(!upRes.ok){var ub=await upRes.text();throw new Error('storage:'+upRes.status+':'+ub);}
-    var fileUrl=SB_URL+'/storage/v1/object/public/service-guides/'+encodedPath;
+    var fileUrl=SB_URL+'/storage/v1/object/public/service-guides/'+path;
     var dbRes=await fetch(SB_URL+'/rest/v1/service_guides',{method:'POST',headers:SB_HDR,
       body:JSON.stringify({service_key:currentGuideSvc,service_name:GUIDE_SVCS[currentGuideSvc],file_url:fileUrl,file_name:file.name,sort_order:guideFilesCache.length+1})
     });
     if(!dbRes.ok){var db=await dbRes.text();throw new Error('db:'+dbRes.status+':'+db);}
     showStatus(st,'ok','✅ 업로드되었습니다!');
     await loadGuideFilesAdmin(currentGuideSvc);
-  }catch(e){showStatus(st,'err','❌ 업로드 실패: '+e.message);alert('업로드 실패:\n'+e.message);}
+  }catch(e){showStatus(st,'err','❌ 업로드 실패: '+e.message);}
 }
 
 async function deleteGuideFile(id,fileUrl){
