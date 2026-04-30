@@ -459,6 +459,54 @@ async function loadFaqs(){
 
 loadPriceItems();
 loadFaqs();
+loadServiceGuides();
+
+async function loadServiceGuides(){
+  try{
+    var r=await fetch(SB_URL+'/rest/v1/service_guides?order=service_key,sort_order',{headers:SB_HDR});
+    var data=await r.json();
+    if(!data||!data.length)return;
+    var grouped={};
+    data.forEach(function(f){
+      if(!grouped[f.service_key])grouped[f.service_key]=[];
+      grouped[f.service_key].push(f);
+    });
+    Object.keys(grouped).forEach(function(key){
+      var section=document.getElementById(key);
+      if(!section)return;
+      var h2=section.querySelector('.svc-h2');
+      if(!h2)return;
+      var btns='<div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px">'+
+        grouped[key].map(function(f){
+          var icon=f.file_name.match(/\.pdf$/i)?'📄':'🖼️';
+          return '<button onclick="openGuideModal(\''+escH(f.file_url)+'\',\''+escH(f.file_name)+'\')" '+
+            'style="background:var(--blue-light);color:var(--blue);border:1.5px solid var(--blue);border-radius:50px;padding:7px 16px;font-size:13px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:6px;font-family:\'Noto Sans KR\',sans-serif">'+
+            icon+' '+escH(f.file_name)+'</button>';
+        }).join('')+
+      '</div>';
+      h2.insertAdjacentHTML('afterend',btns);
+    });
+  }catch(e){}
+}
+
+function openGuideModal(url,name){
+  document.getElementById('guideModalTitle').textContent=name;
+  var body=document.getElementById('guideModalBody');
+  if(name.match(/\.pdf$/i)){
+    body.innerHTML='<iframe src="'+url+'" style="width:100%;height:100%;border:none;display:block"></iframe>';
+  }else if(name.match(/\.(jpg|jpeg|png|gif|webp)$/i)){
+    body.innerHTML='<div style="padding:20px;text-align:center;overflow:auto;height:100%;box-sizing:border-box"><img src="'+url+'" style="max-width:100%;height:auto;border-radius:8px"></div>';
+  }else{
+    body.innerHTML='<div style="padding:40px;text-align:center"><a href="'+url+'" target="_blank" style="color:var(--blue);font-weight:700">파일 열기 →</a></div>';
+  }
+  document.getElementById('guideModal').style.display='flex';
+  document.body.style.overflow='hidden';
+}
+function closeGuideModal(){
+  document.getElementById('guideModal').style.display='none';
+  document.getElementById('guideModalBody').innerHTML='';
+  document.body.style.overflow='';
+}
 
 function toggleFaq(item){item.classList.toggle('open')}
 function goSection(id,el){
@@ -475,6 +523,17 @@ function toggleMenu(){
   Object.assign(m.style,{display:'flex',flexDirection:'column',position:'fixed',top:'70px',left:'0',right:'0',background:'white',padding:'16px 6%',borderBottom:'1px solid #E5E7EB',zIndex:'299',gap:'2px'});
 }
 </script>
+
+<!-- 이용안내 파일 뷰어 팝업 -->
+<div id="guideModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:9998;align-items:center;justify-content:center">
+  <div style="background:white;border-radius:16px;width:92%;max-width:900px;height:88vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.3)">
+    <div style="padding:16px 24px;border-bottom:1px solid #E5E7EB;display:flex;justify-content:space-between;align-items:center;flex-shrink:0">
+      <span id="guideModalTitle" style="font-weight:900;font-size:16px;color:#111827;font-family:'Noto Sans KR',sans-serif"></span>
+      <button onclick="closeGuideModal()" style="background:none;border:none;font-size:26px;cursor:pointer;color:#6B7280;line-height:1">×</button>
+    </div>
+    <div id="guideModalBody" style="flex:1;overflow:auto;min-height:0"></div>
+  </div>
+</div>
 
 <!-- 이메일 문의 팝업 -->
 <div id="emailPopup" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:9999;align-items:center;justify-content:center;">
@@ -553,6 +612,7 @@ function sendEmailJS(){
   });
 }
 document.getElementById('emailPopup').addEventListener('click',function(e){if(e.target===this)closeEmailPopup();});
+document.getElementById('guideModal').addEventListener('click',function(e){if(e.target===this)closeGuideModal();});
 </script>
 </body>
 </html>

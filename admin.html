@@ -150,6 +150,7 @@ body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--bg
     <button class="tab-btn" onclick="switchTab('branch',this)">📍 지점</button>
     <button class="tab-btn" onclick="switchTab('price',this)">💰 요금표</button>
     <button class="tab-btn" onclick="switchTab('faq',this)">❓ FAQ</button>
+    <button class="tab-btn" onclick="switchTab('guide',this)">📎 이용안내</button>
   </div>
 
   <!-- 공지 탭 -->
@@ -367,6 +368,35 @@ body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--bg
   </div>
 
   </div><!-- /tabFaq -->
+
+  <!-- 이용안내 탭 -->
+  <div class="tab-panel" id="tabGuide">
+  <div class="add-box">
+    <div class="add-box-title">이용안내 파일 관리</div>
+    <p style="font-size:13px;color:var(--text3);margin-bottom:20px">서비스별 이용안내 파일(PDF·이미지)을 업로드합니다. 최대 4개, 홈페이지에서 팝업으로 열립니다.</p>
+    <div class="form-row">
+      <label>서비스 선택</label>
+      <select id="guideSvcSel" onchange="onGuideSvcChange()">
+        <option value="">-- 서비스를 선택하세요 --</option>
+        <option value="print">🖨️ 인쇄</option>
+        <option value="copy">📋 복사</option>
+        <option value="scan">📄 스캔</option>
+        <option value="fax">📠 팩스</option>
+        <option value="coat">✨ 코팅</option>
+        <option value="bind">📚 제본</option>
+      </select>
+    </div>
+    <div id="guideUploadArea" style="display:none">
+      <div class="status-bar" id="guideUploadStatus"></div>
+      <div class="manage-list" id="guideFileList" style="margin-bottom:16px"><div class="manage-empty">등록된 파일이 없습니다.</div></div>
+      <label id="guideUploadLabel" style="display:inline-flex;align-items:center;gap:8px;background:var(--blue-light);color:var(--blue);border-radius:50px;padding:10px 22px;font-size:14px;font-weight:700;cursor:pointer">
+        📎 파일 선택하여 업로드
+        <input type="file" id="guideFileInput" accept=".pdf,.jpg,.jpeg,.png,.gif,.webp" style="display:none" onchange="uploadGuideFile(this)">
+      </label>
+      <div style="font-size:12px;color:var(--text3);margin-top:8px">PDF, JPG, PNG 파일 · 최대 4개</div>
+    </div>
+  </div>
+  </div><!-- /tabGuide -->
 
 </div>
 
@@ -1236,6 +1266,83 @@ async function saveFaqEdit(){
     loadFaqs();
   }catch(e){showStatus(st,'err','❌ 수정에 실패했습니다.');}
   btn.disabled=false;btn.textContent='저장하기';
+}
+
+/* ===== 이용안내 파일 관리 ===== */
+var GUIDE_SVCS={'print':'인쇄','copy':'복사','scan':'스캔','fax':'팩스','coat':'코팅','bind':'제본'};
+var currentGuideSvc='';
+var guideFilesCache=[];
+
+function onGuideSvcChange(){
+  var key=document.getElementById('guideSvcSel').value;
+  currentGuideSvc=key;
+  var area=document.getElementById('guideUploadArea');
+  if(!key){area.style.display='none';return;}
+  area.style.display='block';
+  loadGuideFilesAdmin(key);
+}
+
+async function loadGuideFilesAdmin(serviceKey){
+  var r=await fetch(SB_URL+'/rest/v1/service_guides?service_key=eq.'+serviceKey+'&order=sort_order',{headers:SB_HDR});
+  guideFilesCache=await r.json();
+  renderGuideFileList();
+}
+
+function renderGuideFileList(){
+  var el=document.getElementById('guideFileList');
+  var lbl=document.getElementById('guideUploadLabel');
+  lbl.style.display=guideFilesCache.length>=4?'none':'inline-flex';
+  if(!guideFilesCache.length){el.innerHTML='<div class="manage-empty">등록된 파일이 없습니다.</div>';return;}
+  el.innerHTML=guideFilesCache.map(function(f,i){
+    var icon=f.file_name.match(/\.pdf$/i)?'📄':'🖼️';
+    return '<div class="manage-row">'+
+      '<span style="font-size:18px;margin-right:8px">'+icon+'</span>'+
+      '<span class="manage-row-text">'+escHtml(f.file_name)+'</span>'+
+      '<span class="manage-row-sub">순서 '+(i+1)+'</span>'+
+      '<div class="manage-actions">'+
+        '<button class="btn-del" onclick="deleteGuideFile('+f.id+',\''+escAttr(f.file_url)+'\')">삭제</button>'+
+      '</div>'+
+    '</div>';
+  }).join('');
+}
+
+async function uploadGuideFile(input){
+  var file=input.files[0];
+  if(!file)return;
+  input.value='';
+  var st=document.getElementById('guideUploadStatus');
+  if(guideFilesCache.length>=4){showStatus(st,'err','최대 4개까지 업로드 가능합니다.');return;}
+  showStatus(st,'ok','⏳ 업로드 중...');
+  var path=currentGuideSvc+'/'+Date.now()+'_'+file.name;
+  try{
+    var upRes=await fetch(SB_URL+'/storage/v1/object/service-guides/'+encodeURIComponent(path),{
+      method:'POST',
+      headers:{'Authorization':'Bearer '+SB_KEY,'Content-Type':file.type,'x-upsert':'false'},
+      body:file
+    });
+    if(!upRes.ok)throw new Error('storage');
+    var fileUrl=SB_URL+'/storage/v1/object/public/service-guides/'+encodeURIComponent(path);
+    var dbRes=await fetch(SB_URL+'/rest/v1/service_guides',{method:'POST',headers:SB_HDR,
+      body:JSON.stringify({service_key:currentGuideSvc,service_name:GUIDE_SVCS[currentGuideSvc],file_url:fileUrl,file_name:file.name,sort_order:guideFilesCache.length+1})
+    });
+    if(!dbRes.ok)throw new Error('db');
+    showStatus(st,'ok','✅ 업로드되었습니다!');
+    await loadGuideFilesAdmin(currentGuideSvc);
+  }catch(e){showStatus(st,'err','❌ 업로드에 실패했습니다. ('+e.message+')');}
+}
+
+async function deleteGuideFile(id,fileUrl){
+  if(!confirm('파일을 삭제하시겠습니까?'))return;
+  try{
+    var path=decodeURIComponent(fileUrl.replace(SB_URL+'/storage/v1/object/public/service-guides/',''));
+    await fetch(SB_URL+'/storage/v1/object/service-guides/'+encodeURIComponent(path),{
+      method:'DELETE',headers:{'Authorization':'Bearer '+SB_KEY}
+    });
+    var r=await fetch(SB_URL+'/rest/v1/service_guides?id=eq.'+id,{method:'DELETE',headers:SB_HDR});
+    if(!r.ok)throw new Error();
+    showToast('파일이 삭제되었습니다.');
+    await loadGuideFilesAdmin(currentGuideSvc);
+  }catch(e){showToast('삭제에 실패했습니다.');}
 }
 
 async function deleteFaq(id,question){
