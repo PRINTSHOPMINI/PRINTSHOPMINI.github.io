@@ -412,14 +412,18 @@ function escH(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;')
 async function loadPriceItems(){
   try{
     var r=await fetch(SB_URL+'/rest/v1/price_items?order=category,sort_order',{headers:SB_HDR});
+    var catRes=await fetch(SB_URL+'/rest/v1/price_categories?order=sort_order',{headers:SB_HDR});
+    var categories=await catRes.json();
     var data=await r.json();
     var grid=document.getElementById('priceGrid');
     if(!data||!data.length){grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text3)">요금 정보가 없습니다.</div>';return;}
-    var cats={};var catOrder=[];
+    var cats={};
     data.forEach(function(item){
-      if(!cats[item.category]){cats[item.category]={icon:item.icon,items:[]};catOrder.push(item.category);}
+      if(!cats[item.category])cats[item.category]={icon:item.icon,items:[]};
       cats[item.category].items.push(item);
     });
+    var catOrder=categories.map(function(c){return c.name;}).filter(function(n){return cats[n];});
+    Object.keys(cats).forEach(function(n){if(catOrder.indexOf(n)===-1)catOrder.push(n);});
     grid.innerHTML=catOrder.map(function(cat){
       var c=cats[cat];
       return '<div class="price-card">'+
