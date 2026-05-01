@@ -803,6 +803,9 @@ function saveCostInput() {
   renderProfit();
   toast('저장됐습니다! (' + branchDisplay(branch) + ' / ' + item + ')', 'ok');
   document.getElementById('costInputPanel').style.display = 'none';
+  document.getElementById('costInputBranch').value = '';
+  document.getElementById('costInputItem').value = '';
+  document.getElementById('costInputAmount').value = '';
   // 저장 후 조회 결과 갱신
   document.getElementById('costBranchSel').value = branch;
   costViewQuery();
