@@ -186,6 +186,7 @@ tfoot td:first-child{text-align:left}
         <span id="costDateWrap"><input type="date" id="costDate" style="border:1.5px solid var(--border);border-radius:8px;padding:8px 12px;font-size:14px;font-family:inherit;color:var(--text);background:#fff"></span>
         <button class="btn btn-gray" onclick="loadCostForm()">🔍 조회</button>
         <button class="btn btn-blue" id="costSaveBtn" onclick="saveCostData()">💾 저장</button>
+        <button class="btn btn-red btn-sm" id="costDeleteBtn" onclick="deleteCostEntry()" style="display:none">🗑 이 날짜 삭제</button>
       </div>
       <div id="costFormWrap" style="display:none">
         <!-- 단일 지점 입력 모드 -->
@@ -206,6 +207,21 @@ tfoot td:first-child{text-align:left}
               <option value="">-- 추가할 항목 --</option>
             </select>
             <button class="btn btn-green btn-sm" onclick="addCostItem()">＋ 항목 추가</button>
+          </div>
+          <!-- 입력 내역 (이 지점의 해당 월 전체) -->
+          <div id="costHistoryWrap" style="display:none;margin-top:8px;border-top:1.5px solid var(--border);padding-top:16px">
+            <div style="font-size:13px;font-weight:700;color:var(--text2);margin-bottom:10px">📋 이 지점 입력 내역</div>
+            <div class="tbl-wrap">
+              <table>
+                <thead><tr>
+                  <th style="text-align:left">날짜</th>
+                  <th>항목 수</th>
+                  <th>합계</th>
+                  <th style="text-align:center">관리</th>
+                </tr></thead>
+                <tbody id="costHistoryBody"></tbody>
+              </table>
+            </div>
           </div>
         </div>
         <!-- 전체 조회 모드 -->
@@ -599,6 +615,59 @@ function loadCostForm() {
   const saved = JSON.parse(localStorage.getItem(costKey2(branch, date)) || '[]');
   document.getElementById('costItemBody').innerHTML = saved.map(it => costRowHTML(it.name, it.amount, it.note)).join('');
   updateCostTotal();
+  document.getElementById('costDeleteBtn').style.display = saved.length ? '' : 'none';
+  renderCostHistory(branch);
+}
+
+function renderCostHistory(branch) {
+  const wrap = document.getElementById('costHistoryWrap');
+  const tbody = document.getElementById('costHistoryBody');
+  const monthData = getCostMonthData(branch);
+  if (!monthData.length) { wrap.style.display = 'none'; return; }
+  wrap.style.display = '';
+  const curDate = document.getElementById('costDate').value;
+  tbody.innerHTML = monthData.map(({date, items}) => {
+    const total = items.reduce((s, it) => s + (parseInt(it.amount)||0), 0);
+    const isActive = date === curDate;
+    return `<tr style="${isActive ? 'background:#EFF8FF;' : ''}">
+      <td><strong>${date}</strong>${isActive ? ' <span style="font-size:11px;color:var(--blue)">(현재)</span>' : ''}</td>
+      <td>${items.length}개</td>
+      <td>${fmt(total)}</td>
+      <td style="text-align:center;white-space:nowrap;display:flex;gap:4px;justify-content:center">
+        <button class="btn btn-gray btn-sm" onclick="loadEntryForEdit('${date}')">✏️ 수정</button>
+        <button class="btn btn-red btn-sm" onclick="deleteCostEntryByDate('${branch.replace(/'/g,"\\'")}','${date}')">🗑 삭제</button>
+      </td>
+    </tr>`;
+  }).join('');
+}
+
+function loadEntryForEdit(date) {
+  document.getElementById('costDate').value = date;
+  loadCostForm();
+  document.getElementById('costFormWrap').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function deleteCostEntry() {
+  const branch = document.getElementById('costBranchSel').value;
+  const date = document.getElementById('costDate').value;
+  deleteCostEntryByDate(branch, date);
+}
+
+function deleteCostEntryByDate(branch, date) {
+  if (!confirm(`${branchDisplay(branch)}\n${date} 매입 데이터를 삭제하시겠습니까?`)) return;
+  localStorage.removeItem(costKey2(branch, date));
+  renderCostTable();
+  renderProfit();
+  // 현재 표시 중인 날짜라면 폼 비우기
+  const curDate = document.getElementById('costDate').value;
+  const curBranch = document.getElementById('costBranchSel').value;
+  if (curBranch === branch && curDate === date) {
+    document.getElementById('costItemBody').innerHTML = '';
+    document.getElementById('costDeleteBtn').style.display = 'none';
+    updateCostTotal();
+  }
+  renderCostHistory(branch);
+  toast(`삭제됐습니다. (${date})`, 'ok');
 }
 
 function renderCostAllView() {
@@ -650,6 +719,8 @@ function saveCostData() {
   localStorage.setItem(costKey2(branch, date), JSON.stringify(items));
   renderCostTable();
   renderProfit();
+  document.getElementById('costDeleteBtn').style.display = items.length ? '' : 'none';
+  renderCostHistory(branch);
   toast(`저장됐습니다! (${branchDisplay(branch)} / ${date})`, 'ok');
 }
 
