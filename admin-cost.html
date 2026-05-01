@@ -625,6 +625,10 @@ function addCostItem() {
   document.getElementById('costItemBody').insertAdjacentHTML('beforeend', costRowHTML(name, 0, ''));
   sel.value = '';
   updateCostTotal();
+  // 추가된 마지막 행의 항목명으로 자동 포커스
+  const rows = document.querySelectorAll('#costItemBody .cost-item-row');
+  const lastInput = rows[rows.length - 1]?.querySelector('.ci-name');
+  if (lastInput) { lastInput.focus(); lastInput.select(); }
 }
 
 function updateCostTotal() {
