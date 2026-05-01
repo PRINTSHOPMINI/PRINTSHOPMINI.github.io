@@ -150,7 +150,8 @@ tfoot td:first-child{text-align:left}
       <div class="card"><div class="card-label">인쇄</div><div class="card-val" id="cPrint">-</div><div class="card-sub">원</div></div>
       <div class="card"><div class="card-label">복사</div><div class="card-val" id="cCopy">-</div><div class="card-sub">원</div></div>
       <div class="card"><div class="card-label">스캔</div><div class="card-val" id="cScan">-</div><div class="card-sub">원</div></div>
-      <div class="card"><div class="card-label">팩스 · 상품</div><div class="card-val" id="cOther">-</div><div class="card-sub">원</div></div>
+      <div class="card"><div class="card-label">팩스</div><div class="card-val" id="cFax">-</div><div class="card-sub">원</div></div>
+      <div class="card"><div class="card-label">상품</div><div class="card-val" id="cProduct">-</div><div class="card-sub">원</div></div>
     </div>
     <div class="sec">
       <div class="sec-hd">
@@ -182,27 +183,44 @@ tfoot td:first-child{text-align:left}
         <select id="costBranchSel" style="border:1.5px solid var(--border);border-radius:8px;padding:8px 14px;font-size:14px;font-family:inherit;font-weight:700;color:var(--text);background:#fff">
           <option value="">-- 지점 선택 --</option>
         </select>
-        <input type="date" id="costDate" style="border:1.5px solid var(--border);border-radius:8px;padding:8px 12px;font-size:14px;font-family:inherit;color:var(--text);background:#fff">
+        <span id="costDateWrap"><input type="date" id="costDate" style="border:1.5px solid var(--border);border-radius:8px;padding:8px 12px;font-size:14px;font-family:inherit;color:var(--text);background:#fff"></span>
         <button class="btn btn-gray" onclick="loadCostForm()">🔍 조회</button>
-        <button class="btn btn-blue" onclick="saveCostData()">💾 저장</button>
+        <button class="btn btn-blue" id="costSaveBtn" onclick="saveCostData()">💾 저장</button>
       </div>
       <div id="costFormWrap" style="display:none">
-        <div class="tbl-wrap" style="margin-bottom:12px">
-          <table style="min-width:480px">
-            <thead><tr>
-              <th style="text-align:left;min-width:150px">항목명</th>
-              <th style="min-width:130px">금액 (원)</th>
-              <th style="text-align:left;min-width:150px">비고</th>
-              <th style="text-align:center;width:52px">삭제</th>
-            </tr></thead>
-            <tbody id="costItemBody"></tbody>
-          </table>
+        <!-- 단일 지점 입력 모드 -->
+        <div id="costSingleView">
+          <div class="tbl-wrap" style="margin-bottom:12px">
+            <table style="min-width:480px">
+              <thead><tr>
+                <th style="text-align:left;min-width:150px">항목명</th>
+                <th style="min-width:130px">금액 (원)</th>
+                <th style="text-align:left;min-width:150px">비고</th>
+                <th style="text-align:center;width:52px">삭제</th>
+              </tr></thead>
+              <tbody id="costItemBody"></tbody>
+            </table>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;flex-wrap:wrap">
+            <select id="addItemSel" style="border:1.5px solid var(--border);border-radius:8px;padding:7px 12px;font-size:13px;font-family:inherit;color:var(--text);background:#fff">
+              <option value="">-- 추가할 항목 --</option>
+            </select>
+            <button class="btn btn-green btn-sm" onclick="addCostItem()">＋ 항목 추가</button>
+          </div>
         </div>
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;flex-wrap:wrap">
-          <select id="addItemSel" style="border:1.5px solid var(--border);border-radius:8px;padding:7px 12px;font-size:13px;font-family:inherit;color:var(--text);background:#fff">
-            <option value="">-- 추가할 항목 --</option>
-          </select>
-          <button class="btn btn-green btn-sm" onclick="addCostItem()">＋ 항목 추가</button>
+        <!-- 전체 조회 모드 -->
+        <div id="costAllView" style="display:none">
+          <div class="tbl-wrap" style="margin-bottom:12px">
+            <table>
+              <thead><tr>
+                <th style="text-align:left">지점</th>
+                <th>입력 일수</th>
+                <th>총 매입액</th>
+              </tr></thead>
+              <tbody id="costAllBody"></tbody>
+              <tfoot id="costAllFoot"></tfoot>
+            </table>
+          </div>
         </div>
         <div class="cost-total-bar">
           <span style="font-size:13px;font-weight:700;color:var(--text2)">매입 합계</span>
@@ -333,10 +351,12 @@ const SUPABASE_URL = 'https://wbcfciiuiootbdezxfwy.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndiY2ZjaWl1aW9vdGJkZXp4Znd5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc1MjkyMTQsImV4cCI6MjA5MzEwNTIxNH0.UV4ukUXuAYKAqq85B4FTHO2BtIOqPaBHgAJN5lqyU5s';
 
 const BRANCHES = [
-  '망포역점','영통역점','신영통점','수원시청역점','권선점','광교점','수원정자점','호매실점',
-  '병점역점','동탄남광장점','동탄역점','동탄호수점',
-  '기흥구청점','동백역점','서정리역점',
-  '(주)굿러닝파트너(본점)'
+  '(주)굿러닝파트너(본점)',
+  '광교점','권선점','기흥구청점',
+  '동백역점','동탄남광장점','동탄역점','동탄호수점',
+  '망포역점','병점역점',
+  '서정리역점','수원시청역점','수원정자점','신영통점',
+  '영통역점','호매실점'
 ];
 const COST_ITEMS = ['임차료','관리비','통신비','코팅지','용지','제본표지','쫄대파일','L홀더','서류봉투','제본기','코팅기','사무용품'];
 function branchDisplay(b) { return b.startsWith('(주)') ? b : '프린트샵미니 ' + b; }
@@ -367,10 +387,14 @@ function init() {
   }
   document.getElementById('selMonth').value = String(now.getMonth() + 1).padStart(2, '0');
 
+  const branchSel = document.getElementById('costBranchSel');
+  const allOpt = document.createElement('option');
+  allOpt.value = '__all__'; allOpt.textContent = '── 전체 ──';
+  branchSel.appendChild(allOpt);
   BRANCHES.forEach(b => {
     const o = document.createElement('option');
     o.value = b; o.textContent = branchDisplay(b);
-    document.getElementById('costBranchSel').appendChild(o);
+    branchSel.appendChild(o);
   });
 
   // addItemSel 기본 항목 채우기
@@ -471,15 +495,16 @@ function fmt(n) { return (n || 0).toLocaleString(); }
 function renderSalesCards() {
   const vals = Object.values(salesData);
   if (!vals.length) {
-    ['cTotalSales','cTotalCount','cPrint','cCopy','cScan','cOther'].forEach(id => document.getElementById(id).textContent = '-');
+    ['cTotalSales','cTotalCount','cPrint','cCopy','cScan','cFax','cProduct'].forEach(id => document.getElementById(id).textContent = '-');
     return;
   }
   document.getElementById('cTotalSales').textContent = fmt(vals.reduce((s,d)=>s+d.total,0));
   document.getElementById('cTotalCount').textContent = fmt(vals.reduce((s,d)=>s+d.count,0));
-  document.getElementById('cPrint').textContent = fmt(vals.reduce((s,d)=>s+d.print,0));
-  document.getElementById('cCopy').textContent  = fmt(vals.reduce((s,d)=>s+d.copy,0));
-  document.getElementById('cScan').textContent  = fmt(vals.reduce((s,d)=>s+d.scan,0));
-  document.getElementById('cOther').textContent = fmt(vals.reduce((s,d)=>s+d.fax+d.product,0));
+  document.getElementById('cPrint').textContent   = fmt(vals.reduce((s,d)=>s+d.print,0));
+  document.getElementById('cCopy').textContent    = fmt(vals.reduce((s,d)=>s+d.copy,0));
+  document.getElementById('cScan').textContent    = fmt(vals.reduce((s,d)=>s+d.scan,0));
+  document.getElementById('cFax').textContent     = fmt(vals.reduce((s,d)=>s+d.fax,0));
+  document.getElementById('cProduct').textContent = fmt(vals.reduce((s,d)=>s+d.product,0));
 }
 
 function renderSalesTable() {
@@ -541,17 +566,55 @@ function costRowHTML(name, amount, note) {
 
 function loadCostForm() {
   const branch = document.getElementById('costBranchSel').value;
-  const date = document.getElementById('costDate').value;
-  if (!branch || !date) {
+  if (!branch) {
     document.getElementById('costFormWrap').style.display = 'none';
     document.getElementById('costFormEmpty').style.display = '';
     return;
   }
   document.getElementById('costFormWrap').style.display = 'block';
   document.getElementById('costFormEmpty').style.display = 'none';
+
+  if (branch === '__all__') {
+    // 전체 조회 모드
+    document.getElementById('costSingleView').style.display = 'none';
+    document.getElementById('costAllView').style.display = '';
+    document.getElementById('costDateWrap').style.display = 'none';
+    document.getElementById('costSaveBtn').style.display = 'none';
+    renderCostAllView();
+    return;
+  }
+
+  // 단일 지점 모드
+  document.getElementById('costSingleView').style.display = '';
+  document.getElementById('costAllView').style.display = 'none';
+  document.getElementById('costDateWrap').style.display = '';
+  document.getElementById('costSaveBtn').style.display = '';
+
+  const date = document.getElementById('costDate').value;
+  if (!date) {
+    document.getElementById('costItemBody').innerHTML = '<tr class="empty-row"><td colspan="4">날짜를 선택하면 입력 폼이 나타납니다</td></tr>';
+    document.getElementById('costTotal').textContent = '0 원';
+    return;
+  }
   const saved = JSON.parse(localStorage.getItem(costKey2(branch, date)) || '[]');
   document.getElementById('costItemBody').innerHTML = saved.map(it => costRowHTML(it.name, it.amount, it.note)).join('');
   updateCostTotal();
+}
+
+function renderCostAllView() {
+  const tbody = document.getElementById('costAllBody');
+  const tfoot = document.getElementById('costAllFoot');
+  let totalCost = 0, totalDays = 0;
+  const rows = BRANCHES.filter(b => b !== '(주)굿러닝파트너(본점)' || true).map(branch => {
+    const monthData = getCostMonthData(branch);
+    if (!monthData.length) return `<tr><td>${branchDisplay(branch)}</td><td style="color:var(--text2)">-</td><td style="color:var(--text2)">-</td></tr>`;
+    const cost = monthData.reduce((s, d) => s + d.items.reduce((ss, it) => ss + (parseInt(it.amount)||0), 0), 0);
+    totalCost += cost; totalDays += monthData.length;
+    return `<tr><td>${branchDisplay(branch)}</td><td>${monthData.length}일</td><td><strong>${fmt(cost)}</strong></td></tr>`;
+  }).join('');
+  tbody.innerHTML = rows;
+  tfoot.innerHTML = `<tr><td>합계</td><td>${totalDays}일</td><td>${fmt(totalCost)}</td></tr>`;
+  document.getElementById('costTotal').textContent = fmt(totalCost) + ' 원';
 }
 
 function addCostItem() {
