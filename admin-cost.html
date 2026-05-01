@@ -876,14 +876,7 @@ function renderProfit() {
     const sales = (salesData[branch]?.total || 0) + getSalesManualTotal(branch);
     const cost = getTotalCostForBranch(branch);
     return {branch, sales, cost, profit: sales - cost};
-  }).filter(e => e.sales || e.cost);
-
-  if (!entries.length) {
-    tbody.innerHTML = '<tr class="empty-row"><td colspan="5">매출 및 매입 데이터를 입력하면 자동 계산됩니다</td></tr>';
-    tfoot.innerHTML = '';
-    ['pTotalSales','pTotalCost','pTotalProfit','pAvgRate'].forEach(id => document.getElementById(id).textContent = '-');
-    return;
-  }
+  });
 
   const tS = entries.reduce((s,e)=>s+e.sales,0);
   const tC = entries.reduce((s,e)=>s+e.cost,0);
