@@ -734,19 +734,23 @@ function renderCostQueryBranch(branch) {
   document.getElementById('costQueryBranchTitle').textContent =
     branchDisplay(branch) + ' – ' + curYear + '년 ' + parseInt(curMonth) + '월';
   const tbody = document.getElementById('costQueryBranchBody');
-  const items = getAllItems();
+  const items = getAllItems().filter(item => getCostEntry(branch, item) !== null);
   let total = 0;
   const bEsc = branch.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+  if (items.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="4" style="text-align:center;color:var(--text2);padding:1.2rem">매입항목이 없습니다.</td></tr>`;
+    document.getElementById('costQueryBranchFoot').innerHTML =
+      `<tr><td>합계</td><td></td><td>${fmt(0)}</td><td></td></tr>`;
+    return;
+  }
   tbody.innerHTML = items.map(item => {
     const entry = getCostEntry(branch, item);
     const amount = entry ? parseInt(entry.amount)||0 : 0;
     const date = entry ? entry.date : '-';
     total += amount;
     const iEsc = item.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-    const actions = entry
-      ? `<button class="btn btn-gray btn-sm" onclick="editCostEntry('${bEsc}','${iEsc}')">✏️</button>
-         <button class="btn btn-red btn-sm" onclick="deleteCostItem('${bEsc}','${iEsc}')">🗑</button>`
-      : `<button class="btn btn-gray btn-sm" style="opacity:.5" onclick="editCostEntry('${bEsc}','${iEsc}')">＋ 입력</button>`;
+    const actions = `<button class="btn btn-gray btn-sm" onclick="editCostEntry('${bEsc}','${iEsc}')">✏️</button>
+         <button class="btn btn-red btn-sm" onclick="deleteCostItem('${bEsc}','${iEsc}')">🗑</button>`;
     return `<tr>
       <td>${item}</td>
       <td style="color:var(--text2)">${date}</td>
