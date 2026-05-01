@@ -4,30 +4,32 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>원가분석 어드민 – 프린트샵미니</title>
-<script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{--blue:#1B8AC4;--blue2:#1470A8;--green:#10B981;--red:#EF4444;--orange:#F59E0B;--bg:#F1F5F9;--white:#fff;--border:#E2E8F0;--text:#1E293B;--text2:#64748B}
 body{font-family:'Noto Sans KR',sans-serif,system-ui;background:var(--bg);color:var(--text);font-size:14px;min-height:100vh}
-a{text-decoration:none;color:inherit}
 
 /* HEADER */
 .hd{background:linear-gradient(135deg,#1B8AC4,#1254a0);padding:0 28px;height:60px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 12px rgba(0,0,0,0.2)}
 .hd-logo{color:#fff;font-size:16px;font-weight:900;display:flex;align-items:center;gap:8px}
-.hd-logo a{color:#fff}
-.hd-title{color:rgba(255,255,255,0.85);font-size:13px;font-weight:500}
-.hd-right{display:flex;align-items:center;gap:12px}
+.hd-logo a{color:#fff;text-decoration:none}
+.hd-sub{color:rgba(255,255,255,0.75);font-size:13px}
 
 /* MONTH BAR */
 .month-bar{background:#fff;border-bottom:1px solid var(--border);padding:12px 28px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .month-bar label{font-size:13px;font-weight:700;color:var(--text2)}
 .month-bar select{border:1.5px solid var(--border);border-radius:8px;padding:6px 12px;font-size:13px;font-family:inherit;background:#fff;color:var(--text);cursor:pointer}
 .month-bar select:focus{outline:none;border-color:var(--blue)}
-.month-label{font-size:15px;font-weight:900;color:var(--blue);margin-left:4px}
+.month-label{font-size:15px;font-weight:900;color:var(--blue)}
+.sync-status{margin-left:auto;font-size:12px;color:var(--text2);display:flex;align-items:center;gap:6px}
+.dot{width:8px;height:8px;border-radius:50%;background:#94A3B8;display:inline-block}
+.dot.ok{background:var(--green)}
+.dot.loading{background:var(--orange);animation:pulse 1s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 
 /* TABS */
 .tabs{display:flex;gap:0;border-bottom:2px solid var(--border);background:#fff;padding:0 28px}
-.tab{padding:14px 24px;font-size:14px;font-weight:700;color:var(--text2);cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px;transition:all .2s}
+.tab{padding:14px 22px;font-size:14px;font-weight:700;color:var(--text2);cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px;transition:all .2s;white-space:nowrap}
 .tab:hover{color:var(--blue)}
 .tab.on{color:var(--blue);border-bottom-color:var(--blue)}
 
@@ -37,108 +39,87 @@ a{text-decoration:none;color:inherit}
 .tab-panel.on{display:block}
 
 /* CARDS */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-bottom:24px}
-.card{background:#fff;border-radius:14px;padding:20px 22px;box-shadow:0 1px 4px rgba(0,0,0,0.07)}
-.card-label{font-size:11px;font-weight:700;color:var(--text2);letter-spacing:.05em;text-transform:uppercase;margin-bottom:8px}
-.card-val{font-size:26px;font-weight:900;color:var(--text)}
-.card-val.blue{color:var(--blue)}
-.card-val.green{color:var(--green)}
-.card-val.red{color:var(--red)}
-.card-sub{font-size:12px;color:var(--text2);margin-top:4px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin-bottom:22px}
+.card{background:#fff;border-radius:14px;padding:18px 20px;box-shadow:0 1px 4px rgba(0,0,0,0.07)}
+.card-label{font-size:11px;font-weight:700;color:var(--text2);letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px}
+.card-val{font-size:24px;font-weight:900;color:var(--text)}
+.card-val.blue{color:var(--blue)}.card-val.green{color:var(--green)}.card-val.red{color:var(--red)}
+.card-sub{font-size:11px;color:var(--text2);margin-top:3px}
 
 /* SECTION */
 .sec{background:#fff;border-radius:14px;padding:22px 24px;box-shadow:0 1px 4px rgba(0,0,0,0.07);margin-bottom:20px}
 .sec-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:10px}
-.sec-title{font-size:16px;font-weight:900;display:flex;align-items:center;gap:8px}
+.sec-title{font-size:15px;font-weight:900;display:flex;align-items:center;gap:8px}
 .sec-title::before{content:'';width:4px;height:18px;background:var(--blue);border-radius:2px;display:block}
 
-/* BUTTONS */
+/* BTN */
 .btn{border:none;border-radius:8px;padding:8px 18px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;transition:all .15s;display:inline-flex;align-items:center;gap:6px}
-.btn-blue{background:var(--blue);color:#fff}
-.btn-blue:hover{background:var(--blue2)}
-.btn-green{background:var(--green);color:#fff}
-.btn-green:hover{background:#059669}
-.btn-gray{background:#F1F5F9;color:var(--text);border:1.5px solid var(--border)}
-.btn-gray:hover{background:#E2E8F0}
-.btn-red{background:#FEE2E2;color:var(--red);border:1.5px solid #FECACA}
-.btn-red:hover{background:#FECACA}
+.btn-blue{background:var(--blue);color:#fff}.btn-blue:hover{background:var(--blue2)}
+.btn-green{background:var(--green);color:#fff}.btn-green:hover{background:#059669}
+.btn-gray{background:#F1F5F9;color:var(--text);border:1.5px solid var(--border)}.btn-gray:hover{background:#E2E8F0}
+.btn-red{background:#FEE2E2;color:var(--red);border:1.5px solid #FECACA}.btn-red:hover{background:#FECACA}
 .btn-sm{padding:5px 12px;font-size:12px}
-
-/* UPLOAD ZONE */
-.upload-zone{border:2px dashed var(--border);border-radius:12px;padding:40px;text-align:center;cursor:pointer;transition:all .2s;margin-bottom:20px}
-.upload-zone:hover,.upload-zone.drag{border-color:var(--blue);background:#EFF8FF}
-.upload-zone .icon{font-size:36px;margin-bottom:10px}
-.upload-zone p{font-size:14px;color:var(--text2);margin-bottom:4px}
-.upload-zone small{font-size:12px;color:#94A3B8}
-input[type=file]{display:none}
 
 /* TABLE */
 .tbl-wrap{overflow-x:auto}
 table{width:100%;border-collapse:collapse;font-size:13px}
-thead th{background:#F8FAFC;padding:11px 14px;text-align:right;border-bottom:2px solid var(--border);font-size:11px;font-weight:700;color:var(--text2);white-space:nowrap}
+thead th{background:#F8FAFC;padding:10px 12px;text-align:right;border-bottom:2px solid var(--border);font-size:11px;font-weight:700;color:var(--text2);white-space:nowrap}
 thead th:first-child{text-align:left}
-tbody td{padding:11px 14px;border-bottom:1px solid #F1F5F9;text-align:right;color:var(--text)}
+tbody td{padding:10px 12px;border-bottom:1px solid #F1F5F9;text-align:right;color:var(--text)}
 tbody td:first-child{text-align:left;font-weight:600}
 tbody tr:hover td{background:#F8FAFC}
 tbody tr:last-child td{border-bottom:none}
-tfoot td{padding:12px 14px;text-align:right;font-weight:900;background:#EFF8FF;color:var(--blue);border-top:2px solid var(--border)}
+tfoot td{padding:11px 12px;text-align:right;font-weight:900;background:#EFF8FF;color:var(--blue);border-top:2px solid var(--border)}
 tfoot td:first-child{text-align:left}
-.empty-row td{text-align:center!important;color:var(--text2);font-weight:400!important;padding:40px 0!important}
+.empty-row td{text-align:center!important;color:var(--text2)!important;font-weight:400!important;padding:40px 0!important}
 
 /* 매입 FORM */
-.cost-form{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:20px}
+.cost-form{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:16px}
 .fg{display:flex;flex-direction:column;gap:4px}
 .fg label{font-size:11px;font-weight:700;color:var(--text2)}
 .fg input{border:1.5px solid var(--border);border-radius:8px;padding:8px 12px;font-size:13px;font-family:inherit;text-align:right;background:#fff;color:var(--text);transition:border-color .2s}
 .fg input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(27,138,196,0.1)}
+.cost-total-bar{padding:14px 16px;background:#F8FAFC;border-radius:10px;display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
 
-/* BRANCH SELECTOR */
-.branch-sel-row{display:flex;align-items:center;gap:10px;margin-bottom:20px;flex-wrap:wrap}
-.branch-sel-row select{border:1.5px solid var(--border);border-radius:8px;padding:8px 14px;font-size:14px;font-family:inherit;font-weight:700;color:var(--text);background:#fff}
-.branch-sel-row select:focus{outline:none;border-color:var(--blue)}
-
-/* 손익 TABLE */
+/* 손익 */
 .profit-positive{color:var(--green);font-weight:700}
 .profit-negative{color:var(--red);font-weight:700}
 .rate-badge{display:inline-block;padding:2px 8px;border-radius:20px;font-size:11px;font-weight:700}
-.rate-p{background:#D1FAE5;color:#065F46}
-.rate-n{background:#FEE2E2;color:#991B1B}
-.rate-z{background:#F1F5F9;color:var(--text2)}
+.rate-p{background:#D1FAE5;color:#065F46}.rate-n{background:#FEE2E2;color:#991B1B}.rate-z{background:#F1F5F9;color:var(--text2)}
+
+/* 설정 탭 */
+.setup-step{background:#fff;border-radius:14px;padding:24px;box-shadow:0 1px 4px rgba(0,0,0,0.07);margin-bottom:20px}
+.setup-step-num{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:var(--blue);color:#fff;border-radius:50%;font-size:13px;font-weight:900;margin-right:10px;flex-shrink:0}
+.setup-step-title{font-size:16px;font-weight:900;display:flex;align-items:center;margin-bottom:16px}
+.code-block{background:#1E293B;color:#E2E8F0;border-radius:10px;padding:16px 20px;font-family:'Courier New',monospace;font-size:12px;line-height:1.8;overflow-x:auto;white-space:pre;margin-bottom:12px}
+.bookmarklet-link{display:inline-block;background:linear-gradient(135deg,#1B8AC4,#1254a0);color:#fff;padding:14px 28px;border-radius:12px;font-size:15px;font-weight:900;text-decoration:none;cursor:grab;border:3px dashed rgba(255,255,255,0.4);box-shadow:0 4px 16px rgba(27,138,196,0.4)}
+.bookmarklet-link:active{cursor:grabbing}
+.setup-note{font-size:13px;color:var(--text2);line-height:1.8;background:#F8FAFC;border-radius:8px;padding:14px 16px}
+.setup-note li{margin-left:16px;margin-bottom:4px}
+.badge-new{background:#EF4444;color:#fff;font-size:10px;padding:2px 6px;border-radius:4px;font-weight:700;vertical-align:middle;margin-left:6px}
 
 /* TOAST */
 .toast{position:fixed;bottom:28px;right:28px;background:#1E293B;color:#fff;padding:12px 22px;border-radius:10px;font-size:13px;font-weight:700;z-index:999;opacity:0;transition:opacity .3s,transform .3s;transform:translateY(8px);pointer-events:none}
 .toast.show{opacity:1;transform:translateY(0)}
-.toast.ok{background:#059669}
-.toast.err{background:#DC2626}
+.toast.ok{background:#059669}.toast.err{background:#DC2626}
 
-/* NO DATA */
-.no-data{text-align:center;padding:60px 20px;color:var(--text2)}
-.no-data .icon{font-size:48px;margin-bottom:12px}
-.no-data p{font-size:14px}
-
-/* RESPONSIVE */
 @media(max-width:768px){
-  .main{padding:16px 14px 40px}
-  .tabs{padding:0 14px;overflow-x:auto}
+  .main{padding:14px 12px 40px}
+  .tabs{padding:0 12px;overflow-x:auto}
   .month-bar{padding:10px 14px}
-  .sec{padding:16px}
+  .sec{padding:14px}
 }
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
 <div class="hd">
   <div class="hd-logo">
     <a href="index.html">🦝 프린트샵미니</a>
-    <span class="hd-title">/ 원가분석 어드민</span>
-  </div>
-  <div class="hd-right">
-    <span id="hdMonth" style="color:rgba(255,255,255,0.7);font-size:13px"></span>
+    <span class="hd-sub">/ 원가분석 어드민</span>
   </div>
 </div>
 
-<!-- MONTH BAR -->
 <div class="month-bar">
   <label>조회 월</label>
   <select id="selYear" onchange="onMonthChange()"></select>
@@ -149,22 +130,21 @@ tfoot td:first-child{text-align:left}
     <option value="10">10월</option><option value="11">11월</option><option value="12">12월</option>
   </select>
   <span class="month-label" id="monthLabel"></span>
+  <div class="sync-status"><span class="dot" id="syncDot"></span><span id="syncMsg">–</span></div>
 </div>
 
-<!-- TABS -->
 <div class="tabs">
   <div class="tab on" onclick="showTab('sales',this)">💰 매출현황</div>
   <div class="tab" onclick="showTab('cost',this)">💸 매입현황</div>
   <div class="tab" onclick="showTab('profit',this)">📊 손익분석</div>
+  <div class="tab" onclick="showTab('setup',this)">⚙️ 설정 <span class="badge-new">초기설정</span></div>
 </div>
 
-<!-- MAIN -->
 <div class="main">
 
-  <!-- ===== 매출현황 TAB ===== -->
+  <!-- ===== 매출 ===== -->
   <div class="tab-panel on" id="panel-sales">
-    <!-- 요약 카드 -->
-    <div class="cards" id="salesCards">
+    <div class="cards">
       <div class="card"><div class="card-label">총 매출</div><div class="card-val blue" id="cTotalSales">-</div><div class="card-sub">원</div></div>
       <div class="card"><div class="card-label">총 건수</div><div class="card-val" id="cTotalCount">-</div><div class="card-sub">건</div></div>
       <div class="card"><div class="card-label">인쇄</div><div class="card-val" id="cPrint">-</div><div class="card-sub">원</div></div>
@@ -172,91 +152,58 @@ tfoot td:first-child{text-align:left}
       <div class="card"><div class="card-label">스캔</div><div class="card-val" id="cScan">-</div><div class="card-sub">원</div></div>
       <div class="card"><div class="card-label">팩스 · 상품</div><div class="card-val" id="cOther">-</div><div class="card-sub">원</div></div>
     </div>
-
-    <!-- 업로드 -->
-    <div class="sec">
-      <div class="sec-hd">
-        <div class="sec-title">매출 데이터 업로드</div>
-        <div style="display:flex;gap:8px">
-          <button class="btn btn-gray btn-sm" onclick="document.getElementById('fileInput').click()">📂 파일 선택</button>
-          <button class="btn btn-red btn-sm" onclick="clearSales()">🗑 초기화</button>
-        </div>
-      </div>
-      <div class="upload-zone" id="uploadZone" onclick="document.getElementById('fileInput').click()"
-           ondragover="event.preventDefault();this.classList.add('drag')"
-           ondragleave="this.classList.remove('drag')"
-           ondrop="handleDrop(event)">
-        <div class="icon">📄</div>
-        <p><strong>fax.printnuri.com</strong>에서 내보낸 엑셀 파일을 업로드하세요</p>
-        <small>그룹명: 프린트샵미니 선택 후 내보내기 → 파일 업로드 (.xlsx)</small>
-      </div>
-      <input type="file" id="fileInput" accept=".xlsx,.xls,.csv" onchange="handleFile(this.files[0])">
-      <div id="uploadStatus" style="font-size:12px;color:var(--text2);margin-top:4px"></div>
-    </div>
-
-    <!-- 지점별 매출 테이블 -->
     <div class="sec">
       <div class="sec-hd">
         <div class="sec-title">지점별 매출 현황</div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <span style="font-size:12px;color:var(--text2)" id="lastSyncDate"></span>
+          <button class="btn btn-gray btn-sm" onclick="loadSalesFromDB()">🔄 새로고침</button>
+        </div>
       </div>
       <div class="tbl-wrap">
-        <table id="salesTable">
-          <thead>
-            <tr>
-              <th style="text-align:left">지점</th>
-              <th>인쇄</th><th>복사</th><th>스캔</th><th>팩스</th><th>상품</th>
-              <th>합계</th><th>건수</th>
-            </tr>
-          </thead>
-          <tbody id="salesBody"><tr class="empty-row"><td colspan="8">📂 매출 데이터를 업로드해 주세요</td></tr></tbody>
+        <table>
+          <thead><tr>
+            <th style="text-align:left">지점</th>
+            <th>인쇄</th><th>복사</th><th>스캔</th><th>팩스</th><th>상품</th>
+            <th>합계</th><th>건수</th>
+          </tr></thead>
+          <tbody id="salesBody"><tr class="empty-row"><td colspan="8">⚙️ 설정 탭에서 북마클릿을 설치하고 데이터를 업로드해 주세요</td></tr></tbody>
           <tfoot id="salesFoot"></tfoot>
         </table>
       </div>
     </div>
   </div>
 
-  <!-- ===== 매입현황 TAB ===== -->
+  <!-- ===== 매입 ===== -->
   <div class="tab-panel" id="panel-cost">
     <div class="sec">
-      <div class="sec-hd">
-        <div class="sec-title">지점 선택</div>
-      </div>
-      <div class="branch-sel-row">
-        <select id="costBranchSel" onchange="loadCostForm()">
+      <div class="sec-hd"><div class="sec-title">지점 선택</div></div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;flex-wrap:wrap">
+        <select id="costBranchSel" onchange="loadCostForm()" style="border:1.5px solid var(--border);border-radius:8px;padding:8px 14px;font-size:14px;font-family:inherit;font-weight:700;color:var(--text);background:#fff">
           <option value="">-- 지점 선택 --</option>
         </select>
         <button class="btn btn-blue" onclick="saveCostData()">💾 저장</button>
         <button class="btn btn-gray" onclick="copyPrevMonth()">📋 전월 복사</button>
       </div>
-
-      <!-- 매입 입력 폼 -->
       <div id="costFormWrap" style="display:none">
         <div class="cost-form" id="costForm"></div>
-        <div style="margin-top:8px;padding:14px 16px;background:#F8FAFC;border-radius:10px;display:flex;justify-content:space-between;align-items:center">
+        <div class="cost-total-bar">
           <span style="font-size:13px;font-weight:700;color:var(--text2)">매입 합계</span>
           <span style="font-size:20px;font-weight:900;color:var(--blue)" id="costTotal">0 원</span>
         </div>
       </div>
-      <div id="costFormEmpty" style="text-align:center;padding:40px;color:var(--text2)">
-        ← 지점을 선택하면 입력 폼이 나타납니다
-      </div>
+      <div id="costFormEmpty" style="text-align:center;padding:40px;color:var(--text2)">← 지점을 선택하면 입력 폼이 나타납니다</div>
     </div>
-
-    <!-- 전체 매입 요약 테이블 -->
     <div class="sec">
-      <div class="sec-hd">
-        <div class="sec-title">지점별 매입 현황</div>
-      </div>
+      <div class="sec-hd"><div class="sec-title">지점별 매입 현황</div></div>
       <div class="tbl-wrap">
-        <table id="costTable">
-          <thead>
-            <tr>
-              <th style="text-align:left">지점</th>
-              <th>임차료</th><th>관리비</th><th>통신비</th><th>코팅지</th><th>용지</th>
-              <th>제본표지</th><th>쫄대파일</th><th>L홀더</th><th>서류봉투</th>
-              <th>제본기</th><th>코팅기</th><th>사무용품</th><th>합계</th>
-            </tr>
-          </thead>
+        <table>
+          <thead><tr>
+            <th style="text-align:left">지점</th>
+            <th>임차료</th><th>관리비</th><th>통신비</th><th>코팅지</th><th>용지</th>
+            <th>제본표지</th><th>쫄대파일</th><th>L홀더</th><th>서류봉투</th>
+            <th>제본기</th><th>코팅기</th><th>사무용품</th><th>합계</th>
+          </tr></thead>
           <tbody id="costBody"><tr class="empty-row"><td colspan="14">매입 데이터를 입력해 주세요</td></tr></tbody>
           <tfoot id="costFoot"></tfoot>
         </table>
@@ -264,29 +211,25 @@ tfoot td:first-child{text-align:left}
     </div>
   </div>
 
-  <!-- ===== 손익분석 TAB ===== -->
+  <!-- ===== 손익 ===== -->
   <div class="tab-panel" id="panel-profit">
-    <!-- 요약 카드 -->
     <div class="cards">
       <div class="card"><div class="card-label">총 매출</div><div class="card-val blue" id="pTotalSales">-</div><div class="card-sub">원</div></div>
       <div class="card"><div class="card-label">총 매입</div><div class="card-val" id="pTotalCost">-</div><div class="card-sub">원</div></div>
       <div class="card"><div class="card-label">총 이익</div><div class="card-val" id="pTotalProfit">-</div><div class="card-sub">원</div></div>
-      <div class="card"><div class="card-label">평균 이익률</div><div class="card-val" id="pAvgRate">-</div><div class="card-sub">%</div></div>
+      <div class="card"><div class="card-label">이익률</div><div class="card-val" id="pAvgRate">-</div><div class="card-sub">%</div></div>
     </div>
-
     <div class="sec">
       <div class="sec-hd">
         <div class="sec-title">지점별 손익 분석</div>
         <button class="btn btn-gray btn-sm" onclick="renderProfit()">🔄 새로고침</button>
       </div>
       <div class="tbl-wrap">
-        <table id="profitTable">
-          <thead>
-            <tr>
-              <th style="text-align:left">지점</th>
-              <th>매출</th><th>매입</th><th>이익</th><th>이익률</th>
-            </tr>
-          </thead>
+        <table>
+          <thead><tr>
+            <th style="text-align:left">지점</th>
+            <th>매출</th><th>매입</th><th>이익</th><th>이익률</th>
+          </tr></thead>
           <tbody id="profitBody"><tr class="empty-row"><td colspan="5">매출 및 매입 데이터를 입력하면 자동 계산됩니다</td></tr></tbody>
           <tfoot id="profitFoot"></tfoot>
         </table>
@@ -294,31 +237,106 @@ tfoot td:first-child{text-align:left}
     </div>
   </div>
 
-</div><!-- /main -->
+  <!-- ===== 설정 ===== -->
+  <div class="tab-panel" id="panel-setup">
 
-<!-- TOAST -->
+    <!-- STEP 1 -->
+    <div class="setup-step">
+      <div class="setup-step-title"><span class="setup-step-num">1</span>Supabase 테이블 생성 (최초 1회)</div>
+      <p style="font-size:13px;color:var(--text2);margin-bottom:12px">Supabase 대시보드 → SQL Editor에서 아래 SQL을 실행하세요.</p>
+      <div class="code-block">CREATE TABLE daily_sales (
+  id bigint generated always as identity primary key,
+  sale_date date not null,
+  branch text not null,
+  total_amount integer default 0,
+  total_count integer default 0,
+  print_amount integer default 0,
+  copy_amount integer default 0,
+  scan_amount integer default 0,
+  fax_amount integer default 0,
+  product_amount integer default 0,
+  created_at timestamptz default now(),
+  UNIQUE(sale_date, branch)
+);
+
+ALTER TABLE daily_sales ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "anon_all" ON daily_sales FOR ALL TO anon USING (true) WITH CHECK (true);</div>
+      <div class="setup-note">
+        <strong>👉 방법:</strong> supabase.com → 프로젝트 선택 → 왼쪽 SQL Editor → New Query → 위 코드 붙여넣기 → Run
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="setup-step">
+      <div class="setup-step-title"><span class="setup-step-num">2</span>북마클릿 설치 (최초 1회)</div>
+      <p style="font-size:13px;color:var(--text2);margin-bottom:16px">아래 버튼을 <strong>마우스로 드래그해서 브라우저 북마크 바에 끌어다 놓으세요.</strong></p>
+      <div style="margin-bottom:16px">
+        <a id="bookmarkletLink" class="bookmarklet-link">🔄 프린트샵미니 매출 업로드</a>
+      </div>
+      <div class="setup-note">
+        <ul>
+          <li>북마크 바가 안 보이면: 브라우저에서 <strong>Ctrl+Shift+B</strong> (표시/숨기기)</li>
+          <li>드래그가 안 되면: 위 버튼 우클릭 → "즐겨찾기에 추가" 후 주소 란에 아래 코드를 붙여넣으세요</li>
+        </ul>
+      </div>
+      <details style="margin-top:12px">
+        <summary style="cursor:pointer;font-size:12px;color:var(--text2);font-weight:700">▶ 북마클릿 코드 직접 보기 (드래그 안될 때)</summary>
+        <textarea id="bookmarkletCode" style="width:100%;height:80px;margin-top:8px;font-size:11px;font-family:monospace;border:1.5px solid var(--border);border-radius:8px;padding:8px;resize:none" readonly></textarea>
+        <button class="btn btn-gray btn-sm" style="margin-top:6px" onclick="navigator.clipboard.writeText(document.getElementById('bookmarkletCode').value);toast('복사됐습니다!','ok')">📋 복사</button>
+      </details>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="setup-step">
+      <div class="setup-step-title"><span class="setup-step-num">3</span>매일 사용 방법</div>
+      <div class="setup-note">
+        <ul>
+          <li>① <strong>fax.printnuri.com/payment</strong> 접속 (이미 로그인된 상태)</li>
+          <li>② 날짜를 오늘로 설정하고 그룹명 <strong>프린트샵미니</strong> 선택 후 검색</li>
+          <li>③ 북마크 바에서 <strong>🔄 프린트샵미니 매출 업로드</strong> 클릭</li>
+          <li>④ "✅ 업로드 완료!" 알림이 뜨면 이 페이지에서 새로고침으로 확인</li>
+        </ul>
+      </div>
+      <div style="margin-top:12px;padding:12px 16px;background:#FFF7ED;border-radius:8px;font-size:13px;color:#92400E;border-left:4px solid #F59E0B">
+        ⏰ 매일 업무 끝나고 한 번만 클릭하면 그날 데이터가 자동 저장됩니다.<br>
+        같은 날짜 데이터를 여러 번 올려도 중복 저장 없이 자동 업데이트됩니다.
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <div class="toast" id="toast"></div>
 
 <script>
 // ==================== 상수 ====================
+const SUPABASE_URL = 'https://wbcfciiuiootbdezxfwy.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndiY2ZjaWl1aW9vdGJkZXp4Znd5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc1MjkyMTQsImV4cCI6MjA5MzEwNTIxNH0.UV4ukUXuAYKAqq85B4FTHO2BtIOqPaBHgAJN5lqyU5s';
+
 const BRANCHES = [
   '망포역점','영통역점','신영통점','수원시청역점','권선점','광교점','수원정자점','호매실점',
   '병점역점','동탄남광장점','동탄역점','동탄호수점',
-  '기흥구청점','동백역점',
-  '서정리역점'
+  '기흥구청점','동백역점','서정리역점'
 ];
 const COST_ITEMS = ['임차료','관리비','통신비','코팅지','용지','제본표지','쫄대파일','L홀더','서류봉투','제본기','코팅기','사무용품'];
-const SALE_TYPES = ['인쇄','복사','스캔','팩스','상품'];
 
 // ==================== 상태 ====================
 let curYear = '', curMonth = '';
-let salesData = {}; // { branch: {total,count,인쇄,복사,스캔,팩스,상품} }
-let costData = {};  // { branch: {임차료, ...} }
+let salesData = {}; // { branch: {total_amount, total_count, print, copy, scan, fax, product} }
+let salesDates = []; // 로드된 날짜 목록
+
+// ==================== 북마클릿 ====================
+function buildBookmarklet() {
+  const SB_URL = SUPABASE_URL;
+  const SB_KEY = SUPABASE_KEY;
+  const code = `javascript:(function(){var SU='${SB_URL}',SK='${SB_KEY}';function xb(t){return t.replace(/^프린트샵미니_/,'').replace(/\\d+$/,'').trim();}var tod=new Date().toISOString().split('T')[0];var frm=document.getElementById('searchFrm');if(!frm){alert('결제 목록 페이지에서 실행해주세요.');return;}var p=new URLSearchParams(new FormData(frm));p.set('startDate',tod);p.set('endDate',tod);setSyncMsg('📡 데이터 수집 중...');fetch('/payment/export.xls?'+p.toString(),{credentials:'include'}).then(function(r){return r.arrayBuffer();}).then(function(buf){if(typeof XLSX==='undefined'){var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js';s.onload=function(){proc(buf);};document.head.appendChild(s);}else{proc(buf);}}).catch(function(e){alert('❌ 오류: '+e.message);});function proc(buf){var wb=XLSX.read(buf,{type:'array'});var rows=XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]],{header:1,defval:''});var h=rows[0].map(function(x){return String(x).trim();});var iG=h.indexOf('그룹명'),iT=h.indexOf('단말기명'),iA=h.indexOf('금액'),iY=h.indexOf('작업종류');if(iT<0){iG=1;iT=2;iA=4;iY=7;}var data={};for(var i=1;i<rows.length;i++){var r=rows[i];var g=String(r[iG]||'');if(g&&!g.includes('프린트샵미니'))continue;var tn=String(r[iT]||'').trim();if(!tn.includes('프린트샵미니'))continue;var br=xb(tn);var am=parseInt(String(r[iA]||'0').replace(/,/g,''))||0;var ty=String(r[iY]||'').trim();if(!data[br])data[br]={t:0,n:0,p:0,c:0,s:0,f:0,g:0};data[br].t+=am;data[br].n++;if(ty==='인쇄')data[br].p+=am;else if(ty==='복사')data[br].c+=am;else if(ty==='스캔')data[br].s+=am;else if(ty==='팩스')data[br].f+=am;else if(ty==='상품')data[br].g+=am;}var recs=Object.entries(data).map(function(e){var b=e[0],d=e[1];return{sale_date:tod,branch:b,total_amount:d.t,total_count:d.n,print_amount:d.p,copy_amount:d.c,scan_amount:d.s,fax_amount:d.f,product_amount:d.g};});if(!recs.length){alert('⚠️ 프린트샵미니 데이터 없음\\n날짜와 그룹 설정 확인');return;}fetch(SU+'/rest/v1/daily_sales',{method:'POST',headers:{'apikey':SK,'Authorization':'Bearer '+SK,'Content-Type':'application/json','Prefer':'resolution=merge-duplicates,return=minimal'},body:JSON.stringify(recs)}).then(function(r){if(r.ok||r.status===201||r.status===204)alert('✅ 업로드 완료!\\n'+recs.length+'개 지점 / '+tod);else r.text().then(function(t){alert('❌ Supabase 오류: '+t);});}).catch(function(e){alert('❌ '+e.message);});}function setSyncMsg(m){try{document.getElementById('syncMsg').textContent=m;}catch(e){}}})();`;
+  document.getElementById('bookmarkletLink').href = code;
+  document.getElementById('bookmarkletCode').value = code;
+}
 
 // ==================== 초기화 ====================
 function init() {
   const now = new Date();
-  // Year select: 2026 ~ 2030
   const ySel = document.getElementById('selYear');
   for (let y = 2026; y <= 2030; y++) {
     const o = document.createElement('option');
@@ -326,41 +344,27 @@ function init() {
     if (y === now.getFullYear()) o.selected = true;
     ySel.appendChild(o);
   }
-  // Month default
-  const mSel = document.getElementById('selMonth');
-  mSel.value = String(now.getMonth() + 1).padStart(2, '0');
+  document.getElementById('selMonth').value = String(now.getMonth() + 1).padStart(2, '0');
 
-  // Branch selects
-  const bSel = document.getElementById('costBranchSel');
   BRANCHES.forEach(b => {
     const o = document.createElement('option');
     o.value = b; o.textContent = '프린트샵미니 ' + b;
-    bSel.appendChild(o);
+    document.getElementById('costBranchSel').appendChild(o);
   });
 
+  buildBookmarklet();
   onMonthChange();
 }
 
 function onMonthChange() {
   curYear = document.getElementById('selYear').value;
   curMonth = document.getElementById('selMonth').value;
-  const label = curYear + '년 ' + parseInt(curMonth) + '월';
-  document.getElementById('monthLabel').textContent = label;
-  document.getElementById('hdMonth').textContent = label;
-  loadAll();
-}
-
-function loadAll() {
-  salesData = loadSales();
-  costData = loadAllCosts();
-  renderSalesTable();
-  renderSalesCards();
+  document.getElementById('monthLabel').textContent = curYear + '년 ' + parseInt(curMonth) + '월';
+  loadSalesFromDB();
   renderCostTable();
-  renderProfit();
   loadCostForm();
 }
 
-// ==================== 탭 ====================
 function showTab(id, el) {
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('on'));
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('on'));
@@ -369,160 +373,75 @@ function showTab(id, el) {
   if (id === 'profit') renderProfit();
 }
 
-// ==================== localStorage ====================
-function salesKey() { return `psm_sales_${curYear}_${curMonth}`; }
-function costKey(branch) { return `psm_cost_${curYear}_${curMonth}_${branch}`; }
-
-function saveSales() { localStorage.setItem(salesKey(), JSON.stringify(salesData)); }
-function loadSales() { return JSON.parse(localStorage.getItem(salesKey()) || '{}'); }
-function loadAllCosts() {
-  const result = {};
-  BRANCHES.forEach(b => { result[b] = JSON.parse(localStorage.getItem(costKey(b)) || '{}'); });
-  return result;
+// ==================== Supabase ====================
+async function sbGet(query) {
+  const res = await fetch(SUPABASE_URL + '/rest/v1/' + query, {
+    headers: { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY }
+  });
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
 }
 
-// ==================== 지점명 추출 ====================
-function extractBranch(terminalName) {
-  // "프린트샵미니_광교점2" -> "광교점"
-  // "프린트샵미니_광교점" -> "광교점"
-  let name = String(terminalName).replace(/^프린트샵미니_/, '').replace(/\d+$/, '').trim();
-  // 알려진 지점 매핑 확인
-  if (BRANCHES.includes(name)) return name;
-  // 부분 매칭
-  const found = BRANCHES.find(b => name.includes(b) || b.includes(name));
-  return found || name;
+async function loadSalesFromDB() {
+  setSyncStatus('loading', '로딩 중...');
+  try {
+    const startDate = `${curYear}-${curMonth}-01`;
+    const lastDay = new Date(parseInt(curYear), parseInt(curMonth), 0).getDate();
+    const endDate = `${curYear}-${curMonth}-${String(lastDay).padStart(2, '0')}`;
+
+    const rows = await sbGet(`daily_sales?select=*&sale_date=gte.${startDate}&sale_date=lte.${endDate}&order=sale_date.asc`);
+
+    // 날짜별 집계 → 지점별 월 합계
+    salesData = {};
+    const dates = new Set();
+    rows.forEach(r => {
+      dates.add(r.sale_date);
+      if (!salesData[r.branch]) salesData[r.branch] = {total:0,count:0,print:0,copy:0,scan:0,fax:0,product:0};
+      const d = salesData[r.branch];
+      d.total += r.total_amount || 0;
+      d.count += r.total_count || 0;
+      d.print += r.print_amount || 0;
+      d.copy  += r.copy_amount  || 0;
+      d.scan  += r.scan_amount  || 0;
+      d.fax   += r.fax_amount   || 0;
+      d.product += r.product_amount || 0;
+    });
+    salesDates = Array.from(dates).sort();
+
+    renderSalesTable();
+    renderSalesCards();
+    renderProfit();
+
+    const dateStr = salesDates.length ? salesDates[salesDates.length-1] + ' 기준' : '';
+    document.getElementById('lastSyncDate').textContent = dateStr;
+    setSyncStatus('ok', salesDates.length ? `${salesDates.length}일치 데이터` : '데이터 없음');
+  } catch(e) {
+    setSyncStatus('', '로딩 실패: ' + e.message);
+    toast('매출 데이터 로딩 실패: ' + e.message, 'err');
+  }
 }
 
-// ==================== 파일 업로드 ====================
-function handleDrop(e) {
-  e.preventDefault();
-  document.getElementById('uploadZone').classList.remove('drag');
-  const f = e.dataTransfer.files[0];
-  if (f) handleFile(f);
-}
-
-function handleFile(file) {
-  if (!file) return;
-  const status = document.getElementById('uploadStatus');
-  status.textContent = '📊 파일 분석 중...';
-
-  const reader = new FileReader();
-  reader.onload = function(e) {
-    try {
-      const wb = XLSX.read(e.target.result, {type:'array'});
-      const sheet = wb.Sheets[wb.SheetNames[0]];
-      const rows = XLSX.utils.sheet_to_json(sheet, {header:1, defval:''});
-
-      if (rows.length < 2) { toast('데이터가 없습니다.', 'err'); return; }
-
-      const headers = rows[0].map(h => String(h).trim());
-
-      // 컬럼 인덱스 찾기
-      function findCol(...names) {
-        for (const n of names) {
-          const i = headers.indexOf(n);
-          if (i >= 0) return i;
-        }
-        return -1;
-      }
-
-      const iGroup    = findCol('그룹명','그룹 명');
-      const iTerminal = findCol('단말기명','단말기 명','단말기기명','터미널명');
-      const iAmount   = findCol('금액','결제금액','결제 금액','승인금액');
-      const iType     = findCol('작업종류','작업 종류','서비스종류');
-
-      // 컬럼을 못 찾은 경우 인덱스로 추정
-      const colG = iGroup    >= 0 ? iGroup    : 1;
-      const colT = iTerminal >= 0 ? iTerminal : 2;
-      const colA = iAmount   >= 0 ? iAmount   : 4;
-      const colY = iType     >= 0 ? iType     : 7;
-
-      const parsed = {};
-      let totalRows = 0, skipRows = 0;
-
-      for (let i = 1; i < rows.length; i++) {
-        const row = rows[i];
-        if (!row || row.every(c => c === '')) continue;
-
-        const group = String(row[colG] || '').trim();
-        if (group && !group.includes('프린트샵미니')) { skipRows++; continue; }
-
-        const termName = String(row[colT] || '').trim();
-        if (!termName) continue;
-
-        const amountRaw = String(row[colA] || '0').replace(/,/g, '');
-        const amount = parseInt(amountRaw) || 0;
-        const type = String(row[colY] || '').trim();
-        const branch = extractBranch(termName);
-
-        if (!parsed[branch]) {
-          parsed[branch] = {total:0, count:0, 인쇄:0, 복사:0, 스캔:0, 팩스:0, 상품:0};
-        }
-        parsed[branch].total += amount;
-        parsed[branch].count++;
-        if (SALE_TYPES.includes(type)) parsed[branch][type] = (parsed[branch][type]||0) + amount;
-        totalRows++;
-      }
-
-      if (totalRows === 0) {
-        toast('프린트샵미니 데이터를 찾을 수 없습니다. 컬럼 형식을 확인해 주세요.', 'err');
-        status.textContent = '❌ 데이터를 찾지 못했습니다 (그룹명 컬럼: ' + (iGroup>=0?'✅':'추정') + ', 단말기명: ' + (iTerminal>=0?'✅':'추정') + ')';
-        return;
-      }
-
-      salesData = parsed;
-      saveSales();
-      renderSalesTable();
-      renderSalesCards();
-      renderProfit();
-
-      const branchCount = Object.keys(parsed).length;
-      status.textContent = `✅ ${totalRows}건 · ${branchCount}개 지점 불러옴 (타그룹 ${skipRows}건 제외)`;
-      toast(`매출 데이터 업로드 완료! (${totalRows}건)`, 'ok');
-    } catch(err) {
-      toast('파일 처리 오류: ' + err.message, 'err');
-      status.textContent = '❌ 오류: ' + err.message;
-    }
-  };
-  reader.readAsArrayBuffer(file);
-}
-
-function clearSales() {
-  if (!confirm('이 달의 매출 데이터를 삭제하시겠습니까?')) return;
-  salesData = {};
-  localStorage.removeItem(salesKey());
-  renderSalesTable();
-  renderSalesCards();
-  renderProfit();
-  document.getElementById('uploadStatus').textContent = '';
-  toast('매출 데이터가 초기화됐습니다.', 'ok');
+function setSyncStatus(state, msg) {
+  const dot = document.getElementById('syncDot');
+  dot.className = 'dot' + (state ? ' ' + state : '');
+  document.getElementById('syncMsg').textContent = msg;
 }
 
 // ==================== 매출 렌더 ====================
-function fmt(n) {
-  if (!n && n !== 0) return '-';
-  return Number(n).toLocaleString();
-}
+function fmt(n) { return (n || 0).toLocaleString(); }
 
 function renderSalesCards() {
-  const branches = Object.values(salesData);
-  if (!branches.length) {
+  const vals = Object.values(salesData);
+  if (!vals.length) {
     ['cTotalSales','cTotalCount','cPrint','cCopy','cScan','cOther'].forEach(id => document.getElementById(id).textContent = '-');
     return;
   }
-  const total = branches.reduce((s,b) => s + b.total, 0);
-  const count = branches.reduce((s,b) => s + b.count, 0);
-  const print = branches.reduce((s,b) => s + b.인쇄, 0);
-  const copy  = branches.reduce((s,b) => s + b.복사, 0);
-  const scan  = branches.reduce((s,b) => s + b.스캔, 0);
-  const other = branches.reduce((s,b) => s + b.팩스 + b.상품, 0);
-
-  document.getElementById('cTotalSales').textContent = fmt(total);
-  document.getElementById('cTotalCount').textContent = fmt(count);
-  document.getElementById('cPrint').textContent = fmt(print);
-  document.getElementById('cCopy').textContent = fmt(copy);
-  document.getElementById('cScan').textContent = fmt(scan);
-  document.getElementById('cOther').textContent = fmt(other);
+  document.getElementById('cTotalSales').textContent = fmt(vals.reduce((s,d)=>s+d.total,0));
+  document.getElementById('cTotalCount').textContent = fmt(vals.reduce((s,d)=>s+d.count,0));
+  document.getElementById('cPrint').textContent = fmt(vals.reduce((s,d)=>s+d.print,0));
+  document.getElementById('cCopy').textContent  = fmt(vals.reduce((s,d)=>s+d.copy,0));
+  document.getElementById('cScan').textContent  = fmt(vals.reduce((s,d)=>s+d.scan,0));
+  document.getElementById('cOther').textContent = fmt(vals.reduce((s,d)=>s+d.fax+d.product,0));
 }
 
 function renderSalesTable() {
@@ -531,66 +450,60 @@ function renderSalesTable() {
   const entries = Object.entries(salesData);
 
   if (!entries.length) {
-    tbody.innerHTML = '<tr class="empty-row"><td colspan="8">📂 매출 데이터를 업로드해 주세요</td></tr>';
-    tfoot.innerHTML = '';
-    return;
+    tbody.innerHTML = '<tr class="empty-row"><td colspan="8">⚙️ 설정 탭에서 북마클릿을 설치하고 데이터를 업로드해 주세요</td></tr>';
+    tfoot.innerHTML = ''; return;
   }
 
-  // 알려진 지점 순서대로 정렬
   entries.sort((a,b) => {
     const ai = BRANCHES.indexOf(a[0]), bi = BRANCHES.indexOf(b[0]);
-    return (ai < 0 ? 999 : ai) - (bi < 0 ? 999 : bi);
+    return (ai<0?999:ai) - (bi<0?999:bi);
   });
 
-  let totals = {인쇄:0, 복사:0, 스캔:0, 팩스:0, 상품:0, total:0, count:0};
-
+  let T = {print:0,copy:0,scan:0,fax:0,product:0,total:0,count:0};
   tbody.innerHTML = entries.map(([branch, d]) => {
-    SALE_TYPES.forEach(t => totals[t] += d[t]||0);
-    totals.total += d.total; totals.count += d.count;
+    T.print+=d.print; T.copy+=d.copy; T.scan+=d.scan; T.fax+=d.fax; T.product+=d.product;
+    T.total+=d.total; T.count+=d.count;
     return `<tr>
       <td>프린트샵미니 ${branch}</td>
-      <td>${fmt(d.인쇄)}</td><td>${fmt(d.복사)}</td><td>${fmt(d.스캔)}</td>
-      <td>${fmt(d.팩스)}</td><td>${fmt(d.상품)}</td>
+      <td>${fmt(d.print)}</td><td>${fmt(d.copy)}</td><td>${fmt(d.scan)}</td>
+      <td>${fmt(d.fax)}</td><td>${fmt(d.product)}</td>
       <td><strong>${fmt(d.total)}</strong></td><td>${fmt(d.count)}</td>
     </tr>`;
   }).join('');
 
   tfoot.innerHTML = `<tr>
     <td>합계</td>
-    <td>${fmt(totals.인쇄)}</td><td>${fmt(totals.복사)}</td><td>${fmt(totals.스캔)}</td>
-    <td>${fmt(totals.팩스)}</td><td>${fmt(totals.상품)}</td>
-    <td>${fmt(totals.total)}</td><td>${fmt(totals.count)}</td>
+    <td>${fmt(T.print)}</td><td>${fmt(T.copy)}</td><td>${fmt(T.scan)}</td>
+    <td>${fmt(T.fax)}</td><td>${fmt(T.product)}</td>
+    <td>${fmt(T.total)}</td><td>${fmt(T.count)}</td>
   </tr>`;
 }
 
 // ==================== 매입 ====================
+function costKey(branch) { return `psm_cost_${curYear}_${curMonth}_${branch}`; }
+
 function loadCostForm() {
   const branch = document.getElementById('costBranchSel').value;
-  const wrap = document.getElementById('costFormWrap');
-  const empty = document.getElementById('costFormEmpty');
-
-  if (!branch) { wrap.style.display='none'; empty.style.display='block'; return; }
-
-  wrap.style.display = 'block';
-  empty.style.display = 'none';
+  if (!branch) {
+    document.getElementById('costFormWrap').style.display = 'none';
+    document.getElementById('costFormEmpty').style.display = 'block';
+    return;
+  }
+  document.getElementById('costFormWrap').style.display = 'block';
+  document.getElementById('costFormEmpty').style.display = 'none';
 
   const saved = JSON.parse(localStorage.getItem(costKey(branch)) || '{}');
-  const form = document.getElementById('costForm');
-  form.innerHTML = COST_ITEMS.map(item => `
+  document.getElementById('costForm').innerHTML = COST_ITEMS.map(item => `
     <div class="fg">
       <label>${item}</label>
-      <input type="number" id="ci_${item}" value="${saved[item]||0}" min="0" step="100"
+      <input type="number" id="ci_${item}" value="${saved[item]||0}" min="0" step="1000"
              oninput="updateCostTotal()" placeholder="0">
-    </div>
-  `).join('');
+    </div>`).join('');
   updateCostTotal();
 }
 
 function updateCostTotal() {
-  let total = 0;
-  COST_ITEMS.forEach(item => {
-    total += parseInt(document.getElementById('ci_'+item)?.value || 0);
-  });
+  const total = COST_ITEMS.reduce((s,i) => s + (parseInt(document.getElementById('ci_'+i)?.value)||0), 0);
   document.getElementById('costTotal').textContent = fmt(total) + ' 원';
 }
 
@@ -598,9 +511,8 @@ function saveCostData() {
   const branch = document.getElementById('costBranchSel').value;
   if (!branch) { toast('지점을 선택해 주세요.', 'err'); return; }
   const data = {};
-  COST_ITEMS.forEach(item => { data[item] = parseInt(document.getElementById('ci_'+item)?.value||0); });
+  COST_ITEMS.forEach(i => { data[i] = parseInt(document.getElementById('ci_'+i)?.value||0); });
   localStorage.setItem(costKey(branch), JSON.stringify(data));
-  costData[branch] = data;
   renderCostTable();
   renderProfit();
   toast('저장됐습니다! (' + branch + ')', 'ok');
@@ -609,75 +521,53 @@ function saveCostData() {
 function copyPrevMonth() {
   const branch = document.getElementById('costBranchSel').value;
   if (!branch) { toast('지점을 선택해 주세요.', 'err'); return; }
-
-  // 전월 계산
-  let prevYear = parseInt(curYear), prevMonth = parseInt(curMonth) - 1;
-  if (prevMonth < 1) { prevMonth = 12; prevYear--; }
-  const prevKey = `psm_cost_${prevYear}_${String(prevMonth).padStart(2,'0')}_${branch}`;
+  let py = parseInt(curYear), pm = parseInt(curMonth) - 1;
+  if (pm < 1) { pm = 12; py--; }
+  const prevKey = `psm_cost_${py}_${String(pm).padStart(2,'0')}_${branch}`;
   const prev = JSON.parse(localStorage.getItem(prevKey) || '{}');
   if (!Object.keys(prev).length) { toast('전월 데이터가 없습니다.', 'err'); return; }
-
-  COST_ITEMS.forEach(item => {
-    const el = document.getElementById('ci_'+item);
-    if (el) el.value = prev[item] || 0;
-  });
+  COST_ITEMS.forEach(i => { const el = document.getElementById('ci_'+i); if(el) el.value = prev[i]||0; });
   updateCostTotal();
-  toast('전월 데이터를 불러왔습니다. 저장 버튼을 눌러주세요.', 'ok');
+  toast('전월 데이터 불러옴. 저장 버튼을 눌러주세요.', 'ok');
 }
 
 function renderCostTable() {
   const tbody = document.getElementById('costBody');
   const tfoot = document.getElementById('costFoot');
-
-  const hasData = BRANCHES.some(b => {
-    const d = JSON.parse(localStorage.getItem(costKey(b)) || '{}');
-    return Object.values(d).some(v => v > 0);
-  });
-
-  if (!hasData) {
-    tbody.innerHTML = '<tr class="empty-row"><td colspan="14">매입 데이터를 입력해 주세요</td></tr>';
-    tfoot.innerHTML = '';
-    return;
-  }
-
-  const totals = {};
-  COST_ITEMS.forEach(i => totals[i] = 0);
-  totals._sum = 0;
+  const totals = {}; COST_ITEMS.forEach(i => totals[i] = 0); totals._sum = 0;
 
   const rows = BRANCHES.map(branch => {
     const d = JSON.parse(localStorage.getItem(costKey(branch)) || '{}');
-    const sum = COST_ITEMS.reduce((s,i) => s + (d[i]||0), 0);
+    const sum = COST_ITEMS.reduce((s,i) => s+(d[i]||0), 0);
     if (!sum) return '';
     COST_ITEMS.forEach(i => totals[i] += d[i]||0);
     totals._sum += sum;
     return `<tr>
       <td>프린트샵미니 ${branch}</td>
-      ${COST_ITEMS.map(i => `<td>${fmt(d[i]||0)}</td>`).join('')}
+      ${COST_ITEMS.map(i=>`<td>${fmt(d[i]||0)}</td>`).join('')}
       <td><strong>${fmt(sum)}</strong></td>
     </tr>`;
   }).join('');
 
-  tbody.innerHTML = rows || '<tr class="empty-row"><td colspan="14">입력된 매입 데이터가 없습니다</td></tr>';
-  tfoot.innerHTML = `<tr>
-    <td>합계</td>
-    ${COST_ITEMS.map(i => `<td>${fmt(totals[i])}</td>`).join('')}
-    <td>${fmt(totals._sum)}</td>
-  </tr>`;
+  if (!rows.trim()) {
+    tbody.innerHTML = '<tr class="empty-row"><td colspan="14">매입 데이터를 입력해 주세요</td></tr>';
+    tfoot.innerHTML = ''; return;
+  }
+  tbody.innerHTML = rows;
+  tfoot.innerHTML = `<tr><td>합계</td>${COST_ITEMS.map(i=>`<td>${fmt(totals[i])}</td>`).join('')}<td>${fmt(totals._sum)}</td></tr>`;
 }
 
-// ==================== 손익분석 ====================
+// ==================== 손익 ====================
 function renderProfit() {
   const tbody = document.getElementById('profitBody');
   const tfoot = document.getElementById('profitFoot');
 
-  const entries = [];
-  BRANCHES.forEach(branch => {
-    const sales = salesData[branch] ? salesData[branch].total : 0;
+  const entries = BRANCHES.map(branch => {
+    const sales = salesData[branch]?.total || 0;
     const costRaw = JSON.parse(localStorage.getItem(costKey(branch)) || '{}');
-    const cost = COST_ITEMS.reduce((s,i) => s + (costRaw[i]||0), 0);
-    if (!sales && !cost) return;
-    entries.push({branch, sales, cost, profit: sales - cost});
-  });
+    const cost = COST_ITEMS.reduce((s,i)=>s+(costRaw[i]||0),0);
+    return {branch, sales, cost, profit: sales - cost};
+  }).filter(e => e.sales || e.cost);
 
   if (!entries.length) {
     tbody.innerHTML = '<tr class="empty-row"><td colspan="5">매출 및 매입 데이터를 입력하면 자동 계산됩니다</td></tr>';
@@ -686,52 +576,41 @@ function renderProfit() {
     return;
   }
 
-  const tSales = entries.reduce((s,e) => s + e.sales, 0);
-  const tCost  = entries.reduce((s,e) => s + e.cost, 0);
-  const tProfit = tSales - tCost;
-  const tRate = tSales ? ((tProfit/tSales)*100).toFixed(1) : 0;
+  const tS = entries.reduce((s,e)=>s+e.sales,0);
+  const tC = entries.reduce((s,e)=>s+e.cost,0);
+  const tP = tS - tC;
+  const tR = tS ? ((tP/tS)*100).toFixed(1) : 0;
 
-  document.getElementById('pTotalSales').textContent = fmt(tSales);
-  document.getElementById('pTotalCost').textContent = fmt(tCost);
+  document.getElementById('pTotalSales').textContent = fmt(tS);
+  document.getElementById('pTotalCost').textContent = fmt(tC);
+  const pEl = document.getElementById('pTotalProfit');
+  pEl.textContent = fmt(Math.abs(tP));
+  pEl.className = 'card-val ' + (tP>=0?'green':'red');
+  document.getElementById('pAvgRate').textContent = tR;
 
-  const profitEl = document.getElementById('pTotalProfit');
-  profitEl.textContent = fmt(Math.abs(tProfit));
-  profitEl.className = 'card-val ' + (tProfit >= 0 ? 'green' : 'red');
-
-  document.getElementById('pAvgRate').textContent = tRate;
-
-  tbody.innerHTML = entries.map(({branch, sales, cost, profit}) => {
+  tbody.innerHTML = entries.map(({branch,sales,cost,profit})=>{
     const rate = sales ? ((profit/sales)*100).toFixed(1) : 0;
-    const rateClass = rate > 0 ? 'rate-p' : rate < 0 ? 'rate-n' : 'rate-z';
-    const profitClass = profit >= 0 ? 'profit-positive' : 'profit-negative';
+    const rc = rate>0?'rate-p':rate<0?'rate-n':'rate-z';
+    const pc = profit>=0?'profit-positive':'profit-negative';
     return `<tr>
       <td>프린트샵미니 ${branch}</td>
-      <td>${fmt(sales)}</td>
-      <td>${fmt(cost)}</td>
-      <td class="${profitClass}">${profit < 0 ? '▼ ' : '▲ '}${fmt(Math.abs(profit))}</td>
-      <td><span class="rate-badge ${rateClass}">${rate}%</span></td>
+      <td>${fmt(sales)}</td><td>${fmt(cost)}</td>
+      <td class="${pc}">${profit<0?'▼ ':'▲ '}${fmt(Math.abs(profit))}</td>
+      <td><span class="rate-badge ${rc}">${rate}%</span></td>
     </tr>`;
   }).join('');
 
-  const totalRate = tSales ? ((tProfit/tSales)*100).toFixed(1) : 0;
-  tfoot.innerHTML = `<tr>
-    <td>합계</td>
-    <td>${fmt(tSales)}</td>
-    <td>${fmt(tCost)}</td>
-    <td>${tProfit < 0 ? '▼ ' : '▲ '}${fmt(Math.abs(tProfit))}</td>
-    <td><span class="rate-badge ${totalRate>0?'rate-p':totalRate<0?'rate-n':'rate-z'}">${totalRate}%</span></td>
-  </tr>`;
+  const tr = tS?((tP/tS)*100).toFixed(1):0;
+  tfoot.innerHTML = `<tr><td>합계</td><td>${fmt(tS)}</td><td>${fmt(tC)}</td><td>${tP<0?'▼ ':'▲ '}${fmt(Math.abs(tP))}</td><td><span class="rate-badge ${tr>0?'rate-p':tr<0?'rate-n':'rate-z'}">${tr}%</span></td></tr>`;
 }
 
 // ==================== 토스트 ====================
 function toast(msg, type='ok') {
   const el = document.getElementById('toast');
-  el.textContent = msg;
-  el.className = 'toast show ' + type;
+  el.textContent = msg; el.className = 'toast show ' + type;
   setTimeout(() => el.classList.remove('show'), 2800);
 }
 
-// ==================== 시작 ====================
 init();
 </script>
 </body>
