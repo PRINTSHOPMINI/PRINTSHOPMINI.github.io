@@ -179,10 +179,11 @@ tfoot td:first-child{text-align:left}
     <div class="sec">
       <div class="sec-hd"><div class="sec-title">매입 입력</div></div>
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap">
-        <select id="costBranchSel" onchange="loadCostForm()" style="border:1.5px solid var(--border);border-radius:8px;padding:8px 14px;font-size:14px;font-family:inherit;font-weight:700;color:var(--text);background:#fff">
+        <select id="costBranchSel" style="border:1.5px solid var(--border);border-radius:8px;padding:8px 14px;font-size:14px;font-family:inherit;font-weight:700;color:var(--text);background:#fff">
           <option value="">-- 지점 선택 --</option>
         </select>
-        <input type="date" id="costDate" onchange="loadCostForm()" style="border:1.5px solid var(--border);border-radius:8px;padding:8px 12px;font-size:14px;font-family:inherit;color:var(--text);background:#fff">
+        <input type="date" id="costDate" style="border:1.5px solid var(--border);border-radius:8px;padding:8px 12px;font-size:14px;font-family:inherit;color:var(--text);background:#fff">
+        <button class="btn btn-gray" onclick="loadCostForm()">🔍 조회</button>
         <button class="btn btn-blue" onclick="saveCostData()">💾 저장</button>
       </div>
       <div id="costFormWrap" style="display:none">
@@ -484,20 +485,10 @@ function renderSalesCards() {
 function renderSalesTable() {
   const tbody = document.getElementById('salesBody');
   const tfoot = document.getElementById('salesFoot');
-  const entries = Object.entries(salesData);
-
-  if (!entries.length) {
-    tbody.innerHTML = '<tr class="empty-row"><td colspan="8">⚙️ 설정 탭에서 북마클릿을 설치하고 데이터를 업로드해 주세요</td></tr>';
-    tfoot.innerHTML = ''; return;
-  }
-
-  entries.sort((a,b) => {
-    const ai = BRANCHES.indexOf(a[0]), bi = BRANCHES.indexOf(b[0]);
-    return (ai<0?999:ai) - (bi<0?999:bi);
-  });
-
-  let T = {print:0,copy:0,scan:0,fax:0,product:0,total:0,count:0};
-  tbody.innerHTML = entries.map(([branch, d]) => {
+let T = {print:0,copy:0,scan:0,fax:0,product:0,total:0,count:0};
+  // 전체 지점 순서대로 표시 (데이터 없으면 0)
+  tbody.innerHTML = BRANCHES.map(branch => {
+    const d = salesData[branch] || {total:0,count:0,print:0,copy:0,scan:0,fax:0,product:0};
     T.print+=d.print; T.copy+=d.copy; T.scan+=d.scan; T.fax+=d.fax; T.product+=d.product;
     T.total+=d.total; T.count+=d.count;
     return `<tr>
