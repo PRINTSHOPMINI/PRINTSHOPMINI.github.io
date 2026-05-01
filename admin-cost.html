@@ -152,23 +152,63 @@ tfoot td:first-child{text-align:left}
       <div class="card"><div class="card-label">스캔</div><div class="card-val" id="cScan">-</div><div class="card-sub">원</div></div>
       <div class="card"><div class="card-label">팩스</div><div class="card-val" id="cFax">-</div><div class="card-sub">원</div></div>
       <div class="card"><div class="card-label">상품</div><div class="card-val" id="cProduct">-</div><div class="card-sub">원</div></div>
+      <div class="card"><div class="card-label">기타(수동)</div><div class="card-val" id="cManual">-</div><div class="card-sub">원</div></div>
     </div>
     <div class="sec">
       <div class="sec-hd">
         <div class="sec-title">지점별 매출 현황</div>
-        <div style="display:flex;gap:8px;align-items:center">
+        <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
           <span style="font-size:12px;color:var(--text2)" id="lastSyncDate"></span>
           <button class="btn btn-gray btn-sm" onclick="loadSalesFromDB()">🔄 새로고침</button>
+          <button class="btn btn-blue btn-sm" onclick="salesViewInput()">📝 수동 입력</button>
+          <button class="btn btn-green btn-sm" onclick="salesViewAddItem()">＋ 항목 추가</button>
         </div>
       </div>
+
+      <!-- 매출 수동 입력 패널 -->
+      <div id="salesInputPanel" style="display:none;background:#F8FAFC;border-radius:10px;padding:14px 16px;margin-bottom:14px;border:1.5px solid var(--border)">
+        <div style="font-size:13px;font-weight:700;color:var(--blue);margin-bottom:10px">📝 매출 수동 입력</div>
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+          <select id="salesInputBranch" style="border:1.5px solid var(--border);border-radius:8px;padding:7px 12px;font-size:13px;font-family:inherit;font-weight:700;color:var(--text);background:#fff">
+            <option value="">-- 지점 선택 --</option>
+          </select>
+          <select id="salesInputItem" style="border:1.5px solid var(--border);border-radius:8px;padding:7px 12px;font-size:13px;font-family:inherit;color:var(--text);background:#fff;min-width:130px">
+            <option value="">-- 항목 선택 --</option>
+          </select>
+          <input type="date" id="salesInputDate" style="border:1.5px solid var(--border);border-radius:8px;padding:7px 12px;font-size:13px;font-family:inherit;color:var(--text);background:#fff">
+          <input type="number" id="salesInputAmount" placeholder="금액 (원)" min="0" step="1000" style="border:1.5px solid var(--border);border-radius:8px;padding:7px 12px;font-size:13px;font-family:inherit;width:150px;text-align:right;background:#fff;color:var(--text)">
+          <button class="btn btn-blue btn-sm" onclick="saveSalesInput()">💾 저장</button>
+          <button class="btn btn-gray btn-sm" onclick="document.getElementById('salesInputPanel').style.display='none'">✕</button>
+        </div>
+      </div>
+
+      <!-- 매출 항목 추가 패널 -->
+      <div id="salesAddItemPanel" style="display:none;background:#F8FAFC;border-radius:10px;padding:14px 16px;margin-bottom:14px;border:1.5px solid var(--border)">
+        <div style="font-size:13px;font-weight:700;color:var(--green);margin-bottom:10px">＋ 매출 항목 추가</div>
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap">
+          <input type="text" id="newSalesItemInput" placeholder="새 항목명 입력" style="border:1.5px solid var(--border);border-radius:8px;padding:7px 12px;font-size:13px;font-family:inherit;background:#fff;color:var(--text);width:200px">
+          <button class="btn btn-green btn-sm" onclick="addSalesCustomItemFromInput()">추가</button>
+          <button class="btn btn-gray btn-sm" onclick="document.getElementById('salesAddItemPanel').style.display='none'">✕</button>
+        </div>
+        <div class="tbl-wrap">
+          <table style="max-width:420px">
+            <thead><tr>
+              <th style="text-align:left">추가된 매출 항목</th>
+              <th style="text-align:center;width:60px">삭제</th>
+            </tr></thead>
+            <tbody id="salesCustomItemListBody"><tr class="empty-row"><td colspan="2">추가된 항목이 없습니다</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
       <div class="tbl-wrap">
         <table>
           <thead><tr>
             <th style="text-align:left">지점</th>
-            <th>인쇄</th><th>복사</th><th>스캔</th><th>팩스</th><th>상품</th>
+            <th>인쇄</th><th>복사</th><th>스캔</th><th>팩스</th><th>상품</th><th>기타</th>
             <th>합계</th><th>건수</th>
           </tr></thead>
-          <tbody id="salesBody"><tr class="empty-row"><td colspan="8">⚙️ 설정 탭에서 북마클릿을 설치하고 데이터를 업로드해 주세요</td></tr></tbody>
+          <tbody id="salesBody"></tbody>
           <tfoot id="salesFoot"></tfoot>
         </table>
       </div>
@@ -411,7 +451,22 @@ function init() {
     branchSel.appendChild(o);
   });
 
-  // 입력용 지점 드롭박스 (전체 없음)
+  // 매출 수동 입력용 지점 드롭박스
+  const salesInputBranchSel = document.getElementById('salesInputBranch');
+  BRANCHES.forEach(b => {
+    const o = document.createElement('option');
+    o.value = b; o.textContent = branchDisplay(b);
+    salesInputBranchSel.appendChild(o);
+  });
+
+  // 매출 날짜 기본값
+  const todaySales = new Date();
+  const todaySalesStr = todaySales.getFullYear() + '-' +
+    String(todaySales.getMonth()+1).padStart(2,'0') + '-' +
+    String(todaySales.getDate()).padStart(2,'0');
+  document.getElementById('salesInputDate').value = todaySalesStr;
+
+  // 매입 입력용 지점 드롭박스 (전체 없음)
   const inputBranchSel = document.getElementById('costInputBranch');
   BRANCHES.forEach(b => {
     const o = document.createElement('option');
@@ -509,41 +564,125 @@ function fmt(n) { return (n || 0).toLocaleString(); }
 function renderSalesCards() {
   const vals = Object.values(salesData);
   if (!vals.length) {
-    ['cTotalSales','cTotalCount','cPrint','cCopy','cScan','cFax','cProduct'].forEach(id => document.getElementById(id).textContent = '-');
+    ['cTotalSales','cTotalCount','cPrint','cCopy','cScan','cFax','cProduct','cManual'].forEach(id => document.getElementById(id).textContent = '-');
     return;
   }
-  document.getElementById('cTotalSales').textContent = fmt(vals.reduce((s,d)=>s+d.total,0));
+  const totalManual = BRANCHES.reduce((s, b) => s + getSalesManualTotal(b), 0);
+  document.getElementById('cTotalSales').textContent = fmt(vals.reduce((s,d)=>s+d.total,0) + totalManual);
   document.getElementById('cTotalCount').textContent = fmt(vals.reduce((s,d)=>s+d.count,0));
   document.getElementById('cPrint').textContent   = fmt(vals.reduce((s,d)=>s+d.print,0));
   document.getElementById('cCopy').textContent    = fmt(vals.reduce((s,d)=>s+d.copy,0));
   document.getElementById('cScan').textContent    = fmt(vals.reduce((s,d)=>s+d.scan,0));
   document.getElementById('cFax').textContent     = fmt(vals.reduce((s,d)=>s+d.fax,0));
   document.getElementById('cProduct').textContent = fmt(vals.reduce((s,d)=>s+d.product,0));
+  document.getElementById('cManual').textContent  = fmt(totalManual);
 }
 
 function renderSalesTable() {
   const tbody = document.getElementById('salesBody');
   const tfoot = document.getElementById('salesFoot');
-let T = {print:0,copy:0,scan:0,fax:0,product:0,total:0,count:0};
-  // 전체 지점 순서대로 표시 (데이터 없으면 0)
+  let T = {print:0,copy:0,scan:0,fax:0,product:0,manual:0,total:0,count:0};
   tbody.innerHTML = BRANCHES.map(branch => {
     const d = salesData[branch] || {total:0,count:0,print:0,copy:0,scan:0,fax:0,product:0};
+    const manual = getSalesManualTotal(branch);
+    const rowTotal = d.total + manual;
     T.print+=d.print; T.copy+=d.copy; T.scan+=d.scan; T.fax+=d.fax; T.product+=d.product;
-    T.total+=d.total; T.count+=d.count;
+    T.manual+=manual; T.total+=rowTotal; T.count+=d.count;
     return `<tr>
       <td>${branchDisplay(branch)}</td>
       <td>${fmt(d.print)}</td><td>${fmt(d.copy)}</td><td>${fmt(d.scan)}</td>
       <td>${fmt(d.fax)}</td><td>${fmt(d.product)}</td>
-      <td><strong>${fmt(d.total)}</strong></td><td>${fmt(d.count)}</td>
+      <td>${manual ? fmt(manual) : '<span style="color:var(--text2)">-</span>'}</td>
+      <td><strong>${fmt(rowTotal)}</strong></td><td>${fmt(d.count)}</td>
     </tr>`;
   }).join('');
 
   tfoot.innerHTML = `<tr>
     <td>합계</td>
     <td>${fmt(T.print)}</td><td>${fmt(T.copy)}</td><td>${fmt(T.scan)}</td>
-    <td>${fmt(T.fax)}</td><td>${fmt(T.product)}</td>
+    <td>${fmt(T.fax)}</td><td>${fmt(T.product)}</td><td>${fmt(T.manual)}</td>
     <td>${fmt(T.total)}</td><td>${fmt(T.count)}</td>
   </tr>`;
+}
+
+// ==================== 매출 수동 입력 ====================
+function getSalesCustomItems() {
+  return JSON.parse(localStorage.getItem('psm_sales_custom_items') || '[]');
+}
+function salesManualKey(branch, item) {
+  return `psm_salesm_${branch}_${curYear}_${curMonth}_${item}`;
+}
+function getSalesManualTotal(branch) {
+  return getSalesCustomItems().reduce((s, item) => {
+    const e = JSON.parse(localStorage.getItem(salesManualKey(branch, item)) || 'null');
+    return s + (e ? parseInt(e.amount)||0 : 0);
+  }, 0);
+}
+
+function salesViewInput() {
+  const p = document.getElementById('salesInputPanel');
+  p.style.display = p.style.display === 'none' ? '' : 'none';
+  if (p.style.display !== 'none') refreshSalesInputItems();
+}
+function salesViewAddItem() {
+  const p = document.getElementById('salesAddItemPanel');
+  p.style.display = p.style.display === 'none' ? '' : 'none';
+  if (p.style.display !== 'none') renderSalesCustomItemList();
+}
+function refreshSalesInputItems() {
+  const sel = document.getElementById('salesInputItem');
+  const cur = sel.value;
+  sel.innerHTML = '<option value="">-- 항목 선택 --</option>';
+  getSalesCustomItems().forEach(item => {
+    const o = document.createElement('option');
+    o.value = item; o.textContent = item;
+    if (item === cur) o.selected = true;
+    sel.appendChild(o);
+  });
+}
+function saveSalesInput() {
+  const branch = document.getElementById('salesInputBranch').value;
+  const item   = document.getElementById('salesInputItem').value;
+  const date   = document.getElementById('salesInputDate').value;
+  const amount = parseInt(document.getElementById('salesInputAmount').value) || 0;
+  if (!branch) { toast('지점을 선택해 주세요.', 'err'); return; }
+  if (!item)   { toast('항목을 선택해 주세요.', 'err'); return; }
+  if (!date)   { toast('날짜를 선택해 주세요.', 'err'); return; }
+  localStorage.setItem(salesManualKey(branch, item), JSON.stringify({amount, date}));
+  renderSalesCards();
+  renderSalesTable();
+  renderProfit();
+  toast('저장됐습니다! (' + branchDisplay(branch) + ' / ' + item + ')', 'ok');
+  document.getElementById('salesInputPanel').style.display = 'none';
+}
+function renderSalesCustomItemList() {
+  const items = getSalesCustomItems();
+  document.getElementById('salesCustomItemListBody').innerHTML = items.length
+    ? items.map(i => `<tr><td>${i}</td><td style="text-align:center">
+        <button class="btn btn-red btn-sm" onclick="removeSalesCustomItem('${i.replace(/'/g,"\\'")}')">🗑</button>
+      </td></tr>`).join('')
+    : '<tr class="empty-row"><td colspan="2">추가된 항목이 없습니다</td></tr>';
+}
+function addSalesCustomItemFromInput() {
+  const input = document.getElementById('newSalesItemInput');
+  const name = input.value.trim();
+  if (!name) { toast('항목명을 입력해 주세요.', 'err'); return; }
+  const items = getSalesCustomItems();
+  if (items.includes(name)) { toast('이미 존재하는 항목입니다.', 'err'); return; }
+  items.push(name);
+  localStorage.setItem('psm_sales_custom_items', JSON.stringify(items));
+  input.value = '';
+  renderSalesCustomItemList();
+  refreshSalesInputItems();
+  toast('"' + name + '" 항목이 추가됐습니다.', 'ok');
+}
+function removeSalesCustomItem(name) {
+  if (!confirm('"' + name + '" 항목을 삭제하시겠습니까?')) return;
+  localStorage.setItem('psm_sales_custom_items',
+    JSON.stringify(getSalesCustomItems().filter(i => i !== name)));
+  renderSalesCustomItemList();
+  refreshSalesInputItems();
+  toast('삭제됐습니다.', 'ok');
 }
 
 // ==================== 매입 (v3) ====================
@@ -727,7 +866,7 @@ function renderProfit() {
   const tfoot = document.getElementById('profitFoot');
 
   const entries = BRANCHES.map(branch => {
-    const sales = salesData[branch]?.total || 0;
+    const sales = (salesData[branch]?.total || 0) + getSalesManualTotal(branch);
     const cost = getTotalCostForBranch(branch);
     return {branch, sales, cost, profit: sales - cost};
   }).filter(e => e.sales || e.cost);
