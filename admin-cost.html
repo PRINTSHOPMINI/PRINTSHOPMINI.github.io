@@ -183,14 +183,37 @@ tfoot td:first-child{text-align:left}
         <select id="costBranchSel" style="border:1.5px solid var(--border);border-radius:8px;padding:8px 14px;font-size:14px;font-family:inherit;font-weight:700;color:var(--text);background:#fff">
           <option value="">-- 지점 선택 --</option>
         </select>
-        <span id="costDateWrap"><input type="date" id="costDate" style="border:1.5px solid var(--border);border-radius:8px;padding:8px 12px;font-size:14px;font-family:inherit;color:var(--text);background:#fff"></span>
         <button class="btn btn-gray" onclick="loadCostForm()">🔍 조회</button>
-        <button class="btn btn-blue" id="costSaveBtn" onclick="saveCostData()">💾 저장</button>
-        <button class="btn btn-red btn-sm" id="costDeleteBtn" onclick="deleteCostEntry()" style="display:none">🗑 이 날짜 삭제</button>
       </div>
       <div id="costFormWrap" style="display:none">
-        <!-- 단일 지점 입력 모드 -->
-        <div id="costSingleView">
+
+        <!-- ① 목록 모드: 날짜별 매입 내역 리스트 -->
+        <div id="costListView" style="display:none">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+            <span id="costListTitle" style="font-size:14px;font-weight:700;color:var(--text)"></span>
+            <button class="btn btn-green btn-sm" onclick="showCostEntryForm(null)">＋ 새 날짜 추가</button>
+          </div>
+          <div class="tbl-wrap">
+            <table>
+              <thead><tr>
+                <th style="text-align:left">날짜</th>
+                <th>항목 수</th>
+                <th>합계</th>
+                <th style="text-align:center">관리</th>
+              </tr></thead>
+              <tbody id="costListBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ② 상세 편집 모드 -->
+        <div id="costSingleView" style="display:none">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;flex-wrap:wrap">
+            <button class="btn btn-gray btn-sm" onclick="backToCostList()">← 목록</button>
+            <input type="date" id="costDate" style="border:1.5px solid var(--border);border-radius:8px;padding:7px 12px;font-size:14px;font-family:inherit;color:var(--text);background:#fff">
+            <button class="btn btn-blue btn-sm" onclick="saveCostData()">💾 저장</button>
+            <button class="btn btn-red btn-sm" id="costDeleteBtn" onclick="deleteCostEntry()" style="display:none">🗑 삭제</button>
+          </div>
           <div class="tbl-wrap" style="margin-bottom:12px">
             <table style="min-width:480px">
               <thead><tr>
@@ -208,23 +231,13 @@ tfoot td:first-child{text-align:left}
             </select>
             <button class="btn btn-green btn-sm" onclick="addCostItem()">＋ 항목 추가</button>
           </div>
-          <!-- 입력 내역 (이 지점의 해당 월 전체) -->
-          <div id="costHistoryWrap" style="display:none;margin-top:8px;border-top:1.5px solid var(--border);padding-top:16px">
-            <div style="font-size:13px;font-weight:700;color:var(--text2);margin-bottom:10px">📋 이 지점 입력 내역</div>
-            <div class="tbl-wrap">
-              <table>
-                <thead><tr>
-                  <th style="text-align:left">날짜</th>
-                  <th>항목 수</th>
-                  <th>합계</th>
-                  <th style="text-align:center">관리</th>
-                </tr></thead>
-                <tbody id="costHistoryBody"></tbody>
-              </table>
-            </div>
+          <div class="cost-total-bar">
+            <span style="font-size:13px;font-weight:700;color:var(--text2)">매입 합계</span>
+            <span style="font-size:20px;font-weight:900;color:var(--blue)" id="costTotal">0 원</span>
           </div>
         </div>
-        <!-- 전체 조회 모드 -->
+
+        <!-- ③ 전체 조회 모드 -->
         <div id="costAllView" style="display:none">
           <div class="tbl-wrap" style="margin-bottom:12px">
             <table>
@@ -237,13 +250,14 @@ tfoot td:first-child{text-align:left}
               <tfoot id="costAllFoot"></tfoot>
             </table>
           </div>
+          <div class="cost-total-bar">
+            <span style="font-size:13px;font-weight:700;color:var(--text2)">전체 매입 합계</span>
+            <span style="font-size:20px;font-weight:900;color:var(--blue)" id="costTotal">0 원</span>
+          </div>
         </div>
-        <div class="cost-total-bar">
-          <span style="font-size:13px;font-weight:700;color:var(--text2)">매입 합계</span>
-          <span style="font-size:20px;font-weight:900;color:var(--blue)" id="costTotal">0 원</span>
-        </div>
+
       </div>
-      <div id="costFormEmpty" style="text-align:center;padding:40px;color:var(--text2)">← 지점과 날짜를 선택하면 입력 폼이 나타납니다</div>
+      <div id="costFormEmpty" style="text-align:center;padding:40px;color:var(--text2)">← 지점을 선택하고 조회를 클릭하세요</div>
     </div>
     <div class="sec">
       <div class="sec-hd">
@@ -580,6 +594,7 @@ function costRowHTML(name, amount, note) {
   </tr>`;
 }
 
+// 조회 버튼: 지점 선택 → 목록 or 전체 뷰
 function loadCostForm() {
   const branch = document.getElementById('costBranchSel').value;
   if (!branch) {
@@ -589,62 +604,66 @@ function loadCostForm() {
   }
   document.getElementById('costFormWrap').style.display = 'block';
   document.getElementById('costFormEmpty').style.display = 'none';
+  document.getElementById('costListView').style.display = 'none';
+  document.getElementById('costSingleView').style.display = 'none';
+  document.getElementById('costAllView').style.display = 'none';
 
   if (branch === '__all__') {
-    // 전체 조회 모드
-    document.getElementById('costSingleView').style.display = 'none';
     document.getElementById('costAllView').style.display = '';
-    document.getElementById('costDateWrap').style.display = 'none';
-    document.getElementById('costSaveBtn').style.display = 'none';
     renderCostAllView();
     return;
   }
-
-  // 단일 지점 모드
-  document.getElementById('costSingleView').style.display = '';
-  document.getElementById('costAllView').style.display = 'none';
-  document.getElementById('costDateWrap').style.display = '';
-  document.getElementById('costSaveBtn').style.display = '';
-
-  const date = document.getElementById('costDate').value;
-  if (!date) {
-    document.getElementById('costItemBody').innerHTML = '<tr class="empty-row"><td colspan="4">날짜를 선택하면 입력 폼이 나타납니다</td></tr>';
-    document.getElementById('costTotal').textContent = '0 원';
-    return;
-  }
-  const saved = JSON.parse(localStorage.getItem(costKey2(branch, date)) || '[]');
-  document.getElementById('costItemBody').innerHTML = saved.map(it => costRowHTML(it.name, it.amount, it.note)).join('');
-  updateCostTotal();
-  document.getElementById('costDeleteBtn').style.display = saved.length ? '' : 'none';
-  renderCostHistory(branch);
+  // 지점 선택 → 날짜별 목록 보기
+  document.getElementById('costListView').style.display = '';
+  renderCostList(branch);
 }
 
-function renderCostHistory(branch) {
-  const wrap = document.getElementById('costHistoryWrap');
-  const tbody = document.getElementById('costHistoryBody');
+function renderCostList(branch) {
+  document.getElementById('costListTitle').textContent =
+    branchDisplay(branch) + '  –  ' + curYear + '년 ' + parseInt(curMonth) + '월 매입 내역';
+  const tbody = document.getElementById('costListBody');
   const monthData = getCostMonthData(branch);
-  if (!monthData.length) { wrap.style.display = 'none'; return; }
-  wrap.style.display = '';
-  const curDate = document.getElementById('costDate').value;
+  if (!monthData.length) {
+    tbody.innerHTML = '<tr class="empty-row"><td colspan="4">입력된 매입 데이터가 없습니다</td></tr>';
+    return;
+  }
   tbody.innerHTML = monthData.map(({date, items}) => {
     const total = items.reduce((s, it) => s + (parseInt(it.amount)||0), 0);
-    const isActive = date === curDate;
-    return `<tr style="${isActive ? 'background:#EFF8FF;' : ''}">
-      <td><strong>${date}</strong>${isActive ? ' <span style="font-size:11px;color:var(--blue)">(현재)</span>' : ''}</td>
+    const bEsc = branch.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+    return `<tr>
+      <td>${date}</td>
       <td>${items.length}개</td>
       <td>${fmt(total)}</td>
-      <td style="text-align:center;white-space:nowrap;display:flex;gap:4px;justify-content:center">
-        <button class="btn btn-gray btn-sm" onclick="loadEntryForEdit('${date}')">✏️ 수정</button>
-        <button class="btn btn-red btn-sm" onclick="deleteCostEntryByDate('${branch.replace(/'/g,"\\'")}','${date}')">🗑 삭제</button>
+      <td style="text-align:center;white-space:nowrap">
+        <button class="btn btn-gray btn-sm" onclick="showCostEntryForm('${date}')">✏️ 수정</button>
+        <button class="btn btn-red btn-sm" onclick="deleteCostEntryByDate('${bEsc}','${date}')">🗑 삭제</button>
       </td>
     </tr>`;
   }).join('');
 }
 
-function loadEntryForEdit(date) {
-  document.getElementById('costDate').value = date;
-  loadCostForm();
-  document.getElementById('costFormWrap').scrollIntoView({behavior:'smooth', block:'start'});
+// 새 날짜 추가 or 수정 버튼 → 편집 폼
+function showCostEntryForm(date) {
+  document.getElementById('costListView').style.display = 'none';
+  document.getElementById('costSingleView').style.display = '';
+  const today = new Date();
+  const todayStr = today.getFullYear() + '-' +
+    String(today.getMonth()+1).padStart(2,'0') + '-' +
+    String(today.getDate()).padStart(2,'0');
+  const d = date || todayStr;
+  document.getElementById('costDate').value = d;
+  const branch = document.getElementById('costBranchSel').value;
+  const saved = JSON.parse(localStorage.getItem(costKey2(branch, d)) || '[]');
+  document.getElementById('costItemBody').innerHTML = saved.map(it => costRowHTML(it.name, it.amount, it.note)).join('');
+  document.getElementById('costDeleteBtn').style.display = saved.length ? '' : 'none';
+  updateCostTotal();
+}
+
+// 편집 폼 → 목록으로 돌아가기
+function backToCostList() {
+  document.getElementById('costSingleView').style.display = 'none';
+  document.getElementById('costListView').style.display = '';
+  renderCostList(document.getElementById('costBranchSel').value);
 }
 
 function deleteCostEntry() {
@@ -654,34 +673,30 @@ function deleteCostEntry() {
 }
 
 function deleteCostEntryByDate(branch, date) {
-  if (!confirm(`${branchDisplay(branch)}\n${date} 매입 데이터를 삭제하시겠습니까?`)) return;
+  if (!confirm(branchDisplay(branch) + '\n' + date + ' 매입 데이터를 삭제하시겠습니까?')) return;
   localStorage.removeItem(costKey2(branch, date));
   renderCostTable();
   renderProfit();
-  // 현재 표시 중인 날짜라면 폼 비우기
-  const curDate = document.getElementById('costDate').value;
-  const curBranch = document.getElementById('costBranchSel').value;
-  if (curBranch === branch && curDate === date) {
-    document.getElementById('costItemBody').innerHTML = '';
-    document.getElementById('costDeleteBtn').style.display = 'none';
-    updateCostTotal();
+  // 편집 폼에서 삭제 시 목록으로 돌아가기
+  if (document.getElementById('costSingleView').style.display !== 'none') {
+    backToCostList();
+  } else {
+    renderCostList(branch);
   }
-  renderCostHistory(branch);
-  toast(`삭제됐습니다. (${date})`, 'ok');
+  toast('삭제됐습니다. (' + date + ')', 'ok');
 }
 
 function renderCostAllView() {
   const tbody = document.getElementById('costAllBody');
   const tfoot = document.getElementById('costAllFoot');
   let totalCost = 0, totalDays = 0;
-  const rows = BRANCHES.filter(b => b !== '(주)굿러닝파트너(본점)' || true).map(branch => {
+  tbody.innerHTML = BRANCHES.map(branch => {
     const monthData = getCostMonthData(branch);
     if (!monthData.length) return `<tr><td>${branchDisplay(branch)}</td><td style="color:var(--text2)">-</td><td style="color:var(--text2)">-</td></tr>`;
     const cost = monthData.reduce((s, d) => s + d.items.reduce((ss, it) => ss + (parseInt(it.amount)||0), 0), 0);
     totalCost += cost; totalDays += monthData.length;
     return `<tr><td>${branchDisplay(branch)}</td><td>${monthData.length}일</td><td><strong>${fmt(cost)}</strong></td></tr>`;
   }).join('');
-  tbody.innerHTML = rows;
   tfoot.innerHTML = `<tr><td>합계</td><td>${totalDays}일</td><td>${fmt(totalCost)}</td></tr>`;
   document.getElementById('costTotal').textContent = fmt(totalCost) + ' 원';
 }
@@ -719,9 +734,8 @@ function saveCostData() {
   localStorage.setItem(costKey2(branch, date), JSON.stringify(items));
   renderCostTable();
   renderProfit();
-  document.getElementById('costDeleteBtn').style.display = items.length ? '' : 'none';
-  renderCostHistory(branch);
   toast(`저장됐습니다! (${branchDisplay(branch)} / ${date})`, 'ok');
+  backToCostList();
 }
 
 function renderCostTable() {
