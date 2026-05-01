@@ -177,34 +177,52 @@ tfoot td:first-child{text-align:left}
   <!-- ===== 매입 ===== -->
   <div class="tab-panel" id="panel-cost">
     <div class="sec">
-      <div class="sec-hd"><div class="sec-title">지점 선택</div></div>
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;flex-wrap:wrap">
+      <div class="sec-hd"><div class="sec-title">매입 입력</div></div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap">
         <select id="costBranchSel" onchange="loadCostForm()" style="border:1.5px solid var(--border);border-radius:8px;padding:8px 14px;font-size:14px;font-family:inherit;font-weight:700;color:var(--text);background:#fff">
           <option value="">-- 지점 선택 --</option>
         </select>
+        <input type="date" id="costDate" onchange="loadCostForm()" style="border:1.5px solid var(--border);border-radius:8px;padding:8px 12px;font-size:14px;font-family:inherit;color:var(--text);background:#fff">
         <button class="btn btn-blue" onclick="saveCostData()">💾 저장</button>
-        <button class="btn btn-gray" onclick="copyPrevMonth()">📋 전월 복사</button>
       </div>
       <div id="costFormWrap" style="display:none">
-        <div class="cost-form" id="costForm"></div>
+        <div class="tbl-wrap" style="margin-bottom:12px">
+          <table style="min-width:480px">
+            <thead><tr>
+              <th style="text-align:left;min-width:150px">항목명</th>
+              <th style="min-width:130px">금액 (원)</th>
+              <th style="text-align:left;min-width:150px">비고</th>
+              <th style="text-align:center;width:52px">삭제</th>
+            </tr></thead>
+            <tbody id="costItemBody"></tbody>
+          </table>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;flex-wrap:wrap">
+          <select id="addItemSel" style="border:1.5px solid var(--border);border-radius:8px;padding:7px 12px;font-size:13px;font-family:inherit;color:var(--text);background:#fff">
+            <option value="">-- 추가할 항목 --</option>
+          </select>
+          <button class="btn btn-green btn-sm" onclick="addCostItem()">＋ 항목 추가</button>
+        </div>
         <div class="cost-total-bar">
           <span style="font-size:13px;font-weight:700;color:var(--text2)">매입 합계</span>
           <span style="font-size:20px;font-weight:900;color:var(--blue)" id="costTotal">0 원</span>
         </div>
       </div>
-      <div id="costFormEmpty" style="text-align:center;padding:40px;color:var(--text2)">← 지점을 선택하면 입력 폼이 나타납니다</div>
+      <div id="costFormEmpty" style="text-align:center;padding:40px;color:var(--text2)">← 지점과 날짜를 선택하면 입력 폼이 나타납니다</div>
     </div>
     <div class="sec">
-      <div class="sec-hd"><div class="sec-title">지점별 매입 현황</div></div>
+      <div class="sec-hd">
+        <div class="sec-title">지점별 월 매입 현황</div>
+        <button class="btn btn-gray btn-sm" onclick="renderCostTable()">🔄 새로고침</button>
+      </div>
       <div class="tbl-wrap">
         <table>
           <thead><tr>
             <th style="text-align:left">지점</th>
-            <th>임차료</th><th>관리비</th><th>통신비</th><th>코팅지</th><th>용지</th>
-            <th>제본표지</th><th>쫄대파일</th><th>L홀더</th><th>서류봉투</th>
-            <th>제본기</th><th>코팅기</th><th>사무용품</th><th>합계</th>
+            <th>입력 일수</th>
+            <th>총 매입액</th>
           </tr></thead>
-          <tbody id="costBody"><tr class="empty-row"><td colspan="14">매입 데이터를 입력해 주세요</td></tr></tbody>
+          <tbody id="costBody"><tr class="empty-row"><td colspan="3">매입 데이터를 입력해 주세요</td></tr></tbody>
           <tfoot id="costFoot"></tfoot>
         </table>
       </div>
@@ -316,9 +334,11 @@ const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 const BRANCHES = [
   '망포역점','영통역점','신영통점','수원시청역점','권선점','광교점','수원정자점','호매실점',
   '병점역점','동탄남광장점','동탄역점','동탄호수점',
-  '기흥구청점','동백역점','서정리역점'
+  '기흥구청점','동백역점','서정리역점',
+  '(주)굿러닝파트너(본점)'
 ];
 const COST_ITEMS = ['임차료','관리비','통신비','코팅지','용지','제본표지','쫄대파일','L홀더','서류봉투','제본기','코팅기','사무용품'];
+function branchDisplay(b) { return b.startsWith('(주)') ? b : '프린트샵미니 ' + b; }
 
 // ==================== 상태 ====================
 let curYear = '', curMonth = '';
@@ -348,9 +368,27 @@ function init() {
 
   BRANCHES.forEach(b => {
     const o = document.createElement('option');
-    o.value = b; o.textContent = '프린트샵미니 ' + b;
+    o.value = b; o.textContent = branchDisplay(b);
     document.getElementById('costBranchSel').appendChild(o);
   });
+
+  // addItemSel 기본 항목 채우기
+  const addSel = document.getElementById('addItemSel');
+  COST_ITEMS.forEach(item => {
+    const o = document.createElement('option');
+    o.value = item; o.textContent = item;
+    addSel.appendChild(o);
+  });
+  const customOpt = document.createElement('option');
+  customOpt.value = '__custom__'; customOpt.textContent = '✏️ 직접 입력';
+  addSel.appendChild(customOpt);
+
+  // 날짜 기본값: 오늘
+  const today = new Date();
+  const todayStr = today.getFullYear() + '-' +
+    String(today.getMonth()+1).padStart(2,'0') + '-' +
+    String(today.getDate()).padStart(2,'0');
+  document.getElementById('costDate').value = todayStr;
 
   buildBookmarklet();
   onMonthChange();
@@ -362,7 +400,6 @@ function onMonthChange() {
   document.getElementById('monthLabel').textContent = curYear + '년 ' + parseInt(curMonth) + '월';
   loadSalesFromDB();
   renderCostTable();
-  loadCostForm();
 }
 
 function showTab(id, el) {
@@ -464,7 +501,7 @@ function renderSalesTable() {
     T.print+=d.print; T.copy+=d.copy; T.scan+=d.scan; T.fax+=d.fax; T.product+=d.product;
     T.total+=d.total; T.count+=d.count;
     return `<tr>
-      <td>프린트샵미니 ${branch}</td>
+      <td>${branchDisplay(branch)}</td>
       <td>${fmt(d.print)}</td><td>${fmt(d.copy)}</td><td>${fmt(d.scan)}</td>
       <td>${fmt(d.fax)}</td><td>${fmt(d.product)}</td>
       <td><strong>${fmt(d.total)}</strong></td><td>${fmt(d.count)}</td>
@@ -479,82 +516,102 @@ function renderSalesTable() {
   </tr>`;
 }
 
-// ==================== 매입 ====================
-function costKey(branch) { return `psm_cost_${curYear}_${curMonth}_${branch}`; }
+// ==================== 매입 (v2) ====================
+function costKey2(branch, date) { return `psm_cost2_${branch}_${date}`; }
+
+function getCostMonthData(branch) {
+  const result = [];
+  for (let i = 1; i <= 31; i++) {
+    const dd = String(i).padStart(2, '0');
+    const key = costKey2(branch, `${curYear}-${curMonth}-${dd}`);
+    const items = JSON.parse(localStorage.getItem(key) || 'null');
+    if (items && items.length) result.push({ date: `${curYear}-${curMonth}-${dd}`, items });
+  }
+  return result;
+}
+
+function getTotalCostForBranch(branch) {
+  return getCostMonthData(branch).reduce((s, d) =>
+    s + d.items.reduce((ss, it) => ss + (parseInt(it.amount) || 0), 0), 0);
+}
+
+function escHtml(s) {
+  return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function costRowHTML(name, amount, note) {
+  return `<tr class="cost-item-row">
+    <td><input type="text" class="ci-name" value="${escHtml(name)}" placeholder="항목명" oninput="updateCostTotal()" style="border:1.5px solid var(--border);border-radius:6px;padding:6px 10px;font-size:13px;font-family:inherit;width:100%;min-width:110px;background:#fff;color:var(--text)"></td>
+    <td><input type="number" class="ci-amount" value="${parseInt(amount)||0}" min="0" step="1000" oninput="updateCostTotal()" style="border:1.5px solid var(--border);border-radius:6px;padding:6px 10px;font-size:13px;font-family:inherit;width:100%;min-width:100px;text-align:right;background:#fff;color:var(--text)"></td>
+    <td><input type="text" class="ci-note" value="${escHtml(note)}" placeholder="비고" style="border:1.5px solid var(--border);border-radius:6px;padding:6px 10px;font-size:13px;font-family:inherit;width:100%;min-width:110px;background:#fff;color:var(--text)"></td>
+    <td style="text-align:center"><button class="btn btn-red btn-sm" onclick="this.closest('tr').remove();updateCostTotal()" title="삭제">🗑</button></td>
+  </tr>`;
+}
 
 function loadCostForm() {
   const branch = document.getElementById('costBranchSel').value;
-  if (!branch) {
+  const date = document.getElementById('costDate').value;
+  if (!branch || !date) {
     document.getElementById('costFormWrap').style.display = 'none';
-    document.getElementById('costFormEmpty').style.display = 'block';
+    document.getElementById('costFormEmpty').style.display = '';
     return;
   }
   document.getElementById('costFormWrap').style.display = 'block';
   document.getElementById('costFormEmpty').style.display = 'none';
+  const saved = JSON.parse(localStorage.getItem(costKey2(branch, date)) || '[]');
+  document.getElementById('costItemBody').innerHTML = saved.map(it => costRowHTML(it.name, it.amount, it.note)).join('');
+  updateCostTotal();
+}
 
-  const saved = JSON.parse(localStorage.getItem(costKey(branch)) || '{}');
-  document.getElementById('costForm').innerHTML = COST_ITEMS.map(item => `
-    <div class="fg">
-      <label>${item}</label>
-      <input type="number" id="ci_${item}" value="${saved[item]||0}" min="0" step="1000"
-             oninput="updateCostTotal()" placeholder="0">
-    </div>`).join('');
+function addCostItem() {
+  const sel = document.getElementById('addItemSel');
+  const val = sel.value;
+  if (!val) { toast('추가할 항목을 선택해 주세요.', 'err'); return; }
+  const name = val === '__custom__' ? '' : val;
+  document.getElementById('costItemBody').insertAdjacentHTML('beforeend', costRowHTML(name, 0, ''));
+  sel.value = '';
   updateCostTotal();
 }
 
 function updateCostTotal() {
-  const total = COST_ITEMS.reduce((s,i) => s + (parseInt(document.getElementById('ci_'+i)?.value)||0), 0);
+  const total = Array.from(document.querySelectorAll('#costItemBody .ci-amount'))
+    .reduce((s, inp) => s + (parseInt(inp.value) || 0), 0);
   document.getElementById('costTotal').textContent = fmt(total) + ' 원';
 }
 
 function saveCostData() {
   const branch = document.getElementById('costBranchSel').value;
+  const date = document.getElementById('costDate').value;
   if (!branch) { toast('지점을 선택해 주세요.', 'err'); return; }
-  const data = {};
-  COST_ITEMS.forEach(i => { data[i] = parseInt(document.getElementById('ci_'+i)?.value||0); });
-  localStorage.setItem(costKey(branch), JSON.stringify(data));
+  if (!date) { toast('날짜를 선택해 주세요.', 'err'); return; }
+  const items = Array.from(document.querySelectorAll('#costItemBody .cost-item-row')).map(tr => ({
+    name: tr.querySelector('.ci-name').value.trim(),
+    amount: parseInt(tr.querySelector('.ci-amount').value) || 0,
+    note: tr.querySelector('.ci-note').value.trim()
+  })).filter(it => it.name);
+  localStorage.setItem(costKey2(branch, date), JSON.stringify(items));
   renderCostTable();
   renderProfit();
-  toast('저장됐습니다! (' + branch + ')', 'ok');
-}
-
-function copyPrevMonth() {
-  const branch = document.getElementById('costBranchSel').value;
-  if (!branch) { toast('지점을 선택해 주세요.', 'err'); return; }
-  let py = parseInt(curYear), pm = parseInt(curMonth) - 1;
-  if (pm < 1) { pm = 12; py--; }
-  const prevKey = `psm_cost_${py}_${String(pm).padStart(2,'0')}_${branch}`;
-  const prev = JSON.parse(localStorage.getItem(prevKey) || '{}');
-  if (!Object.keys(prev).length) { toast('전월 데이터가 없습니다.', 'err'); return; }
-  COST_ITEMS.forEach(i => { const el = document.getElementById('ci_'+i); if(el) el.value = prev[i]||0; });
-  updateCostTotal();
-  toast('전월 데이터 불러옴. 저장 버튼을 눌러주세요.', 'ok');
+  toast(`저장됐습니다! (${branchDisplay(branch)} / ${date})`, 'ok');
 }
 
 function renderCostTable() {
   const tbody = document.getElementById('costBody');
   const tfoot = document.getElementById('costFoot');
-  const totals = {}; COST_ITEMS.forEach(i => totals[i] = 0); totals._sum = 0;
-
+  let totalCost = 0, totalDays = 0;
   const rows = BRANCHES.map(branch => {
-    const d = JSON.parse(localStorage.getItem(costKey(branch)) || '{}');
-    const sum = COST_ITEMS.reduce((s,i) => s+(d[i]||0), 0);
-    if (!sum) return '';
-    COST_ITEMS.forEach(i => totals[i] += d[i]||0);
-    totals._sum += sum;
-    return `<tr>
-      <td>프린트샵미니 ${branch}</td>
-      ${COST_ITEMS.map(i=>`<td>${fmt(d[i]||0)}</td>`).join('')}
-      <td><strong>${fmt(sum)}</strong></td>
-    </tr>`;
+    const monthData = getCostMonthData(branch);
+    if (!monthData.length) return '';
+    const cost = monthData.reduce((s, d) => s + d.items.reduce((ss, it) => ss + (parseInt(it.amount) || 0), 0), 0);
+    totalCost += cost; totalDays += monthData.length;
+    return `<tr><td>${branchDisplay(branch)}</td><td>${monthData.length}일</td><td><strong>${fmt(cost)}</strong></td></tr>`;
   }).join('');
-
   if (!rows.trim()) {
-    tbody.innerHTML = '<tr class="empty-row"><td colspan="14">매입 데이터를 입력해 주세요</td></tr>';
+    tbody.innerHTML = '<tr class="empty-row"><td colspan="3">매입 데이터를 입력해 주세요</td></tr>';
     tfoot.innerHTML = ''; return;
   }
   tbody.innerHTML = rows;
-  tfoot.innerHTML = `<tr><td>합계</td>${COST_ITEMS.map(i=>`<td>${fmt(totals[i])}</td>`).join('')}<td>${fmt(totals._sum)}</td></tr>`;
+  tfoot.innerHTML = `<tr><td>합계</td><td>${totalDays}일</td><td>${fmt(totalCost)}</td></tr>`;
 }
 
 // ==================== 손익 ====================
@@ -564,8 +621,7 @@ function renderProfit() {
 
   const entries = BRANCHES.map(branch => {
     const sales = salesData[branch]?.total || 0;
-    const costRaw = JSON.parse(localStorage.getItem(costKey(branch)) || '{}');
-    const cost = COST_ITEMS.reduce((s,i)=>s+(costRaw[i]||0),0);
+    const cost = getTotalCostForBranch(branch);
     return {branch, sales, cost, profit: sales - cost};
   }).filter(e => e.sales || e.cost);
 
@@ -593,7 +649,7 @@ function renderProfit() {
     const rc = rate>0?'rate-p':rate<0?'rate-n':'rate-z';
     const pc = profit>=0?'profit-positive':'profit-negative';
     return `<tr>
-      <td>프린트샵미니 ${branch}</td>
+      <td>${branchDisplay(branch)}</td>
       <td>${fmt(sales)}</td><td>${fmt(cost)}</td>
       <td class="${pc}">${profit<0?'▼ ':'▲ '}${fmt(Math.abs(profit))}</td>
       <td><span class="rate-badge ${rc}">${rate}%</span></td>
