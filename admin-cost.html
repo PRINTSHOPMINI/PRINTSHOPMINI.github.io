@@ -8,14 +8,10 @@
 *{box-sizing:border-box;margin:0;padding:0}
 :root{--blue:#1B8AC4;--blue2:#1470A8;--green:#10B981;--red:#EF4444;--orange:#F59E0B;--bg:#F1F5F9;--white:#fff;--border:#E2E8F0;--text:#1E293B;--text2:#64748B}
 body{font-family:'Noto Sans KR',sans-serif,system-ui;background:var(--bg);color:var(--text);font-size:14px;min-height:100vh}
-
-/* HEADER */
 .hd{background:linear-gradient(135deg,#1B8AC4,#1254a0);padding:0 28px;height:60px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 12px rgba(0,0,0,0.2)}
 .hd-logo{color:#fff;font-size:16px;font-weight:900;display:flex;align-items:center;gap:8px}
 .hd-logo a{color:#fff;text-decoration:none}
 .hd-sub{color:rgba(255,255,255,0.75);font-size:13px}
-
-/* MONTH BAR */
 .month-bar{background:#fff;border-bottom:1px solid var(--border);padding:12px 28px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .month-bar label{font-size:13px;font-weight:700;color:var(--text2)}
 .month-bar select{border:1.5px solid var(--border);border-radius:8px;padding:6px 12px;font-size:13px;font-family:inherit;background:#fff;color:var(--text);cursor:pointer}
@@ -23,44 +19,31 @@ body{font-family:'Noto Sans KR',sans-serif,system-ui;background:var(--bg);color:
 .month-label{font-size:15px;font-weight:900;color:var(--blue)}
 .sync-status{margin-left:auto;font-size:12px;color:var(--text2);display:flex;align-items:center;gap:6px}
 .dot{width:8px;height:8px;border-radius:50%;background:#94A3B8;display:inline-block}
-.dot.ok{background:var(--green)}
-.dot.loading{background:var(--orange);animation:pulse 1s infinite}
+.dot.ok{background:var(--green)}.dot.loading{background:var(--orange);animation:pulse 1s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-
-/* TABS */
 .tabs{display:flex;gap:0;border-bottom:2px solid var(--border);background:#fff;padding:0 28px}
 .tab{padding:14px 22px;font-size:14px;font-weight:700;color:var(--text2);cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px;transition:all .2s;white-space:nowrap}
 .tab:hover{color:var(--blue)}
 .tab.on{color:var(--blue);border-bottom-color:var(--blue)}
-
-/* MAIN */
 .main{max-width:1300px;margin:0 auto;padding:28px 28px 60px}
-.tab-panel{display:none}
-.tab-panel.on{display:block}
-
-/* CARDS */
+.tab-panel{display:none}.tab-panel.on{display:block}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin-bottom:22px}
 .card{background:#fff;border-radius:14px;padding:18px 20px;box-shadow:0 1px 4px rgba(0,0,0,0.07)}
 .card-label{font-size:11px;font-weight:700;color:var(--text2);letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px}
 .card-val{font-size:24px;font-weight:900;color:var(--text)}
 .card-val.blue{color:var(--blue)}.card-val.green{color:var(--green)}.card-val.red{color:var(--red)}
 .card-sub{font-size:11px;color:var(--text2);margin-top:3px}
-
-/* SECTION */
 .sec{background:#fff;border-radius:14px;padding:22px 24px;box-shadow:0 1px 4px rgba(0,0,0,0.07);margin-bottom:20px}
 .sec-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:10px}
 .sec-title{font-size:15px;font-weight:900;display:flex;align-items:center;gap:8px}
 .sec-title::before{content:'';width:4px;height:18px;background:var(--blue);border-radius:2px;display:block}
-
-/* BTN */
 .btn{border:none;border-radius:8px;padding:8px 18px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;transition:all .15s;display:inline-flex;align-items:center;gap:6px}
 .btn-blue{background:var(--blue);color:#fff}.btn-blue:hover{background:var(--blue2)}
 .btn-green{background:var(--green);color:#fff}.btn-green:hover{background:#059669}
 .btn-gray{background:#F1F5F9;color:var(--text);border:1.5px solid var(--border)}.btn-gray:hover{background:#E2E8F0}
 .btn-red{background:#FEE2E2;color:var(--red);border:1.5px solid #FECACA}.btn-red:hover{background:#FECACA}
+.btn-orange{background:#FFF7ED;color:#92400E;border:1.5px solid #FED7AA}.btn-orange:hover{background:#FED7AA}
 .btn-sm{padding:5px 12px;font-size:12px}
-
-/* TABLE */
 .tbl-wrap{overflow-x:auto}
 table{width:100%;border-collapse:collapse;font-size:13px}
 thead th{background:#F8FAFC;padding:10px 12px;text-align:right;border-bottom:2px solid var(--border);font-size:11px;font-weight:700;color:var(--text2);white-space:nowrap}
@@ -72,22 +55,15 @@ tbody tr:last-child td{border-bottom:none}
 tfoot td{padding:11px 12px;text-align:right;font-weight:900;background:#EFF8FF;color:var(--blue);border-top:2px solid var(--border)}
 tfoot td:first-child{text-align:left}
 .empty-row td{text-align:center!important;color:var(--text2)!important;font-weight:400!important;padding:40px 0!important}
-
-/* 매입 FORM */
 .cost-form{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:16px}
 .fg{display:flex;flex-direction:column;gap:4px}
 .fg label{font-size:11px;font-weight:700;color:var(--text2)}
 .fg input{border:1.5px solid var(--border);border-radius:8px;padding:8px 12px;font-size:13px;font-family:inherit;text-align:right;background:#fff;color:var(--text);transition:border-color .2s}
 .fg input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(27,138,196,0.1)}
-.cost-total-bar{padding:14px 16px;background:#F8FAFC;border-radius:10px;display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
-
-/* 손익 */
 .profit-positive{color:var(--green);font-weight:700}
 .profit-negative{color:var(--red);font-weight:700}
 .rate-badge{display:inline-block;padding:2px 8px;border-radius:20px;font-size:11px;font-weight:700}
 .rate-p{background:#D1FAE5;color:#065F46}.rate-n{background:#FEE2E2;color:#991B1B}.rate-z{background:#F1F5F9;color:var(--text2)}
-
-/* 설정 탭 */
 .setup-step{background:#fff;border-radius:14px;padding:24px;box-shadow:0 1px 4px rgba(0,0,0,0.07);margin-bottom:20px}
 .setup-step-num{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:var(--blue);color:#fff;border-radius:50%;font-size:13px;font-weight:900;margin-right:10px;flex-shrink:0}
 .setup-step-title{font-size:16px;font-weight:900;display:flex;align-items:center;margin-bottom:16px}
@@ -97,12 +73,15 @@ tfoot td:first-child{text-align:left}
 .setup-note{font-size:13px;color:var(--text2);line-height:1.8;background:#F8FAFC;border-radius:8px;padding:14px 16px}
 .setup-note li{margin-left:16px;margin-bottom:4px}
 .badge-new{background:#EF4444;color:#fff;font-size:10px;padding:2px 6px;border-radius:4px;font-weight:700;vertical-align:middle;margin-left:6px}
-
-/* TOAST */
 .toast{position:fixed;bottom:28px;right:28px;background:#1E293B;color:#fff;padding:12px 22px;border-radius:10px;font-size:13px;font-weight:700;z-index:999;opacity:0;transition:opacity .3s,transform .3s;transform:translateY(8px);pointer-events:none}
 .toast.show{opacity:1;transform:translateY(0)}
 .toast.ok{background:#059669}.toast.err{background:#DC2626}
-
+.panel-box{background:#F8FAFC;border-radius:10px;padding:14px 16px;margin-bottom:14px;border:1.5px solid var(--border)}
+.panel-title{font-size:13px;font-weight:700;margin-bottom:10px}
+.panel-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.inp{border:1.5px solid var(--border);border-radius:8px;padding:7px 12px;font-size:13px;font-family:inherit;color:var(--text);background:#fff}
+.inp:focus{outline:none;border-color:var(--blue)}
+.inp-num{width:150px;text-align:right}
 @media(max-width:768px){
   .main{padding:14px 12px 40px}
   .tabs{padding:0 12px;overflow-x:auto}
@@ -161,42 +140,45 @@ tfoot td:first-child{text-align:left}
           <span style="font-size:12px;color:var(--text2)" id="lastSyncDate"></span>
           <button class="btn btn-gray btn-sm" onclick="loadSalesFromDB()">🔄 새로고침</button>
           <button class="btn btn-blue btn-sm" onclick="salesViewInput()">📝 수동 입력</button>
-          <button class="btn btn-green btn-sm" onclick="salesViewAddItem()">＋ 항목 추가</button>
+          <button class="btn btn-green btn-sm" onclick="salesViewManageItems()">⚙️ 항목 관리</button>
         </div>
       </div>
 
       <!-- 매출 수동 입력 패널 -->
-      <div id="salesInputPanel" style="display:none;background:#F8FAFC;border-radius:10px;padding:14px 16px;margin-bottom:14px;border:1.5px solid var(--border)">
-        <div style="font-size:13px;font-weight:700;color:var(--blue);margin-bottom:10px">📝 매출 수동 입력</div>
-        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-          <select id="salesInputBranch" style="border:1.5px solid var(--border);border-radius:8px;padding:7px 12px;font-size:13px;font-family:inherit;font-weight:700;color:var(--text);background:#fff">
+      <div id="salesInputPanel" style="display:none" class="panel-box">
+        <div class="panel-title" style="color:var(--blue)">📝 매출 수동 입력</div>
+        <div class="panel-row">
+          <select id="salesInputBranch" class="inp" style="font-weight:700">
             <option value="">-- 지점 선택 --</option>
           </select>
-          <select id="salesInputItem" style="border:1.5px solid var(--border);border-radius:8px;padding:7px 12px;font-size:13px;font-family:inherit;color:var(--text);background:#fff;min-width:130px">
+          <select id="salesInputItem" class="inp" style="min-width:130px">
             <option value="">-- 항목 선택 --</option>
           </select>
-          <input type="date" id="salesInputDate" style="border:1.5px solid var(--border);border-radius:8px;padding:7px 12px;font-size:13px;font-family:inherit;color:var(--text);background:#fff">
-          <input type="number" id="salesInputAmount" placeholder="금액 (원)" min="0" step="1000" style="border:1.5px solid var(--border);border-radius:8px;padding:7px 12px;font-size:13px;font-family:inherit;width:150px;text-align:right;background:#fff;color:var(--text)">
+          <input type="date" id="salesInputDate" class="inp">
+          <input type="number" id="salesInputAmount" placeholder="금액 (원)" min="0" step="1000" class="inp inp-num">
           <button class="btn btn-blue btn-sm" onclick="saveSalesInput()">💾 저장</button>
           <button class="btn btn-gray btn-sm" onclick="document.getElementById('salesInputPanel').style.display='none'">✕</button>
         </div>
+        <div id="salesInputItemHint" style="margin-top:8px;font-size:12px;color:var(--orange);display:none">
+          ⚠️ 항목이 없습니다. 먼저 <strong>⚙️ 항목 관리</strong>에서 항목을 추가해 주세요.
+        </div>
       </div>
 
-      <!-- 매출 항목 추가 패널 -->
-      <div id="salesAddItemPanel" style="display:none;background:#F8FAFC;border-radius:10px;padding:14px 16px;margin-bottom:14px;border:1.5px solid var(--border)">
-        <div style="font-size:13px;font-weight:700;color:var(--green);margin-bottom:10px">＋ 매출 항목 추가</div>
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap">
-          <input type="text" id="newSalesItemInput" placeholder="새 항목명 입력" style="border:1.5px solid var(--border);border-radius:8px;padding:7px 12px;font-size:13px;font-family:inherit;background:#fff;color:var(--text);width:200px">
-          <button class="btn btn-green btn-sm" onclick="addSalesCustomItemFromInput()">추가</button>
-          <button class="btn btn-gray btn-sm" onclick="document.getElementById('salesAddItemPanel').style.display='none'">✕</button>
+      <!-- 매출 항목 관리 패널 -->
+      <div id="salesManageItemsPanel" style="display:none" class="panel-box">
+        <div class="panel-title" style="color:var(--green)">⚙️ 매출 항목 관리 (수동 입력용)</div>
+        <div class="panel-row" style="margin-bottom:12px">
+          <input type="text" id="newSalesItemInput" placeholder="새 항목명 입력" class="inp" style="width:200px">
+          <button class="btn btn-green btn-sm" onclick="addSalesItem()">＋ 추가</button>
+          <button class="btn btn-gray btn-sm" onclick="document.getElementById('salesManageItemsPanel').style.display='none'">✕</button>
         </div>
         <div class="tbl-wrap">
-          <table style="max-width:420px">
+          <table style="max-width:480px">
             <thead><tr>
-              <th style="text-align:left">추가된 매출 항목</th>
-              <th style="text-align:center;width:60px">삭제</th>
+              <th style="text-align:left">항목명</th>
+              <th style="text-align:center;width:180px">관리</th>
             </tr></thead>
-            <tbody id="salesCustomItemListBody"><tr class="empty-row"><td colspan="2">추가된 항목이 없습니다</td></tr></tbody>
+            <tbody id="salesItemListBody"><tr class="empty-row"><td colspan="2">추가된 항목이 없습니다</td></tr></tbody>
           </table>
         </div>
       </div>
@@ -220,55 +202,54 @@ tfoot td:first-child{text-align:left}
     <div class="sec">
       <div class="sec-hd"><div class="sec-title">매입 현황</div></div>
 
-      <!-- 상단 컨트롤 -->
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;flex-wrap:wrap">
-        <select id="costBranchSel" style="border:1.5px solid var(--border);border-radius:8px;padding:8px 14px;font-size:14px;font-family:inherit;font-weight:700;color:var(--text);background:#fff">
+        <select id="costBranchSel" class="inp" style="font-weight:700">
           <option value="">-- 지점 선택 --</option>
         </select>
         <button class="btn btn-gray" onclick="costViewQuery()">🔍 조회</button>
         <button class="btn btn-blue" onclick="costViewInput()">📝 매입 입력</button>
-        <button class="btn btn-green" onclick="costViewAddItem()">＋ 항목 추가</button>
+        <button class="btn btn-green" onclick="costViewManageItems()">⚙️ 항목 관리</button>
       </div>
 
-      <!-- 📝 매입 입력 패널 -->
-      <div id="costInputPanel" style="display:none;background:#F8FAFC;border-radius:10px;padding:16px 18px;margin-bottom:16px;border:1.5px solid var(--border)">
-        <div style="font-size:13px;font-weight:700;color:var(--blue);margin-bottom:12px">📝 매입 입력</div>
-        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-          <select id="costInputBranch" style="border:1.5px solid var(--border);border-radius:8px;padding:7px 12px;font-size:13px;font-family:inherit;font-weight:700;color:var(--text);background:#fff">
+      <!-- 매입 입력 패널 -->
+      <div id="costInputPanel" style="display:none" class="panel-box">
+        <div class="panel-title" style="color:var(--blue)">📝 매입 입력</div>
+        <div class="panel-row">
+          <select id="costInputBranch" class="inp" style="font-weight:700">
             <option value="">-- 지점 선택 --</option>
           </select>
-          <select id="costInputItem" style="border:1.5px solid var(--border);border-radius:8px;padding:7px 12px;font-size:13px;font-family:inherit;color:var(--text);background:#fff;min-width:130px">
+          <select id="costInputItem" class="inp" style="min-width:130px">
             <option value="">-- 항목 선택 --</option>
           </select>
-          <input type="date" id="costInputDate" style="border:1.5px solid var(--border);border-radius:8px;padding:7px 12px;font-size:13px;font-family:inherit;color:var(--text);background:#fff">
-          <input type="number" id="costInputAmount" placeholder="금액 (원)" min="0" step="1000" style="border:1.5px solid var(--border);border-radius:8px;padding:7px 12px;font-size:13px;font-family:inherit;width:150px;text-align:right;background:#fff;color:var(--text)">
+          <input type="date" id="costInputDate" class="inp">
+          <input type="number" id="costInputAmount" placeholder="금액 (원)" min="0" step="1000" class="inp inp-num">
           <button class="btn btn-blue btn-sm" onclick="saveCostInput()">💾 저장</button>
           <button class="btn btn-gray btn-sm" onclick="document.getElementById('costInputPanel').style.display='none'">✕ 닫기</button>
         </div>
       </div>
 
-      <!-- ＋ 항목 추가 패널 -->
-      <div id="costAddItemPanel" style="display:none;background:#F8FAFC;border-radius:10px;padding:16px 18px;margin-bottom:16px;border:1.5px solid var(--border)">
-        <div style="font-size:13px;font-weight:700;color:var(--green);margin-bottom:12px">＋ 항목 추가 (커스텀 항목 관리)</div>
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;flex-wrap:wrap">
-          <input type="text" id="newItemNameInput" placeholder="새 항목명 입력" style="border:1.5px solid var(--border);border-radius:8px;padding:7px 12px;font-size:13px;font-family:inherit;background:#fff;color:var(--text);width:200px">
-          <button class="btn btn-green btn-sm" onclick="addCustomItemFromInput()">추가</button>
-          <button class="btn btn-gray btn-sm" onclick="document.getElementById('costAddItemPanel').style.display='none'">✕ 닫기</button>
+      <!-- 항목 관리 패널 -->
+      <div id="costManageItemsPanel" style="display:none" class="panel-box">
+        <div class="panel-title" style="color:var(--green)">⚙️ 매입 항목 관리</div>
+        <div class="panel-row" style="margin-bottom:14px">
+          <input type="text" id="newCostItemInput" placeholder="새 항목명 입력" class="inp" style="width:200px">
+          <button class="btn btn-green btn-sm" onclick="addCostItem()">＋ 추가</button>
+          <button class="btn btn-gray btn-sm" onclick="document.getElementById('costManageItemsPanel').style.display='none'">✕ 닫기</button>
         </div>
         <div class="tbl-wrap">
-          <table style="max-width:420px">
+          <table style="max-width:480px">
             <thead><tr>
-              <th style="text-align:left">추가된 커스텀 항목</th>
-              <th style="text-align:center;width:60px">삭제</th>
+              <th style="text-align:left">항목명</th>
+              <th style="text-align:center;width:60px">기본</th>
+              <th style="text-align:center;width:180px">관리</th>
             </tr></thead>
-            <tbody id="customItemListBody"><tr class="empty-row"><td colspan="2">추가된 항목이 없습니다</td></tr></tbody>
+            <tbody id="costItemListBody"></tbody>
           </table>
         </div>
       </div>
 
-      <!-- 🔍 조회 결과 -->
+      <!-- 조회 결과 -->
       <div id="costQueryView" style="display:none">
-        <!-- 전체 조회 -->
         <div id="costQueryAll" style="display:none">
           <div style="font-size:13px;font-weight:700;color:var(--text2);margin-bottom:10px">전체 지점 · <span id="costQueryMonthLabel"></span></div>
           <div class="tbl-wrap">
@@ -279,15 +260,13 @@ tfoot td:first-child{text-align:left}
             </table>
           </div>
         </div>
-        <!-- 지점별 조회 -->
         <div id="costQueryBranch" style="display:none">
           <div style="font-size:13px;font-weight:700;color:var(--text2);margin-bottom:10px" id="costQueryBranchTitle"></div>
           <div class="tbl-wrap">
             <table>
               <thead><tr>
                 <th style="text-align:left">항목명</th>
-                <th>날짜</th>
-                <th>금액</th>
+                <th>날짜</th><th>금액</th>
                 <th style="text-align:center">관리</th>
               </tr></thead>
               <tbody id="costQueryBranchBody"></tbody>
@@ -297,7 +276,6 @@ tfoot td:first-child{text-align:left}
         </div>
       </div>
       <div id="costFormEmpty" style="text-align:center;padding:40px;color:var(--text2)">← 지점을 선택하고 조회를 클릭하세요</div>
-
     </div>
   </div>
 
@@ -330,11 +308,11 @@ tfoot td:first-child{text-align:left}
   <!-- ===== 설정 ===== -->
   <div class="tab-panel" id="panel-setup">
 
-    <!-- STEP 1 -->
     <div class="setup-step">
       <div class="setup-step-title"><span class="setup-step-num">1</span>Supabase 테이블 생성 (최초 1회)</div>
       <p style="font-size:13px;color:var(--text2);margin-bottom:12px">Supabase 대시보드 → SQL Editor에서 아래 SQL을 실행하세요.</p>
-      <div class="code-block">CREATE TABLE daily_sales (
+      <div class="code-block">-- 1) 매출 자동 업로드 (북마클릿용)
+CREATE TABLE IF NOT EXISTS daily_sales (
   id bigint generated always as identity primary key,
   sale_date date not null,
   branch text not null,
@@ -349,14 +327,61 @@ tfoot td:first-child{text-align:left}
   UNIQUE(sale_date, branch)
 );
 
-ALTER TABLE daily_sales ENABLE ROW LEVEL SECURITY;
-CREATE POLICY "anon_all" ON daily_sales FOR ALL TO anon USING (true) WITH CHECK (true);</div>
+-- 2) 매입 항목 목록
+CREATE TABLE IF NOT EXISTS cost_custom_items (
+  id bigint generated always as identity primary key,
+  item_name text not null unique,
+  is_default boolean default false
+);
+
+-- 3) 매입 데이터
+CREATE TABLE IF NOT EXISTS cost_entries (
+  id bigint generated always as identity primary key,
+  year_month text not null,
+  branch text not null,
+  item_name text not null,
+  amount integer default 0,
+  entry_date date,
+  updated_at timestamptz default now(),
+  UNIQUE(year_month, branch, item_name)
+);
+
+-- 4) 매출 수동 입력 항목 목록
+CREATE TABLE IF NOT EXISTS sales_custom_items (
+  id bigint generated always as identity primary key,
+  item_name text not null unique
+);
+
+-- 5) 매출 수동 입력 데이터
+CREATE TABLE IF NOT EXISTS sales_manual_entries (
+  id bigint generated always as identity primary key,
+  year_month text not null,
+  branch text not null,
+  item_name text not null,
+  amount integer default 0,
+  entry_date date,
+  updated_at timestamptz default now(),
+  UNIQUE(year_month, branch, item_name)
+);
+
+-- RLS 설정 (전체 테이블)
+DO $$ DECLARE t text;
+BEGIN FOR t IN SELECT unnest(ARRAY['daily_sales','cost_custom_items','cost_entries','sales_custom_items','sales_manual_entries'])
+LOOP EXECUTE 'ALTER TABLE '||t||' ENABLE ROW LEVEL SECURITY';
+     EXECUTE 'CREATE POLICY IF NOT EXISTS anon_all ON '||t||' FOR ALL TO anon USING (true) WITH CHECK (true)';
+END LOOP; END $$;
+
+-- 기본 매입 항목 삽입
+INSERT INTO cost_custom_items (item_name, is_default) VALUES
+  ('임차료',true),('관리비',true),('통신비',true),('코팅지',true),
+  ('용지',true),('제본표지',true),('쫄대파일',true),('L홀더',true),
+  ('서류봉투',true),('제본기',true),('코팅기',true),('사무용품',true)
+ON CONFLICT (item_name) DO NOTHING;</div>
       <div class="setup-note">
         <strong>👉 방법:</strong> supabase.com → 프로젝트 선택 → 왼쪽 SQL Editor → New Query → 위 코드 붙여넣기 → Run
       </div>
     </div>
 
-    <!-- STEP 2 -->
     <div class="setup-step">
       <div class="setup-step-title"><span class="setup-step-num">2</span>북마클릿 설치 (최초 1회)</div>
       <p style="font-size:13px;color:var(--text2);margin-bottom:16px">아래 버튼을 <strong>마우스로 드래그해서 브라우저 북마크 바에 끌어다 놓으세요.</strong></p>
@@ -366,6 +391,7 @@ CREATE POLICY "anon_all" ON daily_sales FOR ALL TO anon USING (true) WITH CHECK 
       <div class="setup-note">
         <ul>
           <li>북마크 바가 안 보이면: 브라우저에서 <strong>Ctrl+Shift+B</strong> (표시/숨기기)</li>
+          <li>기존 북마클릿이 설치되어 있다면 <strong>반드시 삭제 후 재설치</strong>하세요 (선불제외금액 반영)</li>
           <li>드래그가 안 되면: 위 버튼 우클릭 → "즐겨찾기에 추가" 후 주소 란에 아래 코드를 붙여넣으세요</li>
         </ul>
       </div>
@@ -376,20 +402,19 @@ CREATE POLICY "anon_all" ON daily_sales FOR ALL TO anon USING (true) WITH CHECK 
       </details>
     </div>
 
-    <!-- STEP 3 -->
     <div class="setup-step">
       <div class="setup-step-title"><span class="setup-step-num">3</span>매일 사용 방법</div>
       <div class="setup-note">
         <ul>
           <li>① <strong>fax.printnuri.com/payment</strong> 접속 (이미 로그인된 상태)</li>
-          <li>② 날짜를 오늘로 설정하고 그룹명 <strong>프린트샵미니</strong> 선택 후 검색</li>
+          <li>② 날짜 범위 설정 후 그룹명 <strong>프린트샵미니</strong> 선택하고 검색</li>
           <li>③ 북마크 바에서 <strong>🔄 프린트샵미니 매출 업로드</strong> 클릭</li>
           <li>④ "✅ 업로드 완료!" 알림이 뜨면 이 페이지에서 새로고침으로 확인</li>
         </ul>
       </div>
       <div style="margin-top:12px;padding:12px 16px;background:#FFF7ED;border-radius:8px;font-size:13px;color:#92400E;border-left:4px solid #F59E0B">
-        ⏰ 매일 업무 끝나고 한 번만 클릭하면 그날 데이터가 자동 저장됩니다.<br>
-        같은 날짜 데이터를 여러 번 올려도 중복 저장 없이 자동 업데이트됩니다.
+        ⏰ 같은 날짜 데이터를 여러 번 올려도 중복 저장 없이 자동 업데이트됩니다.<br>
+        📌 <strong>선불제외금액</strong> 기준으로 업로드됩니다. 기존 데이터가 맞지 않으면 해당 날짜 범위로 재업로드하세요.
       </div>
     </div>
 
@@ -399,7 +424,6 @@ CREATE POLICY "anon_all" ON daily_sales FOR ALL TO anon USING (true) WITH CHECK 
 <div class="toast" id="toast"></div>
 
 <script>
-// ==================== 상수 ====================
 const SUPABASE_URL = 'https://wbcfciiuiootbdezxfwy.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndiY2ZjaWl1aW9vdGJkZXp4Znd5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc1MjkyMTQsImV4cCI6MjA5MzEwNTIxNH0.UV4ukUXuAYKAqq85B4FTHO2BtIOqPaBHgAJN5lqyU5s';
 
@@ -411,28 +435,102 @@ const BRANCHES = [
   '서정리역점','수원시청역점','수원정자점','신영통점',
   '영통역점','호매실점'
 ];
-const COST_ITEMS = ['임차료','관리비','통신비','코팅지','용지','제본표지','쫄대파일','L홀더','서류봉투','제본기','코팅기','사무용품'];
 function branchDisplay(b) { return b.startsWith('(주)') ? b : '프린트샵미니 ' + b; }
 
-// ==================== 상태 ====================
+// ==================== 상태 / 캐시 ====================
 let curYear = '', curMonth = '';
-let salesData = {}; // { branch: {total_amount, total_count, print, copy, scan, fax, product} }
-let salesDates = []; // 로드된 날짜 목록
+let salesData = {};
+let salesDates = [];
+let costItemsCache = [];        // [{item_name, is_default}]
+let costEntriesCache = {};      // { 'branch|item': {amount, date} }
+let salesCustomItemsCache = []; // [{item_name}]
+let salesManualCache = {};      // { 'branch|item': {amount, date} }
+
+// ==================== Supabase 헬퍼 ====================
+async function sbGet(query) {
+  const res = await fetch(SUPABASE_URL + '/rest/v1/' + query, {
+    headers: { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY }
+  });
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+}
+async function sbUpsert(table, body, onConflict) {
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/${table}?on_conflict=${onConflict}`, {
+    method: 'POST',
+    headers: {
+      'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY,
+      'Content-Type': 'application/json',
+      'Prefer': 'resolution=merge-duplicates,return=minimal'
+    },
+    body: JSON.stringify(body)
+  });
+  if (!res.ok) throw new Error(await res.text());
+}
+async function sbInsert(table, body) {
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/${table}`, {
+    method: 'POST',
+    headers: {
+      'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY,
+      'Content-Type': 'application/json', 'Prefer': 'return=minimal'
+    },
+    body: JSON.stringify(body)
+  });
+  if (!res.ok) throw new Error(await res.text());
+}
+async function sbDelete(table, filter) {
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/${table}?${filter}`, {
+    method: 'DELETE',
+    headers: { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY }
+  });
+  if (!res.ok) throw new Error(await res.text());
+}
+async function sbPatch(table, filter, body) {
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/${table}?${filter}`, {
+    method: 'PATCH',
+    headers: {
+      'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(body)
+  });
+  if (!res.ok) throw new Error(await res.text());
+}
+
+// ==================== 데이터 로드 ====================
+async function loadCostData() {
+  const [items, entries] = await Promise.all([
+    sbGet('cost_custom_items?select=item_name,is_default&order=id.asc'),
+    sbGet(`cost_entries?year_month=eq.${curYear}-${curMonth}&select=branch,item_name,amount,entry_date`)
+  ]);
+  costItemsCache = items;
+  costEntriesCache = {};
+  entries.forEach(e => { costEntriesCache[e.branch + '|' + e.item_name] = {amount: e.amount, date: e.entry_date}; });
+}
+
+async function loadSalesManualData() {
+  const [items, entries] = await Promise.all([
+    sbGet('sales_custom_items?select=item_name&order=id.asc'),
+    sbGet(`sales_manual_entries?year_month=eq.${curYear}-${curMonth}&select=branch,item_name,amount,entry_date`)
+  ]);
+  salesCustomItemsCache = items;
+  salesManualCache = {};
+  entries.forEach(e => { salesManualCache[e.branch + '|' + e.item_name] = {amount: e.amount, date: e.entry_date}; });
+}
 
 // ==================== 북마클릿 ====================
 function buildBookmarklet() {
   const SB_URL = SUPABASE_URL;
   const SB_KEY = SUPABASE_KEY;
-  const code = `javascript:(function(){var SU='${SB_URL}',SK='${SB_KEY}';function xb(t){return t.replace(/^프린트샵미니_/,'').replace(/\\d+$/,'').trim();}var frm=document.getElementById('searchFrm');if(!frm){alert('결제 목록 페이지에서 실행해주세요.');return;}var p=new URLSearchParams(new FormData(frm));var sd=p.get('startDate')||'',ed=p.get('endDate')||'';setSyncMsg('📡 데이터 수집 중...');fetch('/payment/export.xls?'+p.toString(),{credentials:'include'}).then(function(r){return r.arrayBuffer();}).then(function(buf){if(typeof XLSX==='undefined'){var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js';s.onload=function(){proc(buf);};document.head.appendChild(s);}else{proc(buf);}}).catch(function(e){alert('❌ 오류: '+e.message);});function proc(buf){var wb=XLSX.read(buf,{type:'array',cellDates:true});var rows=XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]],{header:1,defval:''});var h=rows[0].map(function(x){return String(x).trim();});var iG=h.indexOf('그룹명'),iT=h.indexOf('단말기명'),iA=h.indexOf('선불제외금액'),iY=h.indexOf('작업종류');if(iA<0)iA=h.indexOf('금액');if(iT<0){iG=1;iT=2;iA=4;iY=7;}var iD=-1;['결제일','거래일','날짜','결제일시','거래일시','승인일시','처리일시'].forEach(function(n){if(iD<0)iD=h.indexOf(n);});var data={};for(var i=1;i<rows.length;i++){var r=rows[i];var g=String(r[iG]||'');if(g&&!g.includes('프린트샵미니'))continue;var tn=String(r[iT]||'').trim();if(!tn.includes('프린트샵미니'))continue;var br=xb(tn);var am=parseInt(String(r[iA]||'0').replace(/,/g,''))||0;var ty=String(r[iY]||'').trim();var saleDate=sd;if(iD>=0){var rv=r[iD];if(rv instanceof Date){saleDate=rv.getFullYear()+'-'+String(rv.getMonth()+1).padStart(2,'0')+'-'+String(rv.getDate()).padStart(2,'0');}else{var dm=String(rv).match(/(\\d{4})[.\\-\\/](\\d{1,2})[.\\-\\/](\\d{1,2})/);if(dm)saleDate=dm[1]+'-'+dm[2].padStart(2,'0')+'-'+dm[3].padStart(2,'0');}}var key=saleDate+'|'+br;if(!data[key])data[key]={t:0,n:0,p:0,c:0,s:0,f:0,g:0,date:saleDate,branch:br};data[key].t+=am;data[key].n++;if(ty==='인쇄')data[key].p+=am;else if(ty==='복사')data[key].c+=am;else if(ty==='스캔')data[key].s+=am;else if(ty==='팩스')data[key].f+=am;else if(ty==='상품')data[key].g+=am;}var recs=Object.values(data).map(function(d){return{sale_date:d.date,branch:d.branch,total_amount:d.t,total_count:d.n,print_amount:d.p,copy_amount:d.c,scan_amount:d.s,fax_amount:d.f,product_amount:d.g};});if(!recs.length){alert('⚠️ 프린트샵미니 데이터 없음\\n날짜와 그룹 설정 확인');return;}fetch(SU+'/rest/v1/daily_sales?on_conflict=sale_date,branch',{method:'POST',headers:{'apikey':SK,'Authorization':'Bearer '+SK,'Content-Type':'application/json','Prefer':'resolution=merge-duplicates,return=minimal'},body:JSON.stringify(recs)}).then(function(r){if(r.ok||r.status===201||r.status===204)alert('✅ 업로드 완료!\\n'+recs.length+'건 ('+sd+' ~ '+ed+')');else r.text().then(function(t){alert('❌ Supabase 오류: '+t);});}).catch(function(e){alert('❌ '+e.message);});}function setSyncMsg(m){try{document.getElementById('syncMsg').textContent=m;}catch(e){}}})();`;
+  const code = `javascript:(function(){var SU='${SB_URL}',SK='${SB_KEY}';function xb(t){return t.replace(/^프린트샵미니_/,'').replace(/\\d+$/,'').trim();}var frm=document.getElementById('searchFrm');if(!frm){alert('결제 목록 페이지에서 실행해주세요.');return;}var p=new URLSearchParams(new FormData(frm));var sd=p.get('startDate')||'',ed=p.get('endDate')||'';try{document.getElementById('syncMsg').textContent='📡 데이터 수집 중...';}catch(e){}fetch('/payment/export.xls?'+p.toString(),{credentials:'include'}).then(function(r){return r.arrayBuffer();}).then(function(buf){if(typeof XLSX==='undefined'){var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js';s.onload=function(){proc(buf);};document.head.appendChild(s);}else{proc(buf);}}).catch(function(e){alert('❌ 오류: '+e.message);});function norm(s){return String(s).trim().replace(/\\s+/g,'');}function proc(buf){var wb=XLSX.read(buf,{type:'array',cellDates:true});var rows=XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]],{header:1,defval:''});var h=rows[0].map(norm);var iG=h.indexOf('그룹명'),iT=h.indexOf('단말기명'),iY=h.indexOf('작업종류');var iA=h.indexOf('선불제외금액');if(iA<0)iA=h.indexOf('선불제외금액'.replace(/\\s/g,''));if(iA<0)iA=h.indexOf('금액');var iD=-1;['결제일','거래일','날짜','결제일시','거래일시','승인일시','처리일시'].forEach(function(n){if(iD<0)iD=h.indexOf(norm(n));});if(iT<0){iG=iG>=0?iG:1;iT=2;if(iA<0)iA=4;iY=iY>=0?iY:7;}var data={};for(var i=1;i<rows.length;i++){var r=rows[i];var g=String(r[iG]||'');if(g&&!g.includes('프린트샵미니'))continue;var tn=String(r[iT]||'').trim();if(!tn.includes('프린트샵미니'))continue;var br=xb(tn);var am=parseInt(String(r[iA]||'0').replace(/,/g,''))||0;var ty=norm(String(r[iY]||''));var saleDate=sd;if(iD>=0){var rv=r[iD];if(rv instanceof Date){saleDate=rv.getFullYear()+'-'+String(rv.getMonth()+1).padStart(2,'0')+'-'+String(rv.getDate()).padStart(2,'0');}else{var dm=String(rv).match(/(\\d{4})[.\\-\\/](\\d{1,2})[.\\-\\/](\\d{1,2})/);if(dm)saleDate=dm[1]+'-'+dm[2].padStart(2,'0')+'-'+dm[3].padStart(2,'0');}}var key=saleDate+'|'+br;if(!data[key])data[key]={t:0,n:0,p:0,c:0,s:0,f:0,g:0,date:saleDate,branch:br};data[key].t+=am;data[key].n++;if(ty==='인쇄')data[key].p+=am;else if(ty==='복사')data[key].c+=am;else if(ty==='스캔')data[key].s+=am;else if(ty==='팩스')data[key].f+=am;else if(ty==='상품')data[key].g+=am;}var recs=Object.values(data).map(function(d){return{sale_date:d.date,branch:d.branch,total_amount:d.t,total_count:d.n,print_amount:d.p,copy_amount:d.c,scan_amount:d.s,fax_amount:d.f,product_amount:d.g};});if(!recs.length){alert('⚠️ 프린트샵미니 데이터 없음\\n날짜와 그룹 설정 확인');return;}fetch(SU+'/rest/v1/daily_sales?on_conflict=sale_date,branch',{method:'POST',headers:{'apikey':SK,'Authorization':'Bearer '+SK,'Content-Type':'application/json','Prefer':'resolution=merge-duplicates,return=minimal'},body:JSON.stringify(recs)}).then(function(r){if(r.ok||r.status===201||r.status===204)alert('✅ 업로드 완료! (선불제외금액 기준)\\n'+recs.length+'건 ('+sd+' ~ '+ed+')');else r.text().then(function(t){alert('❌ Supabase 오류: '+t);});}).catch(function(e){alert('❌ '+e.message);});}})();`;
   document.getElementById('bookmarkletLink').href = code;
   document.getElementById('bookmarkletCode').value = code;
 }
 
 // ==================== 초기화 ====================
-function init() {
+async function init() {
   const now = new Date();
   const ySel = document.getElementById('selYear');
-  for (let y = 2026; y <= 2030; y++) {
+  for (let y = 2024; y <= 2030; y++) {
     const o = document.createElement('option');
     o.value = y; o.textContent = y + '년';
     if (y === now.getFullYear()) o.selected = true;
@@ -440,7 +538,7 @@ function init() {
   }
   document.getElementById('selMonth').value = String(now.getMonth() + 1).padStart(2, '0');
 
-  // 조회용 지점 드롭박스 (전체 포함)
+  // 조회용 지점 드롭박스
   const branchSel = document.getElementById('costBranchSel');
   const allOpt = document.createElement('option');
   allOpt.value = '__all__'; allOpt.textContent = '── 전체 ──';
@@ -451,49 +549,36 @@ function init() {
     branchSel.appendChild(o);
   });
 
-  // 매출 수동 입력용 지점 드롭박스
+  // 매출 수동 입력용 지점
   const salesInputBranchSel = document.getElementById('salesInputBranch');
   BRANCHES.forEach(b => {
     const o = document.createElement('option');
     o.value = b; o.textContent = branchDisplay(b);
     salesInputBranchSel.appendChild(o);
   });
+  const todayStr = fmtDate(new Date());
+  document.getElementById('salesInputDate').value = todayStr;
 
-  // 매출 날짜 기본값
-  const todaySales = new Date();
-  const todaySalesStr = todaySales.getFullYear() + '-' +
-    String(todaySales.getMonth()+1).padStart(2,'0') + '-' +
-    String(todaySales.getDate()).padStart(2,'0');
-  document.getElementById('salesInputDate').value = todaySalesStr;
-
-  // 매입 입력용 지점 드롭박스 (전체 없음)
-  const inputBranchSel = document.getElementById('costInputBranch');
+  // 매입 입력용 지점
+  const costInputBranchSel = document.getElementById('costInputBranch');
   BRANCHES.forEach(b => {
     const o = document.createElement('option');
     o.value = b; o.textContent = branchDisplay(b);
-    inputBranchSel.appendChild(o);
+    costInputBranchSel.appendChild(o);
   });
-
-  // 입력용 항목 드롭박스 초기화
-  refreshCostInputItems();
-
-  // 날짜 기본값: 오늘
-  const today = new Date();
-  const todayStr = today.getFullYear() + '-' +
-    String(today.getMonth()+1).padStart(2,'0') + '-' +
-    String(today.getDate()).padStart(2,'0');
   document.getElementById('costInputDate').value = todayStr;
 
   buildBookmarklet();
-  onMonthChange();
+  await onMonthChange();
 }
 
-function onMonthChange() {
+async function onMonthChange() {
   curYear = document.getElementById('selYear').value;
   curMonth = document.getElementById('selMonth').value;
   document.getElementById('monthLabel').textContent = curYear + '년 ' + parseInt(curMonth) + '월';
-  loadSalesFromDB();
-  renderCostTable();
+  await Promise.all([loadSalesFromDB(), loadCostData(), loadSalesManualData()]);
+  refreshCostInputItems();
+  refreshSalesInputItems();
 }
 
 function showTab(id, el) {
@@ -504,25 +589,19 @@ function showTab(id, el) {
   if (id === 'profit') renderProfit();
 }
 
-// ==================== Supabase ====================
-async function sbGet(query) {
-  const res = await fetch(SUPABASE_URL + '/rest/v1/' + query, {
-    headers: { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY }
-  });
-  if (!res.ok) throw new Error(await res.text());
-  return res.json();
+function fmtDate(d) {
+  return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
 }
 
+// ==================== Supabase 매출 ====================
 async function loadSalesFromDB() {
   setSyncStatus('loading', '로딩 중...');
   try {
     const startDate = `${curYear}-${curMonth}-01`;
     const lastDay = new Date(parseInt(curYear), parseInt(curMonth), 0).getDate();
     const endDate = `${curYear}-${curMonth}-${String(lastDay).padStart(2, '0')}`;
-
     const rows = await sbGet(`daily_sales?select=*&sale_date=gte.${startDate}&sale_date=lte.${endDate}&order=sale_date.asc`);
 
-    // 날짜별 집계 → 지점별 월 합계
     salesData = {};
     const dates = new Set();
     rows.forEach(r => {
@@ -561,9 +640,16 @@ function setSyncStatus(state, msg) {
 // ==================== 매출 렌더 ====================
 function fmt(n) { return (n || 0).toLocaleString(); }
 
+function getSalesManualTotal(branch) {
+  return salesCustomItemsCache.reduce((s, item) => {
+    const e = salesManualCache[branch + '|' + item.item_name];
+    return s + (e ? parseInt(e.amount)||0 : 0);
+  }, 0);
+}
+
 function renderSalesCards() {
   const vals = Object.values(salesData);
-  if (!vals.length) {
+  if (!vals.length && !salesCustomItemsCache.length) {
     ['cTotalSales','cTotalCount','cPrint','cCopy','cScan','cFax','cProduct','cManual'].forEach(id => document.getElementById(id).textContent = '-');
     return;
   }
@@ -606,107 +692,130 @@ function renderSalesTable() {
 }
 
 // ==================== 매출 수동 입력 ====================
-function getSalesCustomItems() {
-  return JSON.parse(localStorage.getItem('psm_sales_custom_items') || '[]');
-}
-function salesManualKey(branch, item) {
-  return `psm_salesm_${branch}_${curYear}_${curMonth}_${item}`;
-}
-function getSalesManualTotal(branch) {
-  return getSalesCustomItems().reduce((s, item) => {
-    const e = JSON.parse(localStorage.getItem(salesManualKey(branch, item)) || 'null');
-    return s + (e ? parseInt(e.amount)||0 : 0);
-  }, 0);
-}
-
 function salesViewInput() {
   const p = document.getElementById('salesInputPanel');
   p.style.display = p.style.display === 'none' ? '' : 'none';
-  if (p.style.display !== 'none') refreshSalesInputItems();
+  if (p.style.display !== 'none') {
+    refreshSalesInputItems();
+    const hint = document.getElementById('salesInputItemHint');
+    hint.style.display = salesCustomItemsCache.length === 0 ? '' : 'none';
+  }
 }
-function salesViewAddItem() {
-  const p = document.getElementById('salesAddItemPanel');
+function salesViewManageItems() {
+  const p = document.getElementById('salesManageItemsPanel');
   p.style.display = p.style.display === 'none' ? '' : 'none';
-  if (p.style.display !== 'none') renderSalesCustomItemList();
+  if (p.style.display !== 'none') renderSalesItemList();
 }
 function refreshSalesInputItems() {
   const sel = document.getElementById('salesInputItem');
   const cur = sel.value;
   sel.innerHTML = '<option value="">-- 항목 선택 --</option>';
-  getSalesCustomItems().forEach(item => {
+  salesCustomItemsCache.forEach(item => {
     const o = document.createElement('option');
-    o.value = item; o.textContent = item;
-    if (item === cur) o.selected = true;
+    o.value = item.item_name; o.textContent = item.item_name;
+    if (item.item_name === cur) o.selected = true;
     sel.appendChild(o);
   });
 }
-function saveSalesInput() {
+async function saveSalesInput() {
   const branch = document.getElementById('salesInputBranch').value;
   const item   = document.getElementById('salesInputItem').value;
   const date   = document.getElementById('salesInputDate').value;
   const amount = parseInt(document.getElementById('salesInputAmount').value) || 0;
   if (!branch) { toast('지점을 선택해 주세요.', 'err'); return; }
-  if (!item)   { toast('항목을 선택해 주세요.', 'err'); return; }
+  if (!item)   { toast('항목을 선택해 주세요. 항목이 없으면 먼저 "⚙️ 항목 관리"에서 추가하세요.', 'err'); return; }
   if (!date)   { toast('날짜를 선택해 주세요.', 'err'); return; }
-  localStorage.setItem(salesManualKey(branch, item), JSON.stringify({amount, date}));
-  renderSalesCards();
-  renderSalesTable();
-  renderProfit();
-  toast('저장됐습니다! (' + branchDisplay(branch) + ' / ' + item + ')', 'ok');
-  document.getElementById('salesInputPanel').style.display = 'none';
+  try {
+    await sbUpsert('sales_manual_entries',
+      {year_month: `${curYear}-${curMonth}`, branch, item_name: item, amount, entry_date: date, updated_at: new Date().toISOString()},
+      'year_month,branch,item_name'
+    );
+    salesManualCache[branch + '|' + item] = {amount, date};
+    renderSalesCards();
+    renderSalesTable();
+    renderProfit();
+    toast('저장됐습니다! (' + branchDisplay(branch) + ' / ' + item + ')', 'ok');
+    document.getElementById('salesInputPanel').style.display = 'none';
+    document.getElementById('salesInputAmount').value = '';
+  } catch(e) {
+    toast('저장 실패: ' + e.message, 'err');
+  }
 }
-function renderSalesCustomItemList() {
-  const items = getSalesCustomItems();
-  document.getElementById('salesCustomItemListBody').innerHTML = items.length
-    ? items.map(i => `<tr><td>${i}</td><td style="text-align:center">
-        <button class="btn btn-red btn-sm" onclick="removeSalesCustomItem('${i.replace(/'/g,"\\'")}')">🗑</button>
-      </td></tr>`).join('')
+function renderSalesItemList() {
+  const items = salesCustomItemsCache;
+  document.getElementById('salesItemListBody').innerHTML = items.length
+    ? items.map(i => `<tr>
+        <td id="si-name-${escId(i.item_name)}">${i.item_name}</td>
+        <td style="text-align:center;white-space:nowrap">
+          <button class="btn btn-orange btn-sm" onclick="editSalesItemPrompt('${esc(i.item_name)}')">✏️ 수정</button>
+          <button class="btn btn-red btn-sm" onclick="removeSalesItem('${esc(i.item_name)}')">🗑</button>
+        </td>
+      </tr>`).join('')
     : '<tr class="empty-row"><td colspan="2">추가된 항목이 없습니다</td></tr>';
 }
-function addSalesCustomItemFromInput() {
+async function addSalesItem() {
   const input = document.getElementById('newSalesItemInput');
   const name = input.value.trim();
   if (!name) { toast('항목명을 입력해 주세요.', 'err'); return; }
-  const items = getSalesCustomItems();
-  if (items.includes(name)) { toast('이미 존재하는 항목입니다.', 'err'); return; }
-  items.push(name);
-  localStorage.setItem('psm_sales_custom_items', JSON.stringify(items));
-  input.value = '';
-  renderSalesCustomItemList();
-  refreshSalesInputItems();
-  toast('"' + name + '" 항목이 추가됐습니다.', 'ok');
+  if (salesCustomItemsCache.some(i => i.item_name === name)) { toast('이미 존재하는 항목입니다.', 'err'); return; }
+  try {
+    await sbInsert('sales_custom_items', {item_name: name});
+    salesCustomItemsCache.push({item_name: name});
+    input.value = '';
+    renderSalesItemList();
+    refreshSalesInputItems();
+    toast('"' + name + '" 항목이 추가됐습니다.', 'ok');
+  } catch(e) { toast('추가 실패: ' + e.message, 'err'); }
 }
-function removeSalesCustomItem(name) {
+async function removeSalesItem(name) {
   if (!confirm('"' + name + '" 항목을 삭제하시겠습니까?')) return;
-  localStorage.setItem('psm_sales_custom_items',
-    JSON.stringify(getSalesCustomItems().filter(i => i !== name)));
-  renderSalesCustomItemList();
-  refreshSalesInputItems();
-  toast('삭제됐습니다.', 'ok');
+  try {
+    await sbDelete('sales_custom_items', `item_name=eq.${encodeURIComponent(name)}`);
+    salesCustomItemsCache = salesCustomItemsCache.filter(i => i.item_name !== name);
+    renderSalesItemList();
+    refreshSalesInputItems();
+    renderSalesCards();
+    renderSalesTable();
+    renderProfit();
+    toast('삭제됐습니다.', 'ok');
+  } catch(e) { toast('삭제 실패: ' + e.message, 'err'); }
+}
+async function editSalesItemPrompt(name) {
+  const newName = prompt('새 항목명을 입력하세요:', name);
+  if (!newName || newName === name) return;
+  if (salesCustomItemsCache.some(i => i.item_name === newName)) { toast('이미 존재하는 항목명입니다.', 'err'); return; }
+  try {
+    await sbPatch('sales_custom_items', `item_name=eq.${encodeURIComponent(name)}`, {item_name: newName});
+    await sbPatch('sales_manual_entries', `item_name=eq.${encodeURIComponent(name)}`, {item_name: newName});
+    const idx = salesCustomItemsCache.findIndex(i => i.item_name === name);
+    if (idx >= 0) salesCustomItemsCache[idx].item_name = newName;
+    // 캐시 키 갱신
+    Object.keys(salesManualCache).forEach(k => {
+      if (k.endsWith('|' + name)) {
+        salesManualCache[k.replace('|' + name, '|' + newName)] = salesManualCache[k];
+        delete salesManualCache[k];
+      }
+    });
+    renderSalesItemList();
+    refreshSalesInputItems();
+    toast('"' + name + '" → "' + newName + '" 수정됐습니다.', 'ok');
+  } catch(e) { toast('수정 실패: ' + e.message, 'err'); }
 }
 
-// ==================== 매입 (v3) ====================
-// 데이터 키: psm_costm_${branch}_${year}_${month}_${item} → {amount, date}
-// 커스텀 항목: psm_cost_custom_items → ['항목1', ...]
-
-function costEntryKey(branch, item) {
-  return `psm_costm_${branch}_${curYear}_${curMonth}_${item}`;
-}
-function getAllItems() {
-  const custom = JSON.parse(localStorage.getItem('psm_cost_custom_items') || '[]');
-  return [...COST_ITEMS, ...custom];
+// ==================== 매입 ====================
+function getAllCostItems() {
+  return costItemsCache.map(i => i.item_name);
 }
 function getCostEntry(branch, item) {
-  return JSON.parse(localStorage.getItem(costEntryKey(branch, item)) || 'null');
+  return costEntriesCache[branch + '|' + item] || null;
 }
 function getTotalCostForBranch(branch) {
-  return getAllItems().reduce((s, item) => {
+  return getAllCostItems().reduce((s, item) => {
     const e = getCostEntry(branch, item);
     return s + (e ? parseInt(e.amount)||0 : 0);
   }, 0);
 }
 
-// ── 조회 버튼 ──
 function costViewQuery() {
   const branch = document.getElementById('costBranchSel').value;
   document.getElementById('costFormEmpty').style.display = branch ? 'none' : '';
@@ -734,13 +843,11 @@ function renderCostQueryBranch(branch) {
   document.getElementById('costQueryBranchTitle').textContent =
     branchDisplay(branch) + ' – ' + curYear + '년 ' + parseInt(curMonth) + '월';
   const tbody = document.getElementById('costQueryBranchBody');
-  const items = getAllItems().filter(item => getCostEntry(branch, item) !== null);
+  const items = getAllCostItems().filter(item => getCostEntry(branch, item) !== null);
   let total = 0;
-  const bEsc = branch.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
   if (items.length === 0) {
-    tbody.innerHTML = `<tr><td colspan="4" style="text-align:center;color:var(--text2);padding:1.2rem">매입항목이 없습니다.</td></tr>`;
-    document.getElementById('costQueryBranchFoot').innerHTML =
-      `<tr><td>합계</td><td></td><td>${fmt(0)}</td><td></td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="4" style="text-align:center;color:var(--text2);padding:2rem">매입항목이 없습니다.</td></tr>`;
+    document.getElementById('costQueryBranchFoot').innerHTML = `<tr><td>합계</td><td></td><td>${fmt(0)}</td><td></td></tr>`;
     return;
   }
   tbody.innerHTML = items.map(item => {
@@ -748,21 +855,19 @@ function renderCostQueryBranch(branch) {
     const amount = entry ? parseInt(entry.amount)||0 : 0;
     const date = entry ? entry.date : '-';
     total += amount;
-    const iEsc = item.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-    const actions = `<button class="btn btn-gray btn-sm" onclick="editCostEntry('${bEsc}','${iEsc}')">✏️</button>
-         <button class="btn btn-red btn-sm" onclick="deleteCostItem('${bEsc}','${iEsc}')">🗑</button>`;
     return `<tr>
       <td>${item}</td>
       <td style="color:var(--text2)">${date}</td>
       <td>${amount ? fmt(amount) : '<span style="color:var(--text2)">0</span>'}</td>
-      <td style="text-align:center;white-space:nowrap">${actions}</td>
+      <td style="text-align:center;white-space:nowrap">
+        <button class="btn btn-gray btn-sm" onclick="editCostEntry('${esc(branch)}','${esc(item)}')">✏️</button>
+        <button class="btn btn-red btn-sm" onclick="deleteCostEntry('${esc(branch)}','${esc(item)}')">🗑</button>
+      </td>
     </tr>`;
   }).join('');
-  document.getElementById('costQueryBranchFoot').innerHTML =
-    `<tr><td>합계</td><td></td><td>${fmt(total)}</td><td></td></tr>`;
+  document.getElementById('costQueryBranchFoot').innerHTML = `<tr><td>합계</td><td></td><td>${fmt(total)}</td><td></td></tr>`;
 }
 
-// ── 매입 입력 버튼 ──
 function costViewInput(branch, item) {
   const panel = document.getElementById('costInputPanel');
   panel.style.display = '';
@@ -778,24 +883,25 @@ function costViewInput(branch, item) {
   }
   panel.scrollIntoView({behavior:'smooth', block:'nearest'});
 }
-
+function costViewManageItems() {
+  const p = document.getElementById('costManageItemsPanel');
+  p.style.display = p.style.display === 'none' ? '' : 'none';
+  if (p.style.display !== 'none') renderCostItemList();
+}
 function refreshCostInputItems() {
   const sel = document.getElementById('costInputItem');
   const cur = sel.value;
   sel.innerHTML = '<option value="">-- 항목 선택 --</option>';
-  getAllItems().forEach(item => {
+  getAllCostItems().forEach(item => {
     const o = document.createElement('option');
     o.value = item; o.textContent = item;
     if (item === cur) o.selected = true;
     sel.appendChild(o);
   });
 }
+function editCostEntry(branch, item) { costViewInput(branch, item); }
 
-function editCostEntry(branch, item) {
-  costViewInput(branch, item);
-}
-
-function saveCostInput() {
+async function saveCostInput() {
   const branch = document.getElementById('costInputBranch').value;
   const item   = document.getElementById('costInputItem').value;
   const date   = document.getElementById('costInputDate').value;
@@ -803,69 +909,101 @@ function saveCostInput() {
   if (!branch) { toast('지점을 선택해 주세요.', 'err'); return; }
   if (!item)   { toast('항목을 선택해 주세요.', 'err'); return; }
   if (!date)   { toast('날짜를 선택해 주세요.', 'err'); return; }
-  localStorage.setItem(costEntryKey(branch, item), JSON.stringify({amount, date}));
-  renderProfit();
-  toast('저장됐습니다! (' + branchDisplay(branch) + ' / ' + item + ')', 'ok');
-  document.getElementById('costInputPanel').style.display = 'none';
-  document.getElementById('costInputBranch').value = '';
-  document.getElementById('costInputItem').value = '';
-  document.getElementById('costInputAmount').value = '';
-  // 저장 후 조회 결과 갱신
-  document.getElementById('costBranchSel').value = branch;
-  costViewQuery();
+  try {
+    await sbUpsert('cost_entries',
+      {year_month: `${curYear}-${curMonth}`, branch, item_name: item, amount, entry_date: date, updated_at: new Date().toISOString()},
+      'year_month,branch,item_name'
+    );
+    costEntriesCache[branch + '|' + item] = {amount, date};
+    renderProfit();
+    toast('저장됐습니다! (' + branchDisplay(branch) + ' / ' + item + ')', 'ok');
+    document.getElementById('costInputPanel').style.display = 'none';
+    document.getElementById('costInputBranch').value = '';
+    document.getElementById('costInputItem').value = '';
+    document.getElementById('costInputAmount').value = '';
+    document.getElementById('costBranchSel').value = branch;
+    costViewQuery();
+  } catch(e) { toast('저장 실패: ' + e.message, 'err'); }
 }
 
-function deleteCostItem(branch, item) {
+async function deleteCostEntry(branch, item) {
   if (!confirm(branchDisplay(branch) + ' / ' + item + '\n삭제하시겠습니까?')) return;
-  localStorage.removeItem(costEntryKey(branch, item));
-  renderProfit();
-  renderCostQueryBranch(branch);
-  toast('삭제됐습니다.', 'ok');
+  try {
+    await sbDelete('cost_entries',
+      `year_month=eq.${curYear}-${curMonth}&branch=eq.${encodeURIComponent(branch)}&item_name=eq.${encodeURIComponent(item)}`
+    );
+    delete costEntriesCache[branch + '|' + item];
+    renderProfit();
+    renderCostQueryBranch(branch);
+    toast('삭제됐습니다.', 'ok');
+  } catch(e) { toast('삭제 실패: ' + e.message, 'err'); }
 }
 
-// ── 항목 추가 버튼 ──
-function costViewAddItem() {
-  const panel = document.getElementById('costAddItemPanel');
-  panel.style.display = (panel.style.display === 'none' || panel.style.display === '') ? '' : 'none';
-  renderCustomItemList();
-  panel.scrollIntoView({behavior:'smooth', block:'nearest'});
+function renderCostItemList() {
+  const tbody = document.getElementById('costItemListBody');
+  if (!costItemsCache.length) {
+    tbody.innerHTML = '<tr class="empty-row"><td colspan="3">항목이 없습니다</td></tr>';
+    return;
+  }
+  tbody.innerHTML = costItemsCache.map(i => `<tr>
+    <td>${i.item_name}</td>
+    <td style="text-align:center">${i.is_default ? '<span style="font-size:11px;background:#EFF8FF;color:var(--blue);padding:2px 8px;border-radius:10px">기본</span>' : ''}</td>
+    <td style="text-align:center;white-space:nowrap">
+      ${!i.is_default ? `<button class="btn btn-orange btn-sm" onclick="editCostItemPrompt('${esc(i.item_name)}')">✏️ 수정</button>
+      <button class="btn btn-red btn-sm" onclick="removeCostItem('${esc(i.item_name)}')">🗑</button>` : '<span style="color:var(--text2);font-size:12px">–</span>'}
+    </td>
+  </tr>`).join('');
 }
 
-function renderCustomItemList() {
-  const custom = JSON.parse(localStorage.getItem('psm_cost_custom_items') || '[]');
-  const tbody = document.getElementById('customItemListBody');
-  tbody.innerHTML = custom.length
-    ? custom.map(item => `<tr>
-        <td>${item}</td>
-        <td style="text-align:center"><button class="btn btn-red btn-sm" onclick="removeCustomItemAndRefresh('${item.replace(/'/g,"\\'")}')">🗑</button></td>
-      </tr>`).join('')
-    : '<tr class="empty-row"><td colspan="2">추가된 항목이 없습니다</td></tr>';
-}
-
-function addCustomItemFromInput() {
-  const input = document.getElementById('newItemNameInput');
+async function addCostItem() {
+  const input = document.getElementById('newCostItemInput');
   const name = input.value.trim();
   if (!name) { toast('항목명을 입력해 주세요.', 'err'); return; }
-  const custom = JSON.parse(localStorage.getItem('psm_cost_custom_items') || '[]');
-  if (COST_ITEMS.includes(name) || custom.includes(name)) { toast('이미 존재하는 항목입니다.', 'err'); return; }
-  custom.push(name);
-  localStorage.setItem('psm_cost_custom_items', JSON.stringify(custom));
-  input.value = '';
-  renderCustomItemList();
-  refreshCostInputItems();
-  toast('"' + name + '" 항목이 추가됐습니다.', 'ok');
+  if (costItemsCache.some(i => i.item_name === name)) { toast('이미 존재하는 항목입니다.', 'err'); return; }
+  try {
+    await sbInsert('cost_custom_items', {item_name: name, is_default: false});
+    costItemsCache.push({item_name: name, is_default: false});
+    input.value = '';
+    renderCostItemList();
+    refreshCostInputItems();
+    toast('"' + name + '" 항목이 추가됐습니다.', 'ok');
+  } catch(e) { toast('추가 실패: ' + e.message, 'err'); }
 }
 
-function removeCustomItemAndRefresh(name) {
+async function removeCostItem(name) {
   if (!confirm('"' + name + '" 항목을 삭제하시겠습니까?')) return;
-  const custom = JSON.parse(localStorage.getItem('psm_cost_custom_items') || '[]');
-  localStorage.setItem('psm_cost_custom_items', JSON.stringify(custom.filter(i => i !== name)));
-  renderCustomItemList();
-  refreshCostInputItems();
-  toast('"' + name + '" 항목이 삭제됐습니다.', 'ok');
+  try {
+    await sbDelete('cost_custom_items', `item_name=eq.${encodeURIComponent(name)}`);
+    costItemsCache = costItemsCache.filter(i => i.item_name !== name);
+    renderCostItemList();
+    refreshCostInputItems();
+    renderProfit();
+    toast('삭제됐습니다.', 'ok');
+  } catch(e) { toast('삭제 실패: ' + e.message, 'err'); }
 }
 
-function renderCostTable() {} // 손익 계산에서 호출 호환용
+async function editCostItemPrompt(name) {
+  const newName = prompt('새 항목명을 입력하세요:', name);
+  if (!newName || newName === name) return;
+  if (costItemsCache.some(i => i.item_name === newName)) { toast('이미 존재하는 항목명입니다.', 'err'); return; }
+  try {
+    await sbPatch('cost_custom_items', `item_name=eq.${encodeURIComponent(name)}`, {item_name: newName});
+    await sbPatch('cost_entries', `item_name=eq.${encodeURIComponent(name)}`, {item_name: newName});
+    const idx = costItemsCache.findIndex(i => i.item_name === name);
+    if (idx >= 0) costItemsCache[idx].item_name = newName;
+    Object.keys(costEntriesCache).forEach(k => {
+      if (k.endsWith('|' + name)) {
+        costEntriesCache[k.replace('|' + name, '|' + newName)] = costEntriesCache[k];
+        delete costEntriesCache[k];
+      }
+    });
+    renderCostItemList();
+    refreshCostInputItems();
+    toast('"' + name + '" → "' + newName + '" 수정됐습니다.', 'ok');
+  } catch(e) { toast('수정 실패: ' + e.message, 'err'); }
+}
+
+function renderCostTable() {} // 호환용
 
 // ==================== 손익 ====================
 function renderProfit() {
@@ -906,7 +1044,10 @@ function renderProfit() {
   tfoot.innerHTML = `<tr><td>합계</td><td>${fmt(tS)}</td><td>${fmt(tC)}</td><td>${tP<0?'▼ ':'▲ '}${fmt(Math.abs(tP))}</td><td><span class="rate-badge ${tr>0?'rate-p':tr<0?'rate-n':'rate-z'}">${tr}%</span></td></tr>`;
 }
 
-// ==================== 토스트 ====================
+// ==================== 유틸 ====================
+function esc(s) { return String(s).replace(/\\/g,'\\\\').replace(/'/g,"\\'"); }
+function escId(s) { return String(s).replace(/[^a-zA-Z0-9가-힣]/g,'_'); }
+
 function toast(msg, type='ok') {
   const el = document.getElementById('toast');
   el.textContent = msg; el.className = 'toast show ' + type;
