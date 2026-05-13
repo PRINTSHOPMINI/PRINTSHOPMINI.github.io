@@ -483,23 +483,41 @@ function renderAllBranchesTable() {
       const tr = document.createElement('tr');
       tr.className = (isDanger ? 'row-danger' : isWarning ? 'row-warning' : '') + ' hover:bg-slate-50';
       tr.innerHTML = `
-        <td class="px-5 py-2.5 text-sm pl-10 text-slate-600">${esc(product)}</td>
-        <td class="px-5 py-2.5 text-center text-sm">${initialStock.toLocaleString()}</td>
-        <td class="px-5 py-2.5 text-center text-sm">${sold.toLocaleString()}</td>
-        <td class="px-5 py-2.5 text-center font-bold text-sm ${isDanger ? 'text-red-600' : isWarning ? 'text-amber-600' : 'text-emerald-600'}">
+        <td class="px-5 py-2 text-sm pl-10 text-slate-600">${esc(product)}</td>
+        <td class="px-3 py-1.5 text-center">
+          <div class="flex items-center justify-center gap-1">
+            <input type="number" min="0" value="${initialStock}"
+              class="w-20 border border-slate-300 rounded px-2 py-1 text-center text-sm focus:outline-none focus:ring-2 focus:ring-indigo-300"
+              onkeydown="if(event.key==='Enter') saveStock('${esc(branch)}','${esc(product)}',this)" />
+            <button onclick="saveStock('${esc(branch)}','${esc(product)}',this.previousElementSibling)"
+              class="text-xs bg-indigo-100 text-indigo-700 hover:bg-indigo-200 px-2 py-1 rounded transition">저장</button>
+          </div>
+        </td>
+        <td class="px-5 py-2 text-center text-sm">${sold.toLocaleString()}</td>
+        <td class="px-5 py-2 text-center font-bold text-sm ${isDanger ? 'text-red-600' : isWarning ? 'text-amber-600' : 'text-emerald-600'}">
           ${remaining.toLocaleString()}</td>
-        <td class="px-5 py-2.5 text-center">${statusBadge(isDanger, isWarning)}</td>`;
+        <td class="px-5 py-2 text-center">${statusBadge(isDanger, isWarning)}</td>`;
       tbody.appendChild(tr);
 
       /* 모바일 상품 행 */
       const row = document.createElement('div');
-      row.className = `flex items-center px-3 py-2.5 gap-2 ${isDanger ? 'bg-red-50' : isWarning ? 'bg-amber-50' : 'bg-white'}`;
+      row.className = `px-3 py-2.5 ${isDanger ? 'bg-red-50' : isWarning ? 'bg-amber-50' : 'bg-white'}`;
       row.innerHTML = `
-        <span class="flex-1 text-sm font-medium">${esc(product)}</span>
-        <div class="text-center min-w-[48px]"><p class="text-xs text-slate-400">기초</p><p class="font-semibold text-sm">${initialStock.toLocaleString()}</p></div>
-        <div class="text-center min-w-[48px]"><p class="text-xs text-slate-400">판매</p><p class="font-semibold text-sm text-amber-600">${sold.toLocaleString()}</p></div>
-        <div class="text-center min-w-[52px]"><p class="text-xs text-slate-400">남은</p><p class="font-bold text-sm ${isDanger ? 'text-red-600' : isWarning ? 'text-amber-600' : 'text-emerald-600'}">${remaining.toLocaleString()}</p></div>
-        <span class="text-lg">${isDanger ? '⚠️' : isWarning ? '⚡' : '✓'}</span>`;
+        <div class="flex items-center gap-2 mb-2">
+          <span class="flex-1 text-sm font-medium">${esc(product)}</span>
+          ${statusBadge(isDanger, isWarning)}
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="flex items-center gap-1 flex-1">
+            <input type="number" min="0" value="${initialStock}"
+              class="w-full border border-slate-300 rounded px-2 py-1.5 text-center text-sm focus:outline-none focus:ring-2 focus:ring-indigo-300"
+              onkeydown="if(event.key==='Enter') saveStock('${esc(branch)}','${esc(product)}',this)" />
+            <button onclick="saveStock('${esc(branch)}','${esc(product)}',this.previousElementSibling)"
+              class="text-xs bg-indigo-600 text-white px-3 py-1.5 rounded transition whitespace-nowrap">저장</button>
+          </div>
+          <div class="text-center min-w-[44px]"><p class="text-xs text-slate-400">판매</p><p class="font-semibold text-sm text-amber-600">${sold.toLocaleString()}</p></div>
+          <div class="text-center min-w-[44px]"><p class="text-xs text-slate-400">남은</p><p class="font-bold text-sm ${isDanger ? 'text-red-600' : isWarning ? 'text-amber-600' : 'text-emerald-600'}">${remaining.toLocaleString()}</p></div>
+        </div>`;
       productList.appendChild(row);
     });
 
@@ -716,8 +734,9 @@ async function saveStock(branch, product, input) {
       body: JSON.stringify({ branch, product, initial_stock: value }),
     });
     state.stockMap[branch + '|' + product] = value;
-    showSuccess(`${product} 기초재고 ${value.toLocaleString()} 저장 완료`);
-    renderInventoryTable(branch);
+    showSuccess(`${branch} · ${product} 기초재고 ${value.toLocaleString()} 저장 완료`);
+    if (state.selectedBranch === '__all__') renderAllBranchesTable();
+    else renderInventoryTable(branch);
   } catch (e) {
     showError('저장 오류: ' + e.message);
   }
