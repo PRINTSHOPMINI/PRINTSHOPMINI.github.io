@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>다점포 재고관리 시스템</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .tab-panel        { display: none; }
+    .tab-panel.active { display: block; }
+    .tab-btn.active   { border-bottom: 3px solid #4f46e5; color: #4f46e5; font-weight: 700; }
+    .row-danger       { background-color: #fee2e2 !important; }
+    .row-warning      { background-color: #fef9c3 !important; }
+    input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+    input[type=number] { -moz-appearance: textfield; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .spinner { animation: spin 0.8s linear infinite; }
+    .stat-card:hover { transform: translateY(-2px); transition: transform 0.15s; }
+    .tab-nav { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .tab-nav::-webkit-scrollbar { display: none; }
+    .tab-btn { white-space: nowrap; }
+    ::-webkit-scrollbar       { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 3px; }
+  </style>
+</head>
+<body class="bg-slate-100 min-h-screen font-sans text-slate-800">
+
+<!-- HEADER -->
+<header class="bg-indigo-700 text-white shadow-lg">
+  <div class="max-w-7xl mx-auto px-3 py-3">
+    <div class="flex items-center justify-between gap-2 mb-2">
+      <div class="flex items-center gap-2">
+        <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10"/>
+        </svg>
+        <h1 class="text-base sm:text-xl font-bold tracking-tight">다점포 재고관리</h1>
+      </div>
+      <span id="lastSyncedLabel" class="text-indigo-200 text-xs hidden">
+        동기화: <span id="lastSyncedTime">-</span>
+      </span>
+    </div>
+    <div class="flex items-center gap-2">
+      <div class="flex items-center gap-1 flex-1 min-w-0">
+        <input type="date" id="syncStartDate" value="2026-02-01"
+          class="border border-indigo-300 rounded px-2 py-2 text-xs bg-indigo-600
+                 text-white focus:outline-none focus:ring-1 focus:ring-white flex-1 min-w-0" />
+        <span class="text-indigo-200 text-xs flex-shrink-0">~</span>
+        <input type="date" id="syncEndDate"
+          class="border border-indigo-300 rounded px-2 py-2 text-xs bg-indigo-600
+                 text-white focus:outline-none focus:ring-1 focus:ring-white flex-1 min-w-0" />
+      </div>
+      <button id="syncBtn" onclick="syncData()"
+        class="flex items-center gap-1.5 bg-white text-indigo-700 font-semibold
+               text-xs sm:text-sm px-3 py-2 rounded-lg hover:bg-indigo-50 transition
+               disabled:opacity-50 flex-shrink-0 whitespace-nowrap">
+        <svg id="syncIcon" class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+        </svg>
+        <span>동기화</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- 에러 배너 -->
+<div id="errorBanner" class="hidden max-w-7xl mx-auto mt-3 px-4">
+  <div class="bg-red-100 border border-red-400 text-red-800 rounded-lg px-4 py-3
+              flex items-center justify-between gap-2">
+    <span id="errorText" class="text-sm font-medium"></span>
+    <button onclick="hideError()" class="text-red-600 hover:text-red-800 font-bold text-lg">×</button>
+  </div>
+</div>
+
+<!-- 성공 배너 -->
+<div id="successBanner" class="hidden max-w-7xl mx-auto mt-3 px-4">
+  <div class="bg-green-100 border border-green-400 text-green-800 rounded-lg px-4 py-3
+              flex items-center justify-between gap-2">
+    <span id="successText" class="text-sm font-medium"></span>
+    <button onclick="hideSuccess()" class="text-green-600 hover:text-green-800 font-bold text-lg">×</button>
+  </div>
+</div>
+
+<!-- 탭 네비게이션 -->
+<nav class="bg-white border-b border-slate-200 shadow-sm sticky top-0 z-10">
+  <div class="max-w-7xl mx-auto px-2 sm:px-4">
+    <div class="tab-nav flex">
+      <button class="tab-btn active px-4 sm:px-6 py-3 text-sm transition-colors"
+        onclick="switchTab('inventory', this)">📦 재고관리</button>
+      <button class="tab-btn px-4 sm:px-6 py-3 text-sm transition-colors text-slate-500"
+        onclick="switchTab('dashboard', this)">📊 대시보드</button>
+      <button class="tab-btn px-4 sm:px-6 py-3 text-sm transition-colors text-slate-500"
+        onclick="switchTab('settings', this)">⚙️ 설정</button>
+    </div>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<main class="max-w-7xl mx-auto px-3 sm:px-4 py-4 sm:py-6">
+
+  <!-- 재고관리 탭 -->
+  <div id="panel-inventory" class="tab-panel active">
+    <div class="bg-white rounded-xl shadow p-3 sm:p-4 mb-4">
+      <div class="flex items-center gap-3 mb-2">
+        <label class="text-sm font-semibold text-slate-600 whitespace-nowrap">지점 선택</label>
+        <select id="branchSelect" onchange="onBranchChange(this.value)"
+          class="border border-slate-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none
+                 focus:ring-2 focus:ring-indigo-400 bg-white flex-1">
+          <option value="">-- 지점을 선택하세요 --</option>
+        </select>
+      </div>
+      <div id="branchStockSummary" class="hidden grid grid-cols-3 gap-2 mt-2">
+        <div class="bg-slate-50 rounded-lg p-2 text-center">
+          <p class="text-xs text-slate-400">기초재고</p>
+          <p id="branchInitTotal" class="text-base font-bold text-slate-700">-</p>
+        </div>
+        <div class="bg-amber-50 rounded-lg p-2 text-center">
+          <p class="text-xs text-slate-400">누적판매</p>
+          <p id="branchSoldTotal" class="text-base font-bold text-amber-600">-</p>
+        </div>
+        <div class="bg-indigo-50 rounded-lg p-2 text-center">
+          <p class="text-xs text-slate-400">남은재고</p>
+          <p id="branchRemainingTotal" class="text-base font-bold text-indigo-600">-</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="inventoryArea" class="hidden bg-white rounded-xl shadow overflow-hidden">
+      <div class="px-4 py-3 border-b border-slate-100 flex items-center justify-between">
+        <h2 class="font-semibold text-slate-700 text-sm" id="inventoryTitle">재고 현황</h2>
+        <span class="text-xs text-slate-400 hidden sm:inline">Enter 또는 저장 버튼으로 입력</span>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead class="bg-slate-50 text-slate-600">
+            <tr>
+              <th class="px-3 sm:px-5 py-3 text-left font-semibold">상품명</th>
+              <th class="px-3 sm:px-5 py-3 text-center font-semibold">기초재고</th>
+              <th class="px-3 sm:px-5 py-3 text-center font-semibold">판매수량</th>
+              <th class="px-3 sm:px-5 py-3 text-center font-semibold">남은재고</th>
+              <th class="px-3 sm:px-5 py-3 text-center font-semibold hidden sm:table-cell">상태</th>
+            </tr>
+          </thead>
+          <tbody id="inventoryTbody" class="divide-y divide-slate-100"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="noBranchMsg" class="bg-white rounded-xl shadow p-10 text-center text-slate-400">
+      <svg class="w-12 h-12 mx-auto mb-3 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+          d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+      </svg>
+      <p class="text-sm font-medium">지점을 선택하면 재고 현황이 표시됩니다.</p>
+    </div>
+  </div>
+
+  <!-- 대시보드 탭 -->
+  <div id="panel-dashboard" class="tab-panel">
+    <div class="grid grid-cols-3 gap-3 mb-4">
+      <div class="stat-card bg-white rounded-xl shadow p-4 border-l-4 border-indigo-500">
+        <p class="text-xs text-slate-500 font-medium">전체 기초재고</p>
+        <p id="dashGrandInitial" class="text-2xl font-bold text-slate-700 mt-1">-</p>
+      </div>
+      <div class="stat-card bg-white rounded-xl shadow p-4 border-l-4 border-amber-500">
+        <p class="text-xs text-slate-500 font-medium">전체 판매량</p>
+        <p id="dashGrandSold" class="text-2xl font-bold text-amber-600 mt-1">-</p>
+      </div>
+      <div class="stat-card bg-white rounded-xl shadow p-4 border-l-4 border-emerald-500">
+        <p class="text-xs text-slate-500 font-medium">전체 남은재고</p>
+        <p id="dashGrandRemaining" class="text-2xl font-bold text-emerald-600 mt-1">-</p>
+      </div>
+    </div>
+    <div class="bg-white rounded-xl shadow overflow-hidden">
+      <div class="px-4 py-3 border-b border-slate-100 flex items-center justify-between">
+        <h2 class="font-semibold text-slate-700 text-sm">지점별 재고 현황</h2>
+        <button onclick="loadDashboard()"
+          class="text-xs text-indigo-600 hover:text-indigo-800 font-medium">새로고침</button>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead class="bg-slate-50 text-slate-600">
+            <tr>
+              <th class="px-3 sm:px-4 py-3 text-left font-semibold">지점명</th>
+              <th class="px-3 sm:px-4 py-3 text-center font-semibold">기초재고</th>
+              <th class="px-3 sm:px-4 py-3 text-center font-semibold">판매량</th>
+              <th class="px-3 sm:px-4 py-3 text-center font-semibold">남은재고</th>
+            </tr>
+          </thead>
+          <tbody id="dashboardTbody" class="divide-y divide-slate-100">
+            <tr><td colspan="4" class="text-center text-slate-400 py-10 text-sm">
+              대시보드 탭을 클릭하면 데이터가 로드됩니다.
+            </td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- 설정 탭 -->
+  <div id="panel-settings" class="tab-panel">
+    <div class="max-w-2xl mx-auto space-y-5">
+
+      <!-- 북마클릿 -->
+      <div class="bg-white rounded-xl shadow p-5">
+        <h3 class="font-semibold text-slate-700 mb-1 flex items-center gap-2 text-sm">
+          🔖 재고 업로드 북마클릿
+          <span class="text-xs font-normal text-slate-400">최초 1회 설치</span>
+        </h3>
+        <p class="text-xs text-slate-500 mb-4">
+          아래 버튼을 <strong>북마크바로 드래그</strong>해서 설치하세요.<br/>
+          fax.printnuri.com/tossOrderItem 에서 날짜 설정 후 클릭하면 자동 업로드됩니다.
+        </p>
+        <a id="inventoryBookmarklet"
+          class="inline-block bg-gradient-to-r from-indigo-600 to-indigo-800
+                 text-white font-bold px-5 py-3 rounded-xl cursor-grab
+                 border-2 border-dashed border-indigo-300 shadow-lg text-sm select-none"
+          title="즐겨찾기 바로 드래그하세요">
+          📦 재고 업로드 (드래그해서 설치)
+        </a>
+        <details class="mt-3">
+          <summary class="text-xs text-slate-400 cursor-pointer font-medium">▶ 코드 직접 복사</summary>
+          <textarea id="bookmarkletCodeArea" readonly rows="3"
+            class="w-full mt-2 text-xs font-mono border border-slate-200 rounded p-2 resize-none bg-slate-50"></textarea>
+          <button onclick="navigator.clipboard.writeText(document.getElementById('bookmarkletCodeArea').value);showSuccess('복사됐습니다!')"
+            class="mt-1 text-xs bg-slate-200 hover:bg-slate-300 px-3 py-1 rounded transition">
+            📋 복사
+          </button>
+        </details>
+      </div>
+
+      <!-- 상품 관리 -->
+      <div class="bg-white rounded-xl shadow p-5">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="font-semibold text-slate-700 flex items-center gap-2 text-sm">
+            📦 상품 관리
+          </h3>
+          <span id="productCount" class="text-xs bg-emerald-100 text-emerald-700 font-semibold px-2 py-0.5 rounded-full"></span>
+        </div>
+        <ul id="productManagerList" class="space-y-2 mb-4 max-h-60 overflow-y-auto pr-1"></ul>
+        <div class="flex gap-2 pt-3 border-t border-slate-100">
+          <input id="newProductInput" type="text" placeholder="새 상품명 입력..."
+            maxlength="30"
+            class="flex-1 border border-slate-300 rounded-lg px-3 py-2.5 text-sm
+                   focus:outline-none focus:ring-2 focus:ring-emerald-400"
+            onkeydown="if(event.key==='Enter') addProduct()" />
+          <button onclick="addProduct()"
+            class="bg-emerald-600 text-white font-semibold px-4 py-2.5 rounded-lg
+                   hover:bg-emerald-700 transition text-sm whitespace-nowrap">
+            + 추가
+          </button>
+        </div>
+      </div>
+
+      <!-- 지점 관리 -->
+      <div class="bg-white rounded-xl shadow p-5">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="font-semibold text-slate-700 flex items-center gap-2 text-sm">
+            🏪 지점 관리
+          </h3>
+          <span id="branchCount" class="text-xs bg-indigo-100 text-indigo-700 font-semibold px-2 py-0.5 rounded-full"></span>
+        </div>
+        <ul id="branchManagerList" class="space-y-2 mb-4 max-h-72 overflow-y-auto pr-1"></ul>
+        <div class="flex gap-2 pt-3 border-t border-slate-100">
+          <input id="newBranchInput" type="text" placeholder="새 지점명 입력..."
+            maxlength="30"
+            class="flex-1 border border-slate-300 rounded-lg px-3 py-2.5 text-sm
+                   focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            onkeydown="if(event.key==='Enter') addBranch()" />
+          <button onclick="addBranch()"
+            class="bg-indigo-600 text-white font-semibold px-4 py-2.5 rounded-lg
+                   hover:bg-indigo-700 transition text-sm whitespace-nowrap">
+            + 추가
+          </button>
+        </div>
+      </div>
+
+      <!-- Supabase 초기 설정 안내 -->
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-xs text-amber-700 space-y-1">
+        <p class="font-semibold text-amber-800 mb-1">⚠️ 최초 설정 안내</p>
+        <p>Supabase SQL Editor에서 아래 테이블을 먼저 생성해야 합니다:</p>
+        <pre class="bg-white rounded p-2 mt-2 text-xs overflow-x-auto border border-amber-200">CREATE TABLE inventory_config (
+  key text PRIMARY KEY,
+  value jsonb NOT NULL
+);
+INSERT INTO inventory_config VALUES
+  ('branches','["서정리역점","동탄호수점","신영통점","동백역점","수원시청역점","기흥구청점","망포역점","권선점","지점9","지점10","지점11","지점12","지점13","지점14","지점15","지점16"]'),
+  ('products','["제본","코팅A4","코팅A3","L홀더","서류봉투"]');
+
+CREATE TABLE inventory_stock (
+  branch text,
+  product text,
+  initial_stock integer NOT NULL DEFAULT 0,
+  PRIMARY KEY (branch, product)
+);
+ALTER TABLE inventory_config DISABLE ROW LEVEL SECURITY;
+ALTER TABLE inventory_stock DISABLE ROW LEVEL SECURITY;</pre>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<!-- 재고 부족 경고 모달 -->
+<div id="warningModal"
+  class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+  <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-5">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="bg-red-100 rounded-full p-2">
+        <svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+        </svg>
+      </div>
+      <h3 class="font-bold text-slate-800">재고 부족 경고</h3>
+    </div>
+    <ul id="warningList" class="space-y-2 mb-4 max-h-52 overflow-y-auto"></ul>
+    <button onclick="document.getElementById('warningModal').classList.add('hidden')"
+      class="w-full bg-red-600 text-white font-semibold py-2.5 rounded-lg hover:bg-red-700 transition text-sm">
+      확인
+    </button>
+  </div>
+</div>
+
+<script>
+/* ── Supabase 설정 ─────────────────────────────────────────────── */
+const SB_URL = 'https://wbcfciiuiootbdezxfwy.supabase.co';
+const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndiY2ZjaWl1aW9vdGJkZXp4Znd5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc1MjkyMTQsImV4cCI6MjA5MzEwNTIxNH0.UV4ukUXuAYKAqq85B4FTHO2BtIOqPaBHgAJN5lqyU5s';
+const SB_HEADERS = {
+  'apikey': SB_KEY,
+  'Authorization': 'Bearer ' + SB_KEY,
+  'Content-Type': 'application/json',
+};
+
+async function sbFetch(path, opts = {}) {
+  const res = await fetch(SB_URL + path, { headers: SB_HEADERS, ...opts });
+  if (!res.ok) {
+    const t = await res.text();
+    throw new Error(t);
+  }
+  const text = await res.text();
+  return text ? JSON.parse(text) : null;
+}
+
+/* ── 전역 상태 ─────────────────────────────────────────────────── */
+const state = {
+  branches: [],
+  products: [],
+  soldMap: {},    // key: branch|product → sold qty
+  stockMap: {},   // key: branch|product → initial_stock
+  selectedBranch: null,
+  isSyncing: false,
+};
+
+/* ── 초기화 ────────────────────────────────────────────────────── */
+async function init() {
+  document.getElementById('syncEndDate').value = new Date().toISOString().slice(0, 10);
+  try {
+    await loadConfig();
+    buildInventoryBookmarklet();
+  } catch (e) {
+    showError('Supabase 연결 오류. inventory_config 테이블을 설정 탭의 SQL로 생성해주세요.');
+  }
+}
+
+async function loadConfig() {
+  const rows = await sbFetch('/rest/v1/inventory_config?select=key,value');
+  const cfg = {};
+  rows.forEach(r => { cfg[r.key] = r.value; });
+
+  state.branches = cfg.branches || [];
+  state.products = cfg.products || [];
+
+  populateBranchSelect();
+  renderBranchManager(state.branches);
+  renderProductManager(state.products);
+}
+
+function populateBranchSelect() {
+  const sel = document.getElementById('branchSelect');
+  const prev = sel.value;
+  sel.innerHTML = '<option value="">-- 지점을 선택하세요 --</option>';
+  state.branches.forEach(b => {
+    const opt = document.createElement('option');
+    opt.value = b; opt.textContent = b;
+    sel.appendChild(opt);
+  });
+  if (prev && state.branches.includes(prev)) sel.value = prev;
+}
+
+/* ── 탭 전환 ───────────────────────────────────────────────────── */
+function switchTab(name, btn) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => {
+    b.classList.remove('active'); b.classList.add('text-slate-500');
+  });
+  document.getElementById('panel-' + name).classList.add('active');
+  if (btn) { btn.classList.add('active'); btn.classList.remove('text-slate-500'); }
+  if (name === 'dashboard') loadDashboard();
+}
+
+/* ── 지점 선택 ─────────────────────────────────────────────────── */
+async function onBranchChange(branch) {
+  state.selectedBranch = branch;
+  const area = document.getElementById('inventoryArea');
+  const msg  = document.getElementById('noBranchMsg');
+  if (!branch) {
+    area.classList.add('hidden'); msg.classList.remove('hidden'); return;
+  }
+  area.classList.remove('hidden'); msg.classList.add('hidden');
+  document.getElementById('inventoryTitle').textContent = branch + ' 재고 현황';
+  await loadInventory(branch);
+}
+
+/* ── 재고 데이터 로드 ───────────────────────────────────────────── */
+async function loadInventory(branch) {
+  try {
+    const stockRows = await sbFetch(
+      `/rest/v1/inventory_stock?branch=eq.${encodeURIComponent(branch)}&select=product,initial_stock`
+    );
+    stockRows.forEach(r => { state.stockMap[branch + '|' + r.product] = r.initial_stock; });
+    renderInventoryTable(branch);
+  } catch (e) {
+    showError('재고 데이터 로드 오류: ' + e.message);
+  }
+}
+
+function renderInventoryTable(branch) {
+  const tbody = document.getElementById('inventoryTbody');
+  tbody.innerHTML = '';
+  let initTotal = 0, soldTotal = 0, remainTotal = 0;
+  const warnings = [];
+
+  state.products.forEach(product => {
+    const key = branch + '|' + product;
+    const initialStock = state.stockMap[key] || 0;
+    const sold = state.soldMap[key] || 0;
+    const remaining = initialStock - sold;
+
+    initTotal += initialStock; soldTotal += sold; remainTotal += remaining;
+    const isDanger = remaining <= 0;
+    const isWarning = remaining > 0 && remaining <= 10;
+    if (isDanger) warnings.push({ branch, product, remaining });
+
+    const tr = document.createElement('tr');
+    tr.className = (isDanger ? 'row-danger' : isWarning ? 'row-warning' : '') + ' hover:bg-slate-50';
+    tr.innerHTML = `
+      <td class="px-3 sm:px-5 py-3 font-medium text-sm">${esc(product)}</td>
+      <td class="px-3 sm:px-5 py-3 text-center">
+        <div class="flex items-center justify-center gap-1">
+          <input type="number" min="0" value="${initialStock}"
+            class="w-16 sm:w-20 border border-slate-300 rounded px-1.5 py-1.5 text-center text-sm
+                   focus:outline-none focus:ring-2 focus:ring-indigo-300"
+            onkeydown="if(event.key==='Enter') saveStock('${esc(branch)}','${esc(product)}',this)"
+            data-branch="${esc(branch)}" data-product="${esc(product)}" />
+          <button onclick="saveStock('${esc(branch)}','${esc(product)}',this.previousElementSibling)"
+            class="text-xs bg-indigo-100 text-indigo-700 hover:bg-indigo-200 px-2 py-1.5 rounded transition">
+            저장
+          </button>
+        </div>
+      </td>
+      <td class="px-3 sm:px-5 py-3 text-center text-slate-600 text-sm">${sold.toLocaleString()}</td>
+      <td class="px-3 sm:px-5 py-3 text-center font-bold text-base
+                 ${isDanger ? 'text-red-600' : isWarning ? 'text-amber-600' : 'text-emerald-600'}">
+        ${remaining.toLocaleString()}
+      </td>
+      <td class="px-3 sm:px-5 py-3 text-center hidden sm:table-cell">
+        ${isDanger
+          ? '<span class="bg-red-100 text-red-700 text-xs font-semibold px-2 py-0.5 rounded-full">⚠ 부족</span>'
+          : isWarning
+          ? '<span class="bg-amber-100 text-amber-700 text-xs font-semibold px-2 py-0.5 rounded-full">⚡ 소량</span>'
+          : '<span class="bg-emerald-100 text-emerald-700 text-xs font-semibold px-2 py-0.5 rounded-full">✓ 정상</span>'}
+      </td>`;
+    tbody.appendChild(tr);
+  });
+
+  const sumTr = document.createElement('tr');
+  sumTr.className = 'bg-slate-100 font-semibold border-t-2 border-slate-300';
+  sumTr.innerHTML = `
+    <td class="px-3 sm:px-5 py-3 text-sm">합계</td>
+    <td class="px-3 sm:px-5 py-3 text-center text-sm">${initTotal.toLocaleString()}</td>
+    <td class="px-3 sm:px-5 py-3 text-center text-sm">${soldTotal.toLocaleString()}</td>
+    <td class="px-3 sm:px-5 py-3 text-center text-indigo-700 text-sm">${remainTotal.toLocaleString()}</td>
+    <td class="hidden sm:table-cell"></td>`;
+  tbody.appendChild(sumTr);
+
+  const summary = document.getElementById('branchStockSummary');
+  summary.classList.remove('hidden');
+  document.getElementById('branchInitTotal').textContent      = initTotal.toLocaleString();
+  document.getElementById('branchSoldTotal').textContent      = soldTotal.toLocaleString();
+  document.getElementById('branchRemainingTotal').textContent = remainTotal.toLocaleString();
+
+  if (warnings.length > 0) {
+    const list = document.getElementById('warningList');
+    list.innerHTML = '';
+    warnings.forEach(item => {
+      const li = document.createElement('li');
+      li.className = 'bg-red-50 border border-red-200 rounded-lg px-3 py-2 flex justify-between items-center';
+      li.innerHTML = `<span class="text-sm font-medium text-red-800">${esc(item.branch)} · ${esc(item.product)}</span>
+                      <span class="text-sm font-bold text-red-600">${item.remaining}개</span>`;
+      list.appendChild(li);
+    });
+    document.getElementById('warningModal').classList.remove('hidden');
+  }
+}
+
+/* ── 기초 재고 저장 ─────────────────────────────────────────────── */
+async function saveStock(branch, product, input) {
+  const value = parseInt(input.value, 10);
+  if (isNaN(value) || value < 0) { showError('0 이상의 정수를 입력하세요.'); return; }
+  try {
+    await sbFetch('/rest/v1/inventory_stock?on_conflict=branch,product', {
+      method: 'POST',
+      headers: { ...SB_HEADERS, 'Prefer': 'resolution=merge-duplicates,return=minimal' },
+      body: JSON.stringify({ branch, product, initial_stock: value }),
+    });
+    state.stockMap[branch + '|' + product] = value;
+    showSuccess(`${product} 기초재고 ${value.toLocaleString()} 저장 완료`);
+    renderInventoryTable(branch);
+  } catch (e) {
+    showError('저장 오류: ' + e.message);
+  }
+}
+
+/* ── 동기화 (Supabase product_sales 조회) ──────────────────────── */
+async function syncData() {
+  if (state.isSyncing) return;
+  state.isSyncing = true;
+  const btn = document.getElementById('syncBtn');
+  const icon = document.getElementById('syncIcon');
+  btn.disabled = true; icon.classList.add('spinner');
+
+  try {
+    const startDate = document.getElementById('syncStartDate').value;
+    const endDate   = document.getElementById('syncEndDate').value;
+    const sales = await sbFetch(
+      `/rest/v1/product_sales?sale_date=gte.${startDate}&sale_date=lte.${endDate}&select=branch,product,quantity&limit=100000`
+    );
+
+    state.soldMap = {};
+    let matched = 0;
+    sales.forEach(row => {
+      const b = (row.branch || '').trim();
+      const p = (row.product || '').trim();
+      const q = parseInt(row.quantity) || 0;
+      if (state.branches.includes(b) && state.products.includes(p) && q > 0) {
+        const key = b + '|' + p;
+        state.soldMap[key] = (state.soldMap[key] || 0) + q;
+        matched++;
+      }
+    });
+
+    const now = new Date().toLocaleString('ko-KR');
+    document.getElementById('lastSyncedTime').textContent = now;
+    document.getElementById('lastSyncedLabel').classList.remove('hidden');
+    showSuccess(`${startDate} ~ ${endDate} / ${sales.length}건 조회, ${matched}건 매칭`);
+
+    if (state.selectedBranch) renderInventoryTable(state.selectedBranch);
+    if (document.getElementById('panel-dashboard').classList.contains('active')) loadDashboard();
+  } catch (e) {
+    showError('동기화 오류: ' + e.message);
+  } finally {
+    state.isSyncing = false;
+    btn.disabled = false; icon.classList.remove('spinner');
+  }
+}
+
+/* ── 대시보드 ───────────────────────────────────────────────────── */
+async function loadDashboard() {
+  try {
+    const stockRows = await sbFetch('/rest/v1/inventory_stock?select=branch,product,initial_stock&limit=10000');
+    stockRows.forEach(r => { state.stockMap[r.branch + '|' + r.product] = r.initial_stock; });
+
+    const tbody = document.getElementById('dashboardTbody');
+    tbody.innerHTML = '';
+    let grandInit = 0, grandSold = 0, grandRemain = 0;
+
+    state.branches.forEach(branch => {
+      let bInit = 0, bSold = 0;
+      state.products.forEach(p => {
+        bInit += state.stockMap[branch + '|' + p] || 0;
+        bSold += state.soldMap[branch + '|' + p] || 0;
+      });
+      const bRemain = bInit - bSold;
+      grandInit += bInit; grandSold += bSold; grandRemain += bRemain;
+
+      const isDanger = bRemain <= 0;
+      const tr = document.createElement('tr');
+      tr.className = (isDanger ? 'row-danger' : '') + ' hover:bg-slate-50 cursor-pointer';
+      tr.onclick = () => {
+        document.getElementById('branchSelect').value = branch;
+        onBranchChange(branch);
+        switchTab('inventory', document.querySelectorAll('.tab-btn')[0]);
+      };
+      tr.innerHTML = `
+        <td class="px-3 sm:px-4 py-3 font-medium text-sm">${esc(branch)}</td>
+        <td class="px-3 sm:px-4 py-3 text-center text-sm">${bInit.toLocaleString()}</td>
+        <td class="px-3 sm:px-4 py-3 text-center text-amber-600 font-medium text-sm">${bSold.toLocaleString()}</td>
+        <td class="px-3 sm:px-4 py-3 text-center font-bold text-sm
+                   ${isDanger ? 'text-red-600' : bRemain <= 20 ? 'text-amber-600' : 'text-emerald-600'}">
+          ${bRemain.toLocaleString()}${isDanger ? ' ⚠' : ''}
+        </td>`;
+      tbody.appendChild(tr);
+    });
+
+    document.getElementById('dashGrandInitial').textContent   = grandInit.toLocaleString();
+    document.getElementById('dashGrandSold').textContent      = grandSold.toLocaleString();
+    document.getElementById('dashGrandRemaining').textContent = grandRemain.toLocaleString();
+
+    const footTr = document.createElement('tr');
+    footTr.className = 'bg-indigo-50 font-bold border-t-2 border-indigo-200 text-indigo-700';
+    footTr.innerHTML = `
+      <td class="px-3 sm:px-4 py-3 text-sm">전체 합계</td>
+      <td class="px-3 sm:px-4 py-3 text-center text-sm">${grandInit.toLocaleString()}</td>
+      <td class="px-3 sm:px-4 py-3 text-center text-sm">${grandSold.toLocaleString()}</td>
+      <td class="px-3 sm:px-4 py-3 text-center text-sm">${grandRemain.toLocaleString()}</td>`;
+    tbody.appendChild(footTr);
+  } catch (e) {
+    showError('대시보드 로드 오류: ' + e.message);
+  }
+}
+
+/* ── 설정 저장 (inventory_config) ──────────────────────────────── */
+async function saveConfig(key, value) {
+  await sbFetch('/rest/v1/inventory_config?on_conflict=key', {
+    method: 'POST',
+    headers: { ...SB_HEADERS, 'Prefer': 'resolution=merge-duplicates,return=minimal' },
+    body: JSON.stringify({ key, value }),
+  });
+}
+
+/* ── 상품 관리 ─────────────────────────────────────────────────── */
+function renderProductManager(products) {
+  const list = document.getElementById('productManagerList');
+  const count = document.getElementById('productCount');
+  if (!list) return;
+  count.textContent = `총 ${products.length}개`;
+  list.innerHTML = '';
+  products.forEach((name, idx) => {
+    const li = document.createElement('li');
+    li.id = `product-item-${idx}`;
+    li.className = 'flex items-center gap-2 bg-slate-50 rounded-lg px-3 py-2';
+    li.innerHTML = `
+      <span class="text-xs text-slate-400 w-5 flex-shrink-0">${idx + 1}</span>
+      <span class="flex-1 text-sm font-medium text-slate-700 product-label">${esc(name)}</span>
+      <input type="text" value="${esc(name)}" maxlength="30"
+        class="hidden flex-1 border border-emerald-300 rounded px-2 py-1 text-sm
+               focus:outline-none focus:ring-2 focus:ring-emerald-400 product-input" />
+      <button onclick="startProductEdit(${idx},'${esc(name)}')"
+        class="edit-btn text-xs bg-slate-200 hover:bg-slate-300 text-slate-600 px-2 py-1.5 rounded">수정</button>
+      <button onclick="saveProductEdit(${idx},'${esc(name)}')"
+        class="save-btn hidden text-xs bg-emerald-600 hover:bg-emerald-700 text-white px-2 py-1.5 rounded">저장</button>
+      <button onclick="cancelProductEdit(${idx})"
+        class="cancel-btn hidden text-xs bg-slate-200 hover:bg-slate-300 text-slate-600 px-2 py-1.5 rounded">취소</button>
+      <button onclick="deleteProduct('${esc(name)}')"
+        class="text-xs bg-red-100 hover:bg-red-200 text-red-600 px-2 py-1.5 rounded">삭제</button>`;
+    list.appendChild(li);
+  });
+}
+
+function startProductEdit(idx) {
+  const li = document.getElementById(`product-item-${idx}`);
+  li.querySelector('.product-label').classList.add('hidden');
+  li.querySelector('.product-input').classList.remove('hidden');
+  li.querySelector('.product-input').focus();
+  li.querySelector('.edit-btn').classList.add('hidden');
+  li.querySelector('.save-btn').classList.remove('hidden');
+  li.querySelector('.cancel-btn').classList.remove('hidden');
+}
+
+function cancelProductEdit(idx) {
+  const li = document.getElementById(`product-item-${idx}`);
+  li.querySelector('.product-label').classList.remove('hidden');
+  li.querySelector('.product-input').classList.add('hidden');
+  li.querySelector('.edit-btn').classList.remove('hidden');
+  li.querySelector('.save-btn').classList.add('hidden');
+  li.querySelector('.cancel-btn').classList.add('hidden');
+}
+
+async function saveProductEdit(idx, oldName) {
+  const li = document.getElementById(`product-item-${idx}`);
+  const newName = li.querySelector('.product-input').value.trim();
+  if (!newName) { showError('상품명을 입력하세요.'); return; }
+  if (newName === oldName) { cancelProductEdit(idx); return; }
+  const products = [...state.products];
+  const i = products.indexOf(oldName);
+  if (i < 0) return;
+  products[i] = newName;
+  try {
+    await saveConfig('products', products);
+    state.products = products;
+    renderProductManager(products);
+    showSuccess(`"${oldName}" → "${newName}" 수정 완료`);
+  } catch (e) { showError('수정 오류: ' + e.message); }
+}
+
+async function addProduct() {
+  const input = document.getElementById('newProductInput');
+  const name = input.value.trim();
+  if (!name) { showError('상품명을 입력하세요.'); return; }
+  if (state.products.includes(name)) { showError('이미 존재하는 상품명입니다.'); return; }
+  const products = [...state.products, name];
+  try {
+    await saveConfig('products', products);
+    state.products = products;
+    renderProductManager(products);
+    input.value = '';
+    showSuccess(`"${name}" 상품 추가 완료`);
+  } catch (e) { showError('추가 오류: ' + e.message); }
+}
+
+async function deleteProduct(name) {
+  if (!confirm(`"${name}" 상품을 삭제하시겠습니까?`)) return;
+  const products = state.products.filter(p => p !== name);
+  try {
+    await saveConfig('products', products);
+    state.products = products;
+    renderProductManager(products);
+    showSuccess(`"${name}" 삭제 완료`);
+    if (state.selectedBranch) renderInventoryTable(state.selectedBranch);
+  } catch (e) { showError('삭제 오류: ' + e.message); }
+}
+
+/* ── 지점 관리 ─────────────────────────────────────────────────── */
+function renderBranchManager(branches) {
+  const list = document.getElementById('branchManagerList');
+  const count = document.getElementById('branchCount');
+  if (!list) return;
+  count.textContent = `총 ${branches.length}개`;
+  list.innerHTML = '';
+  branches.forEach((name, idx) => {
+    const li = document.createElement('li');
+    li.id = `branch-item-${idx}`;
+    li.className = 'flex items-center gap-2 bg-slate-50 rounded-lg px-3 py-2';
+    li.innerHTML = `
+      <span class="text-xs text-slate-400 w-5 flex-shrink-0">${idx + 1}</span>
+      <span class="flex-1 text-sm font-medium text-slate-700 branch-label">${esc(name)}</span>
+      <input type="text" value="${esc(name)}" maxlength="30"
+        class="hidden flex-1 border border-indigo-300 rounded px-2 py-1 text-sm
+               focus:outline-none focus:ring-2 focus:ring-indigo-400 branch-input" />
+      <button onclick="startBranchEdit(${idx},'${esc(name)}')"
+        class="edit-btn text-xs bg-slate-200 hover:bg-slate-300 text-slate-600 px-2 py-1.5 rounded">수정</button>
+      <button onclick="saveBranchEdit(${idx},'${esc(name)}')"
+        class="save-btn hidden text-xs bg-indigo-600 hover:bg-indigo-700 text-white px-2 py-1.5 rounded">저장</button>
+      <button onclick="cancelBranchEdit(${idx})"
+        class="cancel-btn hidden text-xs bg-slate-200 hover:bg-slate-300 text-slate-600 px-2 py-1.5 rounded">취소</button>
+      <button onclick="deleteBranch('${esc(name)}')"
+        class="text-xs bg-red-100 hover:bg-red-200 text-red-600 px-2 py-1.5 rounded">삭제</button>`;
+    list.appendChild(li);
+  });
+}
+
+function startBranchEdit(idx) {
+  const li = document.getElementById(`branch-item-${idx}`);
+  li.querySelector('.branch-label').classList.add('hidden');
+  li.querySelector('.branch-input').classList.remove('hidden');
+  li.querySelector('.branch-input').focus();
+  li.querySelector('.edit-btn').classList.add('hidden');
+  li.querySelector('.save-btn').classList.remove('hidden');
+  li.querySelector('.cancel-btn').classList.remove('hidden');
+}
+
+function cancelBranchEdit(idx) {
+  const li = document.getElementById(`branch-item-${idx}`);
+  li.querySelector('.branch-label').classList.remove('hidden');
+  li.querySelector('.branch-input').classList.add('hidden');
+  li.querySelector('.edit-btn').classList.remove('hidden');
+  li.querySelector('.save-btn').classList.add('hidden');
+  li.querySelector('.cancel-btn').classList.add('hidden');
+}
+
+async function saveBranchEdit(idx, oldName) {
+  const li = document.getElementById(`branch-item-${idx}`);
+  const newName = li.querySelector('.branch-input').value.trim();
+  if (!newName) { showError('지점명을 입력하세요.'); return; }
+  if (newName === oldName) { cancelBranchEdit(idx); return; }
+  const branches = [...state.branches];
+  const i = branches.indexOf(oldName);
+  if (i < 0) return;
+  branches[i] = newName;
+  try {
+    await saveConfig('branches', branches);
+    state.branches = branches;
+    populateBranchSelect();
+    renderBranchManager(branches);
+    showSuccess(`"${oldName}" → "${newName}" 수정 완료`);
+  } catch (e) { showError('수정 오류: ' + e.message); }
+}
+
+async function addBranch() {
+  const input = document.getElementById('newBranchInput');
+  const name = input.value.trim();
+  if (!name) { showError('지점명을 입력하세요.'); return; }
+  if (state.branches.includes(name)) { showError('이미 존재하는 지점명입니다.'); return; }
+  const branches = [...state.branches, name];
+  try {
+    await saveConfig('branches', branches);
+    state.branches = branches;
+    populateBranchSelect();
+    renderBranchManager(branches);
+    input.value = '';
+    showSuccess(`"${name}" 지점 추가 완료`);
+  } catch (e) { showError('추가 오류: ' + e.message); }
+}
+
+async function deleteBranch(name) {
+  if (!confirm(`"${name}" 지점을 삭제하시겠습니까?`)) return;
+  const branches = state.branches.filter(b => b !== name);
+  try {
+    await saveConfig('branches', branches);
+    state.branches = branches;
+    populateBranchSelect();
+    renderBranchManager(branches);
+    showSuccess(`"${name}" 삭제 완료`);
+    if (state.selectedBranch === name) {
+      state.selectedBranch = null;
+      document.getElementById('branchSelect').value = '';
+      onBranchChange('');
+    }
+  } catch (e) { showError('삭제 오류: ' + e.message); }
+}
+
+/* ── 북마클릿 ──────────────────────────────────────────────────── */
+function buildInventoryBookmarklet() {
+  const SU = SB_URL, SK = SB_KEY;
+  const code = `javascript:(function(){var SU='${SU}',SK='${SK}';function nb(s){return String(s).trim().replace(/^프린트샵미니_/,'');}function np(s){var v=String(s).trim().toLowerCase();if(v.includes('서류봉투')||v.includes('각대봉투'))return '서류봉투';if(v.includes('코팅')&&v.includes('a4'))return '코팅A4';if(v.includes('코팅')&&v.includes('a3'))return '코팅A3';if(v.includes('제본'))return '제본';if((v.includes('l')||v.includes('엘'))&&v.includes('홀더'))return 'L홀더';return s.trim();}var params=new URLSearchParams(window.location.search);var sd=params.get('startDate')||'';var ed=params.get('endDate')||'';if(!sd||!ed){alert('날짜를 설정하고 검색 후 실행하세요.');return;}var exportUrl='/tossOrderItem/export.xls'+window.location.search;alert('📡 엑셀 다운로드 중...\\n'+sd+' ~ '+ed);fetch(exportUrl,{credentials:'include'}).then(function(r){return r.arrayBuffer();}).then(function(buf){if(typeof XLSX==='undefined'){var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js';s.onload=function(){proc(buf,sd,ed);};document.head.appendChild(s);}else{proc(buf,sd,ed);}}).catch(function(e){alert('❌ 오류: '+e.message);});function proc(buf,sd,ed){var wb=XLSX.read(buf,{type:'array',cellDates:true});var rows=XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]],{header:1,defval:''});var h=rows[0].map(function(c){return String(c).trim();});var iB=h.indexOf('BranchName'),iI=h.indexOf('ItemName'),iQ=h.indexOf('Quantity'),iS=h.indexOf('OrderState'),iD=h.indexOf('ApprovedAt');if(iB<0||iI<0||iQ<0){alert('컬럼 오류: '+h.join(', '));return;}var data={};for(var i=1;i<rows.length;i++){var r=rows[i];var state=iS>=0?String(r[iS]||'').trim().toUpperCase():'COMPLETED';if(state&&state!=='COMPLETED')continue;var branch=nb(String(r[iB]||''));var product=np(String(r[iI]||''));var qty=parseInt(String(r[iQ]||'0').replace(/,/g,''))||0;if(!branch||!product||qty<=0)continue;var saleDate=sd;if(iD>=0){var dv=r[iD];if(dv instanceof Date){saleDate=dv.getFullYear()+'-'+String(dv.getMonth()+1).padStart(2,'0')+'-'+String(dv.getDate()).padStart(2,'0');}else{var dm=String(dv).match(/(\\d{4})[-.\\/](\\d{1,2})[-.\\/](\\d{1,2})/);if(dm)saleDate=dm[1]+'-'+dm[2].padStart(2,'0')+'-'+dm[3].padStart(2,'0');}}var key=saleDate+'|'+branch+'|'+product;if(!data[key])data[key]={sale_date:saleDate,branch:branch,product:product,quantity:0};data[key].quantity+=qty;}var recs=Object.values(data);if(!recs.length){alert('COMPLETED 데이터가 없습니다.');return;}if(!confirm('Supabase 업로드\\n'+recs.length+'개\\n'+sd+' ~ '+ed))return;fetch(SU+'/rest/v1/product_sales?on_conflict=sale_date,branch,product',{method:'POST',headers:{'apikey':SK,'Authorization':'Bearer '+SK,'Content-Type':'application/json','Prefer':'resolution=merge-duplicates,return=minimal'},body:JSON.stringify(recs)}).then(function(r){if(r.ok||r.status===201||r.status===204){alert('✅ 완료! '+recs.length+'개 ('+sd+' ~ '+ed+')');}else{r.text().then(function(t){alert('❌ 오류: '+t);});}}).catch(function(e){alert('❌ '+e.message);});}})();`;
+  document.getElementById('inventoryBookmarklet').href = code;
+  document.getElementById('bookmarkletCodeArea').value = code;
+}
+
+/* ── 알림 배너 ─────────────────────────────────────────────────── */
+function showError(msg) {
+  document.getElementById('errorText').textContent = msg;
+  document.getElementById('errorBanner').classList.remove('hidden');
+  document.getElementById('successBanner').classList.add('hidden');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+function hideError() { document.getElementById('errorBanner').classList.add('hidden'); }
+function showSuccess(msg) {
+  document.getElementById('successText').textContent = msg;
+  document.getElementById('successBanner').classList.remove('hidden');
+  document.getElementById('errorBanner').classList.add('hidden');
+  setTimeout(hideSuccess, 4000);
+}
+function hideSuccess() { document.getElementById('successBanner').classList.add('hidden'); }
+
+function esc(str) {
+  return String(str)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+
+init();
+</script>
+</body>
+</html>
