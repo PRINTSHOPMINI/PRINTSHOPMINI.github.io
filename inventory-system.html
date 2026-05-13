@@ -393,13 +393,13 @@ async function loadConfig() {
 function populateBranchSelect() {
   const sel = document.getElementById('branchSelect');
   const prev = sel.value;
-  sel.innerHTML = '<option value="">-- 지점을 선택하세요 --</option><option value="__all__">📊 전체 지점</option>';
+  sel.innerHTML = '<option value="">-- 지점을 선택하세요 --</option><option value="__all__">📊 전체 현황 보기</option><option value="전체 지점">📦 전체 지점 기초재고</option>';
   state.branches.forEach(b => {
     const opt = document.createElement('option');
     opt.value = b; opt.textContent = b;
     sel.appendChild(opt);
   });
-  if (prev && (prev === '__all__' || state.branches.includes(prev))) sel.value = prev;
+  if (prev && (prev === '__all__' || prev === '전체 지점' || state.branches.includes(prev))) sel.value = prev;
 }
 
 /* ── 탭 전환 ───────────────────────────────────────────────────── */
