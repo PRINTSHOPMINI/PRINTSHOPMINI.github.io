@@ -492,13 +492,15 @@ async function init() {
 
 function populateBranchSelect() {
   const sel = document.getElementById('branchSelect');
-  sel.innerHTML = '<option value="">-- 지점을 선택하세요 --</option>';
+  const prev = sel.value;
+  sel.innerHTML = '<option value="">-- 지점을 선택하세요 --</option><option value="__all__">📊 전체 지점</option>';
   state.branches.forEach(b => {
     const opt = document.createElement('option');
     opt.value = b;
     opt.textContent = b;
     sel.appendChild(opt);
   });
+  if (prev && (prev === '__all__' || state.branches.includes(prev))) sel.value = prev;
 }
 
 /* ── 탭 전환 ───────────────────────────────────────────────────── */
@@ -526,11 +528,92 @@ async function onBranchChange(branch) {
   }
   area.classList.remove('hidden');
   msg.classList.add('hidden');
-  document.getElementById('inventoryTitle').textContent = branch + ' 재고 현황';
-  await loadInventory(branch);
+  if (branch === '__all__') {
+    document.getElementById('inventoryTitle').textContent = '전체 지점 재고 현황';
+    await loadAllInventory();
+  } else {
+    document.getElementById('inventoryTitle').textContent = branch + ' 재고 현황';
+    await loadInventory(branch);
+  }
 }
 
 /* ── 재고 조회 & 렌더 ───────────────────────────────────────────── */
+async function loadAllInventory() {
+  try {
+    const data = await apiFetch('/api/dashboard');
+    renderAllBranchesTable(data.branches);
+    document.getElementById('branchStockSummary').classList.remove('hidden');
+    document.getElementById('branchInitTotal').textContent      = data.grand_initial.toLocaleString();
+    document.getElementById('branchSoldTotal').textContent      = data.grand_sold.toLocaleString();
+    document.getElementById('branchRemainingTotal').textContent = data.grand_remaining.toLocaleString();
+  } catch (e) {
+    showError('전체 재고 데이터를 불러오지 못했습니다.');
+  }
+}
+
+function renderAllBranchesTable(branches) {
+  const tbody = document.getElementById('inventoryTbody');
+  tbody.innerHTML = '';
+  const warnings = [];
+
+  branches.forEach(b => {
+    const headerTr = document.createElement('tr');
+    headerTr.className = 'bg-indigo-50 border-t-2 border-indigo-200';
+    headerTr.innerHTML = `<td colspan="5" class="px-5 py-2 font-semibold text-indigo-700 text-sm">🏪 ${esc(b.branch)}</td>`;
+    tbody.appendChild(headerTr);
+
+    b.products.forEach(row => {
+      const isDanger  = row.remaining <= 0;
+      const isWarning = row.remaining > 0 && row.remaining <= 10;
+      if (isDanger) warnings.push({ branch: b.branch, product: row.product, remaining: row.remaining });
+
+      const tr = document.createElement('tr');
+      tr.className = (isDanger ? 'row-danger' : isWarning ? 'row-warning' : '') + ' hover:bg-slate-50';
+      tr.innerHTML = `
+        <td class="px-5 py-2.5 text-sm pl-10 text-slate-600">${esc(row.product)}</td>
+        <td class="px-5 py-2.5 text-center text-sm">${row.initial_stock.toLocaleString()}</td>
+        <td class="px-5 py-2.5 text-center text-sm">${row.sold.toLocaleString()}</td>
+        <td class="px-5 py-2.5 text-center font-bold text-sm
+                   ${isDanger ? 'text-red-600' : isWarning ? 'text-amber-600' : 'text-emerald-600'}">
+          ${row.remaining.toLocaleString()}
+        </td>
+        <td class="px-5 py-2.5 text-center">
+          ${isDanger
+            ? '<span class="bg-red-100 text-red-700 text-xs font-semibold px-2 py-0.5 rounded-full">⚠ 부족</span>'
+            : isWarning
+            ? '<span class="bg-amber-100 text-amber-700 text-xs font-semibold px-2 py-0.5 rounded-full">⚡ 소량</span>'
+            : '<span class="bg-emerald-100 text-emerald-700 text-xs font-semibold px-2 py-0.5 rounded-full">✓ 정상</span>'}
+        </td>`;
+      tbody.appendChild(tr);
+    });
+
+    const subTr = document.createElement('tr');
+    subTr.className = 'bg-slate-50 font-semibold border-t border-slate-200';
+    subTr.innerHTML = `
+      <td class="px-5 py-2 text-xs text-slate-500 pl-10">지점 합계</td>
+      <td class="px-5 py-2 text-center text-sm">${b.total_initial.toLocaleString()}</td>
+      <td class="px-5 py-2 text-center text-sm">${b.total_sold.toLocaleString()}</td>
+      <td class="px-5 py-2 text-center text-sm text-indigo-700">${b.total_remaining.toLocaleString()}</td>
+      <td></td>`;
+    tbody.appendChild(subTr);
+  });
+
+  const grandInit   = branches.reduce((s, b) => s + b.total_initial, 0);
+  const grandSold   = branches.reduce((s, b) => s + b.total_sold, 0);
+  const grandRemain = branches.reduce((s, b) => s + b.total_remaining, 0);
+  const grandTr = document.createElement('tr');
+  grandTr.className = 'bg-indigo-100 font-bold border-t-2 border-indigo-300 text-indigo-800';
+  grandTr.innerHTML = `
+    <td class="px-5 py-3 text-sm">전체 합계</td>
+    <td class="px-5 py-3 text-center text-sm">${grandInit.toLocaleString()}</td>
+    <td class="px-5 py-3 text-center text-sm">${grandSold.toLocaleString()}</td>
+    <td class="px-5 py-3 text-center text-sm">${grandRemain.toLocaleString()}</td>
+    <td></td>`;
+  tbody.appendChild(grandTr);
+
+  if (warnings.length > 0) showWarningModal(warnings);
+}
+
 async function loadInventory(branch) {
   try {
     const rows = await apiFetch(`/api/inventory?branch=${encodeURIComponent(branch)}`);
@@ -648,7 +731,8 @@ async function syncData() {
       document.getElementById('lastSyncedLabel').classList.remove('hidden');
       showSuccess(res.message);
 
-      if (state.selectedBranch) await loadInventory(state.selectedBranch);
+      if (state.selectedBranch === '__all__') await loadAllInventory();
+      else if (state.selectedBranch) await loadInventory(state.selectedBranch);
       const dashPanel = document.getElementById('panel-dashboard');
       if (dashPanel.classList.contains('active')) await loadDashboard();
     } else {

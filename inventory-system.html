@@ -383,13 +383,13 @@ async function loadConfig() {
 function populateBranchSelect() {
   const sel = document.getElementById('branchSelect');
   const prev = sel.value;
-  sel.innerHTML = '<option value="">-- 지점을 선택하세요 --</option>';
+  sel.innerHTML = '<option value="">-- 지점을 선택하세요 --</option><option value="__all__">📊 전체 지점</option>';
   state.branches.forEach(b => {
     const opt = document.createElement('option');
     opt.value = b; opt.textContent = b;
     sel.appendChild(opt);
   });
-  if (prev && state.branches.includes(prev)) sel.value = prev;
+  if (prev && (prev === '__all__' || state.branches.includes(prev))) sel.value = prev;
 }
 
 /* ── 탭 전환 ───────────────────────────────────────────────────── */
@@ -412,11 +412,114 @@ async function onBranchChange(branch) {
     area.classList.add('hidden'); msg.classList.remove('hidden'); return;
   }
   area.classList.remove('hidden'); msg.classList.add('hidden');
-  document.getElementById('inventoryTitle').textContent = branch + ' 재고 현황';
-  await loadInventory(branch);
+  if (branch === '__all__') {
+    document.getElementById('inventoryTitle').textContent = '전체 지점 재고 현황';
+    await loadAllInventory();
+  } else {
+    document.getElementById('inventoryTitle').textContent = branch + ' 재고 현황';
+    await loadInventory(branch);
+  }
 }
 
 /* ── 재고 데이터 로드 ───────────────────────────────────────────── */
+async function loadAllInventory() {
+  try {
+    const stockRows = await sbFetch('/rest/v1/inventory_stock?select=branch,product,initial_stock&limit=10000');
+    stockRows.forEach(r => { state.stockMap[r.branch + '|' + r.product] = r.initial_stock; });
+    renderAllBranchesTable();
+  } catch (e) {
+    showError('전체 재고 로드 오류: ' + e.message);
+  }
+}
+
+function renderAllBranchesTable() {
+  const tbody = document.getElementById('inventoryTbody');
+  tbody.innerHTML = '';
+  let grandInit = 0, grandSold = 0, grandRemain = 0;
+  const warnings = [];
+
+  state.branches.forEach(branch => {
+    let bInit = 0, bSold = 0;
+
+    const headerTr = document.createElement('tr');
+    headerTr.className = 'bg-indigo-50 border-t-2 border-indigo-200';
+    headerTr.innerHTML = `<td colspan="5" class="px-3 sm:px-5 py-2 font-semibold text-indigo-700 text-sm">🏪 ${esc(branch)}</td>`;
+    tbody.appendChild(headerTr);
+
+    state.products.forEach(product => {
+      const key = branch + '|' + product;
+      const initialStock = state.stockMap[key] || 0;
+      const sold = state.soldMap[key] || 0;
+      const remaining = initialStock - sold;
+      bInit += initialStock; bSold += sold;
+      const isDanger = remaining <= 0;
+      const isWarning = remaining > 0 && remaining <= 10;
+      if (isDanger) warnings.push({ branch, product, remaining });
+
+      const tr = document.createElement('tr');
+      tr.className = (isDanger ? 'row-danger' : isWarning ? 'row-warning' : '') + ' hover:bg-slate-50';
+      tr.innerHTML = `
+        <td class="px-3 sm:px-5 py-2.5 text-sm pl-6 sm:pl-10 text-slate-600">${esc(product)}</td>
+        <td class="px-3 sm:px-5 py-2.5 text-center text-sm">${initialStock.toLocaleString()}</td>
+        <td class="px-3 sm:px-5 py-2.5 text-center text-sm">${sold.toLocaleString()}</td>
+        <td class="px-3 sm:px-5 py-2.5 text-center font-bold text-sm
+                   ${isDanger ? 'text-red-600' : isWarning ? 'text-amber-600' : 'text-emerald-600'}">
+          ${remaining.toLocaleString()}
+        </td>
+        <td class="px-3 sm:px-5 py-2.5 text-center hidden sm:table-cell">
+          ${isDanger
+            ? '<span class="bg-red-100 text-red-700 text-xs font-semibold px-2 py-0.5 rounded-full">⚠ 부족</span>'
+            : isWarning
+            ? '<span class="bg-amber-100 text-amber-700 text-xs font-semibold px-2 py-0.5 rounded-full">⚡ 소량</span>'
+            : '<span class="bg-emerald-100 text-emerald-700 text-xs font-semibold px-2 py-0.5 rounded-full">✓ 정상</span>'}
+        </td>`;
+      tbody.appendChild(tr);
+    });
+
+    const bRemain = bInit - bSold;
+    grandInit += bInit; grandSold += bSold; grandRemain += bRemain;
+
+    const subTr = document.createElement('tr');
+    subTr.className = 'bg-slate-50 font-semibold border-t border-slate-200';
+    subTr.innerHTML = `
+      <td class="px-3 sm:px-5 py-2 text-xs text-slate-500 pl-6 sm:pl-10">지점 합계</td>
+      <td class="px-3 sm:px-5 py-2 text-center text-sm">${bInit.toLocaleString()}</td>
+      <td class="px-3 sm:px-5 py-2 text-center text-sm">${bSold.toLocaleString()}</td>
+      <td class="px-3 sm:px-5 py-2 text-center text-sm text-indigo-700">${bRemain.toLocaleString()}</td>
+      <td class="hidden sm:table-cell"></td>`;
+    tbody.appendChild(subTr);
+  });
+
+  const grandTr = document.createElement('tr');
+  grandTr.className = 'bg-indigo-100 font-bold border-t-2 border-indigo-300 text-indigo-800';
+  grandTr.innerHTML = `
+    <td class="px-3 sm:px-5 py-3 text-sm">전체 합계</td>
+    <td class="px-3 sm:px-5 py-3 text-center text-sm">${grandInit.toLocaleString()}</td>
+    <td class="px-3 sm:px-5 py-3 text-center text-sm">${grandSold.toLocaleString()}</td>
+    <td class="px-3 sm:px-5 py-3 text-center text-sm">${grandRemain.toLocaleString()}</td>
+    <td class="hidden sm:table-cell"></td>`;
+  tbody.appendChild(grandTr);
+
+  const summary = document.getElementById('branchStockSummary');
+  summary.classList.remove('hidden');
+  document.getElementById('branchInitTotal').textContent      = grandInit.toLocaleString();
+  document.getElementById('branchSoldTotal').textContent      = grandSold.toLocaleString();
+  document.getElementById('branchRemainingTotal').textContent = grandRemain.toLocaleString();
+
+  if (warnings.length > 0) {
+    const list = document.getElementById('warningList');
+    list.innerHTML = '';
+    warnings.forEach(item => {
+      const li = document.createElement('li');
+      li.className = 'bg-red-50 border border-red-200 rounded-lg px-3 py-2 flex justify-between items-center';
+      li.innerHTML = `<span class="text-sm font-medium text-red-800">${esc(item.branch)} · ${esc(item.product)}</span>
+                      <span class="text-sm font-bold text-red-600">${item.remaining}개</span>`;
+      list.appendChild(li);
+    });
+    document.getElementById('warningModal').classList.remove('hidden');
+  }
+}
+
 async function loadInventory(branch) {
   try {
     const stockRows = await sbFetch(
@@ -559,7 +662,8 @@ async function syncData() {
     document.getElementById('lastSyncedLabel').classList.remove('hidden');
     showSuccess(`${startDate} ~ ${endDate} / ${sales.length}건 조회, ${matched}건 매칭`);
 
-    if (state.selectedBranch) renderInventoryTable(state.selectedBranch);
+    if (state.selectedBranch === '__all__') renderAllBranchesTable();
+    else if (state.selectedBranch) renderInventoryTable(state.selectedBranch);
     if (document.getElementById('panel-dashboard').classList.contains('active')) loadDashboard();
   } catch (e) {
     showError('동기화 오류: ' + e.message);
