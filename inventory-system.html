@@ -148,6 +148,7 @@
               <tr>
                 <th class="px-5 py-3 text-left font-semibold">상품명</th>
                 <th class="px-5 py-3 text-center font-semibold">기초재고</th>
+                <th class="px-5 py-3 text-center font-semibold">추가입고</th>
                 <th class="px-5 py-3 text-center font-semibold">판매수량</th>
                 <th class="px-5 py-3 text-center font-semibold">남은재고</th>
                 <th class="px-5 py-3 text-center font-semibold">상태</th>
@@ -360,8 +361,9 @@ async function sbFetch(path, opts = {}) {
 const state = {
   branches: [],
   products: [],
-  soldMap: {},    // key: branch|product → sold qty
-  stockMap: {},   // key: branch|product → initial_stock
+  soldMap: {},     // key: branch|product → sold qty
+  stockMap: {},    // key: branch|product → initial_stock
+  inboundMap: {},  // key: branch|product → total inbound qty
   selectedBranch: null,
   isSyncing: false,
 };
@@ -434,8 +436,16 @@ async function onBranchChange(branch) {
 /* ── 재고 데이터 로드 ───────────────────────────────────────────── */
 async function loadAllInventory() {
   try {
-    const stockRows = await sbFetch('/rest/v1/inventory_stock?select=branch,product,initial_stock&limit=10000');
+    const [stockRows, inboundRows] = await Promise.all([
+      sbFetch('/rest/v1/inventory_stock?select=branch,product,initial_stock&limit=10000'),
+      sbFetch('/rest/v1/inventory_inbound?select=branch,product,quantity&limit=50000'),
+    ]);
     stockRows.forEach(r => { state.stockMap[r.branch + '|' + r.product] = r.initial_stock; });
+    state.inboundMap = {};
+    inboundRows.forEach(r => {
+      const key = r.branch + '|' + r.product;
+      state.inboundMap[key] = (state.inboundMap[key] || 0) + r.quantity;
+    });
     renderAllBranchesTable();
   } catch (e) {
     showError('전체 재고 로드 오류: ' + e.message);
@@ -446,16 +456,16 @@ function renderAllBranchesTable() {
   const tbody = document.getElementById('inventoryTbody');
   const cards = document.getElementById('inventoryCards');
   tbody.innerHTML = ''; cards.innerHTML = '';
-  let grandInit = 0, grandSold = 0, grandRemain = 0;
+  let grandInit = 0, grandInbound = 0, grandSold = 0, grandRemain = 0;
   const warnings = [];
 
   state.branches.forEach(branch => {
-    let bInit = 0, bSold = 0;
+    let bInit = 0, bInbound = 0, bSold = 0;
 
     /* ── 데스크톱: 지점 헤더 행 ── */
     const headerTr = document.createElement('tr');
     headerTr.className = 'bg-indigo-50 border-t-2 border-indigo-200';
-    headerTr.innerHTML = `<td colspan="5" class="px-5 py-2 font-semibold text-indigo-700 text-sm">🏪 ${esc(branch)}</td>`;
+    headerTr.innerHTML = `<td colspan="6" class="px-5 py-2 font-semibold text-indigo-700 text-sm">🏪 ${esc(branch)}</td>`;
     tbody.appendChild(headerTr);
 
     /* ── 모바일: 지점 섹션 카드 ── */
@@ -472,9 +482,10 @@ function renderAllBranchesTable() {
     state.products.forEach(product => {
       const key = branch + '|' + product;
       const initialStock = state.stockMap[key] || 0;
+      const inbound = state.inboundMap[key] || 0;
       const sold = state.soldMap[key] || 0;
-      const remaining = initialStock - sold;
-      bInit += initialStock; bSold += sold;
+      const remaining = initialStock + inbound - sold;
+      bInit += initialStock; bInbound += inbound; bSold += sold;
       const isDanger  = remaining <= 0;
       const isWarning = remaining > 0 && remaining <= 10;
       if (isDanger) warnings.push({ branch, product, remaining });
@@ -491,6 +502,13 @@ function renderAllBranchesTable() {
               onkeydown="if(event.key==='Enter') saveStock('${esc(branch)}','${esc(product)}',this)" />
             <button onclick="saveStock('${esc(branch)}','${esc(product)}',this.previousElementSibling)"
               class="text-xs bg-indigo-100 text-indigo-700 hover:bg-indigo-200 px-2 py-1 rounded transition">저장</button>
+          </div>
+        </td>
+        <td class="px-3 py-1.5 text-center">
+          <div class="flex items-center justify-center gap-1">
+            <span class="text-sm font-semibold text-green-700">${inbound.toLocaleString()}</span>
+            <button onclick="promptInbound('${esc(branch)}','${esc(product)}')"
+              class="text-xs bg-green-100 text-green-700 hover:bg-green-200 px-2 py-1 rounded transition">+입고</button>
           </div>
         </td>
         <td class="px-5 py-2 text-center text-sm">${sold.toLocaleString()}</td>
@@ -513,16 +531,18 @@ function renderAllBranchesTable() {
               class="w-full border border-slate-300 rounded px-2 py-1.5 text-center text-sm focus:outline-none focus:ring-2 focus:ring-indigo-300"
               onkeydown="if(event.key==='Enter') saveStock('${esc(branch)}','${esc(product)}',this)" />
             <button onclick="saveStock('${esc(branch)}','${esc(product)}',this.previousElementSibling)"
-              class="text-xs bg-indigo-600 text-white px-3 py-1.5 rounded transition whitespace-nowrap">저장</button>
+              class="text-xs bg-indigo-600 text-white px-2 py-1.5 rounded transition whitespace-nowrap">기초</button>
           </div>
-          <div class="text-center min-w-[44px]"><p class="text-xs text-slate-400">판매</p><p class="font-semibold text-sm text-amber-600">${sold.toLocaleString()}</p></div>
-          <div class="text-center min-w-[44px]"><p class="text-xs text-slate-400">남은</p><p class="font-bold text-sm ${isDanger ? 'text-red-600' : isWarning ? 'text-amber-600' : 'text-emerald-600'}">${remaining.toLocaleString()}</p></div>
+          <button onclick="promptInbound('${esc(branch)}','${esc(product)}')"
+            class="text-xs bg-green-600 text-white px-2 py-1.5 rounded transition whitespace-nowrap">+입고</button>
+          <div class="text-center min-w-[36px]"><p class="text-xs text-slate-400">판매</p><p class="font-semibold text-xs text-amber-600">${sold.toLocaleString()}</p></div>
+          <div class="text-center min-w-[36px]"><p class="text-xs text-slate-400">남은</p><p class="font-bold text-xs ${isDanger ? 'text-red-600' : isWarning ? 'text-amber-600' : 'text-emerald-600'}">${remaining.toLocaleString()}</p></div>
         </div>`;
       productList.appendChild(row);
     });
 
-    const bRemain = bInit - bSold;
-    grandInit += bInit; grandSold += bSold; grandRemain += bRemain;
+    const bRemain = bInit + bInbound - bSold;
+    grandInit += bInit; grandInbound += bInbound; grandSold += bSold; grandRemain += bRemain;
 
     /* 데스크톱 지점 소계 */
     const subTr = document.createElement('tr');
@@ -530,6 +550,7 @@ function renderAllBranchesTable() {
     subTr.innerHTML = `
       <td class="px-5 py-2 text-xs text-slate-500 pl-10">지점 합계</td>
       <td class="px-5 py-2 text-center text-sm">${bInit.toLocaleString()}</td>
+      <td class="px-5 py-2 text-center text-sm text-green-700">${bInbound.toLocaleString()}</td>
       <td class="px-5 py-2 text-center text-sm">${bSold.toLocaleString()}</td>
       <td class="px-5 py-2 text-center text-sm text-indigo-700">${bRemain.toLocaleString()}</td>
       <td></td>`;
@@ -540,10 +561,10 @@ function renderAllBranchesTable() {
     subRow.className = 'flex items-center px-3 py-2 bg-slate-50 border-t border-slate-200 gap-2';
     subRow.innerHTML = `
       <span class="flex-1 text-xs text-slate-500 font-semibold">합계</span>
-      <div class="text-center min-w-[48px]"><p class="font-bold text-sm">${bInit.toLocaleString()}</p></div>
-      <div class="text-center min-w-[48px]"><p class="font-bold text-sm text-amber-600">${bSold.toLocaleString()}</p></div>
-      <div class="text-center min-w-[52px]"><p class="font-bold text-sm text-indigo-700">${bRemain.toLocaleString()}</p></div>
-      <span class="text-lg invisible">✓</span>`;
+      <div class="text-center min-w-[40px]"><p class="text-xs text-slate-400">기초</p><p class="font-bold text-xs">${bInit.toLocaleString()}</p></div>
+      <div class="text-center min-w-[40px]"><p class="text-xs text-slate-400">입고</p><p class="font-bold text-xs text-green-700">${bInbound.toLocaleString()}</p></div>
+      <div class="text-center min-w-[40px]"><p class="text-xs text-slate-400">판매</p><p class="font-bold text-xs text-amber-600">${bSold.toLocaleString()}</p></div>
+      <div class="text-center min-w-[40px]"><p class="text-xs text-slate-400">남은</p><p class="font-bold text-xs text-indigo-700">${bRemain.toLocaleString()}</p></div>`;
     productList.appendChild(subRow);
     cards.appendChild(branchSection);
   });
@@ -554,6 +575,7 @@ function renderAllBranchesTable() {
   grandTr.innerHTML = `
     <td class="px-5 py-3 text-sm">전체 합계</td>
     <td class="px-5 py-3 text-center text-sm">${grandInit.toLocaleString()}</td>
+    <td class="px-5 py-3 text-center text-sm text-green-700">${grandInbound.toLocaleString()}</td>
     <td class="px-5 py-3 text-center text-sm">${grandSold.toLocaleString()}</td>
     <td class="px-5 py-3 text-center text-sm">${grandRemain.toLocaleString()}</td>
     <td></td>`;
@@ -564,8 +586,9 @@ function renderAllBranchesTable() {
   grandCard.className = 'rounded-xl bg-indigo-50 border-2 border-indigo-300 p-3';
   grandCard.innerHTML = `
     <p class="text-xs font-bold text-indigo-700 mb-2">📊 전체 합계</p>
-    <div class="grid grid-cols-3 gap-2">
+    <div class="grid grid-cols-4 gap-2">
       <div class="bg-white rounded-lg p-2 text-center"><p class="text-xs text-slate-400">기초재고</p><p class="font-bold text-slate-700">${grandInit.toLocaleString()}</p></div>
+      <div class="bg-white rounded-lg p-2 text-center"><p class="text-xs text-slate-400">추가입고</p><p class="font-bold text-green-700">${grandInbound.toLocaleString()}</p></div>
       <div class="bg-white rounded-lg p-2 text-center"><p class="text-xs text-slate-400">판매수량</p><p class="font-bold text-amber-600">${grandSold.toLocaleString()}</p></div>
       <div class="bg-white rounded-lg p-2 text-center"><p class="text-xs text-slate-400">남은재고</p><p class="font-bold text-indigo-700">${grandRemain.toLocaleString()}</p></div>
     </div>`;
@@ -592,10 +615,16 @@ function renderAllBranchesTable() {
 
 async function loadInventory(branch) {
   try {
-    const stockRows = await sbFetch(
-      `/rest/v1/inventory_stock?branch=eq.${encodeURIComponent(branch)}&select=product,initial_stock`
-    );
+    const [stockRows, inboundRows] = await Promise.all([
+      sbFetch(`/rest/v1/inventory_stock?branch=eq.${encodeURIComponent(branch)}&select=product,initial_stock`),
+      sbFetch(`/rest/v1/inventory_inbound?branch=eq.${encodeURIComponent(branch)}&select=product,quantity&limit=50000`),
+    ]);
     stockRows.forEach(r => { state.stockMap[branch + '|' + r.product] = r.initial_stock; });
+    state.products.forEach(p => { state.inboundMap[branch + '|' + p] = 0; });
+    inboundRows.forEach(r => {
+      const key = branch + '|' + r.product;
+      state.inboundMap[key] = (state.inboundMap[key] || 0) + r.quantity;
+    });
     renderInventoryTable(branch);
   } catch (e) {
     showError('재고 데이터 로드 오류: ' + e.message);
@@ -612,15 +641,16 @@ function renderInventoryTable(branch) {
   const tbody  = document.getElementById('inventoryTbody');
   const cards  = document.getElementById('inventoryCards');
   tbody.innerHTML = ''; cards.innerHTML = '';
-  let initTotal = 0, soldTotal = 0, remainTotal = 0;
+  let initTotal = 0, inboundTotal = 0, soldTotal = 0, remainTotal = 0;
   const warnings = [];
 
   state.products.forEach(product => {
     const key = branch + '|' + product;
     const initialStock = state.stockMap[key] || 0;
+    const inbound = state.inboundMap[key] || 0;
     const sold = state.soldMap[key] || 0;
-    const remaining = initialStock - sold;
-    initTotal += initialStock; soldTotal += sold; remainTotal += remaining;
+    const remaining = initialStock + inbound - sold;
+    initTotal += initialStock; inboundTotal += inbound; soldTotal += sold; remainTotal += remaining;
     const isDanger  = remaining <= 0;
     const isWarning = remaining > 0 && remaining <= 10;
     if (isDanger) warnings.push({ branch, product, remaining });
@@ -640,6 +670,13 @@ function renderInventoryTable(branch) {
             class="text-xs bg-indigo-100 text-indigo-700 hover:bg-indigo-200 px-2 py-1.5 rounded transition">저장</button>
         </div>
       </td>
+      <td class="px-5 py-3 text-center">
+        <div class="flex items-center justify-center gap-1">
+          <span class="text-sm font-semibold text-green-700">${inbound.toLocaleString()}</span>
+          <button onclick="promptInbound('${esc(branch)}','${esc(product)}')"
+            class="text-xs bg-green-100 text-green-700 hover:bg-green-200 px-2 py-1.5 rounded transition">+입고</button>
+        </div>
+      </td>
       <td class="px-5 py-3 text-center text-slate-600 text-sm">${sold.toLocaleString()}</td>
       <td class="px-5 py-3 text-center font-bold text-base ${isDanger ? 'text-red-600' : isWarning ? 'text-amber-600' : 'text-emerald-600'}">
         ${remaining.toLocaleString()}</td>
@@ -654,30 +691,38 @@ function renderInventoryTable(branch) {
         <span class="font-bold text-base">${esc(product)}</span>
         ${statusBadge(isDanger, isWarning)}
       </div>
-      <div class="grid grid-cols-3 gap-2 mb-3">
+      <div class="grid grid-cols-4 gap-2 mb-3">
         <div class="bg-slate-50 rounded-lg p-2 text-center">
           <p class="text-xs text-slate-400 mb-0.5">기초재고</p>
-          <p class="font-bold text-slate-700 text-lg">${initialStock.toLocaleString()}</p>
+          <p class="font-bold text-slate-700">${initialStock.toLocaleString()}</p>
+        </div>
+        <div class="bg-green-50 rounded-lg p-2 text-center">
+          <p class="text-xs text-slate-400 mb-0.5">추가입고</p>
+          <p class="font-bold text-green-700">${inbound.toLocaleString()}</p>
         </div>
         <div class="bg-amber-50 rounded-lg p-2 text-center">
           <p class="text-xs text-slate-400 mb-0.5">판매수량</p>
-          <p class="font-bold text-amber-600 text-lg">${sold.toLocaleString()}</p>
+          <p class="font-bold text-amber-600">${sold.toLocaleString()}</p>
         </div>
         <div class="${isDanger ? 'bg-red-50' : isWarning ? 'bg-amber-50' : 'bg-emerald-50'} rounded-lg p-2 text-center">
           <p class="text-xs text-slate-400 mb-0.5">남은재고</p>
-          <p class="font-bold text-lg ${isDanger ? 'text-red-600' : isWarning ? 'text-amber-600' : 'text-emerald-600'}">${remaining.toLocaleString()}</p>
+          <p class="font-bold ${isDanger ? 'text-red-600' : isWarning ? 'text-amber-600' : 'text-emerald-600'}">${remaining.toLocaleString()}</p>
         </div>
       </div>
-      <div class="flex gap-2">
+      <div class="flex gap-2 mb-2">
         <input type="number" min="0" value="${initialStock}"
-          class="flex-1 border border-slate-300 rounded-lg px-3 py-3 text-center text-base
+          class="flex-1 border border-slate-300 rounded-lg px-3 py-2.5 text-center text-base
                  focus:outline-none focus:ring-2 focus:ring-indigo-400"
           onkeydown="if(event.key==='Enter') saveStock('${esc(branch)}','${esc(product)}',this)" />
         <button onclick="saveStock('${esc(branch)}','${esc(product)}',this.previousElementSibling)"
-          class="bg-indigo-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-indigo-700 transition text-sm">
-          저장
+          class="bg-indigo-600 text-white font-semibold px-4 py-2.5 rounded-lg hover:bg-indigo-700 transition text-sm">
+          기초저장
         </button>
-      </div>`;
+      </div>
+      <button onclick="promptInbound('${esc(branch)}','${esc(product)}')"
+        class="w-full bg-green-600 text-white font-semibold py-2.5 rounded-lg hover:bg-green-700 transition text-sm">
+        + 입고 추가
+      </button>`;
     cards.appendChild(card);
   });
 
@@ -687,6 +732,7 @@ function renderInventoryTable(branch) {
   sumTr.innerHTML = `
     <td class="px-5 py-3 text-sm">합계</td>
     <td class="px-5 py-3 text-center text-sm">${initTotal.toLocaleString()}</td>
+    <td class="px-5 py-3 text-center text-sm text-green-700">${inboundTotal.toLocaleString()}</td>
     <td class="px-5 py-3 text-center text-sm">${soldTotal.toLocaleString()}</td>
     <td class="px-5 py-3 text-center text-indigo-700 text-sm">${remainTotal.toLocaleString()}</td>
     <td></td>`;
@@ -697,8 +743,9 @@ function renderInventoryTable(branch) {
   sumCard.className = 'rounded-xl bg-indigo-50 border-2 border-indigo-200 p-3';
   sumCard.innerHTML = `
     <p class="text-xs font-semibold text-indigo-600 mb-2">전체 합계</p>
-    <div class="grid grid-cols-3 gap-2">
+    <div class="grid grid-cols-4 gap-2">
       <div class="bg-white rounded-lg p-2 text-center"><p class="text-xs text-slate-400">기초재고</p><p class="font-bold text-slate-700">${initTotal.toLocaleString()}</p></div>
+      <div class="bg-white rounded-lg p-2 text-center"><p class="text-xs text-slate-400">추가입고</p><p class="font-bold text-green-700">${inboundTotal.toLocaleString()}</p></div>
       <div class="bg-white rounded-lg p-2 text-center"><p class="text-xs text-slate-400">판매수량</p><p class="font-bold text-amber-600">${soldTotal.toLocaleString()}</p></div>
       <div class="bg-white rounded-lg p-2 text-center"><p class="text-xs text-slate-400">남은재고</p><p class="font-bold text-indigo-700">${remainTotal.toLocaleString()}</p></div>
     </div>`;
@@ -739,6 +786,32 @@ async function saveStock(branch, product, input) {
     else renderInventoryTable(branch);
   } catch (e) {
     showError('저장 오류: ' + e.message);
+  }
+}
+
+/* ── 입고 추가 ──────────────────────────────────────────────────── */
+function promptInbound(branch, product) {
+  const qty = prompt(`${branch} · ${product}\n추가 입고 수량을 입력하세요:`);
+  if (qty === null) return;
+  const n = parseInt(qty, 10);
+  if (isNaN(n) || n <= 0) { showError('1 이상의 정수를 입력하세요.'); return; }
+  saveInbound(branch, product, n);
+}
+
+async function saveInbound(branch, product, qty) {
+  try {
+    await sbFetch('/rest/v1/inventory_inbound', {
+      method: 'POST',
+      headers: { ...SB_HEADERS, 'Prefer': 'return=minimal' },
+      body: JSON.stringify({ branch, product, quantity: qty }),
+    });
+    const key = branch + '|' + product;
+    state.inboundMap[key] = (state.inboundMap[key] || 0) + qty;
+    showSuccess(`${branch} · ${product} 입고 ${qty.toLocaleString()} 추가 완료`);
+    if (state.selectedBranch === '__all__') renderAllBranchesTable();
+    else renderInventoryTable(branch);
+  } catch (e) {
+    showError('입고 저장 오류: ' + e.message);
   }
 }
 
@@ -815,12 +888,13 @@ async function loadDashboard() {
     let grandInit = 0, grandSold = 0, grandRemain = 0;
 
     state.branches.forEach(branch => {
-      let bInit = 0, bSold = 0;
+      let bInit = 0, bSold = 0, bInbound = 0;
       state.products.forEach(p => {
-        bInit += state.stockMap[branch + '|' + p] || 0;
-        bSold += state.soldMap[branch + '|' + p] || 0;
+        bInit    += state.stockMap[branch + '|' + p]   || 0;
+        bSold    += state.soldMap[branch + '|' + p]    || 0;
+        bInbound += state.inboundMap[branch + '|' + p] || 0;
       });
-      const bRemain = bInit - bSold;
+      const bRemain = bInit + bInbound - bSold;
       grandInit += bInit; grandSold += bSold; grandRemain += bRemain;
 
       const isDanger = bRemain <= 0;
