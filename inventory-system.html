@@ -781,6 +781,9 @@ async function syncData() {
       if (state.branches.includes(b) && state.products.includes(p) && q > 0) {
         const key = b + '|' + p;
         state.soldMap[key] = (state.soldMap[key] || 0) + q;
+        // 전체 지점 합산
+        const totalKey = '전체 지점|' + p;
+        state.soldMap[totalKey] = (state.soldMap[totalKey] || 0) + q;
         matched++;
       }
     });
