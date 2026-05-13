@@ -316,9 +316,9 @@ ALTER TABLE inventory_stock DISABLE ROW LEVEL SECURITY;</pre>
 
 <!-- 재고 부족 경고 모달 -->
 <div id="warningModal"
-  class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-  <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-5">
-    <div class="flex items-center gap-3 mb-4">
+  class="hidden fixed inset-0 bg-black/50 flex items-end sm:items-center justify-center z-50 p-3 sm:p-4">
+  <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-4 flex flex-col" style="max-height:70vh">
+    <div class="flex items-center gap-3 mb-3 flex-shrink-0">
       <div class="bg-red-100 rounded-full p-2">
         <svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -327,9 +327,9 @@ ALTER TABLE inventory_stock DISABLE ROW LEVEL SECURITY;</pre>
       </div>
       <h3 class="font-bold text-slate-800">재고 부족 경고</h3>
     </div>
-    <ul id="warningList" class="space-y-2 mb-4 max-h-52 overflow-y-auto"></ul>
+    <ul id="warningList" class="space-y-2 mb-3 overflow-y-auto flex-1"></ul>
     <button onclick="document.getElementById('warningModal').classList.add('hidden')"
-      class="w-full bg-red-600 text-white font-semibold py-2.5 rounded-lg hover:bg-red-700 transition text-sm">
+      class="w-full bg-red-600 text-white font-semibold py-2.5 rounded-lg hover:bg-red-700 transition text-sm flex-shrink-0">
       확인
     </button>
   </div>
