@@ -723,7 +723,24 @@ async function saveStock(branch, product, input) {
   }
 }
 
-/* ── 동기화 (Supabase product_sales 조회) ──────────────────────── */
+/* ── 동기화 (Supabase product_sales 페이지네이션 조회) ─────────── */
+async function fetchAllSales(startDate, endDate) {
+  const PAGE = 1000;
+  let offset = 0, all = [];
+  while (true) {
+    const rows = await fetch(SB_URL + `/rest/v1/product_sales?sale_date=gte.${startDate}&sale_date=lte.${endDate}&select=branch,product,quantity&order=sale_date.asc`, {
+      headers: { ...SB_HEADERS, 'Range-Unit': 'items', 'Range': `${offset}-${offset + PAGE - 1}` }
+    }).then(async r => {
+      if (!r.ok) { const t = await r.text(); throw new Error(t); }
+      return r.json();
+    });
+    all = all.concat(rows);
+    if (rows.length < PAGE) break;
+    offset += PAGE;
+  }
+  return all;
+}
+
 async function syncData() {
   if (state.isSyncing) return;
   state.isSyncing = true;
@@ -734,9 +751,7 @@ async function syncData() {
   try {
     const startDate = document.getElementById('syncStartDate').value;
     const endDate   = document.getElementById('syncEndDate').value;
-    const sales = await sbFetch(
-      `/rest/v1/product_sales?sale_date=gte.${startDate}&sale_date=lte.${endDate}&select=branch,product,quantity&limit=100000`
-    );
+    const sales = await fetchAllSales(startDate, endDate);
 
     state.soldMap = {};
     let matched = 0;
