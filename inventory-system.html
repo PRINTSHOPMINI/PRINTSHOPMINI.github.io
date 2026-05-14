@@ -117,7 +117,7 @@
       </div>
       <div id="branchStockSummary" class="hidden grid grid-cols-3 gap-2 mt-2">
         <div class="bg-slate-50 rounded-lg p-2 text-center">
-          <p class="text-xs text-slate-400">누적재고</p>
+          <p class="text-xs text-slate-400">현재재고(M+B)</p>
           <p id="branchInitTotal" class="text-base font-bold text-slate-700">-</p>
         </div>
         <div class="bg-amber-50 rounded-lg p-2 text-center">
@@ -125,7 +125,7 @@
           <p id="branchSoldTotal" class="text-base font-bold text-amber-600">-</p>
         </div>
         <div class="bg-indigo-50 rounded-lg p-2 text-center">
-          <p class="text-xs text-slate-400">남은재고</p>
+          <p class="text-xs text-slate-400">남은재고(=M+B)</p>
           <p id="branchRemainingTotal" class="text-base font-bold text-indigo-600">-</p>
         </div>
       </div>
@@ -696,7 +696,7 @@ function renderAllBranchesTable() {
       const bQty = state.boxMap[key]     || 0;
       const sold = state.soldMap[key]    || 0;
       const accum = mQty + bQty;
-      const remaining = accum - sold;
+      const remaining = accum;   // 남은재고 = 현재 실물(M+B), 판매는 참고용
       bM += mQty; bB += bQty; bSold += sold;
       const isDanger  = remaining <= 0 && accum > 0;
       const isWarning = remaining > 0 && remaining <= 10;
@@ -742,7 +742,7 @@ function renderAllBranchesTable() {
     });
 
     const bAccum  = bM + bB;
-    const bRemain = bAccum - bSold;
+    const bRemain = bAccum;   // 남은재고 = M+B
     grandM += bM; grandB += bB; grandSold += bSold; grandRemain += bRemain;
 
     /* 데스크톱 지점 소계 */
@@ -865,7 +865,7 @@ function renderInventoryTable(branch) {
     const bQty = state.boxMap[key]     || 0;
     const total = mQty + bQty;
     const sold  = state.soldMap[key]   || 0;
-    const remaining = total - sold;
+    const remaining = total;   // 남은재고 = 현재 실물(M+B), 판매는 참고용
     const stockDate = state.stockDateMap[key] || '';
     const isUpd     = state.isUpdatedMap[key];
     mTotal += mQty; bTotal += bQty; soldTotal += sold; remainTotal += remaining;
@@ -1051,7 +1051,7 @@ function updateDisplay(branch, product) {
   if (dmEl)  dmEl.textContent  = newM.toLocaleString();
   if (dbEl)  dbEl.textContent  = newB.toLocaleString();
   if (remEl) {
-    const rem = newM + newB - sold;
+    const rem = newM + newB;   // 남은재고 = M+B
     remEl.textContent = rem.toLocaleString();
     remEl.className   = remEl.className.replace(/text-(red|amber|emerald)-\d+/g, '');
     remEl.classList.add(rem <= 0 ? 'text-red-600' : rem <= 10 ? 'text-amber-600' : 'text-emerald-600');
@@ -1094,7 +1094,7 @@ async function saveStock(branch, product) {
     const remEl = document.getElementById('rem_' + id) || document.getElementById('remm_' + id);
     if (dmEl)  dmEl.textContent  = displayQty.toLocaleString();
     if (dbEl)  dbEl.textContent  = boxQty.toLocaleString();
-    if (remEl) remEl.textContent = (displayQty + boxQty - (state.soldMap[bKey] || 0)).toLocaleString();
+    if (remEl) remEl.textContent = (displayQty + boxQty).toLocaleString();
     showSuccess(`${branch} · ${product} M${displayQty} B${boxQty} 저장 완료`);
     if (state.selectedBranch === '__all__') renderAllBranchesTable();
   } catch (e) {
@@ -1261,7 +1261,7 @@ async function loadDashboard() {
         bAccum += (state.displayMap[branch + '|' + p] || 0) + (state.boxMap[branch + '|' + p] || 0);
         bSold  += state.soldMap[branch + '|' + p] || 0;
       });
-      const bRemain = bAccum - bSold;
+      const bRemain = bAccum;   // 남은재고 = M+B
       grandInit += bAccum; grandSold += bSold; grandRemain += bRemain;
 
       const isDanger = bRemain <= 0;
