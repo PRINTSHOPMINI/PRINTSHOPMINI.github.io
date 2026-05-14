@@ -845,13 +845,11 @@ function statusBadge(isDanger, isWarning) {
 function renderInventoryTable(branch) {
   document.getElementById('inventoryThead').innerHTML = `<tr>
     <th class="px-3 py-3 text-left font-semibold">상품명</th>
-    <th class="px-3 py-3 text-center font-semibold">M(디스플레이)</th>
-    <th class="px-3 py-3 text-center font-semibold">B(박스)</th>
-    <th class="px-3 py-3 text-center font-semibold">누적재고</th>
+    <th class="px-3 py-3 text-center font-semibold">누적재고 (M/B)</th>
+    <th class="px-3 py-3 text-center font-semibold">재고 입력</th>
     <th class="px-3 py-3 text-center font-semibold">재고입력일</th>
     <th class="px-3 py-3 text-center font-semibold">판매수량</th>
     <th class="px-3 py-3 text-center font-semibold">남은재고</th>
-    <th class="px-3 py-3 text-center font-semibold">업데이트</th>
     <th class="px-3 py-3 text-center font-semibold">상태</th>
   </tr>`;
   const tbody = document.getElementById('inventoryTbody');
@@ -875,43 +873,59 @@ function renderInventoryTable(branch) {
     const isWarning = remaining > 0 && remaining <= 10;
     if (isDanger) warnings.push({ branch, product, remaining });
 
+    const id = sid(branch) + '_' + sid(product);
     const updBadge = isUpd && stockDate
-      ? `<span class="text-xs text-amber-600 font-medium">↑업데이트 ${stockDate}</span>`
+      ? `<span class="text-xs text-amber-500 font-medium">↑ ${stockDate}</span>`
       : stockDate ? `<span class="text-xs text-slate-400">${stockDate}</span>` : '';
 
-    /* ── 데스크톱 행 ── */
+    /* ── 데스크톱 행 (7열) ── */
     const tr = document.createElement('tr');
     tr.className = (isDanger ? 'row-danger' : isWarning ? 'row-warning' : '') + ' hover:bg-slate-50';
     tr.innerHTML = `
       <td class="px-3 py-2 font-medium text-sm">${esc(product)}</td>
-      <td class="px-2 py-1.5 text-center">
-        <div class="flex items-center justify-center gap-1">
-          <input id="m_${esc(branch)}_${esc(product)}" type="number" min="0" value="${mQty}"
-            class="w-16 border border-indigo-200 rounded px-1 py-1 text-center text-sm focus:outline-none focus:ring-2 focus:ring-indigo-300 bg-indigo-50"/>
-          <span class="text-xs text-slate-400">M</span>
+      <td class="px-3 py-2 text-center">
+        <div class="flex flex-col gap-0.5 items-center">
+          <div class="flex items-center gap-1.5">
+            <span class="text-xs font-bold text-indigo-400 w-5">M</span>
+            <span id="dm_${id}" class="text-sm font-bold text-indigo-700 tabular-nums min-w-[2rem] text-right">${mQty.toLocaleString()}</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <span class="text-xs font-bold text-green-500 w-5">B</span>
+            <span id="db_${id}" class="text-sm font-bold text-green-700 tabular-nums min-w-[2rem] text-right">${bQty.toLocaleString()}</span>
+          </div>
         </div>
       </td>
       <td class="px-2 py-1.5 text-center">
-        <div class="flex items-center justify-center gap-1">
-          <input id="b_${esc(branch)}_${esc(product)}" type="number" min="0" value="${bQty}"
-            class="w-16 border border-green-200 rounded px-1 py-1 text-center text-sm focus:outline-none focus:ring-2 focus:ring-green-300 bg-green-50"/>
-          <span class="text-xs text-slate-400">B</span>
-          <button onclick="promptInbound('${esc(branch)}','${esc(product)}')"
-            class="text-xs bg-green-100 text-green-700 hover:bg-green-200 px-1.5 py-1 rounded transition">+입고</button>
+        <div class="flex flex-col gap-1 items-center">
+          <div class="flex items-center gap-1">
+            <span class="text-xs font-bold text-indigo-400 w-5">M</span>
+            <input id="nm_${id}" type="number" min="0" placeholder="-"
+              class="w-14 border border-indigo-200 rounded px-1 py-0.5 text-center text-sm bg-indigo-50 focus:outline-none focus:ring-1 focus:ring-indigo-400"
+              oninput="updateDisplay('${esc(branch)}','${esc(product)}')"/>
+          </div>
+          <div class="flex items-center gap-1">
+            <span class="text-xs font-bold text-green-500 w-5">B</span>
+            <input id="nb_${id}" type="number" min="0" placeholder="-"
+              class="w-14 border border-green-200 rounded px-1 py-0.5 text-center text-sm bg-green-50 focus:outline-none focus:ring-1 focus:ring-green-400"
+              oninput="updateDisplay('${esc(branch)}','${esc(product)}')"/>
+          </div>
         </div>
       </td>
-      <td class="px-3 py-2 text-center font-bold text-sm text-slate-700">${total.toLocaleString()}</td>
       <td class="px-2 py-1.5 text-center">
-        <div class="flex items-center justify-center gap-0.5">
-          <input id="d_${esc(branch)}_${esc(product)}" type="date" value="${stockDate || today}"
-            class="border border-slate-200 rounded px-1 py-0.5 text-xs focus:outline-none focus:ring-1 focus:ring-indigo-300 w-28"/>
-          <button onclick="saveStock('${esc(branch)}','${esc(product)}')"
-            class="text-xs bg-indigo-500 text-white hover:bg-indigo-600 px-2 py-1 rounded transition">저장</button>
+        <div class="flex flex-col gap-1 items-center">
+          <input id="d_${id}" type="date" value="${stockDate || today}"
+            class="border border-slate-200 rounded px-1 py-0.5 text-xs w-28 focus:outline-none focus:ring-1 focus:ring-indigo-300"/>
+          <div class="flex gap-1">
+            <button onclick="saveStock('${esc(branch)}','${esc(product)}')"
+              class="text-xs bg-indigo-500 text-white hover:bg-indigo-600 px-2 py-0.5 rounded transition">저장</button>
+            <button onclick="promptInbound('${esc(branch)}','${esc(product)}')"
+              class="text-xs bg-green-500 text-white hover:bg-green-600 px-2 py-0.5 rounded transition">+입고</button>
+          </div>
+          ${updBadge}
         </div>
       </td>
       <td class="px-3 py-2 text-center text-sm text-amber-600">${sold.toLocaleString()}</td>
-      <td class="px-3 py-2 text-center font-bold text-sm ${isDanger ? 'text-red-600' : isWarning ? 'text-amber-600' : 'text-emerald-600'}">${remaining.toLocaleString()}</td>
-      <td class="px-2 py-2 text-center">${updBadge}</td>
+      <td id="rem_${id}" class="px-3 py-2 text-center font-bold text-sm ${isDanger ? 'text-red-600' : isWarning ? 'text-amber-600' : 'text-emerald-600'}">${remaining.toLocaleString()}</td>
       <td class="px-3 py-2 text-center">${statusBadge(isDanger, isWarning)}</td>`;
     tbody.appendChild(tr);
 
@@ -925,12 +939,12 @@ function renderInventoryTable(branch) {
       </div>
       <div class="grid grid-cols-4 gap-1.5 mb-2">
         <div class="bg-indigo-50 rounded-lg p-2 text-center">
-          <p class="text-xs text-slate-400">M</p>
-          <p class="font-bold text-indigo-700">${mQty}</p>
+          <p class="text-xs text-slate-400">누적M</p>
+          <p id="dmm_${id}" class="font-bold text-indigo-700">${mQty}</p>
         </div>
         <div class="bg-green-50 rounded-lg p-2 text-center">
-          <p class="text-xs text-slate-400">B</p>
-          <p class="font-bold text-green-700">${bQty}</p>
+          <p class="text-xs text-slate-400">누적B</p>
+          <p id="dbb_${id}" class="font-bold text-green-700">${bQty}</p>
         </div>
         <div class="bg-amber-50 rounded-lg p-2 text-center">
           <p class="text-xs text-slate-400">판매</p>
@@ -938,24 +952,26 @@ function renderInventoryTable(branch) {
         </div>
         <div class="${isDanger?'bg-red-50':isWarning?'bg-amber-50':'bg-emerald-50'} rounded-lg p-2 text-center">
           <p class="text-xs text-slate-400">남은</p>
-          <p class="font-bold ${isDanger?'text-red-600':isWarning?'text-amber-600':'text-emerald-600'}">${remaining}</p>
+          <p id="remm_${id}" class="font-bold ${isDanger?'text-red-600':isWarning?'text-amber-600':'text-emerald-600'}">${remaining}</p>
         </div>
       </div>
-      <div class="text-xs text-center mb-2">${updBadge}</div>
+      ${updBadge ? `<div class="text-xs text-center mb-2">${updBadge}</div>` : ''}
       <div class="grid grid-cols-2 gap-1.5 mb-1.5">
         <div class="flex items-center gap-1">
-          <span class="text-xs text-indigo-600 font-semibold w-5">M</span>
-          <input id="mm_${esc(branch)}_${esc(product)}" type="number" min="0" value="${mQty}"
-            class="flex-1 border border-indigo-200 rounded-lg px-2 py-2 text-center text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-indigo-50"/>
+          <span class="text-xs text-indigo-600 font-semibold w-8">입력M</span>
+          <input id="nmm_${id}" type="number" min="0" placeholder="-"
+            class="flex-1 border border-indigo-200 rounded-lg px-2 py-2 text-center text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-indigo-50"
+            oninput="updateDisplay('${esc(branch)}','${esc(product)}')"/>
         </div>
         <div class="flex items-center gap-1">
-          <span class="text-xs text-green-600 font-semibold w-5">B</span>
-          <input id="bb_${esc(branch)}_${esc(product)}" type="number" min="0" value="${bQty}"
-            class="flex-1 border border-green-200 rounded-lg px-2 py-2 text-center text-sm focus:outline-none focus:ring-2 focus:ring-green-400 bg-green-50"/>
+          <span class="text-xs text-green-600 font-semibold w-8">입력B</span>
+          <input id="nbb_${id}" type="number" min="0" placeholder="-"
+            class="flex-1 border border-green-200 rounded-lg px-2 py-2 text-center text-sm focus:outline-none focus:ring-2 focus:ring-green-400 bg-green-50"
+            oninput="updateDisplay('${esc(branch)}','${esc(product)}')"/>
         </div>
       </div>
       <div class="flex gap-1.5">
-        <input id="dd_${esc(branch)}_${esc(product)}" type="date" value="${stockDate || today}"
+        <input id="dd_${id}" type="date" value="${stockDate || today}"
           class="flex-1 border border-slate-300 rounded-lg px-2 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"/>
         <button onclick="saveStock('${esc(branch)}','${esc(product)}')"
           class="bg-indigo-600 text-white font-semibold px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">저장</button>
@@ -965,18 +981,22 @@ function renderInventoryTable(branch) {
     cards.appendChild(card);
   });
 
-  /* ── 테이블 합계 행 ── */
+  /* ── 테이블 합계 행 (7열) ── */
   const sumTr = document.createElement('tr');
   sumTr.className = 'bg-slate-100 font-semibold border-t-2 border-slate-300';
   sumTr.innerHTML = `
     <td class="px-3 py-3 text-sm">합계</td>
-    <td class="px-3 py-3 text-center text-sm text-indigo-700">${mTotal.toLocaleString()}</td>
-    <td class="px-3 py-3 text-center text-sm text-green-700">${bTotal.toLocaleString()}</td>
-    <td class="px-3 py-3 text-center text-sm font-bold">${(mTotal+bTotal).toLocaleString()}</td>
+    <td class="px-3 py-3 text-center text-sm">
+      <div class="flex flex-col gap-0.5 items-center">
+        <div class="flex items-center gap-1"><span class="text-xs text-indigo-400 w-5">M</span><span class="font-bold text-indigo-700">${mTotal.toLocaleString()}</span></div>
+        <div class="flex items-center gap-1"><span class="text-xs text-green-500 w-5">B</span><span class="font-bold text-green-700">${bTotal.toLocaleString()}</span></div>
+      </div>
+    </td>
+    <td></td>
     <td></td>
     <td class="px-3 py-3 text-center text-sm text-amber-600">${soldTotal.toLocaleString()}</td>
-    <td class="px-3 py-3 text-center text-indigo-700 text-sm">${remainTotal.toLocaleString()}</td>
-    <td></td><td></td>`;
+    <td class="px-3 py-3 text-center text-indigo-700 text-sm font-bold">${remainTotal.toLocaleString()}</td>
+    <td></td>`;
   tbody.appendChild(sumTr);
 
   /* ── 모바일 합계 카드 ── */
@@ -1011,17 +1031,44 @@ function renderInventoryTable(branch) {
   }
 }
 
+/* ── ID용 안전문자 변환 ─────────────────────────────────────────── */
+function sid(s) { return String(s).replace(/[^a-zA-Z0-9가-힣]/g, '_'); }
+
+/* ── 입력 시 누적재고 실시간 반영 ───────────────────────────────── */
+function updateDisplay(branch, product) {
+  const key = branch + '|' + product;
+  const id  = sid(branch) + '_' + sid(product);
+  const nmEl  = document.getElementById('nm_'  + id) || document.getElementById('nmm_' + id);
+  const nbEl  = document.getElementById('nb_'  + id) || document.getElementById('nbb_' + id);
+  const dmEl  = document.getElementById('dm_'  + id) || document.getElementById('dmm_' + id);
+  const dbEl  = document.getElementById('db_'  + id) || document.getElementById('dbb_' + id);
+  const remEl = document.getElementById('rem_' + id) || document.getElementById('remm_' + id);
+  const curM = state.displayMap[key] || 0;
+  const curB = state.boxMap[key]     || 0;
+  const newM = nmEl && nmEl.value !== '' ? (parseInt(nmEl.value) || 0) : curM;
+  const newB = nbEl && nbEl.value !== '' ? (parseInt(nbEl.value) || 0) : curB;
+  const sold = state.soldMap[key] || 0;
+  if (dmEl)  dmEl.textContent  = newM.toLocaleString();
+  if (dbEl)  dbEl.textContent  = newB.toLocaleString();
+  if (remEl) {
+    const rem = newM + newB - sold;
+    remEl.textContent = rem.toLocaleString();
+    remEl.className   = remEl.className.replace(/text-(red|amber|emerald)-\d+/g, '');
+    remEl.classList.add(rem <= 0 ? 'text-red-600' : rem <= 10 ? 'text-amber-600' : 'text-emerald-600');
+  }
+}
+
 /* ── 누적재고(M+B) 저장 ─────────────────────────────────────────── */
 async function saveStock(branch, product) {
   const bKey = branch + '|' + product;
-  const eb = esc(branch), ep = esc(product);
-  const mInput = document.getElementById('m_'  + eb + '_' + ep) || document.getElementById('mm_' + eb + '_' + ep);
-  const bInput = document.getElementById('b_'  + eb + '_' + ep) || document.getElementById('bb_' + eb + '_' + ep);
-  const dInput = document.getElementById('d_'  + eb + '_' + ep) || document.getElementById('dd_' + eb + '_' + ep);
-  const displayQty = parseInt(mInput?.value) || 0;
-  const boxQty     = parseInt(bInput?.value) || 0;
+  const id   = sid(branch) + '_' + sid(product);
+  const nmInput = document.getElementById('nm_'  + id) || document.getElementById('nmm_' + id);
+  const nbInput = document.getElementById('nb_'  + id) || document.getElementById('nbb_' + id);
+  const dInput  = document.getElementById('d_'   + id) || document.getElementById('dd_'  + id);
+  // 입력값 없으면 현재 state 값 유지
+  const displayQty = nmInput && nmInput.value !== '' ? (parseInt(nmInput.value) || 0) : (state.displayMap[bKey] || 0);
+  const boxQty     = nbInput && nbInput.value !== '' ? (parseInt(nbInput.value) || 0) : (state.boxMap[bKey]     || 0);
   const date       = dInput?.value || new Date().toISOString().slice(0, 10);
-  if (displayQty < 0 || boxQty < 0) { showError('0 이상의 정수를 입력하세요.'); return; }
   try {
     await sbFetch('/rest/v1/inventory_stock?on_conflict=branch,product', {
       method: 'POST',
@@ -1038,9 +1085,18 @@ async function saveStock(branch, product) {
     state.boxMap[bKey]       = boxQty;
     state.stockDateMap[bKey] = date;
     state.isUpdatedMap[bKey] = true;
+    // 입력칸 초기화
+    if (nmInput) nmInput.value = '';
+    if (nbInput) nbInput.value = '';
+    // 누적재고 표시 업데이트
+    const dmEl  = document.getElementById('dm_'  + id) || document.getElementById('dmm_' + id);
+    const dbEl  = document.getElementById('db_'  + id) || document.getElementById('dbb_' + id);
+    const remEl = document.getElementById('rem_' + id) || document.getElementById('remm_' + id);
+    if (dmEl)  dmEl.textContent  = displayQty.toLocaleString();
+    if (dbEl)  dbEl.textContent  = boxQty.toLocaleString();
+    if (remEl) remEl.textContent = (displayQty + boxQty - (state.soldMap[bKey] || 0)).toLocaleString();
     showSuccess(`${branch} · ${product} M${displayQty} B${boxQty} 저장 완료`);
     if (state.selectedBranch === '__all__') renderAllBranchesTable();
-    else renderInventoryTable(branch);
   } catch (e) {
     showError('저장 오류: ' + e.message);
   }
