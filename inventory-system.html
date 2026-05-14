@@ -433,6 +433,8 @@ const state = {
   boxMap: {},        // key: branch|product → B (박스) qty
   stockDateMap: {},  // key: branch|product → stock_date
   isUpdatedMap: {},  // key: branch|product → updated_at 존재 여부
+  actualMap: {},     // key: branch|product → 실사재고
+  actualDateMap: {}, // key: branch|product → 실사일
   selectedBranch: null,
   isSyncing: false,
 };
@@ -639,15 +641,17 @@ async function updateInboundRecord(id, displayQty, boxQty, date) {
 /* ── 재고 데이터 로드 ───────────────────────────────────────────── */
 async function loadAllInventory() {
   try {
-    const rows = await sbFetch('/rest/v1/inventory_stock?select=branch,product,initial_stock,display_qty,box_qty,stock_date,updated_at&limit=10000');
+    const rows = await sbFetch('/rest/v1/inventory_stock?select=branch,product,initial_stock,display_qty,box_qty,stock_date,updated_at,actual_qty,actual_date&limit=10000');
     rows.forEach(r => {
       const key = r.branch + '|' + r.product;
       // display_qty/box_qty가 null이면 initial_stock을 B에 fallback
       const hasNew = r.display_qty !== null || r.box_qty !== null;
       state.displayMap[key]   = hasNew ? (r.display_qty || 0) : 0;
       state.boxMap[key]       = hasNew ? (r.box_qty     || 0) : (r.initial_stock || 0);
-      state.stockDateMap[key] = r.stock_date || null;
+      state.stockDateMap[key] = r.stock_date  || null;
       state.isUpdatedMap[key] = !!r.updated_at;
+      state.actualMap[key]    = r.actual_qty  ?? null;
+      state.actualDateMap[key]= r.actual_date || null;
     });
     renderAllBranchesTable();
   } catch (e) {
@@ -696,7 +700,7 @@ function renderAllBranchesTable() {
       const bQty = state.boxMap[key]     || 0;
       const sold = state.soldMap[key]    || 0;
       const accum = mQty + bQty;
-      const remaining = accum;   // 남은재고 = 현재 실물(M+B), 판매는 참고용
+      const remaining = accum - sold;
       bM += mQty; bB += bQty; bSold += sold;
       const isDanger  = remaining <= 0 && accum > 0;
       const isWarning = remaining > 0 && remaining <= 10;
@@ -742,7 +746,7 @@ function renderAllBranchesTable() {
     });
 
     const bAccum  = bM + bB;
-    const bRemain = bAccum;   // 남은재고 = M+B
+    const bRemain = bAccum - bSold;
     grandM += bM; grandB += bB; grandSold += bSold; grandRemain += bRemain;
 
     /* 데스크톱 지점 소계 */
@@ -820,15 +824,17 @@ function renderAllBranchesTable() {
 async function loadInventory(branch) {
   try {
     const rows = await sbFetch(
-      `/rest/v1/inventory_stock?branch=eq.${encodeURIComponent(branch)}&select=product,initial_stock,display_qty,box_qty,stock_date,updated_at`
+      `/rest/v1/inventory_stock?branch=eq.${encodeURIComponent(branch)}&select=product,initial_stock,display_qty,box_qty,stock_date,updated_at,actual_qty,actual_date`
     );
     rows.forEach(r => {
       const key = branch + '|' + r.product;
       const hasNew = r.display_qty !== null || r.box_qty !== null;
       state.displayMap[key]   = hasNew ? (r.display_qty || 0) : 0;
       state.boxMap[key]       = hasNew ? (r.box_qty     || 0) : (r.initial_stock || 0);
-      state.stockDateMap[key] = r.stock_date || null;
+      state.stockDateMap[key] = r.stock_date  || null;
       state.isUpdatedMap[key] = !!r.updated_at;
+      state.actualMap[key]    = r.actual_qty  ?? null;
+      state.actualDateMap[key]= r.actual_date || null;
     });
     renderInventoryTable(branch);
   } catch (e) {
@@ -850,6 +856,8 @@ function renderInventoryTable(branch) {
     <th class="px-3 py-3 text-center font-semibold">재고입력일</th>
     <th class="px-3 py-3 text-center font-semibold">판매수량</th>
     <th class="px-3 py-3 text-center font-semibold">남은재고</th>
+    <th class="px-3 py-3 text-center font-semibold">실사재고</th>
+    <th class="px-3 py-3 text-center font-semibold">차이</th>
     <th class="px-3 py-3 text-center font-semibold">상태</th>
   </tr>`;
   const tbody = document.getElementById('inventoryTbody');
@@ -865,9 +873,12 @@ function renderInventoryTable(branch) {
     const bQty = state.boxMap[key]     || 0;
     const total = mQty + bQty;
     const sold  = state.soldMap[key]   || 0;
-    const remaining = total;   // 남은재고 = 현재 실물(M+B), 판매는 참고용
+    const remaining = total - sold;   // 남은재고 = M+B - 판매수량
     const stockDate = state.stockDateMap[key] || '';
     const isUpd     = state.isUpdatedMap[key];
+    const actualQty = state.actualMap[key];      // null이면 미입력
+    const actualDate= state.actualDateMap[key] || '';
+    const diff      = actualQty !== null ? remaining - actualQty : null; // 차이 (양수=분실의심)
     mTotal += mQty; bTotal += bQty; soldTotal += sold; remainTotal += remaining;
     const isDanger  = remaining <= 0;
     const isWarning = remaining > 0 && remaining <= 10;
@@ -926,6 +937,20 @@ function renderInventoryTable(branch) {
       </td>
       <td class="px-3 py-2 text-center text-sm text-amber-600">${sold.toLocaleString()}</td>
       <td id="rem_${id}" class="px-3 py-2 text-center font-bold text-sm ${isDanger ? 'text-red-600' : isWarning ? 'text-amber-600' : 'text-emerald-600'}">${remaining.toLocaleString()}</td>
+      <td class="px-2 py-1.5 text-center">
+        <div class="flex flex-col gap-1 items-center">
+          <input id="act_${id}" type="number" min="0" placeholder="-" value="${actualQty !== null ? actualQty : ''}"
+            class="w-14 border border-purple-200 rounded px-1 py-0.5 text-center text-sm bg-purple-50 focus:outline-none focus:ring-1 focus:ring-purple-400"
+            oninput="updateDiff('${esc(branch)}','${esc(product)}')"/>
+          <input id="actd_${id}" type="date" value="${actualDate || today}"
+            class="border border-slate-200 rounded px-1 py-0.5 text-xs w-24 focus:outline-none focus:ring-1 focus:ring-purple-300"/>
+          <button onclick="saveActual('${esc(branch)}','${esc(product)}')"
+            class="text-xs bg-purple-500 text-white hover:bg-purple-600 px-2 py-0.5 rounded transition">저장</button>
+        </div>
+      </td>
+      <td id="diff_${id}" class="px-3 py-2 text-center font-bold text-sm ${diff === null ? 'text-slate-300' : diff > 0 ? 'text-red-600' : diff === 0 ? 'text-emerald-600' : 'text-amber-500'}">
+        ${diff === null ? '-' : diff > 0 ? '▼'+diff : diff === 0 ? '✓' : '▲'+Math.abs(diff)}
+      </td>
       <td class="px-3 py-2 text-center">${statusBadge(isDanger, isWarning)}</td>`;
     tbody.appendChild(tr);
 
@@ -977,6 +1002,25 @@ function renderInventoryTable(branch) {
           class="bg-indigo-600 text-white font-semibold px-4 py-2 rounded-lg hover:bg-indigo-700 transition text-sm">저장</button>
         <button onclick="promptInbound('${esc(branch)}','${esc(product)}')"
           class="bg-green-600 text-white font-semibold px-3 py-2 rounded-lg hover:bg-green-700 transition text-sm">+입고</button>
+      </div>
+      <div class="mt-2 border-t border-purple-100 pt-2">
+        <p class="text-xs text-purple-600 font-semibold mb-1.5">📋 실사재고</p>
+        <div class="flex items-center gap-1.5">
+          <input id="actm_${id}" type="number" min="0" placeholder="실사수량" value="${actualQty !== null ? actualQty : ''}"
+            class="flex-1 border border-purple-200 rounded-lg px-2 py-2 text-center text-sm bg-purple-50 focus:outline-none focus:ring-2 focus:ring-purple-400"
+            oninput="updateDiff('${esc(branch)}','${esc(product)}')"/>
+          <input id="actdm_${id}" type="date" value="${actualDate || today}"
+            class="flex-1 border border-slate-300 rounded-lg px-2 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-400"/>
+          <button onclick="saveActual('${esc(branch)}','${esc(product)}')"
+            class="bg-purple-600 text-white font-semibold px-3 py-2 rounded-lg hover:bg-purple-700 transition text-sm whitespace-nowrap">저장</button>
+        </div>
+        <div class="flex items-center gap-2 mt-1.5">
+          <span class="text-xs text-slate-500">차이:</span>
+          <span id="diffm_${id}" class="text-sm font-bold ${diff === null ? 'text-slate-300' : diff > 0 ? 'text-red-600' : diff === 0 ? 'text-emerald-600' : 'text-amber-500'}">
+            ${diff === null ? '-' : diff > 0 ? '▼'+diff : diff === 0 ? '✓' : '▲'+Math.abs(diff)}
+          </span>
+          ${diff !== null ? `<span class="text-xs text-slate-400">(남은재고 ${remaining} - 실사 ${actualQty})</span>` : ''}
+        </div>
       </div>`;
     cards.appendChild(card);
   });
@@ -996,7 +1040,7 @@ function renderInventoryTable(branch) {
     <td></td>
     <td class="px-3 py-3 text-center text-sm text-amber-600">${soldTotal.toLocaleString()}</td>
     <td class="px-3 py-3 text-center text-indigo-700 text-sm font-bold">${remainTotal.toLocaleString()}</td>
-    <td></td>`;
+    <td></td><td></td><td></td>`;
   tbody.appendChild(sumTr);
 
   /* ── 모바일 합계 카드 ── */
@@ -1051,10 +1095,66 @@ function updateDisplay(branch, product) {
   if (dmEl)  dmEl.textContent  = newM.toLocaleString();
   if (dbEl)  dbEl.textContent  = newB.toLocaleString();
   if (remEl) {
-    const rem = newM + newB;   // 남은재고 = M+B
+    const rem = newM + newB - sold;
     remEl.textContent = rem.toLocaleString();
     remEl.className   = remEl.className.replace(/text-(red|amber|emerald)-\d+/g, '');
     remEl.classList.add(rem <= 0 ? 'text-red-600' : rem <= 10 ? 'text-amber-600' : 'text-emerald-600');
+  }
+  updateDiff(branch, product);
+}
+
+/* ── 실사재고 차이 실시간 업데이트 ──────────────────────────────── */
+function updateDiff(branch, product) {
+  const key = branch + '|' + product;
+  const id  = sid(branch) + '_' + sid(product);
+  const actEl = document.getElementById('act_' + id) || document.getElementById('actm_' + id);
+  const remEl = document.getElementById('rem_' + id) || document.getElementById('remm_' + id);
+  const remaining = remEl
+    ? (parseInt(remEl.textContent.replace(/,/g, '')) || 0)
+    : ((state.displayMap[key]||0) + (state.boxMap[key]||0) - (state.soldMap[key]||0));
+  ['diff_' + id, 'diffm_' + id].forEach(diffId => {
+    const diffEl = document.getElementById(diffId);
+    if (!diffEl) return;
+    if (!actEl || actEl.value === '') {
+      diffEl.textContent = '-';
+      diffEl.className = diffEl.className.replace(/text-(red|amber|emerald|slate)-\d+/g, '');
+      diffEl.classList.add('text-slate-300');
+      return;
+    }
+    const actual = parseInt(actEl.value) || 0;
+    const diff = remaining - actual;
+    diffEl.textContent = diff > 0 ? '▼' + diff : diff === 0 ? '✓' : '▲' + Math.abs(diff);
+    diffEl.className = diffEl.className.replace(/text-(red|amber|emerald|slate)-\d+/g, '');
+    diffEl.classList.add(diff > 0 ? 'text-red-600' : diff === 0 ? 'text-emerald-600' : 'text-amber-500');
+  });
+}
+
+/* ── 실사재고 저장 ──────────────────────────────────────────────── */
+async function saveActual(branch, product) {
+  const bKey = branch + '|' + product;
+  const id   = sid(branch) + '_' + sid(product);
+  const actInput  = document.getElementById('act_'  + id) || document.getElementById('actm_'  + id);
+  const actdInput = document.getElementById('actd_' + id) || document.getElementById('actdm_' + id);
+  if (!actInput || actInput.value === '') { showError('실사재고 수량을 입력하세요.'); return; }
+  const actualQty  = parseInt(actInput.value) || 0;
+  const actualDate = actdInput?.value || new Date().toISOString().slice(0, 10);
+  try {
+    await sbFetch('/rest/v1/inventory_stock?on_conflict=branch,product', {
+      method: 'POST',
+      headers: { ...SB_HEADERS, 'Prefer': 'resolution=merge-duplicates,return=minimal' },
+      body: JSON.stringify({
+        branch, product,
+        actual_qty: actualQty,
+        actual_date: actualDate,
+        initial_stock: (state.displayMap[bKey]||0) + (state.boxMap[bKey]||0),
+      }),
+    });
+    state.actualMap[bKey]     = actualQty;
+    state.actualDateMap[bKey] = actualDate;
+    updateDiff(branch, product);
+    showSuccess(`${branch} · ${product} 실사재고 ${actualQty}개 저장 완료`);
+  } catch (e) {
+    showError('실사재고 저장 오류: ' + e.message);
   }
 }
 
@@ -1094,7 +1194,7 @@ async function saveStock(branch, product) {
     const remEl = document.getElementById('rem_' + id) || document.getElementById('remm_' + id);
     if (dmEl)  dmEl.textContent  = displayQty.toLocaleString();
     if (dbEl)  dbEl.textContent  = boxQty.toLocaleString();
-    if (remEl) remEl.textContent = (displayQty + boxQty).toLocaleString();
+    if (remEl) remEl.textContent = (displayQty + boxQty - (state.soldMap[bKey] || 0)).toLocaleString();
     showSuccess(`${branch} · ${product} M${displayQty} B${boxQty} 저장 완료`);
     if (state.selectedBranch === '__all__') renderAllBranchesTable();
   } catch (e) {
@@ -1261,7 +1361,7 @@ async function loadDashboard() {
         bAccum += (state.displayMap[branch + '|' + p] || 0) + (state.boxMap[branch + '|' + p] || 0);
         bSold  += state.soldMap[branch + '|' + p] || 0;
       });
-      const bRemain = bAccum;   // 남은재고 = M+B
+      const bRemain = bAccum - bSold;
       grandInit += bAccum; grandSold += bSold; grandRemain += bRemain;
 
       const isDanger = bRemain <= 0;
