@@ -848,6 +848,7 @@ function renderInventoryTable(branch) {
     <th class="px-3 py-3 text-center font-semibold">M(디스플레이)</th>
     <th class="px-3 py-3 text-center font-semibold">B(박스)</th>
     <th class="px-3 py-3 text-center font-semibold">누적재고</th>
+    <th class="px-3 py-3 text-center font-semibold">재고입력일</th>
     <th class="px-3 py-3 text-center font-semibold">판매수량</th>
     <th class="px-3 py-3 text-center font-semibold">남은재고</th>
     <th class="px-3 py-3 text-center font-semibold">업데이트</th>
@@ -899,15 +900,13 @@ function renderInventoryTable(branch) {
             class="text-xs bg-green-100 text-green-700 hover:bg-green-200 px-1.5 py-1 rounded transition">+입고</button>
         </div>
       </td>
-      <td class="px-2 py-2 text-center">
-        <div class="flex items-center justify-center gap-1">
-          <span class="text-sm font-bold text-slate-700">${total.toLocaleString()}</span>
-          <div class="flex items-center gap-0.5">
-            <input id="d_${esc(branch)}_${esc(product)}" type="date" value="${stockDate || today}"
-              class="border border-slate-200 rounded px-1 py-0.5 text-xs focus:outline-none focus:ring-1 focus:ring-indigo-300 w-28"/>
-            <button onclick="saveStock('${esc(branch)}','${esc(product)}')"
-              class="text-xs bg-indigo-500 text-white hover:bg-indigo-600 px-2 py-1 rounded transition">저장</button>
-          </div>
+      <td class="px-3 py-2 text-center font-bold text-sm text-slate-700">${total.toLocaleString()}</td>
+      <td class="px-2 py-1.5 text-center">
+        <div class="flex items-center justify-center gap-0.5">
+          <input id="d_${esc(branch)}_${esc(product)}" type="date" value="${stockDate || today}"
+            class="border border-slate-200 rounded px-1 py-0.5 text-xs focus:outline-none focus:ring-1 focus:ring-indigo-300 w-28"/>
+          <button onclick="saveStock('${esc(branch)}','${esc(product)}')"
+            class="text-xs bg-indigo-500 text-white hover:bg-indigo-600 px-2 py-1 rounded transition">저장</button>
         </div>
       </td>
       <td class="px-3 py-2 text-center text-sm text-amber-600">${sold.toLocaleString()}</td>
@@ -974,6 +973,7 @@ function renderInventoryTable(branch) {
     <td class="px-3 py-3 text-center text-sm text-indigo-700">${mTotal.toLocaleString()}</td>
     <td class="px-3 py-3 text-center text-sm text-green-700">${bTotal.toLocaleString()}</td>
     <td class="px-3 py-3 text-center text-sm font-bold">${(mTotal+bTotal).toLocaleString()}</td>
+    <td></td>
     <td class="px-3 py-3 text-center text-sm text-amber-600">${soldTotal.toLocaleString()}</td>
     <td class="px-3 py-3 text-center text-indigo-700 text-sm">${remainTotal.toLocaleString()}</td>
     <td></td><td></td>`;
@@ -993,7 +993,7 @@ function renderInventoryTable(branch) {
   cards.appendChild(sumCard);
 
   document.getElementById('branchStockSummary').classList.remove('hidden');
-  document.getElementById('branchInitTotal').textContent      = initTotal.toLocaleString();
+  document.getElementById('branchInitTotal').textContent      = (mTotal + bTotal).toLocaleString();
   document.getElementById('branchSoldTotal').textContent      = soldTotal.toLocaleString();
   document.getElementById('branchRemainingTotal').textContent = remainTotal.toLocaleString();
 
