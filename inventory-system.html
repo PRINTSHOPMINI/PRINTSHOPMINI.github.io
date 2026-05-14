@@ -639,12 +639,14 @@ async function updateInboundRecord(id, displayQty, boxQty, date) {
 /* ── 재고 데이터 로드 ───────────────────────────────────────────── */
 async function loadAllInventory() {
   try {
-    const rows = await sbFetch('/rest/v1/inventory_stock?select=branch,product,display_qty,box_qty,stock_date,updated_at&limit=10000');
+    const rows = await sbFetch('/rest/v1/inventory_stock?select=branch,product,initial_stock,display_qty,box_qty,stock_date,updated_at&limit=10000');
     rows.forEach(r => {
       const key = r.branch + '|' + r.product;
-      state.displayMap[key]   = r.display_qty  || 0;
-      state.boxMap[key]       = r.box_qty      || 0;
-      state.stockDateMap[key] = r.stock_date   || null;
+      // display_qty/box_qty가 null이면 initial_stock을 B에 fallback
+      const hasNew = r.display_qty !== null || r.box_qty !== null;
+      state.displayMap[key]   = hasNew ? (r.display_qty || 0) : 0;
+      state.boxMap[key]       = hasNew ? (r.box_qty     || 0) : (r.initial_stock || 0);
+      state.stockDateMap[key] = r.stock_date || null;
       state.isUpdatedMap[key] = !!r.updated_at;
     });
     renderAllBranchesTable();
@@ -818,13 +820,14 @@ function renderAllBranchesTable() {
 async function loadInventory(branch) {
   try {
     const rows = await sbFetch(
-      `/rest/v1/inventory_stock?branch=eq.${encodeURIComponent(branch)}&select=product,display_qty,box_qty,stock_date,updated_at`
+      `/rest/v1/inventory_stock?branch=eq.${encodeURIComponent(branch)}&select=product,initial_stock,display_qty,box_qty,stock_date,updated_at`
     );
     rows.forEach(r => {
       const key = branch + '|' + r.product;
-      state.displayMap[key]   = r.display_qty  || 0;
-      state.boxMap[key]       = r.box_qty      || 0;
-      state.stockDateMap[key] = r.stock_date   || null;
+      const hasNew = r.display_qty !== null || r.box_qty !== null;
+      state.displayMap[key]   = hasNew ? (r.display_qty || 0) : 0;
+      state.boxMap[key]       = hasNew ? (r.box_qty     || 0) : (r.initial_stock || 0);
+      state.stockDateMap[key] = r.stock_date || null;
       state.isUpdatedMap[key] = !!r.updated_at;
     });
     renderInventoryTable(branch);
@@ -1184,11 +1187,12 @@ async function syncData() {
 /* ── 대시보드 ───────────────────────────────────────────────────── */
 async function loadDashboard() {
   try {
-    const stockRows = await sbFetch('/rest/v1/inventory_stock?select=branch,product,display_qty,box_qty&limit=10000');
+    const stockRows = await sbFetch('/rest/v1/inventory_stock?select=branch,product,initial_stock,display_qty,box_qty&limit=10000');
     stockRows.forEach(r => {
       const key = r.branch + '|' + r.product;
-      state.displayMap[key] = r.display_qty || 0;
-      state.boxMap[key]     = r.box_qty     || 0;
+      const hasNew = r.display_qty !== null || r.box_qty !== null;
+      state.displayMap[key] = hasNew ? (r.display_qty || 0) : 0;
+      state.boxMap[key]     = hasNew ? (r.box_qty     || 0) : (r.initial_stock || 0);
     });
 
     const tbody = document.getElementById('dashboardTbody');
