@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>나의 사주 캐릭터 · 만세력</title>
+<style>
+  :root {
+    --bg-deep: #0b0e1a;
+    --bg-panel: #131829;
+    --bg-panel-2: #1a2138;
+    --border: #2a3252;
+    --gold: #e8c477;
+    --gold-soft: #c9a55c;
+    --text: #eef1fb;
+    --text-dim: #9aa3c4;
+    --accent: #7c8fff;
+    --wood: #7fd88a;
+    --fire: #ff8a80;
+    --earth: #d8b978;
+    --metal: #cfd6e6;
+    --water: #7fb8ff;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: radial-gradient(circle at 50% -10%, #1b2242 0%, var(--bg-deep) 55%);
+    color: var(--text);
+    font-family: "Malgun Gothic", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, sans-serif;
+    min-height: 100vh;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 24px 16px 80px; }
+  header { text-align: center; margin-bottom: 20px; }
+  header h1 {
+    font-size: 22px; margin: 0 0 6px;
+    background: linear-gradient(90deg, var(--gold), #fff6de, var(--gold-soft));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  header p { margin: 0; color: var(--text-dim); font-size: 13px; }
+
+  .panel {
+    background: linear-gradient(180deg, var(--bg-panel), var(--bg-panel-2));
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px;
+    margin-bottom: 16px;
+    box-shadow: 0 10px 30px -18px rgba(0,0,0,0.6);
+  }
+  .panel h2 { font-size: 13px; margin: 0 0 14px; color: var(--gold); letter-spacing: .5px; }
+
+  .field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+  .field label { font-size: 12px; color: var(--text-dim); }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; }
+  .row > .field { flex: 1; min-width: 90px; }
+
+  select, input[type=number], input[type=date], input[type=time] {
+    background: var(--bg-deep); color: var(--text); border: 1px solid var(--border);
+    border-radius: 8px; padding: 10px; font-size: 14px; width: 100%;
+  }
+
+  .toggle-row { display: flex; gap: 8px; }
+  .toggle-btn {
+    flex: 1; text-align: center; background: var(--bg-deep); border: 1px solid var(--border);
+    color: var(--text-dim); border-radius: 8px; padding: 10px 6px; cursor: pointer; font-size: 13px;
+  }
+  .toggle-btn.active { background: linear-gradient(135deg, var(--accent), #5867c9); border-color: var(--accent); color: #fff; font-weight: 600; }
+
+  .leap-check { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text-dim); margin-top: 4px; }
+
+  .calc-btn {
+    width: 100%; padding: 13px; border-radius: 10px; border: none; cursor: pointer;
+    background: linear-gradient(135deg, var(--gold), var(--gold-soft)); color: #241a06;
+    font-size: 15px; font-weight: 700; margin-top: 6px;
+  }
+  .calc-btn:hover { filter: brightness(1.05); }
+
+  /* 만세력 표 */
+  table.manse { width: 100%; border-collapse: collapse; font-size: 13px; }
+  table.manse th, table.manse td { border: 1px solid var(--border); padding: 8px 4px; text-align: center; }
+  table.manse th { color: var(--gold-soft); font-weight: 600; background: rgba(255,255,255,0.03); }
+  table.manse td.gan, table.manse td.jiji { font-size: 17px; font-weight: 700; }
+  .el-wood { color: var(--wood); } .el-fire { color: var(--fire); }
+  .el-earth { color: var(--earth); } .el-metal { color: var(--metal); } .el-water { color: var(--water); }
+  .manse-note { font-size: 11px; color: var(--text-dim); margin-top: 10px; line-height: 1.5; }
+
+  /* 카드 */
+  .stage-wrap { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .stage {
+    width: 320px; height: 320px; position: relative;
+    background: #ffffff; border-radius: 20px; overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: 0 20px 50px -20px rgba(0,0,0,0.7), 0 0 0 6px rgba(124,143,255,0.06);
+    transition: opacity .15s;
+  }
+  .stage.loading { opacity: .5; }
+  .stage.loading::after {
+    content: "만들어지는 중..."; position: absolute; inset: 0; z-index: 10;
+    display: flex; align-items: center; justify-content: center; font-size: 12px; color: #6b6b7a;
+    background: rgba(255,255,255,0.35);
+  }
+  .stage img { position: absolute; object-fit: contain; pointer-events: none; }
+  .stage .l-bg    { z-index: 1; top: 50%; left: 50%; width: 100%; height: 100%; transform: translate(-50%,-50%); }
+  .stage .l-char  { z-index: 2; top: 0; left: 0; width: 100%; height: 100%; }
+  .stage .l-pet   { z-index: 3; left: -6%; top: 30%; width: 36%; height: 36%; }
+  .stage .l-item  { z-index: 4; right: -4%; top: 6%; width: 30%; height: 30%; }
+  .stage .empty-hint {
+    position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+    color: #b6b6c8; font-size: 13px; text-align: center; padding: 20px;
+  }
+  .card-caption { font-size: 13px; color: var(--text-dim); text-align: center; }
+  .card-caption b { color: var(--gold); }
+  .style-row { display: flex; gap: 8px; margin-top: 4px; }
+  .style-btn {
+    flex: 1; text-align: center; background: var(--bg-deep); border: 1px solid var(--border);
+    color: var(--text-dim); border-radius: 8px; padding: 8px 4px; cursor: pointer; font-size: 12px;
+  }
+  .style-btn.active { background: linear-gradient(135deg, var(--accent), #5867c9); border-color: var(--accent); color: #fff; }
+
+  footer { text-align: center; color: var(--text-dim); font-size: 11px; margin-top: 20px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>✨ 나의 사주 캐릭터</h1>
+    <p>생년월일시를 입력하면 만세력을 계산하고, 나만의 사주 캐릭터 카드를 만들어드립니다</p>
+  </header>
+
+  <div class="panel">
+    <h2>1. 생년월일시 입력</h2>
+
+    <div class="field">
+      <label>양력 / 음력</label>
+      <div class="toggle-row">
+        <button class="toggle-btn active" data-cal="solar">양력</button>
+        <button class="toggle-btn" data-cal="lunar">음력</button>
+      </div>
+      <div class="leap-check" id="leapRow" style="display:none;">
+        <input type="checkbox" id="leapCheck" />
+        <label for="leapCheck">윤달(閏月)입니다</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="field">
+        <label>연도</label>
+        <select id="selYear"></select>
+      </div>
+      <div class="field">
+        <label>월</label>
+        <select id="selMonth"></select>
+      </div>
+      <div class="field">
+        <label>일</label>
+        <select id="selDay"></select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="field">
+        <label>시각 (모르면 12시 00분)</label>
+        <div class="row" style="gap:8px;">
+          <select id="selHour" style="flex:1;"></select>
+          <select id="selMinute" style="flex:1;"></select>
+        </div>
+      </div>
+      <div class="field">
+        <label>성별</label>
+        <div class="toggle-row">
+          <button class="toggle-btn active" data-gender="female">여성</button>
+          <button class="toggle-btn" data-gender="male">남성</button>
+        </div>
+      </div>
+    </div>
+
+    <button class="calc-btn" id="calcBtn">만세력 계산하기</button>
+  </div>
+
+  <div class="panel" id="manseResultPanel" style="display:none;">
+    <h2>2. 만세력</h2>
+    <table class="manse" id="manseTable"></table>
+    <div class="manse-note" id="manseNote"></div>
+  </div>
+
+  <div class="panel" id="cardPanel" style="display:none;">
+    <h2>3. 나의 사주 캐릭터 카드</h2>
+    <div class="stage-wrap">
+      <div class="stage" id="stage">
+        <div class="empty-hint" id="emptyHint">만세력을 먼저 계산해주세요</div>
+        <img class="l-bg" id="lBg" alt="배경" />
+        <img class="l-char" id="lChar" alt="캐릭터" />
+        <img class="l-pet" id="lPet" alt="수호펫" />
+        <img class="l-item" id="lItem" alt="신수아이템" />
+      </div>
+      <div class="card-caption" id="cardCaption"></div>
+      <div class="style-row" id="styleRow">
+        <button class="style-btn active" data-style="1">스타일1</button>
+        <button class="style-btn" data-style="2">스타일2</button>
+        <button class="style-btn" data-style="3">스타일3</button>
+        <button class="style-btn" data-style="4">스타일4</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>일간(태어난 날의 천간) = 캐릭터·배경 · 년지(띠) = 수호펫 · 일주(태어난 날의 간지) = 신수아이템</footer>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  // =====================================================================
+  // 1. 천문 계산 (Meeus 저정밀 공식) — 태양 겉보기 황경, 삭(신월)
+  // =====================================================================
+  function toJD(y, m, d, hh, mm, ss) {
+    hh = hh || 0; mm = mm || 0; ss = ss || 0;
+    if (m <= 2) { y -= 1; m += 12; }
+    var A = Math.floor(y / 100);
+    var B = 2 - A + Math.floor(A / 4);
+    var dayFrac = d + (hh + mm / 60 + ss / 3600) / 24;
+    return Math.floor(365.25 * (y + 4716)) + Math.floor(30.6001 * (m + 1)) + dayFrac + B - 1524.5;
+  }
+
+  function jdToYmdhms(jd) {
+    jd += 0.5;
+    var Z = Math.floor(jd);
+    var F = jd - Z;
+    var A;
+    if (Z < 2299161) { A = Z; }
+    else {
+      var alpha = Math.floor((Z - 1867216.25) / 36524.25);
+      A = Z + 1 + alpha - Math.floor(alpha / 4);
+    }
+    var B = A + 1524;
+    var C = Math.floor((B - 122.1) / 365.25);
+    var D = Math.floor(365.25 * C);
+    var E = Math.floor((B - D) / 30.6001);
+    var day = B - D - Math.floor(30.6001 * E) + F;
+    var month = E < 14 ? E - 1 : E - 13;
+    var year = month > 2 ? C - 4716 : C - 4715;
+    var dayInt = Math.floor(day);
+    var frac = (day - dayInt) * 24;
+    var hour = Math.floor(frac);
+    frac = (frac - hour) * 60;
+    var minute = Math.floor(frac);
+    var sec = Math.round((frac - minute) * 60);
+    return { y: year, m: month, d: dayInt, hh: hour, mm: minute, ss: sec };
+  }
+
+  function solarApparentLongitude(jd) {
+    var T = (jd - 2451545.0) / 36525.0;
+    var L0 = 280.46646 + 36000.76983 * T + 0.0003032 * T * T;
+    var Mdeg = (357.52911 + 35999.05029 * T - 0.0001537 * T * T) % 360;
+    var M = Mdeg * Math.PI / 180;
+    var C = (1.914602 - 0.004817 * T - 0.000014 * T * T) * Math.sin(M)
+      + (0.019993 - 0.000101 * T) * Math.sin(2 * M)
+      + 0.000289 * Math.sin(3 * M);
+    var trueLong = L0 + C;
+    var omega = (125.04 - 1934.136 * T) * Math.PI / 180;
+    var appLong = trueLong - 0.00569 - 0.00478 * Math.sin(omega);
+    appLong = appLong % 360;
+    if (appLong < 0) appLong += 360;
+    return appLong;
+  }
+
+  function findSolarCrossing(targetDeg, jdGuess) {
+    var jd = jdGuess;
+    for (var i = 0; i < 60; i++) {
+      var lon = solarApparentLongitude(jd);
+      var diff = ((lon - targetDeg + 180) % 360 + 360) % 360 - 180;
+      if (Math.abs(diff) < 1e-7) break;
+      jd -= diff / 0.9856002;
+    }
+    return jd;
+  }
+
+  function newMoonJD(k) {
+    var T = k / 1236.85;
+    var JDE = 2451550.09766 + 29.530588861 * k
+      + 0.00015437 * T * T - 0.000000150 * Math.pow(T, 3) + 0.00000000073 * Math.pow(T, 4);
+    var M = 2.5534 + 29.10535669 * k - 0.0000014 * T * T - 0.00000011 * Math.pow(T, 3);
+    var Mp = 201.5643 + 385.81693528 * k + 0.0107582 * T * T + 0.00001238 * Math.pow(T, 3) - 0.000000058 * Math.pow(T, 4);
+    var F = 160.7108 + 390.67050284 * k - 0.0016118 * T * T - 0.00000227 * Math.pow(T, 3) + 0.000000011 * Math.pow(T, 4);
+    var Om = 124.7746 - 1.56375588 * k + 0.0020672 * T * T + 0.00000215 * Math.pow(T, 3);
+    var Mr = (M % 360) * Math.PI / 180, Mpr = (Mp % 360) * Math.PI / 180,
+        Fr = (F % 360) * Math.PI / 180, Omr = (Om % 360) * Math.PI / 180;
+    var E = 1 - 0.002516 * T - 0.0000074 * T * T;
+    var corr = -0.40720 * Math.sin(Mpr)
+      + 0.17241 * E * Math.sin(Mr)
+      + 0.01608 * Math.sin(2 * Mpr)
+      + 0.01039 * Math.sin(2 * Fr)
+      + 0.00739 * E * Math.sin(Mpr - Mr)
+      + -0.00514 * E * Math.sin(Mpr + Mr)
+      + 0.00208 * E * E * Math.sin(2 * Mr)
+      + -0.00111 * Math.sin(Mpr - 2 * Fr)
+      + -0.00057 * Math.sin(Mpr + 2 * Fr)
+      + 0.00056 * E * Math.sin(2 * Mpr + Mr)
+      + -0.00042 * Math.sin(3 * Mpr)
+      + 0.00042 * E * Math.sin(Mr + 2 * Fr)
+      + 0.00038 * E * Math.sin(Mr - 2 * Fr)
+      + -0.00024 * E * Math.sin(2 * Mpr - Mr)
+      + -0.00017 * Math.sin(Omr)
+      + -0.00007 * Math.sin(Mpr + 2 * Mr)
+      + 0.00004 * Math.sin(2 * Mpr - 2 * Fr)
+      + 0.00004 * Math.sin(3 * Mr)
+      + 0.00003 * Math.sin(Mpr + Mr - 2 * Fr)
+      + 0.00003 * Math.sin(2 * Mpr + 2 * Fr)
+      + -0.00003 * Math.sin(Mpr + Mr + 2 * Fr)
+      + 0.00003 * Math.sin(Mpr - Mr + 2 * Fr)
+      + -0.00002 * Math.sin(Mpr - Mr - 2 * Fr)
+      + -0.00002 * Math.sin(3 * Mpr + Mr)
+      + 0.00002 * Math.sin(4 * Mpr);
+    return JDE + corr;
+  }
+
+  function kForDateNear(y, m, d) {
+    var yearFrac = y + (m - 0.5) / 12;
+    return Math.floor((yearFrac - 2000) * 12.3685);
+  }
+
+  // =====================================================================
+  // 2. 60갑자 / 오행
+  // =====================================================================
+  var CHEONGAN_HANGUL = ["갑", "을", "병", "정", "무", "기", "경", "신", "임", "계"];
+  var JIJI_HANGUL = ["자", "축", "인", "묘", "진", "사", "오", "미", "신", "유", "술", "해"];
+  var JIJI_ANIMAL = ["쥐", "소", "호랑이", "토끼", "용", "뱀", "말", "양", "원숭이", "닭", "개", "돼지"];
+  // 천간 + 오행이 합쳐진 폴더/표시용 이름 (예: 갑목, 을목, 병화...)
+  var CHEONGAN_FULL = ["갑목", "을목", "병화", "정화", "무토", "기토", "경금", "신금", "임수", "계수"];
+  var CHEONGAN_ELEMENT = ["목", "목", "화", "화", "토", "토", "금", "금", "수", "수"];
+  var ELEMENT_CLASS = { "목": "el-wood", "화": "el-fire", "토": "el-earth", "금": "el-metal", "수": "el-water" };
+  var ELEMENT_FOLDER = { "목": "목계열", "화": "화계열", "토": "토계열", "금": "금계열", "수": "수계열" };
+
+  function ganziStr(ganIdx, jijiIdx) { return CHEONGAN_HANGUL[((ganIdx % 10) + 10) % 10] + JIJI_HANGUL[((jijiIdx % 12) + 12) % 12]; }
+
+  // =====================================================================
+  // 3. 사주 4주(년/월/일/시) 계산
+  // =====================================================================
+  var JIE_MONTH_JIJI = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 0, 1]; // 입춘,경칩,청명,입하,망종,소서,입추,백로,한로,입동,대설,소한 -> 인묘진사오미신유술해자축
+  var MONTH_GAN_START = { 0: 2, 1: 4, 2: 6, 3: 8, 4: 0 }; // 년간%5 -> 인월 천간(갑기->병,을경->무,병신->경,정임->임,무계->갑)
+  var HOUR_GAN_START = { 0: 0, 5: 0, 1: 2, 6: 2, 2: 4, 7: 4, 3: 6, 8: 6, 4: 8, 9: 8 }; // 일간%10 -> 자시 천간
+
+  function kstToJdUt(y, m, d, hh, mm) {
+    var totalMin = hh * 60 + mm;
+    var utHour = (totalMin / 60) - 9; // KST = UT+9
+    return toJD(y, m, d, 0, 0, 0) + utHour / 24;
+  }
+
+  function yearPillar(y, m, d, hh, mm) {
+    var jd = kstToJdUt(y, m, d, hh, mm);
+    var ipchunJd = findSolarCrossing(315, toJD(y, 2, 4, 0, 0, 0));
+    var sajuYear = jd >= ipchunJd ? y : y - 1;
+    var idx = (((sajuYear - 4) % 60) + 60) % 60;
+    return { ganIdx: idx % 10, jijiIdx: idx % 12, sajuYear: sajuYear };
+  }
+
+  function monthPillar(y, m, d, hh, mm, yearGanIdx) {
+    var jd = kstToJdUt(y, m, d, hh, mm);
+    var lon = solarApparentLongitude(jd);
+    var bucket = Math.floor((((lon - 315 + 360) % 360)) / 30);
+    var monthJijiIdx = JIE_MONTH_JIJI[bucket];
+    var startGan = MONTH_GAN_START[((yearGanIdx % 5) + 5) % 5];
+    var offset = ((monthJijiIdx - 2) % 12 + 12) % 12;
+    var monthGanIdx = (startGan + offset) % 10;
+    return { ganIdx: monthGanIdx, jijiIdx: monthJijiIdx };
+  }
+
+  function dayPillar(y, m, d, hh, mm) {
+    // 조자시(23시) 관행: 23시 이후 출생은 다음 날짜의 일주로 취급
+    var useNextDay = (hh * 60 + mm) >= 23 * 60;
+    var jd0 = toJD(y, m, d, 0, 0, 0) + (useNextDay ? 1 : 0);
+    var jdn = Math.round(jd0);
+    var idx = (((jdn + 49) % 60) + 60) % 60;
+    return { ganIdx: idx % 10, jijiIdx: idx % 12, jdn: jdn };
+  }
+
+  function hourPillar(dayGanIdx, hh, mm) {
+    var totalMin = hh * 60 + mm;
+    var h = totalMin / 60;
+    var hourJijiIdx = Math.floor(((h + 1) % 24) / 2) % 12;
+    var startGan = HOUR_GAN_START[((dayGanIdx % 10) + 10) % 10];
+    var hourGanIdx = (startGan + hourJijiIdx) % 10;
+    return { ganIdx: hourGanIdx, jijiIdx: hourJijiIdx };
+  }
+
+  function computeSaju(y, m, d, hh, mm) {
+    var yp = yearPillar(y, m, d, hh, mm);
+    var mp = monthPillar(y, m, d, hh, mm, yp.ganIdx);
+    var dp = dayPillar(y, m, d, hh, mm);
+    var hp = hourPillar(dp.ganIdx, hh, mm);
+    return { year: yp, month: mp, day: dp, hour: hp };
+  }
+
+  // =====================================================================
+  // 4. 음력 <-> 양력 변환 (신월 + 절기 기반, 윤달 처리)
+  // =====================================================================
+  function findDongziNear(jd, offsetYears) {
+    var ymd = jdToYmdhms(jd);
+    var guess = toJD(ymd.y + offsetYears, 12, 22, 12, 0, 0);
+    return findSolarCrossing(270, guess);
+  }
+
+  function findNewMoonAtOrBefore(jd) {
+    var ymd = jdToYmdhms(jd);
+    var k = kForDateNear(ymd.y, ymd.m, ymd.d);
+    // k 근방을 탐색해서 jd 직전(또는 그 시점)의 삭을 찾는다
+    while (newMoonJD(k) > jd) k--;
+    while (newMoonJD(k + 1) <= jd) k++;
+    return { k: k, jd: newMoonJD(k) };
+  }
+
+  // 주어진 시각(jd)을 포함하는 "음력 1년" 구조(동지~동지)를 만들어 월 배열을 반환
+  function buildLunarStructure(jd) {
+    var dz0 = findDongziNear(jd, 0);
+    var dzBefore, dzAfter;
+    if (dz0 <= jd) { dzBefore = dz0; dzAfter = findDongziNear(jd, 1); }
+    else { dzAfter = dz0; dzBefore = findDongziNear(jd, -1); }
+
+    var start = findNewMoonAtOrBefore(dzBefore);
+    var afterStart = findNewMoonAtOrBefore(dzAfter); // 이 삭이 다음 구간의 시작(경계, 포함 안 함)
+
+    var starts = [];
+    var k = start.k;
+    var curJd = start.jd;
+    while (curJd < afterStart.jd + 1e-6) {
+      starts.push(curJd);
+      k++;
+      curJd = newMoonJD(k);
+    }
+    // starts: [월11 시작, 월12 시작, ..., 다음해 월11 시작] (마지막 원소는 경계, 구간 계산용)
+
+    var months = []; // {start, end, hasZhongqi}
+    for (var i = 0; i < starts.length - 1; i++) {
+      var s = starts[i], e = starts[i + 1];
+      var lonS = solarApparentLongitude(s);
+      var lonE = solarApparentLongitude(e);
+      if (lonE < lonS) lonE += 360;
+      var hasZ = Math.floor(lonS / 30) !== Math.floor((lonE - 1e-9) / 30);
+      months.push({ start: s, end: e, hasZhongqi: hasZ });
+    }
+
+    // 월 번호/윤달 배정 (첫 달 = 11월)
+    var monthNum = 11, isLeapArr = [], numArr = [];
+    for (var j = 0; j < months.length; j++) {
+      if (j === 0) {
+        numArr.push(11); isLeapArr.push(false);
+      } else {
+        if (months[j].hasZhongqi) {
+          monthNum = (monthNum % 12) + 1;
+          numArr.push(monthNum); isLeapArr.push(false);
+        } else {
+          numArr.push(monthNum); isLeapArr.push(true);
+        }
+      }
+    }
+
+    // 연도 라벨: monthNum이 1이 되는 첫 구간의 태양년도를 그 해의 lunarYear로 삼고,
+    // 그 이전(11,12월) 구간은 lunarYear-1
+    var idx1 = numArr.indexOf(1);
+    var yearAtIdx1 = idx1 >= 0 ? jdToYmdhms(months[idx1].start).y : jdToYmdhms(jd).y;
+    var lunarYearArr = [];
+    for (var k2 = 0; k2 < months.length; k2++) {
+      lunarYearArr.push(idx1 >= 0 && k2 < idx1 ? yearAtIdx1 - 1 : yearAtIdx1);
+    }
+
+    return { months: months, numArr: numArr, isLeapArr: isLeapArr, lunarYearArr: lunarYearArr };
+  }
+
+  function solarToLunar(y, m, d, hh, mm) {
+    var jd = kstToJdUt(y, m, d, hh, mm);
+    var struct = buildLunarStructure(jd);
+    for (var i = 0; i < struct.months.length; i++) {
+      if (jd >= struct.months[i].start && jd < struct.months[i].end) {
+        var day = Math.floor(jd - struct.months[i].start) + 1;
+        return { year: struct.lunarYearArr[i], month: struct.numArr[i], day: day, isLeap: struct.isLeapArr[i] };
+      }
+    }
+    return null;
+  }
+
+  function lunarToSolar(lunarYear, lunarMonth, lunarDay, isLeap) {
+    // lunarYear의 설날 근방(2월 초)을 기준으로 구조를 만들고 그 안에서 월을 찾는다
+    var guessJd = toJD(lunarYear, 2, 1, 12, 0, 0);
+    var struct = buildLunarStructure(guessJd);
+    for (var i = 0; i < struct.months.length; i++) {
+      if (struct.lunarYearArr[i] === lunarYear && struct.numArr[i] === lunarMonth && struct.isLeapArr[i] === !!isLeap) {
+        var jd = struct.months[i].start + (lunarDay - 1);
+        var ymd = jdToYmdhms(jd + 9 / 24); // UT -> KST 보정 후 날짜 추출(정오 기준이라 안전)
+        return { y: ymd.y, m: ymd.m, d: ymd.d };
+      }
+    }
+    // 못 찾으면(연 경계 근처) 앞/뒤 인접 구조도 시도
+    for (var off = -1; off <= 1; off += 2) {
+      var g2 = toJD(lunarYear + off, 2, 1, 12, 0, 0);
+      var st2 = buildLunarStructure(g2);
+      for (var j = 0; j < st2.months.length; j++) {
+        if (st2.lunarYearArr[j] === lunarYear && st2.numArr[j] === lunarMonth && st2.isLeapArr[j] === !!isLeap) {
+          var jd2 = st2.months[j].start + (lunarDay - 1);
+          var ymd2 = jdToYmdhms(jd2 + 9 / 24);
+          return { y: ymd2.y, m: ymd2.m, d: ymd2.d };
+        }
+      }
+    }
+    return null;
+  }
+
+  // =====================================================================
+  // 5. UI 배선
+  // =====================================================================
+  var state = { calType: "solar", gender: "female", style: 1, result: null };
+
+  var selYear = document.getElementById("selYear");
+  var selMonth = document.getElementById("selMonth");
+  var selDay = document.getElementById("selDay");
+  var selHour = document.getElementById("selHour");
+  var selMinute = document.getElementById("selMinute");
+  var leapRow = document.getElementById("leapRow");
+  var leapCheck = document.getElementById("leapCheck");
+
+  for (var hh0 = 0; hh0 <= 23; hh0++) {
+    var opth = document.createElement("option");
+    opth.value = hh0; opth.textContent = (hh0 < 10 ? "0" + hh0 : hh0) + "시";
+    if (hh0 === 12) opth.selected = true;
+    selHour.appendChild(opth);
+  }
+  for (var mi0 = 0; mi0 <= 59; mi0++) {
+    var optmi = document.createElement("option");
+    optmi.value = mi0; optmi.textContent = (mi0 < 10 ? "0" + mi0 : mi0) + "분";
+    if (mi0 === 0) optmi.selected = true;
+    selMinute.appendChild(optmi);
+  }
+
+  var THIS_YEAR = new Date().getFullYear();
+  for (var yy = THIS_YEAR; yy >= 1930; yy--) {
+    var opt = document.createElement("option"); opt.value = yy; opt.textContent = yy + "년";
+    if (yy === 1990) opt.selected = true;
+    selYear.appendChild(opt);
+  }
+  for (var mm2 = 1; mm2 <= 12; mm2++) {
+    var optm = document.createElement("option"); optm.value = mm2; optm.textContent = mm2 + "월";
+    selMonth.appendChild(optm);
+  }
+  function refreshDayOptions() {
+    var y = parseInt(selYear.value, 10), m = parseInt(selMonth.value, 10);
+    var maxDay = state.calType === "solar" ? new Date(y, m, 0).getDate() : 30;
+    var cur = selDay.value;
+    selDay.innerHTML = "";
+    for (var dd = 1; dd <= maxDay; dd++) {
+      var optd = document.createElement("option"); optd.value = dd; optd.textContent = dd + "일";
+      selDay.appendChild(optd);
+    }
+    if (cur && cur <= maxDay) selDay.value = cur;
+  }
+  refreshDayOptions();
+  selYear.addEventListener("change", refreshDayOptions);
+  selMonth.addEventListener("change", refreshDayOptions);
+
+  document.querySelectorAll('[data-cal]').forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      document.querySelectorAll('[data-cal]').forEach(function (b) { b.classList.remove("active"); });
+      btn.classList.add("active");
+      state.calType = btn.getAttribute("data-cal");
+      leapRow.style.display = state.calType === "lunar" ? "flex" : "none";
+      refreshDayOptions();
+    });
+  });
+  document.querySelectorAll('[data-gender]').forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      document.querySelectorAll('[data-gender]').forEach(function (b) { b.classList.remove("active"); });
+      btn.classList.add("active");
+      state.gender = btn.getAttribute("data-gender");
+      renderCard();
+    });
+  });
+  document.querySelectorAll('.style-btn').forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      document.querySelectorAll('.style-btn').forEach(function (b) { b.classList.remove("active"); });
+      btn.classList.add("active");
+      state.style = parseInt(btn.getAttribute("data-style"), 10);
+      renderCard();
+    });
+  });
+
+  document.getElementById("calcBtn").addEventListener("click", function () {
+    var y = parseInt(selYear.value, 10);
+    var m = parseInt(selMonth.value, 10);
+    var d = parseInt(selDay.value, 10);
+    var hh = parseInt(selHour.value, 10);
+    var mm = parseInt(selMinute.value, 10);
+
+    var solarY = y, solarM = m, solarD = d;
+    if (state.calType === "lunar") {
+      var conv = lunarToSolar(y, m, d, leapCheck.checked);
+      if (!conv) { alert("해당 음력 날짜를 변환할 수 없습니다. 날짜를 확인해주세요."); return; }
+      solarY = conv.y; solarM = conv.m; solarD = conv.d;
+    }
+
+    var saju = computeSaju(solarY, solarM, solarD, hh, mm);
+    var lunarInfo = solarToLunar(solarY, solarM, solarD, hh, mm);
+    state.result = { saju: saju, solar: { y: solarY, m: solarM, d: solarD, hh: hh, mm: mm }, lunar: lunarInfo };
+
+    renderManse();
+    renderCard();
+  });
+
+  function renderManse() {
+    var r = state.result;
+    var saju = r.saju;
+    var cols = [
+      { label: "년주", p: saju.year },
+      { label: "월주", p: saju.month },
+      { label: "일주", p: saju.day },
+      { label: "시주", p: saju.hour }
+    ];
+    var html = "<tr><th></th>";
+    cols.forEach(function (c) { html += "<th>" + c.label + "</th>"; });
+    html += "</tr><tr><td>천간</td>";
+    cols.forEach(function (c) {
+      var cls = ELEMENT_CLASS[CHEONGAN_ELEMENT[c.p.ganIdx]];
+      html += '<td class="gan ' + cls + '">' + CHEONGAN_HANGUL[c.p.ganIdx] + "</td>";
+    });
+    html += "</tr><tr><td>지지</td>";
+    cols.forEach(function (c) {
+      html += '<td class="jiji">' + JIJI_HANGUL[c.p.jijiIdx] + "(" + JIJI_ANIMAL[c.p.jijiIdx] + ")</td>";
+    });
+    html += "</tr>";
+    document.getElementById("manseTable").innerHTML = html;
+
+    var note = "양력 " + r.solar.y + "년 " + r.solar.m + "월 " + r.solar.d + "일";
+    if (r.lunar) {
+      note += " (음력 " + r.lunar.year + "년 " + (r.lunar.isLeap ? "윤" : "") + r.lunar.month + "월 " + r.lunar.day + "일)";
+    }
+    note += " · 일간(나 자신) = " + CHEONGAN_FULL[saju.day.ganIdx] + " · 년지(띠) = " + JIJI_ANIMAL[saju.year.jijiIdx] + "띠 · 일주 = " + ganziStr(saju.day.ganIdx, saju.day.jijiIdx);
+    document.getElementById("manseNote").textContent = note;
+    document.getElementById("manseResultPanel").style.display = "block";
+    document.getElementById("cardPanel").style.display = "block";
+  }
+
+  // =====================================================================
+  // 6. 흰 배경 제거 (원본 PNG는 알파 채널이 없는 RGB이고, 배경이 순백색 픽셀로
+  //    "구워져" 있다. 4단 레이어를 그냥 겹치면 위 레이어의 흰 배경이 아래를 다
+  //    가려버리므로, 캔버스에서 배경만 투명하게 깎아낸 뒤 표시한다.
+  //    테두리에서부터 흰색 픽셀을 플러드필로 번져나가며 찾기 때문에,
+  //    눈동자 하이라이트나 흰 저고리처럼 캐릭터 "내부"에 있는 흰색은 보존된다.
+  // =====================================================================
+  var BG_REMOVE_WORK_SIZE = 384;
+  var SEED_THRESHOLD = 222;
+  var SOFT_LOW = 205;
+
+  function stripWhiteBackground(sourceUrl) {
+    return new Promise(function (resolve, reject) {
+      var img = new Image();
+      img.onload = function () {
+        try {
+          var scale = Math.min(1, BG_REMOVE_WORK_SIZE / Math.max(img.naturalWidth, img.naturalHeight));
+          var w = Math.max(1, Math.round(img.naturalWidth * scale));
+          var h = Math.max(1, Math.round(img.naturalHeight * scale));
+          var canvas = document.createElement("canvas");
+          canvas.width = w; canvas.height = h;
+          var ctx = canvas.getContext("2d");
+          ctx.drawImage(img, 0, 0, w, h);
+          var imageData = ctx.getImageData(0, 0, w, h);
+          var data = imageData.data;
+          var n = w * h;
+
+          var minChannel = new Uint8Array(n);
+          for (var p = 0; p < n; p++) {
+            var o = p * 4;
+            minChannel[p] = Math.min(data[o], data[o + 1], data[o + 2]);
+          }
+
+          var isBg = new Uint8Array(n);
+          var queue = new Int32Array(n);
+          var qHead = 0, qTail = 0;
+          function tryEnqueue(idx) {
+            if (isBg[idx]) return;
+            if (minChannel[idx] < SEED_THRESHOLD) return;
+            isBg[idx] = 1;
+            queue[qTail++] = idx;
+          }
+          for (var x = 0; x < w; x++) {
+            tryEnqueue(x); tryEnqueue(w + x);
+            tryEnqueue((h - 1) * w + x); tryEnqueue((h - 2) * w + x);
+          }
+          for (var y = 0; y < h; y++) {
+            tryEnqueue(y * w); tryEnqueue(y * w + 1);
+            tryEnqueue(y * w + (w - 1)); tryEnqueue(y * w + (w - 2));
+          }
+          while (qHead < qTail) {
+            var idx = queue[qHead++];
+            var px = idx % w, py = (idx / w) | 0;
+            if (px > 0) tryEnqueue(idx - 1);
+            if (px < w - 1) tryEnqueue(idx + 1);
+            if (py > 0) tryEnqueue(idx - w);
+            if (py < h - 1) tryEnqueue(idx + w);
+          }
+
+          var colCount = new Uint16Array(w), rowCount = new Uint16Array(h);
+          for (var q = 0; q < n; q++) {
+            var oo = q * 4;
+            if (isBg[q]) {
+              var t = (minChannel[q] - SOFT_LOW) / (255 - SOFT_LOW);
+              if (t < 0) t = 0; if (t > 1) t = 1;
+              data[oo + 3] = Math.round(255 * (1 - t));
+            } else {
+              var qx = q % w, qy = (q / w) | 0;
+              colCount[qx]++; rowCount[qy]++;
+            }
+          }
+          var NOISE_FLOOR = Math.max(3, Math.round(Math.min(w, h) * 0.006));
+          var minBX = -1, maxBX = -1, minBY = -1, maxBY = -1;
+          for (var cx = 0; cx < w; cx++) { if (colCount[cx] >= NOISE_FLOOR) { if (minBX < 0) minBX = cx; maxBX = cx; } }
+          for (var cy = 0; cy < h; cy++) { if (rowCount[cy] >= NOISE_FLOOR) { if (minBY < 0) minBY = cy; maxBY = cy; } }
+          var bboxFrac = (minBX >= 0 && minBY >= 0)
+            ? { minX: minBX / w, minY: minBY / h, maxX: (maxBX + 1) / w, maxY: (maxBY + 1) / h }
+            : { minX: 0, minY: 0, maxX: 1, maxY: 1 };
+
+          ctx.putImageData(imageData, 0, 0);
+          canvas.toBlob(function (blob) {
+            if (!blob) { reject(new Error("toBlob 실패")); return; }
+            resolve({ url: URL.createObjectURL(blob), bbox: bboxFrac });
+          }, "image/png");
+        } catch (e) { reject(e); }
+      };
+      img.onerror = function () { reject(new Error("이미지 로드 실패: " + sourceUrl)); };
+      img.src = sourceUrl;
+    });
+  }
+
+  var processedCache = {}; // url -> {url, bbox} (같은 이미지를 여러 번 처리하지 않도록 캐시)
+  function getProcessedAsset(url) {
+    if (processedCache[url]) return processedCache[url];
+    processedCache[url] = stripWhiteBackground(url).catch(function (e) {
+      delete processedCache[url];
+      throw e;
+    });
+    return processedCache[url];
+  }
+
+  // 배경은 이미지마다 실제 그림 크기/위치가 제각각이라, 콘텐츠 바운딩박스를
+  // 기준으로 카드 네 모서리까지 채워지도록 확대 배율과 중심 이동량을 계산한다.
+  function computeBgFit(bbox) {
+    var halfW = (bbox.maxX - bbox.minX) / 2;
+    var halfH = (bbox.maxY - bbox.minY) / 2;
+    var limiting = Math.min(halfW, halfH);
+    var scale = limiting > 0.001 ? (0.7071 / limiting) * 1.08 : 2.0;
+    scale = Math.max(1.5, Math.min(4.0, scale));
+    var contentCenterX = (bbox.minX + bbox.maxX) / 2;
+    var contentCenterY = (bbox.minY + bbox.maxY) / 2;
+    return {
+      scalePercent: Math.round(scale * 100),
+      offsetXPercent: (0.5 - contentCenterX) * 100,
+      offsetYPercent: (0.5 - contentCenterY) * 100
+    };
+  }
+
+  // =====================================================================
+  // 7. 카드 조합 (배경/캐릭터/펫/아이템) — 폴더 상대경로 직접 구성
+  // =====================================================================
+  var ASSET_ROOT = "사주명리학/";
+  var pendingOps = 0;
+  var renderToken = 0;
+  var stageEl = document.getElementById("stage");
+  function bumpPending(delta) {
+    pendingOps += delta;
+    stageEl.classList.toggle("loading", pendingOps > 0);
+  }
+
+  function setImg(imgEl, url, myToken, fitCorners) {
+    bumpPending(1);
+    getProcessedAsset(url).then(function (result) {
+      bumpPending(-1);
+      if (myToken !== renderToken) return; // 그 사이 다른 선택으로 바뀌었으면 무시
+      imgEl.src = result.url;
+      imgEl.style.display = "block";
+      if (fitCorners) {
+        var fit = computeBgFit(result.bbox);
+        imgEl.style.width = fit.scalePercent + "%";
+        imgEl.style.height = fit.scalePercent + "%";
+        imgEl.style.transform = "translate(" + (-50 + fit.offsetXPercent) + "%, " + (-50 + fit.offsetYPercent) + "%)";
+      }
+    }).catch(function (err) {
+      bumpPending(-1);
+      if (myToken !== renderToken) return;
+      console.warn("배경 제거 처리 실패, 원본 이미지로 대체 표시:", url, err);
+      // 캔버스 처리(흰배경 제거)가 실패해도(file://로 직접 열었을 때 캔버스 보안 정책 등)
+      // 카드 자체가 통째로 비어보이는 것보다는 흰 배경이 있는 원본이라도 보여주는 게 낫다.
+      imgEl.style.width = ""; imgEl.style.height = ""; imgEl.style.transform = "";
+      var fallback = new Image();
+      fallback.onload = function () { imgEl.src = url; imgEl.style.display = "block"; };
+      fallback.onerror = function () { imgEl.removeAttribute("src"); imgEl.style.display = "none"; };
+      fallback.src = url;
+    });
+  }
+
+  function renderCard() {
+    if (!state.result) return;
+    document.getElementById("emptyHint").style.display = "none";
+    renderToken++;
+    var myToken = renderToken;
+
+    var saju = state.result.saju;
+    var dayGanIdx = saju.day.ganIdx;
+    var yearJijiIdx = saju.year.jijiIdx;
+    var cheonganFull = CHEONGAN_FULL[dayGanIdx]; // 예: 을목
+    var element = CHEONGAN_ELEMENT[dayGanIdx];
+    var genderWord = state.gender === "female" ? "여자" : "남자";
+    var style = state.style;
+
+    // 배경: 천간고유배경/{순번}{천간명}/{천간명}{style}.png
+    var bgFolder = (dayGanIdx + 1) + cheonganFull;
+    var bgUrl = ASSET_ROOT + "천간고유배경/" + encodeURIComponent(bgFolder) + "/" + encodeURIComponent(cheonganFull + style) + ".png";
+
+    // 캐릭터: {천간명}캐릭터/{천간명}요정{성별}{style}.png
+    var charUrl = ASSET_ROOT + encodeURIComponent(cheonganFull + "캐릭터") + "/" + encodeURIComponent(cheonganFull + "요정" + genderWord + style) + ".png";
+
+    // 수호펫: 수호펫12지지/{지지}/{지지}{style}.png
+    var jijiChar = JIJI_HANGUL[yearJijiIdx];
+    var petUrl = ASSET_ROOT + "수호펫12지지/" + encodeURIComponent(jijiChar) + "/" + encodeURIComponent(jijiChar + style) + ".png";
+
+    // 신수아이템: 신수아이템/{오행}계열/{일주}/{일주}{style}.png
+    var ilju = ganziStr(dayGanIdx, saju.day.jijiIdx);
+    var itemFolder = ELEMENT_FOLDER[element];
+    var itemUrl = ASSET_ROOT + "신수아이템/" + encodeURIComponent(itemFolder) + "/" + encodeURIComponent(ilju) + "/" + encodeURIComponent(ilju + style) + ".png";
+
+    setImg(document.getElementById("lBg"), bgUrl, myToken, true);
+    setImg(document.getElementById("lChar"), charUrl, myToken, false);
+    setImg(document.getElementById("lPet"), petUrl, myToken, false);
+    setImg(document.getElementById("lItem"), itemUrl, myToken, false);
+
+    document.getElementById("cardCaption").innerHTML =
+      "<b>" + cheonganFull + "</b> · " + JIJI_ANIMAL[yearJijiIdx] + "띠 · 일주 <b>" + ilju + "</b>";
+  }
+
+  refreshDayOptions();
+})();
+</script>
+</body>
+</html>
