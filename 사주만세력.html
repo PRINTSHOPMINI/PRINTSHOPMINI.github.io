@@ -662,11 +662,20 @@
           var data = imageData.data;
           var n = w * h;
 
+          // 흰 배경은 무채색(R≈G≈B)이지만, 크림색/파스텔톤 캐릭터·펫 털처럼
+          // 배경과 밝기는 비슷해도 살짝 색조(채도)가 있는 경우가 있다.
+          // 밝기만 보면 이런 부분까지 배경으로 오인해 반투명하게 깎여서
+          // 뒤 레이어 색이 비쳐 보이는 문제가 생기므로, 채도도 함께 검사한다.
           var minChannel = new Uint8Array(n);
+          var saturation = new Uint8Array(n);
           for (var p = 0; p < n; p++) {
             var o = p * 4;
-            minChannel[p] = Math.min(data[o], data[o + 1], data[o + 2]);
+            var r = data[o], g = data[o + 1], b = data[o + 2];
+            var mn = Math.min(r, g, b), mx = Math.max(r, g, b);
+            minChannel[p] = mn;
+            saturation[p] = mx - mn;
           }
+          var SAT_THRESHOLD = 14; // 이보다 채도가 높으면(색이 있으면) 배경 후보에서 제외
 
           var isBg = new Uint8Array(n);
           var queue = new Int32Array(n);
@@ -674,6 +683,7 @@
           function tryEnqueue(idx) {
             if (isBg[idx]) return;
             if (minChannel[idx] < SEED_THRESHOLD) return;
+            if (saturation[idx] > SAT_THRESHOLD) return;
             isBg[idx] = 1;
             queue[qTail++] = idx;
           }
