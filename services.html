@@ -75,11 +75,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .step-body li{margin-bottom:2px}
 .step-note{margin-top:10px;font-size:11px;color:var(--blue);background:var(--blue-light);padding:6px 10px;border-radius:6px;line-height:1.6}
 
-/* BIND VISUAL */
-.bind-visual{margin-bottom:28px}
-.bind-photo-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color .2s}
-.bind-photo-card:hover{border-color:var(--blue)}
-.bind-photo-card img{width:100%;height:auto;border-radius:8px;margin-bottom:10px}
+/* PHOTO GUIDE (재사용: 코팅/제본 등 사진 안내) */
+.photo-guide{margin-bottom:28px}
+.photo-guide-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color .2s}
+.photo-guide-card:hover{border-color:var(--blue)}
+.photo-guide-card img{width:100%;height:auto;border-radius:8px;margin-bottom:10px}
 
 /* TIPS BOX */
 .tips-box{background:var(--white);border:1.5px solid var(--blue);border-radius:12px;padding:20px 24px;margin-top:28px}
@@ -344,6 +344,38 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
         </div>
       </div>
     </div>
+
+    <!-- 코팅기 사용 사진 (사용방법 순서대로 배치) -->
+    <div class="photo-guide">
+      <div class="steps-title-small">사진으로 보는 코팅 순서</div>
+      <div class="step-flow">
+        <div class="photo-guide-card">
+          <div class="step-badge">1</div>
+          <img src="images/coat/coat-power.png" alt="전원 버튼을 누르는 모습">
+          <div class="step-heading">전원 버튼 누르기</div>
+        </div>
+        <div class="photo-guide-card">
+          <div class="step-badge">2</div>
+          <img src="images/coat/coat-button.png" alt="코팅 버튼을 짧게 2번 누르는 모습">
+          <div class="step-heading">코팅 버튼 짧게 2번 누르기</div>
+        </div>
+        <div class="photo-guide-card">
+          <div class="step-badge">3</div>
+          <img src="images/coat/coat-fill.png" alt="코팅지 안에 인쇄물을 넣는 모습">
+          <div class="step-heading">코팅지 안에 인쇄물 넣기</div>
+        </div>
+        <div class="photo-guide-card">
+          <div class="step-badge">4</div>
+          <img src="images/coat/coat-insert.png" alt="코팅지의 막힌 부분부터 투입구에 수평으로 넣는 모습">
+          <div class="step-heading">막힌 부분부터 수평으로 투입</div>
+        </div>
+        <div class="photo-guide-card">
+          <div class="step-badge">5</div>
+          <img src="images/coat/coat-watch.png" alt="코팅지가 뒷면으로 나올 때 걸리지 않는지 지켜보는 모습">
+          <div class="step-heading">나오는 코팅지 걸리지 않는지 확인</div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -374,26 +406,26 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
     </div>
 
     <!-- 제본기 & 표지 안내 그림 (사용방법 순서대로 배치) -->
-    <div class="bind-visual">
+    <div class="photo-guide">
       <div class="steps-title-small">사진으로 보는 제본 순서</div>
       <div class="step-flow">
-        <div class="bind-photo-card">
+        <div class="photo-guide-card">
           <div class="step-badge">1</div>
           <img src="images/bind/safa-buttons.png" alt="전원 버튼을 누른 후 온열 버튼을 누르는 모습">
           <div class="step-heading">전원 · 온열 버튼 누르기</div>
         </div>
-        <div class="bind-photo-card">
+        <div class="photo-guide-card">
           <div class="step-badge">2</div>
           <img src="images/bind/cover-structure.png" alt="열제본표지 단면 구조 — PET 투명 비닐커버, 종이커버, 표지규격(제본 본드 부분)">
           <div class="step-heading">표지 안쪽 본드에 각 맞춰 넣기</div>
           <p style="font-size:12px;color:var(--text3);line-height:1.6;margin-top:6px">인쇄물을 표지 안에 넣을 때 안쪽 본드(제본선)에 가지런히 잘 닿도록 각을 맞춰 주세요.</p>
         </div>
-        <div class="bind-photo-card">
+        <div class="photo-guide-card">
           <div class="step-badge">3</div>
           <img src="images/bind/cover-closed.png" alt="열제본표지 앞면 비닐커버 · 뒷면 종이커버">
           <div class="step-heading">앞면(비닐)·뒷면(종이) 구분</div>
         </div>
-        <div class="bind-photo-card">
+        <div class="photo-guide-card">
           <div class="step-badge">4</div>
           <img src="images/bind/safa-insert.png" alt="SAFA 제본기 투입구에 제본표지를 세워서 넣는 모습">
           <div class="step-heading">막힌 부분부터 세워서 투입</div>
