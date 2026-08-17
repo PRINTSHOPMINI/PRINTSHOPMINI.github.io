@@ -907,7 +907,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
   <div class="inner">
     <div class="sec-eyebrow">LOCATIONS</div>
     <h2 class="sec-h2">지점 찾기</h2>
-    <p class="sec-sub">경기권 15개 지점 — 가장 가까운 프린트샵미니를 찾아보세요.</p>
+    <p class="sec-sub">경기권 16개 지점 — 가장 가까운 프린트샵미니를 찾아보세요.</p>
   </div>
 
   <!-- 지역 필터 -->
@@ -918,10 +918,10 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         <div class="region-btn on" onclick="filterRegion('전체',this)">전체</div>
         <div class="region-btn" onclick="filterRegion('수원',this)">📍 수원 (8)</div>
         <div class="region-btn" onclick="filterRegion('화성',this)">📍 화성 (4)</div>
-        <div class="region-btn" onclick="filterRegion('용인',this)">📍 용인 (2)</div>
+        <div class="region-btn" onclick="filterRegion('용인',this)">📍 용인 (3)</div>
         <div class="region-btn" onclick="filterRegion('평택',this)">📍 평택 (1)</div>
       </div>
-      <span class="filter-count">총 <strong id="visibleCount">15</strong>개 지점</span>
+      <span class="filter-count">총 <strong id="visibleCount">16</strong>개 지점</span>
     </div>
   </div>
 
@@ -984,7 +984,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
       </div>
 
       <!-- 용인 -->
-      <div class="region-header" data-region="용인">용인 · 2개 지점</div>
+      <div class="region-header" data-region="용인">용인 · 3개 지점</div>
       <div class="branch-card" data-region="용인" onclick="selectBranch(this,'기흥구청점','2047415825')">
         <div class="bc-name">프린트샵미니 기흥구청점</div>
         <div class="bc-tags"><span class="bc-t t24">⏰ 24H</span><span class="bc-t tpark">🅿️ 주차</span></div>
@@ -992,6 +992,10 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
       <div class="branch-card" data-region="용인" onclick="selectBranch(this,'동백역점','2090941825')">
         <div class="bc-name">프린트샵미니 동백역점</div>
         <div class="bc-tags"><span class="bc-t t24">⏰ 24H</span><span class="bc-t topen">🚇 역세권</span></div>
+      </div>
+      <div class="branch-card" data-region="용인" onclick="selectBranch(this,'흥덕점','2042263196')">
+        <div class="bc-name">프린트샵미니 흥덕점</div>
+        <div class="bc-tags"><span class="bc-t t24">⏰ 24H</span><span class="bc-t tpark">🅿️ 주차</span></div>
       </div>
 
       <!-- 평택 -->
@@ -1167,6 +1171,7 @@ var BRANCH_ADDR = {
   '호매실점':'경기도 용인시 기흥구 구갈로 74 구갈스포츠센타 1층 119호',
   '동탄호수점':'경기도 화성시 동탄구 동탄대로5길 15 그랑파샤쥬 1층 1039-1호',
   '동백역점':'경기도 용인시 기흥구 동백3로11번길 12 브릭스타워 1층 142호',
+  '흥덕점':'경기도 용인시 기흥구 흥덕1로79번길 2 가은프라자 3층 307호',
   '서정리역점':'경기도 평택시 고덕갈평6길 23 서정타워2차 3층 311호'
 };
 function selectBranch(el, name, placeId) {
