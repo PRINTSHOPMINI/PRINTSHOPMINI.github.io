@@ -75,6 +75,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .step-body li{margin-bottom:2px}
 .step-note{margin-top:10px;font-size:11px;color:var(--blue);background:var(--blue-light);padding:6px 10px;border-radius:6px;line-height:1.6}
 
+/* BIND VISUAL */
+.bind-visual{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;margin-bottom:28px}
+.bind-visual-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:20px}
+.bind-visual-label{font-size:13px;font-weight:900;color:var(--text2);margin-bottom:14px}
+@media(max-width:700px){.bind-visual{grid-template-columns:1fr}}
+
 /* TIPS BOX */
 .tips-box{background:var(--white);border:1.5px solid var(--blue);border-radius:12px;padding:20px 24px;margin-top:28px}
 .tips-title{font-size:13px;font-weight:900;color:var(--blue);margin-bottom:10px}
@@ -362,6 +368,23 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
           <div class="step-card"><div class="step-badge">4</div><div class="step-heading">기계에 투입</div><ul class="step-body"><li>제본 표지를 기계에 투입</li><li>카드 결제 후 자동으로 작동</li></ul></div>
           <div class="step-card"><div class="step-badge">5</div><div class="step-heading">타이머 대기</div><ul class="step-body"><li>기계 작동 중 타이머 표시</li><li>완료 신호음 대기</li></ul></div>
           <div class="step-card"><div class="step-badge">6</div><div class="step-heading">10분 냉각 후 완료</div><ul class="step-body"><li>꺼낸 후 평평한 곳에 놓고 10분 냉각</li><li>냉각 전 힘을 가하면 분리될 수 있음</li></ul><div class="step-note">냉각 필수! 급하게 확인하면 제본 분리됩니다</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 제본기 & 표지 안내 사진 -->
+    <div class="bind-visual">
+      <div class="bind-visual-card">
+        <div class="bind-visual-label">🖨️ SAFA 제본기 — 표지째로 세워서 투입구에 넣기</div>
+        <img src="images/bind/safa-insert.png" alt="SAFA 제본기 투입구에 제본표지를 세워서 넣는 모습" style="width:100%;height:auto;border-radius:8px">
+        <p style="font-size:12px;color:var(--text3);margin-top:10px;line-height:1.7">인쇄물을 표지 안에 끼운 뒤, <strong style="color:var(--text2)">막힌 부분(제본선)이 아래로 가도록</strong> 세워서 위쪽 투입구에 넣어 주세요.</p>
+      </div>
+      <div class="bind-visual-card">
+        <div class="bind-visual-label">📘 열제본표지 안내</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <img src="images/bind/cover-closed.JPG" alt="열제본표지 완성 모습" style="width:100%;height:auto;border-radius:8px;grid-column:1/3">
+          <img src="images/bind/cover-structure.png" alt="열제본표지 단면 구조 — PET 투명 비닐커버, 종이커버, 표지규격(제본 본드 부분)" style="width:100%;height:auto;border-radius:8px">
+          <img src="images/bind/cover-colors.png" alt="열제본표지 색상 종류" style="width:100%;height:auto;border-radius:8px">
         </div>
       </div>
     </div>
