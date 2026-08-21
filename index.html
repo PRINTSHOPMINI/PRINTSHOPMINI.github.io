@@ -20,7 +20,7 @@
   --white:#FFFFFF;
   --radius:14px;
 }
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--white);line-height:1.7;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
 
@@ -330,6 +330,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
   #community .comm-wrap{grid-template-columns:1fr}
   .svc-grid{grid-template-columns:repeat(2,1fr)}
   .ft-wrap{grid-template-columns:1fr 1fr}
+  .hero-deco{display:none}
 }
 @media(max-width:680px){
   .nav-links{display:none}
