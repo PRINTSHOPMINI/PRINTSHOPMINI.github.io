@@ -80,6 +80,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .photo-guide-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color .2s}
 .photo-guide-card:hover{border-color:var(--blue)}
 .photo-guide-card img{width:100%;height:auto;border-radius:8px;margin-bottom:10px}
+.dual-photo-card{grid-column:span 2}
+.dual-photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 
 /* TIPS BOX */
 .tips-box{background:var(--white);border:1.5px solid var(--blue);border-radius:12px;padding:20px 24px;margin-top:28px}
@@ -142,6 +144,8 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 @media(max-width:600px){
   .price-grid{grid-template-columns:1fr}
   .step-flow{grid-template-columns:1fr}
+  .dual-photo-card{grid-column:span 1}
+  .dual-photo-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -239,9 +243,9 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
           <img src="images/print/print-pin.png" alt="개인 식별 번호(PIN) 입력 화면">
           <div class="step-heading">PIN번호 입력</div>
         </div>
-        <div class="photo-guide-card" style="grid-column:span 2">
+        <div class="photo-guide-card dual-photo-card">
           <div class="step-badge">3</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div class="dual-photo-grid">
             <img src="images/print/print-machine1.png" alt="복합기 메인 화면에서 인쇄 메뉴 선택" style="margin-bottom:0">
             <img src="images/print/print-machine2.png" alt="인쇄할 파일 위치로 PC 선택하는 화면" style="margin-bottom:0">
           </div>
