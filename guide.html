@@ -153,6 +153,29 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .otab:hover{border-color:var(--blue);color:var(--blue)}
 .otab.on{background:var(--blue);border-color:var(--blue);color:#fff}
 
+/* MS 오피스 화면 목업 (실제 인쇄 화면 재현) */
+.steps-office{grid-template-columns:repeat(auto-fit,minmax(288px,1fr))}
+.steps-office .step-fig{min-height:auto;margin-bottom:16px}
+.omock{border:1px solid #D7DDE3;border-radius:8px;overflow:hidden;background:#fff;box-shadow:0 1px 5px rgba(17,24,39,.07);width:100%}
+.omock-bar{height:18px;background:#EEF1F5;display:flex;align-items:center;gap:4px;padding:0 8px;border-bottom:1px solid #E5E7EB}
+.omock-dot{width:5px;height:5px;border-radius:50%;background:#D7DDE3}
+.omock-body{display:flex;height:158px}
+.omock-side{width:58px;flex:0 0 auto;background:var(--oc,#1B8AC4);padding:8px 0;display:flex;flex-direction:column;gap:1px}
+.omock-side div{color:rgba(255,255,255,.68);font-size:8.6px;font-weight:700;padding:5px 0 5px 10px}
+.omock-side div.on{color:#fff;background:rgba(255,255,255,.18);border-left:3px solid #fff;padding-left:7px}
+.omock-fields{width:124px;flex:0 0 auto;background:#F7F8FA;padding:8px 8px;display:flex;flex-direction:column;gap:5px;border-right:1px solid #E5E7EB;overflow:hidden}
+.omock-cap{font-size:7.6px;color:#9AA5B1;font-weight:800;letter-spacing:.3px;margin-top:3px}
+.omock-cap:first-child{margin-top:0}
+.omock-field{background:#fff;border:1px solid #C9D3DB;border-radius:4px;padding:4px 14px 4px 7px;font-size:8.2px;font-weight:700;color:#374151;position:relative;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.omock-field::after{content:'▾';position:absolute;right:5px;top:50%;transform:translateY(-50%);color:#9AA5B1;font-size:6.5px}
+.omock-row.hi .omock-field{border-color:#D93025;background:#FEF2F2;color:#B31E16;box-shadow:0 0 0 2px rgba(217,48,37,.14)}
+.omock-row.hi .omock-cap{color:#D93025}
+.omock-preview{flex:1;background:#EDEFF2;display:flex;align-items:center;justify-content:center;padding:10px;position:relative}
+.omock-page{width:66%;height:88%;background:#fff;border:1px solid #D7DDE3;box-shadow:0 1px 5px rgba(0,0,0,.09);display:flex;align-items:center;justify-content:center}
+.omock-tag{position:absolute;background:#D93025;color:#fff;font-size:8px;font-weight:800;padding:3px 8px;border-radius:5px;white-space:nowrap;box-shadow:0 2px 5px rgba(217,48,37,.3)}
+.omock-cap.hi{color:#D93025}
+.omock-fields .omock-row.hi{margin:0 -3px;padding:2px 3px;background:rgba(217,48,37,.06);border-radius:5px}
+
 /* 준비중 */
 .soon{border:1px dashed #C9D3DB;border-radius:var(--radius);padding:44px 24px;text-align:center;background:var(--white)}
 .soon-h{font-size:16px;font-weight:800;color:var(--text3);margin-bottom:6px}
@@ -617,29 +640,69 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 
     <!-- 엑셀 -->
     <div class="opanel" id="office-excel">
-      <div class="steps">
+      <div class="steps steps-office">
         <div class="step">
           <div class="step-no">1</div>
           <div class="step-fig">
-            <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
-              <rect x="10" y="10" width="100" height="60" rx="3" stroke="#111827" stroke-width="3"/>
-              <path d="M10 24h100M10 38h100M10 52h100M34 10v60M58 10v60M82 10v60" stroke="#D7DDE3" stroke-width="2"/>
-              <rect x="34" y="24" width="48" height="28" fill="none" stroke="#D93025" stroke-width="3" stroke-dasharray="5 4"/>
+            <svg width="100%" height="158" viewBox="0 0 280 158" fill="none" style="border:1px solid #D7DDE3;border-radius:8px;background:#fff;box-shadow:0 1px 5px rgba(17,24,39,.07)">
+              <rect x="0" y="0" width="280" height="22" fill="#F1F9F4"/>
+              <text x="10" y="15" font-size="9.5" font-weight="800" fill="#9AA5B1" font-family="Noto Sans KR">홈</text>
+              <text x="32" y="15" font-size="9.5" font-weight="800" fill="#9AA5B1" font-family="Noto Sans KR">삽입</text>
+              <rect x="56" y="3" width="66" height="16" rx="3" fill="#1D6F42"/>
+              <text x="89" y="15" font-size="9.5" font-weight="900" fill="#fff" font-family="Noto Sans KR">페이지 레이아웃</text>
+              <text x="134" y="15" font-size="9.5" font-weight="800" fill="#9AA5B1" font-family="Noto Sans KR">수식</text>
+              <line x1="0" y1="22" x2="280" y2="22" stroke="#E5E7EB"/>
+              <rect x="10" y="14" width="0" height="0"/>
+              <!-- 시트 그리드 -->
+              <g transform="translate(10,30)">
+                <rect x="0" y="0" width="150" height="118" fill="#fff" stroke="#D7DDE3"/>
+                <rect x="0" y="0" width="18" height="14" fill="#F1F4F7" stroke="#E5E7EB"/>
+                <text x="9" y="10" font-size="7.5" text-anchor="middle" fill="#9AA5B1" font-family="Noto Sans KR">A</text>
+                <g stroke="#EEF1F5">
+                  <line x1="18" y1="0" x2="18" y2="118"/><line x1="62" y1="0" x2="62" y2="118"/><line x1="106" y1="0" x2="106" y2="118"/>
+                  <line x1="0" y1="14" x2="150" y2="14"/><line x1="0" y1="34" x2="150" y2="34"/><line x1="0" y1="54" x2="150" y2="54"/><line x1="0" y1="74" x2="150" y2="74"/><line x1="0" y1="94" x2="150" y2="94"/>
+                </g>
+                <text x="9" y="27" font-size="7" text-anchor="middle" fill="#9AA5B1" font-family="Noto Sans KR">1</text>
+                <text x="9" y="47" font-size="7" text-anchor="middle" fill="#9AA5B1" font-family="Noto Sans KR">2</text>
+                <text x="9" y="67" font-size="7" text-anchor="middle" fill="#9AA5B1" font-family="Noto Sans KR">3</text>
+                <rect x="18" y="14" width="88" height="60" fill="none" stroke="#D93025" stroke-width="2.4" stroke-dasharray="5 3"/>
+              </g>
+              <rect x="168" y="30" width="102" height="118" rx="4" fill="#fff" stroke="#C9D3DB"/>
+              <text x="219" y="44" font-size="9" font-weight="900" text-anchor="middle" fill="#111827" font-family="Noto Sans KR">페이지 설정</text>
+              <line x1="168" y1="50" x2="270" y2="50" stroke="#E5E7EB"/>
+              <rect x="176" y="56" width="30" height="14" fill="#fff" stroke="#111827" stroke-width="1.4"/>
+              <text x="191" y="66" font-size="7.5" font-weight="800" text-anchor="middle" fill="#111827" font-family="Noto Sans KR">페이지</text>
+              <rect x="176" y="74" width="88" height="14" rx="2" fill="#1D6F42"/>
+              <text x="220" y="84" font-size="7.5" font-weight="900" text-anchor="middle" fill="#fff" font-family="Noto Sans KR">시트</text>
+              <rect x="176" y="94" width="88" height="16" rx="3" fill="none" stroke="#D93025" stroke-width="2"/>
+              <text x="180" y="105" font-size="7" font-weight="700" fill="#B31E16" font-family="Noto Sans KR">인쇄 영역: A1:D12</text>
+              <path d="M108 100 L172 100" stroke="#D93025" stroke-width="1.6" stroke-dasharray="2 2"/>
             </svg>
           </div>
           <div class="step-h">인쇄 영역 지정</div>
-          <p class="step-p">상단 <b>[레이아웃] → 페이지 설정 → [시트]</b> 탭에서 <b>인쇄 영역</b>을 원하는 셀 범위로 드래그해 지정합니다.</p>
+          <p class="step-p">상단 <b>[페이지 레이아웃] → 페이지 설정 → [시트]</b> 탭에서 <b>인쇄 영역</b>을 원하는 셀 범위로 드래그해 지정합니다.</p>
         </div>
         <div class="step">
           <div class="step-no">2</div>
           <div class="step-fig">
-            <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
-              <rect x="30" y="14" width="60" height="52" rx="4" stroke="#1B8AC4" stroke-width="3.4"/>
-              <path d="M18 14l10 10M18 14v10M18 14h10" stroke="#111827" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M102 14l-10 10M102 14v10M102 14h-10" stroke="#111827" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M18 66l10-10M18 66v-10M18 66h10" stroke="#111827" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M102 66l-10-10M102 66v-10M102 66h-10" stroke="#111827" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-              <text x="60" y="46" font-size="18" font-weight="900" text-anchor="middle" fill="#1B8AC4" font-family="Noto Sans KR">1</text>
+            <svg width="100%" height="158" viewBox="0 0 280 158" fill="none" style="border:1px solid #D7DDE3;border-radius:8px;background:#fff;box-shadow:0 1px 5px rgba(17,24,39,.07)">
+              <rect x="55" y="10" width="170" height="138" rx="5" fill="#fff" stroke="#C9D3DB"/>
+              <text x="140" y="26" font-size="10" font-weight="900" text-anchor="middle" fill="#111827" font-family="Noto Sans KR">페이지 설정</text>
+              <line x1="55" y1="33" x2="225" y2="33" stroke="#E5E7EB"/>
+              <rect x="63" y="40" width="34" height="15" fill="#1D6F42"/>
+              <text x="80" y="50.5" font-size="8" font-weight="900" text-anchor="middle" fill="#fff" font-family="Noto Sans KR">페이지</text>
+              <rect x="99" y="40" width="34" height="15" fill="#fff" stroke="#D7DDE3"/>
+              <text x="116" y="50.5" font-size="8" font-weight="700" text-anchor="middle" fill="#9AA5B1" font-family="Noto Sans KR">여백</text>
+              <text x="70" y="72" font-size="7.6" font-weight="700" fill="#374151" font-family="Noto Sans KR">배율</text>
+              <circle cx="70" cy="86" r="4" fill="none" stroke="#9AA5B1" stroke-width="1.4"/>
+              <text x="80" y="89" font-size="7.4" fill="#9AA5B1" font-family="Noto Sans KR">확대/축소 배율</text>
+              <rect x="63" y="98" width="150" height="20" rx="3" fill="#FEF2F2" stroke="#D93025" stroke-width="2"/>
+              <circle cx="73" cy="108" r="4.5" fill="#D93025"/>
+              <circle cx="73" cy="108" r="2" fill="#fff"/>
+              <text x="83" y="106" font-size="7.6" font-weight="900" fill="#B31E16" font-family="Noto Sans KR">자동 맞춤</text>
+              <text x="83" y="115" font-size="6.8" font-weight="700" fill="#B31E16" font-family="Noto Sans KR">용지 너비: 1   용지 높이: 1</text>
+              <rect x="180" y="130" width="34" height="12" rx="2" fill="#1D6F42"/>
+              <text x="197" y="139" font-size="7" font-weight="800" text-anchor="middle" fill="#fff" font-family="Noto Sans KR">확인</text>
             </svg>
           </div>
           <div class="step-h">한 페이지에 맞추기</div>
@@ -648,10 +711,24 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         <div class="step">
           <div class="step-no">3</div>
           <div class="step-fig">
-            <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
-              <rect x="20" y="10" width="80" height="60" rx="3" stroke="#111827" stroke-width="3"/>
-              <rect x="32" y="20" width="56" height="40" rx="2" stroke="#1B8AC4" stroke-width="2.6" stroke-dasharray="4 3"/>
-              <path d="M60 10v60M20 40h80" stroke="#D93025" stroke-width="2" stroke-dasharray="3 3"/>
+            <svg width="100%" height="158" viewBox="0 0 280 158" fill="none" style="border:1px solid #D7DDE3;border-radius:8px;background:#fff;box-shadow:0 1px 5px rgba(17,24,39,.07)">
+              <rect x="55" y="10" width="170" height="138" rx="5" fill="#fff" stroke="#C9D3DB"/>
+              <text x="140" y="26" font-size="10" font-weight="900" text-anchor="middle" fill="#111827" font-family="Noto Sans KR">페이지 설정</text>
+              <line x1="55" y1="33" x2="225" y2="33" stroke="#E5E7EB"/>
+              <rect x="63" y="40" width="30" height="15" fill="#fff" stroke="#D7DDE3"/>
+              <text x="78" y="50.5" font-size="7.6" font-weight="700" text-anchor="middle" fill="#9AA5B1" font-family="Noto Sans KR">페이지</text>
+              <rect x="95" y="40" width="26" height="15" fill="#1D6F42"/>
+              <text x="108" y="50.5" font-size="7.6" font-weight="900" text-anchor="middle" fill="#fff" font-family="Noto Sans KR">여백</text>
+              <rect x="73" y="60" width="64" height="46" fill="none" stroke="#9AA5B1" stroke-width="1.2"/>
+              <rect x="86" y="70" width="38" height="26" fill="#F1F4F7" stroke="#C9D3DB"/>
+              <text x="63" y="66" font-size="6.8" fill="#6B7280" font-family="Noto Sans KR">1.9</text>
+              <text x="63" y="102" font-size="6.8" fill="#6B7280" font-family="Noto Sans KR">1.8</text>
+              <rect x="63" y="114" width="150" height="24" rx="3" fill="#FEF2F2" stroke="#D93025" stroke-width="2"/>
+              <text x="70" y="123" font-size="7.4" font-weight="900" fill="#B31E16" font-family="Noto Sans KR">페이지 가운데 맞춤</text>
+              <rect x="70" y="127" width="7" height="7" fill="none" stroke="#B31E16" stroke-width="1.4"/>
+              <text x="80" y="133" font-size="6.6" font-weight="700" fill="#B31E16" font-family="Noto Sans KR">가로</text>
+              <rect x="105" y="127" width="7" height="7" fill="none" stroke="#B31E16" stroke-width="1.4"/>
+              <text x="115" y="133" font-size="6.6" font-weight="700" fill="#B31E16" font-family="Noto Sans KR">세로</text>
             </svg>
           </div>
           <div class="step-h">여백 · 가운데 정렬</div>
@@ -660,14 +737,20 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         <div class="step">
           <div class="step-no">4</div>
           <div class="step-fig">
-            <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
-              <rect x="14" y="14" width="92" height="52" rx="5" stroke="#111827" stroke-width="3"/>
-              <rect x="14" y="14" width="92" height="13" rx="5" fill="#EEF1F5"/>
-              <rect x="24" y="36" width="40" height="7" rx="2" fill="#C9D3DB"/>
-              <rect x="24" y="49" width="28" height="7" rx="2" fill="#C9D3DB"/>
-              <rect x="72" y="36" width="24" height="20" rx="3" fill="#1B8AC4"/>
-              <text x="84" y="50" font-size="9" font-weight="900" text-anchor="middle" fill="#fff" font-family="Noto Sans KR">인쇄</text>
-            </svg>
+            <div class="omock" style="--oc:#1D6F42">
+              <div class="omock-bar"><span class="omock-dot"></span><span class="omock-dot"></span><span class="omock-dot"></span></div>
+              <div class="omock-body">
+                <div class="omock-side">
+                  <div>홈</div>
+                  <div class="on">파일</div>
+                  <div>공유</div>
+                </div>
+                <div class="omock-fields" style="width:100%;justify-content:center;align-items:center">
+                  <div style="font-size:11px;font-weight:900;color:#374151;margin-bottom:6px">파일 메뉴</div>
+                  <div class="omock-field hi" style="width:60px;text-align:center;background:#1D6F42;color:#fff;border-color:#1D6F42">인쇄</div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="step-h">파일 → 인쇄 열기</div>
           <p class="step-p">상단 <b>[파일] → [인쇄]</b>를 클릭합니다. 단축키는 <b>Ctrl + P</b></p>
@@ -675,16 +758,26 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         <div class="step">
           <div class="step-no">5</div>
           <div class="step-fig">
-            <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
-              <g stroke="#111827" stroke-width="3" fill="#fff" stroke-linejoin="round">
-                <rect x="10" y="20" width="26" height="10" rx="2"/><rect x="5" y="30" width="36" height="20" rx="3"/><rect x="10" y="50" width="26" height="10" rx="2"/>
-                <rect x="52" y="20" width="26" height="10" rx="2"/><rect x="47" y="30" width="36" height="20" rx="3"/><rect x="52" y="50" width="26" height="10" rx="2"/>
-              </g>
-              <rect x="11" y="36" width="16" height="4" fill="#374151"/>
-              <rect x="53" y="36" width="8" height="4" fill="#018FFB"/><rect x="64" y="36" width="8" height="4" fill="#22B24C"/>
-              <text x="23" y="74" font-size="9.5" font-weight="800" text-anchor="middle" fill="#374151" font-family="Noto Sans KR">흑백</text>
-              <text x="65" y="74" font-size="9.5" font-weight="800" text-anchor="middle" fill="#018FFB" font-family="Noto Sans KR">컬러</text>
-            </svg>
+            <div class="omock" style="--oc:#1D6F42">
+              <div class="omock-bar"><span class="omock-dot"></span><span class="omock-dot"></span><span class="omock-dot"></span></div>
+              <div class="omock-body">
+                <div class="omock-side">
+                  <div>정보</div>
+                  <div class="on">인쇄</div>
+                  <div>공유</div>
+                  <div>닫기</div>
+                </div>
+                <div class="omock-fields">
+                  <div class="omock-cap">복사본</div>
+                  <div class="omock-field">1</div>
+                  <div class="omock-cap hi">프린터</div>
+                  <div class="omock-row hi"><div class="omock-field">컬러출력(Color Only)</div></div>
+                  <div class="omock-cap">설정</div>
+                  <div class="omock-field">모든 페이지 인쇄</div>
+                </div>
+                <div class="omock-preview"><div class="omock-page"></div></div>
+              </div>
+            </div>
           </div>
           <div class="step-h">프린터 · 컬러 선택</div>
           <p class="step-p">흑백 · 컬러 중 원하는 프린터를 선택합니다. 컬러로 뽑으려면 반드시 <b>컬러 출력</b> 프린터를 선택하세요.</p>
@@ -692,12 +785,28 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         <div class="step">
           <div class="step-no">6</div>
           <div class="step-fig">
-            <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
-              <rect x="16" y="12" width="88" height="56" rx="5" stroke="#111827" stroke-width="3"/>
-              <path d="M26 24h34M26 36h46M26 48h28" stroke="#C9D3DB" stroke-width="4" stroke-linecap="round"/>
-              <circle cx="88" cy="45" r="13" fill="none" stroke="#D93025" stroke-width="4"/>
-              <path d="M98 55l9 9" stroke="#D93025" stroke-width="5" stroke-linecap="round"/>
-            </svg>
+            <div class="omock" style="--oc:#1D6F42">
+              <div class="omock-bar"><span class="omock-dot"></span><span class="omock-dot"></span><span class="omock-dot"></span></div>
+              <div class="omock-body">
+                <div class="omock-side">
+                  <div>정보</div>
+                  <div class="on">인쇄</div>
+                  <div>공유</div>
+                </div>
+                <div class="omock-fields">
+                  <div class="omock-cap">복사본</div>
+                  <div class="omock-field">1</div>
+                  <div class="omock-cap">프린터</div>
+                  <div class="omock-field">컬러출력(Color Only)</div>
+                  <div class="omock-cap">설정</div>
+                  <div class="omock-field">단면 인쇄</div>
+                </div>
+                <div class="omock-preview">
+                  <div class="omock-page"></div>
+                  <div class="omock-tag" style="top:8px;right:8px">미리보기 필수!</div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="step-h">미리보기 확인 후 인쇄</div>
           <p class="step-p"><span class="r">표가 잘리지 않았는지</span> 미리보기로 확인한 뒤 매수를 정하고 <b>[인쇄]</b>를 누릅니다.</p>
@@ -711,18 +820,24 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         <div class="mini-warn-h"><span class="x">!</span>컬러 출력, 두 곳 모두 확인하세요</div>
         <p class="mini-warn-p"><b>프린터 설정</b>과 <b>인쇄 설정(컬러)</b>은 서로 다른 항목입니다. 컬러로 뽑으려면 <b>둘 다</b> 컬러로 맞춰야 하며, 하나라도 다르면 흑백으로 출력됩니다.</p>
       </div>
-      <div class="steps">
+      <div class="steps steps-office">
         <div class="step">
           <div class="step-no">1</div>
           <div class="step-fig">
-            <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
-              <rect x="14" y="14" width="92" height="52" rx="5" stroke="#111827" stroke-width="3"/>
-              <rect x="14" y="14" width="92" height="13" rx="5" fill="#EEF1F5"/>
-              <rect x="24" y="36" width="40" height="7" rx="2" fill="#C9D3DB"/>
-              <rect x="24" y="49" width="28" height="7" rx="2" fill="#C9D3DB"/>
-              <rect x="72" y="36" width="24" height="20" rx="3" fill="#1B8AC4"/>
-              <text x="84" y="50" font-size="9" font-weight="900" text-anchor="middle" fill="#fff" font-family="Noto Sans KR">인쇄</text>
-            </svg>
+            <div class="omock" style="--oc:#B7472A">
+              <div class="omock-bar"><span class="omock-dot"></span><span class="omock-dot"></span><span class="omock-dot"></span></div>
+              <div class="omock-body">
+                <div class="omock-side">
+                  <div>홈</div>
+                  <div class="on">파일</div>
+                  <div>공유</div>
+                </div>
+                <div class="omock-fields" style="width:100%;justify-content:center;align-items:center">
+                  <div style="font-size:11px;font-weight:900;color:#374151;margin-bottom:6px">파일 메뉴</div>
+                  <div class="omock-field hi" style="width:60px;text-align:center;background:#B7472A;color:#fff;border-color:#B7472A">인쇄</div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="step-h">파일 → 인쇄 열기</div>
           <p class="step-p">상단 <b>[파일] → [인쇄]</b>를 클릭합니다. 단축키는 <b>Ctrl + P</b></p>
@@ -730,16 +845,26 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         <div class="step">
           <div class="step-no">2</div>
           <div class="step-fig">
-            <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
-              <rect x="8" y="16" width="46" height="30" rx="4" stroke="#1B8AC4" stroke-width="3"/>
-              <text x="31" y="35" font-size="9" font-weight="800" text-anchor="middle" fill="#1B8AC4" font-family="Noto Sans KR">프린터</text>
-              <rect x="66" y="16" width="46" height="30" rx="4" stroke="#1B8AC4" stroke-width="3"/>
-              <text x="89" y="35" font-size="9" font-weight="800" text-anchor="middle" fill="#1B8AC4" font-family="Noto Sans KR">인쇄설정</text>
-              <path d="M31 54l0 8m58-8l0 8" stroke="#D93025" stroke-width="3" stroke-linecap="round"/>
-              <path d="M20 66h80" stroke="#D93025" stroke-width="3" stroke-linecap="round"/>
-              <path d="M60 62l0 10" stroke="#D93025" stroke-width="3" stroke-linecap="round"/>
-              <text x="60" y="76" font-size="9" font-weight="900" text-anchor="middle" fill="#D93025" font-family="Noto Sans KR">둘 다 컬러!</text>
-            </svg>
+            <div class="omock" style="--oc:#B7472A">
+              <div class="omock-bar"><span class="omock-dot"></span><span class="omock-dot"></span><span class="omock-dot"></span></div>
+              <div class="omock-body">
+                <div class="omock-side">
+                  <div>정보</div>
+                  <div class="on">인쇄</div>
+                  <div>공유</div>
+                </div>
+                <div class="omock-fields">
+                  <div class="omock-cap hi">프린터</div>
+                  <div class="omock-row hi"><div class="omock-field">컬러전용</div></div>
+                  <div class="omock-cap hi">설정 (색상)</div>
+                  <div class="omock-row hi"><div class="omock-field">컬러</div></div>
+                </div>
+                <div class="omock-preview">
+                  <div class="omock-page"></div>
+                  <div class="omock-tag" style="top:8px;right:8px">둘 다 컬러!</div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="step-h">프린터 + 컬러 설정</div>
           <p class="step-p">프린터를 <b>컬러전용</b>으로 고르고, 인쇄 설정의 색상 옵션도 <b>컬러</b>로 맞춥니다. 하나라도 흑백이면 전체가 흑백으로 나옵니다.</p>
@@ -747,14 +872,25 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         <div class="step">
           <div class="step-no">3</div>
           <div class="step-fig">
-            <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
-              <g stroke="#111827" stroke-width="2.6" fill="#fff">
-                <rect x="6" y="24" width="20" height="14" rx="2"/><rect x="30" y="24" width="20" height="14" rx="2"/><rect x="54" y="24" width="20" height="14" rx="2"/><rect x="78" y="24" width="20" height="14" rx="2"/><rect x="102" y="24" width="14" height="14" rx="2"/>
-              </g>
-              <rect x="28" y="20" width="24" height="22" rx="3" fill="none" stroke="#D93025" stroke-width="3"/>
-              <rect x="52" y="20" width="24" height="22" rx="3" fill="none" stroke="#D93025" stroke-width="3"/>
-              <text x="52" y="60" font-size="9.5" font-weight="800" text-anchor="middle" fill="#D93025" font-family="Noto Sans KR">2 ~ 3번 슬라이드만</text>
-            </svg>
+            <div class="omock" style="--oc:#B7472A">
+              <div class="omock-bar"><span class="omock-dot"></span><span class="omock-dot"></span><span class="omock-dot"></span></div>
+              <div class="omock-body">
+                <div class="omock-side">
+                  <div>정보</div>
+                  <div class="on">인쇄</div>
+                  <div>공유</div>
+                </div>
+                <div class="omock-fields">
+                  <div class="omock-cap">슬라이드</div>
+                  <div class="omock-field">모든 슬라이드 인쇄</div>
+                  <div class="omock-cap hi">범위 지정</div>
+                  <div class="omock-row hi"><div class="omock-field">2 - 3번 슬라이드</div></div>
+                </div>
+                <div class="omock-preview">
+                  <div class="omock-page"></div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="step-h">슬라이드 출력 범위</div>
           <p class="step-p"><b>전체 슬라이드</b> 또는 <b>범위 지정</b>에서 원하는 슬라이드 번호만 골라 출력할 수 있습니다.</p>
@@ -762,15 +898,24 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         <div class="step">
           <div class="step-no">4</div>
           <div class="step-fig">
-            <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
-              <g stroke="#1B8AC4" stroke-width="2.8" fill="#fff">
-                <rect x="20" y="14" width="34" height="24" rx="2"/><rect x="66" y="14" width="34" height="24" rx="2"/>
-                <rect x="20" y="44" width="34" height="24" rx="2"/><rect x="66" y="44" width="34" height="24" rx="2"/>
+            <svg width="100%" height="158" viewBox="0 0 280 158" fill="none" style="border:1px solid #D7DDE3;border-radius:8px;background:#fff;box-shadow:0 1px 5px rgba(17,24,39,.07)">
+              <rect x="10" y="10" width="120" height="138" rx="5" fill="#F7F8FA" stroke="#E5E7EB"/>
+              <text x="70" y="26" font-size="9" font-weight="900" text-anchor="middle" fill="#111827" font-family="Noto Sans KR">유인물</text>
+              <rect x="20" y="34" width="100" height="18" rx="3" fill="#FEF2F2" stroke="#D93025" stroke-width="2"/>
+              <text x="70" y="46" font-size="7.6" font-weight="900" text-anchor="middle" fill="#B31E16" font-family="Noto Sans KR">4슬라이드 가로</text>
+              <rect x="20" y="60" width="100" height="18" rx="3" fill="#fff" stroke="#D7DDE3"/>
+              <text x="70" y="72" font-size="7.4" font-weight="700" text-anchor="middle" fill="#9AA5B1" font-family="Noto Sans KR">1슬라이드</text>
+              <rect x="20" y="86" width="100" height="18" rx="3" fill="#fff" stroke="#D7DDE3"/>
+              <text x="70" y="98" font-size="7.4" font-weight="700" text-anchor="middle" fill="#9AA5B1" font-family="Noto Sans KR">9슬라이드</text>
+              <g stroke="#B7472A" stroke-width="2.2" fill="#fff">
+                <rect x="150" y="14" width="52" height="36" rx="2"/><rect x="210" y="14" width="52" height="36" rx="2"/>
+                <rect x="150" y="58" width="52" height="36" rx="2"/><rect x="210" y="58" width="52" height="36" rx="2"/>
               </g>
-              <text x="37" y="30" font-size="10" font-weight="900" text-anchor="middle" fill="#1B8AC4" font-family="Noto Sans KR">1</text>
-              <text x="83" y="30" font-size="10" font-weight="900" text-anchor="middle" fill="#1B8AC4" font-family="Noto Sans KR">2</text>
-              <text x="37" y="60" font-size="10" font-weight="900" text-anchor="middle" fill="#1B8AC4" font-family="Noto Sans KR">3</text>
-              <text x="83" y="60" font-size="10" font-weight="900" text-anchor="middle" fill="#1B8AC4" font-family="Noto Sans KR">4</text>
+              <text x="176" y="36" font-size="12" font-weight="900" text-anchor="middle" fill="#B7472A" font-family="Noto Sans KR">1</text>
+              <text x="236" y="36" font-size="12" font-weight="900" text-anchor="middle" fill="#B7472A" font-family="Noto Sans KR">2</text>
+              <text x="176" y="80" font-size="12" font-weight="900" text-anchor="middle" fill="#B7472A" font-family="Noto Sans KR">3</text>
+              <text x="236" y="80" font-size="12" font-weight="900" text-anchor="middle" fill="#B7472A" font-family="Noto Sans KR">4</text>
+              <text x="206" y="112" font-size="8" font-weight="700" text-anchor="middle" fill="#6B7280" font-family="Noto Sans KR">가로 배치 순서</text>
             </svg>
           </div>
           <div class="step-h">유인물 배치 (한 장에 여러 슬라이드)</div>
@@ -779,14 +924,25 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         <div class="step">
           <div class="step-no">5</div>
           <div class="step-fig">
-            <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
-              <rect x="18" y="10" width="40" height="30" rx="3" stroke="#C9D3DB" stroke-width="3"/>
-              <text x="38" y="30" font-size="10" font-weight="900" text-anchor="middle" fill="#9AA5B1" font-family="Noto Sans KR">A4</text>
-              <path d="M62 25h18m0 0-6-6m6 6-6 6" stroke="#1B8AC4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-              <rect x="84" y="6" width="32" height="46" rx="3" stroke="#1B8AC4" stroke-width="3.4"/>
-              <text x="100" y="33" font-size="10" font-weight="900" text-anchor="middle" fill="#1B8AC4" font-family="Noto Sans KR">A3</text>
-              <path d="M40 60h40" stroke="#374151" stroke-width="3" stroke-linecap="round"/>
-              <path d="M40 60l-6 6m6-6-6-6" stroke="#374151" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <svg width="100%" height="158" viewBox="0 0 280 158" fill="none" style="border:1px solid #D7DDE3;border-radius:8px;background:#fff;box-shadow:0 1px 5px rgba(17,24,39,.07)">
+              <rect x="55" y="10" width="170" height="138" rx="5" fill="#fff" stroke="#C9D3DB"/>
+              <text x="140" y="24" font-size="9.5" font-weight="900" text-anchor="middle" fill="#111827" font-family="Noto Sans KR">프린터 속성 - 용지</text>
+              <line x1="55" y1="30" x2="225" y2="30" stroke="#E5E7EB"/>
+              <text x="65" y="46" font-size="7.4" font-weight="700" fill="#374151" font-family="Noto Sans KR">원본 문서 크기</text>
+              <rect x="150" y="38" width="65" height="14" rx="2" fill="#fff" stroke="#C9D3DB"/>
+              <text x="182" y="48" font-size="7.4" font-weight="800" text-anchor="middle" fill="#374151" font-family="Noto Sans KR">A4</text>
+              <text x="65" y="66" font-size="7.4" font-weight="900" fill="#B31E16" font-family="Noto Sans KR">출력 문서 크기</text>
+              <rect x="150" y="58" width="65" height="14" rx="2" fill="#FEF2F2" stroke="#D93025" stroke-width="2"/>
+              <text x="182" y="68" font-size="7.4" font-weight="900" text-anchor="middle" fill="#B31E16" font-family="Noto Sans KR">A3</text>
+              <line x1="65" y1="82" x2="215" y2="82" stroke="#EEF1F5"/>
+              <text x="65" y="98" font-size="7.4" font-weight="700" fill="#374151" font-family="Noto Sans KR">양면 인쇄</text>
+              <rect x="150" y="90" width="65" height="14" rx="2" fill="#fff" stroke="#C9D3DB"/>
+              <text x="182" y="100" font-size="7" font-weight="700" text-anchor="middle" fill="#9AA5B1" font-family="Noto Sans KR">긴 면 기준</text>
+              <text x="65" y="118" font-size="7.4" font-weight="700" fill="#374151" font-family="Noto Sans KR">용지방향</text>
+              <rect x="150" y="110" width="65" height="14" rx="2" fill="#fff" stroke="#C9D3DB"/>
+              <text x="182" y="120" font-size="7" font-weight="700" text-anchor="middle" fill="#9AA5B1" font-family="Noto Sans KR">세로</text>
+              <rect x="180" y="132" width="34" height="12" rx="2" fill="#B7472A"/>
+              <text x="197" y="141" font-size="7" font-weight="800" text-anchor="middle" fill="#fff" font-family="Noto Sans KR">확인</text>
             </svg>
           </div>
           <div class="step-h">양면 · 용지방향 · 확대 인쇄</div>
@@ -795,12 +951,26 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         <div class="step">
           <div class="step-no">6</div>
           <div class="step-fig">
-            <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
-              <rect x="16" y="12" width="88" height="56" rx="5" stroke="#111827" stroke-width="3"/>
-              <path d="M26 24h34M26 36h46M26 48h28" stroke="#C9D3DB" stroke-width="4" stroke-linecap="round"/>
-              <circle cx="88" cy="45" r="13" fill="none" stroke="#D93025" stroke-width="4"/>
-              <path d="M98 55l9 9" stroke="#D93025" stroke-width="5" stroke-linecap="round"/>
-            </svg>
+            <div class="omock" style="--oc:#B7472A">
+              <div class="omock-bar"><span class="omock-dot"></span><span class="omock-dot"></span><span class="omock-dot"></span></div>
+              <div class="omock-body">
+                <div class="omock-side">
+                  <div>정보</div>
+                  <div class="on">인쇄</div>
+                  <div>공유</div>
+                </div>
+                <div class="omock-fields">
+                  <div class="omock-cap hi">복사본</div>
+                  <div class="omock-row hi"><div class="omock-field">2</div></div>
+                  <div class="omock-cap">프린터</div>
+                  <div class="omock-field">컬러전용</div>
+                </div>
+                <div class="omock-preview">
+                  <div class="omock-page"></div>
+                  <div class="omock-tag" style="top:8px;right:8px">미리보기 필수!</div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="step-h">매수 확인 후 인쇄</div>
           <p class="step-p">복사본 수를 정하고, <span class="r">미리보기로 전체 슬라이드</span>를 확인한 뒤 <b>[인쇄]</b>를 누릅니다.</p>
@@ -810,18 +980,24 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 
     <!-- 워드 -->
     <div class="opanel" id="office-word" style="display:none">
-      <div class="steps">
+      <div class="steps steps-office">
         <div class="step">
           <div class="step-no">1</div>
           <div class="step-fig">
-            <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
-              <rect x="14" y="14" width="92" height="52" rx="5" stroke="#111827" stroke-width="3"/>
-              <rect x="14" y="14" width="92" height="13" rx="5" fill="#EEF1F5"/>
-              <rect x="24" y="36" width="40" height="7" rx="2" fill="#C9D3DB"/>
-              <rect x="24" y="49" width="28" height="7" rx="2" fill="#C9D3DB"/>
-              <rect x="72" y="36" width="24" height="20" rx="3" fill="#1B8AC4"/>
-              <text x="84" y="50" font-size="9" font-weight="900" text-anchor="middle" fill="#fff" font-family="Noto Sans KR">인쇄</text>
-            </svg>
+            <div class="omock" style="--oc:#2B579C">
+              <div class="omock-bar"><span class="omock-dot"></span><span class="omock-dot"></span><span class="omock-dot"></span></div>
+              <div class="omock-body">
+                <div class="omock-side">
+                  <div>홈</div>
+                  <div class="on">파일</div>
+                  <div>공유</div>
+                </div>
+                <div class="omock-fields" style="width:100%;justify-content:center;align-items:center">
+                  <div style="font-size:11px;font-weight:900;color:#374151;margin-bottom:6px">파일 메뉴</div>
+                  <div class="omock-field hi" style="width:60px;text-align:center;background:#2B579C;color:#fff;border-color:#2B579C">인쇄</div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="step-h">파일 → 인쇄 열기</div>
           <p class="step-p">상단 <b>[파일] → [인쇄]</b>를 클릭합니다. 단축키는 <b>Ctrl + P</b></p>
@@ -829,19 +1005,23 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         <div class="step">
           <div class="step-no">2</div>
           <div class="step-fig">
-            <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
-              <g stroke="#111827" stroke-width="3" fill="#fff" stroke-linejoin="round">
-                <rect x="6" y="20" width="26" height="10" rx="2"/><rect x="1" y="30" width="36" height="20" rx="3"/><rect x="6" y="50" width="26" height="10" rx="2"/>
-                <rect x="44" y="20" width="26" height="10" rx="2"/><rect x="39" y="30" width="36" height="20" rx="3"/><rect x="44" y="50" width="26" height="10" rx="2"/>
-                <rect x="86" y="20" width="26" height="10" rx="2"/><rect x="81" y="30" width="36" height="20" rx="3"/><rect x="86" y="50" width="26" height="10" rx="2"/>
-              </g>
-              <rect x="7" y="36" width="16" height="4" fill="#374151"/>
-              <rect x="45" y="36" width="8" height="4" fill="#018FFB"/><rect x="56" y="36" width="8" height="4" fill="#22B24C"/>
-              <text x="97" y="44" font-size="8" font-weight="900" text-anchor="middle" fill="#D93025" font-family="Noto Sans KR">증명서</text>
-              <text x="19" y="70" font-size="8.5" font-weight="800" text-anchor="middle" fill="#374151" font-family="Noto Sans KR">흑백</text>
-              <text x="57" y="70" font-size="8.5" font-weight="800" text-anchor="middle" fill="#018FFB" font-family="Noto Sans KR">컬러</text>
-              <text x="97" y="70" font-size="8.5" font-weight="800" text-anchor="middle" fill="#D93025" font-family="Noto Sans KR">전용</text>
-            </svg>
+            <div class="omock" style="--oc:#2B579C">
+              <div class="omock-bar"><span class="omock-dot"></span><span class="omock-dot"></span><span class="omock-dot"></span></div>
+              <div class="omock-body">
+                <div class="omock-side">
+                  <div>정보</div>
+                  <div class="on">인쇄</div>
+                  <div>공유</div>
+                </div>
+                <div class="omock-fields">
+                  <div class="omock-cap hi">프린터</div>
+                  <div class="omock-row hi"><div class="omock-field">컬러전용</div></div>
+                  <div class="omock-field" style="opacity:.55">흑백전용</div>
+                  <div class="omock-field" style="opacity:.55">증명서전용</div>
+                </div>
+                <div class="omock-preview"><div class="omock-page"></div></div>
+              </div>
+            </div>
           </div>
           <div class="step-h">프린터 설정</div>
           <p class="step-p">문서에 맞게 <b>흑백출력 · 컬러출력 · 증명서출력</b> 중에서 선택합니다. 이력서 · 계약서는 흑백, 사진이 있으면 컬러를 고르세요.</p>
@@ -849,12 +1029,23 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         <div class="step">
           <div class="step-no">3</div>
           <div class="step-fig">
-            <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
-              <rect x="30" y="8" width="60" height="64" rx="4" stroke="#111827" stroke-width="3"/>
-              <path d="M40 24h40M40 36h40M40 48h26" stroke="#C9D3DB" stroke-width="4" stroke-linecap="round"/>
-              <path d="M30 62h60" stroke="#D93025" stroke-width="3" stroke-dasharray="4 3"/>
-              <text x="60" y="76" font-size="9.5" font-weight="900" text-anchor="middle" fill="#D93025" font-family="Noto Sans KR">1 ~ 18페이지</text>
-            </svg>
+            <div class="omock" style="--oc:#2B579C">
+              <div class="omock-bar"><span class="omock-dot"></span><span class="omock-dot"></span><span class="omock-dot"></span></div>
+              <div class="omock-body">
+                <div class="omock-side">
+                  <div>정보</div>
+                  <div class="on">인쇄</div>
+                  <div>공유</div>
+                </div>
+                <div class="omock-fields">
+                  <div class="omock-cap">인쇄 범위</div>
+                  <div class="omock-field">모든 페이지 인쇄</div>
+                  <div class="omock-cap hi">사용자 지정</div>
+                  <div class="omock-row hi"><div class="omock-field">1 - 18페이지</div></div>
+                </div>
+                <div class="omock-preview"><div class="omock-page"></div></div>
+              </div>
+            </div>
           </div>
           <div class="step-h">페이지 범위 지정</div>
           <p class="step-p"><b>모든 페이지</b> 또는 <b>사용자 지정</b>을 선택해 원하는 페이지 번호(예: 1-18)만 출력할 수 있습니다.</p>
@@ -862,12 +1053,23 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         <div class="step">
           <div class="step-no">4</div>
           <div class="step-fig">
-            <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
-              <rect x="14" y="16" width="34" height="48" rx="3" stroke="#1B8AC4" stroke-width="3"/>
-              <path d="M56 40h18m0 0-6-6m6 6-6 6" stroke="#111827" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-              <rect x="80" y="16" width="34" height="48" rx="3" stroke="#1B8AC4" stroke-width="3" stroke-dasharray="5 4"/>
-              <rect x="80" y="16" width="34" height="48" rx="3" fill="#1B8AC4" opacity=".12"/>
-            </svg>
+            <div class="omock" style="--oc:#2B579C">
+              <div class="omock-bar"><span class="omock-dot"></span><span class="omock-dot"></span><span class="omock-dot"></span></div>
+              <div class="omock-body">
+                <div class="omock-side">
+                  <div>정보</div>
+                  <div class="on">인쇄</div>
+                  <div>공유</div>
+                </div>
+                <div class="omock-fields">
+                  <div class="omock-cap hi">단면 / 양면</div>
+                  <div class="omock-row hi"><div class="omock-field">양면 · 긴 면 기준</div></div>
+                  <div class="omock-cap">용지방향</div>
+                  <div class="omock-field">세로 방향</div>
+                </div>
+                <div class="omock-preview"><div class="omock-page"></div></div>
+              </div>
+            </div>
           </div>
           <div class="step-h">단면 · 양면, 용지방향</div>
           <p class="step-p"><b>단면/양면</b> 인쇄 여부와 <b>가로/세로</b> 방향을 선택합니다. 양면은 넘기는 방향(긴 면/짧은 면)까지 확인하세요.</p>
@@ -875,12 +1077,20 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         <div class="step">
           <div class="step-no">5</div>
           <div class="step-fig">
-            <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
-              <rect x="18" y="10" width="40" height="30" rx="3" stroke="#C9D3DB" stroke-width="3"/>
-              <text x="38" y="30" font-size="10" font-weight="900" text-anchor="middle" fill="#9AA5B1" font-family="Noto Sans KR">A4</text>
-              <path d="M62 25h18m0 0-6-6m6 6-6 6" stroke="#1B8AC4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-              <rect x="84" y="6" width="32" height="46" rx="3" stroke="#1B8AC4" stroke-width="3.4"/>
-              <text x="100" y="33" font-size="10" font-weight="900" text-anchor="middle" fill="#1B8AC4" font-family="Noto Sans KR">A3</text>
+            <svg width="100%" height="158" viewBox="0 0 280 158" fill="none" style="border:1px solid #D7DDE3;border-radius:8px;background:#fff;box-shadow:0 1px 5px rgba(17,24,39,.07)">
+              <rect x="55" y="10" width="170" height="138" rx="5" fill="#fff" stroke="#C9D3DB"/>
+              <text x="140" y="24" font-size="9.5" font-weight="900" text-anchor="middle" fill="#111827" font-family="Noto Sans KR">프린터 속성 - 용지</text>
+              <line x1="55" y1="30" x2="225" y2="30" stroke="#E5E7EB"/>
+              <text x="65" y="48" font-size="7.4" font-weight="700" fill="#374151" font-family="Noto Sans KR">원본 문서 크기</text>
+              <rect x="150" y="40" width="65" height="14" rx="2" fill="#fff" stroke="#C9D3DB"/>
+              <text x="182" y="50" font-size="7.4" font-weight="800" text-anchor="middle" fill="#374151" font-family="Noto Sans KR">A4</text>
+              <text x="65" y="70" font-size="7.4" font-weight="900" fill="#B31E16" font-family="Noto Sans KR">출력 문서 크기</text>
+              <rect x="150" y="62" width="65" height="14" rx="2" fill="#FEF2F2" stroke="#D93025" stroke-width="2"/>
+              <text x="182" y="72" font-size="7.4" font-weight="900" text-anchor="middle" fill="#B31E16" font-family="Noto Sans KR">A3</text>
+              <line x1="65" y1="86" x2="215" y2="86" stroke="#EEF1F5"/>
+              <text x="65" y="104" font-size="7" font-weight="700" fill="#6B7280" font-family="Noto Sans KR">확대/축소 100~400%</text>
+              <rect x="180" y="132" width="34" height="12" rx="2" fill="#2B579C"/>
+              <text x="197" y="141" font-size="7" font-weight="800" text-anchor="middle" fill="#fff" font-family="Noto Sans KR">확인</text>
             </svg>
           </div>
           <div class="step-h">용지 크기 설정</div>
@@ -889,12 +1099,26 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         <div class="step">
           <div class="step-no">6</div>
           <div class="step-fig">
-            <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
-              <rect x="16" y="12" width="88" height="56" rx="5" stroke="#111827" stroke-width="3"/>
-              <path d="M26 24h34M26 36h46M26 48h28" stroke="#C9D3DB" stroke-width="4" stroke-linecap="round"/>
-              <circle cx="88" cy="45" r="13" fill="none" stroke="#D93025" stroke-width="4"/>
-              <path d="M98 55l9 9" stroke="#D93025" stroke-width="5" stroke-linecap="round"/>
-            </svg>
+            <div class="omock" style="--oc:#2B579C">
+              <div class="omock-bar"><span class="omock-dot"></span><span class="omock-dot"></span><span class="omock-dot"></span></div>
+              <div class="omock-body">
+                <div class="omock-side">
+                  <div>정보</div>
+                  <div class="on">인쇄</div>
+                  <div>공유</div>
+                </div>
+                <div class="omock-fields">
+                  <div class="omock-cap hi">복사본</div>
+                  <div class="omock-row hi"><div class="omock-field">2</div></div>
+                  <div class="omock-cap">프린터</div>
+                  <div class="omock-field">컬러전용</div>
+                </div>
+                <div class="omock-preview">
+                  <div class="omock-page"></div>
+                  <div class="omock-tag" style="top:8px;right:8px">미리보기 필수!</div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="step-h">매수 확인 후 인쇄</div>
           <p class="step-p">복사본 수를 정하고, <span class="r">미리보기로 전체 페이지</span>를 확인한 뒤 <b>[인쇄]</b>를 누릅니다.</p>
