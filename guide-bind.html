@@ -2,9 +2,9 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="description" content="프린트샵미니 사용방법 — 인쇄·복사·스캔·팩스·코팅·제본 이용 순서와 자주 묻는 질문을 안내합니다.">
+<meta name="description" content="프린트샵미니 제본 사용방법 — 열제본기 예열, 표지에 넣는 방법, 투입과 10분 냉각까지 안내합니다.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>사용방법 - 프린트샵미니</title>
+<title>제본 사용방법 - 프린트샵미니</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -278,7 +278,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         <li><a href="guide-scan.html">스캔</a></li>
         <li><a href="guide-fax.html">팩스</a></li>
         <li><a href="guide-coat.html">코팅</a></li>
-        <li><a href="guide-bind.html">제본</a></li>
+        <li><a href="guide-bind.html" class="active">제본</a></li>
       </ul>
     </li>
     <li><a href="about.html">소개</a></li>
@@ -299,197 +299,66 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 <!-- HEADER -->
 <div class="page-header">
   <div class="ph-inner">
-    <div class="ph-eyebrow">GUIDE</div>
-    <h1 class="ph-h1">사용방법</h1>
-    <p class="ph-sub">서비스를 골라 이용 순서를 확인하세요. 인쇄 · 복사 · 스캔 · 팩스 · 코팅 · 제본</p>
+    <div class="ph-eyebrow">GUIDE · BINDING</div>
+    <h1 class="ph-h1">제본 사용방법</h1>
+    <p class="ph-sub">인쇄물을 열제본표지에 넣어 책처럼 묶는 방법입니다. 10분 냉각을 꼭 지켜 주세요.</p>
   </div>
 </div>
 
-<!-- 경고 배너 -->
-<div class="warnbar">
-  <div class="warnbar-in">
-    <div class="warnbar-ico">!</div>
-    <div class="warnbar-tx">
-      잘못된 인쇄설정으로 인한 오출력은 환불이 어렵습니다.
-      <span>출력 전 반드시 <b>미리보기로 전체 페이지</b>를 확인해 주세요. 화면에 보이는 그대로 인쇄됩니다.</span>
-    </div>
-  </div>
-</div>
+<div class="svc-switch"><div class="svc-switch-in">
+  <a href="guide.html" class="home">← 사용방법 전체</a>
+  <span class="svc-switch-label">서비스 선택</span>
+  <a href="guide-print.html">인쇄</a>
+  <a href="guide-copy.html">복사</a>
+  <a href="guide-scan.html">스캔</a>
+  <a href="guide-fax.html">팩스</a>
+  <a href="guide-coat.html">코팅</a>
+  <a href="guide-bind.html" class="on">제본</a>
+</div></div>
 
-<!-- 탭 -->
-<div class="tabs">
-  <div class="tabs-in">
-    <button class="tab on" onclick="jump('choose',this)">서비스 선택</button>
-    <button class="tab" onclick="jump('terms',this)">인쇄 · 복사 · 스캔 · 팩스 차이</button>
-    <button class="tab" onclick="jump('tips',this)">꼭 기억할 것</button>
-    <button class="tab" onclick="jump('faq',this)">자주 묻는 질문</button>
-  </div>
-</div>
-
-
-<div class="sec" id="choose">
+<div class="sec alt" id="bind" style="--sc:#A16207;--sc-light:#FDF3DC">
   <div class="sec-in">
-    <div class="sec-head"><h2 class="sec-h2">어떤 서비스를 이용하시나요?</h2></div>
-    <p class="sec-tagline">서비스를 고르면 이용 순서를 단계별로 안내합니다. 상단 메뉴 <b>사용방법</b>에서도 바로 이동할 수 있습니다.</p>
-    <div class="gcards">
-      <a class="gcard" href="guide-print.html" style="--tc:var(--print)">
-        <div class="gcard-top"><svg width="26" height="26" viewBox="0 0 48 48" fill="none"><g stroke="#fff" stroke-width="3.4" stroke-linejoin="round"><rect x="15" y="6" width="18" height="9"/><rect x="7" y="15" width="34" height="17" rx="3"/><rect x="15" y="32" width="18" height="10"/></g></svg><div class="gcard-name">인쇄</div></div>
-        <div class="gcard-body"><p class="gcard-desc">내 파일을 종이로 뽑기. PDF · 한글 · MS 오피스 · 크롬 인쇄설정도 안내합니다.</p><div class="gcard-go">사용방법 보기 →</div></div>
-      </a>
-      <a class="gcard" href="guide-copy.html" style="--tc:var(--copy)">
-        <div class="gcard-top"><svg width="26" height="26" viewBox="0 0 48 48" fill="none"><rect x="7" y="7" width="24" height="30" rx="3" stroke="#fff" stroke-width="3.4"/><rect x="17" y="14" width="24" height="27" rx="3" stroke="#fff" stroke-width="3.4" fill="none"/></svg><div class="gcard-name">복사</div></div>
-        <div class="gcard-body"><p class="gcard-desc">가져온 종이를 똑같이 한 장 더. 신분증 · 통장 · 여권 · 책 복사 방법 포함.</p><div class="gcard-go">사용방법 보기 →</div></div>
-      </a>
-      <a class="gcard" href="guide-scan.html" style="--tc:var(--scan)">
-        <div class="gcard-top"><svg width="26" height="26" viewBox="0 0 48 48" fill="none"><rect x="9" y="8" width="30" height="22" rx="3" stroke="#fff" stroke-width="3.4"/><path d="M6 38h36" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/><path d="M24 15v12m0 0-5-5m5 5 5-5" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="gcard-name">스캔</div></div>
-        <div class="gcard-body"><p class="gcard-desc">종이를 파일로 만들기. 매장 PC 스캔함에서 파일을 받아 가세요.</p><div class="gcard-go">사용방법 보기 →</div></div>
-      </a>
-      <a class="gcard" href="guide-fax.html" style="--tc:var(--fax)">
-        <div class="gcard-top"><svg width="26" height="26" viewBox="0 0 48 48" fill="none"><rect x="13" y="6" width="22" height="10" rx="2" stroke="#fff" stroke-width="3.4"/><rect x="6" y="16" width="36" height="18" rx="3" stroke="#fff" stroke-width="3.4"/><rect x="15" y="34" width="18" height="8" rx="2" stroke="#fff" stroke-width="3.4"/></svg><div class="gcard-name">팩스</div></div>
-        <div class="gcard-body"><p class="gcard-desc">종이 내용을 상대방 팩스 번호로 보내기. 보내기만 가능합니다.</p><div class="gcard-go">사용방법 보기 →</div></div>
-      </a>
-      <a class="gcard" href="guide-coat.html" style="--tc:#7C3AED">
-        <div class="gcard-top"><svg width="26" height="26" viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="28" height="34" rx="3" stroke="#fff" stroke-width="3.4"/><path d="M14 18h16M14 26h16M14 34h9" stroke="#fff" stroke-width="3" stroke-linecap="round"/><path d="M40 4l1.7 4.3L46 10l-4.3 1.7L40 16l-1.7-4.3L34 10l4.3-1.7z" fill="#fff"/></svg><div class="gcard-name">코팅</div></div>
-        <div class="gcard-body"><p class="gcard-desc">인쇄물을 코팅지에 넣어 코팅하기. 결제를 먼저 해 주세요.</p><div class="gcard-go">사용방법 보기 →</div></div>
-      </a>
-      <a class="gcard" href="guide-bind.html" style="--tc:#A16207">
-        <div class="gcard-top"><svg width="26" height="26" viewBox="0 0 48 48" fill="none"><path d="M12 6h24a3 3 0 0 1 3 3v31H15a3 3 0 0 1-3-3z" stroke="#fff" stroke-width="3.4" stroke-linejoin="round"/><path d="M19 6v34" stroke="#fff" stroke-width="3"/><path d="M25 16h8M25 23h8" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg><div class="gcard-name">제본</div></div>
-        <div class="gcard-body"><p class="gcard-desc">인쇄물을 열제본표지로 책처럼 묶기. 10분 냉각이 필요합니다.</p><div class="gcard-go">사용방법 보기 →</div></div>
-      </a>
+    <div class="sec-head">
+      <div class="sec-ico"><svg width="34" height="34" viewBox="0 0 48 48" fill="none"><path d="M12 6h24a3 3 0 0 1 3 3v31H15a3 3 0 0 1-3-3z" stroke="#A16207" stroke-width="3" stroke-linejoin="round"/><path d="M19 6v34" stroke="#A16207" stroke-width="3"/><path d="M25 16h8M25 23h8" stroke="#A16207" stroke-width="3" stroke-linecap="round"/></svg></div>
+      <h2 class="sec-h2">제본하는 방법 <span class="pill">BINDING</span></h2>
     </div>
-  </div>
-</div>
-<div class="sec alt" id="terms">
-  <div class="sec-in">
-    <div class="sec-head"><h2 class="sec-h2">인쇄 · 복사 · 스캔 · 팩스, 무엇이 다른가요?</h2></div>
-    <p class="sec-tagline">헷갈리기 쉬운 네 가지입니다. <b>무엇을 넣어서 무엇이 나오는지</b>로 구분하시면 쉽습니다. 복합기 화면의 메뉴 색상과 아래 색상이 같습니다.</p>
-
-    <div class="terms">
-
-      <div class="term" style="--tc:var(--print)">
-        <div class="term-top">
-          <svg width="26" height="26" viewBox="0 0 48 48" fill="none">
-            <g stroke="#fff" stroke-width="3.4" stroke-linejoin="round">
-              <rect x="15" y="6" width="18" height="9"/><rect x="7" y="15" width="34" height="17" rx="3"/><rect x="15" y="32" width="18" height="10"/>
-            </g>
-          </svg>
-          <div><div class="term-name">인쇄</div><div class="term-en">PRINT</div></div>
-        </div>
-        <div class="term-body">
-          <div class="term-flow"><span class="term-chip">내 파일</span><span class="term-arrow">→</span><span class="term-chip">종이</span></div>
-          <p class="term-def">USB · 이메일 · 휴대폰에 있는 <b>파일</b>을 종이로 뽑는 것</p>
-          <p class="term-ex"><b>종이 원본이 없을 때</b> 씁니다. 매장 PC에서 파일을 열어 시작합니다.<br>예 · 이력서 파일, 과제 PDF, 사진 파일</p>
-        </div>
+    <p class="sec-tagline"><b>인쇄물을 열제본표지에 넣어 책처럼 묶는 서비스입니다.</b> 예열 → 투입 → 타이머 → 10분 냉각 순서로 진행합니다. 논문 · 보고서 · 계약서 등에 활용하세요.</p>
+    <div id="guideFiles"></div>
+    <div class="steps steps-wide">
+      <div class="step">
+        <div class="step-no">1</div>
+        <div class="step-figs"><img class="step-photo" src="images/bind/safa-buttons.png" alt="전원 버튼을 누른 후 온열 버튼을 누르는 모습" loading="lazy"></div>
+        <div class="step-h">전원 켜기 · 예열</div>
+        <p class="step-p"><b>전원</b> 버튼을 누른 후 <b>온열</b> 버튼을 한 번 누르세요.<br>불이 깜빡이다가 3분 후 알람과 함께 불이 멈추면 예열 완료입니다.</p>
       </div>
-
-      <div class="term" style="--tc:var(--copy)">
-        <div class="term-top">
-          <svg width="26" height="26" viewBox="0 0 48 48" fill="none">
-            <rect x="7" y="7" width="24" height="30" rx="3" stroke="#fff" stroke-width="3.4"/>
-            <rect x="17" y="14" width="24" height="27" rx="3" stroke="#fff" stroke-width="3.4" fill="none"/>
-          </svg>
-          <div><div class="term-name">복사</div><div class="term-en">COPY</div></div>
-        </div>
-        <div class="term-body">
-          <div class="term-flow"><span class="term-chip">종이</span><span class="term-arrow">→</span><span class="term-chip">종이</span></div>
-          <p class="term-def">가지고 온 <b>종이</b>를 똑같이 한 장 더 만드는 것</p>
-          <p class="term-ex"><b>종이 원본이 있을 때</b> 씁니다. 복합기에 종이를 올려놓고 시작하며, PC는 쓰지 않습니다.<br>예 · 신분증, 서류 사본, 시험지</p>
-        </div>
+      <div class="step">
+        <div class="step-no">2</div>
+        <div class="step-h">투입구 개방</div>
+        <p class="step-p">기계 <b>뒷면의 냉각 트레이</b>를 당겨서 투입구를 열어 주세요.</p>
       </div>
-
-      <div class="term" style="--tc:var(--scan)">
-        <div class="term-top">
-          <svg width="26" height="26" viewBox="0 0 48 48" fill="none">
-            <rect x="9" y="8" width="30" height="22" rx="3" stroke="#fff" stroke-width="3.4"/>
-            <path d="M6 38h36" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/>
-            <path d="M24 15v12m0 0-5-5m5 5 5-5" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <div><div class="term-name">스캔</div><div class="term-en">SCAN</div></div>
-        </div>
-        <div class="term-body">
-          <div class="term-flow"><span class="term-chip">종이</span><span class="term-arrow">→</span><span class="term-chip">파일</span></div>
-          <p class="term-def"><b>종이</b>를 사진 찍듯 <b>파일</b>로 만드는 것</p>
-          <p class="term-ex">종이는 그대로 돌려받고, 내용만 파일이 됩니다. 이메일이나 USB로 받으시면 됩니다.<br>예 · 서류를 파일로 보관하거나 메일로 보낼 때</p>
-        </div>
+      <div class="step step-dual">
+        <div class="step-no">3</div>
+        <div class="step-figs two"><img class="step-photo" src="images/bind/cover-structure.png" alt="열제본표지 단면 구조 — PET 투명 비닐커버, 종이커버, 표지규격(제본 본드 부분)" loading="lazy"><img class="step-photo" src="images/bind/cover-closed.png" alt="열제본표지 앞면 비닐커버 · 뒷면 종이커버" loading="lazy"></div>
+        <div class="step-h">열제본표지에 인쇄물 넣기</div>
+        <p class="step-p">열제본 전용 표지 안에 인쇄물을 넣으세요. 이때 <b>안쪽 본드(제본선)에 가지런히 잘 닿도록 각을 맞춰</b> 주세요.<br>표지는 앞면이 <b>투명한 비닐커버</b>, 뒷면이 <b>종이커버</b>입니다.</p>
       </div>
-
-      <div class="term" style="--tc:var(--fax)">
-        <div class="term-top">
-          <svg width="26" height="26" viewBox="0 0 48 48" fill="none">
-            <rect x="13" y="6" width="22" height="10" rx="2" stroke="#fff" stroke-width="3.4"/>
-            <rect x="6" y="16" width="36" height="18" rx="3" stroke="#fff" stroke-width="3.4"/>
-            <rect x="15" y="34" width="18" height="8" rx="2" stroke="#fff" stroke-width="3.4"/>
-          </svg>
-          <div><div class="term-name">팩스</div><div class="term-en">FAX</div></div>
-        </div>
-        <div class="term-body">
-          <div class="term-flow"><span class="term-chip">종이</span><span class="term-arrow">→</span><span class="term-chip">상대방</span></div>
-          <p class="term-def"><b>종이</b> 내용을 상대방 <b>팩스 번호</b>로 보내는 것</p>
-          <p class="term-ex">받는 곳의 팩스 번호를 알아야 보낼 수 있습니다. 내 손에는 아무것도 남지 않습니다.<br>예 · 관공서 · 병원 · 회사에 서류 제출</p>
-        </div>
+      <div class="step">
+        <div class="step-no">4</div>
+        <div class="step-figs"><img class="step-photo" src="images/bind/safa-insert.png" alt="SAFA 제본기 투입구에 제본표지를 세워서 넣는 모습" loading="lazy"></div>
+        <div class="step-h">기계에 투입</div>
+        <p class="step-p">표지의 <b>막힌 부분부터</b> 투입구에 넣으세요.<br>더 이상 안 들어갈 때까지 <b>깊숙이</b> 밀어 넣어 주세요.</p>
       </div>
-
-    </div>
-  </div>
-</div>
-<div class="sec" id="tips">
-  <div class="sec-in">
-    <div class="sec-head"><h2 class="sec-h2">꼭 기억해 주세요</h2></div>
-    <p class="sec-tagline">이 세 가지만 지키면 출력 사고의 대부분을 막을 수 있습니다.</p>
-    <div class="tips">
-      <div class="tip">
-        <div class="tip-fig">
-          <svg width="52" height="52" viewBox="0 0 48 48" fill="none">
-            <g stroke="#1B8AC4" stroke-width="3.2" stroke-linejoin="round">
-              <rect x="15" y="6" width="18" height="9"/><rect x="7" y="15" width="34" height="17" rx="3"/><rect x="15" y="32" width="18" height="10"/>
-            </g>
-            <rect x="18" y="21" width="5" height="4" fill="#018FFB"/><rect x="25" y="21" width="5" height="4" fill="#F3732C"/>
-          </svg>
-        </div>
-        <div class="tip-h">컬러로 뽑으려면</div>
-        <p class="tip-p"><b>[컬러 출력]</b> 프린터를 꼭 선택하고, 미리보기에서 <b>모든 페이지가 컬러인지</b> 확인하세요.</p>
+      <div class="step">
+        <div class="step-no">5</div>
+        <div class="step-h">타이머 작동</div>
+        <p class="step-p"><b>타이머</b> 버튼을 누르세요.<br>불이 다시 깜빡이다가 <b>1분 뒤 알람 소리</b>와 함께 불이 멈추면 꺼내세요.</p>
       </div>
-      <div class="tip">
-        <div class="tip-fig">
-          <svg width="52" height="52" viewBox="0 0 48 48" fill="none">
-            <path d="M12 5h16l9 9v29H12z" stroke="#1B8AC4" stroke-width="3.2" stroke-linejoin="round"/>
-            <path d="M28 5v9h9" stroke="#1B8AC4" stroke-width="3.2" stroke-linejoin="round"/>
-            <text x="24" y="35" font-size="11" font-weight="900" text-anchor="middle" fill="#1B8AC4" font-family="Noto Sans KR">PDF</text>
-          </svg>
-        </div>
-        <div class="tip-h">한글(HWP) 파일은</div>
-        <p class="tip-p"><b>PDF로 저장</b>해서 가져오세요. 글꼴과 편집 상태가 원본 그대로 유지됩니다.</p>
+      <div class="step">
+        <div class="step-no">6</div>
+        <div class="step-h">10분 냉각 후 완료</div>
+        <p class="step-p">꺼낸 직후에는 <b>절대 열지 마세요.</b><br>평평한 곳에 놓고 <b>10분간 냉각</b>한 뒤 펼치세요.</p>
+        <div class="step-note warn">냉각 필수! <b>본드가 굳기 전에 열면 인쇄물이 다 떨어집니다.</b></div>
       </div>
-      <div class="tip">
-        <div class="tip-fig">
-          <svg width="52" height="52" viewBox="0 0 48 48" fill="none">
-            <circle cx="24" cy="24" r="17" stroke="#1B8AC4" stroke-width="3.2"/>
-            <ellipse cx="24" cy="24" rx="7.5" ry="17" stroke="#1B8AC4" stroke-width="2.8"/>
-            <path d="M7 24h34M10 15h28M10 33h28" stroke="#1B8AC4" stroke-width="2.8"/>
-          </svg>
-        </div>
-        <div class="tip-h">캔바 · 아이패드 PDF는</div>
-        <p class="tip-p"><b>브라우저(크롬 · 엣지)</b>로 열어서 인쇄하세요. 중간이 회색조로 나오는 것을 막아줍니다.</p>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="sec alt" id="faq">
-  <div class="sec-in">
-    <div class="sec-head"><h2 class="sec-h2">자주 묻는 질문</h2></div>
-    <div class="faq">
-      <div class="faq-item"><button class="faq-q" onclick="this.parentNode.classList.toggle('open')">복합기에서 [인쇄]를 눌렀더니 [PC]가 나오는데 눌러도 되나요?</button>
-        <div class="faq-a">네, 정상 단계입니다. 인쇄할 파일이 <b>PC에 있다</b>는 뜻으로, 동그란 <b>[PC]</b>를 터치하시면 됩니다.</div></div>
-      <div class="faq-item"><button class="faq-q" onclick="this.parentNode.classList.toggle('open')">복합기에서 넣는 번호가 뭔가요?</button>
-        <div class="faq-a">PC에서 입력하신 <b>개인식별번호(PIN)</b>입니다. 보통 휴대폰 번호 뒷 4자리를 쓰시고, 증명서 전용 프린터를 선택하신 경우에는 <b>9999</b>로 조회하시면 됩니다.</div></div>
-      <div class="faq-item"><button class="faq-q" onclick="this.parentNode.classList.toggle('open')">한글 파일을 여니 모르는 기호(□)가 보여요.</button>
-        <div class="faq-a">파일을 만든 환경과 매장 PC의 글꼴이 달라 생기는 <b>호환 문제</b>이며, 장비 고장이 아닙니다. 화면에 보이는 그대로 인쇄되니, 한글 파일은 <b>PDF로 저장</b>해 오시길 권해드립니다.</div></div>
-      <div class="faq-item"><button class="faq-q" onclick="this.parentNode.classList.toggle('open')">컬러로 설정했는데 중간 페이지가 흑백으로 나왔어요.</button>
-        <div class="faq-a">캔바 등에서 만든 PDF에서 나타나는 현상입니다. <b>크롬 · 엣지 브라우저로 파일을 열어</b> 인쇄하시면 해결됩니다. 인쇄 전 미리보기에서 <b>모든 페이지</b>가 컬러인지 확인해 주세요.</div></div>
-      <div class="faq-item"><button class="faq-q" onclick="this.parentNode.classList.toggle('open')">잘못 출력됐는데 환불이 되나요?</button>
-        <div class="faq-a">프린터 고장 · 용지 걸림 · 토너 번짐 · 백지 출력 등 <b>장비 이상</b>은 매장에서 처리해 드립니다. 다만 파일 호환 문제, 이용자가 선택한 인쇄 설정, 미리보기 미확인으로 인한 출력물은 환불 · 재출력이 어렵습니다.</div></div>
-      <div class="faq-item"><button class="faq-q" onclick="this.parentNode.classList.toggle('open')">고장 신고는 어떻게 하나요?</button>
-        <div class="faq-a">전화상담 시간은 <b>오전 8시 ~ 오후 9시</b>입니다. 상담시간에도 연결이 어려우시면 네이버톡톡으로 남겨주시면 더 빠르게 답변드립니다. 상담시간 외에는 네이버톡톡으로 <b>고장 접수만</b> 가능하며, <b>매장명 + 고장내용 + 연락처</b>를 함께 남겨주세요.</div></div>
     </div>
   </div>
 </div>
@@ -530,12 +399,8 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 
 <script>
 function toggleMenu(){document.getElementById("navLinks").classList.toggle("show");}
-function jump(id, el){
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
-  el.classList.add('on');
-  const y = document.getElementById(id).getBoundingClientRect().top + window.pageYOffset - 118;
-  window.scrollTo({top:y, behavior:'smooth'});
-}
 </script>
+<script>window.GUIDE_SERVICE='bind';</script>
+<script src="service-guides.js"></script>
 </body>
 </html>

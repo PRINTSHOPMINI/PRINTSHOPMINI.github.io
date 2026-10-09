@@ -362,6 +362,19 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 .close-btn:hover{border-color:var(--blue);color:var(--blue)}
 @media(max-width:768px){.step-flow{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:480px){.step-flow{grid-template-columns:1fr}}
+
+/* 메뉴 하위(드롭다운) */
+.nav-links li{position:relative}
+.has-sub>a::after{content:'▾';font-size:10px;margin-left:5px;opacity:.55}
+.sub-menu{display:none;position:absolute;top:100%;left:0;min-width:128px;background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:0 12px 32px rgba(17,24,39,.12);padding:8px;list-style:none;z-index:310}
+.has-sub:hover>.sub-menu,.has-sub:focus-within>.sub-menu{display:block}
+.sub-menu a{display:block;font-size:13.5px;white-space:nowrap}
+@media(max-width:680px){
+  .nav-links{max-height:calc(100vh - 70px);overflow-y:auto}
+  .has-sub>a::after{display:none}
+  .sub-menu{display:flex;flex-wrap:wrap;gap:6px;position:static;min-width:0;box-shadow:none;border:none;border-radius:0;background:transparent;padding:2px 0 8px 14px}
+  .sub-menu a{padding:6px 14px;font-size:12.5px;border:1px solid var(--border);border-radius:50px}
+}
 </style>
 </head>
 <body>
@@ -374,7 +387,16 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
   </a>
   <ul class="nav-links">
     <li><a href="services.html">서비스</a></li>
-    <li><a href="guide.html">사용방법</a></li>
+    <li class="has-sub"><a href="guide.html">사용방법</a>
+      <ul class="sub-menu">
+        <li><a href="guide-print.html">인쇄</a></li>
+        <li><a href="guide-copy.html">복사</a></li>
+        <li><a href="guide-scan.html">스캔</a></li>
+        <li><a href="guide-fax.html">팩스</a></li>
+        <li><a href="guide-coat.html">코팅</a></li>
+        <li><a href="guide-bind.html">제본</a></li>
+      </ul>
+    </li>
     <li><a href="about.html">소개</a></li>
     <li><a href="branches.html">지점찾기</a></li>
     <li><a href="community.html">커뮤니티</a></li>
@@ -433,12 +455,12 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
       </div>
     </div>
     <div class="svc-grid">
-      <div class="svc-card" onclick="location.href='services.html#print'" style="cursor:pointer"><div class="svc-icon">🖨️</div><div class="svc-num">SERVICE 01</div><h3 class="svc-title">인쇄</h3><p class="svc-desc">PC에서 파일 전송 후 복합기에서 PIN번호로 찾아 출력하는 6단계 셀프 인쇄</p><div class="svc-tags"><span class="svc-tag">①프린터선택</span><span class="svc-tag">②PIN입력</span><span class="svc-tag">③복합기이동</span><span class="svc-tag">④번호검색</span><span class="svc-tag">⑤과금확인</span><span class="svc-tag">⑥카드결제</span></div><div class="svc-play">상세 이용방법 보기</div></div>
-      <div class="svc-card" onclick="location.href='services.html#copy'" style="cursor:pointer"><div class="svc-icon">📋</div><div class="svc-num">SERVICE 02</div><h3 class="svc-title">복사</h3><p class="svc-desc">원본을 스캔부에 올리고 옵션 설정 후 결제하는 6단계 셀프 복사</p><div class="svc-tags"><span class="svc-tag">①원본올리기</span><span class="svc-tag">②복사메뉴</span><span class="svc-tag">③옵션설정</span><span class="svc-tag">④금액확인</span><span class="svc-tag">⑤카드결제</span><span class="svc-tag">⑥출력완료</span></div><div class="svc-play">상세 이용방법 보기</div></div>
-      <div class="svc-card" onclick="location.href='services.html#scan'" style="cursor:pointer"><div class="svc-icon">📄</div><div class="svc-num">SERVICE 03</div><h3 class="svc-title">스캔</h3><p class="svc-desc">원본을 스캔부에 올리고 결제 후 PC 폴더에서 파일 확인하는 5단계 셀프 스캔</p><div class="svc-tags"><span class="svc-tag">①원본올리기</span><span class="svc-tag">②스캔메뉴</span><span class="svc-tag">③금액확인</span><span class="svc-tag">④카드결제</span><span class="svc-tag">⑤파일확인</span></div><div class="svc-play">상세 이용방법 보기</div></div>
-      <div class="svc-card" onclick="location.href='services.html#fax'" style="cursor:pointer"><div class="svc-icon">📠</div><div class="svc-num">SERVICE 04</div><h3 class="svc-title">팩스</h3><p class="svc-desc">원본 스캔 후 팩스번호 입력, 결제 후 QR코드로 발송 확인하는 6단계 셀프 팩스</p><div class="svc-tags"><span class="svc-tag">①원본올리기</span><span class="svc-tag">②팩스메뉴</span><span class="svc-tag">③번호입력</span><span class="svc-tag">④옵션설정</span><span class="svc-tag">⑤금액확인</span><span class="svc-tag">⑥결제·발송</span></div><div class="svc-play">상세 이용방법 보기</div></div>
-      <div class="svc-card" onclick="location.href='services.html#coat'" style="cursor:pointer"><div class="svc-icon">✨</div><div class="svc-num">SERVICE 05</div><h3 class="svc-title">코팅</h3><p class="svc-desc">먼저 결제 후 전원 켜고 예열 완료 후 코팅지 투입하는 5단계 셀프 코팅</p><div class="svc-tags"><span class="svc-tag">①결제먼저</span><span class="svc-tag">②전원·예열</span><span class="svc-tag">③인쇄물넣기</span><span class="svc-tag">④투입</span><span class="svc-tag">⑤전원OFF</span></div><div class="svc-play">상세 이용방법 보기</div></div>
-      <div class="svc-card" onclick="location.href='services.html#bind'" style="cursor:pointer"><div class="svc-icon">📚</div><div class="svc-num">SERVICE 06</div><h3 class="svc-title">제본</h3><p class="svc-desc">전원 켜고 예열 후 제본용지를 투입해 열제본 완료, 10분 냉각하는 6단계 셀프 제본</p><div class="svc-tags"><span class="svc-tag">①전원·예열</span><span class="svc-tag">②투입구개방</span><span class="svc-tag">③용지삽입</span><span class="svc-tag">④투입</span><span class="svc-tag">⑤타이머</span><span class="svc-tag">⑥냉각완료</span></div><div class="svc-play">상세 이용방법 보기</div></div>
+      <div class="svc-card" onclick="location.href='guide-print.html'" style="cursor:pointer"><div class="svc-icon">🖨️</div><div class="svc-num">SERVICE 01</div><h3 class="svc-title">인쇄</h3><p class="svc-desc">PC에서 파일 전송 후 복합기에서 PIN번호로 찾아 출력하는 6단계 셀프 인쇄</p><div class="svc-tags"><span class="svc-tag">①프린터선택</span><span class="svc-tag">②PIN입력</span><span class="svc-tag">③복합기이동</span><span class="svc-tag">④번호검색</span><span class="svc-tag">⑤과금확인</span><span class="svc-tag">⑥카드결제</span></div><div class="svc-play">상세 이용방법 보기</div></div>
+      <div class="svc-card" onclick="location.href='guide-copy.html'" style="cursor:pointer"><div class="svc-icon">📋</div><div class="svc-num">SERVICE 02</div><h3 class="svc-title">복사</h3><p class="svc-desc">원본을 스캔부에 올리고 옵션 설정 후 결제하는 6단계 셀프 복사</p><div class="svc-tags"><span class="svc-tag">①원본올리기</span><span class="svc-tag">②복사메뉴</span><span class="svc-tag">③옵션설정</span><span class="svc-tag">④금액확인</span><span class="svc-tag">⑤카드결제</span><span class="svc-tag">⑥출력완료</span></div><div class="svc-play">상세 이용방법 보기</div></div>
+      <div class="svc-card" onclick="location.href='guide-scan.html'" style="cursor:pointer"><div class="svc-icon">📄</div><div class="svc-num">SERVICE 03</div><h3 class="svc-title">스캔</h3><p class="svc-desc">원본을 스캔부에 올리고 결제 후 PC 폴더에서 파일 확인하는 5단계 셀프 스캔</p><div class="svc-tags"><span class="svc-tag">①원본올리기</span><span class="svc-tag">②스캔메뉴</span><span class="svc-tag">③금액확인</span><span class="svc-tag">④카드결제</span><span class="svc-tag">⑤파일확인</span></div><div class="svc-play">상세 이용방법 보기</div></div>
+      <div class="svc-card" onclick="location.href='guide-fax.html'" style="cursor:pointer"><div class="svc-icon">📠</div><div class="svc-num">SERVICE 04</div><h3 class="svc-title">팩스</h3><p class="svc-desc">원본 스캔 후 팩스번호 입력, 결제 후 QR코드로 발송 확인하는 6단계 셀프 팩스</p><div class="svc-tags"><span class="svc-tag">①원본올리기</span><span class="svc-tag">②팩스메뉴</span><span class="svc-tag">③번호입력</span><span class="svc-tag">④옵션설정</span><span class="svc-tag">⑤금액확인</span><span class="svc-tag">⑥결제·발송</span></div><div class="svc-play">상세 이용방법 보기</div></div>
+      <div class="svc-card" onclick="location.href='guide-coat.html'" style="cursor:pointer"><div class="svc-icon">✨</div><div class="svc-num">SERVICE 05</div><h3 class="svc-title">코팅</h3><p class="svc-desc">먼저 결제 후 전원 켜고 예열 완료 후 코팅지 투입하는 5단계 셀프 코팅</p><div class="svc-tags"><span class="svc-tag">①결제먼저</span><span class="svc-tag">②전원·예열</span><span class="svc-tag">③인쇄물넣기</span><span class="svc-tag">④투입</span><span class="svc-tag">⑤전원OFF</span></div><div class="svc-play">상세 이용방법 보기</div></div>
+      <div class="svc-card" onclick="location.href='guide-bind.html'" style="cursor:pointer"><div class="svc-icon">📚</div><div class="svc-num">SERVICE 06</div><h3 class="svc-title">제본</h3><p class="svc-desc">전원 켜고 예열 후 제본용지를 투입해 열제본 완료, 10분 냉각하는 6단계 셀프 제본</p><div class="svc-tags"><span class="svc-tag">①전원·예열</span><span class="svc-tag">②투입구개방</span><span class="svc-tag">③용지삽입</span><span class="svc-tag">④투입</span><span class="svc-tag">⑤타이머</span><span class="svc-tag">⑥냉각완료</span></div><div class="svc-play">상세 이용방법 보기</div></div>
     </div>
   </div>
 </section>

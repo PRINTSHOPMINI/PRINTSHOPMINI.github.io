@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[기존 자료] 서비스 안내 - 프린트샵미니</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#1B8AC4;--blue-hover:#1470A8;--blue-light:#E8F4FC;--blue-mid:#4AAAD6;
+  --text:#111827;--text2:#374151;--text3:#6B7280;--border:#E5E7EB;
+  --bg:#F9FAFB;--white:#FFFFFF;--radius:14px;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--white);line-height:1.7;overflow-x:hidden;word-break:keep-all;overflow-wrap:break-word}
+a{text-decoration:none;color:inherit}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:70px;display:flex;align-items:center;padding:0 6%}
+.nav-logo{display:flex;align-items:center;gap:10px;flex-shrink:0;margin-right:48px}
+.nav-logo-name{font-size:17px;font-weight:900;color:var(--blue);letter-spacing:-0.5px}
+.nav-links{display:flex;list-style:none;gap:2px;flex:1}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);padding:8px 16px;border-radius:8px;transition:all .18s}
+.nav-links a:hover,.nav-links a.active{color:var(--blue);background:var(--blue-light)}
+.nav-right{display:flex;align-items:center;gap:0;margin-left:auto}
+.nav-cta{background:var(--blue);color:white;font-size:13px;font-weight:700;padding:9px 22px;border-radius:50px;transition:background .2s;white-space:nowrap}
+.nav-cta:hover{background:var(--blue-hover)}
+.nav-raccoon{width:56px;height:56px;flex-shrink:0;margin-left:6px;position:relative;top:2px}
+.nav-raccoon img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.15));transition:transform .3s}
+.nav-raccoon:hover img{transform:rotate(-8deg) scale(1.08)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{width:22px;height:2px;background:var(--text);border-radius:2px;display:block}
+
+/* PAGE HEADER */
+.page-header{margin-top:70px;background:var(--white);border-bottom:1px solid var(--border);padding:52px 6% 44px}
+.ph-inner{max-width:1160px;margin:0 auto}
+.ph-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:var(--blue);letter-spacing:1px;margin-bottom:14px}
+.ph-eyebrow::before{content:'';width:20px;height:2px;background:var(--blue);border-radius:2px}
+.ph-h1{font-size:clamp(28px,4vw,48px);font-weight:900;letter-spacing:-2px;margin-bottom:10px}
+.ph-sub{font-size:15px;color:var(--text3)}
+
+/* SERVICE NAV (quick jump) */
+.svc-nav{background:var(--bg);border-bottom:1px solid var(--border);padding:0 6%;position:sticky;top:70px;z-index:100}
+.svc-nav-inner{max-width:1160px;margin:0 auto;display:flex;gap:0;overflow-x:auto}
+.svc-nav-inner::-webkit-scrollbar{display:none}
+.svc-nav-item{padding:16px 20px;font-size:13px;font-weight:700;color:var(--text3);white-space:nowrap;cursor:pointer;border-bottom:2px solid transparent;transition:all .2s}
+.svc-nav-item:hover,.svc-nav-item.on{color:var(--blue);border-bottom-color:var(--blue)}
+
+/* SECTION */
+.svc-section{padding:80px 6%;border-bottom:1px solid var(--border)}
+.svc-section:last-of-type{border-bottom:none}
+.svc-section.alt{background:var(--bg)}
+.sec-inner{max-width:1160px;margin:0 auto}
+.svc-top{display:flex;align-items:flex-start;gap:60px;margin-bottom:48px;flex-wrap:wrap}
+.svc-info{flex:1;min-width:260px}
+.svc-badge{display:inline-flex;align-items:center;gap:10px;margin-bottom:20px}
+.svc-icon-big{width:64px;height:64px;background:var(--blue-light);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:32px}
+.svc-num-label{font-size:12px;font-weight:700;color:var(--blue);letter-spacing:1.5px}
+.svc-h2{font-size:clamp(24px,3vw,38px);font-weight:900;letter-spacing:-1.5px;margin-bottom:12px}
+.svc-desc-long{font-size:15px;color:var(--text2);line-height:1.9;margin-bottom:24px;max-width:480px}
+.svc-price-box{background:var(--blue-light);border-radius:12px;padding:20px 24px;display:inline-flex;flex-direction:column;gap:8px}
+.svc-price-row{display:flex;gap:16px;align-items:center}
+.svc-price-label{font-size:13px;color:var(--text2);font-weight:700;width:100px}
+.svc-price-val{font-size:14px;font-weight:900;color:var(--blue)}
+
+/* STEPS */
+.steps-title-small{font-size:16px;font-weight:900;margin-bottom:20px;letter-spacing:-.5px}
+.step-flow{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.step-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px 20px;position:relative;transition:border-color .2s,transform .2s}
+.step-card:hover{border-color:var(--blue);transform:translateY(-3px)}
+.step-badge{width:32px;height:32px;background:var(--blue);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;margin-bottom:12px}
+.step-heading{font-size:14px;font-weight:900;margin-bottom:8px;letter-spacing:-.3px}
+.step-body{font-size:12px;color:var(--text3);line-height:1.8;padding-left:14px}
+.step-body li{margin-bottom:2px}
+.step-note{margin-top:10px;font-size:11px;color:var(--blue);background:var(--blue-light);padding:6px 10px;border-radius:6px;line-height:1.6}
+
+/* PHOTO GUIDE (재사용: 코팅/제본 등 사진 안내) */
+.photo-guide{margin-bottom:28px}
+.photo-guide-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:16px;transition:border-color .2s}
+.photo-guide-card:hover{border-color:var(--blue)}
+.photo-guide-card img{width:100%;height:auto;border-radius:8px;margin-bottom:10px}
+.dual-photo-card{grid-column:span 2}
+.dual-photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+/* TIPS BOX */
+.tips-box{background:var(--white);border:1.5px solid var(--blue);border-radius:12px;padding:20px 24px;margin-top:28px}
+.tips-title{font-size:13px;font-weight:900;color:var(--blue);margin-bottom:10px}
+.tips-list{display:flex;flex-direction:column;gap:6px}
+.tips-item{font-size:13px;color:var(--text2);display:flex;gap:8px;align-items:flex-start}
+.tips-item::before{content:'✓';color:var(--blue);font-weight:900;flex-shrink:0;margin-top:1px}
+
+/* PRICE TABLE */
+.price-section{padding:80px 6%;background:var(--bg)}
+.price-inner{max-width:1160px;margin:0 auto}
+.sec-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:var(--blue);letter-spacing:1px;margin-bottom:14px}
+.sec-eyebrow::before{content:'';width:20px;height:2px;background:var(--blue);border-radius:2px}
+.sec-h2{font-size:clamp(24px,3vw,38px);font-weight:900;letter-spacing:-1.5px;margin-bottom:40px}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.price-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:28px 24px;transition:border-color .2s,box-shadow .2s}
+.price-card:hover{border-color:var(--blue);box-shadow:0 8px 32px rgba(27,138,196,.1)}
+.price-card-icon{font-size:28px;margin-bottom:12px}
+.price-card-title{font-size:16px;font-weight:900;margin-bottom:16px;letter-spacing:-.5px}
+.price-rows{display:flex;flex-direction:column;gap:8px}
+.price-r{display:flex;justify-content:space-between;align-items:center;font-size:13px;padding:6px 0;border-bottom:1px dashed var(--border)}
+.price-r:last-child{border-bottom:none}
+.price-r-label{color:var(--text2)}
+.price-r-val{font-weight:700;color:var(--blue)}
+
+/* FAQ */
+.faq-section{padding:80px 6%}
+.faq-inner{max-width:800px;margin:0 auto}
+.faq-list{display:flex;flex-direction:column;gap:12px}
+.faq-item{border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;cursor:pointer;font-size:15px;font-weight:700;background:var(--white);transition:background .15s}
+.faq-q:hover{background:var(--blue-light)}
+.faq-q .q-icon{color:var(--blue);font-size:18px;font-weight:900;flex-shrink:0;transition:transform .25s}
+.faq-a{display:none;padding:16px 24px 20px;font-size:14px;color:var(--text2);line-height:1.9;background:var(--bg);border-top:1px solid var(--border)}
+.faq-item.open .faq-a{display:block}
+.faq-item.open .q-icon{transform:rotate(45deg)}
+
+/* FOOTER */
+footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
+.ft-inner{max-width:1160px;margin:0 auto}
+.ft-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+.ft-brand-name{font-size:17px;font-weight:900;color:white;margin-bottom:12px}
+.ft-col p{font-size:13px;line-height:1.9}
+.ft-col h4{font-size:14px;font-weight:700;color:white;margin-bottom:14px}
+.ft-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.ft-col ul li a{font-size:13px;transition:color .2s}
+.ft-col ul li a:hover{color:white}
+.ft-bottom{border-top:1px solid #374151;padding-top:24px;display:flex;justify-content:space-between;font-size:12px;flex-wrap:wrap;gap:8px}
+
+.chat-fab{position:fixed;bottom:28px;right:28px;width:52px;height:52px;background:var(--blue);border:none;border-radius:50%;font-size:20px;cursor:pointer;box-shadow:0 4px 20px rgba(27,138,196,0.4);z-index:200;display:flex;align-items:center;justify-content:center;transition:transform .2s}
+.chat-fab:hover{transform:scale(1.1)}
+
+@media(max-width:900px){
+  .price-grid{grid-template-columns:1fr 1fr}
+  .step-flow{grid-template-columns:repeat(2,1fr)}
+  .svc-top{gap:32px}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+}
+@media(max-width:600px){
+  .price-grid{grid-template-columns:1fr}
+  .step-flow{grid-template-columns:1fr}
+  .dual-photo-card{grid-column:span 1}
+  .dual-photo-grid{grid-template-columns:1fr}
+}
+
+/* 보관용 안내 배너 */
+.arch-banner{margin-top:70px;background:#FFF6D6;border-bottom:2px solid #F2C94C;padding:14px 6%}
+.arch-banner-in{max-width:1160px;margin:0 auto;display:flex;gap:14px;align-items:center;flex-wrap:wrap;font-size:14px;color:#6B4E00;line-height:1.6}
+.arch-banner b{font-weight:900;color:#4A3500}
+.arch-banner a{background:#fff;border:1.5px solid #E0B43A;border-radius:50px;padding:5px 14px;font-size:12.5px;font-weight:700;color:#6B4E00;white-space:nowrap}
+.arch-banner a:hover{background:#FFF0B8}
+.page-header{margin-top:0 !important}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo"><a href="index.html" class="nav-logo-name">🦝 프린트샵미니</a></div>
+  <ul class="nav-links">
+    <li><a href="services.html" class="active">서비스</a></li>
+    <li><a href="guide.html">사용방법</a></li>
+    <li><a href="about.html">소개</a></li>
+    <li><a href="branches.html">지점찾기</a></li>
+    <li><a href="community.html">커뮤니티</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="branches.html" class="nav-cta">지점 찾기</a>
+    <div class="nav-raccoon"><img src="raccoon1.png" alt="라쿤"></div>
+  </div>
+  <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- 보관용 안내 -->
+<div class="arch-banner"><div class="arch-banner-in">
+  <span>📁 <b>기존 자료 보관용</b> — 개편 전 서비스 페이지 원본입니다. 비교용으로만 보세요(수정 X).</span>
+  <a href="archive.html">보관 목록</a>
+  <a href="old-guide.html">기존 사용방법 페이지</a>
+  <a href="services.html">새 서비스 페이지</a>
+</div></div>
+
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="ph-inner">
+    <div class="ph-eyebrow">SERVICES</div>
+    <h1 class="ph-h1">서비스 안내</h1>
+    <p class="ph-sub">6가지 셀프 서비스 — 영상과 사진 안내로 누구나 처음부터 혼자서 OK!</p>
+  </div>
+</div>
+
+<!-- 서비스 빠른 이동 -->
+<div class="svc-nav">
+  <div class="svc-nav-inner">
+    <div class="svc-nav-item on" onclick="goSection('print',this)">🖨️ 인쇄</div>
+    <div class="svc-nav-item" onclick="goSection('copy',this)">📋 복사</div>
+    <div class="svc-nav-item" onclick="goSection('scan',this)">📄 스캔</div>
+    <div class="svc-nav-item" onclick="goSection('fax',this)">📠 팩스</div>
+    <div class="svc-nav-item" onclick="goSection('coat',this)">✨ 코팅</div>
+    <div class="svc-nav-item" onclick="goSection('bind',this)">📚 제본</div>
+    <div class="svc-nav-item" onclick="goSection('price',this)">💰 요금표</div>
+    <div class="svc-nav-item" onclick="goSection('faq',this)">❓ FAQ</div>
+  </div>
+</div>
+
+<!-- 01 인쇄 -->
+<div class="svc-section" id="print">
+  <div class="sec-inner">
+    <div class="svc-top">
+      <div class="svc-info">
+        <div class="svc-badge">
+          <div class="svc-icon-big">🖨️</div>
+        </div>
+        <div class="svc-num-label">SERVICE 01</div>
+        <h2 class="svc-h2">인쇄</h2>
+        <p class="svc-desc-long">PC에서 파일을 전송하고 복합기에서 PIN번호로 찾아 출력하는 셀프 인쇄 서비스입니다. 흑백·컬러·증명서 출력이 모두 가능하며, 결제는 카드(IC, 삼성페이, 애플페이)로 하실 수 있습니다.</p>
+        <div class="svc-price-box">
+          <div class="svc-price-row"><span class="svc-price-label">흑백 A4</span><span class="svc-price-val">70원/면</span></div>
+          <div class="svc-price-row"><span class="svc-price-label">컬러 A4</span><span class="svc-price-val">250원/면</span></div>
+          <div class="svc-price-row"><span class="svc-price-label">흑백 A3</span><span class="svc-price-val">140원/면</span></div>
+          <div class="svc-price-row"><span class="svc-price-label">컬러 A3</span><span class="svc-price-val">500원/면</span></div>
+        </div>
+      </div>
+      <div style="flex:2;min-width:280px">
+        <div class="steps-title-small">이용방법 6단계</div>
+        <div class="step-flow">
+          <div class="step-card"><div class="step-badge">1</div><div class="step-heading">프린터 선택</div><ul class="step-body"><li>PC에서 파일 OPEN → 프린터 선택</li><li>흑백 / 컬러 / 증명서전용(PIN9999) 선택</li></ul></div>
+          <div class="step-card"><div class="step-badge">2</div><div class="step-heading">PIN번호 입력</div><ul class="step-body"><li>핸드폰 뒷 4자리 번호 입력</li><li>증명서전용은 자동으로 9999 입력</li></ul></div>
+          <div class="step-card"><div class="step-badge">3</div><div class="step-heading">복합기로 이동</div><ul class="step-body"><li>매장 내 복합기로 이동</li><li>인쇄(PRINT) 메뉴 선택</li><li>절전모드라면 터치하여 해제</li></ul></div>
+          <div class="step-card"><div class="step-badge">4</div><div class="step-heading">PIN번호 검색</div><ul class="step-body"><li>PC에서 입력한 PIN 입력 후 OK</li><li>목록에서 파일 선택 → 시작 터치</li></ul><div class="step-note">용지 사이즈가 Letter면 PC에서 A4로 재설정 필요</div></div>
+          <div class="step-card"><div class="step-badge">5</div><div class="step-heading">과금정보 확인</div><ul class="step-body"><li>총 가격·페이지수·컬러 여부 확인</li><li>내용 맞으면 [확인] 터치</li></ul></div>
+          <div class="step-card"><div class="step-badge">6</div><div class="step-heading">카드 결제</div><ul class="step-body"><li>단말기 음성 나오면 IC카드 꽂기</li><li>삼성페이·애플페이: 와이파이 표시 면에 터치</li></ul><div class="step-note">삼성페이·애플페이는 현대카드 마스터만 가능</div></div>
+        </div>
+        <div class="tips-box">
+          <div class="tips-title">💡 인쇄 꿀팁</div>
+          <div class="tips-list">
+            <div class="tips-item">용지 사이즈를 반드시 A4로 설정하세요 (Letter 사이즈 인식 불가)</div>
+            <div class="tips-item">전송 후 복합기에서 30분 내 출력하지 않으면 파일이 자동 삭제됩니다</div>
+            <div class="tips-item">PDF 파일로 저장 후 전송하면 폰트 깨짐 없이 출력됩니다</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 인쇄 화면 사진 (사용방법 순서대로 배치) -->
+    <div class="photo-guide">
+      <div class="steps-title-small">사진으로 보는 인쇄 순서</div>
+      <div class="step-flow">
+        <div class="photo-guide-card">
+          <div class="step-badge">1</div>
+          <img src="images/print/print-select.png" alt="PC에서 파일을 열고 흑백/컬러/증명서전용 선택하는 화면">
+          <div class="step-heading">프린터 선택</div>
+        </div>
+        <div class="photo-guide-card">
+          <div class="step-badge">2</div>
+          <img src="images/print/print-pin.png" alt="개인 식별 번호(PIN) 입력 화면">
+          <div class="step-heading">PIN번호 입력</div>
+        </div>
+        <div class="photo-guide-card dual-photo-card">
+          <div class="step-badge">3</div>
+          <div class="dual-photo-grid">
+            <img src="images/print/print-machine1.png" alt="복합기 메인 화면에서 인쇄 메뉴 선택" style="margin-bottom:0">
+            <img src="images/print/print-machine2.png" alt="인쇄할 파일 위치로 PC 선택하는 화면" style="margin-bottom:0">
+          </div>
+          <div class="step-heading" style="margin-top:10px">복합기에서 인쇄 메뉴 → PC 선택</div>
+        </div>
+        <div class="photo-guide-card">
+          <div class="step-badge">4</div>
+          <img src="images/print/print-serch.png" alt="PIN번호 입력 후 인쇄 작업 목록에서 파일 선택하는 화면">
+          <div class="step-heading">PIN번호 검색 후 OK터치 → 목록터치 → 시작터치</div>
+        </div>
+        <div class="photo-guide-card">
+          <div class="step-badge">5</div>
+          <img src="images/print/print-price.png" alt="과금정보(총 가격, 페이지 수) 확인 화면">
+          <div class="step-heading">과금정보 확인</div>
+        </div>
+        <div class="photo-guide-card">
+          <div class="step-badge">6</div>
+          <img src="images/print/print-pay.png" alt="IC카드 또는 삼성페이·애플페이로 결제하는 모습">
+          <div class="step-heading">카드 결제</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 02 복사 -->
+<div class="svc-section alt" id="copy">
+  <div class="sec-inner">
+    <div class="svc-top">
+      <div class="svc-info">
+        <div class="svc-badge"><div class="svc-icon-big">📋</div></div>
+        <div class="svc-num-label">SERVICE 02</div>
+        <h2 class="svc-h2">복사</h2>
+        <p class="svc-desc-long">원본을 스캔부에 올리고 옵션을 설정한 뒤 카드로 결제하는 셀프 복사 서비스입니다. 흑백·컬러, A4·A3, 단면·양면, 확대·축소 등 다양한 옵션을 직접 설정하실 수 있습니다.</p>
+        <div class="svc-price-box">
+          <div class="svc-price-row"><span class="svc-price-label">흑백 A4</span><span class="svc-price-val">70원/면</span></div>
+          <div class="svc-price-row"><span class="svc-price-label">컬러 A4</span><span class="svc-price-val">250원/면</span></div>
+          <div class="svc-price-row"><span class="svc-price-label">흑백 A3</span><span class="svc-price-val">140원/면</span></div>
+          <div class="svc-price-row"><span class="svc-price-label">컬러 A3</span><span class="svc-price-val">500원/면</span></div>
+        </div>
+      </div>
+      <div style="flex:2;min-width:280px">
+        <div class="steps-title-small">이용방법 6단계</div>
+        <div class="step-flow">
+          <div class="step-card"><div class="step-badge">1</div><div class="step-heading">원본 올리기</div><ul class="step-body"><li>원본 문서를 유리판(스캔부)에 올리기</li><li>원고대(ADF)에 여러 장 한번에 투입 가능</li></ul></div>
+          <div class="step-card"><div class="step-badge">2</div><div class="step-heading">복사 메뉴 선택</div><ul class="step-body"><li>복합기 화면에서 복사(COPY) 메뉴 선택</li></ul></div>
+          <div class="step-card"><div class="step-badge">3</div><div class="step-heading">옵션 설정</div><ul class="step-body"><li>흑백/컬러 선택</li><li>용지 사이즈(A4/A3) 선택</li><li>단면/양면, 부수, 배율 설정</li></ul></div>
+          <div class="step-card"><div class="step-badge">4</div><div class="step-heading">금액 확인</div><ul class="step-body"><li>설정한 옵션 기준 금액 확인</li><li>내용 맞으면 [시작] 터치</li></ul></div>
+          <div class="step-card"><div class="step-badge">5</div><div class="step-heading">카드 결제</div><ul class="step-body"><li>단말기 음성 나오면 카드 결제</li></ul></div>
+          <div class="step-card"><div class="step-badge">6</div><div class="step-heading">출력 완료</div><ul class="step-body"><li>출력 트레이에서 복사본 수령</li><li>원본 잊지 말고 가져가세요!</li></ul></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 03 스캔 -->
+<div class="svc-section" id="scan">
+  <div class="sec-inner">
+    <div class="svc-top">
+      <div class="svc-info">
+        <div class="svc-badge"><div class="svc-icon-big">📄</div></div>
+        <div class="svc-num-label">SERVICE 03</div>
+        <h2 class="svc-h2">스캔</h2>
+        <p class="svc-desc-long">원본을 스캔부에 올리고 결제 후 PC 폴더에서 파일을 확인하는 셀프 스캔 서비스입니다. 스캔한 파일은 매장 내 PC에서 USB·이메일로 저장하거나 전송하실 수 있습니다.</p>
+        <div class="svc-price-box">
+          <div class="svc-price-row"><span class="svc-price-label">스캔 A4</span><span class="svc-price-val">100원/면</span></div>
+          <div class="svc-price-row"><span class="svc-price-label">스캔 A3</span><span class="svc-price-val">100원/면</span></div>
+        </div>
+      </div>
+      <div style="flex:2;min-width:280px">
+        <div class="steps-title-small">이용방법 5단계</div>
+        <div class="step-flow">
+          <div class="step-card"><div class="step-badge">1</div><div class="step-heading">원본 올리기</div><ul class="step-body"><li>원본 문서를 유리판 또는 ADF에 올리기</li></ul></div>
+          <div class="step-card"><div class="step-badge">2</div><div class="step-heading">스캔 메뉴 선택</div><ul class="step-body"><li>복합기 화면에서 스캔(SCAN) 메뉴 선택</li><li>해상도, 파일형식(PDF/JPG) 선택</li></ul></div>
+          <div class="step-card"><div class="step-badge">3</div><div class="step-heading">금액 확인</div><ul class="step-body"><li>스캔 매수 기준 금액 확인</li></ul></div>
+          <div class="step-card"><div class="step-badge">4</div><div class="step-heading">카드 결제</div><ul class="step-body"><li>결제 후 스캔 시작</li></ul></div>
+          <div class="step-card"><div class="step-badge">5</div><div class="step-heading">파일 확인</div><ul class="step-body"><li>PC 스캔 폴더에서 파일 확인</li><li>USB로 복사 또는 이메일 전송</li></ul><div class="step-note">스캔 파일은 30분 후 자동 삭제됩니다</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 04 팩스 -->
+<div class="svc-section alt" id="fax">
+  <div class="sec-inner">
+    <div class="svc-top">
+      <div class="svc-info">
+        <div class="svc-badge"><div class="svc-icon-big">📠</div></div>
+        <div class="svc-num-label">SERVICE 04</div>
+        <h2 class="svc-h2">팩스</h2>
+        <p class="svc-desc-long">원본을 스캔 후 팩스번호를 입력하고 결제하면 발송되며, QR코드로 발송 결과를 확인하실 수 있는 셀프 팩스 서비스입니다.</p>
+        <div class="svc-price-box">
+          <div class="svc-price-row"><span class="svc-price-label">국내 팩스</span><span class="svc-price-val">500원/면</span></div>
+          <div class="svc-price-row"><span class="svc-price-label">국제 팩스</span><span class="svc-price-val" style="color:#EF4444">국제팩스 안됨</span></div>
+        </div>
+        <div style="margin-top:12px;background:#FFF3E0;border:1.5px solid #F97316;border-radius:10px;padding:12px 16px;font-size:13px;color:#92400E;line-height:1.8">
+          📤 <strong>발신(보내기)만 가능</strong>합니다<br>
+          📵 수신(받기)은 불가합니다
+        </div>
+      </div>
+      <div style="flex:2;min-width:280px">
+        <div class="steps-title-small">이용방법 6단계</div>
+        <div class="step-flow">
+          <div class="step-card"><div class="step-badge">1</div><div class="step-heading">원본 올리기</div><ul class="step-body"><li>보낼 문서를 ADF에 넣기</li></ul></div>
+          <div class="step-card"><div class="step-badge">2</div><div class="step-heading">팩스 메뉴 선택</div><ul class="step-body"><li>복합기 화면에서 팩스(FAX) 메뉴 선택</li></ul></div>
+          <div class="step-card"><div class="step-badge">3</div><div class="step-heading">팩스번호 입력</div><ul class="step-body"><li>수신처 팩스번호 입력</li><li>지역번호 포함하여 입력</li></ul></div>
+          <div class="step-card"><div class="step-badge">4</div><div class="step-heading">옵션 설정</div><ul class="step-body"><li>해상도(표준/정밀) 선택</li></ul></div>
+          <div class="step-card"><div class="step-badge">5</div><div class="step-heading">금액 확인</div><ul class="step-body"><li>매수 기준 금액 확인 후 [시작]</li></ul></div>
+          <div class="step-card"><div class="step-badge">6</div><div class="step-heading">결제 · 발송 확인</div><ul class="step-body"><li>카드 결제 후 발송 완료</li><li>QR코드 스캔으로 발송 결과 확인</li></ul></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 05 코팅 -->
+<div class="svc-section" id="coat">
+  <div class="sec-inner">
+    <div class="svc-top">
+      <div class="svc-info">
+        <div class="svc-badge"><div class="svc-icon-big">✨</div></div>
+        <div class="svc-num-label">SERVICE 05</div>
+        <h2 class="svc-h2">코팅</h2>
+        <p class="svc-desc-long">결제 먼저 하고 전원을 켠 뒤 예열이 완료되면 코팅지를 투입하는 셀프 코팅 서비스입니다. 사용 후 반드시 전원을 꺼주세요.</p>
+        <div class="svc-price-box">
+          <div class="svc-price-row"><span class="svc-price-label">A4 코팅</span><span class="svc-price-val">400원/장</span></div>
+          <div class="svc-price-row"><span class="svc-price-label">A3 코팅</span><span class="svc-price-val">800원/장</span></div>
+        </div>
+      </div>
+      <div style="flex:2;min-width:280px">
+        <div class="steps-title-small">이용방법 5단계</div>
+        <div class="step-flow">
+          <div class="step-card"><div class="step-badge">1</div><div class="step-heading">결제 먼저!</div><ul class="step-body"><li>기계 옆 키오스크에서 매수 선택 후 카드 결제</li></ul><div class="step-note">⚠️ 반드시 결제를 먼저 하세요</div></div>
+          <div class="step-card"><div class="step-badge">2</div><div class="step-heading">전원 켜기 · 예열</div><ul class="step-body"><li>전원 버튼을 누르고 코팅 버튼을 짧게 2번 누르기</li><li>불이 깜빡이다가 3~5분 후 "삐" 소리와 함께 불이 켜지면 예열 완료</li></ul><div class="step-note">코팅 버튼을 3번 누르면 예열까지 5분 이상 걸려요</div></div>
+          <div class="step-card"><div class="step-badge">3</div><div class="step-heading">코팅지에 인쇄물 넣기</div><ul class="step-body"><li>코팅지(코팅 파우치) 안에 인쇄물을 가지런히 넣기</li></ul></div>
+          <div class="step-card"><div class="step-badge">4</div><div class="step-heading">코팅기에 투입</div><ul class="step-body"><li>코팅지의 막힌 부분부터 투입구에 넣기</li><li>수평으로 반듯하게, 구겨지지 않게 넣기</li></ul></div>
+          <div class="step-card"><div class="step-badge">5</div><div class="step-heading">전원 OFF</div><ul class="step-body"><li>사용 완료 후 반드시 전원 끄기</li></ul><div class="step-note">전원 미종료 시 다음 이용자 피해 발생</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 코팅기 사용 사진 (사용방법 순서대로 배치) -->
+    <div class="photo-guide">
+      <div class="steps-title-small">사진으로 보는 코팅 순서</div>
+      <div class="step-flow">
+        <div class="photo-guide-card">
+          <div class="step-badge">1</div>
+          <img src="images/coat/coat-power.png" alt="전원 버튼을 누르는 모습">
+          <div class="step-heading">전원 버튼 누르기</div>
+        </div>
+        <div class="photo-guide-card">
+          <div class="step-badge">2</div>
+          <img src="images/coat/coat-button.png" alt="코팅 버튼을 짧게 2번 누르는 모습">
+          <div class="step-heading">코팅 버튼 짧게 2번 누르기</div>
+        </div>
+        <div class="photo-guide-card">
+          <div class="step-badge">3</div>
+          <img src="images/coat/coat-fill.png" alt="코팅지 안에 인쇄물을 넣는 모습">
+          <div class="step-heading">코팅지 안에 인쇄물 넣기</div>
+        </div>
+        <div class="photo-guide-card">
+          <div class="step-badge">4</div>
+          <img src="images/coat/coat-insert.png" alt="코팅지의 막힌 부분부터 투입구에 수평으로 넣는 모습">
+          <div class="step-heading">막힌 부분부터 수평으로 투입</div>
+        </div>
+        <div class="photo-guide-card">
+          <div class="step-badge">5</div>
+          <img src="images/coat/coat-watch.png" alt="코팅지가 뒷면으로 나올 때 걸리지 않는지 지켜보는 모습">
+          <div class="step-heading">나오는 코팅지 걸리지 않는지 확인</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 06 제본 -->
+<div class="svc-section alt" id="bind">
+  <div class="sec-inner">
+    <div class="svc-top">
+      <div class="svc-info">
+        <div class="svc-badge"><div class="svc-icon-big">📚</div></div>
+        <div class="svc-num-label">SERVICE 06</div>
+        <h2 class="svc-h2">제본</h2>
+        <p class="svc-desc-long">전원을 켜고 예열 후 제본용지를 투입해 열제본을 완료하고 10분간 냉각하는 셀프 제본 서비스입니다. 논문, 보고서, 계약서 등에 활용하실 수 있습니다.</p>
+        <div class="svc-price-box">
+          <div class="svc-price-row"><span class="svc-price-label">열제본표지</span><span class="svc-price-val">1,500원/1개</span></div>
+        </div>
+      </div>
+      <div style="flex:2;min-width:280px">
+        <div class="steps-title-small">이용방법 6단계</div>
+        <div class="step-flow">
+          <div class="step-card"><div class="step-badge">1</div><div class="step-heading">전원 켜기 · 예열</div><ul class="step-body"><li>전원 버튼을 누른 후 온열 버튼 1번 누르기</li><li>불이 깜빡이다가 3분 후 알람과 함께 불이 멈추면 예열 완료</li></ul></div>
+          <div class="step-card"><div class="step-badge">2</div><div class="step-heading">투입구 개방</div><ul class="step-body"><li>기계 뒷면의 냉각 트레이를 당겨서 투입구 개방</li></ul></div>
+          <div class="step-card"><div class="step-badge">3</div><div class="step-heading">용지 삽입</div><ul class="step-body"><li>열제본 전용 표지 안에 인쇄물 넣기</li></ul></div>
+          <div class="step-card"><div class="step-badge">4</div><div class="step-heading">기계에 투입</div><ul class="step-body"><li>표지의 막힌 부분부터 투입구에 넣기</li><li>더 이상 안 들어갈 때까지 깊숙이 밀어넣기</li></ul></div>
+          <div class="step-card"><div class="step-badge">5</div><div class="step-heading">타이머 작동</div><ul class="step-body"><li>타이머 버튼 누르기</li><li>불이 깜빡이다가 1분 후 알람 소리가 나면 꺼내기</li></ul></div>
+          <div class="step-card"><div class="step-badge">6</div><div class="step-heading">10분 냉각 후 완료</div><ul class="step-body"><li>꺼낸 직후 절대 열지 말 것</li><li>평평한 곳에 놓고 10분간 냉각 후 펼치기</li></ul><div class="step-note">냉각 필수! 본드가 굳기 전에 열면 인쇄물이 떨어집니다</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 제본기 & 표지 안내 그림 (사용방법 순서대로 배치) -->
+    <div class="photo-guide">
+      <div class="steps-title-small">사진으로 보는 제본 순서</div>
+      <div class="step-flow">
+        <div class="photo-guide-card">
+          <div class="step-badge">1</div>
+          <img src="images/bind/safa-buttons.png" alt="전원 버튼을 누른 후 온열 버튼을 누르는 모습">
+          <div class="step-heading">전원 · 온열 버튼 누르기</div>
+        </div>
+        <div class="photo-guide-card">
+          <div class="step-badge">2</div>
+          <img src="images/bind/cover-structure.png" alt="열제본표지 단면 구조 — PET 투명 비닐커버, 종이커버, 표지규격(제본 본드 부분)">
+          <div class="step-heading">표지 안쪽 본드에 각 맞춰 넣기</div>
+          <p style="font-size:12px;color:var(--text3);line-height:1.6;margin-top:6px">인쇄물을 표지 안에 넣을 때 안쪽 본드(제본선)에 가지런히 잘 닿도록 각을 맞춰 주세요.</p>
+        </div>
+        <div class="photo-guide-card">
+          <div class="step-badge">3</div>
+          <img src="images/bind/cover-closed.png" alt="열제본표지 앞면 비닐커버 · 뒷면 종이커버">
+          <div class="step-heading">앞면(비닐)·뒷면(종이) 구분</div>
+        </div>
+        <div class="photo-guide-card">
+          <div class="step-badge">4</div>
+          <img src="images/bind/safa-insert.png" alt="SAFA 제본기 투입구에 제본표지를 세워서 넣는 모습">
+          <div class="step-heading">막힌 부분부터 세워서 투입</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 요금표 -->
+<div class="price-section" id="price">
+  <div class="price-inner">
+    <div class="sec-eyebrow">PRICE</div>
+    <h2 class="sec-h2">서비스 요금표</h2>
+    <div class="price-grid" id="priceGrid" style="grid-template-columns:repeat(2,1fr)">
+      <div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text3)">불러오는 중...</div>
+    </div>
+    <p style="margin-top:20px;font-size:13px;color:var(--text3)">※ 요금은 지점별로 상이할 수 있으며, 사전 예고 없이 변경될 수 있습니다.</p>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="faq-section" id="faq">
+  <div class="faq-inner">
+    <div class="sec-eyebrow">FAQ</div>
+    <h2 class="sec-h2">자주 묻는 질문</h2>
+    <div class="faq-list" id="faqList">
+      <div style="text-align:center;padding:40px;color:var(--text3)">불러오는 중...</div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-inner">
+    <div class="ft-grid">
+      <div class="ft-col"><div class="ft-brand-name">🦝 프린트샵미니</div><p>24시간 365일 운영되는<br>무인 셀프 프린트 전문점입니다.</p></div>
+      <div class="ft-col"><h4>서비스</h4><ul><li><a href="services.html">인쇄 · 복사 · 스캔</a></li><li><a href="services.html">팩스 · 코팅 · 제본</a></li><li><a href="branches.html">지점 찾기</a></li><li><a href="community.html">커뮤니티</a></li></ul></div>
+      <div class="ft-col"><h4>고객센터</h4><ul><li><a href="#" onclick="openEmailPopup();return false;">이메일 문의</a></li><li><a href="#">매장운영: 24시간 연중무휴</a></li><li><a href="#">운영사: (주)굿러닝파트너 120-88-22460</a></li></ul></div>
+    </div>
+    <div class="ft-bottom"><p>© 2025 프린트샵미니. All rights reserved.</p><p>개인정보처리방침 · 이용약관</p></div>
+  </div>
+</footer>
+
+<script>
+var SB_URL='https://wbcfciiuiootbdezxfwy.supabase.co';
+var SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndiY2ZjaWl1aW9vdGJkZXp4Znd5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc1MjkyMTQsImV4cCI6MjA5MzEwNTIxNH0.UV4ukUXuAYKAqq85B4FTHO2BtIOqPaBHgAJN5lqyU5s';
+var SB_HDR={'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY};
+function escH(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+async function loadPriceItems(){
+  try{
+    var r=await fetch(SB_URL+'/rest/v1/price_items?order=category,sort_order',{headers:SB_HDR});
+    var catRes=await fetch(SB_URL+'/rest/v1/price_categories?order=sort_order',{headers:SB_HDR});
+    var categories=await catRes.json();
+    var data=await r.json();
+    var grid=document.getElementById('priceGrid');
+    if(!data||!data.length){grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text3)">요금 정보가 없습니다.</div>';return;}
+    var cats={};
+    data.forEach(function(item){
+      if(!cats[item.category])cats[item.category]={icon:item.icon,items:[]};
+      cats[item.category].items.push(item);
+    });
+    var catOrder=categories.map(function(c){return c.name;}).filter(function(n){return cats[n];});
+    Object.keys(cats).forEach(function(n){if(catOrder.indexOf(n)===-1)catOrder.push(n);});
+    grid.innerHTML=catOrder.map(function(cat){
+      var c=cats[cat];
+      return '<div class="price-card">'+
+        '<div class="price-card-icon">'+escH(c.icon||'')+'</div>'+
+        '<div class="price-card-title">'+escH(cat)+'</div>'+
+        '<div class="price-rows">'+
+          c.items.map(function(item){
+            return '<div class="price-r"><span class="price-r-label">'+escH(item.label)+'</span><span class="price-r-val">'+escH(item.value)+'</span></div>';
+          }).join('')+
+        '</div></div>';
+    }).join('');
+  }catch(e){
+    document.getElementById('priceGrid').innerHTML='<div style="grid-column:1/-1;text-align:center;padding:40px;color:#EF4444">요금 정보를 불러오지 못했습니다.</div>';
+  }
+}
+
+async function loadFaqs(){
+  try{
+    var r=await fetch(SB_URL+'/rest/v1/faqs?order=sort_order',{headers:SB_HDR});
+    var data=await r.json();
+    var list=document.getElementById('faqList');
+    if(!data||!data.length){list.innerHTML='<div style="text-align:center;padding:40px;color:var(--text3)">FAQ가 없습니다.</div>';return;}
+    list.innerHTML=data.map(function(f){
+      return '<div class="faq-item" onclick="toggleFaq(this)">'+
+        '<div class="faq-q">'+escH(f.question)+' <span class="q-icon">+</span></div>'+
+        '<div class="faq-a">'+escH(f.answer).replace(/\n/g,'<br>')+'</div>'+
+      '</div>';
+    }).join('');
+  }catch(e){
+    document.getElementById('faqList').innerHTML='<div style="text-align:center;padding:40px;color:#EF4444">FAQ를 불러오지 못했습니다.</div>';
+  }
+}
+
+loadPriceItems();
+loadFaqs();
+loadServiceGuides();
+
+async function loadServiceGuides(){
+  try{
+    var r=await fetch(SB_URL+'/rest/v1/service_guides?order=service_key,sort_order',{headers:SB_HDR});
+    var data=await r.json();
+    if(!data||!data.length)return;
+    var grouped={};
+    data.forEach(function(f){
+      if(!grouped[f.service_key])grouped[f.service_key]=[];
+      grouped[f.service_key].push(f);
+    });
+    Object.keys(grouped).forEach(function(key){
+      var section=document.getElementById(key);
+      if(!section)return;
+      var h2=section.querySelector('.svc-h2');
+      if(!h2)return;
+      var cols=grouped[key].length===1?'1fr':'repeat(2,1fr)';
+      var btns='<div style="display:grid;grid-template-columns:'+cols+';gap:8px;margin-top:14px;margin-bottom:4px">'+
+        grouped[key].map(function(f){
+          var icon=f.file_name.match(/\.pdf$/i)?'📄':f.file_name.match(/\.(mp4|mov|webm|avi)$/i)?'🎬':'🖼️';
+          return '<button onclick="openGuideModal(\''+escH(f.file_url)+'\',\''+escH(f.file_name)+'\')" '+
+            'style="background:var(--blue-light);color:var(--blue);border:1.5px solid var(--blue);border-radius:10px;padding:9px 14px;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:7px;font-family:\'Noto Sans KR\',sans-serif;min-width:0;overflow:hidden;text-align:left">'+
+            '<span style="flex-shrink:0">'+icon+'</span>'+
+            '<span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+escH(f.file_name)+'</span></button>';
+        }).join('')+
+      '</div>';
+      h2.insertAdjacentHTML('afterend',btns);
+    });
+  }catch(e){}
+}
+
+function openGuideModal(url,name){
+  document.getElementById('guideModalTitle').textContent=name;
+  var body=document.getElementById('guideModalBody');
+  if(name.match(/\.pdf$/i)){
+    body.innerHTML='<iframe src="'+url+'" style="width:100%;height:100%;border:none;display:block"></iframe>';
+  }else if(name.match(/\.(jpg|jpeg|png|gif|webp)$/i)){
+    body.innerHTML='<div style="padding:20px;text-align:center;overflow:auto;height:100%;box-sizing:border-box"><img src="'+url+'" style="max-width:100%;height:auto;border-radius:8px"></div>';
+  }else if(name.match(/\.(mp4|mov|webm|avi)$/i)){
+    body.innerHTML='<video src="'+url+'" controls style="width:100%;height:100%;background:#000;display:block"></video>';
+  }else{
+    body.innerHTML='<div style="padding:40px;text-align:center"><a href="'+url+'" target="_blank" style="color:var(--blue);font-weight:700">파일 열기 →</a></div>';
+  }
+  var box=document.getElementById('guideModalBox');
+  var w=Math.min(window.innerWidth*0.92,900);
+  var h=Math.round(window.innerHeight*0.88);
+  box.style.width=w+'px';
+  box.style.height=h+'px';
+  box.style.left=Math.round((window.innerWidth-w)/2)+'px';
+  box.style.top=Math.round((window.innerHeight-h)/2)+'px';
+  box.style.display='flex';
+  document.getElementById('guideModalOverlay').style.display='block';
+}
+function closeGuideModal(){
+  document.getElementById('guideModalBox').style.display='none';
+  document.getElementById('guideModalOverlay').style.display='none';
+  document.getElementById('guideModalBody').innerHTML='';
+}
+
+(function(){
+  var box,hdr,drag=null;
+  function init(){
+    box=document.getElementById('guideModalBox');
+    hdr=document.getElementById('guideModalHeader');
+    hdr.addEventListener('mousedown',onDown);
+    hdr.addEventListener('touchstart',onTouchDown,{passive:false});
+    document.addEventListener('mousemove',onMove);
+    document.addEventListener('mouseup',onUp);
+    document.addEventListener('touchmove',onTouchMove,{passive:false});
+    document.addEventListener('touchend',onUp);
+  }
+  function onDown(e){
+    if(e.target.tagName==='BUTTON')return;
+    var r=box.getBoundingClientRect();
+    drag={sx:e.clientX,sy:e.clientY,sl:r.left,st:r.top};
+    e.preventDefault();
+  }
+  function onTouchDown(e){
+    if(e.target.tagName==='BUTTON')return;
+    var t=e.touches[0],r=box.getBoundingClientRect();
+    drag={sx:t.clientX,sy:t.clientY,sl:r.left,st:r.top};
+    e.preventDefault();
+  }
+  function onMove(e){
+    if(!drag)return;
+    box.style.left=(drag.sl+e.clientX-drag.sx)+'px';
+    box.style.top=(drag.st+e.clientY-drag.sy)+'px';
+  }
+  function onTouchMove(e){
+    if(!drag)return;
+    var t=e.touches[0];
+    box.style.left=(drag.sl+t.clientX-drag.sx)+'px';
+    box.style.top=(drag.st+t.clientY-drag.sy)+'px';
+    e.preventDefault();
+  }
+  function onUp(){drag=null;}
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+})();
+
+function toggleFaq(item){item.classList.toggle('open')}
+function goSection(id,el){
+  var target=document.getElementById(id);
+  if(!target)return;
+  var offset=target.getBoundingClientRect().top+window.pageYOffset-140;
+  window.scrollTo({top:offset,behavior:'smooth'});
+  document.querySelectorAll('.svc-nav-item').forEach(function(i){i.classList.remove('on')});
+  el.classList.add('on');
+}
+function toggleMenu(){
+  var m=document.querySelector('.nav-links');
+  if(m.style.display==='flex'){m.style.display='';return;}
+  Object.assign(m.style,{display:'flex',flexDirection:'column',position:'fixed',top:'70px',left:'0',right:'0',background:'white',padding:'16px 6%',borderBottom:'1px solid #E5E7EB',zIndex:'299',gap:'2px'});
+}
+</script>
+
+<!-- 이용안내 파일 뷰어 팝업 -->
+<div id="guideModalOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:9997" onclick="closeGuideModal()"></div>
+<div id="guideModalBox" style="display:none;position:fixed;z-index:9998;background:white;border-radius:16px;flex-direction:column;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.3);resize:both;min-width:320px;min-height:200px">
+  <div id="guideModalHeader" style="padding:13px 20px;border-bottom:1px solid #E5E7EB;display:flex;justify-content:space-between;align-items:center;flex-shrink:0;cursor:move;user-select:none;-webkit-user-select:none">
+    <div style="display:flex;align-items:center;gap:10px;overflow:hidden">
+      <span style="color:#9CA3AF;font-size:15px;flex-shrink:0">⠿⠿</span>
+      <span id="guideModalTitle" style="font-weight:900;font-size:15px;color:#111827;font-family:'Noto Sans KR',sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap"></span>
+    </div>
+    <button onclick="closeGuideModal()" style="background:none;border:none;font-size:26px;cursor:pointer;color:#6B7280;line-height:1;flex-shrink:0;margin-left:12px">×</button>
+  </div>
+  <div id="guideModalBody" style="flex:1;overflow:auto;min-height:0"></div>
+</div>
+
+<!-- 이메일 문의 팝업 -->
+<div id="emailPopup" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:9999;align-items:center;justify-content:center;">
+  <div style="background:white;border-radius:16px;padding:36px 32px;width:90%;max-width:460px;box-shadow:0 20px 60px rgba(0,0,0,0.2);position:relative;">
+    <button onclick="closeEmailPopup()" style="position:absolute;top:16px;right:16px;background:none;border:none;font-size:20px;cursor:pointer;color:#6B7280;">✕</button>
+    <h3 style="font-size:18px;font-weight:900;color:#111827;margin-bottom:6px;">이메일 문의</h3>
+    <p style="font-size:13px;color:#6B7280;margin-bottom:24px;">아래 양식을 작성하시면 이메일로 연결됩니다.</p>
+    <div style="margin-bottom:14px;">
+      <label style="font-size:12px;font-weight:700;color:#374151;display:block;margin-bottom:6px;">이름</label>
+      <input id="emailName" type="text" placeholder="이름을 입력해 주세요" style="width:100%;padding:10px 14px;border:1.5px solid #E5E7EB;border-radius:8px;font-size:14px;box-sizing:border-box;font-family:'Noto Sans KR',sans-serif;outline:none;" onfocus="this.style.borderColor='#1B8AC4'" onblur="this.style.borderColor='#E5E7EB'"/>
+    </div>
+    <div style="margin-bottom:14px;">
+      <label style="font-size:12px;font-weight:700;color:#374151;display:block;margin-bottom:6px;">이메일 주소</label>
+      <input id="emailReply" type="email" placeholder="답장받을 이메일을 입력해 주세요" style="width:100%;padding:10px 14px;border:1.5px solid #E5E7EB;border-radius:8px;font-size:14px;box-sizing:border-box;font-family:'Noto Sans KR',sans-serif;outline:none;" onfocus="this.style.borderColor='#1B8AC4'" onblur="this.style.borderColor='#E5E7EB'"/>
+    </div>
+    <div style="margin-bottom:14px;">
+      <label style="font-size:12px;font-weight:700;color:#374151;display:block;margin-bottom:6px;">제목</label>
+      <input id="emailTitle" type="text" placeholder="문의 제목을 입력해 주세요" style="width:100%;padding:10px 14px;border:1.5px solid #E5E7EB;border-radius:8px;font-size:14px;box-sizing:border-box;font-family:'Noto Sans KR',sans-serif;outline:none;" onfocus="this.style.borderColor='#1B8AC4'" onblur="this.style.borderColor='#E5E7EB'"/>
+    </div>
+    <div style="margin-bottom:22px;">
+      <label style="font-size:12px;font-weight:700;color:#374151;display:block;margin-bottom:6px;">내용</label>
+      <textarea id="emailMessage" rows="5" placeholder="문의 내용을 입력해 주세요" style="width:100%;padding:10px 14px;border:1.5px solid #E5E7EB;border-radius:8px;font-size:14px;box-sizing:border-box;resize:vertical;font-family:'Noto Sans KR',sans-serif;outline:none;" onfocus="this.style.borderColor='#1B8AC4'" onblur="this.style.borderColor='#E5E7EB'"></textarea>
+    </div>
+    <div id="emailStatus" style="display:none;margin-bottom:14px;padding:10px 14px;border-radius:8px;font-size:13px;text-align:center;"></div>
+    <button onclick="sendEmailJS()" id="emailSendBtn" style="width:100%;padding:13px;background:#1B8AC4;color:white;border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Noto Sans KR',sans-serif;">이메일 보내기</button>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+emailjs.init('7Dt86T55VtSlMqDs0');
+function openEmailPopup(){
+  document.getElementById('emailPopup').style.display='flex';
+  document.getElementById('emailStatus').style.display='none';
+  document.getElementById('emailName').value='';
+  document.getElementById('emailReply').value='';
+  document.getElementById('emailTitle').value='';
+  document.getElementById('emailMessage').value='';
+}
+function closeEmailPopup(){document.getElementById('emailPopup').style.display='none';}
+function sendEmailJS(){
+  var name=document.getElementById('emailName').value.trim();
+  var reply=document.getElementById('emailReply').value.trim();
+  var title=document.getElementById('emailTitle').value.trim();
+  var message=document.getElementById('emailMessage').value.trim();
+  var status=document.getElementById('emailStatus');
+  var btn=document.getElementById('emailSendBtn');
+  if(!name||!reply||!title||!message){
+    status.style.display='block';
+    status.style.background='#FEF2F2';
+    status.style.color='#DC2626';
+    status.textContent='모든 항목을 입력해 주세요.';
+    return;
+  }
+  btn.textContent='전송 중...';
+  btn.disabled=true;
+  emailjs.send('service_m2ellqn','template_can6v3j',{
+    name: name,
+    email: reply,
+    title: title,
+    message: message
+  }).then(function(){
+    status.style.display='block';
+    status.style.background='#F0FDF4';
+    status.style.color='#16A34A';
+    status.textContent='✅ 문의가 성공적으로 전송되었습니다!';
+    btn.textContent='이메일 보내기';
+    btn.disabled=false;
+    setTimeout(closeEmailPopup, 2000);
+  },function(error){
+    status.style.display='block';
+    status.style.background='#FEF2F2';
+    status.style.color='#DC2626';
+    status.textContent='❌ 전송에 실패했습니다. 다시 시도해 주세요.';
+    btn.textContent='이메일 보내기';
+    btn.disabled=false;
+  });
+}
+document.getElementById('emailPopup').addEventListener('click',function(e){if(e.target===this)closeEmailPopup();});
+</script>
+</body>
+</html>
