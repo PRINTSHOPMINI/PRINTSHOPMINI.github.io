@@ -40,12 +40,26 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .ph-h1{font-size:clamp(28px,4vw,48px);font-weight:900;letter-spacing:-2px;margin-bottom:10px}
 .ph-sub{font-size:15px;color:var(--text3)}
 
+/* FAQ SEARCH */
+.faq-search{position:relative;margin-bottom:12px}
+.faq-search input{width:100%;font-family:inherit;font-size:16px;padding:16px 92px 16px 50px;border:2px solid var(--border);border-radius:14px;background:var(--white);color:var(--text);outline:none;transition:border-color .15s,box-shadow .15s}
+.faq-search input:focus{border-color:var(--blue);box-shadow:0 0 0 4px var(--blue-light)}
+.faq-search input::placeholder{color:var(--text3)}
+.faq-search .s-ico{position:absolute;left:18px;top:50%;transform:translateY(-50%);width:20px;height:20px;color:var(--text3);pointer-events:none}
+.faq-search .s-clear{position:absolute;right:10px;top:50%;transform:translateY(-50%);display:none;border:none;background:var(--blue-light);color:var(--blue);font-family:inherit;font-size:13px;font-weight:700;padding:7px 12px;border-radius:8px;cursor:pointer}
+.faq-search.has-text .s-clear{display:block}
+.faq-count{font-size:13.5px;color:var(--text3);margin:0 4px 14px;min-height:20px}
+.faq-count b{color:var(--blue);font-weight:900}
+.faq-empty{text-align:center;padding:44px 16px;color:var(--text3);font-size:14.5px;line-height:1.8;border:1px dashed var(--border);border-radius:12px}
+.faq-empty b{display:block;color:var(--text);font-size:16px;margin-bottom:4px}
+mark{background:#FFE08A;color:inherit;border-radius:3px;padding:0 2px}
+
 /* FAQ */
 .faq-section{padding:56px 6% 90px}
 .faq-inner{max-width:800px;margin:0 auto}
 .faq-list{display:flex;flex-direction:column;gap:12px}
 .faq-item{border:1px solid var(--border);border-radius:12px;overflow:hidden}
-.faq-q{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;cursor:pointer;font-size:15px;font-weight:700;background:var(--white);transition:background .15s}
+.faq-q{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 24px;cursor:pointer;font-size:15px;font-weight:700;background:var(--white);transition:background .15s}
 .faq-q:hover{background:var(--blue-light)}
 .faq-q .q-icon{color:var(--blue);font-size:18px;font-weight:900;flex-shrink:0;transition:transform .25s}
 .faq-a{display:none;padding:16px 24px 20px;font-size:14px;color:var(--text2);line-height:1.9;background:var(--bg);border-top:1px solid var(--border)}
@@ -133,6 +147,12 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 <!-- FAQ -->
 <div class="faq-section" id="faq">
   <div class="faq-inner">
+    <div class="faq-search" id="faqSearch">
+      <svg class="s-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input type="search" id="faqQ" placeholder="궁금한 키워드를 입력하세요 (예: 환불, 코팅, 팩스)" autocomplete="off" aria-label="FAQ 검색" oninput="onFaqSearch()">
+      <button type="button" class="s-clear" onclick="clearFaqSearch()">지우기</button>
+    </div>
+    <div class="faq-count" id="faqCount" aria-live="polite"></div>
     <div class="faq-list" id="faqList">
       <div style="text-align:center;padding:40px;color:var(--text3)">불러오는 중...</div>
     </div>
@@ -161,18 +181,50 @@ var SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI
 var SB_HDR={'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY};
 function escH(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 
+var FAQS=[];
+function reEsc(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');}
+function hl(text,terms){
+  text=String(text||'');
+  if(!terms.length)return escH(text);
+  var re=new RegExp('('+terms.map(reEsc).join('|')+')','gi');
+  return text.split(re).map(function(s,i){return i%2?'<mark>'+escH(s)+'</mark>':escH(s);}).join('');
+}
+function renderFaqs(){
+  var list=document.getElementById('faqList'),count=document.getElementById('faqCount');
+  var raw=document.getElementById('faqQ').value.trim();
+  var terms=raw.toLowerCase().split(/\s+/).filter(Boolean);
+  document.getElementById('faqSearch').classList.toggle('has-text',!!raw);
+  var rows=FAQS.filter(function(f){
+    if(!terms.length)return true;
+    var hay=((f.question||'')+' '+(f.answer||'')).toLowerCase();
+    return terms.every(function(w){return hay.indexOf(w)>-1;});
+  });
+  if(!rows.length){
+    count.innerHTML='';
+    list.innerHTML='<div class="faq-empty"><b>"'+escH(raw)+'"에 대한 검색 결과가 없습니다.</b>다른 키워드로 검색하거나, 아래 이메일 문의를 이용해 주세요.</div>';
+    return;
+  }
+  count.innerHTML=terms.length?'<b>'+rows.length+'개</b>의 질문을 찾았습니다.':'';
+  list.innerHTML=rows.map(function(f){
+    var open=terms.length?' open':'';
+    return '<div class="faq-item'+open+'" onclick="toggleFaq(this)">'+
+      '<div class="faq-q"><span>'+hl(f.question,terms)+'</span> <span class="q-icon">+</span></div>'+
+      '<div class="faq-a">'+hl(f.answer,terms).replace(/\n/g,'<br>')+'</div>'+
+    '</div>';
+  }).join('');
+}
+function onFaqSearch(){renderFaqs();}
+function clearFaqSearch(){var q=document.getElementById('faqQ');q.value='';renderFaqs();q.focus();}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&document.activeElement===document.getElementById('faqQ'))clearFaqSearch();});
+
 async function loadFaqs(){
   try{
     var r=await fetch(SB_URL+'/rest/v1/faqs?order=sort_order',{headers:SB_HDR});
     var data=await r.json();
     var list=document.getElementById('faqList');
     if(!data||!data.length){list.innerHTML='<div style="text-align:center;padding:40px;color:var(--text3)">FAQ가 없습니다.</div>';return;}
-    list.innerHTML=data.map(function(f){
-      return '<div class="faq-item" onclick="toggleFaq(this)">'+
-        '<div class="faq-q">'+escH(f.question)+' <span class="q-icon">+</span></div>'+
-        '<div class="faq-a">'+escH(f.answer).replace(/\n/g,'<br>')+'</div>'+
-      '</div>';
-    }).join('');
+    FAQS=data;
+    renderFaqs();
   }catch(e){
     document.getElementById('faqList').innerHTML='<div style="text-align:center;padding:40px;color:#EF4444">FAQ를 불러오지 못했습니다.</div>';
   }
