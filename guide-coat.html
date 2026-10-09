@@ -338,6 +338,15 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 .fax-ico{vertical-align:-2px;margin-right:1px}
 .mp-pic{height:140px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid var(--border);border-radius:10px;margin-bottom:12px;padding:8px;overflow:hidden}
 .mp-pic img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+.fire{margin:0 0 18px;border:3px solid #B71C1C;border-radius:12px;background:#FFF0F0;padding:16px 18px;box-shadow:0 0 0 4px rgba(211,47,47,.15)}
+.fire-h{background:#B71C1C;color:#fff;font-size:17px;font-weight:900;text-align:center;padding:10px 12px;border-radius:8px;margin-bottom:14px;letter-spacing:-.3px}
+.fire-items{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.fire-it{display:flex;align-items:center;gap:12px;background:#fff;border:2px solid #E57373;border-radius:10px;padding:10px 12px}
+.fire-it img{flex:0 0 auto;width:88px;height:72px;object-fit:contain;border-radius:6px;background:#fff}
+.fire-it b{display:block;font-size:16px;font-weight:900;color:#B71C1C}
+.fire-it span{display:block;font-size:13px;color:#7F1D1D;line-height:1.5;margin-top:2px}
+.fire-t{margin-top:14px;font-size:14.5px;line-height:1.75;color:#7F1D1D;font-weight:700}
+.fire-t b{color:#B71C1C;font-weight:900;background:#FFE08A;padding:0 3px;border-radius:3px}
 </style>
 </head>
 <body>
@@ -397,7 +406,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
     <p class="sec-tagline"><b>코팅지 수량을 확인하고 결제를 먼저 한 뒤, 전원을 켜서 예열이 끝나면 코팅지를 투입하는 서비스입니다.</b> 사용 후에는 반드시 전원을 꺼 주세요.</p>
     <div class="machine-pick">
       <div class="machine-pick-h">🔎 코팅기가 두 종류인 매장이 있어요. 매장에 있는 코팅기를 먼저 확인하세요.</div>
-      <a class="mp" href="#safa-steps"><div class="mp-pic"><img src="images/coat/safa-100-machine.jpg" alt="흰색 SAFA-100 코팅기 — 흰색 몸체에 남색 테두리, SAFA 로고" loading="lazy"></div><b>흰색 SAFA-100 코팅기</b><span>전원 버튼을 누른 뒤 <b>코팅 버튼을 짧게 2번</b> 눌러 예열하는 코팅기입니다.</span><em>아래 &lt;코팅하는 방법&gt;을 따라 주세요 ↓</em></a>
+      <a class="mp" href="#safa-steps"><div class="mp-pic"><img src="images/coat/safa-100-machine.jpg" alt="흰색 SAFA-100 코팅기 — 흰색 몸체에 남색 테두리, SAFA 로고" loading="lazy"></div><b>흰색 SAFA-100 코팅기</b><span>전원 버튼을 누른 뒤 <b>코팅 버튼을 2번</b> 눌러 예열하는 코팅기입니다.</span><em>아래 &lt;코팅하는 방법&gt;을 따라 주세요 ↓</em></a>
       <a class="mp dark" href="#pl1506"><div class="mp-pic"><img src="images/coat/pl-1506-machine.svg" alt="검정색 PL-1506 코팅기 — 검정색 몸체에 은색 테두리, 오른쪽에 조작 버튼" loading="lazy"></div><b>검정색 PL-1506 코팅기 (페이퍼프랜드)</b><span>전원 버튼을 누른 뒤 <b>[문서] 버튼</b>을 눌러 예열하는 코팅기입니다.</span><em>&lt;PL-1506 사용방법&gt;을 따라 주세요 ↓</em></a>
     </div>
     <div id="guideFiles"></div>
@@ -421,10 +430,10 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
       </div>
       <div class="step step-dual">
         <div class="step-no">2</div>
-        <div class="step-figs two"><img class="step-photo" src="images/coat/coat-power.png" alt="전원 버튼을 누르는 모습" loading="lazy"><img class="step-photo" src="images/coat/coat-button.png" alt="코팅 버튼을 짧게 2번 누르는 모습" loading="lazy"></div>
+        <div class="step-figs two"><img class="step-photo" src="images/coat/coat-power.png" alt="전원 버튼을 누르는 모습" loading="lazy"><img class="step-photo" src="images/coat/coat-button.png" alt="코팅 버튼을 2번 누르는 모습" loading="lazy"></div>
         <div class="step-h">전원 켜기 · 예열</div>
-        <p class="step-p"><b>전원</b> 버튼을 누르고, <b>코팅</b> 버튼을 <b>짧게 2번</b> 누르세요.<br>불이 깜빡이다가 3~5분 후 <b>"삐"</b> 소리와 함께 불이 켜지면 예열 완료입니다.</p>
-        <div class="step-note">코팅 버튼을 <b>3번</b> 누르면 예열까지 <b>5분 이상</b> 걸려요.</div>
+        <p class="step-p"><b>전원</b> 버튼을 누르고 <b>코팅</b> 버튼을 <b>2번</b> 누르세요.<br>불이 깜빡이다가 3~5분 후 <b>"삐"</b> 소리와 함께 불이 켜지면 예열 완료입니다.</p>
+        <div class="step-note warn">⚠️ 코팅 버튼을 <b>3번 이상</b> 눌렀을 땐 <b>전원 버튼을 눌러 끈 후</b>, 다시 처음부터 <b>전원 버튼을 누르고 코팅 버튼을 2번</b> 누르세요.</div>
       </div>
       <div class="step">
         <div class="step-no">3</div>
@@ -453,6 +462,11 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
     </div>
     <div class="adfw" style="margin-top:34px">
       <div class="adfw-h"><span class="x">!</span>코팅 주의사항 — 꼭 지켜 주세요</div>
+      <div class="fire">
+        <div class="fire-h">🔥🚨 화재 위험 — 절대 하지 마세요! 🚨🔥</div>
+        <div class="fire-items"><div class="fire-it"><div><b>🚫 인쇄물만 넣기</b><span>코팅지 없이 인쇄물만 코팅기에 넣는 행동</span></div></div><div class="fire-it"><div><b>🚫 빈 코팅지만 넣기</b><span>인쇄물 없이 빈 코팅지만 코팅기에 넣는 행동</span></div></div></div>
+        <div class="fire-t">⚠️ 이 두 가지를 하면 <b>코팅기 내부에서 불이 나 화재가 발생</b>할 수 있습니다. 🧯<br>반드시 <b>인쇄물을 코팅지 안에 넣은 상태로만</b> 투입하세요. <b>화재와 기기 손상의 위험</b>이 있습니다.</div>
+      </div>
       <div class="adfw-grid">
         <div class="adfw-box ok">
           <div class="adfw-t">이렇게 하세요</div>
@@ -466,8 +480,6 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         <div class="adfw-box no">
           <div class="adfw-t">이렇게 하지 마세요</div>
           <ul>
-            <li><b>인쇄물만</b> 넣지 마세요. (코팅지 없이)</li>
-            <li><b>빈 코팅지만</b> 넣지 마세요. (인쇄물 없이)</li>
             <li><b>가져온 인쇄물</b>은 사용할 수 없습니다. (규격 외 용지 등 금지)</li>
             <li><b>가져온 코팅지</b>는 사용할 수 없습니다. (규격 외 용지 등 금지)</li>
             <li><b>작동 중에는 버튼을 누르지 마세요.</b> (오조작 방지)</li>
@@ -620,6 +632,11 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 
     <div class="adfw" style="margin-top:34px">
       <div class="adfw-h"><span class="x">!</span>코팅 주의사항 — 꼭 지켜 주세요</div>
+      <div class="fire">
+        <div class="fire-h">🔥🚨 화재 위험 — 절대 하지 마세요! 🚨🔥</div>
+        <div class="fire-items"><div class="fire-it"><img src="images/coat/pl-no-print.jpg" alt="인쇄물만 넣으면 화재 위험" loading="lazy"><div><b>🚫 인쇄물만 넣기</b><span>코팅지 없이 인쇄물만 코팅기에 넣는 행동</span></div></div><div class="fire-it"><img src="images/coat/pl-no-empty.jpg" alt="빈 코팅지만 넣으면 화재 위험" loading="lazy"><div><b>🚫 빈 코팅지만 넣기</b><span>인쇄물 없이 빈 코팅지만 코팅기에 넣는 행동</span></div></div></div>
+        <div class="fire-t">⚠️ 이 두 가지를 하면 <b>코팅기 내부에서 불이 나 화재가 발생</b>할 수 있습니다. 🧯<br>반드시 <b>인쇄물을 코팅지 안에 넣은 상태로만</b> 투입하세요. <b>화재와 기기 손상의 위험</b>이 있습니다.</div>
+      </div>
       <div class="adfw-grid">
         <div class="adfw-box ok pic">
           <div class="adfw-t">이렇게 하세요</div>
@@ -633,8 +650,6 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         <div class="adfw-box no pic">
           <div class="adfw-t">이렇게 하지 마세요</div>
           <ul>
-            <li><img src="images/coat/pl-no-print.jpg" alt="인쇄물만 넣으면 안 됨" loading="lazy"><div><b>인쇄물만</b> 넣지 마세요. (코팅지 없이)</div></li>
-            <li><img src="images/coat/pl-no-empty.jpg" alt="빈 코팅지만 넣으면 안 됨" loading="lazy"><div><b>빈 코팅지만</b> 넣지 마세요. (인쇄물 없이)</div></li>
             <li><img src="images/coat/pl-no-bring-print.jpg" alt="가져온 인쇄물은 사용 불가" loading="lazy"><div><b>가져온 인쇄물</b>은 사용할 수 없습니다. (규격 외 용지 등 금지)</div></li>
             <li><img src="images/coat/pl-no-bring-coat.jpg" alt="가져온 코팅지는 사용 불가" loading="lazy"><div><b>가져온 코팅지</b>는 사용할 수 없습니다. (규격 외 용지 등 금지)</div></li>
             <li><img src="images/coat/pl-no-touch.jpg" alt="작동 중 버튼을 누르면 안 됨" loading="lazy"><div><b>작동 중에는 버튼을 누르지 마세요.</b> (오조작 방지)</div></li>
