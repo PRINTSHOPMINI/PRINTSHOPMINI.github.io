@@ -268,13 +268,6 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 .mp em{display:block;margin-top:9px;font-style:normal;font-weight:800;font-size:13px;color:var(--sc)}
 .mp.dark{border-color:#111827}
 .mp.dark em{color:#111827}
-.manual{margin:0;max-width:800px}
-.manual img{width:100%;height:auto;display:block;border-radius:var(--radius);border:1px solid var(--border);background:#fff;cursor:zoom-in}
-.manual-hint{font-size:12.5px;color:var(--text3);margin:8px 0 8px}
-.lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,.84);z-index:9999;overflow:auto;padding:20px;cursor:zoom-out}
-.lb.on{display:flex}
-.lb img{margin:auto;display:block;width:max(800px,min(96vw,1000px));max-width:none;height:auto;border-radius:8px;background:#fff}
-.lb-x{position:fixed;top:14px;right:18px;width:42px;height:42px;border-radius:50%;border:none;background:#fff;color:#111827;font-size:26px;line-height:1;cursor:pointer;z-index:10000;box-shadow:0 2px 10px rgba(0,0,0,.3)}
 
 .pl-look{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:0 0 18px;max-width:960px}
 .pl-fig{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:14px;margin:0}
@@ -588,11 +581,6 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
     </ul>
 
 
-    <figure class="manual">
-      <img src="images/coat/coat-pl1506.jpg" alt="페이퍼프랜드 PL-1506 코팅기 문서 모드 전용 사용 설명서 — 사용 방법 7단계와 주의사항 9가지" loading="lazy" onclick="openLb(this.src,this.alt)">
-    </figure>
-    <p class="manual-hint">🔍 이미지를 누르면 크게 볼 수 있습니다. 아래에 같은 내용을 글로도 정리했습니다.<br>※ 설명서 그림 속 코팅기는 사용 순서를 설명하기 위한 그림이라 실제 코팅기 모양과 다릅니다. 실제 모양은 위 그림을 참고하세요.<br>※ 설명서 그림의 ①~⑦번은 아래 사용방법의 2~8단계에 해당합니다. (1단계는 결제 먼저)</p>
-
     <div class="subhead">검정색 PL-1506 코팅기 사용방법</div>
     <div class="steps steps-wide">
       <div class="step">
@@ -681,8 +669,6 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 </div>
 
 <!-- 이미지 확대 보기 -->
-<div class="lb" id="lb" onclick="closeLb()"><button class="lb-x" type="button" aria-label="닫기">×</button><img id="lbImg" alt=""></div>
-
 <footer>
   <div class="ft-wrap">
     <div class="ft-brand">
@@ -720,9 +706,6 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 
 <script>
 function toggleMenu(){document.getElementById("navLinks").classList.toggle("show");}
-function openLb(src,alt){var im=document.getElementById('lbImg');im.src=src;im.alt=alt||'';document.getElementById('lb').classList.add('on');document.body.style.overflow='hidden';}
-function closeLb(){document.getElementById('lb').classList.remove('on');document.body.style.overflow='';}
-document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb();});
 </script>
 <script>window.GUIDE_SERVICE='coat';</script>
 <script src="service-guides.js"></script>
