@@ -289,6 +289,13 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 .adf-fig figcaption b{color:var(--text);font-weight:900}
 .adf-fig figcaption .gd{display:block;margin-top:8px;padding:9px 12px;background:#FFF4EC;border:1px solid #F8CFB1;border-radius:8px;color:#7A3410}
 .adf-fig figcaption .gd b{color:#B4500F}
+.mini1{margin:6px 0 0;padding-left:20px;font-size:14px;line-height:1.75;color:var(--text2)}
+.mini1>li{margin-bottom:7px}
+.mini1 .dir{display:inline-block;margin-top:3px;padding:3px 10px;background:#EEF6FC;border-radius:8px;color:#16507A;font-size:13.4px}
+.mini1 .r{color:var(--warn);font-weight:700}
+.adfw-box.ok ul,.adfw-box.no ul{list-style:none;padding-left:0}
+.adfw-box.ok li::before{content:'○ ';color:#1B7A2C;font-weight:900}
+.adfw-box.no li::before{content:'✕ ';color:#C0261C;font-weight:900}
 </style>
 </head>
 <body>
@@ -343,7 +350,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
   <div class="tabs-in">
     <button class="tab on" onclick="jump('copy',this)">복사하는 방법</button>
     <button class="tab" onclick="jump('adf',this)">ADF 주의</button>
-    <button class="tab" onclick="jump('glass',this)">유리평판 복사 (신분증 · 통장 · 책)</button>
+    <button class="tab" onclick="jump('glass',this)">유리판 복사 (신분증 · 통장 · 책)</button>
   </div>
 </div>
 
@@ -359,9 +366,9 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
     <div class="steps">
       <div class="step">
         <div class="step-no">1</div>
-        <div class="step-fig"><img src="adf_nb.jpg" alt="자동원고이송장치(ADF)에 원본 넣는 모습" style="width:100%;max-width:210px;border-radius:8px;border:1px solid var(--border)"></div>
+        <div class="step-fig"><img src="adf_nb.jpg" alt="원본 넣는 곳(ADF)에 원본 넣는 모습" style="width:100%;max-width:210px;border-radius:8px;border:1px solid var(--border)"></div>
         <div class="step-h">복합기에 원본 놓기</div>
-        <p class="step-p">위쪽 <b>자동원고이송장치(ADF)</b>에 <b>내용이 보이게</b> 올리고, <b>왼쪽으로 더 이상 들어가지 않을 때까지</b> 깊숙히 밀어 넣으세요.<br><span class="r">살짝만 넣으면 문서가 빨려 들어가지 않아 백지가 나옵니다.</span><br><br>급지대의 <b>위 · 아래 문서 가드를 원본 크기에 딱 맞게</b> 붙여 주세요. 가드가 헐거우면 문서가 비뚤게 들어가 <span class="r">복사 · 스캔 결과가 삐뚤어집니다.</span><br><br>여러 장이면 잘 간추려 한 번에 넣습니다 (최대 100장).<br><br><span class="r">정상 작동되면 원본이 복합기 안으로 들어갔다 다시 나옵니다. 안 들어가면 결제하지 마세요.</span><br><br>신분증 · 통장 · 여권 · 책 · 구겨진 종이는 <b>유리평판</b>에 올려놓으세요 (왼쪽 윗 모서리 하얀색 화살표 기준).</p>
+        <ol class="mini1"><li><b>글씨가 있는 면이 위로</b> 보이게 올리세요. (내 눈에 글씨가 보이게)</li><li>종이 크기에 따라 넣는 방향이 달라요.<br><span class="dir"><b>A4</b> → <b>긴 쪽 끝</b>이 왼쪽으로 먼저 들어가게</span><br><span class="dir"><b>B4 · A3</b> → <b>짧은 쪽 끝</b>이 왼쪽으로 먼저 들어가게</span></li><li>왼쪽 끝까지 <b>쭉 밀어 넣으세요.</b> <span class="r">살짝만 넣으면 종이가 빨려 들어가지 않아 백지가 나와요.</span></li><li>위 · 아래 <b>문서 가드</b>를 종이 크기에 딱 맞게 붙이세요. <span class="r">헐거우면 종이가 삐뚤게 들어가 결과가 삐뚤어져요.</span></li><li>여러 장이면 <b>가지런히 모아서</b> 한꺼번에 넣으세요. (최대 100장)</li><li><span class="r">종이가 기계 안으로 들어갔다 다시 나오면 잘 된 거예요. 안 들어가면 결제하지 마세요.</span></li><li>신분증 · 통장 · 여권 · 책 · 구겨진 종이는 여기에 넣지 말고 <b>유리판</b>에 올리세요. (왼쪽 위 모서리의 하얀 화살표에 맞추세요)</li></ol>
       </div>
       <div class="step">
         <div class="step-no">2</div>
@@ -377,7 +384,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
             <text x="102" y="60" font-size="10" font-weight="900" fill="#7C8CA6" text-anchor="middle" font-family="Noto Sans KR">팩스</text>
           </svg></div>
         <div class="step-h">복사 메뉴 선택</div>
-        <p class="step-p"><span class="r">반드시 원본을 먼저 놓은 뒤</span> 복합기 화면에서 <b>[복사]</b>를 터치합니다.</p>
+        <p class="step-p"><span class="r">반드시 원본을 먼저 놓은 뒤</span> 복합기 화면에서 <b>[복사]</b>를 누릅니다.</p>
       </div>
       <div class="step">
         <div class="step-no">3</div>
@@ -391,8 +398,8 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
             <circle cx="92" cy="45" r="15" fill="#1B63D8"/>
             <text x="92" y="49" font-size="10" font-weight="900" fill="#fff" text-anchor="middle" font-family="Noto Sans KR">시작</text>
           </svg></div>
-        <div class="step-h">옵션 설정 · 시작</div>
-        <p class="step-p">매수 · 용지 · 컬러/흑백 · 양면을 정한 뒤 <b>[시작]</b> 터치. 시작되면 원본이 복합기 안으로 들어갔다 나옵니다.</p>
+        <div class="step-h">설정하기 · 시작</div>
+        <p class="step-p">장 수 · 용지 · 컬러/흑백 · 양면을 정한 뒤 <b>[시작]</b> 누르기. 시작되면 원본이 복합기 안으로 들어갔다 나옵니다.</p>
       </div>
       <div class="step">
         <div class="step-no">4</div>
@@ -405,8 +412,8 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
             <rect x="62" y="50" width="38" height="13" rx="2" fill="#DCE8FA" stroke="#7E93AE" stroke-width="2.4"/>
             <text x="81" y="60" font-size="9" font-weight="900" text-anchor="middle" font-family="Noto Sans KR">확인</text>
           </svg></div>
-        <div class="step-h">과금정보 확인</div>
-        <p class="step-p">정상 작업되면 과금정보 창이 자동으로 나옵니다. <b>내용이 모두 맞으면 [확인]</b> 터치.</p>
+        <div class="step-h">금액 확인 (과금정보)</div>
+        <p class="step-p">잘 되면 금액 확인 화면(과금정보)이 자동으로 나옵니다. <b>내용이 모두 맞으면 [확인]</b> 누르기.</p>
       </div>
       <div class="step">
         <div class="step-no">5</div>
@@ -417,46 +424,46 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
             <rect x="48" y="6" width="26" height="12" rx="2" fill="#FFD64A" stroke="#111827" stroke-width="3"/>
           </svg></div>
         <div class="step-h">카드 투입 결제</div>
-        <p class="step-p">IC 카드는 <b>뒤에 꽂고</b>, 삼성 · 애플 페이는 앞면 넓은 곳에 터치. <span class="r">단말기에서 음성이 나오면 카드를 꽂으세요.</span> 미리 꽂거나 중간에 빼지 마세요.</p>
+        <p class="step-p">IC 카드는 <b>뒤에 꽂고</b>, 삼성 · 애플 페이는 앞면 넓은 곳에 대세요. <span class="r">카드 찍는 기계에서 말소리가 나오면 카드를 꽂으세요.</span> 미리 꽂거나 중간에 빼지 마세요.</p>
       </div>
     </div>
 
     <div class="step-note sec-note">복사가 끝나면 출력 트레이에서 복사본을 받으시고, <b>원본도 잊지 말고 챙겨가세요.</b></div>
 
     <div class="adfw" id="adf">
-      <div class="adfw-h"><span class="x">!</span>자동원고이송장치(ADF)에 넣으면 안 되는 원본이 있습니다</div>
+      <div class="adfw-h"><span class="x">!</span>원본 넣는 곳(ADF)에 넣으면 안 되는 종이가 있습니다</div>
       <figure class="adf-fig">
-        <img src="images/common/adf-feeder.jpg" alt="복합기 위쪽 자동원고이송장치(ADF) — 종이가 올려진 급지대 부분" loading="lazy">
-        <figcaption>📌 사진에서 <b>종이가 놓여 있는 파란 테두리 부분</b>이 <b>자동원고이송장치(ADF)</b>입니다.<br>복사 · 스캔 · 팩스 할 때 낱장 원본을 올려놓는 곳이에요.<br><span class="gd">📏 원본의 <b>위 · 아래를 막고 있는 주황색 부분이 '문서 가드'</b>입니다. 원본을 올린 뒤 <b>위 · 아래 문서 가드를 원본 크기에 딱 맞게 붙여서</b>, 원본이 삐뚤어지게 들어가지 않도록 반듯하게 맞춰 주세요.</span></figcaption>
+        <img src="images/common/adf-feeder.jpg" alt="복합기 위쪽 원본 넣는 곳(ADF) — 종이가 올려진 원본 넣는 곳" loading="lazy">
+        <figcaption>📌 사진의 <b>파란 테두리 부분</b>이 <b>원본 넣는 곳(ADF)</b>입니다.<br>복사 · 스캔 · 팩스 할 때 한 장짜리 원본을 올려놓는 곳이에요.<br><span class="gd">📏 원본의 <b>위 · 아래를 막고 있는 주황색 부분이 '문서 가드'</b>입니다. 원본을 올린 뒤 <b>위 · 아래 문서 가드를 원본 크기에 딱 맞게 붙여서</b>, 원본이 삐뚤어지게 들어가지 않도록 반듯하게 맞춰 주세요.</span></figcaption>
       </figure>
       <div class="adfw-grid">
         <div class="adfw-box ok">
           <div class="adfw-t">넣어도 되는 것</div>
           <ul>
-            <li><b>일반 복사용지</b> 낱장 (A4 · B4 · A3 등)</li>
-            <li>구김 없이 <b>평평한 상태</b>의 종이</li>
+            <li><b>보통 복사용지</b> 한 장씩 (A4 · B4 · A3)</li>
+            <li>구김 없이 <b>평평한</b> 종이</li>
           </ul>
         </div>
         <div class="adfw-box no">
           <div class="adfw-t">넣으면 안 되는 것</div>
           <ul>
-            <li><b>너무 얇은 종이</b> — 기름종이, 트레싱지, 갱지</li>
-            <li><b>너무 두꺼운 종이</b> — 상장, 두꺼운 카드지</li>
+            <li><b>너무 얇은 종이</b> (기름종이 같은 것)</li>
+            <li><b>너무 두꺼운 종이</b> (상장, 두꺼운 카드)</li>
             <li><b>메모지 · 포스트잇</b>이 붙어 있는 것</li>
-            <li><b>여러 장이 붙어 있는 것</b> — 스테이플러, 풀, 클립</li>
+            <li><b>스테이플러 · 풀 · 클립</b>으로 붙어 있는 종이</li>
             <li><b>구겨지거나 찢어진</b> 종이</li>
-            <li><b>신분증 · 통장 · 여권 · 책</b> 등 낱장 종이가 아닌 것</li>
+            <li><b>신분증 · 통장 · 여권 · 책</b> 처럼 한 장짜리 종이가 아닌 것</li>
           </ul>
         </div>
       </div>
       <div class="adfw-foot">
-        위에 해당하는 원본은 <b>급지대에 넣지 마시고, 복합기 덮개를 열어 유리평판에 한 면씩 대고</b> 작업해 주세요.<br>
+        위에 해당하는 원본은 <b>원본 넣는 곳에 넣지 마세요. 복합기 덮개를 열고 유리판에 한 장씩 올려</b> 작업해 주세요.<br>
         <b>넣지 말라고 안내된 원본을 넣어 장비가 고장 난 경우, 수리 비용을 부담하셔야 할 수 있습니다.</b>
       </div>
     </div>
 
-    <div class="subhead" id="glass">유리평판에 놓고 복사하기 &nbsp;·&nbsp; 신분증 / 통장 · 여권 / 책</div>
-    <p class="sec-tagline" style="margin-bottom:22px">낱장 종이가 아닌 <b>신분증 · 통장 · 여권 · 책</b>은 급지대에 넣지 마시고, 복합기 덮개를 열어 <b>유리평판</b>에 올려놓으셔야 합니다. 유리판 <b>왼쪽 윗 모서리의 하얀색 화살표</b>가 기준이며, <b>내용이 있는 면은 유리판 쪽</b>으로 향하게 놓습니다.</p>
+    <div class="subhead" id="glass">유리판에 놓고 복사하기 &nbsp;·&nbsp; 신분증 / 통장 · 여권 / 책</div>
+    <p class="sec-tagline" style="margin-bottom:22px">한 장짜리 종이가 아닌 <b>신분증 · 통장 · 여권 · 책</b>은 원본 넣는 곳에 넣지 마세요. 복합기 덮개를 열고 <b>유리판</b>에 올려 주세요. 유리판 <b>왼쪽 윗 모서리의 하얀색 화살표</b>가 기준이며, <b>내용이 있는 면은 유리판 쪽</b>으로 향하게 놓습니다.</p>
 
 
     <div class="openbox">
@@ -479,12 +486,12 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
           신분증 복사
         </div>
         <div class="mini-body">
-          <div class="mini-fig"><img src="id_nb.jpg" alt="신분증을 유리평판 왼쪽 윗 모서리에 맞춰 놓은 모습"></div>
+          <div class="mini-fig"><img src="id_nb.jpg" alt="신분증을 유리판 왼쪽 윗 모서리에 맞춰 놓은 모습"></div>
           <ol>
             <li><b>복합기 덮개를 엽니다.</b> 오른쪽 부분을 잡고 조심히 위로 들어 올리세요.</li>
-            <li>유리평판 <b>왼쪽 상단 모서리에 맞춰</b>, <b>사진이 있는 앞면을 유리쪽으로</b> 향하게 놓고 덮개를 닫습니다.</li>
+            <li>유리판 <b>왼쪽 상단 모서리에 맞춰</b>, <b>사진이 있는 앞면을 유리쪽으로</b> 향하게 놓고 덮개를 닫습니다.</li>
             <li>복합기 화면에서 <b>[복사]</b> 메뉴를 선택합니다.</li>
-            <li><b>[신분증복사]</b> 탭을 터치하고 <b>컬러 또는 흑백</b>을 고른 뒤 <b>[시작]</b> 터치.</li>
+            <li><b>[신분증복사]</b> 탭을 누르고 <b>컬러 또는 흑백</b>을 고른 뒤 <b>[시작]</b> 누르기.</li>
             <li><b>뒷면도 복사하려면</b> — 신분증을 처음 놨던 자리에서 <span class="r">그대로 뒤집어</span> 뒷면을 대고 <b>[예]</b> 선택 → 다시 <b>[시작]</b> → 결제<br><b>앞면만 하려면</b> — <b>[아니오]</b> 선택</li>
           </ol>
           <div class="mini-warn">
@@ -501,13 +508,13 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
           통장 · 여권 복사 / 스캔
         </div>
         <div class="mini-body">
-          <div class="mini-fig"><img src="glass_nb.jpg" alt="통장을 유리평판 왼쪽 윗 모서리에 맞춰 놓은 모습"></div>
+          <div class="mini-fig"><img src="glass_nb.jpg" alt="통장을 유리판 왼쪽 윗 모서리에 맞춰 놓은 모습"></div>
           <ol>
             <li><b>복합기 덮개를 엽니다.</b> 오른쪽 부분을 잡고 조심히 위로 들어 올리세요.</li>
-            <li>유리평판 <b>왼쪽 상단 모서리가 기준</b>입니다. 그 기준부터 <b>A4 크기만큼</b>이 복사 / 스캔되는 범위이니, 복사 또는 스캔할 면을 그 범위 안에 놓고 덮개를 닫습니다.</li>
-            <li><b>[복사]</b> 또는 <b>[스캔]</b> 메뉴를 선택합니다. 복사는 <b>[기본복사]</b> 탭에서 옵션을 설정·확인한 뒤 <b>[시작]</b> 터치.</li>
-            <li><b>"다른 원본이 있나요?"</b> 창이 나오면 — 더 복사 또는 스캔할 면이 있으면 유리평판에 <span class="r">다음 면을 먼저 올린 뒤</span> <b>[예]</b>, 없으면 <b>[아니오]</b>.</li>
-            <li><b>[과금정보]</b> 창에서 금액과 선택한 옵션이 맞는지 확인하고 결제합니다.</li>
+            <li>유리판 <b>왼쪽 상단 모서리가 기준</b>입니다. 그 기준부터 <b>A4 크기만큼</b>이 복사 / 스캔되는 범위이니, 복사 또는 스캔할 면을 그 범위 안에 놓고 덮개를 닫습니다.</li>
+            <li><b>[복사]</b> 또는 <b>[스캔]</b> 메뉴를 선택합니다. 복사는 <b>[기본복사]</b> 탭에서 설정을 정하고 확인한 뒤 <b>[시작]</b> 누르기.</li>
+            <li><b>"다른 원본이 있나요?"</b> 창이 나오면 — 더 복사 또는 스캔할 면이 있으면 유리판에 <span class="r">다음 면을 먼저 올린 뒤</span> <b>[예]</b>, 없으면 <b>[아니오]</b>.</li>
+            <li><b>[과금정보]</b> 화면에서 금액과 고른 설정이 맞는지 확인하고 결제합니다.</li>
           </ol>
           <div class="mini-warn">
             <div class="mini-warn-h"><span class="x">!</span>여권 · 통장은 [신분증복사] 탭을 쓰지 마세요!</div>
@@ -523,15 +530,15 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
           책 복사 / 스캔
         </div>
         <div class="mini-body">
-          <div class="mini-fig"><img src="book_nb.jpg" alt="책을 유리평판 왼쪽 윗 모서리에 맞춰 엎어 놓은 모습"></div>
+          <div class="mini-fig"><img src="book_nb.jpg" alt="책을 유리판 왼쪽 윗 모서리에 맞춰 엎어 놓은 모습"></div>
           <ol>
             <li><b>복합기 덮개를 엽니다.</b> 오른쪽 부분을 잡고 조심히 위로 들어 올리세요.</li>
-            <li><b>복사 · 스캔할 면을 유리쪽으로</b> 향하게 엎어 놓고, 유리평판 <b>왼쪽 윗 모서리에 딱 맞춰</b> 놓은 뒤 덮개를 닫습니다.</li>
-            <li><b>[복사]</b> 또는 <b>[스캔]</b> 메뉴를 선택합니다. 복사는 <b>[기본복사]</b> 탭에서 옵션을 설정·확인한 뒤 <b>[시작]</b> 터치.</li>
-            <li><b>"다른 원본이 있나요?"</b> 창이 나오면 — 다음 쪽을 펼쳐 유리평판에 <span class="r">먼저 올린 뒤</span> <b>[예]</b>, 다 끝났으면 <b>[아니오]</b>.</li>
-            <li><b>[과금정보]</b> 창에서 금액과 선택한 옵션이 맞는지 확인하고 결제합니다.</li>
+            <li><b>복사 · 스캔할 면을 유리쪽으로</b> 향하게 엎어 놓고, 유리판 <b>왼쪽 윗 모서리에 딱 맞춰</b> 놓은 뒤 덮개를 닫습니다.</li>
+            <li><b>[복사]</b> 또는 <b>[스캔]</b> 메뉴를 선택합니다. 복사는 <b>[기본복사]</b> 탭에서 설정을 정하고 확인한 뒤 <b>[시작]</b> 누르기.</li>
+            <li><b>"다른 원본이 있나요?"</b> 창이 나오면 — 다음 쪽을 펼쳐 유리판에 <span class="r">먼저 올린 뒤</span> <b>[예]</b>, 다 끝났으면 <b>[아니오]</b>.</li>
+            <li><b>[과금정보]</b> 화면에서 금액과 고른 설정이 맞는지 확인하고 결제합니다.</li>
           </ol>
-          <div class="mini-note">두꺼운 책은 덮개가 완전히 닫히지 않아도 됩니다. 다만 <b>책을 세게 누르지 마세요.</b> 유리평판이 깨질 수 있습니다.</div>
+          <div class="mini-note">두꺼운 책은 덮개가 완전히 닫히지 않아도 됩니다. 다만 <b>책을 세게 누르지 마세요.</b> 유리판이 깨질 수 있습니다.</div>
         </div>
       </div>
 
