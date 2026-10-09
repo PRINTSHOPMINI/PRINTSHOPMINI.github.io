@@ -94,10 +94,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .bd-services{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
 
 /* STATS ROW */
-.stats-row{max-width:1160px;margin:0 auto;padding:0 6% 40px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.stat-item{background:var(--bg);border-radius:var(--radius);padding:20px 24px;text-align:center;border:1px solid var(--border)}
-.stat-n{font-size:32px;font-weight:900;color:var(--blue)}
-.stat-l{font-size:12px;color:var(--text3);margin-top:4px}
+.stats-row{max-width:1160px;margin:0 auto;padding:18px 6% 6px;display:flex;flex-wrap:wrap;gap:10px}
+.stat-pill{display:inline-block;white-space:nowrap;background:var(--bg);border:1px solid var(--border);border-radius:50px;padding:8px 16px;font-size:13.5px;font-weight:600;color:var(--text2)}
+.stat-pill b{color:var(--blue);font-weight:900}
 
 footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 .ft-inner{max-width:1160px;margin:0 auto}
@@ -116,7 +115,8 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 @media(max-width:900px){
   .branches-wrap{grid-template-columns:1fr;padding:32px 5%}
   .detail-panel{position:static}
-  .stats-row{grid-template-columns:repeat(2,1fr);padding:0 5% 32px}
+  .stats-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:14px 5% 4px}
+  .stat-pill{text-align:center;padding:8px 10px;font-size:13px}
   .nav-links{display:none}
   .hamburger{display:flex}
 }
@@ -179,16 +179,16 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
   <div class="ph-inner">
     <div class="ph-eyebrow">BRANCHES</div>
     <h1 class="ph-h1">지점 찾기</h1>
-    <p class="ph-sub">경기권 15개 지점 — 가장 가까운 프린트샵미니를 찾아보세요</p>
+    <p class="ph-sub">경기권 <span id="subTotal"></span>지점 — 가장 가까운 프린트샵미니를 찾아보세요</p>
   </div>
 </div>
 
 <!-- 통계 -->
 <div class="stats-row">
-  <div class="stat-item"><div class="stat-n" id="statTotal">-</div><div class="stat-l">전체 지점 수</div></div>
-  <div class="stat-item"><div class="stat-n">24H</div><div class="stat-l">연중무휴 운영</div></div>
-  <div class="stat-item"><div class="stat-n" id="statRegions">-</div><div class="stat-l">운영 지역</div></div>
-  <div class="stat-item"><div class="stat-n">6</div><div class="stat-l">셀프 서비스</div></div>
+  <span class="stat-pill">📍 전체 <b id="statTotal">-</b>개 지점</span>
+  <span class="stat-pill">🕐 <b>24시간</b> 연중무휴</span>
+  <span class="stat-pill">🗺️ <b id="statRegions">-</b>개 지역</span>
+  <span class="stat-pill">🖨️ 셀프 서비스 <b>6종</b></span>
 </div>
 
 <!-- 필터 -->
@@ -306,6 +306,7 @@ function renderFilterBtns(branches){
 function renderStats(branches){
   var regions=new Set(branches.map(function(b){return b.region;}));
   document.getElementById('statTotal').textContent=branches.length;
+  document.getElementById('subTotal').textContent=branches.length+'개 ';
   document.getElementById('statRegions').textContent=regions.size;
 }
 
