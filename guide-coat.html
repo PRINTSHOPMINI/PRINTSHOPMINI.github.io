@@ -262,6 +262,27 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
   .sub-menu{display:flex;flex-wrap:wrap;gap:6px;position:static;min-width:0;box-shadow:none;border:none;border-radius:0;background:transparent;padding:2px 0 8px 14px}
   .sub-menu a{padding:6px 14px;font-size:12.5px;border:1px solid var(--border);border-radius:50px}
 }
+
+/* 코팅기 2종류 안내 / PL-1506 설명서 */
+.machine-pick{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:0 0 34px;max-width:860px}
+.machine-pick-h{grid-column:1/-1;font-size:15px;font-weight:900;color:var(--text);margin-bottom:-2px}
+.mp{display:block;border:2px solid var(--sc);border-radius:var(--radius);background:#fff;padding:18px 20px;transition:transform .18s,box-shadow .18s}
+.mp:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(17,24,39,.1)}
+.mp>b{display:block;font-size:16px;font-weight:900;margin-bottom:4px}
+.mp span b{font-weight:800;color:var(--text)}
+.mp span{display:block;font-size:13.5px;color:var(--text2);line-height:1.6}
+.mp em{display:block;margin-top:9px;font-style:normal;font-weight:800;font-size:13px;color:var(--sc)}
+.mp.dark{border-color:#111827}
+.mp.dark em{color:#111827}
+.manual{margin:0;max-width:800px}
+.manual img{width:100%;height:auto;display:block;border-radius:var(--radius);border:1px solid var(--border);background:#fff;cursor:zoom-in}
+.manual-hint{font-size:12.5px;color:var(--text3);margin:8px 0 8px}
+.lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,.84);z-index:9999;overflow:auto;padding:20px;cursor:zoom-out}
+.lb.on{display:flex}
+.lb img{margin:auto;display:block;width:max(800px,min(96vw,1000px));max-width:none;height:auto;border-radius:8px;background:#fff}
+.lb-x{position:fixed;top:14px;right:18px;width:42px;height:42px;border-radius:50%;border:none;background:#fff;color:#111827;font-size:26px;line-height:1;cursor:pointer;z-index:10000;box-shadow:0 2px 10px rgba(0,0,0,.3)}
+.caution-link{margin:26px 0 0;font-size:14.5px;font-weight:800;color:var(--warn)}
+.caution-link a{text-decoration:underline;text-underline-offset:3px}
 </style>
 </head>
 <body>
@@ -327,7 +348,13 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
       <h2 class="sec-h2">코팅하는 방법 <span class="pill">COATING</span></h2>
     </div>
     <p class="sec-tagline"><b>결제를 먼저 하고, 전원을 켜서 예열이 끝나면 코팅지를 투입하는 서비스입니다.</b> 사용 후에는 반드시 전원을 꺼 주세요.</p>
+    <div class="machine-pick">
+      <div class="machine-pick-h">🔎 코팅기가 두 종류인 매장이 있어요. 매장에 있는 코팅기를 먼저 확인하세요.</div>
+      <a class="mp" href="#safa-steps"><b>흰색 SAFA-100 코팅기</b><span>전원 버튼을 누른 뒤 <b>코팅 버튼을 짧게 2번</b> 눌러 예열하는 코팅기입니다.</span><em>아래 &lt;코팅하는 방법&gt;을 따라 주세요 ↓</em></a>
+      <a class="mp dark" href="#pl1506"><b>검정색 PL-1506 코팅기 (페이퍼프랜드)</b><span>전원 버튼을 누른 뒤 <b>[문서] 버튼</b>을 눌러 예열하는 코팅기입니다.</span><em>&lt;PL-1506 사용방법&gt;을 따라 주세요 ↓</em></a>
+    </div>
     <div id="guideFiles"></div>
+    <div class="subhead" id="safa-steps">흰색 SAFA-100 코팅기 사용방법</div>
     <div class="steps steps-wide">
       <div class="step">
         <div class="step-no">1</div>
@@ -367,8 +394,99 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         <div class="step-note warn">전원을 끄지 않으면 다음 이용자에게 피해가 발생합니다.</div>
       </div>
     </div>
+    <p class="caution-link">⚠️ <a href="#cautions">코팅 주의사항(모든 코팅기 공통)</a>도 꼭 확인해 주세요 ↓</p>
   </div>
 </div>
+
+<div class="sec" id="pl1506" style="--sc:#111827;--sc-light:#EEF0F3">
+  <div class="sec-in">
+    <div class="sec-head">
+      <div class="sec-ico"><svg width="34" height="34" viewBox="0 0 48 48" fill="none"><rect x="6" y="16" width="36" height="20" rx="4" fill="#111827"/><rect x="12" y="10" width="24" height="8" rx="2" stroke="#111827" stroke-width="3"/><rect x="14" y="30" width="20" height="10" rx="2" stroke="#111827" stroke-width="3" fill="#fff"/></svg></div>
+      <h2 class="sec-h2">검정색 코팅기(PL-1506) 사용방법 <span class="pill">PL-1506</span></h2>
+    </div>
+    <p class="sec-tagline"><b>페이퍼프랜드 PL-1506 코팅기 [문서 모드] 전용 설명서입니다.</b> 매장에 검정색 PL-1506 코팅기가 있다면 위쪽 흰색 SAFA-100 코팅기 방법이 아니라 <b>이 방법대로</b> 코팅해 주세요.</p>
+
+    <figure class="manual">
+      <img src="images/coat/coat-pl1506.jpg" alt="페이퍼프랜드 PL-1506 코팅기 문서 모드 전용 사용 설명서 — 사용 방법 7단계와 주의사항 9가지" loading="lazy" onclick="openLb(this.src,this.alt)">
+    </figure>
+    <p class="manual-hint">🔍 이미지를 누르면 크게 볼 수 있습니다. 아래에 같은 내용을 글로도 정리했습니다.</p>
+
+    <div class="subhead">1. 사용 방법</div>
+    <div class="steps steps-wide">
+      <div class="step">
+        <div class="step-no">1</div>
+        <div class="step-h">전원 버튼 누르기</div>
+        <p class="step-p"><b>전원</b> 버튼을 눌러 전원을 켭니다. (전원 ON)</p>
+      </div>
+      <div class="step">
+        <div class="step-no">2</div>
+        <div class="step-h">[문서] 버튼 누르기</div>
+        <p class="step-p"><b>[문서]</b> 버튼을 눌러 문서 모드로 설정합니다.</p>
+      </div>
+      <div class="step">
+        <div class="step-no">3</div>
+        <div class="step-h">예열 대기</div>
+        <p class="step-p">예열에는 <b>약 60초</b>가 걸립니다. <b>READY 표시등이 켜지고 "삑" 소리</b>가 나면 준비 완료입니다.</p>
+      </div>
+      <div class="step">
+        <div class="step-no">4</div>
+        <div class="step-h">인쇄물 넣기</div>
+        <p class="step-p">코팅지 안에 <b>인쇄물을 넣습니다.</b></p>
+      </div>
+      <div class="step">
+        <div class="step-no">5</div>
+        <div class="step-h">막힌 부분부터 수평으로 투입</div>
+        <p class="step-p">코팅지의 <b>막힌 부분부터 수평으로</b> 투입구에 넣습니다.</p>
+      </div>
+      <div class="step">
+        <div class="step-no">6</div>
+        <div class="step-h">자동으로 들어갈 때까지 밀어 넣기</div>
+        <p class="step-p">코팅기가 <b>자동으로 빨아들일 때까지</b> 조심스럽게 밀어 넣습니다.</p>
+      </div>
+      <div class="step">
+        <div class="step-no">7</div>
+        <div class="step-h">배출 확인</div>
+        <p class="step-p">코팅지가 <b>배출되는 것</b>을 확인합니다.</p>
+      </div>
+    </div>
+
+    <p class="caution-link">⚠️ <a href="#cautions">코팅 주의사항(모든 코팅기 공통)</a>도 꼭 확인해 주세요 ↓</p>
+  </div>
+</div>
+
+<div class="sec alt" id="cautions" style="--sc:#D93025;--sc-light:#FEF2F2">
+  <div class="sec-in">
+    <div class="sec-head"><h2 class="sec-h2">코팅 주의사항 <span class="pill">공통</span></h2></div>
+    <p class="sec-tagline"><b>흰색 SAFA-100, 검정색 PL-1506 모든 코팅기에 똑같이 적용됩니다.</b> 코팅하기 전에 꼭 확인해 주세요.</p>
+    <div class="adfw" style="margin-top:0">
+      <div class="adfw-h"><span class="x">!</span>코팅 주의사항 — 꼭 지켜 주세요</div>
+      <div class="adfw-grid">
+        <div class="adfw-box ok">
+          <div class="adfw-t">이렇게 하세요</div>
+          <ul>
+            <li>코팅지의 <b>막힌 부분부터</b> 넣으세요. (필수)</li>
+            <li>손으로 걸쳐 놓지 말고, <b>자동으로 빨려 들어갈 때까지 계속 밀어 넣으세요.</b></li>
+            <li>여러 장을 코팅할 때는 <b>먼저 넣은 코팅지가 나온 뒤</b> 다음 코팅지를 넣으세요.</li>
+            <li>사용이 끝나면 <b>전원 버튼을 눌러 전원을 끄세요.</b></li>
+          </ul>
+        </div>
+        <div class="adfw-box no">
+          <div class="adfw-t">이렇게 하지 마세요</div>
+          <ul>
+            <li><b>인쇄물만</b> 넣지 마세요. (코팅지 없이)</li>
+            <li><b>빈 코팅지만</b> 넣지 마세요. (인쇄물 없이)</li>
+            <li><b>가져온 인쇄물</b>은 사용할 수 없습니다. (규격 외 용지 등 금지)</li>
+            <li><b>가져온 코팅지</b>는 사용할 수 없습니다. (규격 외 용지 등 금지)</li>
+            <li><b>작동 중에는 버튼을 누르지 마세요.</b> (오조작 방지)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 이미지 확대 보기 -->
+<div class="lb" id="lb" onclick="closeLb()"><button class="lb-x" type="button" aria-label="닫기">×</button><img id="lbImg" alt=""></div>
 
 <footer>
   <div class="ft-wrap">
@@ -407,6 +525,9 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 
 <script>
 function toggleMenu(){document.getElementById("navLinks").classList.toggle("show");}
+function openLb(src,alt){var im=document.getElementById('lbImg');im.src=src;im.alt=alt||'';document.getElementById('lb').classList.add('on');document.body.style.overflow='hidden';}
+function closeLb(){document.getElementById('lb').classList.remove('on');document.body.style.overflow='';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb();});
 </script>
 <script>window.GUIDE_SERVICE='coat';</script>
 <script src="service-guides.js"></script>
