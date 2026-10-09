@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>지점 찾기 - 프린트샵미니</title>
+<title>자주 묻는 질문 - 프린트샵미니</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --blue:#1B8AC4;--blue-hover:#1470A8;--blue-light:#E8F4FC;
+  --blue:#1B8AC4;--blue-hover:#1470A8;--blue-light:#E8F4FC;--blue-mid:#4AAAD6;
   --text:#111827;--text2:#374151;--text3:#6B7280;--border:#E5E7EB;
   --bg:#F9FAFB;--white:#FFFFFF;--radius:14px;
 }
@@ -16,6 +16,7 @@ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--white);line-height:1.7;overflow-x:hidden;word-break:keep-all;overflow-wrap:break-word}
 a{text-decoration:none;color:inherit}
 
+/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:70px;display:flex;align-items:center;padding:0 6%}
 .nav-logo{display:flex;align-items:center;gap:10px;flex-shrink:0;margin-right:48px}
 .nav-logo-name{font-size:17px;font-weight:900;color:var(--blue);letter-spacing:-0.5px}
@@ -31,6 +32,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
 .hamburger span{width:22px;height:2px;background:var(--text);border-radius:2px;display:block}
 
+/* PAGE HEADER */
 .page-header{margin-top:70px;background:var(--white);border-bottom:1px solid var(--border);padding:52px 6% 44px}
 .ph-inner{max-width:1160px;margin:0 auto}
 .ph-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:var(--blue);letter-spacing:1px;margin-bottom:14px}
@@ -38,67 +40,23 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .ph-h1{font-size:clamp(28px,4vw,48px);font-weight:900;letter-spacing:-2px;margin-bottom:10px}
 .ph-sub{font-size:15px;color:var(--text3)}
 
-/* FILTER BAR */
-.filter-bar{padding:24px 6%;border-bottom:1px solid var(--border);background:var(--white)}
-.filter-inner{max-width:1160px;margin:0 auto;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.filter-label{font-size:13px;font-weight:700;color:var(--text2)}
-.region-btns{display:flex;gap:6px;flex-wrap:wrap}
-.region-btn{font-size:13px;font-weight:700;padding:7px 18px;border-radius:50px;border:1.5px solid var(--border);color:var(--text3);cursor:pointer;background:var(--white);transition:all .2s}
-.region-btn:hover{border-color:var(--blue);color:var(--blue)}
-.region-btn.on{background:var(--blue);color:white;border-color:var(--blue)}
-.filter-count{margin-left:auto;font-size:13px;color:var(--text3)}
-.filter-count strong{color:var(--blue)}
+/* FAQ */
+.faq-section{padding:56px 6% 90px}
+.faq-inner{max-width:800px;margin:0 auto}
+.faq-list{display:flex;flex-direction:column;gap:12px}
+.faq-item{border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;cursor:pointer;font-size:15px;font-weight:700;background:var(--white);transition:background .15s}
+.faq-q:hover{background:var(--blue-light)}
+.faq-q .q-icon{color:var(--blue);font-size:18px;font-weight:900;flex-shrink:0;transition:transform .25s}
+.faq-a{display:none;padding:16px 24px 20px;font-size:14px;color:var(--text2);line-height:1.9;background:var(--bg);border-top:1px solid var(--border)}
+.faq-item.open .faq-a{display:block}
+.faq-item.open .q-icon{transform:rotate(45deg)}
 
-/* MAIN LAYOUT */
-.branches-wrap{max-width:1160px;margin:0 auto;padding:48px 6%;display:grid;grid-template-columns:380px 1fr;gap:28px;align-items:start}
+.faq-cta{margin-top:28px;background:var(--blue-light);border-radius:12px;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:14px;color:var(--text2)}
+.faq-cta a{font-weight:900;color:var(--blue);white-space:nowrap}
+.faq-cta a:hover{text-decoration:underline}
 
-/* BRANCH LIST */
-.branch-list{display:flex;flex-direction:column;gap:0;max-height:720px;overflow-y:auto;border:1px solid var(--border);border-radius:var(--radius)}
-.branch-list::-webkit-scrollbar{width:4px}
-.branch-list::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
-.region-header{padding:10px 16px;font-size:11px;font-weight:700;color:var(--blue);letter-spacing:1px;background:var(--blue-light);border-bottom:1px solid var(--border);position:sticky;top:0}
-.branch-card{padding:18px 20px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .15s;background:var(--white)}
-.branch-card:last-child{border-bottom:none}
-.branch-card:hover,.branch-card.active{background:var(--blue-light)}
-.branch-card.active .bc-name{color:var(--blue)}
-.bc-name{font-size:15px;font-weight:700;margin-bottom:4px;transition:color .2s}
-.bc-addr{font-size:12px;color:var(--text3);margin-bottom:8px}
-.bc-tags{display:flex;gap:5px;flex-wrap:wrap}
-.bc-t{font-size:10px;font-weight:700;padding:2px 8px;border-radius:50px}
-.t24{background:#ECFDF5;color:#065F46}
-.tpark{background:#FFF7ED;color:#92400E}
-.topen{background:var(--blue-light);color:var(--blue)}
-.ta3{background:#F3E8FF;color:#6B21A8}
-
-/* MAP / DETAIL PANEL */
-.detail-panel{position:sticky;top:110px}
-.map-box{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;min-height:340px;display:flex;flex-direction:column}
-.map-visual{flex:1;position:relative;overflow:hidden;min-height:280px;background:linear-gradient(135deg,#E8F4FC 0%,#F0F9FF 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px}
-.map-pin{font-size:48px;animation:bounce 1.2s ease-in-out infinite}
-@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-.map-name{font-size:18px;font-weight:900;color:var(--blue)}
-.map-addr-text{font-size:13px;color:var(--text3)}
-.map-btns{display:flex;gap:10px;padding:16px 20px;border-top:1px solid var(--border);background:var(--white)}
-.map-btn{flex:1;text-align:center;padding:10px;border-radius:8px;font-size:13px;font-weight:700;border:1px solid var(--border);transition:all .2s;cursor:pointer}
-.map-btn:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-light)}
-.map-btn.primary{background:var(--blue);color:white;border-color:var(--blue)}
-.map-btn.primary:hover{background:var(--blue-hover)}
-
-/* BRANCH DETAIL CARD */
-.branch-detail{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:28px;margin-top:16px}
-.bd-title{font-size:18px;font-weight:900;margin-bottom:16px;letter-spacing:-.5px}
-.bd-rows{display:flex;flex-direction:column;gap:10px}
-.bd-row{display:flex;gap:12px;font-size:13px}
-.bd-key{width:60px;font-weight:700;color:var(--text2);flex-shrink:0}
-.bd-val{color:var(--text3);line-height:1.6}
-.bd-services{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
-
-/* STATS ROW */
-.stats-row{max-width:1160px;margin:0 auto;padding:0 6% 40px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.stat-item{background:var(--bg);border-radius:var(--radius);padding:20px 24px;text-align:center;border:1px solid var(--border)}
-.stat-n{font-size:32px;font-weight:900;color:var(--blue)}
-.stat-l{font-size:12px;color:var(--text3);margin-top:4px}
-
+/* FOOTER */
 footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 .ft-inner{max-width:1160px;margin:0 auto}
 .ft-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;margin-bottom:48px}
@@ -114,11 +72,10 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 .chat-fab:hover{transform:scale(1.1)}
 
 @media(max-width:900px){
-  .branches-wrap{grid-template-columns:1fr;padding:32px 5%}
-  .detail-panel{position:static}
-  .stats-row{grid-template-columns:repeat(2,1fr);padding:0 5% 32px}
   .nav-links{display:none}
   .hamburger{display:flex}
+}
+@media(max-width:600px){
 }
 
 /* 메뉴 하위(드롭다운) */
@@ -137,8 +94,9 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-  <a href="index.html" class="nav-logo"><div class="nav-logo-name">🦝 프린트샵미니</div></a>
+  <div class="nav-logo"><a href="index.html" class="nav-logo-name">🦝 프린트샵미니</a></div>
   <ul class="nav-links">
     <li><a href="services.html">서비스</a></li>
     <li class="has-sub"><a href="guide.html">사용방법</a>
@@ -151,9 +109,9 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
         <li><a href="guide-bind.html">제본</a></li>
       </ul>
     </li>
-    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="faq.html" class="active">FAQ</a></li>
     <li><a href="about.html">소개</a></li>
-    <li><a href="branches.html" class="active">지점찾기</a></li>
+    <li><a href="branches.html">지점찾기</a></li>
     <li><a href="community.html">커뮤니티</a></li>
   </ul>
   <div class="nav-right">
@@ -163,60 +121,24 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
   <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
 </nav>
 
+<!-- PAGE HEADER -->
 <div class="page-header">
   <div class="ph-inner">
-    <div class="ph-eyebrow">BRANCHES</div>
-    <h1 class="ph-h1">지점 찾기</h1>
-    <p class="ph-sub">경기권 15개 지점 — 가장 가까운 프린트샵미니를 찾아보세요</p>
+    <div class="ph-eyebrow">FAQ</div>
+    <h1 class="ph-h1">자주 묻는 질문</h1>
+    <p class="ph-sub">이용 중 궁금한 점을 모았습니다. 답을 찾지 못하셨다면 아래 이메일 문의를 이용해 주세요.</p>
   </div>
 </div>
 
-<!-- 통계 -->
-<div class="stats-row">
-  <div class="stat-item"><div class="stat-n" id="statTotal">-</div><div class="stat-l">전체 지점 수</div></div>
-  <div class="stat-item"><div class="stat-n">24H</div><div class="stat-l">연중무휴 운영</div></div>
-  <div class="stat-item"><div class="stat-n" id="statRegions">-</div><div class="stat-l">운영 지역</div></div>
-  <div class="stat-item"><div class="stat-n">6</div><div class="stat-l">셀프 서비스</div></div>
-</div>
-
-<!-- 필터 -->
-<div class="filter-bar">
-  <div class="filter-inner">
-    <span class="filter-label">지역 선택</span>
-    <div class="region-btns" id="regionBtns">
-      <div class="region-btn on" onclick="filterRegion('전체',this)">전체</div>
+<!-- FAQ -->
+<div class="faq-section" id="faq">
+  <div class="faq-inner">
+    <div class="faq-list" id="faqList">
+      <div style="text-align:center;padding:40px;color:var(--text3)">불러오는 중...</div>
     </div>
-    <span class="filter-count">총 <strong id="visibleCount">-</strong>개 지점</span>
-  </div>
-</div>
-
-<!-- 지점 목록 + 지도 -->
-<div class="branches-wrap">
-  <!-- 지점 목록 -->
-  <div class="branch-list" id="branchList">
-    <div style="padding:32px;text-align:center;color:var(--text3)">지점 정보를 불러오는 중...</div>
-  </div>
-
-  <!-- 상세 패널 -->
-  <div class="detail-panel">
-    <div class="map-box">
-      <div id="mapIframeWrap" class="map-visual">
-        <div class="map-pin">📍</div>
-        <div class="map-name" id="mapName">지점을 선택해 주세요</div>
-        <div class="map-addr-text" id="mapAddr">왼쪽 목록에서 원하는 지점을 클릭하세요</div>
-      </div>
-      <div class="map-btns">
-        <a id="naverMapBtn" class="map-btn" href="#" target="_blank" style="pointer-events:none;opacity:0.4">🗺️ 네이버 지도로 보기</a>
-      </div>
-    </div>
-
-    <div class="branch-detail" id="branchDetail" style="display:none">
-      <div class="bd-title" id="detailName">지점명</div>
-      <div class="bd-rows">
-        <div class="bd-row"><span class="bd-key">📍 주소</span><span class="bd-val" id="detailAddr" style="line-height:1.6">-</span></div>
-        <div class="bd-row"><span class="bd-key">⏰ 운영</span><span class="bd-val">24시간 365일 연중무휴</span></div>
-        <div class="bd-row"><span class="bd-key">🖨️ 서비스</span><span class="bd-val">인쇄 ·&nbsp;복사 ·&nbsp;스캔 ·&nbsp;팩스 ·&nbsp;코팅 ·&nbsp;제본</span></div>
-      </div>
+    <div class="faq-cta">
+      <span>원하는 답을 찾지 못하셨나요?</span>
+      <a href="#" onclick="openEmailPopup();return false;">이메일 문의하기 →</a>
     </div>
   </div>
 </div>
@@ -237,119 +159,33 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 var SB_URL='https://wbcfciiuiootbdezxfwy.supabase.co';
 var SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndiY2ZjaWl1aW9vdGJkZXp4Znd5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc1MjkyMTQsImV4cCI6MjA5MzEwNTIxNH0.UV4ukUXuAYKAqq85B4FTHO2BtIOqPaBHgAJN5lqyU5s';
 var SB_HDR={'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY};
-var branchesCache=[];
+function escH(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 
-async function loadBranches(){
+async function loadFaqs(){
   try{
-    var r=await fetch(SB_URL+'/rest/v1/branches?order=region,sort_order,name',{headers:SB_HDR});
+    var r=await fetch(SB_URL+'/rest/v1/faqs?order=sort_order',{headers:SB_HDR});
     var data=await r.json();
-    if(!Array.isArray(data))throw new Error();
-    branchesCache=data;
-    renderBranches(data);
-    renderFilterBtns(data);
-    renderStats(data);
+    var list=document.getElementById('faqList');
+    if(!data||!data.length){list.innerHTML='<div style="text-align:center;padding:40px;color:var(--text3)">FAQ가 없습니다.</div>';return;}
+    list.innerHTML=data.map(function(f){
+      return '<div class="faq-item" onclick="toggleFaq(this)">'+
+        '<div class="faq-q">'+escH(f.question)+' <span class="q-icon">+</span></div>'+
+        '<div class="faq-a">'+escH(f.answer).replace(/\n/g,'<br>')+'</div>'+
+      '</div>';
+    }).join('');
   }catch(e){
-    document.getElementById('branchList').innerHTML='<div style="padding:32px;text-align:center;color:var(--text3)">지점 정보를 불러오지 못했습니다.</div>';
+    document.getElementById('faqList').innerHTML='<div style="text-align:center;padding:40px;color:#EF4444">FAQ를 불러오지 못했습니다.</div>';
   }
 }
 
-function renderBranches(branches){
-  var list=document.getElementById('branchList');
-  if(!branches.length){list.innerHTML='<div style="padding:32px;text-align:center;color:var(--text3)">등록된 지점이 없습니다.</div>';return;}
-  var regions={};
-  var regionOrder=[];
-  branches.forEach(function(b){
-    if(!regions[b.region]){regions[b.region]=[];regionOrder.push(b.region);}
-    regions[b.region].push(b);
-  });
-  var html='';
-  regionOrder.forEach(function(region){
-    var list=regions[region];
-    html+='<div class="region-header" data-region="'+region+'">'+region+' · '+list.length+'개 지점</div>';
-    list.forEach(function(b){
-      html+='<div class="branch-card" data-id="'+b.id+'" data-region="'+escHtml(b.region)+'" onclick="selectBranchById(this,'+b.id+')">'+
-        '<div class="bc-name">프린트샵미니 '+escHtml(b.name)+'</div>'+
-        '<div class="bc-tags">'+
-          (b.hours24!==false?'<span class="bc-t t24">⏰ 24H</span>':'')+
-          (b.subway?'<span class="bc-t topen">🚇 역세권</span>':'')+
-          (b.parking?'<span class="bc-t tpark">🅿️ 주차</span>':'')+
-        '</div>'+
-      '</div>';
-    });
-  });
-  document.getElementById('branchList').innerHTML=html;
-}
+loadFaqs();
 
-function renderFilterBtns(branches){
-  var regions={};
-  branches.forEach(function(b){regions[b.region]=(regions[b.region]||0)+1;});
-  var html='<div class="region-btn on" onclick="filterRegion(\'전체\',this)">전체</div>';
-  Object.keys(regions).forEach(function(r){
-    html+='<div class="region-btn" onclick="filterRegion(\''+r+'\',this)">📍 '+r+' ('+regions[r]+')</div>';
-  });
-  document.getElementById('regionBtns').innerHTML=html;
-  document.getElementById('visibleCount').textContent=branches.length;
-}
-
-function renderStats(branches){
-  var regions=new Set(branches.map(function(b){return b.region;}));
-  document.getElementById('statTotal').textContent=branches.length;
-  document.getElementById('statRegions').textContent=regions.size;
-}
-
-function selectBranchById(el,id){
-  var b=branchesCache.find(function(x){return x.id===id;});
-  if(!b)return;
-  document.querySelectorAll('.branch-card').forEach(function(c){c.classList.remove('active')});
-  el.classList.add('active');
-  var naverUrl='https://map.naver.com/p/entry/place/'+b.naver_place_id;
-  var wrap=document.getElementById('mapIframeWrap');
-  wrap.style.cssText='';
-  wrap.innerHTML=
-    '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:36px 24px;width:100%;text-align:center">'+
-      '<div style="font-size:54px;filter:drop-shadow(0 4px 12px rgba(27,138,196,0.25))">📍</div>'+
-      '<div style="font-size:17px;font-weight:900;color:#1B8AC4;letter-spacing:-.3px">프린트샵미니 '+escHtml(b.name)+'</div>'+
-      '<div style="font-size:12px;color:#6B7280;line-height:1.9;max-width:300px;word-break:keep-all">'+escHtml(b.address)+'</div>'+
-      '<a href="'+naverUrl+'" target="_blank" '+
-        'style="margin-top:8px;background:#03C75A;color:white;font-size:14px;font-weight:700;padding:13px 32px;border-radius:10px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 16px rgba(3,199,90,0.35);transition:transform .15s,box-shadow .15s" '+
-        'onmouseover="this.style.transform=\'scale(1.04)\';this.style.boxShadow=\'0 6px 20px rgba(3,199,90,0.45)\'" '+
-        'onmouseout="this.style.transform=\'scale(1)\';this.style.boxShadow=\'0 4px 16px rgba(3,199,90,0.35)\'">'+'🗺️ 네이버 지도로 보기'+
-      '</a>'+
-    '</div>';
-  document.getElementById('naverMapBtn').style.display='none';
-  var d=document.getElementById('branchDetail');
-  d.style.display='block';
-  document.getElementById('detailName').textContent='프린트샵미니 '+b.name;
-  document.getElementById('detailAddr').textContent=b.address;
-}
-
-function filterRegion(region,btn){
-  document.querySelectorAll('.region-btn').forEach(function(b){b.classList.remove('on')});
-  btn.classList.add('on');
-  var cards=document.querySelectorAll('.branch-card');
-  var headers=document.querySelectorAll('.region-header');
-  var count=0;
-  cards.forEach(function(c){
-    var show=region==='전체'||c.dataset.region===region;
-    c.style.display=show?'':'none';
-    if(show)count++;
-  });
-  headers.forEach(function(h){
-    var show=region==='전체'||h.dataset.region===region;
-    h.style.display=show?'':'none';
-  });
-  document.getElementById('visibleCount').textContent=count;
-}
-
-function escHtml(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
-
+function toggleFaq(item){item.classList.toggle('open')}
 function toggleMenu(){
   var m=document.querySelector('.nav-links');
   if(m.style.display==='flex'){m.style.display='';return;}
   Object.assign(m.style,{display:'flex',flexDirection:'column',position:'fixed',top:'70px',left:'0',right:'0',background:'white',padding:'16px 6%',borderBottom:'1px solid #E5E7EB',zIndex:'299',gap:'2px'});
 }
-
-loadBranches();
 </script>
 
 <!-- 이메일 문의 팝업 -->

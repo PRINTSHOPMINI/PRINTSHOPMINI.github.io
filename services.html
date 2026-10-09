@@ -44,7 +44,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .svc-nav{background:var(--bg);border-bottom:1px solid var(--border);padding:0 6%;position:sticky;top:70px;z-index:100}
 .svc-nav-inner{max-width:1160px;margin:0 auto;display:flex;gap:0;overflow-x:auto}
 .svc-nav-inner::-webkit-scrollbar{display:none}
-.svc-nav-item{padding:16px 20px;font-size:13px;font-weight:700;color:var(--text3);white-space:nowrap;cursor:pointer;border-bottom:2px solid transparent;transition:all .2s}
+.svc-nav-item{display:block;padding:16px 20px;font-size:13px;font-weight:700;color:var(--text3);white-space:nowrap;cursor:pointer;border-bottom:2px solid transparent;transition:all .2s}
 .svc-nav-item:hover,.svc-nav-item.on{color:var(--blue);border-bottom-color:var(--blue)}
 
 /* SECTION */
@@ -75,6 +75,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .svc-more{margin-top:22px;display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:900;color:var(--blue);transition:gap .2s}
 .svc-more:hover{gap:10px}
 
+.svc-list.single{grid-template-columns:1fr;max-width:720px;margin:0 auto}
+.svc-list.single .svc-item{padding:40px 36px}
+.svc-list.single .svc-desc-long{font-size:16px}
+
 /* PRICE TABLE */
 .price-section{padding:80px 6%;background:var(--bg)}
 .price-inner{max-width:1160px;margin:0 auto}
@@ -91,18 +95,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .price-r:last-child{border-bottom:none}
 .price-r-label{color:var(--text2)}
 .price-r-val{font-weight:700;color:var(--blue)}
-
-/* FAQ */
-.faq-section{padding:80px 6%}
-.faq-inner{max-width:800px;margin:0 auto}
-.faq-list{display:flex;flex-direction:column;gap:12px}
-.faq-item{border:1px solid var(--border);border-radius:12px;overflow:hidden}
-.faq-q{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;cursor:pointer;font-size:15px;font-weight:700;background:var(--white);transition:background .15s}
-.faq-q:hover{background:var(--blue-light)}
-.faq-q .q-icon{color:var(--blue);font-size:18px;font-weight:900;flex-shrink:0;transition:transform .25s}
-.faq-a{display:none;padding:16px 24px 20px;font-size:14px;color:var(--text2);line-height:1.9;background:var(--bg);border-top:1px solid var(--border)}
-.faq-item.open .faq-a{display:block}
-.faq-item.open .q-icon{transform:rotate(45deg)}
 
 /* FOOTER */
 footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
@@ -160,6 +152,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
         <li><a href="guide-bind.html">제본</a></li>
       </ul>
     </li>
+    <li><a href="faq.html">FAQ</a></li>
     <li><a href="about.html">소개</a></li>
     <li><a href="branches.html">지점찾기</a></li>
     <li><a href="community.html">커뮤니티</a></li>
@@ -180,17 +173,17 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
   </div>
 </div>
 
-<!-- 서비스 빠른 이동 -->
+<!-- 서비스 탭 (누르면 해당 서비스 내용으로 바뀝니다) -->
 <div class="svc-nav">
   <div class="svc-nav-inner">
-    <div class="svc-nav-item on" onclick="goSection('print',this)">🖨️ 인쇄</div>
-    <div class="svc-nav-item" onclick="goSection('copy',this)">📋 복사</div>
-    <div class="svc-nav-item" onclick="goSection('scan',this)">📄 스캔</div>
-    <div class="svc-nav-item" onclick="goSection('fax',this)">📠 팩스</div>
-    <div class="svc-nav-item" onclick="goSection('coat',this)">✨ 코팅</div>
-    <div class="svc-nav-item" onclick="goSection('bind',this)">📚 제본</div>
-    <div class="svc-nav-item" onclick="goSection('price',this)">💰 요금표</div>
-    <div class="svc-nav-item" onclick="goSection('faq',this)">❓ FAQ</div>
+    <a class="svc-nav-item on" href="#all" data-view="all" onclick="goView('all',event)">전체</a>
+    <a class="svc-nav-item" href="#print" data-view="print" onclick="goView('print',event)">🖨️ 인쇄</a>
+    <a class="svc-nav-item" href="#copy" data-view="copy" onclick="goView('copy',event)">📋 복사</a>
+    <a class="svc-nav-item" href="#scan" data-view="scan" onclick="goView('scan',event)">📄 스캔</a>
+    <a class="svc-nav-item" href="#fax" data-view="fax" onclick="goView('fax',event)">📠 팩스</a>
+    <a class="svc-nav-item" href="#coat" data-view="coat" onclick="goView('coat',event)">✨ 코팅</a>
+    <a class="svc-nav-item" href="#bind" data-view="bind" onclick="goView('bind',event)">📚 제본</a>
+    <a class="svc-nav-item" href="#price" data-view="price" onclick="goView('price',event)">💰 요금표</a>
   </div>
 </div>
 
@@ -291,17 +284,6 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
   </div>
 </div>
 
-<!-- FAQ -->
-<div class="faq-section" id="faq">
-  <div class="faq-inner">
-    <div class="sec-eyebrow">FAQ</div>
-    <h2 class="sec-h2">자주 묻는 질문</h2>
-    <div class="faq-list" id="faqList">
-      <div style="text-align:center;padding:40px;color:var(--text3)">불러오는 중...</div>
-    </div>
-  </div>
-</div>
-
 <!-- FOOTER -->
 <footer>
   <div class="ft-inner">
@@ -351,35 +333,35 @@ async function loadPriceItems(){
   }
 }
 
-async function loadFaqs(){
-  try{
-    var r=await fetch(SB_URL+'/rest/v1/faqs?order=sort_order',{headers:SB_HDR});
-    var data=await r.json();
-    var list=document.getElementById('faqList');
-    if(!data||!data.length){list.innerHTML='<div style="text-align:center;padding:40px;color:var(--text3)">FAQ가 없습니다.</div>';return;}
-    list.innerHTML=data.map(function(f){
-      return '<div class="faq-item" onclick="toggleFaq(this)">'+
-        '<div class="faq-q">'+escH(f.question)+' <span class="q-icon">+</span></div>'+
-        '<div class="faq-a">'+escH(f.answer).replace(/\n/g,'<br>')+'</div>'+
-      '</div>';
-    }).join('');
-  }catch(e){
-    document.getElementById('faqList').innerHTML='<div style="text-align:center;padding:40px;color:#EF4444">FAQ를 불러오지 못했습니다.</div>';
-  }
-}
-
 loadPriceItems();
-loadFaqs();
 
-function toggleFaq(item){item.classList.toggle('open')}
-function goSection(id,el){
-  var target=document.getElementById(id);
-  if(!target)return;
-  var offset=target.getBoundingClientRect().top+window.pageYOffset-140;
-  window.scrollTo({top:offset,behavior:'smooth'});
-  document.querySelectorAll('.svc-nav-item').forEach(function(i){i.classList.remove('on')});
-  el.classList.add('on');
+/* 상단 탭: 눌러도 같은 화면에서 안 바뀌던 문제 → 탭 내용 전환 방식 */
+var SVC_VIEWS=['print','copy','scan','fax','coat','bind'];
+function showView(v){
+  var single=SVC_VIEWS.indexOf(v)!==-1;
+  if(!single&&v!=='price')v='all';
+  document.querySelectorAll('.svc-nav-item').forEach(function(i){i.classList.toggle('on',i.getAttribute('data-view')===v)});
+  document.getElementById('svc-intro').style.display=(v==='price')?'none':'';
+  document.getElementById('price').style.display=single?'none':'';
+  document.querySelector('.svc-list').classList.toggle('single',single);
+  document.querySelectorAll('.svc-item').forEach(function(i){i.style.display=(single&&i.id!==v)?'none':''});
+  var on=document.querySelector('.svc-nav-item.on');
+  if(on&&on.scrollIntoView){try{on.scrollIntoView({block:'nearest',inline:'center'})}catch(e){}}
 }
+function toTabBar(smooth){
+  var bar=document.querySelector('.svc-nav');
+  window.scrollTo({top:Math.max(0,bar.offsetTop-70),behavior:smooth?'smooth':'auto'});
+}
+function goView(v,e){
+  if(e)e.preventDefault();
+  showView(v);
+  if(window.history&&history.pushState)history.pushState(null,'','#'+v);else location.hash=v;
+  toTabBar(true);
+}
+window.addEventListener('popstate',function(){showView(location.hash.replace('#',''))});
+window.addEventListener('hashchange',function(){showView(location.hash.replace('#',''))});
+showView(location.hash.replace('#',''));
+if(location.hash)setTimeout(function(){toTabBar(false)},0);
 function toggleMenu(){
   var m=document.querySelector('.nav-links');
   if(m.style.display==='flex'){m.style.display='';return;}

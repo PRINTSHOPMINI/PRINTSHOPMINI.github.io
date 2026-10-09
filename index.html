@@ -369,7 +369,9 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 .sub-menu{display:none;position:absolute;top:100%;left:0;min-width:128px;background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:0 12px 32px rgba(17,24,39,.12);padding:8px;list-style:none;z-index:310}
 .has-sub:hover>.sub-menu,.has-sub:focus-within>.sub-menu{display:block}
 .sub-menu a{display:block;font-size:13.5px;white-space:nowrap}
-@media(max-width:680px){
+@media(max-width:900px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
   .nav-links{max-height:calc(100vh - 70px);overflow-y:auto}
   .has-sub>a::after{display:none}
   .sub-menu{display:flex;flex-wrap:wrap;gap:6px;position:static;min-width:0;box-shadow:none;border:none;border-radius:0;background:transparent;padding:2px 0 8px 14px}
@@ -397,6 +399,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         <li><a href="guide-bind.html">제본</a></li>
       </ul>
     </li>
+    <li><a href="faq.html">FAQ</a></li>
     <li><a href="about.html">소개</a></li>
     <li><a href="branches.html">지점찾기</a></li>
     <li><a href="community.html">커뮤니티</a></li>
