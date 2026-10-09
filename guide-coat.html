@@ -283,6 +283,24 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 .lb-x{position:fixed;top:14px;right:18px;width:42px;height:42px;border-radius:50%;border:none;background:#fff;color:#111827;font-size:26px;line-height:1;cursor:pointer;z-index:10000;box-shadow:0 2px 10px rgba(0,0,0,.3)}
 .caution-link{margin:26px 0 0;font-size:14.5px;font-weight:800;color:var(--warn)}
 .caution-link a{text-decoration:underline;text-underline-offset:3px}
+
+.pl-look{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:0 0 18px;max-width:960px}
+.pl-fig{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:14px;margin:0}
+.pl-fig svg{width:100%;height:auto;display:block}
+.pl-fig figcaption{font-size:13px;color:var(--text2);margin-top:8px;font-weight:700;line-height:1.5}
+.pl-legend{list-style:none;margin:0 0 28px;padding:0;max-width:960px;display:grid;gap:8px}
+.pl-legend li{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6}
+.pl-legend li>div{flex:1;min-width:0}
+.pl-legend li span{flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:var(--blue);color:#fff;font-size:12.5px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.pl-legend li.no{background:#FEF2F2;border:2px solid #E4574D;border-radius:10px;padding:10px 14px;color:#8A1C15;font-weight:600}
+.pl-legend li.no span{background:#D93025}
+.pl-legend li.no b{color:#B31E16;font-weight:900}
+.prestep{background:#FFF8E6;border:2px solid #F2C94C;border-radius:var(--radius);padding:18px 22px;margin:0 0 30px;max-width:960px}
+.prestep-h{font-size:16px;font-weight:900;color:#5C4300;margin-bottom:8px}
+.prestep-h span{font-size:12.5px;font-weight:700;color:#8A6A00;margin-left:6px}
+.prestep ol{margin:0;padding-left:20px}
+.prestep li{font-size:14.2px;color:#5C4300;line-height:1.7;margin-bottom:3px}
+.prestep li b{color:#3E2D00;font-weight:800}
 </style>
 </head>
 <body>
@@ -326,7 +344,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
   <div class="ph-inner">
     <div class="ph-eyebrow">GUIDE · COATING</div>
     <h1 class="ph-h1">코팅 사용방법</h1>
-    <p class="ph-sub">인쇄물을 코팅지에 넣어 코팅하는 방법입니다. 결제를 먼저 해 주세요.</p>
+    <p class="ph-sub">인쇄물을 코팅지에 넣어 코팅하는 방법입니다. 코팅지 수량을 확인하고 결제를 먼저 해 주세요.</p>
   </div>
 </div>
 
@@ -347,7 +365,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
       <div class="sec-ico"><svg width="34" height="34" viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="28" height="34" rx="3" stroke="#7C3AED" stroke-width="3"/><path d="M14 18h16M14 26h16M14 34h9" stroke="#7C3AED" stroke-width="3" stroke-linecap="round"/><path d="M40 4l1.7 4.3L46 10l-4.3 1.7L40 16l-1.7-4.3L34 10l4.3-1.7z" fill="#7C3AED"/></svg></div>
       <h2 class="sec-h2">코팅하는 방법 <span class="pill">COATING</span></h2>
     </div>
-    <p class="sec-tagline"><b>결제를 먼저 하고, 전원을 켜서 예열이 끝나면 코팅지를 투입하는 서비스입니다.</b> 사용 후에는 반드시 전원을 꺼 주세요.</p>
+    <p class="sec-tagline"><b>코팅지 수량을 확인하고 결제를 먼저 한 뒤, 전원을 켜서 예열이 끝나면 코팅지를 투입하는 서비스입니다.</b> 사용 후에는 반드시 전원을 꺼 주세요.</p>
     <div class="machine-pick">
       <div class="machine-pick-h">🔎 코팅기가 두 종류인 매장이 있어요. 매장에 있는 코팅기를 먼저 확인하세요.</div>
       <a class="mp" href="#safa-steps"><b>흰색 SAFA-100 코팅기</b><span>전원 버튼을 누른 뒤 <b>코팅 버튼을 짧게 2번</b> 눌러 예열하는 코팅기입니다.</span><em>아래 &lt;코팅하는 방법&gt;을 따라 주세요 ↓</em></a>
@@ -358,9 +376,9 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
     <div class="steps steps-wide">
       <div class="step">
         <div class="step-no">1</div>
-        <div class="step-h">결제 먼저!</div>
-        <p class="step-p">기계 옆 키오스크에서 <b>매수를 선택하고 카드로 결제</b>하세요.</p>
-        <div class="step-note warn">⚠️ <b>반드시 결제를 먼저</b> 하세요</div>
+        <div class="step-h">코팅지 확인 · 결제 먼저!</div>
+        <p class="step-p">코팅하기 전에 <b>이용할 코팅지 수량이 있는지 먼저 확인</b>하세요.<br>수량이 있으면 기계 옆 키오스크에서 <b>매수를 선택하고 카드로 결제</b>한 뒤 코팅을 시작합니다.</p>
+        <div class="step-note warn">⚠️ <b>수량 확인 → 결제 → 코팅</b> 순서입니다. 반드시 결제를 먼저 하세요</div>
       </div>
       <div class="step step-dual">
         <div class="step-no">2</div>
@@ -406,10 +424,80 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
     </div>
     <p class="sec-tagline"><b>페이퍼프랜드 PL-1506 코팅기 [문서 모드] 전용 설명서입니다.</b> 매장에 검정색 PL-1506 코팅기가 있다면 위쪽 흰색 SAFA-100 코팅기 방법이 아니라 <b>이 방법대로</b> 코팅해 주세요.</p>
 
+    <div class="pl-look">
+      <figure class="pl-fig"><svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="검정색 PL-1506 코팅기를 위에서 본 일러스트. 사진, 무열코팅 버튼은 사용하지 않습니다.">
+  <ellipse cx="320" cy="262" rx="270" ry="14" fill="#000" opacity=".08"/>
+  <rect x="190" y="12" width="300" height="38" rx="9" fill="#2B3036"/>
+  <rect x="200" y="20" width="280" height="6" rx="3" fill="#3A4048"/>
+  <rect x="50" y="44" width="540" height="172" rx="28" fill="#12161B"/>
+  <rect x="58" y="52" width="524" height="156" rx="21" fill="none" stroke="#D3D9DF" stroke-width="5"/>
+  <path d="M70 62 L250 62 L150 200 L70 200 Z" fill="#fff" opacity=".05"/>
+  <text x="218" y="190" text-anchor="middle" font-size="22" font-weight="800" fill="#F3F5F7" letter-spacing=".5">Paper Friend <tspan font-size="17" font-weight="700">PL-1506</tspan></text>
+  <rect x="438" y="62" width="132" height="134" rx="16" fill="#1E2328" stroke="#353C45" stroke-width="3"/>
+  <g font-size="12" font-weight="800" fill="#E7EBEF" text-anchor="middle">
+    <rect x="446" y="70" width="84" height="25" rx="12.5" fill="#343B45"/><text x="488" y="87">역회전</text>
+    <rect x="446" y="101" width="84" height="25" rx="12.5" fill="#3A414C"/><text x="494" y="118">문서</text><circle cx="459" cy="113.5" r="4.2" fill="#E5483B"/>
+    <g opacity=".5"><rect x="446" y="132" width="84" height="25" rx="12.5" fill="#343B45"/><text x="488" y="149">사진</text>
+    <rect x="446" y="163" width="84" height="25" rx="12.5" fill="#343B45"/><text x="488" y="180">무열코팅</text></g>
+  </g>
+  <g stroke="#E5483B" stroke-width="4" stroke-linecap="round">
+    <path d="M472 136 L504 153 M504 136 L472 153"/><path d="M472 167 L504 184 M504 167 L472 184"/>
+  </g>
+  <circle cx="546" cy="80" r="4" fill="#35C759"/><circle cx="546" cy="96" r="4" fill="#E5483B"/>
+  <circle cx="548" cy="148" r="14" fill="#2A3038" stroke="#C9CFD6" stroke-width="2.4"/>
+  <path d="M548 138 v9" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><path d="M541 142 a9 9 0 1 0 14 0" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+  <rect x="62" y="212" width="516" height="7" rx="3.5" fill="#8E969E"/>
+  <path d="M74 219 H430 L446 282 H90 Z" fill="#2B3036" opacity=".82" stroke="#4A525B" stroke-width="2"/>
+  <path d="M128 232 v26 M200 232 v26 M272 232 v26 M344 232 v26" stroke="#4A525B" stroke-width="2"/>
+  <text x="258" y="272" text-anchor="middle" font-size="12" font-weight="700" fill="#9AA3AD">코팅지 넣는 곳</text>
+</svg><figcaption>검정색 · Paper Friend PL-1506 (위에서 본 모습)</figcaption></figure>
+      <figure class="pl-fig"><svg viewBox="0 0 580 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PL-1506 조작 버튼 확대 일러스트 — 1 전원 버튼, 2 문서 버튼, 3 READY 표시등. 사진·무열코팅 버튼에는 X 표시가 있습니다.">
+  <rect x="8" y="8" width="564" height="324" rx="30" fill="#12161B"/>
+  <rect x="16" y="16" width="548" height="308" rx="24" fill="none" stroke="#D3D9DF" stroke-width="6"/>
+  <rect x="40" y="38" width="500" height="264" rx="22" fill="#1E2328" stroke="#353C45" stroke-width="3"/>
+  <g font-size="19" font-weight="800" fill="#E7EBEF" text-anchor="middle">
+    <rect x="64" y="54" width="190" height="46" rx="23" fill="#343B45"/><text x="159" y="84">역회전</text>
+    <rect x="64" y="116" width="190" height="46" rx="23" fill="#3A414C" stroke="#1B8AC4" stroke-width="5"/><text x="168" y="146">문서</text><circle cx="96" cy="139" r="7" fill="#E5483B"/>
+    <g opacity=".5"><rect x="64" y="178" width="190" height="46" rx="23" fill="#343B45"/><text x="159" y="208">사진</text>
+    <rect x="64" y="240" width="190" height="46" rx="23" fill="#343B45"/><text x="159" y="270">무열코팅</text></g>
+  </g>
+  <g stroke="#E5483B" stroke-width="7" stroke-linecap="round">
+    <path d="M110 186 L208 216 M208 186 L110 216"/><path d="M110 248 L208 278 M208 248 L110 278"/>
+  </g>
+  <g font-size="12" font-weight="800" fill="#AEB6BF">
+    <circle cx="318" cy="78" r="8" fill="#35C759"/><text x="334" y="83">READY</text>
+    <circle cx="318" cy="112" r="8" fill="#E5483B"/><text x="334" y="117">POWER</text>
+  </g>
+  <circle cx="420" cy="210" r="44" fill="none" stroke="#1B8AC4" stroke-width="5"/>
+  <circle cx="420" cy="210" r="34" fill="#2A3038" stroke="#C9CFD6" stroke-width="3.4"/>
+  <path d="M420 190 v20" stroke="#fff" stroke-width="5" stroke-linecap="round"/><path d="M405 198 a22 22 0 1 0 30 0" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+  <g font-size="17" font-weight="900" fill="#fff" text-anchor="middle">
+    <circle cx="470" cy="164" r="15" fill="#1B8AC4"/><text x="470" y="170">1</text>
+    <circle cx="36" cy="139" r="15" fill="#1B8AC4"/><text x="36" y="145">2</text>
+    <circle cx="424" cy="78" r="15" fill="#1B8AC4"/><text x="424" y="84">3</text>
+  </g>
+</svg><figcaption>조작 버튼 확대</figcaption></figure>
+    </div>
+    <ul class="pl-legend">
+      <li><span>1</span><div><b>전원 버튼</b> — 눌러서 전원을 켭니다.</div></li>
+      <li><span>2</span><div><b>[문서] 버튼</b> — 눌러서 문서 모드로 설정합니다.</div></li>
+      <li><span>3</span><div><b>READY 표시등</b> — 켜지고 "삑" 소리가 나면 예열이 끝난 것입니다. (약 60초)</div></li>
+      <li class="no"><span>✕</span><div><b>[사진] · [무열코팅] 버튼은 절대 누르지 마세요.</b> 반드시 <b>[문서] 모드만</b> 이용하세요.</div></li>
+    </ul>
+
+    <div class="prestep">
+      <div class="prestep-h">🧾 코팅 시작 전에 먼저! <span>흰색 SAFA-100 · 검정색 PL-1506 공통</span></div>
+      <ol>
+        <li><b>이용할 코팅지 수량이 있는지</b> 먼저 확인하세요.</li>
+        <li>수량이 있으면 키오스크에서 <b>매수를 선택하고 카드로 결제</b>하세요.</li>
+        <li><b>결제한 뒤에</b> 아래 방법대로 코팅을 시작하세요.</li>
+      </ol>
+    </div>
+
     <figure class="manual">
       <img src="images/coat/coat-pl1506.jpg" alt="페이퍼프랜드 PL-1506 코팅기 문서 모드 전용 사용 설명서 — 사용 방법 7단계와 주의사항 9가지" loading="lazy" onclick="openLb(this.src,this.alt)">
     </figure>
-    <p class="manual-hint">🔍 이미지를 누르면 크게 볼 수 있습니다. 아래에 같은 내용을 글로도 정리했습니다.</p>
+    <p class="manual-hint">🔍 이미지를 누르면 크게 볼 수 있습니다. 아래에 같은 내용을 글로도 정리했습니다.<br>※ 설명서 그림 속 코팅기는 사용 순서를 설명하기 위한 그림이라 실제 코팅기 모양과 다릅니다. 실제 모양은 위 그림을 참고하세요.</p>
 
     <div class="subhead">1. 사용 방법</div>
     <div class="steps steps-wide">
@@ -421,7 +509,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
       <div class="step">
         <div class="step-no">2</div>
         <div class="step-h">[문서] 버튼 누르기</div>
-        <p class="step-p"><b>[문서]</b> 버튼을 눌러 문서 모드로 설정합니다.</p>
+        <p class="step-p"><b>[문서]</b> 버튼을 눌러 문서 모드로 설정합니다.<br><span class="r">[사진] · [무열코팅] 버튼은 누르지 마세요. 반드시 문서 모드만 이용합니다.</span></p>
       </div>
       <div class="step">
         <div class="step-no">3</div>
