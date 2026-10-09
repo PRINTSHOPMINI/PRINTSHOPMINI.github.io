@@ -199,7 +199,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
       <h1 class="ah-h1">프린트가 필요한 모든 순간,<br><span>언제나 곁에</span></h1>
     </div>
     <div class="ah-kpi">
-      <div class="ah-kpi-item"><div class="n">16</div><div class="l">경기권 지점</div></div>
+      <div class="ah-kpi-item"><div class="n js-bcount">16</div><div class="l">경기권 지점</div></div>
       <div class="kpi-div"></div>
       <div class="ah-kpi-item"><div class="n">24H</div><div class="l">연중무휴 운영</div></div>
       <div class="kpi-div"></div>
@@ -247,7 +247,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
       <h2 class="sec-h2">프린트샵미니<br>이야기</h2>
       <p>2021년, 신도시 광교에서 시작되었습니다. 경기도청과 관공서가 들어서고, 신분당선 광교중앙역이 개통되며 젊은 인구가 빠르게 유입된 광교는 활기찬 신도시로 성장하고 있었습니다. 주변 대학교와 대단지 아파트를 중심으로 20~40대 젊은 연령층이 모여드는 이 도시에, 언제든 편리하게 이용할 수 있는 프린트 서비스가 필요하다는 확신에서 프린트샵미니가 탄생했습니다.</p>
       <p>처음에는 A4 흑백 인쇄 하나뿐이었지만, 이용자분들의 목소리를 듣고 복사, 스캔, 팩스, 코팅, 제본까지 총 6가지 서비스로 확장했습니다.</p>
-      <p>현재는 수원·화성·용인·평택 4개 지역, 16개 지점을 운영 중이며, 매달 수천 명의 고객이 이용하고 계십니다.</p>
+      <p>현재는 <span class="js-rnames">수원·화성·용인·평택</span> <span class="js-rcount">4</span>개 지역, <span class="js-bcount">16</span>개 지점을 운영 중이며, 매달 수천 명의 고객이 이용하고 계십니다.</p>
     </div>
     <div class="story-visual">
       <svg viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans KR', sans-serif">
@@ -345,7 +345,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 
         <rect x="278" y="42" width="90" height="54" rx="10" fill="#1B8AC4" filter="url(#softShadow)"/>
         <text x="323" y="65" text-anchor="middle" font-size="12" font-weight="900" fill="white">현재</text>
-        <text x="323" y="83" text-anchor="middle" font-size="10" font-weight="700" fill="white" opacity="0.9">4도시 15지점</text>
+        <text x="323" y="83" text-anchor="middle" font-size="10" font-weight="700" fill="white" opacity="0.9"><tspan class="js-rcount">4</tspan>도시 <tspan class="js-bcount">16</tspan>지점</text>
 
         <!-- ── 플로팅 뱃지 ── -->
         <rect x="30" y="230" width="74" height="68" rx="12" fill="white" filter="url(#softShadow)"/>
@@ -539,6 +539,24 @@ function sendEmailJS(){
   });
 }
 document.getElementById('emailPopup').addEventListener('click',function(e){if(e.target===this)closeEmailPopup();});
+</script>
+<script>
+/* 지점 수·지역 수를 지점 DB에서 자동 반영 (실패하면 HTML에 적힌 기본값 유지) */
+(function(){
+var SB_URL='https://wbcfciiuiootbdezxfwy.supabase.co';
+var SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndiY2ZjaWl1aW9vdGJkZXp4Znd5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc1MjkyMTQsImV4cCI6MjA5MzEwNTIxNH0.UV4ukUXuAYKAqq85B4FTHO2BtIOqPaBHgAJN5lqyU5s';
+  function setAll(sel,val){document.querySelectorAll(sel).forEach(function(e){e.textContent=val;});}
+  fetch(SB_URL+'/rest/v1/branches?select=region&order=region,sort_order',{headers:{'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY}})
+    .then(function(r){return r.json();})
+    .then(function(d){
+      if(!Array.isArray(d)||!d.length)return;
+      var cnt={};d.forEach(function(b){if(b.region)cnt[b.region]=(cnt[b.region]||0)+1;});
+      var seen=Object.keys(cnt).sort(function(a,b){return cnt[b]-cnt[a]||a.localeCompare(b,'ko');});
+      setAll('.js-bcount',d.length);
+      setAll('.js-rcount',seen.length);
+      setAll('.js-rnames',seen.join('·'));
+    }).catch(function(){});
+})();
 </script>
 </body>
 </html>
