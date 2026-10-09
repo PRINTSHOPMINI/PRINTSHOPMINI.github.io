@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="검정색 PL-1506 코팅기를 위에서 본 일러스트. 사진, 무열코팅 버튼은 사용하지 않습니다.">
+  <ellipse cx="320" cy="262" rx="270" ry="14" fill="#000" opacity=".08"/>
+  <rect x="190" y="12" width="300" height="38" rx="9" fill="#2B3036"/>
+  <rect x="200" y="20" width="280" height="6" rx="3" fill="#3A4048"/>
+  <rect x="50" y="44" width="540" height="172" rx="28" fill="#12161B"/>
+  <rect x="58" y="52" width="524" height="156" rx="21" fill="none" stroke="#D3D9DF" stroke-width="5"/>
+  <path d="M70 62 L250 62 L150 200 L70 200 Z" fill="#fff" opacity=".05"/>
+  <text x="218" y="190" text-anchor="middle" font-size="22" font-weight="800" fill="#F3F5F7" letter-spacing=".5">Paper Friend <tspan font-size="17" font-weight="700">PL-1506</tspan></text>
+  <rect x="438" y="62" width="132" height="134" rx="16" fill="#1E2328" stroke="#353C45" stroke-width="3"/>
+  <g font-size="12" font-weight="800" fill="#E7EBEF" text-anchor="middle">
+    <rect x="446" y="70" width="84" height="25" rx="12.5" fill="#343B45"/><text x="488" y="87">역회전</text>
+    <rect x="446" y="101" width="84" height="25" rx="12.5" fill="#3A414C"/><text x="494" y="118">문서</text><circle cx="459" cy="113.5" r="4.2" fill="#E5483B"/>
+    <g opacity=".5"><rect x="446" y="132" width="84" height="25" rx="12.5" fill="#343B45"/><text x="488" y="149">사진</text>
+    <rect x="446" y="163" width="84" height="25" rx="12.5" fill="#343B45"/><text x="488" y="180">무열코팅</text></g>
+  </g>
+  <g stroke="#E5483B" stroke-width="4" stroke-linecap="round">
+    <path d="M472 136 L504 153 M504 136 L472 153"/><path d="M472 167 L504 184 M504 167 L472 184"/>
+  </g>
+  <circle cx="546" cy="80" r="4" fill="#35C759"/><circle cx="546" cy="96" r="4" fill="#E5483B"/>
+  <circle cx="548" cy="148" r="14" fill="#2A3038" stroke="#C9CFD6" stroke-width="2.4"/>
+  <path d="M548 138 v9" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><path d="M541 142 a9 9 0 1 0 14 0" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+  <rect x="62" y="212" width="516" height="7" rx="3.5" fill="#8E969E"/>
+  <path d="M74 219 H430 L446 282 H90 Z" fill="#2B3036" opacity=".82" stroke="#4A525B" stroke-width="2"/>
+  <path d="M128 232 v26 M200 232 v26 M272 232 v26 M344 232 v26" stroke="#4A525B" stroke-width="2"/>
+  <text x="258" y="272" text-anchor="middle" font-size="12" font-weight="700" fill="#9AA3AD">코팅지 넣는 곳</text>
+</svg>
