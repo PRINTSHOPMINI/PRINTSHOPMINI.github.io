@@ -53,7 +53,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .tabs{background:var(--bg);border-bottom:1px solid var(--border);padding:0 6%;position:sticky;top:70px;z-index:100}
 .tabs-in{max-width:1160px;margin:0 auto;display:flex;overflow-x:auto}
 .tabs-in::-webkit-scrollbar{display:none}
-.tab{padding:16px 20px;font-size:13.5px;font-weight:700;color:var(--text3);white-space:nowrap;cursor:pointer;border-bottom:2px solid transparent;transition:all .2s;background:none;border-top:none;border-left:none;border-right:none;font-family:inherit}
+.tab{padding:11px 18px;font-size:13.5px;font-weight:700;color:var(--text3);white-space:nowrap;cursor:pointer;border-bottom:2px solid transparent;transition:all .2s;background:none;border-top:none;border-left:none;border-right:none;font-family:inherit}
 .tab:hover,.tab.on{color:var(--blue);border-bottom-color:var(--blue)}
 
 /* 섹션 */
@@ -257,7 +257,9 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
   .sub-menu a{padding:6px 14px;font-size:12.5px;border:1px solid var(--border);border-radius:50px}
 }
 /* 상단 제목·서비스 선택 고정: 아래 내용만 스크롤 */
-.page-header{position:sticky;top:70px;z-index:90}
+.stick-top{position:sticky;top:70px;margin-top:70px;z-index:90}
+.stick-top .page-header{margin-top:0;position:static}
+.stick-top .tabs{position:static}
 .page-header{padding:10px 6% 8px}
 .ph-eyebrow{display:none}
 .ph-h1{font-size:clamp(22px,3vw,30px);letter-spacing:-1px;margin-bottom:0;line-height:1.3}
@@ -315,6 +317,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 </nav>
 
 <!-- HEADER -->
+<div class="stick-top">
 <div class="page-header">
   <div class="ph-inner">
     <div class="ph-eyebrow">GUIDE</div>
@@ -323,18 +326,6 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
   </div>
 </div>
 
-<!-- 경고 배너 -->
-<div class="warnbar">
-  <div class="warnbar-in">
-    <div class="warnbar-ico">!</div>
-    <div class="warnbar-tx">
-      잘못된 인쇄설정으로 인한 오출력은 환불이 어렵습니다.
-      <span>출력 전 반드시 <b>미리보기로 전체 페이지</b>를 확인해 주세요. 화면에 보이는 그대로 인쇄됩니다.</span>
-    </div>
-  </div>
-</div>
-
-<!-- 탭 -->
 <div class="tabs">
   <div class="tabs-in">
     <button class="tab on" onclick="jump('choose',this)">서비스 선택</button>
@@ -342,6 +333,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
     <button class="tab" onclick="jump('tips',this)">꼭 기억할 것</button>
     <a class="tab" href="faq.html">자주 묻는 질문 →</a>
   </div>
+</div>
 </div>
 
 
@@ -540,7 +532,7 @@ function toggleMenu(){document.getElementById("navLinks").classList.toggle("show
 function jump(id, el){
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
   el.classList.add('on');
-  const y = document.getElementById(id).getBoundingClientRect().top + window.pageYOffset - 118;
+  const y = document.getElementById(id).getBoundingClientRect().top + window.pageYOffset - (70 + document.querySelector('.stick-top').offsetHeight + 12);
   window.scrollTo({top:y, behavior:'smooth'});
 }
 </script>
