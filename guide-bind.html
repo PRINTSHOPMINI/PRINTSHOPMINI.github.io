@@ -283,6 +283,27 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 .step-note.tip{text-align:left;background:#FFF7DB;border:2px solid #F0B429;color:#5C4300;font-size:13.6px;font-weight:600;line-height:1.7;padding:12px 14px}
 .step-note.tip b{color:#3E2D00;font-weight:900}
 .step-note.tip .hl{background:#FFE08A;color:#3E2D00;font-weight:900;padding:0 3px;border-radius:3px}
+/* 상단 제목·서비스 선택 고정: 아래 내용만 스크롤 */
+.stick-top{position:sticky;top:70px;margin-top:70px;z-index:90}
+.stick-top .page-header{margin-top:0;position:static}
+.page-header{padding:10px 6% 8px}
+.ph-eyebrow{display:none}
+.ph-h1{font-size:clamp(22px,3vw,30px);letter-spacing:-1px;margin-bottom:0;line-height:1.3}
+.ph-sub{font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.svc-switch{padding:8px 6%}
+.svc-switch a{padding:6px 15px}
+[id]{scroll-margin-top:215px}
+@media(max-width:760px){
+  .page-header{padding:10px 5% 8px}
+  .ph-h1{font-size:19px}
+  .ph-sub{display:none}
+  .svc-switch{padding:7px 5%}
+  .svc-switch-in{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .svc-switch-in::-webkit-scrollbar{display:none}
+  .svc-switch a,.svc-switch-label{flex:0 0 auto;white-space:nowrap}
+  .svc-switch-label{display:none}
+  [id]{scroll-margin-top:165px}
+}
 </style>
 </head>
 <body>
@@ -322,6 +343,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 </nav>
 
 <!-- HEADER -->
+<div class="stick-top">
 <div class="page-header">
   <div class="ph-inner">
     <div class="ph-eyebrow">GUIDE · BINDING</div>
@@ -340,6 +362,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
   <a href="guide-coat.html">코팅</a>
   <a href="guide-bind.html" class="on">제본</a>
 </div></div>
+</div>
 
 <div class="sec alt" id="bind" style="--sc:#A16207;--sc-light:#FDF3DC">
   <div class="sec-in">
