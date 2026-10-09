@@ -270,6 +270,13 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
   .svc-switch-label{display:none}
   [id]{scroll-margin-top:165px}
 }
+/* 2단계 메뉴: 서비스 페이지와 같은 밑줄 탭 */
+.svc-switch{background:var(--bg);border-bottom:1px solid var(--border);padding:0 6%}
+.svc-switch-in{max-width:1160px;margin:0 auto;display:flex;flex-wrap:nowrap;gap:0;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.svc-switch-in::-webkit-scrollbar{display:none}
+.svc-switch a,.svc-switch a.home{display:block;flex:0 0 auto;white-space:nowrap;padding:11px 18px;font-size:13px;font-weight:700;color:var(--text3);background:none;border:none;border-bottom:2px solid transparent;border-radius:0;transition:all .2s}
+.svc-switch a:hover,.svc-switch a.on{color:var(--blue);background:none;border-bottom-color:var(--blue)}
+@media(max-width:760px){.svc-switch{padding:0 5%}.svc-switch a{padding:10px 15px}}
 </style>
 </head>
 <body>
@@ -309,14 +316,15 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
   </div>
 </div>
 
-<div class="tabs">
-  <div class="tabs-in">
-    <button class="tab on" onclick="jump('choose',this)">서비스 선택</button>
-    <button class="tab" onclick="jump('terms',this)">인쇄 · 복사 · 스캔 · 팩스 차이</button>
-    <button class="tab" onclick="jump('tips',this)">꼭 기억할 것</button>
-    <a class="tab" href="faq.html">자주 묻는 질문 →</a>
-  </div>
-</div>
+<div class="svc-switch"><div class="svc-switch-in">
+  <a href="guide.html" class="on">사용방법 전체</a>
+  <a href="guide-print.html">🖨️ 인쇄</a>
+  <a href="guide-copy.html">📋 복사</a>
+  <a href="guide-scan.html">📄 스캔</a>
+  <a href="guide-fax.html">📠 팩스</a>
+  <a href="guide-coat.html">✨ 코팅</a>
+  <a href="guide-bind.html">📚 제본</a>
+</div></div>
 </div>
 
 
@@ -512,12 +520,10 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 
 <script>
 function toggleMenu(){document.getElementById("navLinks").classList.toggle("show");}
-function jump(id, el){
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
-  el.classList.add('on');
-  const y = document.getElementById(id).getBoundingClientRect().top + window.pageYOffset - (70 + document.querySelector('.stick-top').offsetHeight + 12);
-  window.scrollTo({top:y, behavior:'smooth'});
-}
+</script>
+<script>
+/* 2단계 메뉴: 현재 탭이 화면 밖이면 보이는 위치로 이동 */
+(function(){var a=document.querySelector('.svc-switch a.on'),w=a&&a.parentElement;if(w)w.scrollLeft=Math.max(0,a.offsetLeft-(w.clientWidth-a.offsetWidth)/2);})();
 </script>
 </body>
 </html>
