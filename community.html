@@ -216,17 +216,23 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
   .sub-menu a{padding:6px 14px;font-size:12.5px;border:1px solid var(--border);border-radius:50px}
 }
 /* 상단 제목 고정: 아래 내용만 스크롤 */
-.page-header{padding:10px 6% 8px;position:sticky;top:70px;z-index:90}
+.stick-top{position:sticky;top:70px;margin-top:70px;z-index:90;background:var(--white);box-shadow:0 2px 8px rgba(0,0,0,0.04)}
+.stick-top .page-header{margin-top:0;position:static;padding:10px 6% 6px;border-bottom:none}
+.cs-wrap{max-width:1160px;margin:0 auto;padding:4px 6% 12px}
+.cs-wrap .search-bar{margin:0;max-width:calc(100% - 340px)}
 .ph-eyebrow{display:none}
 .ph-h1{font-size:clamp(22px,3vw,30px);letter-spacing:-1px;margin-bottom:0;line-height:1.3}
 .ph-sub{font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 [id]{scroll-margin-top:150px}
 @media(max-width:760px){
-  .page-header{padding:10px 5% 8px}
+  .page-header,.stick-top .page-header{padding:10px 5% 6px}
+  .cs-wrap{padding:2px 5% 10px}
+  .cs-wrap .search-bar{max-width:none}
   .ph-h1{font-size:19px}
   .ph-sub{display:none}
   [id]{scroll-margin-top:125px}
 }
+@media(max-width:900px){.cs-wrap .search-bar{max-width:none}}
 </style>
 </head>
 <body>
@@ -263,12 +269,20 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 </nav>
 
 <!-- PAGE HEADER -->
+<div class="stick-top">
 <div class="page-header">
   <div class="ph-inner">
     <div class="ph-eyebrow">COMMUNITY</div>
     <h1 class="ph-h1">공지사항</h1>
     <p class="ph-sub">프린트샵미니의 최신 공지사항을 확인하세요</p>
   </div>
+</div>
+<div class="cs-wrap">
+  <div class="search-bar">
+      <input class="search-input" type="text" placeholder="공지사항 검색..." id="searchInput" onkeydown="if(event.key==='Enter')doSearch()">
+      <button class="search-btn" onclick="doSearch()">검색</button>
+    </div>
+</div>
 </div>
 
 <!-- MAIN -->
@@ -279,11 +293,6 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
       <div class="board-title">공지사항</div>
     </div>
 
-    <!-- 검색 -->
-    <div class="search-bar">
-      <input class="search-input" type="text" placeholder="공지사항 검색..." id="searchInput" onkeydown="if(event.key==='Enter')doSearch()">
-      <button class="search-btn" onclick="doSearch()">검색</button>
-    </div>
 
     <!-- 게시글 목록 -->
     <div class="post-list">
