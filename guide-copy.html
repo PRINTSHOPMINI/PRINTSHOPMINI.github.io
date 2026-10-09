@@ -247,20 +247,12 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 .gcard-desc{font-size:14px;color:var(--text2);line-height:1.65;flex:1}
 .gcard-go{font-size:13.5px;font-weight:900;color:var(--tc)}
 
-/* 메뉴 하위(드롭다운) */
 .nav-links li{position:relative}
-.has-sub>a::after{content:'▾';font-size:10px;margin-left:5px;opacity:.55}
-.sub-menu{display:none;position:absolute;top:100%;left:0;min-width:128px;background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:0 12px 32px rgba(17,24,39,.12);padding:8px;list-style:none;z-index:310}
-.has-sub:hover>.sub-menu,.has-sub:focus-within>.sub-menu{display:block}
-.sub-menu a{display:block;font-size:13.5px;white-space:nowrap}
 @media(max-width:900px){
   .nav-links{display:none}
   .hamburger{display:flex}
   .nav-links.show{display:flex;position:absolute;top:70px;left:0;right:0;background:#fff;flex-direction:column;padding:10px 6%;border-bottom:1px solid var(--border)}
   .nav-links{max-height:calc(100vh - 70px);overflow-y:auto}
-  .has-sub>a::after{display:none}
-  .sub-menu{display:flex;flex-wrap:wrap;gap:6px;position:static;min-width:0;box-shadow:none;border:none;border-radius:0;background:transparent;padding:2px 0 8px 14px}
-  .sub-menu a{padding:6px 14px;font-size:12.5px;border:1px solid var(--border);border-radius:50px}
 }
 /* 상단 제목·서비스 선택 고정: 아래 내용만 스크롤 */
 .stick-top{position:sticky;top:70px;margin-top:70px;z-index:90}
@@ -295,16 +287,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
   </a>
   <ul class="nav-links" id="navLinks">
     <li><a href="services.html">서비스</a></li>
-    <li class="has-sub"><a href="guide.html" class="active">사용방법</a>
-      <ul class="sub-menu">
-        <li><a href="guide-print.html">인쇄</a></li>
-        <li><a href="guide-copy.html" class="active">복사</a></li>
-        <li><a href="guide-scan.html">스캔</a></li>
-        <li><a href="guide-fax.html">팩스</a></li>
-        <li><a href="guide-coat.html">코팅</a></li>
-        <li><a href="guide-bind.html">제본</a></li>
-      </ul>
-    </li>
+    <li><a href="guide.html" class="active">사용방법</a></li>
     <li><a href="faq.html">FAQ</a></li>
     <li><a href="about.html">소개</a></li>
     <li><a href="branches.html">지점찾기</a></li>
