@@ -353,6 +353,15 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 .adfw-fig figcaption b{color:#B31E16;font-weight:900}
 .adfw-box.pic li.txt{display:block}
 .step-photo.pl.wide{max-width:460px}
+.adfw-box.pic li.multi{display:block}
+.seq3{display:grid;gap:10px;margin-top:10px}
+.s3{display:flex;align-items:center;gap:12px;background:#F7FAFC;border:1px solid #E5E7EB;border-radius:10px;padding:8px 10px}
+.s3 img{flex:0 0 auto;width:150px;height:auto;border-radius:6px;background:#fff;border:1px solid #E5E7EB}
+.s3 p{margin:0;font-size:13.6px;line-height:1.6;color:var(--text2)}
+.s3 p b{color:var(--text);font-weight:800}
+.warnline{display:block;margin-top:6px;color:#B31E16;font-size:13.4px;font-weight:700}
+.warnline b{color:#B31E16;font-weight:900}
+@media(max-width:560px){.s3{flex-direction:column;align-items:flex-start}.s3 img{width:100%}}
 </style>
 </head>
 <body>
@@ -651,7 +660,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
           <ul>
             <li><img src="images/coat/pl-ok-closed.jpg" alt="막힌 부분부터 넣는 것이 맞고 반대로 넣으면 안 됨" loading="lazy"><div>코팅지의 <b>막힌 부분부터</b> 넣으세요. (필수)</div></li>
             <li><img src="images/coat/pl-s7.jpg" alt="자동으로 빨려 들어갈 때까지 밀어 넣는 모습" loading="lazy"><div><b>코팅기 투입구에 걸쳐 놓지 말고</b>, 구겨지지 않게 조심해서 <b>자동으로 빨려 들어갈 때까지 천천히 밀어 넣으세요.</b></div></li>
-            <li class="wide"><img src="images/coat/pl-ok-multi.jpg" alt="먼저 넣은 코팅지가 나온 뒤 다음 코팅지를 넣는 순서" loading="lazy"><div>여러 장을 코팅할 때는 <b>먼저 넣은 코팅지가 나온 뒤</b> 다음 코팅지를 넣으세요.<ol class="seq"><li><b>먼저 넣는 코팅지</b>를 투입구에 넣습니다.</li><li>먼저 넣은 코팅지가 <b>뒤쪽으로 완전히 다 나올 때까지</b> 기다립니다.</li><li>다 나온 것을 확인하고 <b>꺼내 놓은 뒤</b>, <b>다음(나중) 코팅지</b>를 투입구에 넣습니다.</li></ol></div></li>
+            <li class="wide multi"><div>여러 장을 코팅할 때는 <b>먼저 넣은 코팅지가 나온 뒤</b> 다음 코팅지를 넣으세요.<br><span class="warnline">⚠️ 코팅지는 <b>앞쪽 투입구로 넣으면 뒤쪽으로 나옵니다.</b> 코팅지가 나오는 뒤쪽에는 넣지 마세요.</span><div class="seq3"><div class="s3"><img src="images/coat/pl-multi-1.jpg?v=1" alt="먼저 넣는 코팅지를 코팅기 앞쪽 투입구에 넣는 모습" loading="lazy"><p><b>① 먼저 넣는 코팅지</b>를 <b>앞쪽 투입구</b>에 넣습니다.</p></div><div class="s3"><img src="images/coat/pl-multi-2.jpg?v=1" alt="먼저 넣은 코팅지가 코팅기 뒤쪽으로 완전히 나올 때까지 기다리는 모습" loading="lazy"><p><b>② 뒤쪽으로 완전히 다 나올 때까지</b> 기다립니다.</p></div><div class="s3"><img src="images/coat/pl-multi-3.jpg?v=1" alt="나온 코팅지를 확인하고 꺼낸 뒤 다음 코팅지를 앞쪽 투입구에 넣는 모습" loading="lazy"><p><b>③ 다 나온 것을 확인</b>하고 꺼내 놓은 뒤, <b>다음 코팅지</b>를 앞쪽 투입구에 넣습니다.</p></div></div></div></li>
             <li><img src="images/coat/pl-ok-off.jpg" alt="사용 후 전원 버튼을 눌러 끄는 모습" loading="lazy"><div>사용이 끝나면 <b>전원 버튼을 눌러 전원을 끄세요.</b></div></li>
           </ul>
         </div>
