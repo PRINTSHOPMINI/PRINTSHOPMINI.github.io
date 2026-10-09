@@ -263,6 +263,13 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
   .sub-menu a{padding:6px 14px;font-size:12.5px;border:1px solid var(--border);border-radius:50px}
 }
 .step-figs svg{width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--border)}
+.prestep{background:#FFF8E6;border:2px solid #F2C94C;border-radius:var(--radius);padding:18px 22px;margin:0 0 30px;max-width:960px}
+.prestep-h{font-size:16px;font-weight:900;color:#5C4300;margin-bottom:8px}
+.prestep ol{margin:0;padding-left:20px}
+.prestep li{font-size:14.2px;color:#5C4300;line-height:1.7;margin-bottom:3px}
+.prestep li b{color:#3E2D00;font-weight:800}
+.prestep-warn{margin-top:12px;background:#FEF2F2;border:2px solid #E4574D;border-radius:10px;padding:10px 14px;font-size:13.6px;font-weight:600;color:#8A1C15;line-height:1.6}
+.prestep-warn b{color:#B31E16;font-weight:900}
 </style>
 </head>
 <body>
@@ -306,7 +313,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
   <div class="ph-inner">
     <div class="ph-eyebrow">GUIDE · BINDING</div>
     <h1 class="ph-h1">제본 사용방법</h1>
-    <p class="ph-sub">인쇄물을 열제본표지에 넣어 책처럼 묶는 방법입니다. 10분 냉각을 꼭 지켜 주세요.</p>
+    <p class="ph-sub">인쇄물을 열제본표지에 넣어 책처럼 묶는 방법입니다. 표지 수량을 확인하고 결제를 먼저 해 주세요. 10분 냉각도 꼭 지켜 주세요.</p>
   </div>
 </div>
 
@@ -327,17 +334,31 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
       <div class="sec-ico"><svg width="34" height="34" viewBox="0 0 48 48" fill="none"><path d="M12 6h24a3 3 0 0 1 3 3v31H15a3 3 0 0 1-3-3z" stroke="#A16207" stroke-width="3" stroke-linejoin="round"/><path d="M19 6v34" stroke="#A16207" stroke-width="3"/><path d="M25 16h8M25 23h8" stroke="#A16207" stroke-width="3" stroke-linecap="round"/></svg></div>
       <h2 class="sec-h2">제본하는 방법 <span class="pill">BINDING</span></h2>
     </div>
-    <p class="sec-tagline"><b>인쇄물을 열제본표지에 넣어 책처럼 묶는 서비스입니다.</b> 예열 → 투입 → 타이머 → 10분 냉각 순서로 진행합니다. 논문 · 보고서 · 계약서 등에 활용하세요.</p>
+    <p class="sec-tagline"><b>인쇄물을 열제본표지에 넣어 책처럼 묶는 서비스입니다.</b> 열제본표지 선택·결제 → 예열 → 투입 → 타이머 → 10분 냉각 순서로 진행합니다. 논문 · 보고서 · 계약서 등에 활용하세요.</p>
+    <div class="prestep">
+      <div class="prestep-h">🧾 제본 시작 전에 먼저!</div>
+      <ol>
+        <li><b>인쇄물 수량에 맞는 열제본표지</b>를 먼저 선택하세요.</li>
+        <li>선택한 열제본표지가 <b>필요한 수량만큼 있는지 확인</b>한 뒤, 토스 키오스크에서 결제해 주세요.</li>
+      </ol>
+      <div class="prestep-warn">⚠️ <b>토스 키오스크에서 결제한 금액은 환불 요청 시 수수료를 제외하고 환불</b>되니, 반드시 필요한 수량만큼 있는지 확인한 뒤 결제해 주세요.</div>
+    </div>
     <div id="guideFiles"></div>
     <div class="steps steps-wide">
       <div class="step">
         <div class="step-no">1</div>
+        <div class="step-h">열제본표지 선택 · 결제 먼저!</div>
+        <p class="step-p"><b>인쇄물 수량에 맞는 열제본표지를 먼저 선택</b>하세요.<br>선택한 열제본표지가 <b>필요한 수량만큼 있는지 확인</b>한 뒤 <b>토스 키오스크에서 결제</b>해 주세요.</p>
+        <div class="step-note warn">⚠️ <b>토스 키오스크에서 결제한 금액은 환불 요청 시 수수료를 제외하고 환불</b>되니, 반드시 필요한 수량만큼 있는지 확인한 뒤 결제해 주세요.</div>
+      </div>
+      <div class="step">
+        <div class="step-no">2</div>
         <div class="step-figs"><img class="step-photo" src="images/bind/safa-buttons.png" alt="전원 버튼을 누른 후 온열 버튼을 누르는 모습" loading="lazy"></div>
         <div class="step-h">전원 켜기 · 예열</div>
         <p class="step-p"><b>전원</b> 버튼을 누른 후 <b>온열</b> 버튼을 한 번 누르세요.<br>불이 깜빡이다가 3분 후 알람과 함께 불이 멈추면 예열 완료입니다.</p>
       </div>
       <div class="step">
-        <div class="step-no">2</div>
+        <div class="step-no">3</div>
         <div class="step-figs"><svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="기계 뒷면의 냉각 트레이 손잡이를 앞쪽으로 당겨 투입구를 여는 일러스트">
           <rect width="700" height="420" fill="#F4F5F4"/>
           <ellipse cx="350" cy="374" rx="272" ry="14" fill="#000" opacity=".08"/>
@@ -360,24 +381,24 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         <p class="step-p">기계 <b>뒷면의 냉각 트레이</b>를 당겨서 투입구를 열어 주세요.</p>
       </div>
       <div class="step step-dual">
-        <div class="step-no">3</div>
+        <div class="step-no">4</div>
         <div class="step-figs two"><img class="step-photo" src="images/bind/cover-structure.png" alt="열제본표지 단면 구조 — PET 투명 비닐커버, 종이커버, 표지규격(제본 본드 부분)" loading="lazy"><img class="step-photo" src="images/bind/cover-closed.png" alt="열제본표지 앞면 비닐커버 · 뒷면 종이커버" loading="lazy"></div>
         <div class="step-h">열제본표지에 인쇄물 넣기</div>
         <p class="step-p">열제본 전용 표지 안에 인쇄물을 넣으세요. 이때 <b>안쪽 본드(제본선)에 가지런히 잘 닿도록 각을 맞춰</b> 주세요.<br>표지는 앞면이 <b>투명한 비닐커버</b>, 뒷면이 <b>종이커버</b>입니다.</p>
       </div>
       <div class="step">
-        <div class="step-no">4</div>
+        <div class="step-no">5</div>
         <div class="step-figs"><img class="step-photo" src="images/bind/safa-insert.png" alt="SAFA 제본기 투입구에 제본표지를 세워서 넣는 모습" loading="lazy"></div>
         <div class="step-h">기계에 투입</div>
         <p class="step-p">표지의 <b>막힌 부분부터</b> 투입구에 넣으세요.<br>더 이상 안 들어갈 때까지 <b>깊숙이</b> 밀어 넣어 주세요.</p>
       </div>
       <div class="step">
-        <div class="step-no">5</div>
+        <div class="step-no">6</div>
         <div class="step-h">타이머 작동</div>
         <p class="step-p"><b>타이머</b> 버튼을 누르세요.<br>불이 다시 깜빡이다가 <b>1분 뒤 알람 소리</b>와 함께 불이 멈추면 꺼내세요.</p>
       </div>
       <div class="step">
-        <div class="step-no">6</div>
+        <div class="step-no">7</div>
         <div class="step-h">10분 냉각 후 완료</div>
         <p class="step-p">꺼낸 직후에는 <b>절대 열지 마세요.</b><br>평평한 곳에 놓고 <b>10분간 냉각</b>한 뒤 펼치세요.</p>
         <div class="step-note warn">냉각 필수! <b>본드가 굳기 전에 열면 인쇄물이 다 떨어집니다.</b></div>
