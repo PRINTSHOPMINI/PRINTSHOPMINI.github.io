@@ -33,29 +33,32 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .hamburger span{width:22px;height:2px;background:var(--text);border-radius:2px;display:block}
 
 /* PAGE HEADER */
-.page-header{margin-top:70px;background:var(--white);border-bottom:1px solid var(--border);padding:52px 6% 44px}
-.ph-inner{max-width:1160px;margin:0 auto}
-.ph-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:var(--blue);letter-spacing:1px;margin-bottom:14px}
+.page-header{margin-top:70px;background:var(--white);border-bottom:1px solid var(--border);padding:18px 6% 12px;position:sticky;top:70px;z-index:90}
+.ph-inner{max-width:800px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;column-gap:28px;align-items:center}
+.ph-inner .ph-h1{margin:0;white-space:nowrap}
+.ph-inner .ph-search{margin:0}
+.faq-intro{font-size:14.5px;color:var(--text3);margin:0 4px 18px;line-height:1.7}
+.ph-eyebrow{display:none;align-items:center;gap:8px;font-size:12px;font-weight:700;color:var(--blue);letter-spacing:1px;margin-bottom:14px}
 .ph-eyebrow::before{content:'';width:20px;height:2px;background:var(--blue);border-radius:2px}
-.ph-h1{font-size:clamp(28px,4vw,48px);font-weight:900;letter-spacing:-2px;margin-bottom:10px}
+.ph-h1{font-size:clamp(26px,3.6vw,40px);font-weight:900;letter-spacing:-2px;margin-bottom:8px}
 .ph-sub{font-size:15px;color:var(--text3)}
 
 /* FAQ SEARCH */
-.faq-search{position:relative;margin-bottom:12px}
+.faq-search{position:relative}
 .faq-search input{width:100%;font-family:inherit;font-size:16px;padding:16px 92px 16px 50px;border:2px solid var(--border);border-radius:14px;background:var(--white);color:var(--text);outline:none;transition:border-color .15s,box-shadow .15s}
 .faq-search input:focus{border-color:var(--blue);box-shadow:0 0 0 4px var(--blue-light)}
 .faq-search input::placeholder{color:var(--text3)}
 .faq-search .s-ico{position:absolute;left:18px;top:50%;transform:translateY(-50%);width:20px;height:20px;color:var(--text3);pointer-events:none}
 .faq-search .s-clear{position:absolute;right:10px;top:50%;transform:translateY(-50%);display:none;border:none;background:var(--blue-light);color:var(--blue);font-family:inherit;font-size:13px;font-weight:700;padding:7px 12px;border-radius:8px;cursor:pointer}
 .faq-search.has-text .s-clear{display:block}
-.faq-count{font-size:13.5px;color:var(--text3);margin:0 4px 14px;min-height:20px}
+.faq-count{font-size:13.5px;color:var(--text3);margin:8px 4px 0;min-height:20px}
 .faq-count b{color:var(--blue);font-weight:900}
 .faq-empty{text-align:center;padding:44px 16px;color:var(--text3);font-size:14.5px;line-height:1.8;border:1px dashed var(--border);border-radius:12px}
 .faq-empty b{display:block;color:var(--text);font-size:16px;margin-bottom:4px}
 mark{background:#FFE08A;color:inherit;border-radius:3px;padding:0 2px}
 
 /* FAQ */
-.faq-section{padding:56px 6% 90px}
+.faq-section{padding:28px 6% 90px}
 .faq-inner{max-width:800px;margin:0 auto}
 .faq-list{display:flex;flex-direction:column;gap:12px}
 .faq-item{border:1px solid var(--border);border-radius:12px;overflow:hidden}
@@ -104,6 +107,15 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
   .sub-menu{display:flex;flex-wrap:wrap;gap:6px;position:static;min-width:0;box-shadow:none;border:none;border-radius:0;background:transparent;padding:2px 0 8px 14px}
   .sub-menu a{padding:6px 14px;font-size:12.5px;border:1px solid var(--border);border-radius:50px}
 }
+@media(max-width:700px){
+  .page-header{padding:10px 5% 8px}
+  .ph-eyebrow{display:none}
+  .ph-inner{grid-template-columns:1fr;row-gap:8px}
+  .ph-h1{font-size:20px;letter-spacing:-1px}
+  .faq-search input{padding:11px 84px 11px 44px}
+  .faq-count{margin-top:4px;min-height:16px;font-size:12.5px}
+  .faq-section{padding-top:18px}
+}
 </style>
 </head>
 <body>
@@ -140,19 +152,21 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
   <div class="ph-inner">
     <div class="ph-eyebrow">FAQ</div>
     <h1 class="ph-h1">자주 묻는 질문</h1>
-    <p class="ph-sub">이용 중 궁금한 점을 모았습니다. 답을 찾지 못하셨다면 아래 이메일 문의를 이용해 주세요.</p>
+    <div class="ph-search">
+      <div class="faq-search" id="faqSearch">
+      <svg class="s-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input type="search" id="faqQ" placeholder="궁금한 키워드를 입력하세요 (예: 환불, 코팅, 팩스)" autocomplete="off" aria-label="FAQ 검색" oninput="onFaqSearch()">
+      <button type="button" class="s-clear" onclick="clearFaqSearch()">지우기</button>
+    </div>
+    <div class="faq-count" id="faqCount" aria-live="polite"></div>
+    </div>
   </div>
 </div>
 
 <!-- FAQ -->
 <div class="faq-section" id="faq">
   <div class="faq-inner">
-    <div class="faq-search" id="faqSearch">
-      <svg class="s-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-      <input type="search" id="faqQ" placeholder="궁금한 키워드를 입력하세요 (예: 환불, 코팅, 팩스)" autocomplete="off" aria-label="FAQ 검색" oninput="onFaqSearch()">
-      <button type="button" class="s-clear" onclick="clearFaqSearch()">지우기</button>
-    </div>
-    <div class="faq-count" id="faqCount" aria-live="polite"></div>
+    <p class="faq-intro">이용 중 궁금한 점을 모았습니다. 답을 찾지 못하셨다면 아래 이메일 문의를 이용해 주세요.</p>
     <div class="faq-list" id="faqList">
       <div style="text-align:center;padding:40px;color:var(--text3)">불러오는 중...</div>
     </div>
