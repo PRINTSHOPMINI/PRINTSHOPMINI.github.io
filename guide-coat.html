@@ -76,6 +76,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .step-p{font-size:13.8px;color:var(--text2);line-height:1.65}
 .step-p b{font-weight:700;color:var(--sc,var(--blue))}
 .step-p .r{color:var(--warn);font-weight:700}
+b.lr,.step-p b.lr,.step-note b.lr,.pl-legend b.lr{color:#D92D20;font-weight:900}
+b.lg,.step-p b.lg,.step-note b.lg,.pl-legend b.lg{color:#12A150;font-weight:900}
 
 /* 핵심 팁 */
 .tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:18px}
@@ -525,8 +527,8 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
     </div>
     <ul class="pl-legend">
       <li><span>1</span><div><b>전원 버튼</b> — 눌러서 전원을 켭니다.</div></li>
-      <li><span>2</span><div><b>[문서] 버튼</b> — 눌러서 문서 모드로 설정합니다.</div></li>
-      <li><span>3</span><div><b>READY 표시등</b> — 켜지고 "삑" 소리가 나면 예열이 끝난 것입니다. (약 60초)</div></li>
+      <li><span>2</span><div><b>[문서] 버튼</b> — 눌러서 문서 모드로 설정합니다. 문서 모드 동안 버튼에 <b class="lr">빨간불</b>이 계속 깜빡입니다.</div></li>
+      <li><span>3</span><div><b>READY 표시등</b> — 평소 <b class="lg">초록불</b>이 깜빡이고, 예열 중에도 깜빡입니다. 약 60초 뒤 "삑" 소리와 함께 <b>깜빡임이 멈추면 예열 완료</b>입니다.</div></li>
       <li class="no"><span>✕</span><div><b>[사진] · [무열코팅] 버튼은 절대 누르지 마세요.</b> 반드시 <b>[문서] 모드만</b> 이용하세요.</div></li>
     </ul>
 
@@ -549,16 +551,17 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         <div class="step-no">2</div>
         <div class="step-h">전원 버튼 누르기</div>
         <p class="step-p"><b>전원</b> 버튼을 눌러 전원을 켭니다. (전원 ON)</p>
+        <div class="step-note">💡 <b>평소(기본) 상태</b> — 코팅기는 전원 코드가 항상 연결되어 있어서 <b>POWER 부분 <b class="lr">빨간불</b></b>이 계속 깜빡이고, <b>READY 부분 <b class="lg">초록불</b></b>도 깜빡이고 있습니다. 이 상태가 <b>정상(기본)</b>이니 고장이 아닙니다.</div>
       </div>
       <div class="step">
         <div class="step-no">3</div>
         <div class="step-h">[문서] 버튼 누르기</div>
-        <p class="step-p"><b>[문서]</b> 버튼을 눌러 문서 모드로 설정합니다.<br><span class="r">[사진] · [무열코팅] 버튼은 누르지 마세요. 반드시 문서 모드만 이용합니다.</span></p>
+        <p class="step-p"><b>[문서]</b> 버튼을 눌러 문서 모드로 설정합니다.<br>[문서] 버튼 쪽에 <b><b class="lr">빨간불</b>이 깜빡이고</b>, READY <b class="lg">초록불</b>도 <b>함께 깜빡이면</b> 예열이 시작된 것입니다.<br><span class="r">[사진] · [무열코팅] 버튼은 누르지 마세요. 반드시 문서 모드만 이용합니다.</span></p>
       </div>
       <div class="step">
         <div class="step-no">4</div>
         <div class="step-h">예열 대기</div>
-        <p class="step-p">예열에는 <b>약 60초</b>가 걸립니다. <b>READY 표시등이 켜지고 "삑" 소리</b>가 나면 준비 완료입니다.</p>
+        <p class="step-p">예열에는 <b>약 60초</b>가 걸립니다.<br>60초가 지나 <b>"삑~" 소리</b>가 나면서 <b>READY <b class="lg">초록불</b>의 깜빡임이 멈추면 예열 완료</b>입니다.<br>이때 [문서] 버튼 쪽 <b class="lr">빨간불</b>은 <b>계속 깜빡이는 것이 정상</b>입니다. READY <b class="lg">초록불</b>이 멈추기 전에는 코팅지를 넣지 마세요.</p>
       </div>
       <div class="step">
         <div class="step-no">5</div>
@@ -573,7 +576,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
       <div class="step">
         <div class="step-no">7</div>
         <div class="step-h">자동으로 들어갈 때까지 밀어 넣기</div>
-        <p class="step-p">코팅기가 <b>자동으로 빨아들일 때까지</b> 조심스럽게 밀어 넣습니다.</p>
+        <p class="step-p"><b>평평하게</b> 천천히 밀어 넣으면 <b>투입구 센서가 코팅지를 인식</b>하고, 코팅기가 <b>자동으로 빨아들입니다.</b></p>
       </div>
       <div class="step">
         <div class="step-no">8</div>
