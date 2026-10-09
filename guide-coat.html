@@ -260,6 +260,9 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 /* 코팅기 2종류 안내 / PL-1506 설명서 */
 .machine-pick{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:0 0 34px;max-width:860px}
 .machine-pick-h{grid-column:1/-1;font-size:15px;font-weight:900;color:var(--text);margin-bottom:-2px}
+.machine-pick-note{grid-column:1/-1;background:#EAF7EE;border:2px solid #34A853;border-radius:12px;padding:12px 16px;font-size:14.2px;color:#14532D;line-height:1.7}
+.machine-pick-note b{font-weight:900;color:#0B3D1E}
+.rec-tag{display:inline-block;margin:0 0 6px 8px;padding:2px 9px;border-radius:50px;background:#DDF3E3;border:1px solid #34A853;color:#14532D;font-style:normal;font-size:11.5px;font-weight:800;vertical-align:2px}
 .mp{display:block;border:2px solid var(--sc);border-radius:var(--radius);background:#fff;padding:18px 20px;transition:transform .18s,box-shadow .18s}
 .mp:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(17,24,39,.1)}
 .mp>b{display:block;font-size:16px;font-weight:900;margin-bottom:4px}
@@ -421,96 +424,11 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
     <p class="sec-tagline"><b>코팅지 수량을 확인하고 결제를 먼저 한 뒤, 전원을 켜서 예열(데우기)이 끝나면 코팅지를 넣는 서비스입니다.</b> 사용 후에는 반드시 전원을 꺼 주세요.</p>
     <div class="machine-pick">
       <div class="machine-pick-h">🔎 코팅기가 두 종류인 매장이 있어요. 매장에 있는 코팅기를 먼저 확인하세요.</div>
-      <a class="mp" href="#safa-steps"><div class="mp-pic"><img src="images/coat/safa-100-machine.jpg" alt="흰색 SAFA-BM100 코팅기 — 흰색 몸체에 남색 테두리, SAFA 로고" loading="lazy"></div><b>흰색 SAFA-BM100 코팅기</b><i class="dual-tag">🔀 코팅 · 제본 겸용기</i><span>전원 버튼을 누른 뒤 <b>코팅 버튼을 2번</b> 눌러 예열하는 코팅기입니다.</span><em>아래 &lt;코팅하는 방법&gt;을 따라 주세요 ↓</em></a>
-      <a class="mp dark" href="#pl1506"><div class="mp-pic"><img src="images/coat/pl-1506-machine.svg" alt="검정색 PL-1506 코팅기 — 검정색 몸체에 은색 테두리, 오른쪽에 조작 버튼" loading="lazy"></div><b>검정색 PL-1506 코팅기 (페이퍼프랜드)</b><span>전원 버튼을 누른 뒤 <b>[문서] 버튼</b>을 눌러 예열하는 코팅기입니다.</span><em>&lt;PL-1506 사용방법&gt;을 따라 주세요 ↓</em></a>
+      <div class="machine-pick-note">👍 <b>두 종류의 코팅기가 모두 있는 매장</b>에서는 <b>검정색 PL-1506 코팅 전용기를 먼저 이용해 주세요.</b><br>PL-1506은 <b>예열(기계 데우기) 속도와 코팅 속도가 더 빨라요.</b></div>
+      <a class="mp dark" href="#pl1506"><div class="mp-pic"><img src="images/coat/pl-1506-machine.svg" alt="검정색 PL-1506 코팅기 — 검정색 몸체에 은색 테두리, 오른쪽에 조작 버튼" loading="lazy"></div><b>검정색 PL-1506 코팅기 (페이퍼프랜드)</b><i class="rec-tag">👍 코팅 전용 · 먼저 이용해 주세요</i><span>전원 버튼을 누른 뒤 <b>[문서] 버튼</b>을 눌러 예열하는 코팅기입니다.</span><em>아래 &lt;PL-1506 사용방법&gt;을 따라 주세요 ↓</em></a>
+      <a class="mp" href="#safa-steps"><div class="mp-pic"><img src="images/coat/safa-100-machine.jpg" alt="흰색 SAFA-BM100 코팅기 — 흰색 몸체에 남색 테두리, SAFA 로고" loading="lazy"></div><b>흰색 SAFA-BM100 코팅기</b><i class="dual-tag">🔀 코팅 · 제본 겸용기</i><span>전원 버튼을 누른 뒤 <b>코팅 버튼을 2번</b> 눌러 예열하는 코팅기입니다.</span><em>맨 아래 &lt;SAFA-BM100 사용방법&gt;을 따라 주세요 ↓</em></a>
     </div>
     <div id="guideFiles"></div>
-    <div class="subhead" id="safa-steps">흰색 SAFA-BM100 코팅기 사용방법</div>
-    <div class="dual">
-      <div class="dual-h">🔀 이 기계(SAFA-BM100)는 <b>코팅 · 제본 겸용 기계</b>입니다</div>
-      <div class="dual-warn">🚫 <b>위쪽 긴 투입구는 「제본표지」 전용</b>입니다. <b>코팅지는 절대 위쪽 투입구에 넣지 마세요!</b><br>코팅지는 <b>아래(앞쪽) 투입구</b>에만 넣습니다. 코팅지를 위쪽 투입구에 넣으면 코팅지가 걸려 기계가 고장 날 수 있습니다.</div>
-      <img class="dual-img" src="images/coat/safa-two-slots.jpg?v=1" alt="SAFA-BM100 코팅·제본 겸용기: 위쪽 긴 투입구는 제본표지 투입구(코팅지 넣지 않기), 아래 앞쪽 투입구가 코팅지 투입구" loading="lazy">
-    </div>
-    <div class="prestep">
-      <div class="prestep-h">🧾 코팅 시작 전에 먼저! <span>흰색 SAFA-BM100 · 검정색 PL-1506 공통</span></div>
-      <ol>
-        <li><b>진열되어 있는 코팅지의 수량</b>을 먼저 확인하세요.</li>
-        <li>필요한 수량만큼 있으면 토스 키오스크에서 <b>몇 장인지 고르고 카드로 결제</b>한 뒤, 아래 방법대로 이용해 주세요.</li>
-        <li>필요한 수량보다 진열된 코팅지가 적으면 <b>다음에 이용하시거나, 있는 만큼만</b> 이용해 주세요.</li>
-      </ol>
-      <div class="prestep-warn">⚠️ <b>토스 키오스크에서 결제한 금액은 환불 요청 시 수수료를 제외하고 환불</b>되니 주의해 주세요.</div>
-    </div>
-    <div class="steps steps-wide">
-      <div class="step">
-        <div class="step-no">1</div>
-        <div class="step-h">코팅지 확인 · 결제 먼저!</div>
-        <p class="step-p"><b>진열되어 있는 코팅지의 수량을 먼저 확인</b>하세요.<br>필요한 수량만큼 있으면 기계 옆 토스 키오스크에서 <b>몇 장인지 고르고 카드로 결제</b>한 뒤 이용해 주세요.<br>필요한 수량보다 진열된 코팅지가 적으면 <b>다음에 이용하시거나, 있는 만큼만</b> 이용해 주세요.</p>
-        <div class="step-note warn">⚠️ <b>수량 확인 → 결제 → 코팅</b> 순서입니다. 반드시 결제를 먼저 하세요</div>
-        <div class="step-note warn">⚠️ <b>토스 키오스크에서 결제한 금액은 환불 요청 시 수수료를 제외하고 환불</b>되니 주의해 주세요.</div>
-      </div>
-      <div class="step step-dual">
-        <div class="step-no">2</div>
-        <div class="step-figs two"><img class="step-photo" src="images/coat/coat-power.png" alt="전원 버튼을 누르는 모습" loading="lazy"><img class="step-photo" src="images/coat/coat-button.png" alt="코팅 버튼을 2번 누르는 모습" loading="lazy"></div>
-        <div class="step-h">전원 켜기 · 예열</div>
-        <p class="step-p"><b>전원</b> 버튼을 누르고 <b>코팅</b> 버튼을 <b>2번</b> 누르세요.<br>불이 깜빡이다가 3~5분 후 <b>"삐"</b> 소리와 함께 불이 켜지면 예열 완료입니다.</p>
-        <div class="step-note warn">⚠️ 코팅 버튼을 <b>3번 이상</b> 눌렀을 땐 <b>전원 버튼을 눌러 끈 후</b>, 다시 처음부터 <b>전원 버튼을 누르고 코팅 버튼을 2번</b> 누르세요.</div>
-      </div>
-      <div class="step">
-        <div class="step-no">3</div>
-        <div class="step-figs"><img class="step-photo" src="images/coat/coat-fill.png" alt="코팅지 안에 인쇄물을 넣는 모습" loading="lazy"></div>
-        <div class="step-h">코팅지에 인쇄물 넣기</div>
-        <p class="step-p">코팅지(코팅 파우치) <b>안에 인쇄물을 가지런히</b> 넣으세요.</p>
-      </div>
-      <div class="step">
-        <div class="step-no">4</div>
-        <div class="step-figs"><img class="step-photo" src="images/coat/coat-insert.png" alt="코팅지의 막힌 부분부터 투입구에 수평으로 넣는 모습" loading="lazy"></div>
-        <div class="step-h">코팅기에 넣기</div>
-        <p class="step-p">코팅지의 <b>막힌 부분부터</b> 투입구에 넣으세요.<br><b>수평으로 반듯하게, 구겨지지 않게</b> 넣어 주세요.</p>
-      </div>
-      <div class="step">
-        <div class="step-no">5</div>
-        <div class="step-figs"><img class="step-photo" src="images/coat/coat-watch.png" alt="코팅지가 뒷면으로 나올 때 걸리지 않는지 지켜보는 모습" loading="lazy"></div>
-        <div class="step-h">나오는 코팅지 확인</div>
-        <p class="step-p">코팅지가 <b>뒷부분으로 나올 때</b> 주변에 걸리지 않고 잘 나오는지 지켜봐 주세요.</p>
-      </div>
-      <div class="step">
-        <div class="step-no">6</div>
-        <div class="step-h">전원 OFF</div>
-        <p class="step-p">사용이 끝나면 <b>반드시 전원을 끄세요.</b></p>
-        <div class="step-note warn">전원을 끄지 않으면 다음 이용자에게 피해가 발생합니다.</div>
-      </div>
-    </div>
-    <div class="adfw" style="margin-top:34px">
-      <div class="adfw-h"><span class="x">!</span>코팅 주의사항 — 하지 말아야 할 것과 해야 할 것, 꼭 지켜 주세요</div>
-      <div class="fire">
-        <div class="fire-h">🔥🚨 화재 위험 — 절대 하지 마세요! 🚨🔥</div>
-        <div class="fire-items"><div class="fire-it"><div><b>🚫 인쇄물만 넣지 마세요!</b><span>코팅지 없이 인쇄물만 코팅기에 넣으면 안 됩니다</span></div></div><div class="fire-it"><div><b>🚫 빈 코팅지만 넣지 마세요!</b><span>인쇄물 없이 빈 코팅지만 코팅기에 넣으면 안 됩니다</span></div></div></div>
-        <div class="fire-t">⚠️ 이 두 가지를 하면 <b>코팅기 내부에서 불이 나 화재가 발생</b>할 수 있습니다. 🧯<br>반드시 <b>인쇄물을 코팅지 안에 넣은 것만</b> 코팅기에 넣으세요. <b>화재와 기기 손상의 위험</b>이 있습니다.</div>
-      </div>
-      <div class="adfw-grid">
-        <div class="adfw-box ok">
-          <div class="adfw-t">이렇게 하세요</div>
-          <ul>
-            <li>코팅지의 <b>막힌 부분부터</b> 넣으세요. (필수)</li>
-            <li><b>코팅기 투입구에 걸쳐 놓지 말고</b>, 구겨지지 않게 조심해서 <b>자동으로 빨려 들어갈 때까지 천천히 밀어 넣으세요.</b></li>
-            <li>여러 장을 코팅할 때는 <b>먼저 넣은 코팅지가 나온 뒤</b> 다음 코팅지를 넣으세요.<span class="warnline">⚠️ 코팅지는 <b>앞쪽 투입구로 넣으면 뒤쪽으로 나옵니다.</b> 코팅지가 나오는 뒤쪽에는 넣지 마세요.</span><div class="seq3"><div class="s3"><img src="images/coat/safa-multi-1.jpg?v=2" alt="먼저 넣는 코팅지를 SAFA-BM100 앞쪽 투입구에 넣는 모습" loading="lazy"><p><b>① 먼저 넣는 코팅지</b>를 <b>앞쪽 투입구</b>에 넣습니다.</p></div><div class="s3"><img src="images/coat/safa-multi-2.jpg?v=2" alt="먼저 넣은 코팅지가 코팅기 뒤쪽으로 완전히 나올 때까지 기다리는 모습" loading="lazy"><p><b>② 뒤쪽으로 완전히 다 나올 때까지</b> 기다립니다.</p></div><div class="s3"><img src="images/coat/safa-multi-3.jpg?v=2" alt="나온 코팅지를 확인하고 꺼낸 뒤 다음 코팅지를 앞쪽 투입구에 넣는 모습" loading="lazy"><p><b>③ 다 나온 것을 확인</b>하고 꺼내 놓은 뒤, <b>다음 코팅지</b>를 앞쪽 투입구에 넣습니다.</p></div></div></li>
-            <li>사용이 끝나면 <b>전원 버튼을 눌러 전원을 끄세요.</b></li>
-          </ul>
-        </div>
-        <div class="adfw-box no">
-          <div class="adfw-t">이렇게 하지 마세요</div>
-          <figure class="adfw-fig"><img src="images/coat/no-small-print.png" alt="코팅지보다 작은 인쇄물을 넣어 빈 공간이 생기면 코팅지가 코팅기 안에서 구겨지고 주름지는 모습" loading="lazy"><figcaption>▲ 왼쪽처럼 넣으면(✕) 오른쪽처럼 <b>구겨져서</b> 나옵니다.</figcaption></figure>
-          <ul>
-            <li>🚫 <b>위쪽 제본표지 투입구</b>에 코팅지를 넣지 마세요. (코팅지는 <b>아래 앞쪽 투입구</b>로만)</li>
-            <li><b>코팅지보다 작게 자른 인쇄물</b>을 넣지 마세요. 코팅지(A4 · A3) 안에 빈 공간이 많으면 그 부분은 인쇄물 없이 코팅지끼리만 붙어 나와 <b>구겨지고 주름</b>이 집니다.<br>특히 인쇄물이 코팅지의 <b>막힌 부분까지 닿아 있지 않으면</b>, 먼저 들어가는 막힌 부분의 <b>모서리가 코팅기 안에서 구겨져 걸리거나</b> 구겨진 채 나올 수 있습니다.<br>👉 인쇄물은 <b>코팅지 크기에 맞게, 막힌 부분까지 닿도록</b> 넣어 주세요.</li>
-            <li><b>가져온 인쇄물</b>은 사용할 수 없습니다. (매장 종이와 다른 종이는 안 돼요)</li>
-            <li><b>가져온 코팅지</b>는 사용할 수 없습니다. (매장 종이와 다른 종이는 안 돼요)</li>
-            <li><b>코팅기가 움직일 때는 버튼을 누르지 마세요.</b> (잘못 누르면 안 돼요)</li>
-          </ul>
-        </div>
-      </div>
-      <div class="adfw-foot">※ 흰색 SAFA-BM100 · 검정색 PL-1506 <b>모든 코팅기에 똑같이 적용</b>되는 주의사항입니다.</div>
-    </div>
   </div>
 </div>
 
@@ -520,7 +438,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
       <div class="sec-ico"><svg width="34" height="34" viewBox="0 0 48 48" fill="none"><rect x="6" y="16" width="36" height="20" rx="4" fill="#111827"/><rect x="12" y="10" width="24" height="8" rx="2" stroke="#111827" stroke-width="3"/><rect x="14" y="30" width="20" height="10" rx="2" stroke="#111827" stroke-width="3" fill="#fff"/></svg></div>
       <h2 class="sec-h2">검정색 코팅기(PL-1506) 사용방법 <span class="pill">PL-1506</span></h2>
     </div>
-    <p class="sec-tagline"><b>페이퍼프랜드 PL-1506 코팅기 [문서 모드] 전용 설명서입니다.</b> 매장에 검정색 PL-1506 코팅기가 있다면 위쪽 흰색 SAFA-BM100 코팅기 방법이 아니라 <b>이 방법대로</b> 코팅해 주세요.</p>
+    <p class="sec-tagline"><b>페이퍼프랜드 PL-1506 코팅기 [문서 모드] 전용 설명서입니다.</b> 매장에 검정색 PL-1506 코팅기가 있다면 <b>이 방법대로</b> 먼저 코팅해 주세요. (흰색 SAFA-BM100만 있는 매장은 맨 아래 SAFA-BM100 방법을 따라 주세요.)</p>
 
     <div class="prestep">
       <div class="prestep-h">🧾 코팅 시작 전에 먼저! <span>흰색 SAFA-BM100 · 검정색 PL-1506 공통</span></div>
@@ -673,6 +591,102 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
             <li><img src="images/coat/pl-no-bring-print.jpg" alt="가져온 인쇄물은 사용 불가" loading="lazy"><div><b>가져온 인쇄물</b>은 사용할 수 없습니다. (매장 종이와 다른 종이는 안 돼요)</div></li>
             <li><img src="images/coat/pl-no-bring-coat.jpg" alt="가져온 코팅지는 사용 불가" loading="lazy"><div><b>가져온 코팅지</b>는 사용할 수 없습니다. (매장 종이와 다른 종이는 안 돼요)</div></li>
             <li><img src="images/coat/pl-no-touch.jpg" alt="작동 중 버튼을 누르면 안 됨" loading="lazy"><div><b>코팅기가 움직일 때는 버튼을 누르지 마세요.</b> (잘못 누르면 안 돼요)</div></li>
+          </ul>
+        </div>
+      </div>
+      <div class="adfw-foot">※ 흰색 SAFA-BM100 · 검정색 PL-1506 <b>모든 코팅기에 똑같이 적용</b>되는 주의사항입니다.</div>
+    </div>
+  </div>
+</div>
+
+<div class="sec alt" id="safa" style="--sc:#7C3AED;--sc-light:#F1EAFE">
+  <div class="sec-in">
+    <div class="sec-head">
+      <div class="sec-ico"><svg width="34" height="34" viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="28" height="34" rx="3" stroke="#7C3AED" stroke-width="3"/><path d="M14 18h16M14 26h16M14 34h9" stroke="#7C3AED" stroke-width="3" stroke-linecap="round"/><path d="M40 4l1.7 4.3L46 10l-4.3 1.7L40 16l-1.7-4.3L34 10l4.3-1.7z" fill="#7C3AED"/></svg></div>
+      <h2 class="sec-h2">흰색 코팅기(SAFA-BM100) 사용방법 <span class="pill">SAFA-BM100</span></h2>
+    </div>
+    <p class="sec-tagline"><b>흰색 SAFA-BM100 코팅 · 제본 겸용기 설명서입니다.</b> 두 종류의 코팅기가 모두 있는 매장에서는 위쪽 PL-1506을 먼저 이용해 주세요. 흰색 SAFA-BM100만 있는 매장은 <b>이 방법대로</b> 코팅해 주세요.</p>
+    <div class="subhead" id="safa-steps">흰색 SAFA-BM100 코팅기 사용방법</div>
+    <div class="dual">
+      <div class="dual-h">🔀 이 기계(SAFA-BM100)는 <b>코팅 · 제본 겸용 기계</b>입니다</div>
+      <div class="dual-warn">🚫 <b>위쪽 긴 투입구는 「제본표지」 전용</b>입니다. <b>코팅지는 절대 위쪽 투입구에 넣지 마세요!</b><br>코팅지는 <b>아래(앞쪽) 투입구</b>에만 넣습니다. 코팅지를 위쪽 투입구에 넣으면 코팅지가 걸려 기계가 고장 날 수 있습니다.</div>
+      <img class="dual-img" src="images/coat/safa-two-slots.jpg?v=1" alt="SAFA-BM100 코팅·제본 겸용기: 위쪽 긴 투입구는 제본표지 투입구(코팅지 넣지 않기), 아래 앞쪽 투입구가 코팅지 투입구" loading="lazy">
+    </div>
+    <div class="prestep">
+      <div class="prestep-h">🧾 코팅 시작 전에 먼저! <span>흰색 SAFA-BM100 · 검정색 PL-1506 공통</span></div>
+      <ol>
+        <li><b>진열되어 있는 코팅지의 수량</b>을 먼저 확인하세요.</li>
+        <li>필요한 수량만큼 있으면 토스 키오스크에서 <b>몇 장인지 고르고 카드로 결제</b>한 뒤, 아래 방법대로 이용해 주세요.</li>
+        <li>필요한 수량보다 진열된 코팅지가 적으면 <b>다음에 이용하시거나, 있는 만큼만</b> 이용해 주세요.</li>
+      </ol>
+      <div class="prestep-warn">⚠️ <b>토스 키오스크에서 결제한 금액은 환불 요청 시 수수료를 제외하고 환불</b>되니 주의해 주세요.</div>
+    </div>
+    <div class="steps steps-wide">
+      <div class="step">
+        <div class="step-no">1</div>
+        <div class="step-h">코팅지 확인 · 결제 먼저!</div>
+        <p class="step-p"><b>진열되어 있는 코팅지의 수량을 먼저 확인</b>하세요.<br>필요한 수량만큼 있으면 기계 옆 토스 키오스크에서 <b>몇 장인지 고르고 카드로 결제</b>한 뒤 이용해 주세요.<br>필요한 수량보다 진열된 코팅지가 적으면 <b>다음에 이용하시거나, 있는 만큼만</b> 이용해 주세요.</p>
+        <div class="step-note warn">⚠️ <b>수량 확인 → 결제 → 코팅</b> 순서입니다. 반드시 결제를 먼저 하세요</div>
+        <div class="step-note warn">⚠️ <b>토스 키오스크에서 결제한 금액은 환불 요청 시 수수료를 제외하고 환불</b>되니 주의해 주세요.</div>
+      </div>
+      <div class="step step-dual">
+        <div class="step-no">2</div>
+        <div class="step-figs two"><img class="step-photo" src="images/coat/coat-power.png" alt="전원 버튼을 누르는 모습" loading="lazy"><img class="step-photo" src="images/coat/coat-button.png" alt="코팅 버튼을 2번 누르는 모습" loading="lazy"></div>
+        <div class="step-h">전원 켜기 · 예열</div>
+        <p class="step-p"><b>전원</b> 버튼을 누르고 <b>코팅</b> 버튼을 <b>2번</b> 누르세요.<br>불이 깜빡이다가 3~5분 후 <b>"삐"</b> 소리와 함께 불이 켜지면 예열 완료입니다.</p>
+        <div class="step-note warn">⚠️ 코팅 버튼을 <b>3번 이상</b> 눌렀을 땐 <b>전원 버튼을 눌러 끈 후</b>, 다시 처음부터 <b>전원 버튼을 누르고 코팅 버튼을 2번</b> 누르세요.</div>
+      </div>
+      <div class="step">
+        <div class="step-no">3</div>
+        <div class="step-figs"><img class="step-photo" src="images/coat/coat-fill.png" alt="코팅지 안에 인쇄물을 넣는 모습" loading="lazy"></div>
+        <div class="step-h">코팅지에 인쇄물 넣기</div>
+        <p class="step-p">코팅지(코팅 파우치) <b>안에 인쇄물을 가지런히</b> 넣으세요.</p>
+      </div>
+      <div class="step">
+        <div class="step-no">4</div>
+        <div class="step-figs"><img class="step-photo" src="images/coat/coat-insert.png" alt="코팅지의 막힌 부분부터 투입구에 수평으로 넣는 모습" loading="lazy"></div>
+        <div class="step-h">코팅기에 넣기</div>
+        <p class="step-p">코팅지의 <b>막힌 부분부터</b> 투입구에 넣으세요.<br><b>수평으로 반듯하게, 구겨지지 않게</b> 넣어 주세요.</p>
+      </div>
+      <div class="step">
+        <div class="step-no">5</div>
+        <div class="step-figs"><img class="step-photo" src="images/coat/coat-watch.png" alt="코팅지가 뒷면으로 나올 때 걸리지 않는지 지켜보는 모습" loading="lazy"></div>
+        <div class="step-h">나오는 코팅지 확인</div>
+        <p class="step-p">코팅지가 <b>뒷부분으로 나올 때</b> 주변에 걸리지 않고 잘 나오는지 지켜봐 주세요.</p>
+      </div>
+      <div class="step">
+        <div class="step-no">6</div>
+        <div class="step-h">전원 OFF</div>
+        <p class="step-p">사용이 끝나면 <b>반드시 전원을 끄세요.</b></p>
+        <div class="step-note warn">전원을 끄지 않으면 다음 이용자에게 피해가 발생합니다.</div>
+      </div>
+    </div>
+    <div class="adfw" style="margin-top:34px">
+      <div class="adfw-h"><span class="x">!</span>코팅 주의사항 — 하지 말아야 할 것과 해야 할 것, 꼭 지켜 주세요</div>
+      <div class="fire">
+        <div class="fire-h">🔥🚨 화재 위험 — 절대 하지 마세요! 🚨🔥</div>
+        <div class="fire-items"><div class="fire-it"><div><b>🚫 인쇄물만 넣지 마세요!</b><span>코팅지 없이 인쇄물만 코팅기에 넣으면 안 됩니다</span></div></div><div class="fire-it"><div><b>🚫 빈 코팅지만 넣지 마세요!</b><span>인쇄물 없이 빈 코팅지만 코팅기에 넣으면 안 됩니다</span></div></div></div>
+        <div class="fire-t">⚠️ 이 두 가지를 하면 <b>코팅기 내부에서 불이 나 화재가 발생</b>할 수 있습니다. 🧯<br>반드시 <b>인쇄물을 코팅지 안에 넣은 것만</b> 코팅기에 넣으세요. <b>화재와 기기 손상의 위험</b>이 있습니다.</div>
+      </div>
+      <div class="adfw-grid">
+        <div class="adfw-box ok">
+          <div class="adfw-t">이렇게 하세요</div>
+          <ul>
+            <li>코팅지의 <b>막힌 부분부터</b> 넣으세요. (필수)</li>
+            <li><b>코팅기 투입구에 걸쳐 놓지 말고</b>, 구겨지지 않게 조심해서 <b>자동으로 빨려 들어갈 때까지 천천히 밀어 넣으세요.</b></li>
+            <li>여러 장을 코팅할 때는 <b>먼저 넣은 코팅지가 나온 뒤</b> 다음 코팅지를 넣으세요.<span class="warnline">⚠️ 코팅지는 <b>앞쪽 투입구로 넣으면 뒤쪽으로 나옵니다.</b> 코팅지가 나오는 뒤쪽에는 넣지 마세요.</span><div class="seq3"><div class="s3"><img src="images/coat/safa-multi-1.jpg?v=2" alt="먼저 넣는 코팅지를 SAFA-BM100 앞쪽 투입구에 넣는 모습" loading="lazy"><p><b>① 먼저 넣는 코팅지</b>를 <b>앞쪽 투입구</b>에 넣습니다.</p></div><div class="s3"><img src="images/coat/safa-multi-2.jpg?v=2" alt="먼저 넣은 코팅지가 코팅기 뒤쪽으로 완전히 나올 때까지 기다리는 모습" loading="lazy"><p><b>② 뒤쪽으로 완전히 다 나올 때까지</b> 기다립니다.</p></div><div class="s3"><img src="images/coat/safa-multi-3.jpg?v=2" alt="나온 코팅지를 확인하고 꺼낸 뒤 다음 코팅지를 앞쪽 투입구에 넣는 모습" loading="lazy"><p><b>③ 다 나온 것을 확인</b>하고 꺼내 놓은 뒤, <b>다음 코팅지</b>를 앞쪽 투입구에 넣습니다.</p></div></div></li>
+            <li>사용이 끝나면 <b>전원 버튼을 눌러 전원을 끄세요.</b></li>
+          </ul>
+        </div>
+        <div class="adfw-box no">
+          <div class="adfw-t">이렇게 하지 마세요</div>
+          <figure class="adfw-fig"><img src="images/coat/no-small-print.png" alt="코팅지보다 작은 인쇄물을 넣어 빈 공간이 생기면 코팅지가 코팅기 안에서 구겨지고 주름지는 모습" loading="lazy"><figcaption>▲ 왼쪽처럼 넣으면(✕) 오른쪽처럼 <b>구겨져서</b> 나옵니다.</figcaption></figure>
+          <ul>
+            <li>🚫 <b>위쪽 제본표지 투입구</b>에 코팅지를 넣지 마세요. (코팅지는 <b>아래 앞쪽 투입구</b>로만)</li>
+            <li><b>코팅지보다 작게 자른 인쇄물</b>을 넣지 마세요. 코팅지(A4 · A3) 안에 빈 공간이 많으면 그 부분은 인쇄물 없이 코팅지끼리만 붙어 나와 <b>구겨지고 주름</b>이 집니다.<br>특히 인쇄물이 코팅지의 <b>막힌 부분까지 닿아 있지 않으면</b>, 먼저 들어가는 막힌 부분의 <b>모서리가 코팅기 안에서 구겨져 걸리거나</b> 구겨진 채 나올 수 있습니다.<br>👉 인쇄물은 <b>코팅지 크기에 맞게, 막힌 부분까지 닿도록</b> 넣어 주세요.</li>
+            <li><b>가져온 인쇄물</b>은 사용할 수 없습니다. (매장 종이와 다른 종이는 안 돼요)</li>
+            <li><b>가져온 코팅지</b>는 사용할 수 없습니다. (매장 종이와 다른 종이는 안 돼요)</li>
+            <li><b>코팅기가 움직일 때는 버튼을 누르지 마세요.</b> (잘못 누르면 안 돼요)</li>
           </ul>
         </div>
       </div>
