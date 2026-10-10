@@ -233,6 +233,14 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 .step-note.warn{background:#FEF2F2;color:#8A1C15;font-weight:600}
 .step-note.warn b{color:#B31E16}
 .sec-note{margin:0 0 22px;max-width:720px}
+.bsub{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:48px 0 20px;padding:15px 22px;border-radius:14px;color:#fff;font-size:23px;font-weight:900;letter-spacing:-.5px;line-height:1.3;box-shadow:0 4px 14px rgba(17,24,39,.14)}
+.bsub:first-of-type{margin-top:26px}
+.bsub-ico{flex:0 0 auto;width:38px;height:38px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:23px;font-weight:900;line-height:1}
+.bsub small{margin-left:auto;font-size:14px;font-weight:800;background:rgba(255,255,255,.24);padding:5px 14px;border-radius:50px;letter-spacing:0;white-space:nowrap}
+.bsub.edge{background:#0F6CBD}.bsub.edge .bsub-ico{color:#0F6CBD;font-family:Georgia,serif}
+.bsub.chrome{background:#D93025}.bsub.chrome .bsub-ico{color:#D93025}
+.bsub.common{background:#22B24C}.bsub.common .bsub-ico{font-size:21px}
+@media(max-width:560px){.bsub{font-size:19px;padding:13px 16px;gap:10px}.bsub small{margin-left:0;font-size:13px}}
 .steps-edge{grid-template-columns:1fr;max-width:1000px}
 .steps-edge .step{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);column-gap:28px;align-items:start}
 .steps-edge .step-no{grid-column:1/-1}
@@ -1223,7 +1231,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
       <p style="font-size:14px;color:#5C4300;line-height:1.7">PC에서 파일이 <b>엣지(Edge)</b>로 열려 있으면 아래 <b>엣지 방법</b>, <b>크롬(Chrome)</b>으로 열려 있으면 아래 <b>크롬 방법</b>(1~5단계)을 따라 하세요. 그다음 <b>복합기에서 하는 6~10단계는 둘 다 똑같아요.</b></p>
     </div>
 
-    <div class="subhead">엣지(Edge)에서 인쇄하기 · 1~5단계</div>
+    <div class="bsub edge"><span class="bsub-ico">e</span><span class="bsub-t">엣지(Edge)에서 인쇄하기</span><small>1~5단계</small></div>
     <div class="steps steps-edge">
       <div class="step noimg">
         <div class="step-no">1</div>
@@ -1267,7 +1275,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
       </div>
     </div>
 
-    <div class="subhead">크롬(Chrome)에서 인쇄하기 · 1~5단계</div>
+    <div class="bsub chrome"><span class="bsub-ico">C</span><span class="bsub-t">크롬(Chrome)에서 인쇄하기</span><small>1~5단계</small></div>
     <div class="steps steps-edge">
       <div class="step noimg">
         <div class="step-no">1</div>
@@ -1311,7 +1319,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
       </div>
     </div>
 
-    <div class="subhead">복합기에서 인쇄하기 · 6~10단계 (엣지 · 크롬 똑같아요)</div>
+    <div class="bsub common"><span class="bsub-ico">🖨️</span><span class="bsub-t">복합기에서 인쇄하기</span><small>6~10단계 · 엣지, 크롬 똑같아요</small></div>
     <div class="steps steps-edge">
       <div class="step">
         <div class="step-no">6</div>
