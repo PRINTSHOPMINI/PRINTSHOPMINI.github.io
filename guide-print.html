@@ -246,6 +246,11 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 .pwarn li{margin-bottom:4px}
 .plink{display:inline-block;margin-top:2px;color:var(--blue);font-weight:800;text-decoration:underline}
 @media(max-width:820px){.pgroup{grid-template-columns:1fr;padding:16px}}
+.pg2{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr)}
+.pg2 .pfig{position:sticky;top:130px}
+.pimg{margin:10px 0 4px;max-width:460px}
+.pimg img{display:block;width:100%;height:auto;border:1px solid var(--border);border-radius:8px}
+@media(max-width:820px){.pg2{grid-template-columns:1fr}.pg2 .pfig{position:static}}
 .ftype-box{margin-top:14px;background:#E8F4FC;border:2px solid var(--blue);border-radius:12px;padding:14px 14px 16px}
 .ftype-h{font-size:14.5px;font-weight:900;color:var(--text);line-height:1.45}
 .ftype-sub{font-size:12.5px;font-weight:700;color:var(--text2);margin:3px 0 11px}
@@ -508,67 +513,9 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
     </div>
     <p class="sec-tagline">매장 PC에는 <b>편집 기능이 없는 열람 전용 뷰어</b>가 설치되어 있습니다. 파일을 만든 환경과 다르면 화면이 달라질 수 있습니다.</p>
 
-    <div class="steps">
-      <div class="step">
-        <div class="step-no">1</div>
-        <div class="step-fig">
-          <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
-            <path d="M32 10h28l14 14v46H32z" stroke="#111827" stroke-width="3" stroke-linejoin="round"/>
-            <path d="M60 10v14h14" stroke="#111827" stroke-width="3" stroke-linejoin="round"/>
-            <text x="53" y="52" font-size="12" font-weight="900" text-anchor="middle" fill="#1B8AC4" font-family="Noto Sans KR">HWP</text>
-          </svg>
-        </div>
-        <div class="step-h">파일 열기</div>
-        <p class="step-p">HWP 파일을 열면 <b>한글 뷰어</b>로 실행됩니다.</p>
-      </div>
-
-      <div class="step">
-        <div class="step-no">2</div>
-        <div class="step-fig">
-          <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
-            <rect x="16" y="12" width="88" height="56" rx="5" stroke="#111827" stroke-width="3"/>
-            <rect x="16" y="12" width="88" height="13" rx="5" fill="#EEF1F5"/>
-            <rect x="26" y="34" width="36" height="7" rx="2" fill="#C9D3DB"/>
-            <rect x="26" y="47" width="24" height="7" rx="2" fill="#C9D3DB"/>
-            <rect x="70" y="34" width="24" height="20" rx="3" fill="#1B8AC4"/>
-            <text x="82" y="48" font-size="9" font-weight="900" text-anchor="middle" fill="#fff" font-family="Noto Sans KR">인쇄</text>
-          </svg>
-        </div>
-        <div class="step-h">인쇄 메뉴 선택</div>
-        <p class="step-p"><b>[파일] → [인쇄]</b>를 누르세요. (<b>Ctrl</b>과 <b>P</b>를 같이 눌러도 돼요) 프린터와 인쇄 설정을 정하세요.</p>
-      </div>
-
-      <div class="step">
-        <div class="step-no">3</div>
-        <div class="step-fig">
-          <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
-            <rect x="16" y="12" width="88" height="56" rx="4" stroke="#111827" stroke-width="3" fill="#fff"/>
-            <rect x="26" y="24" width="46" height="6" rx="2" fill="#C9D3DB"/>
-            <rect x="26" y="36" width="34" height="6" rx="2" fill="#C9D3DB"/>
-            <rect x="26" y="48" width="14" height="12" rx="2" fill="none" stroke="#D93025" stroke-width="3"/>
-            <rect x="46" y="48" width="14" height="12" rx="2" fill="none" stroke="#D93025" stroke-width="3"/>
-            <text x="86" y="58" font-size="10" font-weight="900" text-anchor="middle" fill="#D93025" font-family="Noto Sans KR">□ □</text>
-          </svg>
-        </div>
-        <div class="step-h">화면이 달라 보일 수 있어요</div>
-        <p class="step-p">글꼴·줄간격·표가 틀어지거나 <span class="r">원본에 없던 기호(□)</span>가 나타날 수 있습니다.</p>
-      </div>
-
-      <div class="step">
-        <div class="step-no">4</div>
-        <div class="step-fig">
-          <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
-            <path d="M14 14h22l10 10v34H14z" stroke="#9AA5B1" stroke-width="3" stroke-linejoin="round"/>
-            <text x="30" y="45" font-size="10" font-weight="900" text-anchor="middle" fill="#9AA5B1" font-family="Noto Sans KR">HWP</text>
-            <path d="M56 40h16m0 0-6-6m6 6-6 6" stroke="#22B24C" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M82 14h20l10 10v34H82z" stroke="#22B24C" stroke-width="3" stroke-linejoin="round"/>
-            <text x="97" y="45" font-size="10" font-weight="900" text-anchor="middle" fill="#22B24C" font-family="Noto Sans KR">PDF</text>
-          </svg>
-        </div>
-        <div class="step-h">PDF로 저장해 오세요</div>
-        <p class="step-p">한글에서 <b>[다른 이름으로 저장] → PDF</b>로 바꿔 오시면 원본 그대로 출력됩니다.</p>
-      </div>
-    </div>
+    <div class="pgroup pg2"><figure class="pfig"><a href="images/print/hwp-main.jpg" target="_blank" rel="noopener"><img class="step-photo" src="images/print/hwp-main.jpg" alt="한글 인쇄 화면. 프린터 선택, 설정 버튼, 인쇄 매수, 인쇄 범위, 인쇄 방식, 인쇄 버튼에 번호를 붙인 그림" loading="lazy"></a><figcaption class="est-cap">1~6번 번호가 붙은 곳을 순서대로 확인하세요 <span style="color:var(--text3);font-weight:600">(사진을 누르면 크게 열려요)</span></figcaption></figure><ol class="plist"><li><span class="pn">1</span><div class="pb"><b>프린터 선택</b>: 프린터 목록에서 원하는 프린터(<b>흑백출력</b> 또는 <b>컬러출력</b>)를 누르세요.</div></li><li><span class="pn">2</span><div class="pb"><b>용지 크기 · 단면/양면</b>: <b>[설정]</b> 버튼을 누르면 <b>[프린터 속성]</b> 창이 나와요.<br><b>A. [기본] 탭</b>에서 인쇄 방향과 단면/양면을 고르세요.<br><b>B. [용지] 탭</b>에서 출력 용지 크기를 고르세요. A4인지 확인하고, B4 · A3로 인쇄할 때는 <b>[원본 문서 크기]</b>와 <b>[출력 문서 크기]</b>를 원하는 크기로 선택하세요.<figure class="pimg"><a href="images/print/hwp-prop1.jpg" target="_blank" rel="noopener"><img src="images/print/hwp-prop1.jpg" alt="프린터 속성 창의 기본 탭. 용지 방향과 양면 인쇄를 고르는 그림" loading="lazy"></a></figure><figure class="pimg"><a href="images/print/hwp-prop2.jpg" target="_blank" rel="noopener"><img src="images/print/hwp-prop2.jpg" alt="프린터 속성 창의 용지 탭. 원본 문서 크기와 출력 문서 크기를 고르는 그림" loading="lazy"></a></figure></div></li><li><span class="pn">3</span><div class="pb"><b>인쇄 매수</b>를 정하세요.</div></li><li><span class="pn">4</span><div class="pb"><b>인쇄할 페이지 범위</b>를 고르세요. <b>전체</b> 또는 특정 페이지만 인쇄하려면 <b>[일부분]</b>을 고르고 페이지 번호를 입력하세요.</div></li><li><span class="pn">5</span><div class="pb"><b>한 면에 인쇄할 페이지 수</b>: 한 면에 한 페이지는 <b>[기본 인쇄]</b>를 고르세요. 한 면에 여러 페이지는 <b>[모아 찍기]</b>를 고르고 인쇄할 페이지 수를 입력하세요.</div></li><li><span class="pn">6</span><div class="pb">모든 설정이 끝났으면 <b>[인쇄]</b> 버튼을 눌러 진행하세요.<div class="pwarn">※ <b>공용 PC라서 인쇄 설정이 매번 달라져요.</b> 원하는 인쇄 옵션을 <b>모두 확인하고 설정한 뒤</b> 인쇄하세요.</div></div></li></ol></div>
+    <div class="step-note" style="max-width:1100px;margin:0 0 18px">💡 파일을 만든 PC와 글꼴이 달라서 글꼴 · 줄 간격 · 표가 틀어지거나 <b>원본에 없던 기호(□)</b>가 나올 수 있어요. 한글에서 <b>[다른 이름으로 저장] → PDF</b>로 바꿔 오시면 원본 그대로 출력됩니다.</div>
+    <a class="goto" href="#print-step2" onclick="goStep2();return false"><span>한글 인쇄 옵션은 여기까지예요! [인쇄]를 누르면 개인식별번호 입력창이 나와요.</span><b>위 &lsquo;인쇄하는 방법&rsquo; 2단계(비밀번호 4자리 입력)부터 이어서 하세요 ⬆</b></a>
   </div>
 </div>
 <div class="sec" id="office">
@@ -769,166 +716,8 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 
     <!-- 파워포인트 -->
     <div class="opanel" id="office-ppt" style="display:none">
-      <div class="mini-warn" style="margin-bottom:22px">
-        <div class="mini-warn-h"><span class="x">!</span>컬러 출력, 두 곳 모두 확인하세요</div>
-        <p class="mini-warn-p"><b>프린터 설정</b>과 <b>인쇄 설정(컬러)</b>은 서로 다른 항목입니다. 컬러로 뽑으려면 <b>둘 다</b> 컬러로 맞춰야 하며, 하나라도 다르면 흑백으로 출력됩니다.</p>
-      </div>
-      <div class="steps steps-office">
-        <div class="step">
-          <div class="step-no">1</div>
-          <div class="step-fig">
-            <div class="omock" style="--oc:#B7472A">
-              <div class="omock-bar"><span class="omock-dot"></span><span class="omock-dot"></span><span class="omock-dot"></span></div>
-              <div class="omock-body">
-                <div class="omock-side">
-                  <div>홈</div>
-                  <div class="on">파일</div>
-                  <div>공유</div>
-                </div>
-                <div class="omock-fields" style="width:100%;justify-content:center;align-items:center">
-                  <div style="font-size:11px;font-weight:900;color:#374151;margin-bottom:6px">파일 메뉴</div>
-                  <div class="omock-field hi" style="width:60px;text-align:center;background:#B7472A;color:#fff;border-color:#B7472A">인쇄</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="step-h">파일 → 인쇄 열기</div>
-          <p class="step-p">위쪽 <b>[파일] → [인쇄]</b>를 누르세요. 키보드 <b>Ctrl</b>과 <b>P</b>를 같이 눌러도 돼요</p>
-        </div>
-        <div class="step">
-          <div class="step-no">2</div>
-          <div class="step-fig">
-            <div class="omock" style="--oc:#B7472A">
-              <div class="omock-bar"><span class="omock-dot"></span><span class="omock-dot"></span><span class="omock-dot"></span></div>
-              <div class="omock-body">
-                <div class="omock-side">
-                  <div>정보</div>
-                  <div class="on">인쇄</div>
-                  <div>공유</div>
-                </div>
-                <div class="omock-fields">
-                  <div class="omock-cap hi">프린터</div>
-                  <div class="omock-row hi"><div class="omock-field">컬러전용</div></div>
-                  <div class="omock-cap hi">설정 (색상)</div>
-                  <div class="omock-row hi"><div class="omock-field">컬러</div></div>
-                </div>
-                <div class="omock-preview">
-                  <div class="omock-page"></div>
-                  <div class="omock-tag" style="top:8px;right:8px">둘 다 컬러!</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="step-h">프린터 + 컬러 설정</div>
-          <p class="step-p">프린터를 <b>컬러전용</b>으로 고르고, 인쇄 설정의 색도 <b>컬러</b>로 맞추세요. 하나라도 흑백이면 전체가 흑백으로 나옵니다.</p>
-        </div>
-        <div class="step">
-          <div class="step-no">3</div>
-          <div class="step-fig">
-            <div class="omock" style="--oc:#B7472A">
-              <div class="omock-bar"><span class="omock-dot"></span><span class="omock-dot"></span><span class="omock-dot"></span></div>
-              <div class="omock-body">
-                <div class="omock-side">
-                  <div>정보</div>
-                  <div class="on">인쇄</div>
-                  <div>공유</div>
-                </div>
-                <div class="omock-fields">
-                  <div class="omock-cap">슬라이드</div>
-                  <div class="omock-field">모든 슬라이드 인쇄</div>
-                  <div class="omock-cap hi">범위 지정</div>
-                  <div class="omock-row hi"><div class="omock-field">2 - 3번 슬라이드</div></div>
-                </div>
-                <div class="omock-preview">
-                  <div class="omock-page"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="step-h">슬라이드 출력 범위</div>
-          <p class="step-p"><b>전체 슬라이드</b> 또는 <b>범위 지정</b>에서 원하는 슬라이드 번호만 골라 출력할 수 있습니다.</p>
-        </div>
-        <div class="step">
-          <div class="step-no">4</div>
-          <div class="step-fig">
-            <svg width="100%" height="158" viewBox="0 0 280 158" fill="none" style="border:1px solid #D7DDE3;border-radius:8px;background:#fff;box-shadow:0 1px 5px rgba(17,24,39,.07)">
-              <rect x="10" y="10" width="120" height="138" rx="5" fill="#F7F8FA" stroke="#E5E7EB"/>
-              <text x="70" y="26" font-size="9" font-weight="900" text-anchor="middle" fill="#111827" font-family="Noto Sans KR">유인물</text>
-              <rect x="20" y="34" width="100" height="18" rx="3" fill="#FEF2F2" stroke="#D93025" stroke-width="2"/>
-              <text x="70" y="46" font-size="7.6" font-weight="900" text-anchor="middle" fill="#B31E16" font-family="Noto Sans KR">4슬라이드 가로</text>
-              <rect x="20" y="60" width="100" height="18" rx="3" fill="#fff" stroke="#D7DDE3"/>
-              <text x="70" y="72" font-size="7.4" font-weight="700" text-anchor="middle" fill="#9AA5B1" font-family="Noto Sans KR">1슬라이드</text>
-              <rect x="20" y="86" width="100" height="18" rx="3" fill="#fff" stroke="#D7DDE3"/>
-              <text x="70" y="98" font-size="7.4" font-weight="700" text-anchor="middle" fill="#9AA5B1" font-family="Noto Sans KR">9슬라이드</text>
-              <g stroke="#B7472A" stroke-width="2.2" fill="#fff">
-                <rect x="150" y="14" width="52" height="36" rx="2"/><rect x="210" y="14" width="52" height="36" rx="2"/>
-                <rect x="150" y="58" width="52" height="36" rx="2"/><rect x="210" y="58" width="52" height="36" rx="2"/>
-              </g>
-              <text x="176" y="36" font-size="12" font-weight="900" text-anchor="middle" fill="#B7472A" font-family="Noto Sans KR">1</text>
-              <text x="236" y="36" font-size="12" font-weight="900" text-anchor="middle" fill="#B7472A" font-family="Noto Sans KR">2</text>
-              <text x="176" y="80" font-size="12" font-weight="900" text-anchor="middle" fill="#B7472A" font-family="Noto Sans KR">3</text>
-              <text x="236" y="80" font-size="12" font-weight="900" text-anchor="middle" fill="#B7472A" font-family="Noto Sans KR">4</text>
-              <text x="206" y="112" font-size="8" font-weight="700" text-anchor="middle" fill="#6B7280" font-family="Noto Sans KR">가로 배치 순서</text>
-            </svg>
-          </div>
-          <div class="step-h">유인물 배치 (한 장에 여러 슬라이드)</div>
-          <p class="step-p"><b>유인물</b> 항목에서 한 페이지에 넣을 슬라이드 수(1 · 4 · 9장 등)와 <b>가로 · 세로 배치 순서</b>를 정합니다.</p>
-        </div>
-        <div class="step">
-          <div class="step-no">5</div>
-          <div class="step-fig">
-            <svg width="100%" height="158" viewBox="0 0 280 158" fill="none" style="border:1px solid #D7DDE3;border-radius:8px;background:#fff;box-shadow:0 1px 5px rgba(17,24,39,.07)">
-              <rect x="55" y="10" width="170" height="138" rx="5" fill="#fff" stroke="#C9D3DB"/>
-              <text x="140" y="24" font-size="9.5" font-weight="900" text-anchor="middle" fill="#111827" font-family="Noto Sans KR">프린터 속성 - 용지</text>
-              <line x1="55" y1="30" x2="225" y2="30" stroke="#E5E7EB"/>
-              <text x="65" y="46" font-size="7.4" font-weight="700" fill="#374151" font-family="Noto Sans KR">원본 문서 크기</text>
-              <rect x="150" y="38" width="65" height="14" rx="2" fill="#fff" stroke="#C9D3DB"/>
-              <text x="182" y="48" font-size="7.4" font-weight="800" text-anchor="middle" fill="#374151" font-family="Noto Sans KR">A4</text>
-              <text x="65" y="66" font-size="7.4" font-weight="900" fill="#B31E16" font-family="Noto Sans KR">출력 문서 크기</text>
-              <rect x="150" y="58" width="65" height="14" rx="2" fill="#FEF2F2" stroke="#D93025" stroke-width="2"/>
-              <text x="182" y="68" font-size="7.4" font-weight="900" text-anchor="middle" fill="#B31E16" font-family="Noto Sans KR">A3</text>
-              <line x1="65" y1="82" x2="215" y2="82" stroke="#EEF1F5"/>
-              <text x="65" y="98" font-size="7.4" font-weight="700" fill="#374151" font-family="Noto Sans KR">양면 인쇄</text>
-              <rect x="150" y="90" width="65" height="14" rx="2" fill="#fff" stroke="#C9D3DB"/>
-              <text x="182" y="100" font-size="7" font-weight="700" text-anchor="middle" fill="#9AA5B1" font-family="Noto Sans KR">긴 면 기준</text>
-              <text x="65" y="118" font-size="7.4" font-weight="700" fill="#374151" font-family="Noto Sans KR">용지방향</text>
-              <rect x="150" y="110" width="65" height="14" rx="2" fill="#fff" stroke="#C9D3DB"/>
-              <text x="182" y="120" font-size="7" font-weight="700" text-anchor="middle" fill="#9AA5B1" font-family="Noto Sans KR">세로</text>
-              <rect x="180" y="132" width="34" height="12" rx="2" fill="#B7472A"/>
-              <text x="197" y="141" font-size="7" font-weight="800" text-anchor="middle" fill="#fff" font-family="Noto Sans KR">확인</text>
-            </svg>
-          </div>
-          <div class="step-h">양면 · 용지방향 · 확대 인쇄</div>
-          <p class="step-p"><b>단면/양면</b>, <b>가로/세로</b> 방향을 정하고, 큰 용지로 확대 출력하려면 <b>프린터 속성</b>에서 출력 용지 크기를 바꿔줍니다.</p>
-        </div>
-        <div class="step">
-          <div class="step-no">6</div>
-          <div class="step-fig">
-            <div class="omock" style="--oc:#B7472A">
-              <div class="omock-bar"><span class="omock-dot"></span><span class="omock-dot"></span><span class="omock-dot"></span></div>
-              <div class="omock-body">
-                <div class="omock-side">
-                  <div>정보</div>
-                  <div class="on">인쇄</div>
-                  <div>공유</div>
-                </div>
-                <div class="omock-fields">
-                  <div class="omock-cap hi">복사본</div>
-                  <div class="omock-row hi"><div class="omock-field">2</div></div>
-                  <div class="omock-cap">프린터</div>
-                  <div class="omock-field">컬러전용</div>
-                </div>
-                <div class="omock-preview">
-                  <div class="omock-page"></div>
-                  <div class="omock-tag" style="top:8px;right:8px">미리보기 필수!</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="step-h">장 수 확인 후 인쇄</div>
-          <p class="step-p">복사본 수를 정하고, <span class="r">미리보기로 전체 슬라이드</span>를 확인한 뒤 <b>[인쇄]</b>를 누릅니다.</p>
-        </div>
-      </div>
+      <div class="pgroup pg2"><figure class="pfig"><a href="images/print/ppt-main.jpg" target="_blank" rel="noopener"><img class="step-photo" src="images/print/ppt-main.jpg" alt="파워포인트 인쇄 화면. 복사본, 프린터, 슬라이드, 단면, 컬러, 프린터 속성, 인쇄 버튼에 번호를 붙인 그림" loading="lazy"></a><figcaption class="est-cap">1~8번 번호가 붙은 곳을 순서대로 확인하세요 <span style="color:var(--text3);font-weight:600">(사진을 누르면 크게 열려요)</span></figcaption></figure><ol class="plist"><li><span class="pn">1</span><div class="pb"><b>인쇄 매수</b>(복사본)를 정하세요.</div></li><li><span class="pn">2</span><div class="pb"><b>프린터</b>: 빨간 <b>▼</b> 버튼을 누른 뒤 <b>[더보기]</b>를 눌러요. 프린터 목록에서 <b>흑백출력 · 컬러출력 · 증명서전용</b> 중 하나를 선택하세요.<figure class="pimg"><a href="images/print/ppt-b.jpg" target="_blank" rel="noopener"><img src="images/print/ppt-b.jpg" alt="프린터 목록에서 더보기를 눌러 흑백출력, 컬러출력, 증명서전용 중에서 고르는 그림" loading="lazy"></a></figure></div></li><li><span class="pn">3</span><div class="pb"><b>인쇄할 슬라이드</b>: <b>▼</b> 버튼을 누르고 인쇄할 슬라이드를 고르세요.<figure class="pimg"><a href="images/print/ppt-c.jpg" target="_blank" rel="noopener"><img src="images/print/ppt-c.jpg" alt="인쇄할 슬라이드를 고르는 그림" loading="lazy"></a></figure></div></li><li><span class="pn">4</span><div class="pb"><b>한 면에 인쇄할 슬라이드 수</b>: <b>▼</b> 버튼을 누르고 고르세요. 고른 뒤 <b>미리보기</b>로 꼭 확인하세요.<figure class="pimg"><a href="images/print/ppt-d.jpg" target="_blank" rel="noopener"><img src="images/print/ppt-d.jpg" alt="한 면에 인쇄할 슬라이드 수를 고르는 그림" loading="lazy"></a></figure></div></li><li><span class="pn">5</span><div class="pb"><b>단면 / 양면</b>: <b>▼</b> 버튼을 누르고 고르세요. 양면은 <b>긴 면 · 짧은 면</b> 인쇄 방향을 확인한 뒤 선택하세요.<figure class="pimg"><a href="images/print/ppt-e.jpg" target="_blank" rel="noopener"><img src="images/print/ppt-e.jpg" alt="단면 인쇄와 양면 인쇄를 고르는 그림" loading="lazy"></a></figure></div></li><li><span class="pn">6</span><div class="pb"><div class="pwarn" style="margin-top:0">⚠️ <b>컬러</b>: <b>컬러출력 · 증명서전용</b> 프린터를 골랐다면 이 칸을 꼭 <b>[컬러]</b>로 선택하세요.<br><b>[회색조]</b>로 되어 있으면 컬러출력 프린터를 골라도 <b>흑백으로 출력</b>되는데 <b>금액은 컬러 금액</b>으로 결제돼요. <b>[컬러]</b>로 맞추고 <b>미리보기가 컬러인지</b> 꼭 확인하세요.</div><figure class="pimg"><a href="images/print/ppt-f.jpg" target="_blank" rel="noopener"><img src="images/print/ppt-f.jpg" alt="컬러, 회색조, 흑백 중에서 컬러를 고르는 그림" loading="lazy"></a></figure></div></li><li><span class="pn">7</span><div class="pb"><b>용지 크기를 바꿀 때</b>: <b>[프린터 속성]</b>을 누르세요. 창이 나오면 <b>[용지]</b> 탭에서 <b>[원본 문서 크기]</b>와 <b>[출력 문서 크기]</b>를 <b>둘 다</b> 원하는 용지 크기로 선택하세요.</div></li><li><span class="pn">8</span><div class="pb">모든 옵션을 골랐으면 <b>[인쇄]</b> 버튼을 눌러 진행하세요.<div class="pwarn">⚠️ 설정을 다 한 뒤에 <b>② 프린터 선택을 바꾸면</b> 옵션이 바뀔 수 있어요. 그때는 <b>모든 옵션을 처음부터 다시 확인</b>하세요.</div></div></li></ol></div>
+      <a class="goto" href="#print-step2" onclick="goStep2();return false"><span>파워포인트 인쇄 옵션은 여기까지예요! [인쇄]를 누르면 개인식별번호 입력창이 나와요.</span><b>위 &lsquo;인쇄하는 방법&rsquo; 2단계(비밀번호 4자리 입력)부터 이어서 하세요 ⬆</b></a>
     </div>
 
     <!-- 워드 -->
