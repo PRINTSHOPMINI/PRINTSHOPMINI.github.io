@@ -252,6 +252,19 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 .pimg img{display:block;width:100%;height:auto;border:1px solid var(--border);border-radius:8px}
 @media(max-width:820px){.pg2{grid-template-columns:1fr}.pg2 .pfig{position:static}}
 .pg1{grid-template-columns:1fr}
+.order-box{background:#fff;border:2px solid var(--blue);border-radius:14px;padding:18px 20px;margin:0 0 26px;max-width:1000px}
+.order-h{font-size:17px;font-weight:900;color:var(--text);margin-bottom:12px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.order-h span{font-size:12.5px;font-weight:800;background:var(--blue);color:#fff;padding:3px 11px;border-radius:50px}
+.order-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.order-list li{display:flex;gap:11px;align-items:flex-start;background:#F3F9FE;border:1px solid #CFE6F8;border-radius:12px;padding:12px 13px;font-size:13.8px;line-height:1.6;color:var(--text2)}
+.order-list li>div{flex:1;min-width:0}
+.order-list .on{flex:0 0 auto;width:28px;height:28px;border-radius:50%;background:var(--blue);color:#fff;font-weight:900;font-size:15px;display:flex;align-items:center;justify-content:center}
+.order-warn{margin-top:14px;background:#FEF2F2;border:2px solid #E4574D;border-radius:12px;padding:14px 16px;color:#8A1C15;font-size:14px;line-height:1.7}
+.order-warn-h{font-size:16px;font-weight:900;color:#C0261C;margin-bottom:6px}
+.order-warn p{margin:0 0 8px}
+.order-warn b{color:#B31E16;font-weight:900}
+.order-ex{background:#fff;border-radius:8px;padding:9px 12px}
+.order-ok{margin-bottom:0!important;font-weight:700}
 .we-pics{display:flex;flex-direction:column;gap:20px;max-width:940px;margin:0 0 22px}
 .wefig{margin:0;background:#fff;border:1px solid var(--border);border-radius:14px;padding:12px}
 .wefig img{display:block;width:100%;height:auto;border-radius:8px}
@@ -435,6 +448,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
       <h2 class="sec-h2">인쇄하는 방법 <span class="pill">PRINT</span></h2>
     </div>
     <p class="sec-tagline"><b>내 파일을 매장 PC에서 열어 종이로 뽑는 서비스입니다.</b> PC에서 내 파일을 열어 인쇄 작업을 하고 나서, <b>복합기로 이동하여 문서를 개인식별번호로 찾아 결제하면 출력이 됩니다.</b><br>⚠️ <b>PC에서 인쇄 작업을 마친 뒤 복합기로 이동하여, PC에서 입력한 개인식별번호로 조회하고 결제해야 마지막으로 출력이 돼요.</b> <b>복합기 카드 단말기에서</b> 결제하기 전에는 인쇄물이 나오지 않습니다.<br><span style="font-weight:600">※ PC에서 서류 발급 요금 등을 결제했더라도, 인쇄는 <b>복합기 카드 단말기에서 따로 결제</b>해야 출력돼요.</span></p>
+    <div class="order-box"><div class="order-h">🔢 인쇄 순서 · 모든 파일 형식 공통 <span>꼭 이 순서대로!</span></div><ol class="order-list"><li><span class="on">1</span><div><b>🖨️ 프린터를 먼저 선택</b>하세요.<br><b>흑백출력</b> 또는 <b>컬러출력</b> 프린터를 가장 먼저 고릅니다.</div></li><li><span class="on">2</span><div><b>⚙️ 상세 인쇄 옵션을 설정</b>하세요.<br>용지 크기 · 단면/양면 · 매수 · 페이지 수 등을 정합니다.</div></li><li><span class="on">3</span><div><b>👀 미리보기를 확인</b>하세요.<br>내용이 빠짐없이 나왔는지, 컬러출력이면 컬러인지 봅니다.</div></li><li><span class="on">4</span><div><b>✅ 마지막으로 [인쇄] 버튼을 누르세요.</b><br>프로그램에 따라 <b>[인쇄] 버튼</b>, <b>프린터 모양</b>, <b>[확인] 버튼</b>이에요.</div></li></ol><div class="order-warn"><div class="order-warn-h">🚫 옵션을 정한 뒤에는 프린터를 바꾸지 마세요!</div><p>프린터를 고르고 옵션을 정한 뒤 <b>프린터를 다시 바꾸면, 옵션도 처음부터 새로 해야 해요.</b> 프린터를 바꾸면 옵션이 모두 달라집니다.</p><p class="order-ex">❌ <b>이런 경우가 가장 위험해요</b><br>프린터를 고르지 않고 옵션부터 정함 → 나중에 프린터를 <b>흑백출력에서 컬러출력으로 변경</b> → 옵션이 달라졌는데 확인하지 않고 그대로 진행 → 옵션이 이상하게 적용되어 <b>출력이 잘못 나와요.</b></p><p class="order-ok">✅ <b>항상 프린터 선택 → 옵션 설정 → 미리보기 → 인쇄 버튼</b> 순서를 지키세요. 프린터를 바꿨다면 옵션을 <b>처음부터 다시</b> 확인하세요.</p></div></div>
 
     <div id="guideFiles"></div>
     <div class="steps steps-wide">
