@@ -251,6 +251,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 .pimg{margin:10px 0 4px;max-width:460px}
 .pimg img{display:block;width:100%;height:auto;border:1px solid var(--border);border-radius:8px}
 @media(max-width:820px){.pg2{grid-template-columns:1fr}.pg2 .pfig{position:static}}
+.pg1{grid-template-columns:1fr}
 .ftype-box{margin-top:14px;background:#E8F4FC;border:2px solid var(--blue);border-radius:12px;padding:14px 14px 16px}
 .ftype-h{font-size:14.5px;font-weight:900;color:var(--text);line-height:1.45}
 .ftype-sub{font-size:12.5px;font-weight:700;color:var(--text2);margin:3px 0 11px}
@@ -433,7 +434,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         <div class="step-h">파일 열고 프린터 선택</div>
         <p class="step-p">PC에서 파일 열기 → <b>[인쇄]</b> → 프린터 고르기<br>흑백 / 컬러 / 증명서전용(PIN9999) 선택</p>
         <div class="step-note">💾 내가 가져온 파일을 먼저 <b>매장 PC에 저장</b>한 다음, 그 파일을 <b>열어서</b> 인쇄하세요</div>
-        <div class="ftype-box"><div class="ftype-h">📄 파일 형식마다 인쇄옵션 설정 방법이 다릅니다.</div><div class="ftype-sub">인쇄설정방법 — 내 파일 형식을 눌러 보세요</div><div class="ftype-btns"><button type="button" class="ftype-btn pdf" onclick="goType('acrobat')">PDF 파일</button><button type="button" class="ftype-btn hwp" onclick="goType('hancom')">한글 파일</button><button type="button" class="ftype-btn word" onclick="goType('office','word')">MS WORD</button><button type="button" class="ftype-btn ppt" onclick="goType('office','ppt')">MS PPT</button><button type="button" class="ftype-btn excel" onclick="goType('office','excel')">MS EXCEL</button></div></div>
+        <div class="ftype-box"><div class="ftype-h">📄 파일 형식마다 인쇄옵션 설정 방법이 다릅니다.</div><div class="ftype-sub">인쇄설정방법 — 내 파일 형식을 눌러 보세요</div><div class="ftype-btns"><button type="button" class="ftype-btn pdf" onclick="goType('acrobat')">PDF 파일</button><button type="button" class="ftype-btn hwp" onclick="goType('hancom')">한글 파일</button><button type="button" class="ftype-btn word" onclick="goType('office','we')">MS WORD</button><button type="button" class="ftype-btn ppt" onclick="goType('office','ppt')">MS PPT</button><button type="button" class="ftype-btn excel" onclick="goType('office','we')">MS EXCEL</button></div></div>
       </div>
       <div id="print-step2" class="step">
         <div class="step-no">2</div>
@@ -533,92 +534,14 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
     <p class="sec-tagline">워드 · 엑셀 · 파워포인트 파일의 인쇄 설정 방법입니다. 프로그램마다 화면 구성은 다르지만 <b>[파일] → [인쇄]</b>로 들어가는 순서는 같습니다.</p>
 
     <div class="otabs">
-      <button class="otab on" onclick="officeTab('excel',this)">엑셀 (Excel)</button>
+      <button class="otab on" onclick="officeTab('we',this)">워드 · 엑셀 (Word · Excel)</button>
       <button class="otab" onclick="officeTab('ppt',this)">파워포인트 (PPT)</button>
-      <button class="otab" onclick="officeTab('word',this)">워드 (Word)</button>
     </div>
 
     <!-- 엑셀 -->
-    <div class="opanel" id="office-excel">
-      <div class="steps steps-office">
-        <div class="step">
-          <div class="step-no">1</div>
-          <div class="step-fig">
-            <div class="omock" style="--oc:#1D6F42">
-              <div class="omock-bar"><span class="omock-dot"></span><span class="omock-dot"></span><span class="omock-dot"></span></div>
-              <div class="omock-body">
-                <div class="omock-side">
-                  <div>홈</div>
-                  <div class="on">파일</div>
-                  <div>공유</div>
-                </div>
-                <div class="omock-fields" style="width:100%;justify-content:center;align-items:center">
-                  <div style="font-size:11px;font-weight:900;color:#374151;margin-bottom:6px">파일 메뉴</div>
-                  <div class="omock-field hi" style="width:60px;text-align:center;background:#1D6F42;color:#fff;border-color:#1D6F42">인쇄</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="step-h">파일 → 인쇄 열기</div>
-          <p class="step-p">위쪽 <b>[파일] → [인쇄]</b>를 누르세요. 키보드 <b>Ctrl</b>과 <b>P</b>를 같이 눌러도 돼요</p>
-        </div>
-        <div class="step">
-          <div class="step-no">2</div>
-          <div class="step-fig">
-            <div class="omock" style="--oc:#1D6F42">
-              <div class="omock-bar"><span class="omock-dot"></span><span class="omock-dot"></span><span class="omock-dot"></span></div>
-              <div class="omock-body">
-                <div class="omock-side">
-                  <div>정보</div>
-                  <div class="on">인쇄</div>
-                  <div>공유</div>
-                  <div>닫기</div>
-                </div>
-                <div class="omock-fields">
-                  <div class="omock-cap">복사본</div>
-                  <div class="omock-field">1</div>
-                  <div class="omock-cap hi">프린터</div>
-                  <div class="omock-row hi"><div class="omock-field">컬러출력(Color Only)</div></div>
-                  <div class="omock-cap">설정</div>
-                  <div class="omock-field">모든 페이지 인쇄</div>
-                </div>
-                <div class="omock-preview"><div class="omock-page"></div></div>
-              </div>
-            </div>
-          </div>
-          <div class="step-h">프린터 · 컬러 선택</div>
-          <p class="step-p">흑백 · 컬러 중 원하는 프린터를 선택합니다. 컬러로 뽑으려면 반드시 <b>컬러 출력</b> 프린터를 선택하세요.</p>
-        </div>
-        <div class="step">
-          <div class="step-no">3</div>
-          <div class="step-fig">
-            <div class="omock" style="--oc:#1D6F42">
-              <div class="omock-bar"><span class="omock-dot"></span><span class="omock-dot"></span><span class="omock-dot"></span></div>
-              <div class="omock-body">
-                <div class="omock-side">
-                  <div>정보</div>
-                  <div class="on">인쇄</div>
-                  <div>공유</div>
-                </div>
-                <div class="omock-fields">
-                  <div class="omock-cap">복사본</div>
-                  <div class="omock-field">1</div>
-                  <div class="omock-cap">프린터</div>
-                  <div class="omock-field">컬러출력(Color Only)</div>
-                  <div class="omock-cap">설정</div>
-                  <div class="omock-field">단면 인쇄</div>
-                </div>
-                <div class="omock-preview">
-                  <div class="omock-page"></div>
-                  <div class="omock-tag" style="top:8px;right:8px">미리보기 필수!</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="step-h">미리보기 확인 후 인쇄</div>
-          <p class="step-p"><span class="r">표가 잘리지 않았는지</span> 미리보기로 확인한 뒤 장 수를 정하고 <b>[인쇄]</b>를 누릅니다.</p>
-        </div>
-      </div>
+    <div class="opanel" id="office-we">
+      <div class="pgroup pg1"><ol class="plist"><li><span class="pn">1</span><div class="pb">인쇄할 파일을 연 뒤 위쪽 <b>[파일] → [인쇄]</b>를 누르세요. 키보드 <b>Ctrl</b>과 <b>P</b>를 같이 눌러도 돼요. <b>인쇄 설정 창</b>이 나와요.</div></li><li><span class="pn">2</span><div class="pb"><b>프린터</b>에서 <b>흑백출력</b> 또는 <b>컬러출력</b> 프린터를 선택하세요.<div class="pwarn" style="background:#EAF4FF;border-color:#1B8AC4;color:#10425F">💡 워드·엑셀에는 <b>색이나 컬러를 따로 고르는 칸이 없어요.</b> 컬러로 뽑고 싶으면 <b>컬러출력 프린터</b>를 선택하면 돼요. <b>미리보기가 흑백으로 보여도</b> 정상이에요.</div></div></li><li><span class="pn">3</span><div class="pb">오른쪽 <b>미리보기</b>에서 <b>내용이 빠짐없이 다 있는지</b> 확인하세요. 표나 글이 <b>잘리지 않았는지</b>, <b>모든 페이지</b>가 있는지 꼭 보세요.</div></li><li><span class="pn">4</span><div class="pb">아래 옵션을 <b>고르거나 확인</b>하세요. <b>인쇄할 페이지</b> · <b>인쇄 매수</b>(복사본) · <b>단면 / 양면</b>(양면은 긴 면 · 짧은 면 방향 확인) · <b>용지 크기</b> · <b>가로 / 세로</b></div></li><li><span class="pn">5</span><div class="pb"><b>용지 크기를 바꿔서 뽑을 때</b>(예: A4 → A3)는 <b>[프린터 속성]</b>에서 <b>원본 문서 크기</b>와 <b>출력 용지 크기</b>를 각각 정하세요.</div></li><li><span class="pn">6</span><div class="pb">모든 옵션을 정했으면 <b>[인쇄]</b> 버튼을 누르세요. <b>개인식별번호</b> 입력창이 나와요.</div></li></ol></div>
+      <a class="goto" href="#print-step2" onclick="goStep2();return false"><span>워드 · 엑셀 인쇄 옵션은 여기까지예요! [인쇄]를 누르면 개인식별번호 입력창이 나와요.</span><b>위 &lsquo;인쇄하는 방법&rsquo; 2단계(비밀번호 4자리 입력)부터 이어서 하세요 ⬆</b></a>
     </div>
 
     <!-- 파워포인트 -->
@@ -627,154 +550,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
       <a class="goto" href="#print-step2" onclick="goStep2();return false"><span>파워포인트 인쇄 옵션은 여기까지예요! [인쇄]를 누르면 개인식별번호 입력창이 나와요.</span><b>위 &lsquo;인쇄하는 방법&rsquo; 2단계(비밀번호 4자리 입력)부터 이어서 하세요 ⬆</b></a>
     </div>
 
-    <!-- 워드 -->
-    <div class="opanel" id="office-word" style="display:none">
-      <div class="steps steps-office">
-        <div class="step">
-          <div class="step-no">1</div>
-          <div class="step-fig">
-            <div class="omock" style="--oc:#2B579C">
-              <div class="omock-bar"><span class="omock-dot"></span><span class="omock-dot"></span><span class="omock-dot"></span></div>
-              <div class="omock-body">
-                <div class="omock-side">
-                  <div>홈</div>
-                  <div class="on">파일</div>
-                  <div>공유</div>
-                </div>
-                <div class="omock-fields" style="width:100%;justify-content:center;align-items:center">
-                  <div style="font-size:11px;font-weight:900;color:#374151;margin-bottom:6px">파일 메뉴</div>
-                  <div class="omock-field hi" style="width:60px;text-align:center;background:#2B579C;color:#fff;border-color:#2B579C">인쇄</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="step-h">파일 → 인쇄 열기</div>
-          <p class="step-p">위쪽 <b>[파일] → [인쇄]</b>를 누르세요. 키보드 <b>Ctrl</b>과 <b>P</b>를 같이 눌러도 돼요</p>
-        </div>
-        <div class="step">
-          <div class="step-no">2</div>
-          <div class="step-fig">
-            <div class="omock" style="--oc:#2B579C">
-              <div class="omock-bar"><span class="omock-dot"></span><span class="omock-dot"></span><span class="omock-dot"></span></div>
-              <div class="omock-body">
-                <div class="omock-side">
-                  <div>정보</div>
-                  <div class="on">인쇄</div>
-                  <div>공유</div>
-                </div>
-                <div class="omock-fields">
-                  <div class="omock-cap hi">프린터</div>
-                  <div class="omock-row hi"><div class="omock-field">컬러전용</div></div>
-                  <div class="omock-field" style="opacity:.55">흑백전용</div>
-                  <div class="omock-field" style="opacity:.55">증명서전용</div>
-                </div>
-                <div class="omock-preview"><div class="omock-page"></div></div>
-              </div>
-            </div>
-          </div>
-          <div class="step-h">프린터 설정</div>
-          <p class="step-p">문서에 맞게 <b>흑백출력 · 컬러출력 · 증명서출력</b> 중에서 선택합니다. 이력서 · 계약서는 흑백, 사진이 있으면 컬러를 고르세요.</p>
-        </div>
-        <div class="step">
-          <div class="step-no">3</div>
-          <div class="step-fig">
-            <div class="omock" style="--oc:#2B579C">
-              <div class="omock-bar"><span class="omock-dot"></span><span class="omock-dot"></span><span class="omock-dot"></span></div>
-              <div class="omock-body">
-                <div class="omock-side">
-                  <div>정보</div>
-                  <div class="on">인쇄</div>
-                  <div>공유</div>
-                </div>
-                <div class="omock-fields">
-                  <div class="omock-cap">인쇄 범위</div>
-                  <div class="omock-field">모든 페이지 인쇄</div>
-                  <div class="omock-cap hi">사용자 지정</div>
-                  <div class="omock-row hi"><div class="omock-field">1 - 18페이지</div></div>
-                </div>
-                <div class="omock-preview"><div class="omock-page"></div></div>
-              </div>
-            </div>
-          </div>
-          <div class="step-h">인쇄할 페이지 고르기</div>
-          <p class="step-p"><b>모든 페이지</b> 또는 <b>사용자 지정</b>을 선택해 원하는 페이지 번호(예: 1-18)만 출력할 수 있습니다.</p>
-        </div>
-        <div class="step">
-          <div class="step-no">4</div>
-          <div class="step-fig">
-            <div class="omock" style="--oc:#2B579C">
-              <div class="omock-bar"><span class="omock-dot"></span><span class="omock-dot"></span><span class="omock-dot"></span></div>
-              <div class="omock-body">
-                <div class="omock-side">
-                  <div>정보</div>
-                  <div class="on">인쇄</div>
-                  <div>공유</div>
-                </div>
-                <div class="omock-fields">
-                  <div class="omock-cap hi">단면 / 양면</div>
-                  <div class="omock-row hi"><div class="omock-field">양면 · 긴 면 기준</div></div>
-                  <div class="omock-cap">용지방향</div>
-                  <div class="omock-field">세로 방향</div>
-                </div>
-                <div class="omock-preview"><div class="omock-page"></div></div>
-              </div>
-            </div>
-          </div>
-          <div class="step-h">단면 · 양면, 용지방향</div>
-          <p class="step-p"><b>단면/양면</b> 인쇄 여부와 <b>가로/세로</b> 방향을 선택합니다. 양면은 넘기는 방향(긴 면/짧은 면)까지 확인하세요.</p>
-        </div>
-        <div class="step">
-          <div class="step-no">5</div>
-          <div class="step-fig">
-            <svg width="100%" height="158" viewBox="0 0 280 158" fill="none" style="border:1px solid #D7DDE3;border-radius:8px;background:#fff;box-shadow:0 1px 5px rgba(17,24,39,.07)">
-              <rect x="55" y="10" width="170" height="138" rx="5" fill="#fff" stroke="#C9D3DB"/>
-              <text x="140" y="24" font-size="9.5" font-weight="900" text-anchor="middle" fill="#111827" font-family="Noto Sans KR">프린터 속성 - 용지</text>
-              <line x1="55" y1="30" x2="225" y2="30" stroke="#E5E7EB"/>
-              <text x="65" y="48" font-size="7.4" font-weight="700" fill="#374151" font-family="Noto Sans KR">원본 문서 크기</text>
-              <rect x="150" y="40" width="65" height="14" rx="2" fill="#fff" stroke="#C9D3DB"/>
-              <text x="182" y="50" font-size="7.4" font-weight="800" text-anchor="middle" fill="#374151" font-family="Noto Sans KR">A4</text>
-              <text x="65" y="70" font-size="7.4" font-weight="900" fill="#B31E16" font-family="Noto Sans KR">출력 문서 크기</text>
-              <rect x="150" y="62" width="65" height="14" rx="2" fill="#FEF2F2" stroke="#D93025" stroke-width="2"/>
-              <text x="182" y="72" font-size="7.4" font-weight="900" text-anchor="middle" fill="#B31E16" font-family="Noto Sans KR">A3</text>
-              <line x1="65" y1="86" x2="215" y2="86" stroke="#EEF1F5"/>
-              <text x="65" y="104" font-size="7" font-weight="700" fill="#6B7280" font-family="Noto Sans KR">확대/축소 100~400%</text>
-              <rect x="180" y="132" width="34" height="12" rx="2" fill="#2B579C"/>
-              <text x="197" y="141" font-size="7" font-weight="800" text-anchor="middle" fill="#fff" font-family="Noto Sans KR">확인</text>
-            </svg>
-          </div>
-          <div class="step-h">용지 크기 설정</div>
-          <p class="step-p">원본과 다른 크기로 뽑으려면(예: A4→A3 확대) <b>프린터 속성</b>에서 원본 문서 크기와 출력 용지 크기를 각각 지정합니다.</p>
-        </div>
-        <div class="step">
-          <div class="step-no">6</div>
-          <div class="step-fig">
-            <div class="omock" style="--oc:#2B579C">
-              <div class="omock-bar"><span class="omock-dot"></span><span class="omock-dot"></span><span class="omock-dot"></span></div>
-              <div class="omock-body">
-                <div class="omock-side">
-                  <div>정보</div>
-                  <div class="on">인쇄</div>
-                  <div>공유</div>
-                </div>
-                <div class="omock-fields">
-                  <div class="omock-cap hi">복사본</div>
-                  <div class="omock-row hi"><div class="omock-field">2</div></div>
-                  <div class="omock-cap">프린터</div>
-                  <div class="omock-field">컬러전용</div>
-                </div>
-                <div class="omock-preview">
-                  <div class="omock-page"></div>
-                  <div class="omock-tag" style="top:8px;right:8px">미리보기 필수!</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="step-h">장 수 확인 후 인쇄</div>
-          <p class="step-p">복사본 수를 정하고, <span class="r">미리보기로 전체 페이지</span>를 확인한 뒤 <b>[인쇄]</b>를 누릅니다.</p>
-        </div>
       </div>
-    </div>
-  </div>
 </div>
 <div class="sec alt" id="browser">
   <div class="sec-in">
