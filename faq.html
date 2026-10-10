@@ -67,6 +67,7 @@ mark{background:#FFE08A;color:inherit;border-radius:3px;padding:0 2px}
 .faq-q .q-icon{color:var(--blue);font-size:18px;font-weight:900;flex-shrink:0;transition:transform .25s}
 .faq-a{display:none;padding:16px 24px 20px;font-size:14px;color:var(--text2);line-height:1.9;background:var(--bg);border-top:1px solid var(--border)}
 .faq-item.open .faq-a{display:block}
+.faq-img{display:block;max-width:100%;width:420px;height:auto;margin:10px 0 14px;border:1px solid var(--border);border-radius:10px;background:#fff}
 .faq-item.open .q-icon{transform:rotate(45deg)}
 
 .faq-cta{margin-top:28px;background:var(--blue-light);border-radius:12px;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:14px;color:var(--text2)}
@@ -186,6 +187,14 @@ function hl(text,terms){
   var re=new RegExp('('+terms.map(reEsc).join('|')+')','gi');
   return text.split(re).map(function(s,i){return i%2?'<mark>'+escH(s)+'</mark>':escH(s);}).join('');
 }
+function renderAnswer(text,terms){
+  var re=/(\[\[img:images\/[A-Za-z0-9_\-\/\.]+\]\])/;
+  return String(text||'').split(re).map(function(part){
+    var m=/^\[\[img:(images\/[A-Za-z0-9_\-\/\.]+)\]\]$/.exec(part);
+    if(m) return '<img class="faq-img" src="'+m[1]+'" alt="설명 그림" loading="lazy">';
+    return hl(part,terms).replace(/\n/g,'<br>');
+  }).join('');
+}
 function renderFaqs(){
   var list=document.getElementById('faqList'),count=document.getElementById('faqCount');
   var raw=document.getElementById('faqQ').value.trim();
@@ -206,7 +215,7 @@ function renderFaqs(){
     var open=terms.length?' open':'';
     return '<div class="faq-item'+open+'" onclick="toggleFaq(this)">'+
       '<div class="faq-q"><span>'+hl(f.question,terms)+'</span> <span class="q-icon">+</span></div>'+
-      '<div class="faq-a">'+hl(f.answer,terms).replace(/\n/g,'<br>')+'</div>'+
+      '<div class="faq-a">'+renderAnswer(f.answer,terms)+'</div>'+
     '</div>';
   }).join('');
 }
