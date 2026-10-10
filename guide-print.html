@@ -233,6 +233,13 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 .step-note.warn{background:#FEF2F2;color:#8A1C15;font-weight:600}
 .step-note.warn b{color:#B31E16}
 .sec-note{margin:0 0 22px;max-width:720px}
+.ftype-box{margin-top:14px;background:#E8F4FC;border:2px solid var(--blue);border-radius:12px;padding:14px 14px 16px}
+.ftype-h{font-size:14.5px;font-weight:900;color:var(--text);line-height:1.45}
+.ftype-sub{font-size:12.5px;font-weight:700;color:var(--text2);margin:3px 0 11px}
+.ftype-btns{display:flex;flex-wrap:wrap;gap:8px}
+.ftype-btn{border:0;color:#fff;font-family:inherit;font-weight:800;font-size:13.5px;padding:10px 16px;border-radius:50px;cursor:pointer;box-shadow:0 2px 6px rgba(17,24,39,.18);transition:transform .15s}
+.ftype-btn:hover{transform:translateY(-2px)}
+.ftype-btn.pdf{background:#D93025}.ftype-btn.hwp{background:#0F6CBD}.ftype-btn.word{background:#2B579A}.ftype-btn.ppt{background:#D24726}.ftype-btn.excel{background:#217346}
 .step-no.mfp{font-size:12.5px;letter-spacing:-.5px}
 .goto{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 14px;margin:22px 0 4px;padding:16px 22px;border-radius:14px;background:#E7F7EC;border:2px solid #22B24C;color:#14532D;text-decoration:none;font-size:14.5px;line-height:1.5}
 .goto span{font-weight:700}
@@ -408,6 +415,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         <div class="step-h">파일 열고 프린터 선택</div>
         <p class="step-p">PC에서 파일 열기 → <b>[인쇄]</b> → 프린터 고르기<br>흑백 / 컬러 / 증명서전용(PIN9999) 선택</p>
         <div class="step-note">💾 내가 가져온 파일을 먼저 <b>매장 PC에 저장</b>한 다음, 그 파일을 <b>열어서</b> 인쇄하세요</div>
+        <div class="ftype-box"><div class="ftype-h">📄 파일 형식마다 인쇄옵션 설정 방법이 다릅니다.</div><div class="ftype-sub">인쇄설정방법 — 내 파일 형식을 눌러 보세요</div><div class="ftype-btns"><button type="button" class="ftype-btn pdf" onclick="goType('acrobat')">PDF 파일</button><button type="button" class="ftype-btn hwp" onclick="goType('hancom')">한글 파일</button><button type="button" class="ftype-btn word" onclick="goType('office','word')">MS WORD</button><button type="button" class="ftype-btn ppt" onclick="goType('office','ppt')">MS PPT</button><button type="button" class="ftype-btn excel" onclick="goType('office','excel')">MS EXCEL</button></div></div>
       </div>
       <div class="step">
         <div class="step-no">2</div>
@@ -1412,6 +1420,16 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 
 <script>
 function toggleMenu(){document.getElementById("navLinks").classList.toggle("show");}
+function goType(id, office){
+  if(office){
+    var ot=Array.prototype.slice.call(document.querySelectorAll('.otab')).filter(function(b){return (b.getAttribute('onclick')||'').indexOf("'"+office+"'")>-1})[0];
+    if(ot) officeTab(office, ot);
+  }
+  var tabs=document.querySelectorAll('.tabs .tab');
+  tabs.forEach(function(t){t.classList.remove('on'); if((t.getAttribute('onclick')||'').indexOf("'"+id+"'")>-1) t.classList.add('on');});
+  var y=document.getElementById(id).getBoundingClientRect().top+window.pageYOffset-118;
+  window.scrollTo({top:y,behavior:'smooth'});
+}
 function jump(id, el){
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
   el.classList.add('on');
