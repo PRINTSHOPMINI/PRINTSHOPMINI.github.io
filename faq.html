@@ -68,6 +68,7 @@ mark{background:#FFE08A;color:inherit;border-radius:3px;padding:0 2px}
 .faq-a{display:none;padding:16px 24px 20px;font-size:14px;color:var(--text2);line-height:1.9;background:var(--bg);border-top:1px solid var(--border)}
 .faq-item.open .faq-a{display:block}
 .faq-img{display:block;max-width:100%;width:420px;height:auto;margin:10px 0 14px;border:1px solid var(--border);border-radius:10px;background:#fff}
+.faq-ico{display:inline-block;height:1.5em;width:auto;vertical-align:-0.38em;margin:0 3px;padding:2px;border:1px solid var(--border);border-radius:6px;background:#fff}
 .faq-item.open .q-icon{transform:rotate(45deg)}
 
 .faq-cta{margin-top:28px;background:var(--blue-light);border-radius:12px;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:14px;color:var(--text2)}
@@ -188,10 +189,11 @@ function hl(text,terms){
   return text.split(re).map(function(s,i){return i%2?'<mark>'+escH(s)+'</mark>':escH(s);}).join('');
 }
 function renderAnswer(text,terms){
-  var re=/(\[\[img:images\/[A-Za-z0-9_\-\/\.]+\]\])/;
+  var re=/(\[\[(?:img|ico):images\/[A-Za-z0-9_\-\/\.]+\]\])/;
   return String(text||'').split(re).map(function(part){
-    var m=/^\[\[img:(images\/[A-Za-z0-9_\-\/\.]+)\]\]$/.exec(part);
-    if(m) return '<img class="faq-img" src="'+m[1]+'" alt="설명 그림" loading="lazy">';
+    var m=/^\[\[(img|ico):(images\/[A-Za-z0-9_\-\/\.]+)\]\]$/.exec(part);
+    if(m&&m[1]==='img') return '<img class="faq-img" src="'+m[2]+'" alt="설명 그림" loading="lazy">';
+    if(m&&m[1]==='ico') return '<img class="faq-ico" src="'+m[2]+'" alt="렌즈 모양 아이콘">';
     return hl(part,terms).replace(/\n/g,'<br>');
   }).join('');
 }
