@@ -233,6 +233,11 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 .step-note.warn{background:#FEF2F2;color:#8A1C15;font-weight:600}
 .step-note.warn b{color:#B31E16}
 .sec-note{margin:0 0 22px;max-width:720px}
+.step-no.mfp{font-size:12.5px;letter-spacing:-.5px}
+.goto{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 14px;margin:22px 0 4px;padding:16px 22px;border-radius:14px;background:#E7F7EC;border:2px solid #22B24C;color:#14532D;text-decoration:none;font-size:14.5px;line-height:1.5}
+.goto span{font-weight:700}
+.goto b{font-weight:900;color:#0B3D1E;font-size:16px}
+.goto:hover{background:#d5f0dd}
 .bsub{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:48px 0 20px;padding:15px 22px;border-radius:14px;color:#fff;font-size:23px;font-weight:900;letter-spacing:-.5px;line-height:1.3;box-shadow:0 4px 14px rgba(17,24,39,.14)}
 .bsub:first-of-type{margin-top:26px}
 .bsub-ico{flex:0 0 auto;width:38px;height:38px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:23px;font-weight:900;line-height:1}
@@ -1228,7 +1233,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
     <p class="sec-tagline">캔바 · 미리캔버스 · 웹 디자인 프로그램 · 아이패드 메모 앱에서 만든 PDF는 <span class="hl-t">브라우저로 열어서 인쇄하면 정상적으로 인쇄됩니다.</span></p>
     <div class="prestep" style="margin-bottom:6px">
       <div class="prestep-h">🔎 내 파일이 열린 브라우저를 먼저 확인하세요 <span>엣지와 크롬은 인쇄 화면이 달라요</span></div>
-      <p style="font-size:14px;color:#5C4300;line-height:1.7">PC에서 파일이 <b>엣지(Edge)</b>로 열려 있으면 아래 <b>엣지 방법</b>, <b>크롬(Chrome)</b>으로 열려 있으면 아래 <b>크롬 방법</b>(1~5단계)을 따라 하세요. 그다음 <b>복합기에서 하는 6~10단계는 둘 다 똑같아요.</b></p>
+      <p style="font-size:14px;color:#5C4300;line-height:1.7">PC에서 파일이 <b>엣지(Edge)</b>로 열려 있으면 아래 <b>엣지 방법</b>, <b>크롬(Chrome)</b>으로 열려 있으면 아래 <b>크롬 방법</b>(1~5단계)을 따라 하세요. <b>개인식별번호를 넣고 인쇄 작업 창 확인(5단계)</b>까지 끝나면, 아래로 내려가 <b>복합기에서 인쇄하기</b>로 이어서 하세요. <b>엣지 · 크롬 · 알씨 모두 똑같아요.</b></p>
     </div>
 
     <div class="bsub edge"><span class="bsub-ico">e</span><span class="bsub-t">엣지(Edge)에서 인쇄하기</span><small>1~5단계</small></div>
@@ -1275,6 +1280,8 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
       </div>
     </div>
 
+    <a class="goto" href="#mfp"><span>PC에서 할 일은 여기까지예요!</span><b>아래 &lsquo;복합기에서 인쇄하기&rsquo;로 이어서 하세요 ⬇</b></a>
+
     <div class="bsub chrome"><span class="bsub-ico">C</span><span class="bsub-t">크롬(Chrome)에서 인쇄하기</span><small>1~5단계</small></div>
     <div class="steps steps-edge">
       <div class="step noimg">
@@ -1318,50 +1325,8 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         </div>
       </div>
     </div>
+    <a class="goto" href="#mfp"><span>PC에서 할 일은 여기까지예요!</span><b>아래 &lsquo;복합기에서 인쇄하기&rsquo;로 이어서 하세요 ⬇</b></a>
 
-    <div class="bsub common"><span class="bsub-ico">🖨️</span><span class="bsub-t">복합기에서 인쇄하기</span><small>6~10단계 · 엣지, 크롬 똑같아요</small></div>
-    <div class="steps steps-edge">
-      <div class="step">
-        <div class="step-no">6</div>
-        <div class="step-figs"><div class="est-two"><figure class="est-fig"><img class="step-photo" src="images/print/print-machine1.png" alt="복합기 메인 화면에서 인쇄 메뉴 선택" loading="lazy"></figure><figure class="est-fig"><img class="step-photo" src="images/print/print-machine2.png" alt="인쇄할 파일 위치로 PC 선택하는 화면" loading="lazy"></figure></div></div>
-        <div class="est-txt">
-          <div class="step-h">복합기에서 인쇄 → PC → 번호 입력</div>
-          <p class="step-p">복합기로 이동해서 <b>[인쇄]</b> → <b>[PC]</b>를 누르세요.<br><b>PIN번호</b> 입력란에 PC에서 넣은 <b>4자리 번호</b>를 입력하고 <b>[OK]</b>를 터치하세요.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-no">7</div>
-        <div class="step-figs"><figure class="est-fig"><img class="step-photo" src="images/print/print-serch.png" alt="PIN번호 입력 후 인쇄 작업 목록이 나온 복합기 화면" loading="lazy"></figure></div>
-        <div class="est-txt">
-          <div class="step-h">내 문서 목록 확인</div>
-          <p class="step-p">목록이 나오면 <b>문서 이름, 작업 시간, 흑백/컬러, 양면/단면, 페이지 수, 용지 사이즈</b> 등 목록에 나오는 내용을 꼼꼼히 확인하세요.<br><b>내 문서가 맞는지</b>, 인쇄 옵션이 <b>원하는 대로</b> 되어 있는지 봐 주세요.</p>
-        </div>
-      </div>
-      <div class="step noimg">
-        <div class="step-no">8</div>
-        
-        <div class="est-txt">
-          <div class="step-h">목록 누르고 [시작]</div>
-          <p class="step-p">내 문서 <b>목록을 터치</b>한 뒤 <b>[시작]</b> 버튼을 터치하세요.<br>목록이 여러 개라면 위쪽의 <b>[모두 인쇄]</b>를 누르거나, <b>인쇄할 목록만 여러 개 터치</b>한 뒤 <b>[시작]</b>을 누르세요.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-no">9</div>
-        <div class="step-figs"><figure class="est-fig"><img class="step-photo" src="images/print/print-price.png" alt="과금정보(총 가격, 페이지 수) 확인 화면" loading="lazy"></figure></div>
-        <div class="est-txt">
-          <div class="step-h">금액 확인 (과금정보)</div>
-          <p class="step-p">마지막으로 <b>과금정보 창</b>이 나와요. 내용을 모두 꼼꼼히 확인하고, <b>가격</b>까지 맞으면 <b>[확인]</b>을 터치하세요.</p><div class="step-note warn">⚠️ 과금정보 창의 페이지 수나 금액이 내가 알고 있는 것과 다르면 <b>결제하지 마세요.</b></div>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-no">10</div>
-        <div class="step-figs"><figure class="est-fig"><img class="step-photo" src="images/print/print-pay.png?v=3" alt="IC카드 또는 삼성페이·애플페이로 결제하는 모습" loading="lazy"></figure></div>
-        <div class="est-txt">
-          <div class="step-h">카드 결제</div>
-          <p class="step-p"><b>"카드를 대 주세요"</b> 소리가 나오면 <b>신용·체크카드는 단말기에 꽂고</b>, <b>삼성페이는 터치</b>해서 결제하세요.</p><div class="step-note"><b>💳 신용·체크카드는 IC칩이 있는 쪽을 카드 단말기 투입구에 꽂으세요.</b></div><div class="step-note">삼성페이·애플페이는 현대카드 마스터만 가능</div>
-        </div>
-      </div>
-    </div>
 
   </div>
 </div>
@@ -1417,7 +1382,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
       </div>
     </div>
 
-    <div class="bsub common"><span class="bsub-ico">🖨️</span><span class="bsub-t">이어서 번호 입력부터 결제까지</span><small>7~13단계 · PC → 복합기</small></div>
+    <div class="bsub common"><span class="bsub-ico">🖨️</span><span class="bsub-t">이어서 번호 입력 · 작업 창 확인</span><small>7~8단계 · PC</small></div>
     <div class="steps steps-edge">
       <div class="step">
         <div class="step-no">7</div>
@@ -1435,8 +1400,22 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
           <p class="step-p"><b>흑백출력</b> 또는 <b>컬러출력</b> 인쇄 작업 창을 보세요.<br>목록이 <b>하나도 없으면</b> 인쇄 작업이 복합기로 전송된 상태예요.<br>목록이 남아 있으면 <b>없어질 때까지 기다려</b> 주세요.</p>
         </div>
       </div>
+    </div>
+    <a class="goto" href="#mfp"><span>PC에서 할 일은 여기까지예요!</span><b>아래 &lsquo;복합기에서 인쇄하기&rsquo;로 이어서 하세요 ⬇</b></a>
+
+  </div>
+</div>
+
+<div class="sec alt" id="mfp" style="--sc:#22B24C;--sc-light:#E7F7EC">
+  <div class="sec-in">
+    <div class="sec-head">
+      <div class="sec-ico"><svg width="34" height="34" viewBox="0 0 48 48" fill="none"><rect x="6" y="16" width="36" height="20" rx="4" stroke="#22B24C" stroke-width="3"/><rect x="12" y="8" width="24" height="10" rx="2" stroke="#22B24C" stroke-width="3"/><rect x="14" y="30" width="20" height="12" rx="2" stroke="#22B24C" stroke-width="3" fill="#fff"/></svg></div>
+      <h2 class="sec-h2">복합기에서 인쇄하기 <span class="pill">엣지 · 크롬 · 알씨 공통</span></h2>
+    </div>
+    <p class="sec-tagline"><b>PC에서 개인식별번호를 넣고 인쇄 작업을 보낸 뒤</b>에 하는 단계예요. 엣지, 크롬, 알씨 모두 똑같아요.</p>
+    <div class="steps steps-edge">
       <div class="step">
-        <div class="step-no">9</div>
+        <div class="step-no mfp">복1</div>
         <div class="step-figs"><div class="est-two"><figure class="est-fig"><img class="step-photo" src="images/print/print-machine1.png" alt="복합기 메인 화면에서 인쇄 메뉴 선택" loading="lazy"></figure><figure class="est-fig"><img class="step-photo" src="images/print/print-machine2.png" alt="인쇄할 파일 위치로 PC 선택하는 화면" loading="lazy"></figure></div></div>
         <div class="est-txt">
           <div class="step-h">복합기에서 인쇄 → PC → 번호 입력</div>
@@ -1444,7 +1423,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         </div>
       </div>
       <div class="step">
-        <div class="step-no">10</div>
+        <div class="step-no mfp">복2</div>
         <div class="step-figs"><figure class="est-fig"><img class="step-photo" src="images/print/print-serch.png" alt="PIN번호 입력 후 인쇄 작업 목록이 나온 복합기 화면" loading="lazy"></figure></div>
         <div class="est-txt">
           <div class="step-h">내 문서 목록 확인</div>
@@ -1452,7 +1431,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         </div>
       </div>
       <div class="step noimg">
-        <div class="step-no">11</div>
+        <div class="step-no mfp">복3</div>
         
         <div class="est-txt">
           <div class="step-h">목록 누르고 [시작]</div>
@@ -1460,7 +1439,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         </div>
       </div>
       <div class="step">
-        <div class="step-no">12</div>
+        <div class="step-no mfp">복4</div>
         <div class="step-figs"><figure class="est-fig"><img class="step-photo" src="images/print/print-price.png" alt="과금정보(총 가격, 페이지 수) 확인 화면" loading="lazy"></figure></div>
         <div class="est-txt">
           <div class="step-h">금액 확인 (과금정보)</div>
@@ -1468,7 +1447,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         </div>
       </div>
       <div class="step">
-        <div class="step-no">13</div>
+        <div class="step-no mfp">복5</div>
         <div class="step-figs"><figure class="est-fig"><img class="step-photo" src="images/print/print-pay.png?v=3" alt="IC카드 또는 삼성페이·애플페이로 결제하는 모습" loading="lazy"></figure></div>
         <div class="est-txt">
           <div class="step-h">카드 결제</div>
@@ -1478,7 +1457,6 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
     </div>
   </div>
 </div>
-
 <footer>
   <div class="ft-wrap">
     <div class="ft-brand">
