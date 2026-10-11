@@ -1792,7 +1792,7 @@ async function capLoad(){
         '<button class="btn-del" id="capDelSel" data-act="delsel" disabled style="opacity:.5">선택한 것 통째로 지우기</button></div>';
       html+=items.slice().reverse().map(function(x){
         var gone=!!x.imgGone||!x.url;
-        var thumb=gone?'<div style="width:72px;height:72px;border-radius:8px;background:var(--bg);border:1px dashed var(--border);font-size:11px;color:var(--text3);display:flex;align-items:center;justify-content:center;text-align:center;padding:4px">사진<br>없음</div>'
+        var thumb=gone?'<button type="button" data-act="swap" data-cid="'+escHtml(x.id)+'" title="눌러서 사진 올리기" style="width:72px;height:72px;border-radius:8px;background:var(--bg);border:2px dashed var(--blue);font-size:12px;font-weight:700;color:var(--blue);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:4px;cursor:pointer;font-family:inherit;line-height:1.4"><span style="font-size:20px">＋</span>사진<br>올리기</button>'
           :'<a href="'+escHtml(x.url)+'" target="_blank" rel="noopener"><img src="'+escHtml(x.url)+'" alt="캡처" style="width:72px;height:72px;object-fit:cover;border-radius:8px;border:1px solid var(--border);display:block" onerror="this.parentNode.style.display=&quot;none&quot;"></a>';
         return '<div style="display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-top:1px solid var(--border)">'+
           '<input type="checkbox" class="cap-chk" data-cid="'+escHtml(x.id)+'" style="width:18px;height:18px;margin-top:27px;flex-shrink:0">'+
