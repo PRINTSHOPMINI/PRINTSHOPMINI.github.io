@@ -70,6 +70,18 @@ mark{background:#FFE08A;color:inherit;border-radius:3px;padding:0 2px}
 .faq-img{display:block;max-width:100%;width:420px;height:auto;margin:10px 0 14px;border:1px solid var(--border);border-radius:10px;background:#fff}
 .faq-ico{display:inline-block;height:1.5em;width:auto;vertical-align:-0.38em;margin:0 3px;padding:2px;border:1px solid var(--border);border-radius:6px;background:#fff}
 .faq-item.open .q-icon{transform:rotate(45deg)}
+.q-tag{display:inline-block;font-size:11.5px;font-weight:700;color:var(--blue);background:var(--blue-light);border-radius:50px;padding:1px 9px;margin-right:8px;white-space:nowrap;vertical-align:1px}
+
+/* CATEGORY CHIPS */
+.faq-cats{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 6px}
+.faq-chip{font-family:inherit;font-size:14.5px;font-weight:700;color:var(--text2);background:var(--white);border:1.5px solid var(--border);border-radius:50px;padding:9px 16px;cursor:pointer;transition:all .15s;line-height:1.3}
+.faq-chip:hover{border-color:var(--blue);color:var(--blue)}
+.faq-chip .n{font-weight:500;color:var(--text3);margin-left:4px;font-size:13px}
+.faq-chip.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.faq-chip.on .n{color:rgba(255,255,255,.85)}
+.faq-chip.zero{opacity:.45}
+.faq-cat-desc{font-size:13.5px;color:var(--text3);margin:2px 4px 16px;min-height:20px}
+.faq-empty button{font-family:inherit;margin-top:10px;border:none;background:var(--blue);color:#fff;font-weight:700;font-size:14px;padding:9px 18px;border-radius:50px;cursor:pointer}
 
 .faq-cta{margin-top:28px;background:var(--blue-light);border-radius:12px;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:14px;color:var(--text2)}
 .faq-cta a{font-weight:900;color:var(--blue);white-space:nowrap}
@@ -109,6 +121,8 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
   .faq-search input{padding:11px 84px 11px 44px}
   .faq-count{margin-top:4px;min-height:16px;font-size:12.5px}
   .faq-section{padding-top:18px}
+  .faq-chip{font-size:13.5px;padding:8px 13px}
+  .faq-cats{gap:6px}
 }
 </style>
 </head>
@@ -152,6 +166,8 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 <div class="faq-section" id="faq">
   <div class="faq-inner">
     <p class="faq-intro">이용 중 궁금한 점을 모았습니다. 답을 찾지 못하셨다면 아래 이메일 문의를 이용해 주세요.</p>
+    <div class="faq-cats" id="faqCats" role="tablist" aria-label="질문 묶음"></div>
+    <p class="faq-cat-desc" id="faqCatDesc"></p>
     <div class="faq-list" id="faqList">
       <div style="text-align:center;padding:40px;color:var(--text3)">불러오는 중...</div>
     </div>
@@ -197,26 +213,70 @@ function renderAnswer(text,terms){
     return hl(part,terms).replace(/\n/g,'<br>');
   }).join('');
 }
+var CATS=[],CMAP={},CUR='all';
+function catOf(f){var id=CMAP[f.id];for(var i=0;i<CATS.length;i++){if(CATS[i].id===id)return CATS[i];}return null;}
+function catLabel(c){return (c.icon?c.icon+' ':'')+c.name;}
+function setCat(k){CUR=k;renderFaqs();}
 function renderFaqs(){
   var list=document.getElementById('faqList'),count=document.getElementById('faqCount');
   var raw=document.getElementById('faqQ').value.trim();
   var terms=raw.toLowerCase().split(/\s+/).filter(Boolean);
   document.getElementById('faqSearch').classList.toggle('has-text',!!raw);
-  var rows=FAQS.filter(function(f){
+  var hit=FAQS.filter(function(f){
     if(!terms.length)return true;
     var hay=((f.question||'')+' '+(f.answer||'')).toLowerCase();
     return terms.every(function(w){return hay.indexOf(w)>-1;});
   });
+
+  // 묶음 칩 (질문이 하나도 없는 묶음은 숨겨요)
+  var chipBox=document.getElementById('faqCats');
+  var descBox=document.getElementById('faqCatDesc');
+  if(CATS.length){
+    var chips=[{k:'all',t:'🔎 전체',n:hit.length,z:false}];
+    CATS.forEach(function(c){
+      var tot=FAQS.filter(function(f){return CMAP[f.id]===c.id;}).length;
+      if(!tot)return;
+      var n=hit.filter(function(f){return CMAP[f.id]===c.id;}).length;
+      chips.push({k:c.id,t:catLabel(c),n:n,z:terms.length>0&&n===0});
+    });
+    var noneTot=FAQS.filter(function(f){return !catOf(f);}).length;
+    if(noneTot){
+      var nn=hit.filter(function(f){return !catOf(f);}).length;
+      chips.push({k:'none',t:'📌 기타',n:nn,z:terms.length>0&&nn===0});
+    }
+    if(!chips.some(function(c){return c.k===CUR;}))CUR='all';
+    chipBox.innerHTML=chips.map(function(c){
+      return '<button type="button" class="faq-chip'+(CUR===c.k?' on':'')+(c.z?' zero':'')+'" onclick="setCat(\''+c.k+'\')">'+escH(c.t)+'<span class="n">'+c.n+'</span></button>';
+    }).join('');
+    var cc=CUR!=='all'&&CUR!=='none'?CATS.filter(function(c){return c.id===CUR;})[0]:null;
+    descBox.textContent=cc&&cc.desc?cc.desc:'';
+  }else{chipBox.innerHTML='';descBox.textContent='';CUR='all';}
+
+  var rows=hit.filter(function(f){
+    if(CUR==='all')return true;
+    if(CUR==='none')return !catOf(f);
+    return CMAP[f.id]===CUR;
+  });
   if(!rows.length){
     count.innerHTML='';
-    list.innerHTML='<div class="faq-empty"><b>"'+escH(raw)+'"에 대한 검색 결과가 없습니다.</b>다른 키워드로 검색하거나, 아래 이메일 문의를 이용해 주세요.</div>';
+    var msg;
+    if(terms.length&&hit.length&&CUR!=='all'){
+      msg='<b>이 묶음에는 없어요 🙈</b>다른 묶음에 <b style="display:inline;color:var(--blue);font-size:inherit">'+hit.length+'개</b>가 있어요.<br><button type="button" onclick="setCat(\'all\')">전체에서 보기</button>';
+    }else if(terms.length){
+      msg='<b>"'+escH(raw)+'"에 대한 검색 결과가 없습니다.</b>다른 키워드로 검색하거나, 아래 이메일 문의를 이용해 주세요.';
+    }else{
+      msg='<b>이 묶음에는 아직 질문이 없어요.</b>';
+    }
+    list.innerHTML='<div class="faq-empty">'+msg+'</div>';
     return;
   }
   count.innerHTML=terms.length?'<b>'+rows.length+'개</b>의 질문을 찾았습니다.':'';
   list.innerHTML=rows.map(function(f){
     var open=terms.length?' open':'';
+    var c=catOf(f);
+    var tag=(CUR==='all'&&c)?'<span class="q-tag">'+escH(catLabel(c))+'</span>':'';
     return '<div class="faq-item'+open+'" onclick="toggleFaq(this)">'+
-      '<div class="faq-q"><span>'+hl(f.question,terms)+'</span> <span class="q-icon">+</span></div>'+
+      '<div class="faq-q"><span>'+tag+hl(f.question,terms)+'</span> <span class="q-icon">+</span></div>'+
       '<div class="faq-a">'+renderAnswer(f.answer,terms)+'</div>'+
     '</div>';
   }).join('');
@@ -227,8 +287,16 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&document.ac
 
 async function loadFaqs(){
   try{
-    var r=await fetch(SB_URL+'/rest/v1/faqs?order=sort_order',{headers:SB_HDR});
+    var rq=fetch(SB_URL+'/rest/v1/faqs?order=sort_order,id',{headers:SB_HDR});
+    var cq=fetch(SB_URL+'/rest/v1/inventory_config?key=in.(faq_categories,faq_cat_map)',{headers:SB_HDR}).then(function(x){return x.json();}).catch(function(){return [];});
+    var r=await rq;
     var data=await r.json();
+    try{
+      (await cq).forEach(function(x){
+        if(x.key==='faq_categories'&&Array.isArray(x.value))CATS=x.value;
+        if(x.key==='faq_cat_map'&&x.value&&typeof x.value==='object')CMAP=x.value;
+      });
+    }catch(e){}
     var list=document.getElementById('faqList');
     if(!data||!data.length){list.innerHTML='<div style="text-align:center;padding:40px;color:var(--text3)">FAQ가 없습니다.</div>';return;}
     FAQS=data;

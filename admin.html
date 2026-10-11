@@ -120,6 +120,29 @@ body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--bg
 .manage-empty{padding:20px;text-align:center;color:var(--text3);font-size:13px}
 .inline-add{display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap;margin-bottom:4px}
 .inline-add .form-row{margin-bottom:0;flex:1;min-width:140px}
+
+/* FAQ 카테고리·순서 */
+.faq-hint{font-size:12.5px;color:var(--text3);margin:0 0 12px;line-height:1.6}
+.faq-hint b{color:var(--blue)}
+.faq-cat-row{display:flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid var(--border);border-radius:10px;margin-bottom:8px;background:var(--bg);flex-wrap:wrap}
+.faq-cat-row .fc-ico{font-size:20px;width:30px;text-align:center}
+.faq-cat-row .fc-name{font-weight:700;font-size:14px}
+.faq-cat-row .fc-desc{font-size:12px;color:var(--text3);flex:1;min-width:120px}
+.faq-cat-row .fc-cnt{font-size:12px;color:var(--blue);font-weight:700}
+.faq-cat-add{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;align-items:center}
+.faq-cat-add input{border:1.5px solid var(--border);border-radius:10px;padding:10px 12px;font-size:14px;font-family:'Noto Sans KR',sans-serif;outline:none;flex:1;min-width:130px}
+.faq-cat-add input:focus{border-color:var(--blue)}
+.faq-filter{display:flex;flex-wrap:wrap;gap:6px;padding:4px 24px 12px}
+.faq-fchip{border:1.5px solid var(--border);background:white;color:var(--text2);border-radius:50px;padding:6px 14px;font-size:13px;font-weight:700;cursor:pointer;font-family:'Noto Sans KR',sans-serif}
+.faq-fchip.on{background:var(--blue);border-color:var(--blue);color:white}
+.btn-mv{background:white;color:var(--text2);border:1.5px solid var(--border);border-radius:8px;width:34px;height:34px;font-size:14px;font-weight:900;cursor:pointer;line-height:1;font-family:inherit}
+.btn-mv:hover:not(:disabled){border-color:var(--blue);color:var(--blue);background:var(--blue-light)}
+.btn-mv:disabled{opacity:.3;cursor:not-allowed}
+.faq-mvbox{display:flex;flex-direction:column;gap:4px;flex-shrink:0;margin-right:4px}
+.faq-card{display:flex;gap:12px;align-items:flex-start}
+.faq-card .fc-body{flex:1;min-width:0}
+.faq-tag{display:inline-block;background:var(--blue-light);color:var(--blue);font-size:11.5px;font-weight:700;border-radius:50px;padding:2px 10px;margin-right:6px}
+.faq-tag.none{background:#F3F4F6;color:var(--text3)}
 </style>
 </head>
 <body>
@@ -345,8 +368,25 @@ body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--bg
   <div class="tab-panel" id="tabFaq">
 
   <div class="add-box">
+    <div class="add-box-title">🗂️ FAQ 카테고리 (묶음) 관리</div>
+    <p class="faq-hint">손님이 질문을 쉽게 찾도록 <b>묶음</b>으로 나눠요. ▲▼로 묶음 순서도 바꿀 수 있어요.</p>
+    <div class="status-bar" id="faqCatStatus"></div>
+    <div id="faqCatList"><div class="list-empty">불러오는 중...</div></div>
+    <div class="faq-cat-add">
+      <input type="text" id="fcIcon" placeholder="😀" maxlength="4" style="max-width:70px;text-align:center;flex:none">
+      <input type="text" id="fcName" placeholder="새 묶음 이름 (예: 이벤트)" maxlength="20">
+      <input type="text" id="fcDesc" placeholder="설명 (선택) 예: 쿠폰 · 행사" maxlength="40">
+      <button class="btn-primary" onclick="addFaqCat()">➕ 묶음 추가</button>
+    </div>
+  </div>
+
+  <div class="add-box">
     <div class="add-box-title">FAQ 항목 추가</div>
     <div class="status-bar" id="faqAddStatus"></div>
+    <div class="form-row">
+      <label>어느 묶음에 넣을까요?</label>
+      <select id="fAddCat"><option value="">📌 묶음 없음 (기타)</option></select>
+    </div>
     <div class="form-row">
       <label>질문</label>
       <input type="text" id="fAddQuestion" placeholder="자주 묻는 질문을 입력하세요">
@@ -355,10 +395,7 @@ body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--bg
       <label>답변</label>
       <textarea id="fAddAnswer" placeholder="답변 내용을 입력하세요&#10;줄바꿈은 Enter로 입력하세요"></textarea>
     </div>
-    <div class="form-row">
-      <label>정렬 순서 <span style="font-weight:400;color:var(--text3)">(숫자가 낮을수록 위)</span></label>
-      <input type="number" id="fAddSort" placeholder="1" value="1" style="max-width:100px">
-    </div>
+    <p class="faq-hint">💡 새 질문은 맨 아래에 들어가요. 아래 목록에서 ▲ 버튼으로 올려 주세요!</p>
     <div class="form-actions">
       <button class="btn-primary" id="fAddBtn" onclick="addFaq()">FAQ 추가</button>
     </div>
@@ -369,6 +406,8 @@ body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--bg
       <div class="list-title">등록된 FAQ</div>
       <div class="notice-count" id="faqCount"></div>
     </div>
+    <div class="faq-filter" id="faqFilter"></div>
+    <p class="faq-hint" style="margin:0 24px 8px">⬆️ ▲ 누르면 한 칸 위로, ⬇️ ▼ 누르면 한 칸 아래로 가요. 묶음을 골라 두면 그 묶음 안에서만 움직여요.</p>
     <div id="faqList"><div class="list-empty">불러오는 중...</div></div>
   </div>
 
@@ -552,8 +591,8 @@ body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--bg
       <textarea id="fEditAnswer" style="min-height:200px"></textarea>
     </div>
     <div class="form-row">
-      <label>정렬 순서</label>
-      <input type="number" id="fEditSort" style="max-width:100px">
+      <label>묶음 (카테고리)</label>
+      <select id="fEditCat"><option value="">📌 묶음 없음 (기타)</option></select>
     </div>
     <div class="form-actions">
       <button class="btn-cancel" onclick="closeFaqEditModal()">취소</button>
@@ -1201,41 +1240,218 @@ async function deletePriceItem(id,label){
 }
 
 /* ===== FAQ 관리 ===== */
+var FAQ_ROWS=[];      // 순서대로 정렬된 질문들
+var FAQ_CATS=[];      // [{id,icon,name,desc}]
+var FAQ_MAP={};       // {질문id: 묶음id}
+var FAQ_FILTER='all'; // all | none | 묶음id
+
+async function loadFaqCfg(){
+  try{
+    var r=await fetch(SB_URL+'/rest/v1/inventory_config?key=in.(faq_categories,faq_cat_map)',{headers:SB_HDR});
+    var rows=await r.json();
+    rows.forEach(function(x){
+      if(x.key==='faq_categories'&&Array.isArray(x.value))FAQ_CATS=x.value;
+      if(x.key==='faq_cat_map'&&x.value&&typeof x.value==='object')FAQ_MAP=x.value;
+    });
+  }catch(e){}
+}
+async function saveFaqCfg(key,value){
+  var h=Object.assign({},SB_HDR,{'Prefer':'resolution=merge-duplicates,return=minimal'});
+  var r=await fetch(SB_URL+'/rest/v1/inventory_config?on_conflict=key',{method:'POST',headers:h,body:JSON.stringify({key:key,value:value})});
+  if(!r.ok)throw new Error('cfg');
+}
+function faqCatById(id){for(var i=0;i<FAQ_CATS.length;i++){if(FAQ_CATS[i].id===id)return FAQ_CATS[i];}return null;}
+function faqCatOf(faqId){return faqCatById(FAQ_MAP[faqId]);}
+function faqCatLabel(c){return (c.icon?c.icon+' ':'')+c.name;}
+
+function fillFaqCatSelect(selId,val){
+  var sel=document.getElementById(selId);
+  sel.innerHTML='<option value="">📌 묶음 없음 (기타)</option>'+FAQ_CATS.map(function(c){
+    return '<option value="'+escHtml(c.id)+'">'+escHtml(faqCatLabel(c))+'</option>';
+  }).join('');
+  sel.value=val||'';
+}
+
 async function loadFaqs(){
-  var r=await fetch(SB_URL+'/rest/v1/faqs?order=sort_order',{headers:SB_HDR});
-  var data=await r.json();
-  document.getElementById('faqCount').textContent='총 '+data.length+'건';
-  if(!data.length){document.getElementById('faqList').innerHTML='<div class="list-empty">등록된 FAQ가 없습니다.</div>';return;}
-  document.getElementById('faqList').innerHTML=data.map(function(f){
-    return '<div class="notice-card">'+
-      '<div class="nc-top">'+
-        '<div class="nc-title">Q. '+escHtml(f.question)+'</div>'+
-        '<div class="nc-actions">'+
-          '<button class="btn-edit" onclick="openFaqEditModal('+f.id+')">수정</button>'+
-          '<button class="btn-del" onclick="deleteFaq('+f.id+',\''+escAttr(f.question)+'\')">삭제</button>'+
-        '</div>'+
-      '</div>'+
-      '<div class="nc-excerpt">'+escHtml(f.answer)+'</div>'+
-      '<div class="nc-meta" style="margin-top:4px">순서: '+f.sort_order+'</div>'+
+  await loadFaqCfg();
+  var r=await fetch(SB_URL+'/rest/v1/faqs?order=sort_order,id',{headers:SB_HDR});
+  FAQ_ROWS=await r.json();
+  if(!Array.isArray(FAQ_ROWS))FAQ_ROWS=[];
+  renderFaqCats();
+  fillFaqCatSelect('fAddCat',document.getElementById('fAddCat').value);
+  renderFaqAdminList();
+}
+
+function renderFaqCats(){
+  var box=document.getElementById('faqCatList');
+  if(!FAQ_CATS.length){box.innerHTML='<div class="list-empty">아직 묶음이 없어요. 아래에서 추가해 보세요 👇</div>';return;}
+  box.innerHTML=FAQ_CATS.map(function(c,i){
+    var n=FAQ_ROWS.filter(function(f){return FAQ_MAP[f.id]===c.id;}).length;
+    return '<div class="faq-cat-row">'+
+      '<span class="fc-ico">'+escHtml(c.icon||'📁')+'</span>'+
+      '<span class="fc-name">'+escHtml(c.name)+'</span>'+
+      '<span class="fc-desc">'+escHtml(c.desc||'')+'</span>'+
+      '<span class="fc-cnt">'+n+'개</span>'+
+      '<button class="btn-mv" title="위로" onclick="moveFaqCat('+i+',-1)"'+(i===0?' disabled':'')+'>▲</button>'+
+      '<button class="btn-mv" title="아래로" onclick="moveFaqCat('+i+',1)"'+(i===FAQ_CATS.length-1?' disabled':'')+'>▼</button>'+
+      '<button class="btn-edit" onclick="editFaqCat('+i+')">고치기</button>'+
+      '<button class="btn-del" onclick="deleteFaqCat('+i+')">지우기</button>'+
     '</div>';
   }).join('');
+}
+
+async function addFaqCat(){
+  var name=document.getElementById('fcName').value.trim();
+  var icon=document.getElementById('fcIcon').value.trim();
+  var desc=document.getElementById('fcDesc').value.trim();
+  var st=document.getElementById('faqCatStatus');
+  if(!name){showStatus(st,'err','묶음 이름을 적어 주세요 ✏️');return;}
+  if(FAQ_CATS.some(function(c){return c.name===name;})){showStatus(st,'err','같은 이름이 이미 있어요.');return;}
+  var id='c'+Date.now().toString(36);
+  var next=FAQ_CATS.concat([{id:id,icon:icon,name:name,desc:desc}]);
+  try{
+    await saveFaqCfg('faq_categories',next);
+    FAQ_CATS=next;
+    document.getElementById('fcName').value='';document.getElementById('fcIcon').value='';document.getElementById('fcDesc').value='';
+    showStatus(st,'ok','✅ 묶음을 추가했어요!');
+    renderFaqCats();fillFaqCatSelect('fAddCat','');renderFaqAdminList();
+  }catch(e){showStatus(st,'err','❌ 저장하지 못했어요.');}
+}
+async function editFaqCat(i){
+  var c=FAQ_CATS[i];if(!c)return;
+  var name=prompt('묶음 이름',c.name);if(name===null)return;name=name.trim();if(!name)return;
+  var icon=prompt('그림(이모지) 한 개',c.icon||'');if(icon===null)return;
+  var desc=prompt('설명 (없으면 비워 두세요)',c.desc||'');if(desc===null)return;
+  var next=FAQ_CATS.map(function(x,k){return k===i?{id:x.id,icon:icon.trim(),name:name,desc:desc.trim()}:x;});
+  try{
+    await saveFaqCfg('faq_categories',next);
+    FAQ_CATS=next;showToast('고쳤어요 ✅');
+    renderFaqCats();fillFaqCatSelect('fAddCat',document.getElementById('fAddCat').value);renderFaqAdminList();
+  }catch(e){showToast('저장하지 못했어요.');}
+}
+async function moveFaqCat(i,d){
+  var j=i+d;if(j<0||j>=FAQ_CATS.length)return;
+  var next=FAQ_CATS.slice();var t=next[i];next[i]=next[j];next[j]=t;
+  try{
+    await saveFaqCfg('faq_categories',next);
+    FAQ_CATS=next;renderFaqCats();fillFaqCatSelect('fAddCat',document.getElementById('fAddCat').value);renderFaqAdminList();
+  }catch(e){showToast('저장하지 못했어요.');}
+}
+async function deleteFaqCat(i){
+  var c=FAQ_CATS[i];if(!c)return;
+  var n=FAQ_ROWS.filter(function(f){return FAQ_MAP[f.id]===c.id;}).length;
+  if(!confirm('['+faqCatLabel(c)+'] 묶음을 지울까요?\n'+(n?'이 묶음의 질문 '+n+'개는 지워지지 않고 "묶음 없음"이 돼요.':'')))return;
+  var next=FAQ_CATS.filter(function(x,k){return k!==i;});
+  var map={};Object.keys(FAQ_MAP).forEach(function(k){if(FAQ_MAP[k]!==c.id)map[k]=FAQ_MAP[k];});
+  try{
+    await saveFaqCfg('faq_categories',next);
+    await saveFaqCfg('faq_cat_map',map);
+    FAQ_CATS=next;FAQ_MAP=map;
+    if(FAQ_FILTER===c.id)FAQ_FILTER='all';
+    showToast('지웠어요 ✅');
+    renderFaqCats();fillFaqCatSelect('fAddCat','');renderFaqAdminList();
+  }catch(e){showToast('지우지 못했어요.');}
+}
+
+// 질문 한 개의 묶음 저장 (다른 질문의 설정은 그대로 두고, 최신 값을 읽어서 합쳐요)
+async function setFaqCat(faqId,catId){
+  var r=await fetch(SB_URL+'/rest/v1/inventory_config?key=eq.faq_cat_map',{headers:SB_HDR});
+  var rows=await r.json();
+  var map=(rows[0]&&rows[0].value&&typeof rows[0].value==='object')?rows[0].value:{};
+  if(catId)map[faqId]=catId;else delete map[faqId];
+  await saveFaqCfg('faq_cat_map',map);
+  FAQ_MAP=map;
+}
+
+function setFaqFilter(f){FAQ_FILTER=f;renderFaqAdminList();}
+function visibleFaqs(){
+  return FAQ_ROWS.filter(function(f){
+    if(FAQ_FILTER==='all')return true;
+    if(FAQ_FILTER==='none')return !faqCatOf(f.id);
+    return FAQ_MAP[f.id]===FAQ_FILTER;
+  });
+}
+function renderFaqAdminList(){
+  var noneCnt=FAQ_ROWS.filter(function(f){return !faqCatOf(f.id);}).length;
+  var chips=[{k:'all',t:'전체 ('+FAQ_ROWS.length+')'}];
+  FAQ_CATS.forEach(function(c){
+    var n=FAQ_ROWS.filter(function(f){return FAQ_MAP[f.id]===c.id;}).length;
+    chips.push({k:c.id,t:faqCatLabel(c)+' ('+n+')'});
+  });
+  if(noneCnt)chips.push({k:'none',t:'📌 묶음 없음 ('+noneCnt+')'});
+  if(!chips.some(function(c){return c.k===FAQ_FILTER;}))FAQ_FILTER='all';
+  document.getElementById('faqFilter').innerHTML=chips.map(function(c){
+    return '<button class="faq-fchip'+(FAQ_FILTER===c.k?' on':'')+'" onclick="setFaqFilter(\''+escAttr(c.k)+'\')">'+escHtml(c.t)+'</button>';
+  }).join('');
+
+  var rows=visibleFaqs();
+  document.getElementById('faqCount').textContent='총 '+rows.length+'건';
+  if(!rows.length){document.getElementById('faqList').innerHTML='<div class="list-empty">여기에는 FAQ가 없어요.</div>';return;}
+  document.getElementById('faqList').innerHTML=rows.map(function(f,i){
+    var c=faqCatOf(f.id);
+    var tag=c?'<span class="faq-tag">'+escHtml(faqCatLabel(c))+'</span>':'<span class="faq-tag none">📌 묶음 없음</span>';
+    return '<div class="notice-card"><div class="faq-card">'+
+      '<div class="faq-mvbox">'+
+        '<button class="btn-mv" title="한 칸 위로" onclick="moveFaq('+f.id+',-1)"'+(i===0?' disabled':'')+'>▲</button>'+
+        '<button class="btn-mv" title="한 칸 아래로" onclick="moveFaq('+f.id+',1)"'+(i===rows.length-1?' disabled':'')+'>▼</button>'+
+      '</div>'+
+      '<div class="fc-body">'+
+        '<div class="nc-top">'+
+          '<div class="nc-title">Q. '+escHtml(f.question)+'</div>'+
+          '<div class="nc-actions">'+
+            '<button class="btn-edit" onclick="openFaqEditModal('+f.id+')">수정</button>'+
+            '<button class="btn-del" onclick="deleteFaq('+f.id+',\''+escAttr(f.question)+'\')">삭제</button>'+
+          '</div>'+
+        '</div>'+
+        '<div class="nc-excerpt">'+escHtml(f.answer)+'</div>'+
+        '<div class="nc-meta" style="margin-top:6px">'+tag+'</div>'+
+      '</div>'+
+    '</div></div>';
+  }).join('');
+}
+
+// 한 칸 위/아래로 옮기기: 순서 번호를 1,2,3…으로 깔끔히 정리한 뒤 이웃과 자리를 바꿔요
+async function moveFaq(id,dir){
+  try{
+    var r=await fetch(SB_URL+'/rest/v1/faqs?select=id,sort_order&order=sort_order,id',{headers:SB_HDR});
+    var arr=await r.json();
+    var vis=visibleFaqs().map(function(f){return f.id;});
+    var vi=vis.indexOf(id),vj=vi+dir;
+    if(vi<0||vj<0||vj>=vis.length)return;
+    var a=arr.findIndex(function(x){return x.id===id;});
+    var b=arr.findIndex(function(x){return x.id===vis[vj];});
+    if(a<0||b<0)return;
+    var t=arr[a];arr[a]=arr[b];arr[b]=t;
+    var jobs=[];
+    arr.forEach(function(x,idx){
+      var want=idx+1;
+      if(x.sort_order!==want){
+        jobs.push(fetch(SB_URL+'/rest/v1/faqs?id=eq.'+x.id,{method:'PATCH',headers:SB_HDR,body:JSON.stringify({sort_order:want})}));
+      }
+    });
+    var res=await Promise.all(jobs);
+    if(res.some(function(x){return !x.ok;}))throw new Error();
+    await loadFaqs();
+  }catch(e){showToast('순서를 바꾸지 못했어요. 다시 눌러 주세요.');}
 }
 
 async function addFaq(){
   var question=document.getElementById('fAddQuestion').value.trim();
   var answer=document.getElementById('fAddAnswer').value.trim();
-  var sort=parseInt(document.getElementById('fAddSort').value)||1;
+  var cat=document.getElementById('fAddCat').value;
   var st=document.getElementById('faqAddStatus');
   if(!question||!answer){showStatus(st,'err','질문과 답변을 모두 입력해 주세요.');return;}
   var btn=document.getElementById('fAddBtn');
   btn.disabled=true;btn.textContent='추가 중...';
   try{
-    var r=await fetch(SB_URL+'/rest/v1/faqs',{method:'POST',headers:SB_HDR,body:JSON.stringify({question:question,answer:answer,sort_order:sort})});
+    var maxSort=FAQ_ROWS.reduce(function(m,f){return Math.max(m,f.sort_order||0);},0);
+    var r=await fetch(SB_URL+'/rest/v1/faqs',{method:'POST',headers:SB_HDR,body:JSON.stringify({question:question,answer:answer,sort_order:maxSort+1})});
     if(!r.ok)throw new Error();
-    showStatus(st,'ok','✅ FAQ가 추가되었습니다!');
+    var made=await r.json();
+    if(cat&&made&&made[0])await setFaqCat(made[0].id,cat);
+    showStatus(st,'ok','✅ FAQ가 추가되었습니다! 맨 아래에 들어갔어요.');
     document.getElementById('fAddQuestion').value='';
     document.getElementById('fAddAnswer').value='';
-    document.getElementById('fAddSort').value='1';
     loadFaqs();
   }catch(e){showStatus(st,'err','❌ 추가에 실패했습니다.');}
   btn.disabled=false;btn.textContent='FAQ 추가';
@@ -1249,7 +1465,7 @@ async function openFaqEditModal(id){
   document.getElementById('fEditId').value=f.id;
   document.getElementById('fEditQuestion').value=f.question;
   document.getElementById('fEditAnswer').value=f.answer;
-  document.getElementById('fEditSort').value=f.sort_order;
+  fillFaqCatSelect('fEditCat',FAQ_MAP[f.id]||'');
   document.getElementById('faqEditStatus').style.display='none';
   document.getElementById('faqEditModal').classList.add('open');
 }
@@ -1259,14 +1475,15 @@ async function saveFaqEdit(){
   var id=document.getElementById('fEditId').value;
   var question=document.getElementById('fEditQuestion').value.trim();
   var answer=document.getElementById('fEditAnswer').value.trim();
-  var sort=parseInt(document.getElementById('fEditSort').value)||1;
+  var cat=document.getElementById('fEditCat').value;
   var st=document.getElementById('faqEditStatus');
   if(!question||!answer){showStatus(st,'err','질문과 답변을 모두 입력해 주세요.');return;}
   var btn=document.getElementById('fEditBtn');
   btn.disabled=true;btn.textContent='저장 중...';
   try{
-    var r=await fetch(SB_URL+'/rest/v1/faqs?id=eq.'+id,{method:'PATCH',headers:SB_HDR,body:JSON.stringify({question:question,answer:answer,sort_order:sort})});
+    var r=await fetch(SB_URL+'/rest/v1/faqs?id=eq.'+id,{method:'PATCH',headers:SB_HDR,body:JSON.stringify({question:question,answer:answer})});
     if(!r.ok)throw new Error();
+    await setFaqCat(parseInt(id),cat);
     showToast('FAQ가 수정되었습니다.');
     closeFaqEditModal();
     loadFaqs();
@@ -1358,6 +1575,7 @@ async function deleteFaq(id,question){
   try{
     var r=await fetch(SB_URL+'/rest/v1/faqs?id=eq.'+id,{method:'DELETE',headers:SB_HDR});
     if(!r.ok)throw new Error();
+    try{await setFaqCat(id,'');}catch(e){}
     showToast('FAQ가 삭제되었습니다.');
     loadFaqs();
   }catch(e){showToast('삭제에 실패했습니다.');}
