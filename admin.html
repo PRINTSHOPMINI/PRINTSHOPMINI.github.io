@@ -386,6 +386,7 @@ input::-ms-reveal,input::-ms-clear{display:none}   /* 브라우저(엣지)가 �
     <div class="status-bar" id="capStatus" style="font-weight:500"></div>
     <div class="form-actions" style="margin-top:0">
       <input type="file" id="capFile" accept="image/*" multiple style="display:none" onchange="capPick(this)">
+      <input type="file" id="capSwapFile" accept="image/*" style="display:none" onchange="capSwapPick(this)">
       <button class="btn-primary" onclick="document.getElementById('capFile').click()">📷 캡처 사진 고르기 (여러 장 가능)</button>
     </div>
     <div id="capStage"></div>
@@ -1788,9 +1789,11 @@ async function capLoad(){
     }else{
       html='<div style="font-size:13px;font-weight:700;margin-bottom:8px">처리를 기다리는 캡처 <span style="color:#d97706">'+items.length+'</span>건 <span style="font-weight:500;color:var(--text3)">· 클로드에게 "틀린 답변 캡처 처리해줘"라고 말해 주세요</span></div>'+
         '<div style="display:flex;align-items:center;gap:12px;margin-bottom:6px"><label style="display:flex;align-items:center;gap:6px;font-size:13px;font-weight:700;cursor:pointer"><input type="checkbox" class="cap-all" style="width:18px;height:18px"> 전체 선택</label>'+
-        '<button class="btn-del" id="capDelSel" data-act="delsel" disabled style="opacity:.5">선택한 것 지우기</button></div>';
+        '<button class="btn-del" id="capDelSel" data-act="delsel" disabled style="opacity:.5">선택한 것 통째로 지우기</button></div>';
       html+=items.slice().reverse().map(function(x){
-        var thumb='<a href="'+escHtml(x.url)+'" target="_blank" rel="noopener"><img src="'+escHtml(x.url)+'" alt="캡처" style="width:72px;height:72px;object-fit:cover;border-radius:8px;border:1px solid var(--border);display:block" onerror="this.parentNode.style.display=&quot;none&quot;"></a>';
+        var gone=!!x.imgGone||!x.url;
+        var thumb=gone?'<div style="width:72px;height:72px;border-radius:8px;background:var(--bg);border:1px dashed var(--border);font-size:11px;color:var(--text3);display:flex;align-items:center;justify-content:center;text-align:center;padding:4px">사진<br>없음</div>'
+          :'<a href="'+escHtml(x.url)+'" target="_blank" rel="noopener"><img src="'+escHtml(x.url)+'" alt="캡처" style="width:72px;height:72px;object-fit:cover;border-radius:8px;border:1px solid var(--border);display:block" onerror="this.parentNode.style.display=&quot;none&quot;"></a>';
         return '<div style="display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-top:1px solid var(--border)">'+
           '<input type="checkbox" class="cap-chk" data-cid="'+escHtml(x.id)+'" style="width:18px;height:18px;margin-top:27px;flex-shrink:0">'+
           '<div style="flex-shrink:0">'+thumb+'</div>'+
@@ -1799,8 +1802,11 @@ async function capLoad(){
             '<div id="capm-'+escHtml(x.id)+'" data-memo="'+escHtml(x.memo||'')+'">'+capMemoHtml(x)+'</div>'+
           '</div>'+
           '<div style="display:flex;flex-direction:column;gap:6px">'+
-            '<button class="btn-edit" data-act="edit" data-cid="'+escHtml(x.id)+'">요청 쓰기·고치기</button>'+
-            '<button class="btn-del" data-act="del" data-cid="'+escHtml(x.id)+'">지우기</button>'+
+            '<button class="btn-edit" data-act="edit" data-cid="'+escHtml(x.id)+'">요청 글 고치기</button>'+
+            (gone?'<button class="btn-edit" data-act="swap" data-cid="'+escHtml(x.id)+'">사진 올리기</button>'
+                 :'<button class="btn-edit" data-act="swap" data-cid="'+escHtml(x.id)+'">사진 바꾸기</button>'+
+                  '<button class="btn-del" data-act="rmimg" data-cid="'+escHtml(x.id)+'">사진만 지우기</button>')+
+            '<button class="btn-del" data-act="del" data-cid="'+escHtml(x.id)+'">통째로 지우기</button>'+
           '</div>'+
         '</div>';
       }).join('');
@@ -1857,6 +1863,8 @@ document.addEventListener('click',function(e){
   else if(act==='editcancel'){capLoad();}
   else if(act==='del'){capDelete(cid);}
   else if(act==='delsel'){capDeleteSelected();}
+  else if(act==='rmimg'){capRemoveImage(cid);}
+  else if(act==='swap'){capSwapId=cid;var sf=capEl('capSwapFile');if(sf)sf.click();}
 });
 document.addEventListener('paste',function(e){
   var panel=capEl('tabFaq');
@@ -1874,7 +1882,7 @@ function capSelectedIds(){
 function capSyncSel(){
   var all=document.querySelectorAll('.cap-chk'),n=capSelectedIds().length;
   var btn=capEl('capDelSel');
-  if(btn){btn.disabled=!n;btn.style.opacity=n?'1':'.5';btn.textContent=n?('선택한 '+n+'장 지우기'):'선택한 것 지우기';}
+  if(btn){btn.disabled=!n;btn.style.opacity=n?'1':'.5';btn.textContent=n?('선택한 '+n+'장 통째로 지우기'):'선택한 것 통째로 지우기';}
   var a=document.querySelector('.cap-all');
   if(a){a.checked=!!all.length&&n===all.length;}
 }
@@ -1903,8 +1911,61 @@ async function capDeleteSelected(){
     capLoad();
   }catch(e){showToast('지우지 못했어요.');}
 }
+// 사진만 지우기 (요청 글은 그대로 남아요)
+async function capRemoveImage(id){
+  if(!confirm('사진만 지울까요?\n쓴 요청 글은 그대로 남아요.'))return;
+  try{
+    var items=await capRead();
+    var it=items.filter(function(x){return x.id===id;})[0];
+    if(!it){showToast('이미 지워진 캡처예요.');capLoad();return;}
+    if(it.path&&!it.imgGone){
+      await fetch(SB_URL+'/storage/v1/object/service-guides/'+it.path,{method:'DELETE',headers:{'Authorization':'Bearer '+SB_KEY}});
+    }
+    it.imgGone=true;it.path='';it.url='';
+    await capWrite(items);
+    showToast('사진만 지웠어요. 글은 그대로예요.');
+    capLoad();
+  }catch(e){showToast('지우지 못했어요.');}
+}
+// 사진 바꾸기 / 사진 올리기 (요청 글은 그대로 두고 사진만 새로)
+var capSwapId='';
+function capSwapPick(input){
+  var f=input.files&&input.files[0];
+  input.value='';
+  if(f)capSwapDo(f);
+  else capSwapId='';
+}
+async function capSwapDo(file){
+  var id=capSwapId;capSwapId='';
+  if(!file||!id)return;
+  if(!/^image\//.test(file.type||'')){showToast('사진 파일을 골라 주세요.');return;}
+  var newPath='';
+  try{
+    showToast('사진을 올리는 중...');
+    var blob=await capShrink(file);
+    var nid='c'+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+    newPath=CAP_PREFIX+nid+'.jpg';
+    var up=await fetch(SB_URL+'/storage/v1/object/service-guides/'+newPath,{method:'POST',
+      headers:{'Authorization':'Bearer '+SB_KEY,'Content-Type':'image/jpeg','x-upsert':'false'},body:blob});
+    if(!up.ok)throw new Error('올리지 못했어요');
+    var items=await capRead();
+    var it=items.filter(function(x){return x.id===id;})[0];
+    if(!it)throw new Error('없는 캡처');
+    var oldPath=(it.path&&!it.imgGone)?it.path:'';
+    it.path=newPath;it.url=SB_URL+'/storage/v1/object/public/service-guides/'+newPath;it.imgGone=false;it.name=file.name;
+    await capWrite(items);
+    if(oldPath){
+      try{await fetch(SB_URL+'/storage/v1/object/service-guides/'+oldPath,{method:'DELETE',headers:{'Authorization':'Bearer '+SB_KEY}});}catch(e2){}
+    }
+    showToast('사진을 바꿨어요. 글은 그대로예요.');
+    capLoad();
+  }catch(e){
+    if(newPath){try{await fetch(SB_URL+'/storage/v1/object/service-guides/'+newPath,{method:'DELETE',headers:{'Authorization':'Bearer '+SB_KEY}});}catch(e3){}}
+    showToast('사진을 올리지 못했어요.');
+  }
+}
 async function capDelete(id){
-  if(!confirm('이 캡처 기록을 지울까요?'))return;
+  if(!confirm('이 캡처를 사진과 글까지 통째로 지울까요?\n(사진만 지우려면 취소하고 "사진만 지우기"를 눌러 주세요)'))return;
   try{
     var items=await capRead();
     var it=items.filter(function(x){return x.id===id;})[0];
