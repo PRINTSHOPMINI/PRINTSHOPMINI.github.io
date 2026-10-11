@@ -1583,6 +1583,7 @@ function aiSha(str){
 function aiClean(a){
   a=String(a||'');
   a=a.replace(/\[\[btn:[^|\]]+\|([^|\]]+)\|([^\]]+)\]\]/g,'(바로가기 링크: $1)');
+  a=a.replace(/\[\[go:([^|\]]+)\|([^\]]+)\]\]/g,'(자세한 사용방법: https://www.printshopmini.com/$1)');
   a=a.replace(/\[\[(?:img|sm):[^\]]+\]\]/g,'(그림 안내가 있어요. 홈페이지 링크에서 볼 수 있어요)\n');
   a=a.replace(/\[\[ico:[^\]]+\]\]/g,'(렌즈 모양 아이콘)');
   a=a.replace(/^[━─]{5,}\s*$\n?/gm,'');
