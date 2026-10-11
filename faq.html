@@ -86,6 +86,11 @@ mark{background:#FFE08A;color:inherit;border-radius:3px;padding:0 2px}
 .faq-cta{margin-top:28px;background:var(--blue-light);border-radius:12px;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:14px;color:var(--text2)}
 .faq-cta a{font-weight:900;color:var(--blue);white-space:nowrap}
 .faq-cta a:hover{text-decoration:underline}
+.faq-cta-btns{display:flex;gap:10px 18px;flex-wrap:wrap}
+.faq-cta a.cta-talk{background:var(--blue);color:#fff;padding:8px 16px;border-radius:50px}
+.faq-cta a.cta-talk:hover{background:var(--blue-hover);text-decoration:none}
+.faq-cta-hint{font-size:13px;color:var(--text3);margin:10px 4px 0}
+.faq-cta-hint b{color:var(--blue)}
 
 /* FOOTER */
 footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
@@ -165,16 +170,20 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 <!-- FAQ -->
 <div class="faq-section" id="faq">
   <div class="faq-inner">
-    <p class="faq-intro">이용 중 궁금한 점을 모았습니다. 답을 찾지 못하셨다면 아래 이메일 문의를 이용해 주세요.</p>
+    <p class="faq-intro">이용 중 궁금한 점을 모았습니다. 답을 찾지 못하셨다면 아래 톡톡이나 이메일로 문의해 주세요.</p>
     <div class="faq-cats" id="faqCats" role="tablist" aria-label="질문 묶음"></div>
     <p class="faq-cat-desc" id="faqCatDesc"></p>
     <div class="faq-list" id="faqList">
       <div style="text-align:center;padding:40px;color:var(--text3)">불러오는 중...</div>
     </div>
     <div class="faq-cta">
-      <span>원하는 답을 찾지 못하셨나요?</span>
-      <a href="#" onclick="openEmailPopup();return false;">이메일 문의하기 →</a>
+      <span>원하는 답을 찾지 못하셨나요? 🤔</span>
+      <span class="faq-cta-btns">
+        <a class="cta-talk" href="https://naver.me/GJErAoQ7" target="_blank" rel="noopener">💬 네이버 톡톡 문의 →</a>
+        <a href="#" onclick="openEmailPopup();return false;">✉️ 이메일 문의 →</a>
+      </span>
     </div>
+    <p class="faq-cta-hint">💡 복합기 고장·결제 문제는 <b>톡톡</b>이 빨라요. 매장 이름과 복합기 번호를 함께 보내 주세요.</p>
   </div>
 </div>
 
@@ -263,7 +272,7 @@ function renderFaqs(){
     if(terms.length&&hit.length&&CUR!=='all'){
       msg='<b>이 묶음에는 없어요 🙈</b>다른 묶음에 <b style="display:inline;color:var(--blue);font-size:inherit">'+hit.length+'개</b>가 있어요.<br><button type="button" onclick="setCat(\'all\')">전체에서 보기</button>';
     }else if(terms.length){
-      msg='<b>"'+escH(raw)+'"에 대한 검색 결과가 없습니다.</b>다른 키워드로 검색하거나, 아래 이메일 문의를 이용해 주세요.';
+      msg='<b>"'+escH(raw)+'"에 대한 검색 결과가 없습니다.</b>다른 키워드로 검색하거나, 아래 톡톡·이메일로 문의해 주세요.';
     }else{
       msg='<b>이 묶음에는 아직 질문이 없어요.</b>';
     }
