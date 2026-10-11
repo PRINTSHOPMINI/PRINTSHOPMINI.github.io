@@ -116,17 +116,6 @@ nav{
 .kpi-divider{width:1px;background:var(--border);align-self:stretch}
 .kpi-num{font-size:36px;font-weight:900;color:var(--blue);line-height:1}
 .kpi-label{font-size:12px;color:var(--text3);margin-top:4px;font-weight:500}
-/* 히어로 우측 장식라인 */
-.hero-deco{
-  position:absolute;right:0;top:50%;transform:translateY(-50%);
-  display:flex;flex-direction:column;gap:6px;opacity:.35;
-}
-.hero-deco span{display:block;height:3px;background:var(--blue);border-radius:2px;transition:width .3s}
-.hero-deco span:nth-child(1){width:80px}
-.hero-deco span:nth-child(2){width:120px}
-.hero-deco span:nth-child(3){width:60px}
-.hero-deco span:nth-child(4){width:100px}
-.hero-deco span:nth-child(5){width:40px}
 
 /* ══ SECTION COMMON ══ */
 section{padding:96px 6%}
@@ -330,7 +319,6 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
   #community .comm-wrap{grid-template-columns:1fr}
   .svc-grid{grid-template-columns:repeat(2,1fr)}
   .ft-wrap{grid-template-columns:1fr 1fr}
-  .hero-deco{display:none}
 }
 @media(max-width:680px){
   .nav-links{display:none}
@@ -423,10 +411,6 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
       <div class="kpi-divider"></div>
       <div><div class="kpi-num" style="font-size:28px">경기권</div><div class="kpi-label">지점 운영 중</div></div>
     </div>
-  </div>
-  <!-- 히어로 우측 장식 라인 -->
-  <div class="hero-deco">
-    <span></span><span></span><span></span><span></span><span></span>
   </div>
 </section>
 
