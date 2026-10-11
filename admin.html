@@ -1786,10 +1786,13 @@ async function capLoad(){
     if(!items.length){
       html='<div class="list-empty" style="padding:14px">대기 중인 캡처가 없어요.</div>';
     }else{
-      html='<div style="font-size:13px;font-weight:700;margin-bottom:8px">처리를 기다리는 캡처 <span style="color:#d97706">'+items.length+'</span>건 <span style="font-weight:500;color:var(--text3)">· 클로드에게 "틀린 답변 캡처 처리해줘"라고 말해 주세요</span></div>';
+      html='<div style="font-size:13px;font-weight:700;margin-bottom:8px">처리를 기다리는 캡처 <span style="color:#d97706">'+items.length+'</span>건 <span style="font-weight:500;color:var(--text3)">· 클로드에게 "틀린 답변 캡처 처리해줘"라고 말해 주세요</span></div>'+
+        '<div style="display:flex;align-items:center;gap:12px;margin-bottom:6px"><label style="display:flex;align-items:center;gap:6px;font-size:13px;font-weight:700;cursor:pointer"><input type="checkbox" class="cap-all" style="width:18px;height:18px"> 전체 선택</label>'+
+        '<button class="btn-del" id="capDelSel" data-act="delsel" disabled style="opacity:.5">선택한 것 지우기</button></div>';
       html+=items.slice().reverse().map(function(x){
         var thumb='<a href="'+escHtml(x.url)+'" target="_blank" rel="noopener"><img src="'+escHtml(x.url)+'" alt="캡처" style="width:72px;height:72px;object-fit:cover;border-radius:8px;border:1px solid var(--border);display:block" onerror="this.parentNode.style.display=&quot;none&quot;"></a>';
         return '<div style="display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-top:1px solid var(--border)">'+
+          '<input type="checkbox" class="cap-chk" data-cid="'+escHtml(x.id)+'" style="width:18px;height:18px;margin-top:27px;flex-shrink:0">'+
           '<div style="flex-shrink:0">'+thumb+'</div>'+
           '<div style="flex:1;min-width:0">'+
             '<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><span style="background:#FEF3C7;color:#B45309;font-weight:700;font-size:12px;padding:3px 10px;border-radius:50px">⏳ 대기 중</span><span style="font-size:12px;color:var(--text3)">올림 '+capFmt(x.created)+'</span></div>'+
@@ -1853,6 +1856,7 @@ document.addEventListener('click',function(e){
   else if(act==='editsave'){capEditSave(cid);}
   else if(act==='editcancel'){capLoad();}
   else if(act==='del'){capDelete(cid);}
+  else if(act==='delsel'){capDeleteSelected();}
 });
 document.addEventListener('paste',function(e){
   var panel=capEl('tabFaq');
@@ -1863,6 +1867,42 @@ document.addEventListener('paste',function(e){
   }
   if(files.length){e.preventDefault();capAddFiles(files);}
 });
+// 체크한 캡처를 한꺼번에 지우기
+function capSelectedIds(){
+  return Array.prototype.map.call(document.querySelectorAll('.cap-chk:checked'),function(c){return c.getAttribute('data-cid');});
+}
+function capSyncSel(){
+  var all=document.querySelectorAll('.cap-chk'),n=capSelectedIds().length;
+  var btn=capEl('capDelSel');
+  if(btn){btn.disabled=!n;btn.style.opacity=n?'1':'.5';btn.textContent=n?('선택한 '+n+'장 지우기'):'선택한 것 지우기';}
+  var a=document.querySelector('.cap-all');
+  if(a){a.checked=!!all.length&&n===all.length;}
+}
+document.addEventListener('change',function(e){
+  var t=e.target;
+  if(!t||!t.classList)return;
+  if(t.classList.contains('cap-all')){
+    document.querySelectorAll('.cap-chk').forEach(function(c){c.checked=t.checked;});
+    capSyncSel();
+  }else if(t.classList.contains('cap-chk')){capSyncSel();}
+});
+async function capDeleteSelected(){
+  var ids=capSelectedIds();
+  if(!ids.length)return;
+  if(!confirm('체크한 캡처 '+ids.length+'장을 지울까요?\n(그림도 같이 지워지고, 되돌릴 수 없어요)'))return;
+  try{
+    var items=await capRead();
+    for(var i=0;i<items.length;i++){
+      var it=items[i];
+      if(ids.indexOf(it.id)>=0&&it.path&&!it.imgGone){
+        try{await fetch(SB_URL+'/storage/v1/object/service-guides/'+it.path,{method:'DELETE',headers:{'Authorization':'Bearer '+SB_KEY}});}catch(e2){}
+      }
+    }
+    await capWrite(items.filter(function(x){return ids.indexOf(x.id)<0;}));
+    showToast(ids.length+'장을 지웠어요.');
+    capLoad();
+  }catch(e){showToast('지우지 못했어요.');}
+}
 async function capDelete(id){
   if(!confirm('이 캡처 기록을 지울까요?'))return;
   try{
