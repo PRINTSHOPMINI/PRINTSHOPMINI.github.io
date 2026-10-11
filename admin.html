@@ -382,16 +382,13 @@ input::-ms-reveal,input::-ms-clear{display:none}   /* 브라우저(엣지)가 �
 
   <div class="add-box">
     <div class="add-box-title">📸 틀린 답변 캡처 모으기</div>
-    <p class="faq-hint">톡톡에서 AI가 틀리게 답한 대화를 캡처해서 올려 주세요. 클로드가 처리하면 <b>그림과 함께 목록에서 사라져요.</b> (기록은 남기지 않아요)<br>⚠️ <b>손님 이름·전화번호는 가려서</b> 올려 주세요.</p>
+    <p class="faq-hint">톡톡에서 AI가 틀리게 답한 대화를 캡처해서 올려 주세요. 사진을 고르면 <b>사진마다 "어떻게 고쳐야 하는지" 쓰는 칸</b>이 나와요. 캡처 후 <b>Ctrl+V</b>로 붙여넣어도 돼요. 클로드가 처리하면 <b>그림과 함께 목록에서 사라져요.</b> (기록은 남기지 않아요)<br>⚠️ <b>손님 이름·전화번호는 가려서</b> 올려 주세요.</p>
     <div class="status-bar" id="capStatus" style="font-weight:500"></div>
-    <div class="form-row">
-      <label>메모 (선택) — 원래 맞는 답이나 설명</label>
-      <input type="text" id="capMemo" placeholder="예: 사용방법 질문인데 환불접수를 안내함">
-    </div>
     <div class="form-actions" style="margin-top:0">
-      <input type="file" id="capFile" accept="image/*" multiple style="display:none" onchange="uploadCaptures(this)">
-      <button class="btn-primary" onclick="document.getElementById('capFile').click()">📤 캡처 올리기 (여러 장 가능)</button>
+      <input type="file" id="capFile" accept="image/*" multiple style="display:none" onchange="capPick(this)">
+      <button class="btn-primary" onclick="document.getElementById('capFile').click()">📷 캡처 사진 고르기 (여러 장 가능)</button>
     </div>
+    <div id="capStage"></div>
     <div id="capList" style="margin-top:14px"></div>
   </div>
 
@@ -1673,42 +1670,110 @@ function capShrink(file){
     img.src=url;
   });
 }
-async function uploadCaptures(input){
+/* 올리기 전에 사진마다 '고쳐 달라는 요청'을 적어 두는 칸 */
+var capStage=[];
+var capBusy=false;
+function capEl(id){return document.getElementById(id);}
+function capAddFiles(files){
+  files.forEach(function(f){
+    if(!f||!/^image\//.test(f.type||''))return;
+    capStage.push({file:f,url:URL.createObjectURL(f),memo:''});
+  });
+  capRenderStage();
+}
+function capPick(input){
   var files=Array.prototype.slice.call(input.files||[]);
   input.value='';
-  if(!files.length)return;
-  var st=document.getElementById('capStatus');
-  var memo=(document.getElementById('capMemo').value||'').trim();
-  st.className='status-bar';st.style.display='block';st.textContent='⏳ 올리는 중... (0/'+files.length+')';
-  var done=0,fail=0,added=[];
-  for(var i=0;i<files.length;i++){
+  capAddFiles(files);
+}
+function capRenderStage(){
+  var box=capEl('capStage');
+  if(!box)return;
+  if(!capStage.length){box.innerHTML='';return;}
+  var html='<div style="font-size:13px;font-weight:700;margin:14px 0 8px">올릴 사진 <span style="color:var(--blue)">'+capStage.length+'</span>장 · 사진마다 <b>어떻게 고쳐야 하는지</b> 적어 주세요</div>';
+  capStage.forEach(function(s,i){
+    html+='<div style="display:flex;gap:12px;align-items:flex-start;padding:10px;margin-bottom:8px;border:1.5px solid var(--border);border-radius:12px;background:#fff">'+
+      '<a href="'+s.url+'" target="_blank" rel="noopener" style="flex-shrink:0"><img src="'+s.url+'" alt="캡처" style="width:96px;height:96px;object-fit:cover;border-radius:8px;border:1px solid var(--border);display:block"></a>'+
+      '<div style="flex:1;min-width:0">'+
+        '<textarea class="cap-memo" data-idx="'+i+'" rows="4" placeholder="예) 사용방법을 물었는데 환불접수를 안내했어요. 이렇게 답해야 해요: ..." style="width:100%;border:1.5px solid var(--border);border-radius:10px;padding:10px 12px;font-size:14px;line-height:1.6;font-family:inherit;resize:vertical;outline:none">'+escHtml(s.memo)+'</textarea>'+
+      '</div>'+
+      '<button class="btn-del" data-act="rm" data-idx="'+i+'">빼기</button>'+
+    '</div>';
+  });
+  html+='<div class="form-actions" style="margin:8px 0 0"><button class="btn-primary" data-act="up">📤 '+capStage.length+'장 올리기</button><button class="btn-cancel" data-act="clear">모두 취소</button></div>';
+  box.innerHTML=html;
+}
+function capStageClear(){
+  capStage.forEach(function(s){try{URL.revokeObjectURL(s.url);}catch(e){}});
+  capStage=[];
+  capRenderStage();
+}
+// 그림을 작게 줄여서(가로 최대 1400px, JPG) 올리기 — 용량도 줄고 빨라요
+function capShrink(file){
+  return new Promise(function(resolve){
+    var img=new Image(),url=URL.createObjectURL(file);
+    img.onload=function(){
+      var w=img.naturalWidth,h=img.naturalHeight,max=1400;
+      if(w>max){h=Math.round(h*max/w);w=max;}
+      var c=document.createElement('canvas');c.width=w;c.height=h;
+      var x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,w,h);x.drawImage(img,0,0,w,h);
+      URL.revokeObjectURL(url);
+      c.toBlob(function(b){resolve(b||file);},'image/jpeg',0.85);
+    };
+    img.onerror=function(){URL.revokeObjectURL(url);resolve(file);};
+    img.src=url;
+  });
+}
+async function uploadCaptures(){
+  if(capBusy||!capStage.length)return;
+  capBusy=true;
+  var st=capEl('capStatus');
+  var list=capStage.slice();
+  st.className='status-bar';st.style.display='block';st.textContent='⏳ 올리는 중... (0/'+list.length+')';
+  var done=0,fail=0,added=[],okList=[];
+  for(var i=0;i<list.length;i++){
     try{
-      var blob=await capShrink(files[i]);
+      var blob=await capShrink(list[i].file);
       var id='c'+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
       var path=CAP_PREFIX+id+'.jpg';
       var up=await fetch(SB_URL+'/storage/v1/object/service-guides/'+path,{method:'POST',
         headers:{'Authorization':'Bearer '+SB_KEY,'Content-Type':'image/jpeg','x-upsert':'false'},body:blob});
       if(!up.ok)throw new Error('올리지 못했어요');
       added.push({id:id,path:path,url:SB_URL+'/storage/v1/object/public/service-guides/'+path,
-        name:files[i].name,memo:memo,created:new Date().toISOString(),status:'대기',note:'',processed:''});
+        name:list[i].file.name,memo:(list[i].memo||'').trim(),created:new Date().toISOString(),status:'대기',note:'',processed:''});
+      okList.push(list[i]);
       done++;
     }catch(e){fail++;}
-    st.textContent='⏳ 올리는 중... ('+(done+fail)+'/'+files.length+')';
+    st.textContent='⏳ 올리는 중... ('+(done+fail)+'/'+list.length+')';
   }
   try{
     if(added.length){var cur=await capRead();await capWrite(cur.concat(added));}
+    capStage=capStage.filter(function(s){return okList.indexOf(s)<0;});
+    okList.forEach(function(s){try{URL.revokeObjectURL(s.url);}catch(e){}});
+    capRenderStage();
     st.className='status-bar '+(fail?'err':'ok');
-    st.textContent=(done?('✅ '+done+'장을 올렸어요. 클로드에게 "틀린 답변 캡처 처리해줘"라고 말해 주세요.'):'')+(fail?' ('+fail+'장은 올리지 못했어요)':'');
-    document.getElementById('capMemo').value='';
-  }catch(e){st.className='status-bar err';st.textContent='❌ 목록에 저장하지 못했어요. 다시 시도해 주세요.';}
+    st.textContent=(done?('✅ '+done+'장을 올렸어요. 클로드에게 "틀린 답변 캡처 처리해줘"라고 말해 주세요.'):'')+(fail?' ('+fail+'장은 올리지 못했어요. 아래에 남아 있으니 다시 눌러 주세요)':'');
+  }catch(e){
+    // 목록에 못 적었으면 올라간 그림도 지워서 찌꺼기가 남지 않게 해요
+    for(var k=0;k<added.length;k++){
+      try{await fetch(SB_URL+'/storage/v1/object/service-guides/'+added[k].path,{method:'DELETE',headers:{'Authorization':'Bearer '+SB_KEY}});}catch(e2){}
+    }
+    st.className='status-bar err';st.textContent='❌ 목록에 저장하지 못했어요. 쓴 글은 그대로 있으니 다시 눌러 주세요.';
+  }
+  capBusy=false;
   capLoad();
 }
 function capFmt(iso){
   if(!iso)return '';var d=new Date(iso);if(isNaN(d))return '';
   return (d.getMonth()+1)+'월 '+d.getDate()+'일 '+('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2);
 }
+function capMemoHtml(x){
+  var memo=x.memo||'';
+  return memo?('<div style="font-size:13px;margin-top:6px;white-space:pre-wrap;word-break:break-all">📝 '+escHtml(memo)+'</div>')
+             :'<div style="font-size:13px;margin-top:6px;color:var(--text3)">📝 요청 글이 없어요</div>';
+}
 async function capLoad(){
-  var box=document.getElementById('capList');
+  var box=capEl('capList');
   if(!box)return;
   try{
     var items=(await capRead()).filter(function(x){return x.status!=='처리됨';});
@@ -1728,9 +1793,12 @@ async function capLoad(){
           '<div style="flex-shrink:0">'+thumb+'</div>'+
           '<div style="flex:1;min-width:0">'+
             '<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><span style="background:#FEF3C7;color:#B45309;font-weight:700;font-size:12px;padding:3px 10px;border-radius:50px">⏳ 대기 중</span><span style="font-size:12px;color:var(--text3)">올림 '+capFmt(x.created)+'</span></div>'+
-            (x.memo?'<div style="font-size:13px;margin-top:6px">📝 '+escHtml(x.memo)+'</div>':'')+
+            '<div id="capm-'+escHtml(x.id)+'" data-memo="'+escHtml(x.memo||'')+'">'+capMemoHtml(x)+'</div>'+
           '</div>'+
-          '<button class="btn-del" data-cid="'+escHtml(x.id)+'" onclick="capDelete(this.getAttribute(&quot;data-cid&quot;))">지우기</button>'+
+          '<div style="display:flex;flex-direction:column;gap:6px">'+
+            '<button class="btn-edit" data-act="edit" data-cid="'+escHtml(x.id)+'">요청 쓰기·고치기</button>'+
+            '<button class="btn-del" data-act="del" data-cid="'+escHtml(x.id)+'">지우기</button>'+
+          '</div>'+
         '</div>';
       }).join('');
     }
@@ -1740,6 +1808,61 @@ async function capLoad(){
     box.innerHTML=html;
   }catch(e){box.innerHTML='<div class="list-empty" style="padding:14px">목록을 불러오지 못했어요.</div>';}
 }
+// 올려 둔 캡처의 요청 글을 나중에 쓰거나 고치기
+function capEditOpen(id){
+  var box=capEl('capm-'+id);
+  if(!box)return;
+  var cur=box.getAttribute('data-memo')||'';
+  box.innerHTML='<textarea id="capedit-'+escHtml(id)+'" rows="4" placeholder="어떻게 고쳐야 하는지 적어 주세요" style="width:100%;margin-top:6px;border:1.5px solid var(--border);border-radius:10px;padding:10px 12px;font-size:14px;line-height:1.6;font-family:inherit;resize:vertical;outline:none">'+escHtml(cur)+'</textarea>'+
+    '<div style="display:flex;gap:8px;margin-top:6px"><button class="btn-primary" data-act="editsave" data-cid="'+escHtml(id)+'" style="padding:8px 20px">저장</button><button class="btn-cancel" data-act="editcancel" data-cid="'+escHtml(id)+'" style="padding:8px 20px">취소</button></div>';
+  var ta=capEl('capedit-'+id);if(ta)ta.focus();
+}
+async function capEditSave(id){
+  var ta=capEl('capedit-'+id);
+  if(!ta)return;
+  var text=ta.value.trim();
+  try{
+    var items=await capRead();
+    var it=items.filter(function(x){return x.id===id;})[0];
+    if(!it){showToast('이미 처리되었거나 지워진 캡처예요.');capLoad();return;}
+    it.memo=text;
+    await capWrite(items);
+    showToast('저장했어요.');
+    capLoad();
+  }catch(e){showToast('저장하지 못했어요.');}
+}
+// 눌림·붙여넣기 처리 (글자 따옴표 문제를 피하려고 data 속성으로 구분해요)
+document.addEventListener('input',function(e){
+  var t=e.target;
+  if(t&&t.classList&&t.classList.contains('cap-memo')){
+    var s=capStage[parseInt(t.getAttribute('data-idx'),10)];
+    if(s)s.memo=t.value;
+  }
+});
+document.addEventListener('click',function(e){
+  var b=e.target&&e.target.closest?e.target.closest('[data-act]'):null;
+  if(!b)return;
+  var act=b.getAttribute('data-act'),cid=b.getAttribute('data-cid');
+  if(act==='rm'){
+    var i=parseInt(b.getAttribute('data-idx'),10),s=capStage[i];
+    if(s){try{URL.revokeObjectURL(s.url);}catch(x){}capStage.splice(i,1);capRenderStage();}
+  }else if(act==='clear'){
+    if(!capStage.length||confirm('고른 사진과 쓴 글을 모두 취소할까요?'))capStageClear();
+  }else if(act==='up'){uploadCaptures();}
+  else if(act==='edit'){capEditOpen(cid);}
+  else if(act==='editsave'){capEditSave(cid);}
+  else if(act==='editcancel'){capLoad();}
+  else if(act==='del'){capDelete(cid);}
+});
+document.addEventListener('paste',function(e){
+  var panel=capEl('tabFaq');
+  if(!panel||!panel.classList.contains('on'))return;
+  var items=(e.clipboardData&&e.clipboardData.items)||[],files=[];
+  for(var i=0;i<items.length;i++){
+    if(items[i].kind==='file'&&/^image\//.test(items[i].type||'')){var f=items[i].getAsFile();if(f)files.push(f);}
+  }
+  if(files.length){e.preventDefault();capAddFiles(files);}
+});
 async function capDelete(id){
   if(!confirm('이 캡처 기록을 지울까요?'))return;
   try{
