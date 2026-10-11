@@ -100,6 +100,16 @@ nav{
   margin-bottom:44px;max-width:520px;
 }
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:64px;align-items:center}
+.hero-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:600px;margin-bottom:18px}
+.htile{display:flex;align-items:center;gap:12px;background:#fff;border:1.5px solid var(--border);border-radius:18px;padding:14px 16px;color:var(--text);transition:border-color .18s,box-shadow .18s,transform .15s}
+.htile:hover{border-color:var(--blue);box-shadow:0 8px 22px rgba(27,138,196,.18);transform:translateY(-2px)}
+.htile .ic{flex:0 0 auto;width:46px;height:46px;border-radius:14px;background:var(--blue-light);display:flex;align-items:center;justify-content:center;font-size:25px}
+.htile .tx{min-width:0}
+.htile b{display:block;font-size:17px;font-weight:900;line-height:1.3}
+.htile small{display:block;font-size:12px;color:var(--text3);line-height:1.4;white-space:nowrap}
+.hero-branch{margin-bottom:52px}
+.hero-branch a{font-size:14.5px;font-weight:700;color:var(--blue)}
+.hero-branch a:hover{text-decoration:underline}
 .btn-primary{
   background:var(--blue);color:white;font-size:15px;font-weight:700;
   padding:15px 36px;border-radius:50px;transition:background .2s,transform .15s;
@@ -321,6 +331,12 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
   .ft-wrap{grid-template-columns:1fr 1fr}
 }
 @media(max-width:680px){
+  .hero-tiles{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .htile{padding:12px;gap:10px;border-radius:16px}
+  .htile .ic{width:40px;height:40px;font-size:22px;border-radius:12px}
+  .htile b{font-size:16px}
+  .htile small{white-space:normal;font-size:11.5px}
+  .hero-branch{margin-bottom:40px}
   .nav-links{display:none}
   .nav-cta{display:none}
   .hamburger{display:flex}
@@ -394,16 +410,20 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
     <h1 class="hero-h1">
       <span class="blue">혼자서도</span> 쉽게,<br>
       언제든지 프린트
-      <span class="line2">인쇄 ·&nbsp;복사 ·&nbsp;스캔<br>팩스 ·&nbsp;코팅 ·&nbsp;제본</span>
     </h1>
     <p class="hero-desc">
       직원 없이 셀프로 이용하는 24시간 프린트 전문점.<br>
       필요한 순간, 가장 가까운 프린트샵미니를 찾아보세요.
     </p>
-    <div class="hero-actions">
-      <a href="#services" class="btn-primary">이용방법 보기</a>
-      <a href="#branches" class="btn-secondary">지점 찾기</a>
+    <div class="hero-tiles">
+      <a class="htile" href="guide-print.html"><span class="ic">🖨️</span><span class="tx"><b>인쇄</b><small>내 파일을 종이로</small></span></a>
+      <a class="htile" href="guide-copy.html"><span class="ic">📋</span><span class="tx"><b>복사</b><small>원본 그대로</small></span></a>
+      <a class="htile" href="guide-scan.html"><span class="ic">📄</span><span class="tx"><b>스캔</b><small>종이를 파일로</small></span></a>
+      <a class="htile" href="guide-fax.html"><span class="ic">📠</span><span class="tx"><b>팩스</b><small>보내기·확인</small></span></a>
+      <a class="htile" href="guide-coat.html"><span class="ic">✨</span><span class="tx"><b>코팅</b><small>반짝반짝 보호</small></span></a>
+      <a class="htile" href="guide-bind.html"><span class="ic">📚</span><span class="tx"><b>제본</b><small>책처럼 묶기</small></span></a>
     </div>
+    <p class="hero-branch"><a href="#branches">📍 가까운 지점 찾기 →</a></p>
     <div class="hero-kpi">
       <div><div class="kpi-num">24<span style="font-size:18px;font-weight:700">H</span></div><div class="kpi-label">연중무휴 운영</div></div>
       <div class="kpi-divider"></div>
