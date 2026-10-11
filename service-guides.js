@@ -118,3 +118,23 @@
 
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',loadGuideFiles);}else{loadGuideFiles();}
 })();
+
+/* 주소 끝의 #이름 으로 들어오면 그 위치로 바로 이동 (FAQ의 '자세히 보기' 링크 등)
+ * 페이지 맨 위 고정 메뉴에 가려지지 않게 CSS scroll-margin-top 을 그대로 씁니다. */
+(function(){
+  function goHash(){
+    var h=(location.hash||'').replace(/^#/,'');
+    if(!h)return;
+    var el=document.getElementById(decodeURIComponent(h));
+    if(!el)return;
+    try{el.scrollIntoView({block:'start',behavior:'instant'});}catch(e){el.scrollIntoView(true);}
+  }
+  function run(){
+    goHash();
+    // 그림이 늦게 뜨면서 위치가 밀릴 수 있어서 한 번 더
+    setTimeout(goHash,400);
+    setTimeout(goHash,1500);
+  }
+  if(document.readyState==='complete')run();else window.addEventListener('load',run);
+  window.addEventListener('hashchange',goHash);
+})();

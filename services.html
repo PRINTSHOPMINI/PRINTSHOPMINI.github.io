@@ -143,6 +143,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
   [id]{scroll-margin-top:150px}
 }
 .fax-ico{vertical-align:-2px;margin-right:1px}
+#price{scroll-margin-top:92px}
 </style>
 </head>
 <body>
@@ -370,6 +371,19 @@ function toggleMenu(){
   if(m.style.display==='flex'){m.style.display='';return;}
   Object.assign(m.style,{display:'flex',flexDirection:'column',position:'fixed',top:'70px',left:'0',right:'0',background:'white',padding:'16px 6%',borderBottom:'1px solid #E5E7EB',zIndex:'299',gap:'2px'});
 }
+</script>
+<script>
+/* #price 로 들어오면 요금표 위치로 이동 (요금표가 늦게 그려져도 맞춰서) */
+(function goHashPrice(){
+  function go(){
+    var h=(location.hash||'').replace(/^#/,'');
+    var el=h&&document.getElementById(h);
+    if(el){try{el.scrollIntoView({block:'start',behavior:'instant'});}catch(e){el.scrollIntoView(true);}}
+  }
+  function run(){go();setTimeout(go,500);setTimeout(go,1500);setTimeout(go,3000);}
+  if(document.readyState==='complete')run();else window.addEventListener('load',run);
+  window.addEventListener('hashchange',go);
+})();
 </script>
 <script src="quickmenu.js?v=4" defer></script>
 </body>
