@@ -10,7 +10,7 @@
     {href:'guide.html',            img:'images/quick/qm-guide.png',  label:'사용방법'},
     {href:'faq.html#faq-12',       img:'images/quick/qm-refund.png', label:'환불'},
     {href:'faq.html#faq-4',        img:'images/quick/qm-broken.png', label:'고장 났어요'},
-    {href:'faq.html#faq-22',       img:'images/quick/qm-phone.png',  label:'핸드폰에 있는 파일 인쇄하기'}
+    {href:'faq.html#faq-22',       img:'images/quick/qm-phone-kakao.png',  label:'핸드폰에 있는 파일 인쇄하기'}
   ];
 
   var css=
