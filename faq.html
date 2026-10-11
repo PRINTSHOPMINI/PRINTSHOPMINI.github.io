@@ -87,6 +87,9 @@ mark{background:#FFE08A;color:inherit;border-radius:3px;padding:0 2px}
 .faq-chip.on{background:var(--blue);border-color:var(--blue);color:#fff}
 .faq-chip.on .n{color:rgba(255,255,255,.85)}
 .faq-chip.zero{opacity:.45}
+.ph-cats{max-width:800px;margin:10px auto 0}
+.ph-cats .faq-cats{margin:0;gap:6px}
+.ph-cats .faq-chip{font-size:13.5px;padding:7px 12px}
 .faq-cat-desc{font-size:13.5px;color:var(--text3);margin:2px 4px 16px;min-height:20px}
 .faq-empty button{font-family:inherit;margin-top:10px;border:none;background:var(--blue);color:#fff;font-weight:700;font-size:14px;padding:9px 18px;border-radius:50px;cursor:pointer}
 
@@ -133,8 +136,12 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
   .faq-search input{padding:11px 84px 11px 44px}
   .faq-count{margin-top:4px;min-height:16px;font-size:12.5px}
   .faq-section{padding-top:18px}
-  .faq-chip{font-size:13.5px;padding:8px 13px}
+  .faq-chip{font-size:13.5px;padding:7px 13px}
   .faq-cats{gap:6px}
+  .ph-cats{margin-top:8px}
+  .ph-cats .faq-cats{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:2px}
+  .ph-cats .faq-cats::-webkit-scrollbar{display:none}
+  .ph-cats .faq-chip{flex:0 0 auto;white-space:nowrap}
 }
 </style>
 </head>
@@ -172,13 +179,13 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
     <div class="faq-count" id="faqCount" aria-live="polite"></div>
     </div>
   </div>
+  <div class="ph-cats"><div class="faq-cats" id="faqCats" role="tablist" aria-label="질문 묶음"></div></div>
 </div>
 
 <!-- FAQ -->
 <div class="faq-section" id="faq">
   <div class="faq-inner">
     <p class="faq-intro">이용 중 궁금한 점을 모았습니다. 답을 찾지 못하셨다면 아래 톡톡으로 문의해 주세요.</p>
-    <div class="faq-cats" id="faqCats" role="tablist" aria-label="질문 묶음"></div>
     <p class="faq-cat-desc" id="faqCatDesc"></p>
     <div class="faq-list" id="faqList">
       <div style="text-align:center;padding:40px;color:var(--text3)">불러오는 중...</div>
@@ -270,6 +277,8 @@ function renderFaqs(){
     chipBox.innerHTML=chips.map(function(c){
       return '<button type="button" class="faq-chip'+(CUR===c.k?' on':'')+(c.z?' zero':'')+'" onclick="setCat(\''+c.k+'\')">'+escH(c.t)+'<span class="n">'+c.n+'</span></button>';
     }).join('');
+    var on=chipBox.querySelector('.faq-chip.on');
+    if(on&&chipBox.scrollWidth>chipBox.clientWidth)chipBox.scrollLeft=on.offsetLeft-(chipBox.clientWidth-on.offsetWidth)/2;
     var cc=CUR!=='all'&&CUR!=='none'?CATS.filter(function(c){return c.id===CUR;})[0]:null;
     descBox.textContent=cc&&cc.desc?cc.desc:'';
   }else{chipBox.innerHTML='';descBox.textContent='';CUR='all';}
@@ -347,7 +356,8 @@ function openFaqFromHash(){
   if(!el)return;
   el.classList.add('open');
   el.classList.remove('flash');void el.offsetWidth;el.classList.add('flash');
-  var y=el.getBoundingClientRect().top+window.pageYOffset-190;
+  var ph=document.querySelector('.page-header');
+  var y=el.getBoundingClientRect().top+window.pageYOffset-(ph?ph.getBoundingClientRect().bottom:190)-14;
   window.scrollTo({top:Math.max(0,y),behavior:'smooth'});
 }
 window.addEventListener('hashchange',openFaqFromHash);
