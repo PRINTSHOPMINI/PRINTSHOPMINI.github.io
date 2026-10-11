@@ -379,6 +379,15 @@ body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--bg
   <div class="tab-panel" id="tabFaq">
 
   <div class="add-box">
+    <div class="add-box-title">🤖 톡톡 AI 상담 문서 만들기</div>
+    <p class="faq-hint">FAQ를 고친 뒤 이 버튼을 누르면, <b>최신 FAQ·가격·지점 주소</b>가 들어간 AI 상담 문서가 만들어져요. 파일 이름에 <b>날짜와 번호</b>가 붙어요. (예: 클로드-AI상담_지식문서_2026-10-11_01.txt)</p>
+    <div class="status-bar" id="aiDocStatus" style="font-weight:500;line-height:1.9"></div>
+    <div class="form-actions" style="margin-top:0">
+      <button class="btn-primary" id="aiDocBtn" onclick="makeAiDoc()">📄 최신 상담 문서 만들기 (내려받기)</button>
+    </div>
+  </div>
+
+  <div class="add-box">
     <div class="add-box-title">🗂️ FAQ 카테고리 (묶음) 관리</div>
     <p class="faq-hint">손님이 질문을 쉽게 찾도록 <b>묶음</b>으로 나눠요. ⠿ 손잡이를 잡고 끌어서 순서를 바꿔요.</p>
     <div class="status-bar" id="faqCatStatus"></div>
@@ -1561,6 +1570,142 @@ async function saveFaqEdit(){
     loadFaqs();
   }catch(e){showStatus(st,'err','❌ 수정에 실패했습니다.');}
   btn.disabled=false;btn.textContent='저장하기';
+}
+
+/* ===== 톡톡 AI 상담 문서 만들기 ===== */
+var AIDOC_BASE='클로드-AI상담_지식문서';
+function aiSha(str){
+  var buf=new TextEncoder().encode(str);
+  return crypto.subtle.digest('SHA-256',buf).then(function(h){
+    return Array.prototype.map.call(new Uint8Array(h),function(b){return ('0'+b.toString(16)).slice(-2);}).join('');
+  });
+}
+function aiClean(a){
+  a=String(a||'');
+  a=a.replace(/\[\[btn:[^|\]]+\|([^|\]]+)\|([^\]]+)\]\]/g,'(바로가기 링크: $1)');
+  a=a.replace(/\[\[(?:img|sm):[^\]]+\]\]/g,'(그림 안내가 있어요. 홈페이지 링크에서 볼 수 있어요)\n');
+  a=a.replace(/\[\[ico:[^\]]+\]\]/g,'(렌즈 모양 아이콘)');
+  a=a.replace(/^[━─]{5,}\s*$\n?/gm,'');
+  var MAP=[['✅','[가능]'],['❌','[불가]'],['⚠️','[주의]'],['⚠','[주의]'],['⛔','[금지]'],['🚫','[금지]'],['🛑','[멈춤]'],
+           ['①','(1)'],['②','(2)'],['③','(3)'],['④','(4)'],['⑤','(5)'],['⑥','(6)']];
+  MAP.forEach(function(p){a=a.split(p[0]).join(p[1]);});
+  a=a.split('⃣').join(')').split('ℹ').join('').split('모르는 기호(□)').join('모르는 기호(네모 모양)');
+  var out='';
+  for(var i=0;i<a.length;){
+    var cp=a.codePointAt(i), ch=String.fromCodePoint(cp); i+=ch.length;
+    if(cp===0xFE0F||cp===0x200D||(cp>=0x1F000&&cp<=0x1FAFF)||(cp>=0x2600&&cp<=0x27BF)||(cp>=0x2B00&&cp<=0x2BFF)||(cp>=0x2300&&cp<=0x23FF))continue;
+    out+=ch;
+  }
+  a=out.split('\n').map(function(l){return l.trim()?l.replace(/^(\s*(?:[-*]|\d+[.)])?)\s{2,}/,'$1 '):l;}).join('\n');
+  a=a.replace(/^ (?=\S)/gm,'');
+  a=a.replace(/[ \t]+\n/g,'\n');
+  a=a.replace(/\n{3,}/g,'\n\n');
+  return a.trim();
+}
+function aiBody(t){return t.replace(/^기준일: .*$/m,'');}
+function aiToday(){var d=new Date();return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2);}
+
+async function buildAiDocText(){
+  var H=SB_HDR;
+  function g(p){return fetch(SB_URL+'/rest/v1/'+p,{headers:H}).then(function(r){return r.json();});}
+  var res=await Promise.all([
+    g('faqs?order=sort_order,id'),
+    g('inventory_config?key=in.(faq_categories,faq_cat_map,ai_doc_template,ai_doc_seq)'),
+    g('price_items?order=category,sort_order'),
+    g('branches?order=sort_order')
+  ]);
+  var faqs=res[0],cfgRows=res[1],prices=res[2],branches=res[3];
+  var cfg={};cfgRows.forEach(function(r){cfg[r.key]=r.value;});
+  var tpl=cfg.ai_doc_template&&cfg.ai_doc_template.text;
+  if(!tpl)throw new Error('문서 틀(template)이 아직 등록되지 않았어요. 클로드에게 알려 주세요.');
+  var cats={};(cfg.faq_categories||[]).forEach(function(c){cats[c.id]=c;});
+  var cmap=cfg.faq_cat_map||{};
+
+  // FAQ 구간
+  var order=['store','broken','use','pc'];
+  var others=Object.keys(cats).filter(function(c){return order.indexOf(c)<0;});
+  var by={};
+  faqs.forEach(function(f){var k=cmap[String(f.id)]||'none';(by[k]=by[k]||[]).push(f);});
+  var parts=[];
+  order.concat(others).concat(['none']).forEach(function(cid){
+    var items=by[cid]||[];if(!items.length)return;
+    parts.push('### '+(cats[cid]?cats[cid].name:'기타'));
+    items.forEach(function(f){
+      parts.push('\n#### Q. '+f.question+'\n홈페이지 바로가기: https://www.printshopmini.com/faq.html#faq-'+f.id+'\n\n'+aiClean(f.answer)+'\n');
+    });
+  });
+  var faqText=parts.join('\n');
+
+  // 가격
+  function priceLines(cat){
+    return prices.filter(function(p){return p.category===cat;}).map(function(p){
+      return '- '+p.label.split('폴대파일').join('쫄대파일')+': '+p.value;}).join('\n');
+  }
+  var t=tpl.replace(/@@PRICE:([^@]+)@@/g,function(_,k){return priceLines(k);});
+  t=t.split('@@FAQ@@').join(faqText);
+  t=t.split('@@DATE@@').join(aiToday());
+
+  // 지점 주소 (홈페이지 기준)
+  var fixed=0;
+  branches.forEach(function(b){
+    var re=new RegExp('(\\*\\*'+b.name.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'\\*\\*\\n- 주소: )(.+)');
+    var m=re.exec(t);
+    if(m&&m[2].trim()!==String(b.address||'').trim()){t=t.replace(re,function(_,p1){return p1+String(b.address).trim();});fixed++;}
+  });
+  return {text:t,faqs:faqs,branches:branches,fixed:fixed,seq:cfg.ai_doc_seq||null};
+}
+
+async function makeAiDoc(){
+  var st=document.getElementById('aiDocStatus'),btn=document.getElementById('aiDocBtn');
+  btn.disabled=true;btn.textContent='만드는 중...';
+  st.style.display='block';st.className='status-bar';st.innerHTML='⏳ 홈페이지의 최신 내용을 가져오고 있어요...';
+  try{
+    var r=await buildAiDocText();
+    var hash=await aiSha(aiBody(r.text));
+    var today=aiToday();
+    var seq=r.seq||{date:'',n:0,hash:'',name:'',faq:{}};
+    var unchanged=(seq.hash===hash&&seq.name);
+    var name;
+    if(unchanged){name=seq.name;}
+    else{
+      var n=(seq.date===today)?(seq.n||0)+1:1;
+      name=AIDOC_BASE+'_'+today+'_'+('0'+n).slice(-2)+'.txt';
+      seq.date=today;seq.n=n;
+    }
+    // FAQ 변경 목록
+    var now={};
+    for(var i=0;i<r.faqs.length;i++){var f=r.faqs[i];now[String(f.id)]=await aiSha((f.question+'|'+f.answer).replace(/\s+/g,' '));}
+    var last=seq.faq||{};var hasLast=Object.keys(last).length>0;
+    var added=[],changed=[],removed=[];
+    r.faqs.forEach(function(f){var k=String(f.id);if(!(k in last))added.push(f.question);else if(last[k]!==now[k])changed.push(f.question);});
+    Object.keys(last).forEach(function(k){if(!(k in now))removed.push(k);});
+
+    // 파일 내려받기
+    var blob=new Blob([r.text],{type:'text/plain;charset=utf-8'});
+    var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;
+    document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1000);
+
+    // 번호·변경 기록 저장 (같은 내용이면 번호를 올리지 않아요)
+    seq.hash=hash;seq.name=name;seq.faq=now;
+    await fetch(SB_URL+'/rest/v1/inventory_config?on_conflict=key',{method:'POST',
+      headers:Object.assign({},SB_HDR,{'Prefer':'resolution=merge-duplicates,return=minimal'}),
+      body:JSON.stringify({key:'ai_doc_seq',value:seq})});
+
+    var html='✅ <b>'+escHtml(name)+'</b> 파일을 내려받았어요.<br>'+
+      'FAQ '+r.faqs.length+'개 · 지점 '+r.branches.length+'곳'+(r.fixed?' · 주소 '+r.fixed+'곳 홈페이지 기준으로 맞춤':'')+'<br>';
+    if(unchanged)html+='ℹ️ 지난번과 <b>내용이 같아서</b> 같은 번호의 파일이에요.<br>';
+    if(hasLast){
+      html+='<br><b>지난번보다 달라진 것</b><br>'+
+        '· 새 FAQ '+added.length+'개'+(added.length?'<br>'+added.map(function(q){return '&nbsp;&nbsp;+ '+escHtml(q);}).join('<br>'):'')+'<br>'+
+        '· 고친 FAQ '+changed.length+'개'+(changed.length?'<br>'+changed.map(function(q){return '&nbsp;&nbsp;~ '+escHtml(q);}).join('<br>'):'')+'<br>'+
+        (removed.length?'· 지운 FAQ '+removed.length+'개<br>':'');
+    }
+    html+='<br>📂 <b>다운로드 폴더</b>에 저장돼요. 이 파일을 신랑에게 주거나 <b>LLM\\신랑에게줄파일</b> 폴더에 넣어 주세요.';
+    st.className='status-bar ok';st.innerHTML=html;
+  }catch(e){
+    st.className='status-bar err';st.innerHTML='❌ '+escHtml(e.message||'만들지 못했어요. 잠시 뒤 다시 눌러 주세요.');
+  }
+  btn.disabled=false;btn.textContent='📄 최신 상담 문서 만들기 (내려받기)';
 }
 
 /* ===== 이용안내 파일 관리 ===== */
