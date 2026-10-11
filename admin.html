@@ -20,6 +20,10 @@ body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--bg
 .login-sub{font-size:12px;color:var(--text3);margin-bottom:32px;letter-spacing:.3px}
 .login-input{width:100%;border:1.5px solid var(--border);border-radius:10px;padding:12px 16px;font-size:15px;font-family:'Noto Sans KR',sans-serif;outline:none;transition:border-color .2s;margin-bottom:12px}
 .login-input:focus{border-color:var(--blue)}
+.pw-wrap{position:relative}
+.pw-wrap .login-input{padding-right:48px}
+.pw-toggle{position:absolute;right:6px;top:6px;width:36px;height:36px;border:none;background:none;border-radius:8px;font-size:18px;line-height:1;cursor:pointer;opacity:.55}
+.pw-toggle:hover,.pw-toggle[aria-pressed="true"]{opacity:1;background:var(--blue-light)}
 .login-btn{width:100%;background:var(--blue);color:white;border:none;border-radius:10px;padding:13px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:background .2s}
 .login-btn:hover{background:var(--blue-hover)}
 .login-err{font-size:13px;color:var(--red);margin-top:10px;display:none}
@@ -156,7 +160,10 @@ body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--bg
     </div>
     <div class="login-title">관리자 로그인</div>
     <div class="login-sub">PRINTSHOPMINI 통합관리 시스템</div>
-    <input class="login-input" type="password" id="pwInput" placeholder="비밀번호를 입력하세요" onkeydown="if(event.key==='Enter')doLogin()">
+    <div class="pw-wrap">
+      <input class="login-input" type="password" id="pwInput" placeholder="비밀번호를 입력하세요" onkeydown="if(event.key==='Enter')doLogin()">
+      <button type="button" class="pw-toggle" id="pwToggle" onclick="togglePw()" aria-label="비밀번호 보기" aria-pressed="false">👁️</button>
+    </div>
     <button class="login-btn" onclick="doLogin()">로그인</button>
     <div class="login-err" id="loginErr">비밀번호가 올바르지 않습니다.</div>
   </div>
@@ -663,6 +670,7 @@ function doLogout(){
   document.getElementById('adminWrap').style.display='none';
   document.getElementById('pwInput').value='';
   document.getElementById('loginErr').style.display='none';
+  setPwVisible(false);
 }
 function setTodayDate(){
   var d=new Date();
@@ -842,6 +850,17 @@ document.getElementById('priceEditModal').addEventListener('click',function(e){i
 document.getElementById('faqEditModal').addEventListener('click',function(e){if(e.target===this)closeFaqEditModal();});
 document.getElementById('catEditModal').addEventListener('click',function(e){if(e.target===this)closeCatEditModal();});
 document.getElementById('labelEditModal').addEventListener('click',function(e){if(e.target===this)closeLabelEditModal();});
+function setPwVisible(show){
+  var inp=document.getElementById('pwInput'),btn=document.getElementById('pwToggle');
+  inp.type=show?'text':'password';
+  btn.textContent=show?'🙈':'👁️';
+  btn.setAttribute('aria-pressed',show?'true':'false');
+  btn.setAttribute('aria-label',show?'비밀번호 숨기기':'비밀번호 보기');
+}
+function togglePw(){
+  setPwVisible(document.getElementById('pwInput').type==='password');
+  document.getElementById('pwInput').focus();
+}
 document.getElementById('pwInput').focus();
 
 /* ===== 탭 전환 ===== */
