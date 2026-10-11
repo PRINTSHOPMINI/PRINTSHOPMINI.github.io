@@ -381,7 +381,7 @@ body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--bg
 
   <div class="add-box">
     <div class="add-box-title">📸 틀린 답변 캡처 모으기</div>
-    <p class="faq-hint">톡톡에서 AI가 틀리게 답한 대화를 캡처해서 올려 주세요. 클로드가 처리하면 아래 목록에 <b>✅ 처리됨</b>으로 표시돼요.<br>⚠️ <b>손님 이름·전화번호는 가려서</b> 올려 주세요. 처리가 끝나면 그림은 지워져요.</p>
+    <p class="faq-hint">톡톡에서 AI가 틀리게 답한 대화를 캡처해서 올려 주세요. 클로드가 처리하면 <b>그림과 함께 목록에서 사라져요.</b> (기록은 남기지 않아요)<br>⚠️ <b>손님 이름·전화번호는 가려서</b> 올려 주세요.</p>
     <div class="status-bar" id="capStatus" style="font-weight:500"></div>
     <div class="form-row">
       <label>메모 (선택) — 원래 맞는 답이나 설명</label>
@@ -1710,27 +1710,32 @@ async function capLoad(){
   var box=document.getElementById('capList');
   if(!box)return;
   try{
-    var items=await capRead();
-    var pend=items.filter(function(x){return x.status!=='처리됨';}).length;
-    var doneN=items.length-pend;
-    if(!items.length){box.innerHTML='<div class="list-empty" style="padding:14px">아직 올린 캡처가 없어요.</div>';return;}
-    var html='<div style="font-size:13px;font-weight:700;margin-bottom:8px">대기 중 <span style="color:#d97706">'+pend+'</span>건 · 처리됨 <span style="color:var(--green)">'+doneN+'</span>건</div>';
-    html+=items.slice().reverse().map(function(x){
-      var done=x.status==='처리됨';
-      var badge=done?'<span style="background:var(--green-light);color:var(--green);font-weight:700;font-size:12px;padding:3px 10px;border-radius:50px">✅ 처리됨</span>'
-                    :'<span style="background:#FEF3C7;color:#B45309;font-weight:700;font-size:12px;padding:3px 10px;border-radius:50px">⏳ 대기 중</span>';
-      var thumb=x.url&&!x.imgGone?'<a href="'+escHtml(x.url)+'" target="_blank" rel="noopener"><img src="'+escHtml(x.url)+'" alt="캡처" style="width:72px;height:72px;object-fit:cover;border-radius:8px;border:1px solid var(--border);display:block" onerror="this.style.display=\'none\'"></a>'
-                                :'<div style="width:72px;height:72px;border-radius:8px;background:var(--bg);border:1px dashed var(--border);font-size:11px;color:var(--text3);display:flex;align-items:center;justify-content:center;text-align:center;padding:4px">그림은<br>지웠어요</div>';
-      return '<div style="display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-top:1px solid var(--border)">'+
-        '<div style="flex-shrink:0">'+thumb+'</div>'+
-        '<div style="flex:1;min-width:0">'+
-          '<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">'+badge+'<span style="font-size:12px;color:var(--text3)">올림 '+capFmt(x.created)+(done&&x.processed?' · 처리 '+capFmt(x.processed):'')+'</span></div>'+
-          (x.memo?'<div style="font-size:13px;margin-top:6px">📝 '+escHtml(x.memo)+'</div>':'')+
-          (x.note?'<div style="font-size:13px;margin-top:4px;color:var(--text2)">🔧 '+escHtml(x.note)+'</div>':'')+
-        '</div>'+
-        '<button class="btn-del" onclick="capDelete(\''+escAttr(x.id)+'\')">지우기</button>'+
-      '</div>';
-    }).join('');
+    var items=(await capRead()).filter(function(x){return x.status!=='처리됨';});
+    var last=null;
+    try{
+      var lr=await fetch(SB_URL+'/rest/v1/inventory_config?key=eq.capture_last',{headers:SB_HDR});
+      var lrows=await lr.json();last=(lrows[0]&&lrows[0].value)||null;
+    }catch(e){}
+    var html='';
+    if(!items.length){
+      html='<div class="list-empty" style="padding:14px">대기 중인 캡처가 없어요.</div>';
+    }else{
+      html='<div style="font-size:13px;font-weight:700;margin-bottom:8px">처리를 기다리는 캡처 <span style="color:#d97706">'+items.length+'</span>건 <span style="font-weight:500;color:var(--text3)">· 클로드에게 "틀린 답변 캡처 처리해줘"라고 말해 주세요</span></div>';
+      html+=items.slice().reverse().map(function(x){
+        var thumb='<a href="'+escHtml(x.url)+'" target="_blank" rel="noopener"><img src="'+escHtml(x.url)+'" alt="캡처" style="width:72px;height:72px;object-fit:cover;border-radius:8px;border:1px solid var(--border);display:block" onerror="this.style.display='none'"></a>';
+        return '<div style="display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-top:1px solid var(--border)">'+
+          '<div style="flex-shrink:0">'+thumb+'</div>'+
+          '<div style="flex:1;min-width:0">'+
+            '<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><span style="background:#FEF3C7;color:#B45309;font-weight:700;font-size:12px;padding:3px 10px;border-radius:50px">⏳ 대기 중</span><span style="font-size:12px;color:var(--text3)">올림 '+capFmt(x.created)+'</span></div>'+
+            (x.memo?'<div style="font-size:13px;margin-top:6px">📝 '+escHtml(x.memo)+'</div>':'')+
+          '</div>'+
+          '<button class="btn-del" onclick="capDelete(''+escAttr(x.id)+'')">지우기</button>'+
+        '</div>';
+      }).join('');
+    }
+    if(last&&last.date){
+      html+='<div style="margin-top:12px;padding:10px 12px;border-radius:10px;background:var(--green-light);color:var(--green);font-size:13px;font-weight:700">✅ 마지막 처리: '+capFmt(last.date)+' · '+escHtml(String(last.count||0))+'건 반영'+(last.note?'<div style="font-weight:500;margin-top:4px;color:var(--text2)">🔧 '+escHtml(last.note)+'</div>':'')+'</div>';
+    }
     box.innerHTML=html;
   }catch(e){box.innerHTML='<div class="list-empty" style="padding:14px">목록을 불러오지 못했어요.</div>';}
 }
