@@ -236,6 +236,9 @@ function renderAnswer(text,terms){
     if(m&&m[1]==='img') return '<img class="faq-img" src="'+m[2]+'" alt="설명 그림" loading="lazy">';
     if(m&&m[1]==='sm') return '<img class="faq-img faq-img-sm" src="'+m[2]+'" alt="설명 그림" loading="lazy">';
     if(m&&m[1]==='ico') return '<img class="faq-ico" src="'+m[2]+'" alt="렌즈 모양 아이콘">';
+    // [[go:faq.html#faq-64|설명]] — 같은 FAQ 안의 다른 질문으로 이동 (그 질문을 열고 그 자리로 스크롤)
+    var gf=/^\[\[go:faq\.html#faq-(\d+)\|([^\]|]+)\]\]$/.exec(part);
+    if(gf) return '<a class="faq-golink" href="#faq-'+gf[1]+'" onclick="event.stopPropagation();setTimeout(openFaqFromHash,0)">👉 '+escH(gf[2])+' →</a>';
     var go=/^\[\[go:((?:guide(?:-print|-copy|-scan|-fax|-coat|-bind)?|services)\.html(?:#[A-Za-z0-9_\-]+)?)\|([^\]|]+)\]\]$/.exec(part);
     if(go) return '<a class="faq-golink" href="'+go[1]+'" onclick="event.stopPropagation()">📖 '+escH(go[2])+' →</a>';
     var b=/^\[\[btn:(images\/[A-Za-z0-9_\-\/\.]+)\|(https:\/\/[A-Za-z0-9.\-]+\/[A-Za-z0-9_\-\/\.?=&%#]*)\|([^\]|]+)\]\]$/.exec(part);
