@@ -315,6 +315,11 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 /* FAQ 등에서 #이름 으로 들어올 때, 구역 제목이 고정 메뉴 바로 아래에 보이도록 */
 .sec[id]{scroll-margin-top:167px}
 @media(max-width:700px){.sec[id]{scroll-margin-top:122px}}
+
+/* 미니프랜즈 꾸밈 캐릭터 (제목 오른쪽) */
+.ph-inner{position:relative;padding-right:84px}
+.ph-pal{position:absolute;right:0;bottom:-8px;height:70px;width:auto;pointer-events:none;filter:drop-shadow(0 3px 4px rgba(0,0,0,.08))}
+@media(max-width:760px){.ph-inner{padding-right:50px}.ph-pal{height:42px;bottom:-6px}}
 </style>
 </head>
 <body>
@@ -348,6 +353,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 <div class="stick-top">
 <div class="page-header">
   <div class="ph-inner">
+    <img class="ph-pal" src="img/friends/fax.webp" alt="" aria-hidden="true">
     <div class="ph-eyebrow">GUIDE · FAX</div>
     <h1 class="ph-h1">팩스 사용방법</h1>
     <p class="ph-sub">종이 내용을 상대방 팩스 번호로 보내는 방법입니다. 받는 곳의 팩스 번호를 미리 알아 오세요.</p>
