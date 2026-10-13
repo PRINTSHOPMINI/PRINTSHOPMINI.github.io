@@ -1501,6 +1501,7 @@ function renderFaqAdminList(){
   }).join('');
 
   var rows=visibleFaqs();
+  var faqPos={};FAQ_ROWS.forEach(function(f,i){faqPos[f.id]=i+1;});   // 전체 목록에서 위에서부터 센 번호
   document.getElementById('faqCount').textContent='총 '+rows.length+'건';
   if(!rows.length){document.getElementById('faqList').innerHTML='<div class="list-empty">여기에는 FAQ가 없어요.</div>';return;}
   document.getElementById('faqList').innerHTML=rows.map(function(f,i){
@@ -1514,7 +1515,7 @@ function renderFaqAdminList(){
       '</div>'+
       '<div class="fc-body">'+
         '<div class="nc-top">'+
-          '<div class="nc-title"><span class="faq-no" title="이 번호로 대화해요 (홈페이지 주소 #faq-'+f.id+')">No.'+f.id+'</span>Q. '+escHtml(f.question)+'</div>'+
+          '<div class="nc-title"><span class="faq-no" title="전체 목록에서 위에서부터 센 번호예요 (고유번호 '+f.id+')">No.'+faqPos[f.id]+'</span>Q. '+escHtml(f.question)+'</div>'+
           '<div class="nc-actions">'+
             '<button class="btn-edit" onclick="openFaqEditModal('+f.id+')">수정</button>'+
             '<button class="btn-del" onclick="deleteFaq('+f.id+',\''+escAttr(f.question)+'\')">삭제</button>'+

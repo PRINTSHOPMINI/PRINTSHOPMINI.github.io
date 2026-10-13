@@ -314,7 +314,7 @@ function renderFaqs(){
     var open=terms.length?' open':'';
     var c=catOf(f);
     var tag=(CUR==='all'&&c)?'<span class="q-tag">'+escH(catLabel(c))+'</span>':'';
-    if(SHOW_NO)tag='<span class="q-no">No.'+f.id+'</span>'+tag;
+    if(SHOW_NO)tag='<span class="q-no">No.'+(FAQS.indexOf(f)+1)+'</span>'+tag;
     return '<div class="faq-item'+open+'" id="faq-'+f.id+'" onclick="toggleFaq(this)">'+
       '<div class="faq-q"><span>'+tag+hl(f.question,terms)+'</span> <span class="q-icon">+</span></div>'+
       '<div class="faq-a">'+renderAnswer(f.answer,terms)+'</div>'+
