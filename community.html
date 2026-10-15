@@ -41,7 +41,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .ph-sub{font-size:15px;color:var(--text3)}
 
 /* MAIN LAYOUT */
-.comm-wrap{max-width:1160px;margin:0 auto;padding:48px 6%;display:grid;grid-template-columns:1fr 300px;gap:40px}
+.comm-wrap{max-width:1160px;margin:0 auto;padding:48px 6%;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:40px}
+.comm-wrap>*{min-width:0}
 
 /* BOARD */
 .board-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:12px}
@@ -190,7 +191,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 
 /* RESPONSIVE */
 @media(max-width:900px){
-  .comm-wrap{grid-template-columns:1fr;padding:32px 5%}
+  .comm-wrap{grid-template-columns:minmax(0,1fr);padding:32px 5%}
   .sidebar{display:none}
   .post-list-hd{grid-template-columns:70px 1fr 70px 50px;display:none}
   .post-row{grid-template-columns:70px 1fr 70px 50px}
