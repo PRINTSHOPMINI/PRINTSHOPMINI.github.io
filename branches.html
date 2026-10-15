@@ -3,6 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+// 검색 사이트(네이버·구글·다음 등)에서 바로 들어온 사람은 메인 페이지부터 보여 줘요. 사이트 안에서 오면 그대로 보여요.
+(function(){try{var r=document.referrer||"";if(!r)return;var h=new URL(r).hostname;
+  if(/(^|\.)(naver\.com|daum\.net|google\.[a-z.]+|bing\.com|zum\.com|nate\.com)$/.test(h)){location.replace("index.html");}
+}catch(e){}})();
+</script>
 <title>지점 찾기 - 프린트샵미니</title>
 <link rel="canonical" href="https://www.printshopmini.com/branches.html">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
