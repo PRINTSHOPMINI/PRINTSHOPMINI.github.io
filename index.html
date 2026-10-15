@@ -582,22 +582,12 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
           <h3 class="board-title">공지사항</h3>
           <a href="community.html" style="color:var(--blue);font-size:13px;font-weight:700;padding:8px 16px;border-radius:50px;border:1.5px solid var(--blue);transition:all .2s" onmouseover="this.style.background='var(--blue)';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='var(--blue)'">전체 보기 →</a>
         </div>
-        <div class="post-list">
-          <div class="post-row" onclick="location.href='community.html'"><span class="pb pn">공지</span><div class="pi"><div class="pt">프린트샵미니 이용 안내 및 유의사항</div><div class="pm">관리자 · 2025.01.01</div></div><div class="ps"><span>👁 4,821</span></div></div>
-          <div class="post-row" onclick="location.href='community.html'"><span class="pb pn">공지</span><div class="pi"><div class="pt">결제 오류 시 대처 방법</div><div class="pm">관리자 · 2025.03.10</div></div><div class="ps"><span>👁 2,103</span></div></div>
-          <div class="post-row" onclick="location.href='community.html'"><span class="pb pn">공지</span><div class="pi"><div class="pt">신규 지점 오픈 안내 – 화성 동탄</div><div class="pm">관리자 · 2025.04.01</div></div><div class="ps"><span>👁 1,456</span></div></div>
-          <div class="post-row" onclick="location.href='community.html'"><span class="pb pn">공지</span><div class="pi"><div class="pt">봄맞이 컬러 출력 할인 이벤트 진행 중</div><div class="pm">관리자 · 2025.04.05</div></div><div class="ps"><span>👁 987</span></div></div>
-          <div class="post-row" onclick="location.href='community.html'"><span class="pb pn">공지</span><div class="pi"><div class="pt">정기 점검 안내 (매월 첫째 월요일 03~05시)</div><div class="pm">관리자 · 2025.04.07</div></div><div class="ps"><span>👁 763</span></div></div>
-        </div>
+        <div class="post-list" id="mainNoticeList"><div style="padding:28px;text-align:center;color:var(--text3);font-size:14px">공지사항을 불러오는 중...</div></div>
       </div>
       <div>
         <div class="side-widget">
           <div class="sw-title">공지사항</div>
-          <div class="notice-list">
-            <div class="ni"><div class="ndot"></div><span>정기 점검 (매월 첫째 월요일 03~05시)</span></div>
-            <div class="ni"><div class="ndot"></div><span>봄맞이 컬러 출력 할인 이벤트 진행 중</span></div>
-            <div class="ni"><div class="ndot"></div><span>신규 오픈 예정 — 대구점, 광주점</span></div>
-          </div>
+          <div class="notice-list" id="mainSideNotices"><div style="font-size:13px;color:var(--text3)">불러오는 중...</div></div>
         </div>
         <div class="side-widget">
           <div class="sw-title">문의</div>
@@ -757,6 +747,33 @@ function filterRegion(region,btn){
   });
   document.getElementById('visibleCount').textContent=count;
 }
+
+// 메인 하단 공지사항: 공지사항 페이지(DB)의 최신 글을 그대로 보여 주고, 누르면 그 글이 바로 열려요
+async function loadMainNotices(){
+  var list=document.getElementById('mainNoticeList'), side=document.getElementById('mainSideNotices');
+  if(!list)return;
+  function go(id){return "location.href='community.html#notice-"+id+"'";}
+  try{
+    var r=await fetch(SB_URL+'/rest/v1/notices?select=id,title,date,views,created_at&order=created_at.desc&limit=5',{headers:SB_HDR});
+    var d=await r.json();
+    if(!Array.isArray(d))throw new Error('notices');
+    if(!d.length){
+      list.innerHTML='<div style="padding:28px;text-align:center;color:var(--text3);font-size:14px">등록된 공지사항이 없습니다.</div>';
+      if(side)side.innerHTML='<div style="font-size:13px;color:var(--text3)">등록된 공지가 없습니다.</div>';
+      return;
+    }
+    list.innerHTML=d.map(function(n){
+      return '<div class="post-row" onclick="'+go(n.id)+'"><span class="pb pn">공지</span><div class="pi"><div class="pt">'+escHtml(n.title)+'</div><div class="pm">관리자 · '+escHtml(n.date)+'</div></div><div class="ps"><span>👁 '+(n.views||0)+'</span></div></div>';
+    }).join('');
+    if(side)side.innerHTML=d.slice(0,3).map(function(n){
+      return '<div class="ni" style="cursor:pointer" onclick="'+go(n.id)+'"><div class="ndot"></div><span>'+escHtml(n.title)+'</span></div>';
+    }).join('');
+  }catch(e){
+    list.innerHTML='<div style="padding:28px;text-align:center;color:var(--text3);font-size:14px">공지사항을 불러오지 못했어요. <a href="community.html" style="color:var(--blue);font-weight:700">공지사항 전체 보기 →</a></div>';
+    if(side)side.innerHTML='<div style="font-size:13px;color:var(--text3)">공지를 불러오지 못했어요.</div>';
+  }
+}
+loadMainNotices();
 loadBranches();
 function toggleMenu(){
   var m=document.querySelector('.nav-links');

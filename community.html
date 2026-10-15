@@ -437,9 +437,14 @@ async function loadNotices(){
     noticesCache=data;
     renderNotices(data);
     renderSidebarNotices(data);
+    openPostFromHash();
   }catch(e){
     document.getElementById('postListBody').innerHTML='<div style="padding:32px;text-align:center;color:var(--text3)">공지사항을 불러오지 못했습니다.</div>';
   }
+}
+function openPostFromHash(){
+  var m=(location.hash||'').match(/^#notice-(\d+)$/);
+  if(m)openPost(parseInt(m[1],10));
 }
 function renderNotices(notices){
   var el=document.getElementById('postListBody');
