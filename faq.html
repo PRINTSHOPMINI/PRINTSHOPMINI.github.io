@@ -80,6 +80,9 @@ mark{background:#FFE08A;color:inherit;border-radius:3px;padding:0 2px}
 .faq-item.open .q-icon{transform:rotate(45deg)}
 .faq-item.flash{animation:faqFlash 2.4s ease-out}
 @keyframes faqFlash{0%,35%{box-shadow:0 0 0 4px var(--blue);background:var(--blue-light)}100%{box-shadow:0 0 0 0 transparent;background:transparent}}
+.q-copy-row{margin-top:16px;text-align:right}
+.q-copy{background:#fff;border:1px solid var(--border);color:var(--text3);font-size:12px;font-weight:700;border-radius:50px;padding:5px 13px;cursor:pointer;font-family:inherit}
+.q-copy:hover{color:var(--blue);border-color:var(--blue)}
 .q-no{display:inline-block;background:#1E293B;color:#fff;font-size:11.5px;font-weight:800;border-radius:6px;padding:1px 7px;margin-right:8px;vertical-align:1px;white-space:nowrap}
 .q-tag{display:inline-block;font-size:11.5px;font-weight:700;color:var(--blue);background:var(--blue-light);border-radius:50px;padding:1px 9px;margin-right:8px;white-space:nowrap;vertical-align:1px}
 
@@ -320,12 +323,35 @@ function renderFaqs(){
     if(SHOW_NO)tag='<span class="q-no">No.'+(FAQS.indexOf(f)+1)+'</span>'+tag;
     return '<div class="faq-item'+open+'" id="faq-'+f.id+'" onclick="toggleFaq(this)">'+
       '<div class="faq-q"><span>'+tag+hl(f.question,terms)+'</span> <span class="q-icon">+</span></div>'+
-      '<div class="faq-a">'+renderAnswer(f.answer,terms)+'</div>'+
+      '<div class="faq-a">'+renderAnswer(f.answer,terms)+'<div class="q-copy-row"><button type="button" class="q-copy" onclick="copyFaqLink('+f.id+',this,event)">🔗 이 질문 링크 복사</button></div></div>'+
     '</div>';
   }).join('');
 }
 // 주소 끝에 ?no=1 을 붙이면 질문마다 번호(No.)가 보여요 (대화용, 손님 화면에는 안 보여요)
 var SHOW_NO=/[?&]no=1(&|$)/.test(location.search);
+// 질문 링크 복사: 손님에게 보내 줄 때 쓰는 바로가기 주소 (고유번호 기준이라 순서가 바뀌어도 그대로예요)
+function copyFaqLink(id,btn,ev){
+  if(ev&&ev.stopPropagation)ev.stopPropagation();
+  var url='https://www.printshopmini.com/faq.html#faq-'+id;
+  function done(ok){
+    if(!btn)return;
+    var old=btn.getAttribute('data-t')||btn.textContent;
+    btn.setAttribute('data-t',old);
+    btn.textContent=ok?'✓ 복사됐어요':'주소: '+url;
+    setTimeout(function(){btn.textContent=old;},ok?1600:6000);
+  }
+  try{
+    if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(url).then(function(){done(true);},function(){fb();});}
+    else fb();
+  }catch(e){fb();}
+  function fb(){
+    try{
+      var ta=document.createElement('textarea');ta.value=url;ta.style.cssText='position:fixed;left:-9999px;top:0';
+      document.body.appendChild(ta);ta.select();var ok=document.execCommand('copy');document.body.removeChild(ta);done(ok);
+    }catch(e){done(false);}
+  }
+}
+
 function onFaqSearch(){renderFaqs();}
 function clearFaqSearch(){var q=document.getElementById('faqQ');q.value='';renderFaqs();q.focus();}
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&document.activeElement===document.getElementById('faqQ'))clearFaqSearch();});

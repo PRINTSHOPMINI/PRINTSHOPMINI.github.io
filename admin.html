@@ -140,6 +140,14 @@ input::-ms-reveal,input::-ms-clear{display:none}   /* 브라우저(엣지)가 �
 .faq-filter{display:flex;flex-wrap:wrap;gap:6px;padding:4px 24px 12px}
 .faq-fchip{border:1.5px solid var(--border);background:white;color:var(--text2);border-radius:50px;padding:6px 14px;font-size:13px;font-weight:700;cursor:pointer;font-family:'Noto Sans KR',sans-serif}
 .faq-fchip.on{background:var(--blue);border-color:var(--blue);color:white}
+.faq-asearch{padding:2px 24px 10px}
+.faq-asearch-box{position:relative}
+.faq-asearch-box input{width:100%;border:1.5px solid var(--border);border-radius:12px;padding:12px 70px 12px 14px;font-size:14.5px;font-family:'Noto Sans KR',sans-serif;background:white;outline:none}
+.faq-asearch-box input:focus{border-color:var(--blue)}
+.faq-asearch-box button{position:absolute;right:8px;top:50%;transform:translateY(-50%);border:none;background:#EEF2F6;color:var(--text2);font-size:12px;font-weight:700;border-radius:50px;padding:5px 11px;cursor:pointer;display:none;font-family:inherit}
+.faq-asearch.has-text .faq-asearch-box button{display:block}
+.faq-asearch-info{font-size:13px;color:var(--text2);margin-top:8px}
+.faq-asearch-info b{color:var(--blue)}
 .btn-mv{background:white;color:var(--text2);border:1.5px solid var(--border);border-radius:8px;width:34px;height:34px;font-size:14px;font-weight:900;cursor:pointer;line-height:1;font-family:inherit}
 .btn-mv:hover:not(:disabled){border-color:var(--blue);color:var(--blue);background:var(--blue-light)}
 .btn-mv:disabled{opacity:.3;cursor:not-allowed}
@@ -423,6 +431,13 @@ input::-ms-reveal,input::-ms-clear{display:none}   /* 브라우저(엣지)가 �
     <div class="list-header">
       <div class="list-title">등록된 FAQ</div>
       <div class="notice-count" id="faqCount"></div>
+    </div>
+    <div class="faq-asearch">
+      <div class="faq-asearch-box">
+        <input type="search" id="faqAdminQ" placeholder="🔎 FAQ 검색 (질문·답변 내용 또는 번호. 예: 환불, 카카오페이, 백지, 7번)" autocomplete="off" aria-label="FAQ 검색" oninput="onFaqAdminSearch()">
+        <button type="button" id="faqAdminClear" onclick="clearFaqAdminSearch()">지우기</button>
+      </div>
+      <div class="faq-asearch-info" id="faqAdminInfo"></div>
     </div>
     <div class="faq-filter" id="faqFilter"></div>
     <p class="faq-hint" style="margin:0 24px 8px">🖱️ 왼쪽 ⠿ 손잡이를 잡고 <b>끌어서</b> 원하는 자리에 놓으세요. (▲▼ 버튼은 한 칸씩 옮길 때 써요.) 묶음을 골라 두면 그 묶음 안에서만 움직여요.</p>
@@ -1359,6 +1374,7 @@ var FAQ_ROWS=[];      // 순서대로 정렬된 질문들
 var FAQ_CATS=[];      // [{id,icon,name,desc}]
 var FAQ_MAP={};       // {질문id: 묶음id}
 var FAQ_FILTER='all'; // all | none | 묶음id
+var FAQ_QUERY='';     // 검색어
 
 async function loadFaqCfg(){
   try{
@@ -1481,12 +1497,44 @@ async function setFaqCat(faqId,catId){
 
 function setFaqFilter(f){FAQ_FILTER=f;renderFaqAdminList();}
 function visibleFaqs(){
+  var q=(FAQ_QUERY||'').trim().toLowerCase();
+  var nm=q.match(/^(?:no\.?\s*)?(\d+)\s*번?$/);      // "7", "7번", "no.7" → 위에서부터 7번째
+  var terms=q?q.split(/\s+/):[];
+  var idx={};FAQ_ROWS.forEach(function(f,i){idx[f.id]=i+1;});
   return FAQ_ROWS.filter(function(f){
-    if(FAQ_FILTER==='all')return true;
-    if(FAQ_FILTER==='none')return !faqCatOf(f.id);
-    return FAQ_MAP[f.id]===FAQ_FILTER;
+    if(FAQ_FILTER==='none'&&faqCatOf(f.id))return false;
+    if(FAQ_FILTER!=='all'&&FAQ_FILTER!=='none'&&FAQ_MAP[f.id]!==FAQ_FILTER)return false;
+    if(!q)return true;
+    if(nm)return idx[f.id]===parseInt(nm[1],10);
+    var hay=((f.question||'')+' '+(f.answer||'')).toLowerCase();
+    return terms.every(function(w){return hay.indexOf(w)>-1;});
   });
 }
+function faqQueryTerms(){
+  var q=(FAQ_QUERY||'').trim().toLowerCase();
+  if(!q||/^(?:no\.?\s*)?\d+\s*번?$/.test(q))return [];
+  return q.split(/\s+/);
+}
+function hlAdmin(s){
+  var h=escHtml(s);
+  faqQueryTerms().forEach(function(w){
+    var e=w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+    h=h.replace(new RegExp('('+e+')','gi'),'<mark style="background:#FFF3B0;padding:0 1px;border-radius:3px">$1</mark>');
+  });
+  return h;
+}
+function onFaqAdminSearch(){
+  FAQ_QUERY=document.getElementById('faqAdminQ').value;
+  document.querySelector('.faq-asearch').classList.toggle('has-text',!!FAQ_QUERY.trim());
+  renderFaqAdminList();
+}
+function clearFaqAdminSearch(){
+  var el=document.getElementById('faqAdminQ');el.value='';onFaqAdminSearch();el.focus();
+}
+document.addEventListener('keydown',function(e){
+  var el=document.getElementById('faqAdminQ');
+  if(e.key==='Escape'&&el&&document.activeElement===el)clearFaqAdminSearch();
+});
 function renderFaqAdminList(){
   var noneCnt=FAQ_ROWS.filter(function(f){return !faqCatOf(f.id);}).length;
   var chips=[{k:'all',t:'전체 ('+FAQ_ROWS.length+')'}];
@@ -1503,7 +1551,8 @@ function renderFaqAdminList(){
   var rows=visibleFaqs();
   var faqPos={};FAQ_ROWS.forEach(function(f,i){faqPos[f.id]=i+1;});   // 전체 목록에서 위에서부터 센 번호
   document.getElementById('faqCount').textContent='총 '+rows.length+'건';
-  if(!rows.length){document.getElementById('faqList').innerHTML='<div class="list-empty">여기에는 FAQ가 없어요.</div>';return;}
+  var qi=(FAQ_QUERY||'').trim();document.getElementById('faqAdminInfo').innerHTML=qi?'<b>'+escHtml(qi)+'</b> 검색 결과 <b>'+rows.length+'</b>개':'';
+  if(!rows.length){var qq=(FAQ_QUERY||'').trim();document.getElementById('faqAdminInfo').innerHTML=qq?'<b>'+escHtml(qq)+'</b> 검색 결과가 없어요.'+(FAQ_FILTER!=='all'?' <a href="#" onclick="setFaqFilter(\'all\');return false" style="color:var(--blue);font-weight:700">전체 묶음에서 보기</a>':''):'';document.getElementById('faqList').innerHTML='<div class="list-empty">'+(qq?'검색 결과가 없어요.':'여기에는 FAQ가 없어요.')+'</div>';return;}
   document.getElementById('faqList').innerHTML=rows.map(function(f,i){
     var c=faqCatOf(f.id);
     var tag=c?'<span class="faq-tag">'+escHtml(faqCatLabel(c))+'</span>':'<span class="faq-tag none">📌 묶음 없음</span>';
@@ -1515,8 +1564,9 @@ function renderFaqAdminList(){
       '</div>'+
       '<div class="fc-body">'+
         '<div class="nc-top">'+
-          '<div class="nc-title"><span class="faq-no" title="전체 목록에서 위에서부터 센 번호예요 (고유번호 '+f.id+')">No.'+faqPos[f.id]+'</span>Q. '+escHtml(f.question)+'</div>'+
+          '<div class="nc-title"><span class="faq-no" title="전체 목록에서 위에서부터 센 번호예요 (고유번호 '+f.id+')">No.'+faqPos[f.id]+'</span>Q. '+hlAdmin(f.question)+'</div>'+
           '<div class="nc-actions">'+
+            '<button class="btn-edit" title="손님에게 보낼 홈페이지 바로가기 주소를 복사해요" onclick="copyFaqLink('+f.id+',this)">🔗 링크복사</button>'+
             '<button class="btn-edit" onclick="openFaqEditModal('+f.id+')">수정</button>'+
             '<button class="btn-del" onclick="deleteFaq('+f.id+',\''+escAttr(f.question)+'\')">삭제</button>'+
           '</div>'+
@@ -1526,6 +1576,29 @@ function renderFaqAdminList(){
       '</div>'+
     '</div></div>';
   }).join('');
+}
+
+// 질문 링크 복사: 손님에게 보내 줄 때 쓰는 바로가기 주소 (고유번호 기준이라 순서가 바뀌어도 그대로예요)
+function copyFaqLink(id,btn,ev){
+  if(ev&&ev.stopPropagation)ev.stopPropagation();
+  var url='https://www.printshopmini.com/faq.html#faq-'+id;
+  function done(ok){
+    if(!btn)return;
+    var old=btn.getAttribute('data-t')||btn.textContent;
+    btn.setAttribute('data-t',old);
+    btn.textContent=ok?'✓ 복사됐어요':'주소: '+url;
+    setTimeout(function(){btn.textContent=old;},ok?1600:6000);
+  }
+  try{
+    if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(url).then(function(){done(true);},function(){fb();});}
+    else fb();
+  }catch(e){fb();}
+  function fb(){
+    try{
+      var ta=document.createElement('textarea');ta.value=url;ta.style.cssText='position:fixed;left:-9999px;top:0';
+      document.body.appendChild(ta);ta.select();var ok=document.execCommand('copy');document.body.removeChild(ta);done(ok);
+    }catch(e){done(false);}
+  }
 }
 
 // 끌어서 옮기기: 보이는 목록 안에서 자리를 바꾸고, 순서 번호를 1,2,3…으로 저장해요
