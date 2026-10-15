@@ -229,6 +229,18 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 .step-figs.two{grid-template-columns:1fr 1fr}
 .step-photo{width:100%;height:auto;border-radius:8px;border:1px solid var(--border);display:block}
 .step-dual{grid-column:span 2}
+.open1{background:#EEF7FD;border:1.5px solid #BFDDF0;border-radius:16px;padding:18px 20px;margin:16px 0 8px}
+.open1-h{font-size:17px;font-weight:900;color:var(--text)}
+.open1-n{display:inline-block;background:var(--blue);color:#fff;border-radius:50px;padding:2px 11px;font-size:13px;margin-right:8px;vertical-align:1px}
+.open1-body{display:flex;gap:18px;align-items:flex-start;margin-top:14px}
+.open1-img{width:300px;max-width:42%;flex-shrink:0}
+.open1-txt p{font-size:14.5px;line-height:1.8;color:var(--text2);margin:0 0 8px}
+.open1-txt p b{color:var(--text)}
+.open1-txt .open1-phone{background:#fff;border-radius:12px;padding:10px 14px;margin:10px 0 0}
+.open1-phone a{color:var(--blue);font-weight:800}
+.open2-label{margin:18px 0 8px;font-size:15px;font-weight:900;color:var(--text)}
+.open2-label span{color:var(--blue)}
+@media(max-width:640px){.open1-body{flex-direction:column}.open1-img{width:100%;max-width:100%}}
 .step-note{margin-top:12px;background:#F5F8FA;border-radius:9px;padding:11px 14px;font-size:13px;color:var(--text2);line-height:1.6}
 .step-note b{color:var(--text);font-weight:700}
 .step-note.warn{background:#FEF2F2;color:#8A1C15;font-weight:600}
@@ -470,7 +482,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         <div class="step-figs"><img class="step-photo" src="images/print/print-select.png" alt="PC에서 파일을 열고 흑백/컬러/증명서전용 선택하는 화면" loading="lazy"></div>
         <div class="step-h">파일 열고 프린터 선택</div>
         <p class="step-p">PC에서 파일 열기 → <b>[인쇄]</b> → 프린터 고르기<br>흑백 / 컬러 / 증명서전용(PIN9999) 선택</p>
-        <div class="step-note">💾 내가 가져온 파일을 먼저 <b>매장 PC에 저장</b>한 다음, 그 파일을 <b>열어서</b> 인쇄하세요</div>
+        <div class="step-note">💾 이메일·USB·핸드폰에 있는 파일은 <b>먼저 PC에 저장</b>해야 해요. 아래에서 내 파일 형식을 누르면 맨 앞 <b>1단계(파일 열기)</b>에 자세히 나와요.</div>
         <div class="ftype-box"><div class="ftype-h">📄 파일 형식마다 인쇄옵션 설정 방법이 다릅니다.</div><div class="ftype-sub">인쇄설정방법 — 내 파일 형식을 눌러 보세요</div><div class="ftype-btns"><button type="button" class="ftype-btn pdf" onclick="goType('acrobat')">PDF 파일</button><button type="button" class="ftype-btn hwp" onclick="goType('hancom')">한글 파일</button><button type="button" class="ftype-btn word" onclick="goType('office','we')">MS WORD</button><button type="button" class="ftype-btn ppt" onclick="goType('office','ppt')">MS PPT</button><button type="button" class="ftype-btn excel" onclick="goType('office','we')">MS EXCEL</button></div></div>
       </div>
       <div id="print-step2" class="step">
@@ -531,6 +543,19 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
       <h2 class="sec-h2">PDF 파일은 어도비 아크로벳 리더 뷰어에서 열립니다 <span class="pill">PDF</span></h2>
     </div>
     <p class="sec-tagline">매장 PC에 설치된 PDF 전용 프로그램(<b>어도비 아크로벳 리더</b>)입니다. PDF 파일을 열고 <b>프린터 모양</b>이나 <b>[파일] → [인쇄]</b>를 누르거나 키보드 <b>Ctrl</b>과 <b>P</b>를 같이 누르면 아래 인쇄 화면이 나와요.</p>
+    <div class="open1">
+      <div class="open1-h"><span class="open1-n">1단계</span>PC에서 인쇄할 파일을 열어요</div>
+      <div class="open1-body">
+        <img class="step-photo open1-img" src="images/print/open-file-pc.png?v=1" alt="바탕화면에 있는 파일을 마우스로 두 번 눌러 여는 모습" loading="lazy">
+        <div class="open1-txt">
+          <p>인쇄할 파일을 PC에서 <b>더블클릭</b>해서 열어요.</p>
+          <p>이메일이나 USB에 있는 파일은 <b>먼저 PC 바탕화면에 저장</b>해 주세요.</p>
+          <p>꼭 바탕화면이 아니어도 돼요. PC에 저장하고 <b>어디에 저장했는지(경로)만 알면</b> 돼요. 그 경로에 가서 인쇄할 파일을 더블클릭해서 열어요. 가장 쉽게 찾을 수 있는 곳이 바탕화면이에요.</p>
+          <p class="open1-phone">📱 <b>핸드폰에 파일이 있다면?</b> 아래 링크를 눌러 핸드폰에 있는 파일을 먼저 PC에 저장하는 방법을 확인하세요.<br><a href="faq.html#faq-22">핸드폰 파일을 PC에 저장하는 방법 보기 →</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="open2-label"><span>이어서</span> · 인쇄 옵션 설정</div>
     <div class="pgroup"><figure class="pfig"><a href="images/print/pdf-lens-options.jpg" target="_blank" rel="noopener"><img class="step-photo" src="images/print/pdf-lens-options.jpg" alt="PDF 인쇄 화면. 프린터 선택, 맞추기, 용지 소스 선택 체크 해제 부분을 번호와 함께 확대해서 보여 주는 모습" loading="lazy"></a><figcaption class="est-cap">① ② ③ 번호가 붙은 곳을 확인하세요 <span style="color:var(--text3);font-weight:600">(사진을 누르면 크게 열려요)</span></figcaption></figure><ol class="plist"><li><span class="pn">1</span><div class="pb"><b>프린터</b>에서 <b>흑백출력</b> 또는 <b>컬러출력</b> 프린터를 선택하세요.</div></li><li><span class="pn">2</span><div class="pb"><b>페이지 크기 조정 및 처리</b>에서 반드시 <b>'맞추기'</b>가 선택되어 있어야 해요.</div></li><li><span class="pn">3</span><div class="pb"><div class="pwarn" style="margin-top:0">⚠️ <b>'PDF 페이지 크기에 따라 용지 소스 선택(Z)'</b>에 <b>체크가 없어야 해요!</b><br>체크가 되어 있으면 용지 크기를 A4 · B4 · A3로 골라도 복합기에서 조회할 때 <b>Custom</b>이라고 표시돼요. <b>반드시 체크를 풀고</b> 인쇄 작업을 진행하세요.</div></div></li></ol></div>
     <div class="pgroup"><figure class="pfig"><a href="images/print/pdf-lens-print.jpg" target="_blank" rel="noopener"><img class="step-photo" src="images/print/pdf-lens-print.jpg" alt="PDF 인쇄 화면. 페이지 설정 버튼, 회색 명암으로 인쇄 체크, 미리보기, 인쇄 버튼을 번호와 함께 확대해서 보여 주는 모습" loading="lazy"></a><figcaption class="est-cap">④ ⑤ ⑥ 번호가 붙은 곳을 확인하세요 <span style="color:var(--text3);font-weight:600">(사진을 누르면 크게 열려요)</span></figcaption></figure><ol class="plist"><li><span class="pn">4</span><div class="pb">아래 <b>[페이지 설정...]</b>을 눌러 원하는 <b>용지 크기</b>를 선택하세요.</div></li><li><span class="pn">5</span><div class="pb"><b>미리보기</b>에서 전체 페이지가 정상으로 보이는지 확인하세요.<br><b>컬러출력</b>을 골랐다면 오른쪽 작은 미리보기가 <b>반드시 컬러</b>로 보여야 해요.<div class="pwarn">컬러로 안 보이면<ol><li>위쪽 <b>'회색 명암(흑백)으로 인쇄'</b>에 체크되어 있는지 보고, 되어 있으면 <b>체크를 풀어요.</b></li><li>풀었는데도 흑백이면 <b>PC를 다시 켜고</b>(재부팅) 파일을 다시 열어서 진행해요.</li><li>그래도 흑백이면 그 파일을 <b>엣지나 크롬</b>에서 열어 <b>컬러출력</b> 프린터를 선택하고, 미리보기가 컬러인지 확인한 뒤 인쇄하세요. <a href="#browser" class="plink" onclick="goType('browser');return false">엣지·크롬 방법 보기</a></li></ol></div></div></li><li><span class="pn">6</span><div class="pb">모든 인쇄 옵션 설정이 끝나면 <b>[인쇄]</b> 버튼을 누르세요. <b>개인식별번호</b> 입력창이 나와요.</div></li></ol></div>
     <a class="goto" href="#print-step2" onclick="goStep2();return false"><span>PDF 인쇄 옵션은 여기까지예요! [인쇄]를 누르면 개인식별번호 입력창이 나와요.</span><b>위 &lsquo;인쇄하는 방법&rsquo; 2단계(개인식별번호 4자리 입력)부터 이어서 하세요 ⬆</b></a>
@@ -549,6 +574,19 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
       <h2 class="sec-h2">한글 파일은 한컴 한글 뷰어에서 열립니다 <span class="pill">한글</span></h2>
     </div>
     <p class="sec-tagline">매장 PC에는 <b>편집 기능이 없는 열람 전용 뷰어</b>가 설치되어 있습니다. 파일을 만든 환경과 다르면 화면이 달라질 수 있습니다.</p>
+    <div class="open1">
+      <div class="open1-h"><span class="open1-n">1단계</span>PC에서 인쇄할 파일을 열어요</div>
+      <div class="open1-body">
+        <img class="step-photo open1-img" src="images/print/open-file-pc.png?v=1" alt="바탕화면에 있는 파일을 마우스로 두 번 눌러 여는 모습" loading="lazy">
+        <div class="open1-txt">
+          <p>인쇄할 파일을 PC에서 <b>더블클릭</b>해서 열어요.</p>
+          <p>이메일이나 USB에 있는 파일은 <b>먼저 PC 바탕화면에 저장</b>해 주세요.</p>
+          <p>꼭 바탕화면이 아니어도 돼요. PC에 저장하고 <b>어디에 저장했는지(경로)만 알면</b> 돼요. 그 경로에 가서 인쇄할 파일을 더블클릭해서 열어요. 가장 쉽게 찾을 수 있는 곳이 바탕화면이에요.</p>
+          <p class="open1-phone">📱 <b>핸드폰에 파일이 있다면?</b> 아래 링크를 눌러 핸드폰에 있는 파일을 먼저 PC에 저장하는 방법을 확인하세요.<br><a href="faq.html#faq-22">핸드폰 파일을 PC에 저장하는 방법 보기 →</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="open2-label"><span>이어서</span> · 인쇄 옵션 설정</div>
 
     <div class="pgroup pg2"><figure class="pfig"><a href="images/print/hwp-main.jpg" target="_blank" rel="noopener"><img class="step-photo" src="images/print/hwp-main.jpg" alt="한글 인쇄 화면. 프린터 선택, 설정 버튼, 인쇄 매수, 인쇄 범위, 인쇄 방식, 인쇄 버튼에 번호를 붙인 그림" loading="lazy"></a><figcaption class="est-cap">1~6번 번호가 붙은 곳을 순서대로 확인하세요 <span style="color:var(--text3);font-weight:600">(사진을 누르면 크게 열려요)</span></figcaption></figure><ol class="plist"><li><span class="pn">1</span><div class="pb"><b>프린터 선택</b>: 프린터 목록에서 원하는 프린터(<b>흑백출력</b> 또는 <b>컬러출력</b>)를 누르세요.</div></li><li><span class="pn">2</span><div class="pb"><b>설정 버튼</b>: <b>[설정]</b> 버튼을 누르면 <b>[프린터 속성]</b> 창이 나와요. 이 창에는 <b>[기본] 탭</b>과 <b>[용지] 탭</b>이 있어요. 아래 <b>2-1</b>, <b>2-2</b>를 차례로 확인하세요.<div class="sub2"><div class="sub2-h"><span class="sub2-n">2-1</span> [기본] 탭 — 인쇄 방향 · 단면/양면</div><figure class="pimg"><a href="images/print/hwp-prop1.jpg" target="_blank" rel="noopener"><img src="images/print/hwp-prop1.jpg" alt="프린터 속성 창의 기본 탭. A는 용지 방향, B는 양면 인쇄 옵션" loading="lazy"></a></figure><ul class="ablist"><li><span class="ab">A</span><div><b>용지 방향</b>: 인쇄 방향을 고르세요. <b>[세로]</b> 또는 <b>[가로]</b></div></li><li><span class="ab">B</span><div><b>양면 인쇄</b>: 한 면만 인쇄하려면 <b>[사용안함]</b>, 양면으로 인쇄하려면 <b>[긴면 묶음]</b> 또는 <b>[짧은면 묶음]</b>을 고르세요.</div></li></ul></div><div class="sub2"><div class="sub2-h"><span class="sub2-n">2-2</span> [용지] 탭 — 용지 크기</div><figure class="pimg"><a href="images/print/hwp-prop2.jpg" target="_blank" rel="noopener"><img src="images/print/hwp-prop2.jpg" alt="프린터 속성 창의 용지 탭. A는 원본 문서 크기, B는 출력 문서 크기" loading="lazy"></a></figure><ul class="ablist"><li><span class="ab">A</span><div><b>원본 문서 크기</b>: 인쇄하려는 용지 크기(<b>A4 · B4 · A3</b>)로 선택하세요.</div></li><li><span class="ab">B</span><div><b>출력 문서 크기</b>: 여기도 <b>A와 똑같은 크기</b>로 선택하세요. <b>[원본 문서 크기와 동일]</b>로 두지 마세요.</div></li></ul><div class="pwarn" style="background:#EAF4FF;border-color:#1B8AC4;color:#10425F">📌 <b>예)</b> A4로 인쇄하고 싶으면 <b>A</b>와 <b>B</b> 두 곳 모두 <b>A4</b>로 선택하세요.</div><div class="pwarn">⚠️ 파일에 따라 <b>[출력 문서 크기]</b>를 설정하지 않으면, 복합기에서 조회할 때 용지 크기가 <b>Letter(레터)</b>나 <b>Custom(커스텀)</b> 등 <b>한글 파일 크기</b>로 나와요.</div></div></div></li><li><span class="pn">3</span><div class="pb"><b>인쇄 매수</b>를 정하세요.</div></li><li><span class="pn">4</span><div class="pb"><b>인쇄할 페이지 범위</b>를 고르세요. <b>전체</b> 또는 특정 페이지만 인쇄하려면 <b>[일부분]</b>을 고르고 페이지 번호를 입력하세요.</div></li><li><span class="pn">5</span><div class="pb"><b>한 면에 인쇄할 페이지 수</b>: 한 면에 한 페이지는 <b>[기본 인쇄]</b>를 고르세요. 한 면에 여러 페이지는 <b>[모아 찍기]</b>를 고르고 인쇄할 페이지 수를 입력하세요.</div></li><li><span class="pn">6</span><div class="pb">모든 설정이 끝났으면 <b>[인쇄]</b> 버튼을 눌러 진행하세요.<div class="pwarn">※ <b>공용 PC라서 인쇄 설정이 매번 달라져요.</b> 원하는 인쇄 옵션을 <b>모두 확인하고 설정한 뒤</b> 인쇄하세요.</div></div></li></ol></div>
     <div class="step-note" style="max-width:1100px;margin:0 0 18px">💡 파일을 만든 PC와 글꼴이 달라서 글꼴 · 줄 간격 · 표가 틀어지거나 <b>원본에 없던 기호(□)</b>가 나올 수 있어요. 한글에서 <b>[다른 이름으로 저장] → PDF</b>로 바꿔 오시면 원본 그대로 출력됩니다.</div>
@@ -568,6 +606,19 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
       <h2 class="sec-h2">엑셀 · 워드 · 파워포인트 파일은 MS 오피스에서 열립니다 <span class="pill">MS 오피스</span></h2>
     </div>
     <p class="sec-tagline">워드 · 엑셀 · 파워포인트 파일의 인쇄 설정 방법입니다. 프로그램마다 화면 구성은 다르지만 <b>[파일] → [인쇄]</b>로 들어가는 순서는 같습니다.</p>
+    <div class="open1">
+      <div class="open1-h"><span class="open1-n">1단계</span>PC에서 인쇄할 파일을 열어요</div>
+      <div class="open1-body">
+        <img class="step-photo open1-img" src="images/print/open-file-pc.png?v=1" alt="바탕화면에 있는 파일을 마우스로 두 번 눌러 여는 모습" loading="lazy">
+        <div class="open1-txt">
+          <p>인쇄할 파일을 PC에서 <b>더블클릭</b>해서 열어요.</p>
+          <p>이메일이나 USB에 있는 파일은 <b>먼저 PC 바탕화면에 저장</b>해 주세요.</p>
+          <p>꼭 바탕화면이 아니어도 돼요. PC에 저장하고 <b>어디에 저장했는지(경로)만 알면</b> 돼요. 그 경로에 가서 인쇄할 파일을 더블클릭해서 열어요. 가장 쉽게 찾을 수 있는 곳이 바탕화면이에요.</p>
+          <p class="open1-phone">📱 <b>핸드폰에 파일이 있다면?</b> 아래 링크를 눌러 핸드폰에 있는 파일을 먼저 PC에 저장하는 방법을 확인하세요.<br><a href="faq.html#faq-22">핸드폰 파일을 PC에 저장하는 방법 보기 →</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="open2-label"><span>이어서</span> · 인쇄 옵션 설정</div>
 
     <div class="otabs">
       <button class="otab on" onclick="officeTab('we',this)">워드 · 엑셀</button>
@@ -602,6 +653,19 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
       <h2 class="sec-h2">파일을 크롬 · 엣지 브라우저로 열었을 때 <span class="pill">캔바 · 웹 PDF</span></h2>
     </div>
     <p class="sec-tagline">캔바 · 미리캔버스 · 웹 디자인 프로그램 · 아이패드 메모 앱에서 만든 PDF는 <span class="hl-t">브라우저로 열어서 인쇄하면 정상적으로 인쇄됩니다.</span></p>
+    <div class="open1">
+      <div class="open1-h"><span class="open1-n">1단계</span>PC에서 인쇄할 파일을 열어요</div>
+      <div class="open1-body">
+        <img class="step-photo open1-img" src="images/print/open-file-pc.png?v=1" alt="바탕화면에 있는 파일을 마우스로 두 번 눌러 여는 모습" loading="lazy">
+        <div class="open1-txt">
+          <p>인쇄할 파일을 PC에서 <b>더블클릭</b>해서 열어요.</p>
+          <p>이메일이나 USB에 있는 파일은 <b>먼저 PC 바탕화면에 저장</b>해 주세요.</p>
+          <p>꼭 바탕화면이 아니어도 돼요. PC에 저장하고 <b>어디에 저장했는지(경로)만 알면</b> 돼요. 그 경로에 가서 인쇄할 파일을 더블클릭해서 열어요. 가장 쉽게 찾을 수 있는 곳이 바탕화면이에요.</p>
+          <p class="open1-phone">📱 <b>핸드폰에 파일이 있다면?</b> 아래 링크를 눌러 핸드폰에 있는 파일을 먼저 PC에 저장하는 방법을 확인하세요.<br><a href="faq.html#faq-22">핸드폰 파일을 PC에 저장하는 방법 보기 →</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="open2-label"><span>이어서</span> · 인쇄 옵션 설정</div>
     <div class="prestep" style="margin-bottom:6px">
       <div class="prestep-h">🔎 내 파일이 열린 브라우저를 먼저 확인하세요 <span>엣지와 크롬은 인쇄 화면이 달라요</span></div>
       <p style="font-size:14px;color:#5C4300;line-height:1.7">PC에서 파일이 <b>엣지(Edge)</b>로 열려 있으면 아래 <b>엣지 방법</b>, <b>크롬(Chrome)</b>으로 열려 있으면 아래 <b>크롬 방법</b>(1~5단계)을 따라 하세요. <b>개인식별번호를 넣고 인쇄 작업 창 확인(5단계)</b>까지 끝나면, 아래로 내려가 <b>복합기에서 인쇄하기</b>로 이어서 하세요. <b>엣지 · 크롬 · 알씨 모두 똑같아요.</b></p>
@@ -614,7 +678,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         
         <div class="est-txt">
           <div class="step-h">[인쇄] 누르기</div>
-          <p class="step-p">브라우저에서 인쇄할 파일이 열린 상태에서 <b>[인쇄]</b> 또는 <b>프린터 모양</b>을 누르세요.</p><div class="step-note">💾 <b>가져온 내 파일을 먼저 매장 PC에 저장</b>한 뒤, 엣지로 <b>열어 놓고</b> 시작하세요.</div>
+          <p class="step-p">브라우저에서 인쇄할 파일이 열린 상태에서 <b>[인쇄]</b> 또는 <b>프린터 모양</b>을 누르세요.</p>
         </div>
       </div>
       <div class="step">
@@ -660,7 +724,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         
         <div class="est-txt">
           <div class="step-h">[인쇄] 누르기</div>
-          <p class="step-p">인쇄할 파일이 <b>크롬</b>에서 열린 상태에서 <b>[인쇄]</b> 또는 <b>프린터 모양</b>을 누르거나, 키보드 <b>Ctrl</b>과 <b>P</b>를 같이 누르세요.<br>인쇄 설정 창이 나와요. <b>왼쪽은 미리보기</b>, <b>오른쪽은 인쇄 옵션 설정 창</b>이에요.</p><div class="step-note">💾 <b>가져온 내 파일을 먼저 매장 PC에 저장</b>한 뒤, 크롬으로 <b>열어 놓고</b> 시작하세요.</div>
+          <p class="step-p">인쇄할 파일이 <b>크롬</b>에서 열린 상태에서 <b>[인쇄]</b> 또는 <b>프린터 모양</b>을 누르거나, 키보드 <b>Ctrl</b>과 <b>P</b>를 같이 누르세요.<br>인쇄 설정 창이 나와요. <b>왼쪽은 미리보기</b>, <b>오른쪽은 인쇄 옵션 설정 창</b>이에요.</p>
         </div>
       </div>
       <div class="step">
@@ -714,13 +778,26 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
       <h2 class="sec-h2">사진 · 이미지 파일은 알씨에서 열립니다 <span class="pill">알씨</span></h2>
     </div>
     <p class="sec-tagline">사진이나 이미지 파일을 인쇄할 때 사용합니다. 한 장에 여러 장 배치도 가능합니다. 매장 PC 바탕화면의 <b>알씨</b> 아이콘으로 사진을 열면 됩니다.</p>
+    <div class="open1">
+      <div class="open1-h"><span class="open1-n">1단계</span>PC에서 인쇄할 파일을 열어요</div>
+      <div class="open1-body">
+        <img class="step-photo open1-img" src="images/print/open-file-pc.png?v=1" alt="바탕화면에 있는 파일을 마우스로 두 번 눌러 여는 모습" loading="lazy">
+        <div class="open1-txt">
+          <p>인쇄할 파일을 PC에서 <b>더블클릭</b>해서 열어요.</p>
+          <p>이메일이나 USB에 있는 파일은 <b>먼저 PC 바탕화면에 저장</b>해 주세요.</p>
+          <p>꼭 바탕화면이 아니어도 돼요. PC에 저장하고 <b>어디에 저장했는지(경로)만 알면</b> 돼요. 그 경로에 가서 인쇄할 파일을 더블클릭해서 열어요. 가장 쉽게 찾을 수 있는 곳이 바탕화면이에요.</p>
+          <p class="open1-phone">📱 <b>핸드폰에 파일이 있다면?</b> 아래 링크를 눌러 핸드폰에 있는 파일을 먼저 PC에 저장하는 방법을 확인하세요.<br><a href="faq.html#faq-22">핸드폰 파일을 PC에 저장하는 방법 보기 →</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="open2-label"><span>이어서</span> · 인쇄 옵션 설정</div>
 <div class="steps">
       <div class="step">
         <div class="step-no">1</div>
         <div class="step-fig"><img src="alsee1.png" alt="파일 열고 인쇄 메뉴" style="width:100%;border:1px solid var(--border);border-radius:6px;display:block"></div>
         <div class="step-h">파일 열고 인쇄 메뉴</div>
         <p class="step-p">사진을 알씨로 연 뒤 상단 <b>[메뉴] → [인쇄하기]</b>를 선택합니다. 키보드 <b>Ctrl</b>과 <b>P</b>를 같이 눌러도 돼요</p>
-        <div class="step-note">💾 <b>가져온 내 사진을 먼저 매장 PC에 저장</b>한 뒤, 알씨로 <b>열어서</b> 시작하세요.</div>
+        
       </div>
       <div class="step">
         <div class="step-no">2</div>
