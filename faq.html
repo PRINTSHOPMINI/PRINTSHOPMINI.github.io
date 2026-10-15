@@ -80,6 +80,7 @@ mark{background:#FFE08A;color:inherit;border-radius:3px;padding:0 2px}
 .faq-item.open .q-icon{transform:rotate(45deg)}
 .faq-item.flash{animation:faqFlash 2.4s ease-out}
 @keyframes faqFlash{0%,35%{box-shadow:0 0 0 4px var(--blue);background:var(--blue-light)}100%{box-shadow:0 0 0 0 transparent;background:transparent}}
+.faq-a{-webkit-touch-callout:none}
 .q-copy-row{margin-top:16px;text-align:right}
 .q-copy{background:#fff;border:1px solid var(--border);color:var(--text3);font-size:12px;font-weight:700;border-radius:50px;padding:5px 13px;cursor:pointer;font-family:inherit}
 .q-copy:hover{color:var(--blue);border-color:var(--blue)}
@@ -321,7 +322,7 @@ function renderFaqs(){
     var c=catOf(f);
     var tag=(CUR==='all'&&c)?'<span class="q-tag">'+escH(catLabel(c))+'</span>':'';
     if(SHOW_NO)tag='<span class="q-no">No.'+(FAQS.indexOf(f)+1)+'</span>'+tag;
-    return '<div class="faq-item'+open+'" id="faq-'+f.id+'" onclick="toggleFaq(this)">'+
+    return '<div class="faq-item'+open+'" id="faq-'+f.id+'" onclick="toggleFaq(this,event)">'+
       '<div class="faq-q"><span>'+tag+hl(f.question,terms)+'</span> <span class="q-icon">+</span></div>'+
       '<div class="faq-a">'+renderAnswer(f.answer,terms)+'<div class="q-copy-row"><button type="button" class="q-copy" onclick="copyFaqLink('+f.id+',this,event)">🔗 이 질문 링크 복사</button></div></div>'+
     '</div>';
@@ -380,7 +381,38 @@ async function loadFaqs(){
 
 loadFaqs();
 
-function toggleFaq(item){item.classList.toggle('open')}
+// 질문(제목)을 눌렀을 때만 열고 닫아요. 본문을 누르거나, 본문에서 마우스를 눌러 드래그해도 닫히지 않아요.
+var _mdInAnswer=false;
+document.addEventListener('mousedown',function(e){_mdInAnswer=!!(e.target&&e.target.closest&&e.target.closest('.faq-a'));},true);
+document.addEventListener('touchstart',function(e){_mdInAnswer=!!(e.target&&e.target.closest&&e.target.closest('.faq-a'));},true);
+function toggleFaq(item,ev){
+  if(ev){
+    var tg=ev.target;
+    if(tg&&tg.closest&&tg.closest('.faq-a'))return;          // 본문 클릭
+    if(_mdInAnswer){_mdInAnswer=false;return;}               // 본문에서 시작한 드래그가 바깥에서 끝난 경우
+  }
+  item.classList.toggle('open');
+}
+
+// FAQ 내용은 복사할 수 없어요 (읽으면서 드래그·선택은 돼요). 주소 끝에 ?no=1 을 붙인 관리자용 보기에서는 복사가 돼요.
+(function(){
+  function blockCopy(e){
+    if(SHOW_NO)return;
+    var n=e.target;
+    var inFaq=(n&&n.nodeType===1?n:(n&&n.parentElement))&&document.getElementById('faqList')&&document.getElementById('faqList').contains(n.nodeType===1?n:n.parentElement);
+    var sel=window.getSelection&&window.getSelection();
+    var selIn=false;
+    try{if(sel&&sel.rangeCount){var an=sel.anchorNode;var el=an&&(an.nodeType===1?an:an.parentElement);selIn=!!(el&&document.getElementById('faqList')&&document.getElementById('faqList').contains(el));}}catch(x){}
+    if(inFaq||selIn){e.preventDefault();if(e.clipboardData){try{e.clipboardData.setData('text/plain','');}catch(x){}}}
+  }
+  document.addEventListener('copy',blockCopy,true);
+  document.addEventListener('cut',blockCopy,true);
+  document.addEventListener('contextmenu',function(e){
+    if(SHOW_NO)return;
+    var el=e.target&&e.target.closest?e.target.closest('.faq-a'):null;
+    if(el)e.preventDefault();
+  },true);
+})();
 
 // 주소 끝에 #faq-12 처럼 붙어 있으면 그 질문을 열고 그 자리로 이동 (퀵메뉴 등에서 사용)
 function openFaqFromHash(){
