@@ -431,7 +431,7 @@ var noticesCache=[];
 
 async function loadNotices(){
   try{
-    var r=await fetch(SB_URL+'/rest/v1/notices?order=created_at.desc',{headers:SB_HDR});
+    var r=await fetch(SB_URL+'/rest/v1/notices?order=date.desc,id.desc',{headers:SB_HDR});
     var data=await r.json();
     if(!Array.isArray(data)) throw new Error();
     noticesCache=data;

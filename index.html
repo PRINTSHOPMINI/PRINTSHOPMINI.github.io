@@ -754,7 +754,7 @@ async function loadMainNotices(){
   if(!list)return;
   function go(id){return "location.href='community.html#notice-"+id+"'";}
   try{
-    var r=await fetch(SB_URL+'/rest/v1/notices?select=id,title,date,views,created_at&order=created_at.desc&limit=5',{headers:SB_HDR});
+    var r=await fetch(SB_URL+'/rest/v1/notices?select=id,title,date,views,created_at&order=date.desc,id.desc&limit=5',{headers:SB_HDR});
     var d=await r.json();
     if(!Array.isArray(d))throw new Error('notices');
     if(!d.length){
