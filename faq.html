@@ -65,7 +65,8 @@ mark{background:#FFE08A;color:inherit;border-radius:3px;padding:0 2px}
 .faq-item{border:1px solid var(--border);border-radius:12px;overflow:hidden}
 .faq-q{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 24px;cursor:pointer;font-size:15px;font-weight:700;background:var(--white);transition:background .15s}
 .faq-q:hover{background:var(--blue-light)}
-.faq-q .q-icon{color:var(--blue);font-size:18px;font-weight:900;flex-shrink:0;transition:transform .25s}
+.faq-q .q-icon{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--blue-light);border:2px solid var(--blue);color:var(--blue);font-size:28px;font-weight:900;line-height:1;flex-shrink:0;transition:transform .25s,background .2s,color .2s;padding-bottom:3px;box-sizing:border-box}
+.faq-q:hover .q-icon{background:var(--blue);color:#fff}
 .faq-a{display:none;padding:16px 24px 20px;font-size:14px;color:var(--text2);line-height:1.9;background:var(--bg);border-top:1px solid var(--border)}
 .faq-item.open .faq-a{display:block}
 .faq-img{display:block;max-width:100%;width:420px;height:auto;margin:10px 0 14px;border:1px solid var(--border);border-radius:10px;background:#fff}
@@ -77,7 +78,7 @@ mark{background:#FFE08A;color:inherit;border-radius:3px;padding:0 2px}
 .faq-btnimg span{font-size:12.5px;font-weight:700;color:var(--blue)}
 .faq-img.faq-img-sm{width:240px}
 .faq-ico{display:inline-block;height:1.5em;width:auto;vertical-align:-0.38em;margin:0 3px;padding:2px;border:1px solid var(--border);border-radius:6px;background:#fff}
-.faq-item.open .q-icon{transform:rotate(45deg)}
+.faq-item.open .q-icon{transform:rotate(45deg);background:var(--blue);color:#fff}
 .faq-item.flash{animation:faqFlash 2.4s ease-out}
 @keyframes faqFlash{0%,35%{box-shadow:0 0 0 4px var(--blue);background:var(--blue-light)}100%{box-shadow:0 0 0 0 transparent;background:transparent}}
 .faq-a{-webkit-touch-callout:none}
