@@ -1,0 +1,60 @@
+/* 움직이는 그림 영상 플레이어 (gvideo.js와 함께 사용) */
+.gv-wrap{max-width:980px;margin:0 auto;padding:26px 0 34px}
+.gv-card{background:#fff;border:1px solid var(--border,#E5E7EB);border-radius:18px;box-shadow:0 8px 28px rgba(30,45,80,.10);overflow:hidden}
+.gv-stage{position:relative;width:100%;aspect-ratio:16/9;background:linear-gradient(180deg,#F2F7FC,#E4EDF7);overflow:hidden;user-select:none;-webkit-user-select:none}
+.gv-scene{display:none;position:absolute;inset:0}
+.gv-scene.on{display:block}
+.gv-scene svg{width:100%;height:100%;display:block}
+.gv-chip{position:absolute;left:14px;top:12px;background:rgba(17,24,39,.78);color:#fff;font-weight:900;font-size:13px;padding:4px 12px;border-radius:30px;z-index:5}
+.gv-over{position:absolute;inset:0;display:none;align-items:center;justify-content:center;flex-direction:column;gap:10px;background:rgba(17,24,39,.55);z-index:6;color:#fff;font-weight:900;font-size:22px;cursor:pointer}
+.gv-over.show{display:flex}
+.gv-over b{width:78px;height:78px;border-radius:50%;background:#fff;color:#1B8AC4;display:flex;align-items:center;justify-content:center;font-size:34px;padding-left:6px}
+.gv-cap{display:flex;gap:14px;align-items:flex-start;padding:16px 20px;min-height:98px;background:#fff;border-top:1px solid var(--border,#E5E7EB)}
+.gv-cap.warn{background:#FEF2F2}
+.gv-n{flex:0 0 auto;width:40px;height:40px;border-radius:50%;background:#1B8AC4;color:#fff;font-weight:900;font-size:19px;display:flex;align-items:center;justify-content:center}
+.gv-cap.warn .gv-n{background:#E3182D}
+.gv-ct{font-size:clamp(17px,2.6vw,24px);font-weight:900;line-height:1.45;color:#111827;word-break:keep-all}
+.gv-cap.warn .gv-ct{color:#B31E16}
+.gv-cs{font-size:clamp(14px,1.9vw,17px);font-weight:700;color:#4B5563;margin-top:3px;line-height:1.5;word-break:keep-all}
+.gv-cap.warn .gv-cs{color:#8A1C15}
+.gv-ct b{color:#1B8AC4}
+.gv-cap.warn .gv-ct b{color:#E3182D}
+.gv-ctl{display:flex;align-items:center;gap:8px;padding:10px 14px 14px;background:#fff}
+.gv-btn{border:0;background:#E8F4FC;color:#1B8AC4;font-weight:900;font-size:15px;min-width:46px;height:42px;border-radius:12px;cursor:pointer;font-family:inherit}
+.gv-btn:hover{background:#D3EAF8}
+.gv-btn.main{background:#1B8AC4;color:#fff;min-width:64px;font-size:17px}
+.gv-bar{flex:1;display:flex;gap:4px;margin-left:6px}
+.gv-seg{flex:1;height:10px;border-radius:6px;background:#E5E7EB;overflow:hidden;cursor:pointer;position:relative}
+.gv-seg i{position:absolute;left:0;top:0;bottom:0;width:0;background:#1B8AC4;border-radius:6px}
+.gv-seg.done i{width:100%}
+.gv-seg.w i{background:#E3182D}
+.gv-paused .gv-scene *{animation-play-state:paused!important}
+
+/* ── 장면 안 움직임 도우미 ── */
+.gv-scene.on .a{animation:var(--an,gvFade) var(--du,.6s) var(--ea,ease-out) var(--d,0s) both;transform-box:fill-box;transform-origin:center}
+.gv-scene.on .loop{animation-iteration-count:infinite}
+@keyframes gvFade{from{opacity:0}to{opacity:1}}
+@keyframes gvPop{0%{opacity:0;transform:scale(.2)}65%{opacity:1;transform:scale(1.14)}100%{opacity:1;transform:scale(1)}}
+@keyframes gvMove{from{transform:translate(var(--fx,0px),var(--fy,0px))}to{transform:translate(var(--tx,0px),var(--ty,0px))}}
+@keyframes gvMoveIn{from{opacity:0;transform:translate(var(--fx,0px),var(--fy,0px))}15%{opacity:1}to{opacity:1;transform:translate(var(--tx,0px),var(--ty,0px))}}
+@keyframes gvMoveOut{from{opacity:1;transform:translate(var(--fx,0px),var(--fy,0px))}80%{opacity:1}to{opacity:0;transform:translate(var(--tx,0px),var(--ty,0px))}}
+@keyframes gvShake{0%,100%{transform:translateX(0)}15%{transform:translateX(-9px)}30%{transform:translateX(9px)}45%{transform:translateX(-7px)}60%{transform:translateX(7px)}75%{transform:translateX(-3px)}}
+@keyframes gvPulse{0%,100%{opacity:.25;transform:scale(1)}50%{opacity:1;transform:scale(1.04)}}
+@keyframes gvDraw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes gvRise{from{transform:translateY(0)}to{transform:translateY(var(--ty,-36px))}}
+@keyframes gvFlip{from{transform:scaleY(1)}to{transform:scaleY(-1)}}
+@keyframes gvTap{0%{transform:scale(1)}40%{transform:scale(.88)}100%{transform:scale(1)}}
+@keyframes gvBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.gv-scene.on .bob{animation:gvBob 1.1s ease-in-out infinite}
+.gv-scene.on .pulse{animation:gvPulse 1.1s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.gv-t{font-family:'Noto Sans KR',sans-serif;font-weight:900}
+@media (max-width:560px){
+  .gv-cap{padding:12px 14px;min-height:92px;gap:10px}
+  .gv-n{width:34px;height:34px;font-size:16px}
+  .gv-btn{min-width:40px;height:38px}
+  .gv-wrap{padding:16px 0 26px}
+}
+@media (prefers-reduced-motion:reduce){.gv-scene.on .a{animation-duration:.01s!important;animation-delay:0s!important}}
+@keyframes gvRipple{0%{opacity:.95;transform:scale(.25)}100%{opacity:0;transform:scale(1.7)}}
+.gv-link{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 14px;margin-top:14px;padding:14px 18px;background:var(--blue-light,#E8F4FC);border:2px solid var(--blue,#1B8AC4);border-radius:14px;font-weight:700;color:var(--text2,#374151);font-size:14.5px}
+.gv-link b{color:var(--blue,#1B8AC4);font-weight:900;font-size:15.5px}
