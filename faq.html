@@ -377,8 +377,8 @@ function copyFaqLink(id,btn,ev){
   }
 }
 
-function onFaqSearch(){renderFaqs();}
-function clearFaqSearch(){var q=document.getElementById('faqQ');q.value='';renderFaqs();q.focus();}
+function onFaqSearch(){renderFaqs();scrollToListTop();}
+function clearFaqSearch(){var q=document.getElementById('faqQ');q.value='';renderFaqs();scrollToListTop();q.focus();}
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&document.activeElement===document.getElementById('faqQ'))clearFaqSearch();});
 
 async function loadFaqs(){
