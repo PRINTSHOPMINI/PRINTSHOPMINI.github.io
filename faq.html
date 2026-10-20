@@ -96,6 +96,8 @@ mark{background:#FFE08A;color:inherit;border-radius:3px;padding:0 2px}
 .faq-chip.on{background:var(--blue);border-color:var(--blue);color:#fff}
 .faq-chip.on .n{color:rgba(255,255,255,.85)}
 .faq-chip.zero{opacity:.45}
+.faq-refund-pill{display:inline-flex;align-items:center;gap:6px;margin:0 0 8px;font-family:inherit;font-size:14px;font-weight:800;color:#fff;background:#E5484D;border-radius:50px;padding:8px 16px;line-height:1.3;text-decoration:none;box-shadow:0 2px 8px rgba(229,72,77,.28);transition:background .15s}
+.faq-refund-pill:hover{background:#CF3A3F}
 .ph-cats{max-width:800px;margin:10px auto 0}
 .ph-cats .faq-cats{margin:0;gap:6px}
 .ph-cats .faq-chip{font-size:13.5px;padding:7px 12px}
@@ -188,7 +190,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
     <div class="faq-count" id="faqCount" aria-live="polite"></div>
     </div>
   </div>
-  <div class="ph-cats"><div class="faq-cats" id="faqCats" role="tablist" aria-label="질문 묶음"></div></div>
+  <div class="ph-cats"><a href="#faq-70" class="faq-refund-pill" onclick="return goRefundFaq();">💸 환불 되는 거 · 안 되는 거 한눈에 보기 <span aria-hidden="true">→</span></a><div class="faq-cats" id="faqCats" role="tablist" aria-label="질문 묶음"></div></div>
 </div>
 
 <!-- FAQ -->
@@ -434,6 +436,11 @@ function openFaqFromHash(){
   window.scrollTo({top:Math.max(0,y),behavior:'smooth'});
 }
 window.addEventListener('hashchange',openFaqFromHash);
+// 상단 [환불 되는 거 · 안 되는 거] 알약 버튼: 이미 #faq-70 이어도 다시 그 자리로 이동
+function goRefundFaq(){
+  if(location.hash==='#faq-70'){openFaqFromHash();}else{location.hash='#faq-70';}
+  return false;
+}
 function toggleMenu(){
   var m=document.querySelector('.nav-links');
   if(m.style.display==='flex'){m.style.display='';return;}
