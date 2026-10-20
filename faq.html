@@ -261,6 +261,7 @@ function renderAnswer(text,terms){
   }).join('');
 }
 var CATS=[],CMAP={},CUR='all';
+var SEARCH_PIN={'환불':70};   // 검색어 → 맨 위에 보여 줄 종합 FAQ id
 function catOf(f){var id=CMAP[f.id];for(var i=0;i<CATS.length;i++){if(CATS[i].id===id)return CATS[i];}return null;}
 function catLabel(c){return (c.icon?c.icon+' ':'')+c.name;}
 function setCat(k){CUR=k;renderFaqs();}
@@ -274,6 +275,12 @@ function renderFaqs(){
     var hay=((f.question||'')+' '+(f.answer||'')).toLowerCase();
     return terms.every(function(w){return hay.indexOf(w)>-1;});
   });
+  // 검색어에 해당하는 종합 안내가 있으면 결과 맨 위로 (예: 환불 → FAQ 70)
+  var pinId=null;
+  terms.forEach(function(w){Object.keys(SEARCH_PIN).forEach(function(k){if(w.indexOf(k)>-1&&pinId===null)pinId=SEARCH_PIN[k];});});
+  if(pinId!==null){
+    hit=hit.filter(function(f){return f.id===pinId;}).concat(hit.filter(function(f){return f.id!==pinId;}));
+  }
 
   // 묶음 칩 (질문이 하나도 없는 묶음은 숨겨요)
   var chipBox=document.getElementById('faqCats');
