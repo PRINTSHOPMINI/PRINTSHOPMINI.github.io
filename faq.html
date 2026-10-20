@@ -270,7 +270,15 @@ var CATS=[],CMAP={},CUR='all';
 var SEARCH_PIN={'환불':70};   // 검색어 → 맨 위에 보여 줄 종합 FAQ id
 function catOf(f){var id=CMAP[f.id];for(var i=0;i<CATS.length;i++){if(CATS[i].id===id)return CATS[i];}return null;}
 function catLabel(c){return (c.icon?c.icon+' ':'')+c.name;}
-function setCat(k){CUR=k;renderFaqs();}
+function setCat(k){CUR=k;renderFaqs();scrollToListTop();}
+// 분류를 바꾸면 그 목록의 맨 처음이 보이게 이동 (아래로 내려 본 상태에서 눌러도 목록이 비어 보이지 않게)
+function scrollToListTop(){
+  var ph=document.querySelector('.page-header');
+  var t=document.getElementById('faqCatDesc')||document.getElementById('faqList');
+  if(!t)return;
+  var y=t.getBoundingClientRect().top+window.pageYOffset-(ph?ph.getBoundingClientRect().bottom:190)-8;
+  window.scrollTo({top:Math.max(0,y),behavior:'auto'});
+}
 function renderFaqs(){
   var list=document.getElementById('faqList'),count=document.getElementById('faqCount');
   var raw=document.getElementById('faqQ').value.trim();
