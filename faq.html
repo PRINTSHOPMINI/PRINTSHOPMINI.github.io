@@ -96,6 +96,12 @@ mark{background:#FFE08A;color:inherit;border-radius:3px;padding:0 2px}
 .faq-chip.on{background:var(--blue);border-color:var(--blue);color:#fff}
 .faq-chip.on .n{color:rgba(255,255,255,.85)}
 .faq-chip.zero{opacity:.45}
+.faq-chip.chip-mini{background:#FFF3E8;border-color:#F3732C;color:#C2410C}
+.faq-chip.chip-mini .n{color:#C2410C;opacity:.8}
+.faq-chip.chip-mini:hover{background:#FFE6D1}
+.faq-chip.chip-mini.on{background:#F3732C;border-color:#F3732C;color:#fff}
+.faq-chip.chip-mini.on .n{color:rgba(255,255,255,.9)}
+
 .faq-refund-pill{display:inline-flex;align-items:center;gap:6px;margin:0 0 8px;font-family:inherit;font-size:14px;font-weight:800;color:#fff;background:#E5484D;border-radius:50px;padding:8px 16px;line-height:1.3;text-decoration:none;box-shadow:0 2px 8px rgba(229,72,77,.28);transition:background .15s}
 .faq-refund-pill:hover{background:#CF3A3F}
 .ph-cats{max-width:800px;margin:10px auto 0}
@@ -300,7 +306,7 @@ function renderFaqs(){
     }
     if(!chips.some(function(c){return c.k===CUR;}))CUR='all';
     chipBox.innerHTML=chips.map(function(c){
-      return '<button type="button" class="faq-chip'+(CUR===c.k?' on':'')+(c.z?' zero':'')+'" onclick="setCat(\''+c.k+'\')">'+escH(c.t)+'<span class="n">'+c.n+'</span></button>';
+      return '<button type="button" class="faq-chip chip-'+c.k+(CUR===c.k?' on':'')+(c.z?' zero':'')+'" onclick="setCat(\''+c.k+'\')">'+escH(c.t)+'<span class="n">'+c.n+'</span></button>';
     }).join('');
     var on=chipBox.querySelector('.faq-chip.on');
     if(on&&chipBox.scrollWidth>chipBox.clientWidth)chipBox.scrollLeft=on.offsetLeft-(chipBox.clientWidth-on.offsetWidth)/2;
