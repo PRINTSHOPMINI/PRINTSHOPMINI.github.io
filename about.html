@@ -293,6 +293,17 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 .tl2-box{flex:1;background:#fff;border:3px solid var(--c);border-radius:22px;padding:14px 20px 16px;box-shadow:0 5px 0 var(--c);position:relative}
 .tl2-year{display:inline-block;font-family:var(--jua);font-size:15px;color:#fff;background:var(--c);padding:1px 14px;border-radius:50px;margin-bottom:6px}
 .tl2-say{margin-top:8px;font-family:var(--hand);font-size:19px;color:var(--c)}
+/* 글씨체 규칙: 캐릭터가 말하는 곳만 귀여운 글씨, 사이트가 말하는 곳은 다른 페이지와 같은 기본 글씨 */
+.ah-h1,.sec-h2,.sec-eyebrow,.mission-title,.v-title,.tl-title,.tl2-year,.mf-go{font-family:'Noto Sans KR',sans-serif}
+.ah-h1{font-weight:900;letter-spacing:-1px}
+.sec-h2{font-weight:900;letter-spacing:-1.5px}
+.sec-h2.cute{letter-spacing:-1.2px}
+.sec-eyebrow{font-weight:700;font-size:12px;letter-spacing:1px}
+.mission-title{font-size:20px;font-weight:900;letter-spacing:-.5px}
+.v-title{font-size:18px;font-weight:900;letter-spacing:-.5px}
+.tl-title{font-size:16px;font-weight:900}
+.tl2-year{font-size:13.5px;font-weight:700}
+.mf-go{font-size:14px;font-weight:700}
 @media(max-width:900px){.story-visual-wrap{padding-bottom:30px}}
 @media(max-width:900px){.mission-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:760px){.mission-grid{grid-template-columns:1fr}}
