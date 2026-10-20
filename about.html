@@ -11,7 +11,7 @@
 </script>
 <title>회사 소개 - 프린트샵미니</title>
 <link rel="canonical" href="https://www.printshopmini.com/about.html">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Jua&family=Gamja+Flower&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -160,6 +160,111 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
   .about-intro .ah-desc{font-size:15px}
   [id]{scroll-margin-top:130px}
 }
+
+/* ===== 미니프랜즈 · 귀여운 소개 페이지 ===== */
+:root{--jua:'Jua','Noto Sans KR',sans-serif;--hand:'Gamja Flower','Jua','Noto Sans KR',sans-serif}
+.ah-h1,.sec-h2,.mission-title,.v-title,.tl-title,.mf-title,.mf-name,.mf-pill,.mf-tag,.mf-badge{font-family:var(--jua);font-weight:400}
+.sec-h2{letter-spacing:-.5px}
+.sec-h2.cute{font-size:clamp(28px,4vw,44px);margin-bottom:14px}
+.sec-eyebrow{font-family:var(--jua);font-size:14px;letter-spacing:.5px;font-weight:400}
+.sec-eyebrow::before{content:'🐾';width:auto;height:auto;background:none;font-size:14px}
+
+/* 히어로 */
+.mf-hero{position:relative;overflow:hidden;text-align:center;padding:56px 6% 44px;
+  background:radial-gradient(circle at 15% 20%,#FFF3C4 0,transparent 38%),radial-gradient(circle at 88% 12%,#FFD9EC 0,transparent 34%),linear-gradient(180deg,#E3F2FB 0%,#F3FAFF 100%)}
+.mf-hero::after{content:'';position:absolute;left:-5%;right:-5%;bottom:-22px;height:46px;background:#fff;border-radius:50% 50% 0 0/100% 100% 0 0}
+.mf-deco{position:absolute;font-size:26px;opacity:.85;animation:mfTwinkle 3.2s ease-in-out infinite}
+.mf-deco.d1{left:7%;top:18%}.mf-deco.d2{right:9%;top:30%;animation-delay:.8s}.mf-deco.d3{left:12%;bottom:26%;animation-delay:1.4s}.mf-deco.d4{right:16%;bottom:30%;animation-delay:2s}
+@keyframes mfTwinkle{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(1.25) rotate(12deg)}}
+.mf-hero-inner{position:relative;z-index:1;max-width:1100px;margin:0 auto}
+.mf-badge{display:inline-block;background:#fff;color:var(--blue);font-size:15px;padding:6px 18px;border-radius:50px;box-shadow:0 3px 0 rgba(27,138,196,.18);margin-bottom:14px}
+.mf-title{font-size:clamp(32px,5.4vw,58px);color:#16415C;line-height:1.2;margin-bottom:12px;letter-spacing:-1px}
+.mf-title span{color:#fff;background:var(--blue);padding:0 .28em;border-radius:.35em;display:inline-block;transform:rotate(-2deg);box-shadow:0 5px 0 #14709F}
+.mf-sub{font-size:16px;color:var(--text2);line-height:1.9;margin-bottom:26px}
+.mf-lineup{display:flex;justify-content:center;align-items:flex-end;gap:6px;flex-wrap:wrap}
+.mf-li{display:flex;flex-direction:column;align-items:center;width:clamp(90px,11vw,132px);transition:transform .25s}
+.mf-li img{width:100%;height:auto;display:block;filter:drop-shadow(0 8px 8px rgba(22,65,92,.18));animation:mfBob 3.4s ease-in-out infinite}
+.mf-li:nth-child(2n) img{animation-delay:.5s}.mf-li:nth-child(3n) img{animation-delay:1s}
+.mf-li.mf-big{width:clamp(116px,14vw,172px)}
+.mf-li:hover{transform:translateY(-8px) rotate(-3deg)}
+@keyframes mfBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.mf-tag{margin-top:6px;background:var(--c);color:#fff;font-size:15px;padding:3px 14px;border-radius:50px;box-shadow:0 3px 0 rgba(0,0,0,.14);white-space:nowrap}
+
+/* 소개 문구 말풍선 */
+.about-intro{background:#fff;padding:34px 6% 8px}
+.about-intro .ah-inner{max-width:820px;margin:0 auto;background:var(--blue-light);border:3px dashed #9BD0EC;border-radius:28px;padding:22px 28px;position:relative}
+.about-intro .ah-desc{margin:8px 0 0;max-width:none;font-size:16px}
+
+/* 친구 카드 */
+.mf-section{padding:70px 6% 80px;background:#fff;background-image:radial-gradient(circle,rgba(27,138,196,.09) 2px,transparent 2.5px);background-size:30px 30px}
+.mf-wrap{max-width:1160px;margin:0 auto}
+.mf-lead{font-size:16px;color:var(--text2);line-height:1.9;margin-bottom:34px;max-width:720px}
+.mf-card{position:relative;background:#fff;border:3px solid var(--c);border-radius:30px;padding:22px 22px 24px;box-shadow:0 7px 0 var(--c);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.mf-card:hover{transform:translateY(-4px);box-shadow:0 11px 0 var(--c)}
+.mf-pic{background:var(--cl);border-radius:24px;padding:14px 10px 0;margin-bottom:16px;text-align:center;position:relative;overflow:hidden}
+.mf-pic::before{content:'';position:absolute;width:170px;height:170px;border-radius:50%;background:rgba(255,255,255,.7);left:50%;top:52%;transform:translate(-50%,-50%)}
+.mf-pic img{position:relative;width:auto;height:210px;max-width:100%;object-fit:contain;display:inline-block;filter:drop-shadow(0 6px 6px rgba(0,0,0,.16));transition:transform .3s}
+.mf-card:hover .mf-pic img{transform:rotate(-4deg) scale(1.05)}
+.mf-pill{display:inline-block;align-self:flex-start;background:var(--c);color:#fff;font-size:15px;padding:4px 15px;border-radius:50px;margin-bottom:8px}
+.mf-name{font-size:34px;color:var(--c);line-height:1.15;margin-bottom:10px}
+.mf-name small{font-family:var(--hand);font-size:23px;color:var(--c);opacity:.8;margin-left:8px;letter-spacing:.3px}
+.mf-trait{font-family:var(--hand);font-size:19px;color:var(--text3);margin:-4px 0 12px}
+.mf-say-b{position:relative;background:var(--cl);color:#333;font-family:var(--hand);font-size:22px;line-height:1.35;padding:10px 16px;border-radius:18px;margin-bottom:14px}
+.mf-say-b::before{content:'';position:absolute;left:26px;top:-9px;border:9px solid transparent;border-top:0;border-bottom-color:var(--cl)}
+.mf-story{font-size:15px;color:var(--text2);line-height:1.9;margin-bottom:16px;flex:1}
+.mf-story b{color:var(--c);font-weight:900}
+.mf-story .why{display:inline-block;font-family:var(--jua);color:#fff;background:var(--c);padding:0 9px;border-radius:50px;font-size:14px;line-height:1.6;margin-right:2px;transform:rotate(-2deg)}
+.mf-go{align-self:flex-start;font-family:var(--jua);font-size:15px;color:#fff;background:var(--c);padding:8px 16px;border-radius:50px;transition:transform .15s}
+.mf-go:hover{transform:translateX(3px)}
+.mf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:38px}
+.mf-boss{flex-direction:row;gap:26px;align-items:center;padding:26px}
+.mf-boss .mf-pic{flex:0 0 300px;margin:0;align-self:stretch;display:flex;align-items:flex-end;justify-content:center}
+.mf-boss .mf-pic img{height:260px}
+.mf-boss .mf-body{flex:1}
+.mf-boss .mf-name{font-size:42px}
+.mf-boss .mf-story{flex:none}
+
+/* 기존 섹션 귀엽게 */
+.mission-section{background:linear-gradient(180deg,#fff 0,#FFF9E8 100%)}
+.mission-card{border:3px solid #E5EEF5;border-radius:26px;box-shadow:0 6px 0 #E5EEF5;text-align:center;transition:transform .2s,box-shadow .2s,border-color .2s}
+.mission-card:hover{transform:translateY(-4px);box-shadow:0 10px 0 var(--blue);border-color:var(--blue)}
+.mission-card:nth-child(1){background:#E3F2FB}.mission-card:nth-child(2){background:#E7F7EC}.mission-card:nth-child(3){background:#FDE7F2}
+.mission-icon{font-size:44px}
+.mission-title{font-size:24px}
+.story-section{background:#F3FAFF}
+.story-visual{border-radius:30px;border:3px solid #fff;box-shadow:0 8px 0 #CFE7F6}
+.value-card{border:3px solid #E5EEF5;border-radius:26px;box-shadow:0 6px 0 #E5EEF5}
+.value-card:nth-child(1){background:#E1F1FF}.value-card:nth-child(2){background:#E7F7EC}.value-card:nth-child(3){background:#FFEBDD}.value-card:nth-child(4){background:#EEE6FD}
+.value-card:hover{box-shadow:0 10px 0 #14709F}
+.v-title{font-size:21px}
+.timeline-section{background:linear-gradient(180deg,#FFF9E8 0,#fff 100%)}
+.tl-dot{background:#fff;box-shadow:0 0 0 3px var(--blue)}
+.tl-item:nth-child(2) .tl-dot{box-shadow:0 0 0 3px #22B24C}.tl-item:nth-child(3) .tl-dot{box-shadow:0 0 0 3px #F3732C}.tl-item:nth-child(4) .tl-dot{box-shadow:0 0 0 3px #7C3AED}.tl-item:nth-child(5) .tl-dot{box-shadow:0 0 0 3px #EC4899}
+.tl-title{font-size:18px}
+.mission-inner,.values-inner,.timeline-inner,.story-inner{position:relative}
+.peek{position:absolute;width:96px;height:auto;pointer-events:none;filter:drop-shadow(0 5px 5px rgba(0,0,0,.14))}
+.peek.p1{right:0;top:-18px}.peek.p2{right:0;top:-14px}.peek.p3{right:-6px;top:-10px}
+
+@media(max-width:900px){
+  .mf-li,.mf-li.mf-big{width:calc(25% - 6px)}
+  .mf-grid{grid-template-columns:1fr 1fr;gap:22px}
+  .mf-boss{flex-direction:column}
+  .mf-boss .mf-pic{flex:none;width:100%}
+}
+@media(max-width:620px){
+  .mf-hero{padding:40px 5% 36px}
+  .mf-li,.mf-li.mf-big{width:calc(25% - 6px)}
+  .mf-tag{font-size:12.5px;padding:2px 9px}
+  .mf-grid{grid-template-columns:1fr}
+  .about-intro .ah-inner{padding:18px 18px}
+  .mf-section{padding:48px 5% 60px}
+  .mf-name{font-size:30px}.mf-boss .mf-name{font-size:34px}
+  .peek{width:64px}
+}
+@media(prefers-reduced-motion:reduce){
+  .mf-li img,.mf-deco{animation:none}
+  .mf-card,.mf-li,.mf-go,.mf-pic img{transition:none}
+}
 </style>
 </head>
 <body>
@@ -200,14 +305,122 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
   </div>
 </div>
 
+<!-- MINI FRIENDS HERO -->
+<div class="mf-hero">
+  <span class="mf-deco d1">✨</span><span class="mf-deco d2">⭐</span><span class="mf-deco d3">🎈</span><span class="mf-deco d4">✨</span>
+  <div class="mf-hero-inner">
+    <div class="mf-badge">🐾 프린트샵미니 마스코트</div>
+    <h2 class="mf-title">안녕하세요~ 우리는 <span>미니프랜즈</span>예요!</h2>
+    <p class="mf-sub">저희는 서비스마다 한 명씩 담당이 있어요.<br>친구를 누르면 직접 자기소개를 해 줘요!</p>
+    <div class="mf-lineup">
+<a class="mf-li" href="#friend-penpurin" style="--c:#22B24C;--cl:#E7F7EC" aria-label="펭프린 소개 보기"><img src="img/friends/print.webp" alt="펭프린 (펭귄) 인쇄 담당" width="150" height="170" loading="lazy"><span class="mf-tag">펭프린</span></a>
+<a class="mf-li" href="#friend-ttarabok" style="--c:#018FFB;--cl:#E1F1FF" aria-label="따라복 소개 보기"><img src="img/friends/copy.webp" alt="따라복 (앵무새) 복사 담당" width="150" height="170" loading="lazy"><span class="mf-tag">따라복</span></a>
+<a class="mf-li" href="#friend-buscan" style="--c:#12BDB0;--cl:#E0F7F5" aria-label="부스캔 소개 보기"><img src="img/friends/scan.webp" alt="부스캔 (부엉이) 스캔 담당" width="150" height="170" loading="lazy"><span class="mf-tag">부스캔</span></a>
+<a class="mf-li mf-big" href="#friend-minikoon" style="--c:#1B8AC4;--cl:#E3F2FB" aria-label="미니쿤 소개 보기"><img src="img/friends/raccoon.webp" alt="미니쿤 (라쿤) 점장 · 안내 담당" width="150" height="170" loading="lazy"><span class="mf-tag">미니쿤</span></a>
+<a class="mf-li" href="#friend-pakdul" style="--c:#F3732C;--cl:#FFEBDD" aria-label="팩둘이 소개 보기"><img src="img/friends/fax.webp" alt="팩둘이 (비둘기) 팩스 담당" width="150" height="170" loading="lazy"><span class="mf-tag">팩둘이</span></a>
+<a class="mf-li" href="#friend-kobuki" style="--c:#7C3AED;--cl:#EEE6FD" aria-label="코북이 소개 보기"><img src="img/friends/coat.webp" alt="코북이 (거북이) 코팅 담당" width="150" height="170" loading="lazy"><span class="mf-tag">코북이</span></a>
+<a class="mf-li" href="#friend-chagoki" style="--c:#EC4899;--cl:#FDE7F2" aria-label="차곡이 소개 보기"><img src="img/friends/bind.webp" alt="차곡이 (비버) 제본 담당" width="150" height="170" loading="lazy"><span class="mf-tag">차곡이</span></a>
+    </div>
+  </div>
+</div>
+
 <div class="about-intro"><div class="ah-inner">
   <p class="brand-note" style="word-break:keep-all;font-size:13.5px;line-height:1.9;color:#6B7280;margin:10px 0 0"><b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1B8AC4)">프린트샵미니</b> · <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">프린트나우</b>는 <span style="white-space:nowrap">(주)굿러닝파트너</span> 법인의 브랜드예요.</p>
     <p class="ah-desc">프린트샵미니는 '직원 없이도 누구나 쉽게'라는 철학으로 만든 24시간 무인 셀프 프린트 전문점입니다. 밤새 논문을 마무리하는 대학생, 새벽에 계약서가 필요한 사업자, 사진을 인쇄하고 싶은 누구에게나 열려 있습니다.</p>
 </div></div>
 
+<!-- MINI FRIENDS -->
+<section class="mf-section" id="friends">
+  <div class="mf-wrap">
+    <div class="sec-eyebrow">MEET MINI FRIENDS</div>
+    <h2 class="sec-h2 cute">미니프랜즈를 소개해요 🐾</h2>
+    <p class="mf-lead">자, 이제 한 명씩 인사할게요! 매장에서 만나는 여섯 가지 서비스, 담당 친구들이 왜 그 일을 맡았는지 들어 보세요.</p>
+<article class="mf-card mf-boss" id="friend-minikoon" style="--c:#1B8AC4;--cl:#E3F2FB">
+  <div class="mf-pic"><img src="img/friends/raccoon.webp" alt="미니쿤 (라쿤) 점장 · 안내 담당" width="200" height="230" loading="lazy"></div>
+  <div class="mf-body">
+    <div class="mf-pill">🏪 점장 · 안내 담당</div>
+    <h3 class="mf-name">미니쿤 <small>Mini Koon</small></h3>
+    <div class="mf-trait">💫 라쿤 · 다정한 점장 · 손재주 대장</div>
+    <div class="mf-say-b">&ldquo;어서 와요! 모르면 나한테 물어봐요.&rdquo;</div>
+    <p class="mf-story">안녕하세요! 저는 미니프랜즈의 대장, <b>점장 미니쿤</b>이에요! 우리 매장 전체를 담당해요. <span class="why">왜냐구요?</span> 라쿤은 손재주가 엄청 좋거든요. 조물조물 만지면 뭐든 척척! 그래서 친구들이 맡은 일도 제가 잘 챙겨요. 밤이든 낮이든 쉬지 않고 매장을 지킨답니다. 모르는 게 있으면 저한테 물어보세요!</p>
+    <a class="mf-go" href="guide.html">사용방법 한눈에 보기 <span aria-hidden="true">→</span></a>
+  </div>
+</article>
+    <div class="mf-grid">
+<article class="mf-card" id="friend-penpurin" style="--c:#22B24C;--cl:#E7F7EC">
+  <div class="mf-pic"><img src="img/friends/print.webp" alt="펭프린 (펭귄) 인쇄 담당" width="200" height="230" loading="lazy"></div>
+  <div class="mf-body">
+    <div class="mf-pill">🖨️ 인쇄 담당</div>
+    <h3 class="mf-name">펭프린 <small>Peng Print</small></h3>
+    <div class="mf-trait">💫 펭귄 · 줄 맞추기 대장 · 깔끔쟁이</div>
+    <div class="mf-say-b">&ldquo;줄 서서 쏙쏙! 종이가 나와요.&rdquo;</div>
+    <p class="mf-story">안녕하세요! 저는 미니프랜즈에서 <b>인쇄(프린트)</b>를 담당하는 펭프린이에요! <span class="why">왜냐구요?</span> 블랙 앤 화이트로 된 제 모습, 꼭 하얀 종이 위의 까만 글씨 같지 않나요? 게다가 펭귄은 줄을 딱딱 맞춰서 걷잖아요. 그래서 제가 뽑는 종이도 한 장 한 장 줄 맞춰서 나와요! 흑백은 기본, 컬러도 문제없어요!</p>
+    <a class="mf-go" href="guide-print.html">인쇄하는 방법 보기 <span aria-hidden="true">→</span></a>
+  </div>
+</article>
+<article class="mf-card" id="friend-ttarabok" style="--c:#018FFB;--cl:#E1F1FF">
+  <div class="mf-pic"><img src="img/friends/copy.webp" alt="따라복 (앵무새) 복사 담당" width="200" height="230" loading="lazy"></div>
+  <div class="mf-body">
+    <div class="mf-pill">📋 복사 담당</div>
+    <h3 class="mf-name">따라복 <small>Polly Copy</small></h3>
+    <div class="mf-trait">💫 앵무새 · 장난꾸러기 · 따라쟁이</div>
+    <div class="mf-say-b">&ldquo;똑같이 따라 할게요!&rdquo;</div>
+    <p class="mf-story">안녕하세요! 저는 미니프랜즈에서 <b>복사</b>를 담당하는 따라복이에요! <span class="why">왜냐구요?</span> 앵무새는 들은 말을 똑같이 따라 하는 걸로 유명하잖아요. 저는 원본을 보고 똑같이 따라 해서 한 장 더 만들어 드려요. 따라 하기는 제가 최고예요! 파란 셔츠도 멋지죠?</p>
+    <a class="mf-go" href="guide-copy.html">복사하는 방법 보기 <span aria-hidden="true">→</span></a>
+  </div>
+</article>
+<article class="mf-card" id="friend-buscan" style="--c:#12BDB0;--cl:#E0F7F5">
+  <div class="mf-pic"><img src="img/friends/scan.webp" alt="부스캔 (부엉이) 스캔 담당" width="200" height="230" loading="lazy"></div>
+  <div class="mf-body">
+    <div class="mf-pill">📄 스캔 담당</div>
+    <h3 class="mf-name">부스캔 <small>Hoo Scan</small></h3>
+    <div class="mf-trait">💫 부엉이 · 차분한 책벌레 · 꼼꼼쟁이</div>
+    <div class="mf-say-b">&ldquo;내가 꼼꼼히 살펴볼게요.&rdquo;</div>
+    <p class="mf-story">안녕하세요! 저는 미니프랜즈에서 <b>스캔</b>을 담당하는 부스캔이에요! <span class="why">왜냐구요?</span> 부엉이는 눈이 크고 밝아서 어두운 밤에도 잘 보거든요. 거기다 동그란 안경까지 썼으니, 종이 속 글씨를 구석구석 꼼꼼하게 읽어서 파일로 바꿔 드려요. 한밤중에도 문제없어요. 부엉!</p>
+    <a class="mf-go" href="guide-scan.html">스캔하는 방법 보기 <span aria-hidden="true">→</span></a>
+  </div>
+</article>
+<article class="mf-card" id="friend-pakdul" style="--c:#F3732C;--cl:#FFEBDD">
+  <div class="mf-pic"><img src="img/friends/fax.webp" alt="팩둘이 (비둘기) 팩스 담당" width="200" height="230" loading="lazy"></div>
+  <div class="mf-body">
+    <div class="mf-pill">📠 팩스 담당</div>
+    <h3 class="mf-name">팩둘이 <small>Coo Fax</small></h3>
+    <div class="mf-trait">💫 비둘기 · 빠른 배달부 · 소식통</div>
+    <div class="mf-say-b">&ldquo;소식을 날려 보낼게요!&rdquo;</div>
+    <p class="mf-story">안녕하세요! 저는 미니프랜즈에서 <b>팩스</b>를 담당하는 팩둘이예요! <span class="why">왜냐구요?</span> 비둘기는 옛날부터 멀리까지 편지를 전해 주던 소식 배달부였거든요. 저도 여러분의 서류를 슝~ 날려 보내요. 머리 옆에 와이파이 표시가 보이죠? 인터넷으로 보내요. 아, 저는 보내는 일만 해요. 받는 일은 못 해요! 구구!</p>
+    <a class="mf-go" href="guide-fax.html">팩스 보내는 방법 보기 <span aria-hidden="true">→</span></a>
+  </div>
+</article>
+<article class="mf-card" id="friend-kobuki" style="--c:#7C3AED;--cl:#EEE6FD">
+  <div class="mf-pic"><img src="img/friends/coat.webp" alt="코북이 (거북이) 코팅 담당" width="200" height="230" loading="lazy"></div>
+  <div class="mf-body">
+    <div class="mf-pill">✨ 코팅 담당</div>
+    <h3 class="mf-name">코북이 <small>Shelly Coat</small></h3>
+    <div class="mf-trait">💫 거북이 · 느긋하지만 든든한 지킴이</div>
+    <div class="mf-say-b">&ldquo;내가 꼭 지켜 줄게요.&rdquo;</div>
+    <p class="mf-story">안녕하세요! 저는 미니프랜즈에서 <b>코팅</b>을 담당하는 코북이예요! <span class="why">왜냐구요?</span> 거북이는 단단한 등껍질로 몸을 지키잖아요. 저도 소중한 종이를 코팅으로 꼭 감싸서 지켜 드려요. 코팅한 종이는 튼튼하고 오래오래 깨끗해요. 손에 든 반짝반짝 카드도 보이시죠?</p>
+    <a class="mf-go" href="guide-coat.html">코팅하는 방법 보기 <span aria-hidden="true">→</span></a>
+  </div>
+</article>
+<article class="mf-card" id="friend-chagoki" style="--c:#EC4899;--cl:#FDE7F2">
+  <div class="mf-pic"><img src="img/friends/bind.webp" alt="차곡이 (비버) 제본 담당" width="200" height="230" loading="lazy"></div>
+  <div class="mf-body">
+    <div class="mf-pill">📚 제본 담당</div>
+    <h3 class="mf-name">차곡이 <small>Stacky</small></h3>
+    <div class="mf-trait">💫 비버 · 부지런한 일꾼 · 솜씨꾼</div>
+    <div class="mf-say-b">&ldquo;차곡차곡 엮어 줄게요!&rdquo;</div>
+    <p class="mf-story">안녕하세요! 저는 미니프랜즈에서 <b>제본</b>을 담당하는 차곡이예요! <span class="why">왜냐구요?</span> 비버는 나뭇가지를 척척 엮어서 튼튼한 집을 짓는 솜씨꾼이거든요. 저는 종이를 차곡차곡 엮어서 책으로 만들어 드려요. 열로 붙이는 열제본을 맡고 있어요. 노트를 품에 안고 있는 제 모습, 귀엽죠?</p>
+    <a class="mf-go" href="guide-bind.html">제본하는 방법 보기 <span aria-hidden="true">→</span></a>
+  </div>
+</article>
+    </div>
+  </div>
+</section>
+
 <!-- MISSION -->
 <div class="mission-section">
   <div class="mission-inner">
+    <img class="peek p1" src="img/friends/raccoon.webp" alt="" aria-hidden="true" loading="lazy">
     <div class="sec-eyebrow">MISSION & VISION</div>
     <h2 class="sec-h2">우리가 하는 일</h2>
     <div class="mission-grid">
@@ -356,6 +569,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 <!-- VALUES -->
 <div class="values-section">
   <div class="values-inner">
+    <img class="peek p2" src="img/friends/scan.webp" alt="" aria-hidden="true" loading="lazy">
     <div class="sec-eyebrow">CORE VALUES</div>
     <h2 class="sec-h2">핵심 가치</h2>
     <div class="values-grid">
@@ -386,6 +600,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 <!-- TIMELINE -->
 <div class="timeline-section">
   <div class="timeline-inner">
+    <img class="peek p3" src="img/friends/bind.webp" alt="" aria-hidden="true" loading="lazy">
     <div class="sec-eyebrow">HISTORY</div>
     <h2 class="sec-h2">성장 스토리</h2>
     <div class="timeline">
