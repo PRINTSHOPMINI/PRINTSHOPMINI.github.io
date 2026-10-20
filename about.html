@@ -265,6 +265,44 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
   .mf-li img,.mf-deco{animation:none}
   .mf-card,.mf-li,.mf-go,.mf-pic img{transition:none}
 }
+
+/* ===== 기존 섹션 · 캐릭터와 어울리게 ===== */
+.mission-card{padding:0 22px 28px;overflow:hidden;background:#fff !important;border-color:var(--c) !important;box-shadow:0 6px 0 var(--c) !important}
+.mission-card:hover{box-shadow:0 10px 0 var(--c) !important;border-color:var(--c) !important}
+.mc-pic{background:var(--cl);margin:0 -22px 14px;padding:16px 10px 0;height:176px;display:flex;align-items:flex-end;justify-content:center;position:relative}
+.mc-pic::before{content:'';position:absolute;width:130px;height:130px;border-radius:50%;background:rgba(255,255,255,.7);left:50%;top:56%;transform:translate(-50%,-50%)}
+.mc-pic img{position:relative;height:100%;width:auto;object-fit:contain;filter:drop-shadow(0 5px 5px rgba(0,0,0,.15))}
+.mc-by{font-family:var(--hand);font-size:20px;color:var(--c);margin-bottom:4px}
+.mission-title{color:var(--c)}
+.story-visual-wrap{position:relative;padding-bottom:36px}
+.story-crowd{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:center;align-items:flex-end;pointer-events:none}
+.story-crowd img{width:15.5%;height:auto;margin:0 -1.4%;filter:drop-shadow(0 4px 4px rgba(0,0,0,.2))}
+.story-crowd .sc-2{width:19%}
+.value-card{padding:0 20px 24px;overflow:hidden;background:#fff !important;border-color:var(--c) !important;box-shadow:0 6px 0 var(--c) !important}
+.value-card:hover{background:#fff !important;color:inherit !important;box-shadow:0 10px 0 var(--c) !important}
+.value-card:hover .v-sub{color:var(--text3)}
+.v-pic{background:var(--cl);margin:0 -20px 14px;height:128px;display:flex;align-items:flex-end;justify-content:center;padding-top:10px}
+.v-pic img{height:100%;width:auto;object-fit:contain;filter:drop-shadow(0 4px 4px rgba(0,0,0,.15))}
+.v-title{color:var(--c)}
+.v-say{margin-top:12px;font-family:var(--hand);font-size:19px;color:var(--c)}
+.timeline2{position:relative;margin-top:40px;display:flex;flex-direction:column;gap:26px}
+.timeline2::before{content:'';position:absolute;left:35px;top:20px;bottom:20px;width:0;border-left:4px dotted #BFDDEF}
+.tl2-item{position:relative;display:flex;gap:18px;align-items:flex-start}
+.tl2-av{flex:0 0 74px;height:74px;border-radius:50%;background:var(--cl);border:4px solid var(--c);display:flex;align-items:flex-end;justify-content:center;overflow:hidden;position:relative;z-index:1}
+.tl2-av img{height:92%;width:auto;object-fit:contain}
+.tl2-box{flex:1;background:#fff;border:3px solid var(--c);border-radius:22px;padding:14px 20px 16px;box-shadow:0 5px 0 var(--c);position:relative}
+.tl2-year{display:inline-block;font-family:var(--jua);font-size:15px;color:#fff;background:var(--c);padding:1px 14px;border-radius:50px;margin-bottom:6px}
+.tl2-say{margin-top:8px;font-family:var(--hand);font-size:19px;color:var(--c)}
+@media(max-width:900px){.story-visual-wrap{padding-bottom:30px}}
+@media(max-width:900px){.mission-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:760px){.mission-grid{grid-template-columns:1fr}}
+@media(max-width:620px){
+  .mc-pic{height:150px}
+  .tl2-av{flex-basis:56px;height:56px;border-width:3px}
+  .timeline2::before{left:27px}
+  .tl2-box{padding:12px 14px 14px}
+  .v-pic{height:112px}
+}
 </style>
 </head>
 <body>
@@ -420,23 +458,25 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 <!-- MISSION -->
 <div class="mission-section">
   <div class="mission-inner">
-    <img class="peek p1" src="img/friends/raccoon.webp" alt="" aria-hidden="true" loading="lazy">
     <div class="sec-eyebrow">MISSION & VISION</div>
     <h2 class="sec-h2">우리가 하는 일</h2>
     <div class="mission-grid">
-      <div class="mission-card">
-        <div class="mission-icon">🎯</div>
-        <div class="mission-title">미션</div>
+      <div class="mission-card" style="--c:#1B8AC4;--cl:#E3F2FB">
+        <div class="mc-pic"><img class="" src="img/friends/raccoon.webp" alt="미니쿤 (라쿤)" width="150" loading="lazy"></div>
+        <div class="mc-by">점장 미니쿤의 약속</div>
+        <div class="mission-title">🎯 미션</div>
         <p class="mission-desc">인쇄가 필요한 모든 사람이 시간과 장소에 구애받지 않고, 스스로 해결할 수 있는 환경을 만듭니다.</p>
       </div>
-      <div class="mission-card">
-        <div class="mission-icon">🌏</div>
-        <div class="mission-title">비전</div>
+      <div class="mission-card" style="--c:#12BDB0;--cl:#E0F7F5">
+        <div class="mc-pic"><img class="" src="img/friends/scan.webp" alt="부스캔 (부엉이)" width="150" loading="lazy"></div>
+        <div class="mc-by">멀리 보는 부스캔의 눈</div>
+        <div class="mission-title">🌏 비전</div>
         <p class="mission-desc">경기권을 넘어 전국 어디서나 가장 가까운 곳에 프린트샵미니가 있는 세상을 만들어 갑니다.</p>
       </div>
-      <div class="mission-card">
-        <div class="mission-icon">💡</div>
-        <div class="mission-title">슬로건</div>
+      <div class="mission-card" style="--c:#018FFB;--cl:#E1F1FF">
+        <div class="mc-pic"><img class="" src="img/friends/copy.webp" alt="따라복 (앵무새)" width="150" loading="lazy"></div>
+        <div class="mc-by">따라복이 따라 말해요</div>
+        <div class="mission-title">💡 슬로건</div>
         <p class="mission-desc">"혼자서도 쉽게, 언제든지 프린트"<br>누구나 처음이어도 막히지 않는 안내 시스템을 제공합니다.</p>
       </div>
     </div>
@@ -453,7 +493,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
       <p>처음에는 A4 흑백 인쇄 하나뿐이었지만, 이용자분들의 목소리를 듣고 복사, 스캔, 팩스, 코팅, 제본까지 총 6가지 서비스로 확장했습니다.</p>
       <p>현재는 <span class="js-rnames">수원·화성·용인·평택</span> <span class="js-rcount">4</span>개 지역, <span class="js-bcount">16</span>개 지점을 운영 중이며, 매달 수천 명의 고객이 이용하고 계십니다.</p>
     </div>
-    <div class="story-visual">
+    <div class="story-visual-wrap"><div class="story-visual">
       <svg viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans KR', sans-serif">
         <defs>
           <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -563,35 +603,40 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
         <text x="453" y="285" text-anchor="middle" font-size="8" fill="#6B7280">직원 불필요</text>
       </svg>
     </div>
+    <div class="story-crowd" aria-hidden="true"><img class="sc-0" src="img/friends/print.webp" alt="펭프린 (펭귄)" width="110" loading="lazy"><img class="sc-1" src="img/friends/copy.webp" alt="따라복 (앵무새)" width="110" loading="lazy"><img class="sc-2" src="img/friends/raccoon.webp" alt="미니쿤 (라쿤)" width="110" loading="lazy"><img class="sc-3" src="img/friends/scan.webp" alt="부스캔 (부엉이)" width="110" loading="lazy"><img class="sc-4" src="img/friends/fax.webp" alt="팩둘이 (비둘기)" width="110" loading="lazy"><img class="sc-5" src="img/friends/coat.webp" alt="코북이 (거북이)" width="110" loading="lazy"><img class="sc-6" src="img/friends/bind.webp" alt="차곡이 (비버)" width="110" loading="lazy"></div>
+    </div>
   </div>
 </div>
 
 <!-- VALUES -->
 <div class="values-section">
   <div class="values-inner">
-    <img class="peek p2" src="img/friends/scan.webp" alt="" aria-hidden="true" loading="lazy">
     <div class="sec-eyebrow">CORE VALUES</div>
     <h2 class="sec-h2">핵심 가치</h2>
     <div class="values-grid">
-      <div class="value-card">
-        <div class="v-emoji">🕐</div>
-        <div class="v-title">접근성</div>
+      <div class="value-card" style="--c:#F3732C;--cl:#FFEBDD">
+        <div class="v-pic"><img class="" src="img/friends/fax.webp" alt="팩둘이 (비둘기)" width="110" loading="lazy"></div>
+        <div class="v-title">🕐 접근성</div>
         <p class="v-sub">언제, 어디서나 인쇄가 필요한 순간 가장 가까운 곳에 존재합니다</p>
+        <div class="v-say">팩둘이: 어디든 슝~ 달려가요!</div>
       </div>
-      <div class="value-card">
-        <div class="v-emoji">👆</div>
-        <div class="v-title">편의성</div>
+      <div class="value-card" style="--c:#018FFB;--cl:#E1F1FF">
+        <div class="v-pic"><img class="" src="img/friends/copy.webp" alt="따라복 (앵무새)" width="110" loading="lazy"></div>
+        <div class="v-title">👆 편의성</div>
         <p class="v-sub">복잡한 설명 없이 누구나 직관적으로 사용할 수 있는 환경을 만듭니다</p>
+        <div class="v-say">따라복: 따라만 하면 쉬워요!</div>
       </div>
-      <div class="value-card">
-        <div class="v-emoji">🔒</div>
-        <div class="v-title">신뢰성</div>
+      <div class="value-card" style="--c:#7C3AED;--cl:#EEE6FD">
+        <div class="v-pic"><img class="" src="img/friends/coat.webp" alt="코북이 (거북이)" width="110" loading="lazy"></div>
+        <div class="v-title">🔒 신뢰성</div>
         <p class="v-sub">기계 오류부터 결제 문제까지 신속하게 해결하는 체계적인 지원 시스템</p>
+        <div class="v-say">코북이: 든든하게 지켜 줄게요.</div>
       </div>
-      <div class="value-card">
-        <div class="v-emoji">🌱</div>
-        <div class="v-title">지속성</div>
+      <div class="value-card" style="--c:#EC4899;--cl:#FDE7F2">
+        <div class="v-pic"><img class="" src="img/friends/bind.webp" alt="차곡이 (비버)" width="110" loading="lazy"></div>
+        <div class="v-title">🌱 지속성</div>
         <p class="v-sub">지역 사회와 함께 성장하며 지속 가능한 서비스 운영을 지향합니다</p>
+        <div class="v-say">차곡이: 차곡차곡 오래오래!</div>
       </div>
     </div>
   </div>
@@ -600,48 +645,52 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 <!-- TIMELINE -->
 <div class="timeline-section">
   <div class="timeline-inner">
-    <img class="peek p3" src="img/friends/bind.webp" alt="" aria-hidden="true" loading="lazy">
     <div class="sec-eyebrow">HISTORY</div>
     <h2 class="sec-h2">성장 스토리</h2>
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-year">2021</div>
-        <div class="tl-dot"></div>
-        <div class="tl-content">
+    <div class="timeline2">
+      <div class="tl2-item" style="--c:#1B8AC4;--cl:#E3F2FB">
+        <div class="tl2-av"><img class="" src="img/friends/raccoon.webp" alt="미니쿤 (라쿤)" width="70" loading="lazy"></div>
+        <div class="tl2-box">
+          <div class="tl2-year">2021</div>
           <div class="tl-title">프린트샵미니 1호점 오픈</div>
           <div class="tl-desc">수원 광교점을 시작으로 경기권 최초 24시간 무인 프린트 서비스 시작</div>
+          <div class="tl2-say">미니쿤: 여기서 다 시작됐어요!</div>
         </div>
       </div>
-      <div class="tl-item">
-        <div class="tl-year">2022</div>
-        <div class="tl-dot"></div>
-        <div class="tl-content">
+      <div class="tl2-item" style="--c:#22B24C;--cl:#E7F7EC">
+        <div class="tl2-av"><img class="" src="img/friends/print.webp" alt="펭프린 (펭귄)" width="70" loading="lazy"></div>
+        <div class="tl2-box">
+          <div class="tl2-year">2022</div>
           <div class="tl-title">서비스 6종 확대, 수원 5개 지점 운영</div>
           <div class="tl-desc">인쇄에서 복사·스캔·팩스·코팅·제본으로 서비스 확장. 수원 내 5개 지점으로 성장</div>
+          <div class="tl2-say">펭프린: 인쇄 하나로 시작했는데 이제 여섯 가지!</div>
         </div>
       </div>
-      <div class="tl-item">
-        <div class="tl-year">2023</div>
-        <div class="tl-dot"></div>
-        <div class="tl-content">
+      <div class="tl2-item" style="--c:#F3732C;--cl:#FFEBDD">
+        <div class="tl2-av"><img class="" src="img/friends/fax.webp" alt="팩둘이 (비둘기)" width="70" loading="lazy"></div>
+        <div class="tl2-box">
+          <div class="tl2-year">2023</div>
           <div class="tl-title">화성·용인 진출, 10개 지점 달성</div>
           <div class="tl-desc">동탄·봉담·기흥·수지 등 경기 남부 핵심 상권으로 서비스 지역 확대</div>
+          <div class="tl2-say">팩둘이: 멀리멀리 날아가요~</div>
         </div>
       </div>
-      <div class="tl-item">
-        <div class="tl-year">2024</div>
-        <div class="tl-dot"></div>
-        <div class="tl-content">
+      <div class="tl2-item" style="--c:#018FFB;--cl:#E1F1FF">
+        <div class="tl2-av"><img class="" src="img/friends/copy.webp" alt="따라복 (앵무새)" width="70" loading="lazy"></div>
+        <div class="tl2-box">
+          <div class="tl2-year">2024</div>
           <div class="tl-title">평택 진출, 15개 지점 달성</div>
           <div class="tl-desc">경기 남부 전역 커버. 채팅 문의 시스템, 홈페이지 커뮤니티 오픈</div>
+          <div class="tl2-say">따라복: 궁금한 건 톡톡으로 물어봐요!</div>
         </div>
       </div>
-      <div class="tl-item">
-        <div class="tl-year">2025~</div>
-        <div class="tl-dot"></div>
-        <div class="tl-content">
+      <div class="tl2-item" style="--c:#1B8AC4;--cl:#E3F2FB">
+        <div class="tl2-av"><img class="" src="img/friends/raccoon.webp" alt="미니쿤 (라쿤)" width="70" loading="lazy"></div>
+        <div class="tl2-box">
+          <div class="tl2-year">2025~</div>
           <div class="tl-title">경기권 전역 확장 목표</div>
           <div class="tl-desc">성남·안양·안산·의정부 등 경기권 전역으로 확장 준비 중</div>
+          <div class="tl2-say">미니쿤: 친구들과 함께 경기권 전체로 갈게요!</div>
         </div>
       </div>
     </div>

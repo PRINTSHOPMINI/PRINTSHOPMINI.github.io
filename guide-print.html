@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>인쇄 사용방법 - 프린트샵미니</title>
 <link rel="canonical" href="https://www.printshopmini.com/guide-print.html">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Jua&family=Gamja+Flower&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -388,6 +388,25 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 .ph-inner{position:relative;padding-right:84px}
 .ph-pal{position:absolute;right:0;bottom:-8px;height:70px;width:auto;pointer-events:none;filter:drop-shadow(0 3px 4px rgba(0,0,0,.08))}
 @media(max-width:760px){.ph-inner{padding-right:50px}.ph-pal{height:42px;bottom:-6px}}
+
+/* 미니프랜즈 담당 친구 소개 띠 */
+.fr-band{max-width:1160px;margin:0 auto;padding:14px 6% 0}
+.fr-in{display:flex;align-items:center;gap:16px;background:var(--cl);border:3px dashed var(--c);border-radius:26px;padding:10px 20px 10px 14px;text-decoration:none;color:inherit;transition:transform .2s}
+.fr-in:hover{transform:translateY(-2px)}
+.fr-in img{flex:0 0 auto;height:92px;width:auto;filter:drop-shadow(0 4px 4px rgba(0,0,0,.15))}
+.fr-txt{flex:1;min-width:0;font-size:14.5px;line-height:1.75;color:#374151}
+.fr-txt b{font-family:'Jua','Noto Sans KR',sans-serif;font-weight:400;font-size:20px;color:var(--c);margin-right:6px}
+.fr-txt i{font-style:normal;font-family:'Gamja Flower','Jua',sans-serif;font-size:18px;color:var(--c);opacity:.85;margin-right:8px}
+.fr-txt span.fr-pill{display:inline-block;background:var(--c);color:#fff;font-size:12.5px;font-weight:700;padding:0 10px;border-radius:50px;margin-right:6px;vertical-align:2px}
+.fr-more{flex:0 0 auto;font-family:'Jua','Noto Sans KR',sans-serif;font-size:14px;color:#fff;background:var(--c);padding:7px 14px;border-radius:50px;white-space:nowrap}
+@media(max-width:700px){
+  .fr-band{padding:10px 4% 0}
+  .fr-in{gap:10px;padding:8px 12px 8px 8px;border-radius:20px}
+  .fr-in img{height:68px}
+  .fr-txt{font-size:13px;line-height:1.6}
+  .fr-txt b{font-size:17px}
+  .fr-more{display:none}
+}
 </style>
 </head>
 <body>
@@ -438,6 +457,14 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
   <a href="guide-bind.html">📚 제본</a>
 </div></div>
 </div>
+<div class="fr-band" style="--c:#22B24C;--cl:#E7F7EC">
+  <a class="fr-in" href="about.html#friend-penpurin" title="미니프랜즈 소개 보기">
+    <img src="img/friends/print.webp" alt="펭프린 (Peng Print)" width="92" height="92">
+    <div class="fr-txt"><b>펭프린</b><i>Peng Print</i><span class="fr-pill">인쇄 담당</span><br>안녕하세요! 저는 인쇄를 담당하는 펭프린이에요. 줄 서서 쏙쏙 종이가 나오는 방법, 지금부터 알려 드릴게요!</div>
+    <span class="fr-more">친구들 더 보기 →</span>
+  </a>
+</div>
+
 <!-- 경고 배너 -->
 <div class="warnbar">
   <div class="warnbar-in">
