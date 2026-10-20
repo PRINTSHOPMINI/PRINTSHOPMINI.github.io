@@ -440,6 +440,13 @@ function toggleFaq(item,ev){
 
 // 주소 끝에 #faq-12 처럼 붙어 있으면 그 질문을 열고 그 자리로 이동 (퀵메뉴 등에서 사용)
 function openFaqFromHash(){
+  // 주소 끝에 #cat-store 처럼 붙어 있으면 그 묶음(분류)을 열고 목록 맨 처음으로 이동
+  var mc=/^#cat-([A-Za-z0-9]+)$/.exec(location.hash||'');
+  if(mc&&FAQS.length&&CATS.some(function(c){return c.id===mc[1];})){
+    document.getElementById('faqQ').value='';
+    setCat(mc[1]);
+    return;
+  }
   var m=/^#faq-(\d+)$/.exec(location.hash||'');
   if(!m||!FAQS.length)return;
   var el=document.getElementById('faq-'+m[1]);
