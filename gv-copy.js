@@ -111,12 +111,12 @@
 
   // 4. 설정하고 [시작]
   scenes.push({
-    dur: 7, cap: '<b>부수 · 용지 · 컬러/흑백 · 양면</b>을 정하고 <b>[시작]</b>을 눌러요', sub: '숫자는 <b>장수가 아니라 부수</b>예요. 원본이 10장이어도 숫자는 <b>1</b>이면 돼요!',
+    dur: 7, cap: '<b>몇 번 복사할지 · 용지 · 컬러/흑백 · 양면</b>을 정하고 <b>[시작]</b>을 눌러요', sub: '숫자는 <b>몇 번 복사할지</b>예요. 원본이 10장이어도 숫자는 <b>1</b>이면 돼요!',
     svg: svg(
       place(30, 250, .86, mfp() + paper(0, 6, 50, 66) + guards(true)) +
       '<g ' + A('gvPop', .2, .5) + '>' + kiosk(
         '<rect x="488" y="58" width="274" height="34" rx="8" fill="#E8F4FC"/><text x="625" y="82" text-anchor="middle" fill="#1B8AC4" style="' + F + 'font-size:17px">기본복사</text>' +
-        '<text x="500" y="124" fill="#fff" style="' + F + 'font-size:17px">부수</text><rect x="570" y="102" width="70" height="30" rx="7" fill="#fff"/><text x="605" y="125" text-anchor="middle" fill="#111827" style="' + F + 'font-size:19px">1</text>' +
+        '<text x="500" y="124" fill="#fff" style="' + F + 'font-size:17px"></text><rect x="570" y="102" width="70" height="30" rx="7" fill="#fff"/><text x="605" y="125" text-anchor="middle" fill="#111827" style="' + F + 'font-size:19px">1</text>' +
         '<text x="660" y="124" fill="#9CA3AF" style="' + F + 'font-size:14px">부 (장 ✕)</text>' +
         '<text x="500" y="162" fill="#fff" style="' + F + 'font-size:17px">용지 A4 · 컬러 · 단면</text>' +
         btn(560, 206, 150, 62, '시작', '#22B24C', 28)) + '</g>' +
