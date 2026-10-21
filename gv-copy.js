@@ -118,7 +118,7 @@
         '<rect x="488" y="58" width="274" height="34" rx="8" fill="#E8F4FC"/><text x="625" y="82" text-anchor="middle" fill="#1B8AC4" style="' + F + 'font-size:17px">기본복사</text>' +
         '<text x="500" y="124" fill="#fff" style="' + F + 'font-size:17px"></text><rect x="570" y="102" width="70" height="30" rx="7" fill="#fff"/><text x="605" y="125" text-anchor="middle" fill="#111827" style="' + F + 'font-size:19px">1</text>' +
         '<text x="660" y="124" fill="#9CA3AF" style="' + F + 'font-size:14px">부 (장 ✕)</text>' +
-        '<text x="500" y="162" fill="#fff" style="' + F + 'font-size:17px">용지 A4 · 컬러 · 단면</text>' +
+        '<text x="500" y="162" fill="#fff" style="' + F + 'font-size:17px">원본 크기 A4 · 컬러 · 단면</text>' +
         btn(560, 206, 150, 62, '시작', '#22B24C', 28)) + '</g>' +
       '<g ' + A('gvPop', 1.2, .5) + '><rect x="562" y="98" width="86" height="40" rx="10" fill="none" stroke="#E3182D" stroke-width="5"/></g>' +
       '<g ' + A('gvFade', 2.2, .4) + '><rect x="556" y="200" width="162" height="74" rx="14" fill="none" stroke="#E3182D" stroke-width="5"/></g>' +
