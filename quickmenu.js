@@ -8,6 +8,7 @@
 
   var ITEMS=[
     {href:'guide.html',            img:'images/quick/qm-guide.png',  label:'사용방법'},
+    {href:'guide-video.html',      img:'images/quick/qm-video.png',  label:'사용방법 동영상'},
     {href:'faq.html#faq-12',       img:'images/quick/qm-refund.png', label:'환불'},
     {href:'faq.html#faq-4',        img:'images/quick/qm-broken.png', label:'고장 났어요'},
     {href:'faq.html#faq-22',       img:'images/quick/qm-phone-kakao.png',  label:'핸드폰에 있는 파일 인쇄하기'}
@@ -26,7 +27,7 @@
     '#qm{left:0;right:0;bottom:0;justify-content:space-around;align-items:center;gap:6px;'+
       'background:rgba(255,255,255,.97);border-top:1px solid #E5E7EB;box-shadow:0 -4px 16px rgba(0,0,0,.08);'+
       'padding:6px 10px calc(6px + env(safe-area-inset-bottom))}'+
-    '#qm a{width:min(22%,58px)}'+
+    '#qm a{width:min(18%,58px)}'+
     'body{padding-bottom:calc(72px + env(safe-area-inset-bottom))!important}'+
   '}'+
   '@media print{#qm{display:none!important}}';
