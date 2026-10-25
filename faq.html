@@ -70,6 +70,7 @@ mark{background:#FFE08A;color:inherit;border-radius:3px;padding:0 2px}
 .faq-a{display:none;padding:16px 24px 20px;font-size:14px;color:var(--text2);line-height:1.9;background:var(--bg);border-top:1px solid var(--border)}
 .faq-item.open .faq-a{display:block}
 .faq-img{display:block;max-width:100%;width:420px;height:auto;margin:10px 0 14px;border:1px solid var(--border);border-radius:10px;background:#fff}
+.faq-vid{display:block;width:100%;max-width:640px;aspect-ratio:16/9;margin:10px 0 14px;border-radius:12px;background:#000}
 .faq-golink{display:inline-block;margin:6px 8px 6px 0;padding:9px 14px;border-radius:12px;background:var(--blue-light);color:var(--blue);font-weight:700;font-size:14px;line-height:1.4;text-decoration:none;border:1px solid #cfe6f6}
 .faq-golink:hover{background:#d6ebf9}
 .faq-btnimg{display:inline-flex;flex-direction:column;align-items:center;gap:6px;margin:8px 10px 8px 0;text-decoration:none;vertical-align:top}
@@ -247,16 +248,19 @@ function hl(text,terms){
 }
 function renderAnswer(text,terms){
   // [[img:이미지]] 큰 그림, [[ico:이미지]] 글 속 작은 그림, [[btn:이미지|https://주소|설명]] 누르면 사이트로 가는 그림 버튼
-  var re=/(\[\[(?:img|ico|sm):images\/[A-Za-z0-9_\-\/\.]+\]\]|\[\[btn:images\/[A-Za-z0-9_\-\/\.]+\|https:\/\/[A-Za-z0-9.\-]+\/[A-Za-z0-9_\-\/\.?=&%#]*\|[^\]|]+\]\]|\[\[go:[A-Za-z0-9_\-]+\.html(?:#[A-Za-z0-9_\-]+)?\|[^\]|]+\]\])/;
+  // [[vid:videos/이름.mp4]] 사용방법 동영상 (누를 때만 불러옴, 미리보기 그림은 같은 이름의 .jpg)
+  var re=/(\[\[vid:videos\/[A-Za-z0-9_\-]+\.mp4\]\]|\[\[(?:img|ico|sm):images\/[A-Za-z0-9_\-\/\.]+\]\]|\[\[btn:images\/[A-Za-z0-9_\-\/\.]+\|https:\/\/[A-Za-z0-9.\-]+\/[A-Za-z0-9_\-\/\.?=&%#]*\|[^\]|]+\]\]|\[\[go:[A-Za-z0-9_\-]+\.html(?:#[A-Za-z0-9_\-]+)?\|[^\]|]+\]\])/;
   return String(text||'').split(re).map(function(part){
     var m=/^\[\[(img|ico|sm):(images\/[A-Za-z0-9_\-\/\.]+)\]\]$/.exec(part);
     if(m&&m[1]==='img') return '<img class="faq-img" src="'+m[2]+'" alt="설명 그림" loading="lazy">';
     if(m&&m[1]==='sm') return '<img class="faq-img faq-img-sm" src="'+m[2]+'" alt="설명 그림" loading="lazy">';
     if(m&&m[1]==='ico') return '<img class="faq-ico" src="'+m[2]+'" alt="렌즈 모양 아이콘">';
+    var v=/^\[\[vid:(videos\/[A-Za-z0-9_\-]+)\.mp4\]\]$/.exec(part);
+    if(v) return '<video class="faq-vid" controls preload="none" playsinline poster="'+v[1]+'.jpg" onclick="event.stopPropagation()"><source src="'+v[1]+'.mp4" type="video/mp4"></video>';
     // [[go:faq.html#faq-64|설명]] — 같은 FAQ 안의 다른 질문으로 이동 (그 질문을 열고 그 자리로 스크롤)
     var gf=/^\[\[go:faq\.html#faq-(\d+)\|([^\]|]+)\]\]$/.exec(part);
     if(gf) return '<a class="faq-golink" href="#faq-'+gf[1]+'" onclick="event.stopPropagation();setTimeout(openFaqFromHash,0)">👉 '+escH(gf[2])+' →</a>';
-    var go=/^\[\[go:((?:guide(?:-print|-copy|-scan|-fax|-coat|-bind)?|services)\.html(?:#[A-Za-z0-9_\-]+)?)\|([^\]|]+)\]\]$/.exec(part);
+    var go=/^\[\[go:((?:guide(?:-print|-copy|-scan|-fax|-coat|-bind|-video)?|services)\.html(?:#[A-Za-z0-9_\-]+)?)\|([^\]|]+)\]\]$/.exec(part);
     if(go) return '<a class="faq-golink" href="'+go[1]+'" onclick="event.stopPropagation()">📖 '+escH(go[2])+' →</a>';
     var b=/^\[\[btn:(images\/[A-Za-z0-9_\-\/\.]+)\|(https:\/\/[A-Za-z0-9.\-]+\/[A-Za-z0-9_\-\/\.?=&%#]*)\|([^\]|]+)\]\]$/.exec(part);
     if(b&&/(^|\.)printnuri\.com\//.test(b[2].replace(/^https:\/\//,''))){
