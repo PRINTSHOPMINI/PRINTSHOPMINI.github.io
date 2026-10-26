@@ -114,9 +114,9 @@ en: How to bind
 zh: 装订方法
 vi: Cách đóng sách
 @@a2460ab6e3
-en: <a class="vcard-go" href="faq.html#faq-24">🖼️ Picture guide (Korean) →</a>
-zh: <a class="vcard-go" href="faq.html#faq-24">🖼️ 图文使用方法（韩语）→</a>
-vi: <a class="vcard-go" href="faq.html#faq-24">🖼️ Hướng dẫn bằng hình (tiếng Hàn) →</a>
+en: <a class="vcard-go" href="faq.html#faq-24">🖼️ Picture guide →</a>
+zh: <a class="vcard-go" href="faq.html#faq-24">🖼️ 图文使用方法 →</a>
+vi: <a class="vcard-go" href="faq.html#faq-24">🖼️ Hướng dẫn bằng hình →</a>
 @@3344e8a8e5
 en: <span class="vlen">1:41</span>
 zh: <span class="vlen">1分41秒</span>

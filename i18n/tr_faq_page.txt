@@ -1,0 +1,90 @@
+# 자주 묻는 질문(faq.html) 페이지 틀 번역 — 질문·답 자체는 i18n/faq/tr_faq_*.txt
+
+@@03dcac5fc5
+en: FAQ - PrintShop Mini
+zh: 常见问题 - PrintShop Mini
+vi: Câu hỏi thường gặp - PrintShop Mini
+@@fd734e4198
+en: <a class="nav-logo-name" href="index.html">🦝 PrintShop Mini</a>
+zh: <a class="nav-logo-name" href="index.html">🦝 PrintShop Mini</a>
+vi: <a class="nav-logo-name" href="index.html">🦝 PrintShop Mini</a>
+@@c0786aecd3
+en: <a href="guide.html">How to Use</a>
+zh: <a href="guide.html">使用方法</a>
+vi: <a href="guide.html">Hướng dẫn</a>
+@@19e45f0055
+en: Raccoon
+zh: 浣熊
+vi: Gấu mèo
+@@8563a5eade
+en: FAQ
+zh: 常见问题
+vi: Câu hỏi thường gặp
+@@bf4e3d7581
+en: <input aria-label="Search FAQ" autocomplete="off" id="faqQ" oninput="onFaqSearch()" placeholder="Type a keyword (e.g. refund, laminate, fax)" type="search"/> <button class="s-clear" onclick="clearFaqSearch()" type="button">Clear</button>
+zh: <input aria-label="搜索常见问题" autocomplete="off" id="faqQ" oninput="onFaqSearch()" placeholder="请输入关键词（例：退款、塑封、传真）" type="search"/> <button class="s-clear" onclick="clearFaqSearch()" type="button">清除</button>
+vi: <input aria-label="Tìm câu hỏi" autocomplete="off" id="faqQ" oninput="onFaqSearch()" placeholder="Nhập từ khóa (ví dụ: hoàn tiền, ép, fax)" type="search"/> <button class="s-clear" onclick="clearFaqSearch()" type="button">Xóa</button>
+@@4452de19e1
+en: Type a keyword (e.g. refund, laminate, fax)
+zh: 请输入关键词（例：退款、塑封、传真）
+vi: Nhập từ khóa (ví dụ: hoàn tiền, ép, fax)
+@@f78a39ec0c
+en: Search FAQ
+zh: 搜索常见问题
+vi: Tìm câu hỏi
+@@8f8a0916b3
+en: <a class="faq-refund-pill" href="#faq-70" onclick="return goRefundFaq();">💸 Refunds at a glance: what is and isn't refunded <span aria-hidden="true">→</span></a>
+zh: <a class="faq-refund-pill" href="#faq-70" onclick="return goRefundFaq();">💸 一眼看懂能退款和不能退款的情况 <span aria-hidden="true">→</span></a>
+vi: <a class="faq-refund-pill" href="#faq-70" onclick="return goRefundFaq();">💸 Xem nhanh: được và không được hoàn tiền <span aria-hidden="true">→</span></a>
+@@557f83fd8b
+en: Question groups
+zh: 问题分类
+vi: Nhóm câu hỏi
+@@7d51f56bc3
+en: Common questions from customers. If you can't find your answer, ask us on TalkTalk below.
+zh: 收集了使用中的常见问题。找不到答案的话，请通过下面的 TalkTalk 咨询。
+vi: Những câu hỏi thường gặp khi sử dụng. Nếu không tìm thấy câu trả lời, hãy hỏi qua TalkTalk bên dưới.
+@@74e00a044a
+en: Loading...
+zh: 正在加载...
+vi: Đang tải...
+@@0a527a15e0
+en: <span>Can't find the answer you want? 🤔</span> <span class="faq-cta-btns"> <a class="cta-talk" href="https://naver.me/GJErAoQ7" rel="noopener" target="_blank">💬 Ask on Naver TalkTalk →</a> </span>
+zh: <span>没找到想要的答案吗？🤔</span> <span class="faq-cta-btns"> <a class="cta-talk" href="https://naver.me/GJErAoQ7" rel="noopener" target="_blank">💬 Naver TalkTalk 咨询 →</a> </span>
+vi: <span>Không tìm thấy câu trả lời? 🤔</span> <span class="faq-cta-btns"> <a class="cta-talk" href="https://naver.me/GJErAoQ7" rel="noopener" target="_blank">💬 Hỏi qua Naver TalkTalk →</a> </span>
+@@debd44f2c5
+en: 💡 For machine breakdowns or payment problems, <b>TalkTalk</b> is faster. Send the store name and the printer machine number together.
+zh: 💡 复合机故障·付款问题用 <b>TalkTalk</b> 更快。请把门店名称和复合机编号一起发过来。
+vi: 💡 Máy hỏng hay lỗi thanh toán thì <b>TalkTalk</b> nhanh hơn. Hãy gửi kèm tên cửa hàng và số máy in đa năng.
+@@f6fbc04a45
+en: 🦝 PrintShop Mini
+zh: 🦝 PrintShop Mini
+vi: 🦝 PrintShop Mini
+@@d8ab5eae64
+en: Services
+zh: 服务
+vi: Dịch vụ
+@@abf7b840d0
+en: <a href="services.html">Print · Copy · Scan</a>
+zh: <a href="services.html">打印 · 复印 · 扫描</a>
+vi: <a href="services.html">In · Photo · Scan</a>
+@@f7b7d01a45
+en: <a href="services.html">Fax · Laminate · Bind</a>
+zh: <a href="services.html">传真 · 塑封 · 装订</a>
+vi: <a href="services.html">Fax · Ép plastic · Đóng sách</a>
+@@95537cc1c0
+en: Customer support
+zh: 客服中心
+vi: Hỗ trợ khách hàng
+@@2bf3058b2f
+en: <a href="https://naver.me/GJErAoQ7" rel="noopener" target="_blank">💬 Ask on TalkTalk</a>
+zh: <a href="https://naver.me/GJErAoQ7" rel="noopener" target="_blank">💬 TalkTalk 咨询</a>
+vi: <a href="https://naver.me/GJErAoQ7" rel="noopener" target="_blank">💬 Hỏi qua TalkTalk</a>
+@@dcb4f896f9
+en: <a href="#">Store hours: 24 hours, open every day</a>
+zh: <a href="#">门店营业：24 小时全年无休</a>
+vi: <a href="#">Giờ mở cửa: 24 giờ, mở mọi ngày</a>
+@@2a3c32033f
+en: <a href="#">Operator: Good Learning Partner Co., Ltd. 120-88-22460</a>
+zh: <a href="#">运营公司：(株)Good Learning Partner 120-88-22460</a>
+vi: <a href="#">Công ty vận hành: Good Learning Partner 120-88-22460</a>

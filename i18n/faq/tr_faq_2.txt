@@ -1,0 +1,805 @@
+@@11
+#q en: I set it to color, but some middle pages came out black and white.
+#a en
+This happens with PDFs made in places like Canva.
+
+👉 Try opening it in Chrome or Edge and printing.
+1) First open Chrome or Edge, then drag the file onto that window.
+2) Or right-click the file and choose Edge/Chrome in [연결 프로그램] (Open with).
+👀 Before printing, check in the preview that every page is in color.
+
+📖 Tap here for the picture guide.
+[[go:guide-print.html#browser|How to print in Chrome · Edge]]
+#q zh: 设成彩色了，中间几页却打印成了黑白。
+#a zh
+这是用 Canva 等制作的 PDF 会出现的情况。
+
+👉 请用 Chrome 或 Edge 打开后打印试试。
+1) 先打开 Chrome 或 Edge，把文件拖到那个窗口上。
+2) 或者用鼠标右键点文件，在［연결 프로그램］（打开方式）中选 Edge·Chrome。
+👀 打印前，请在预览中确认所有页面都是彩色。
+
+📖 点这里查看详细的图片说明。
+[[go:guide-print.html#browser|详细查看用 Chrome·Edge 打印的方法]]
+#q vi: Tôi đã chọn màu nhưng vài trang ở giữa lại in ra đen trắng.
+#a vi
+Đây là lỗi xảy ra với PDF làm bằng Canva và các công cụ tương tự.
+
+👉 Hãy thử mở bằng Chrome hoặc Edge rồi in.
+1) Trước tiên mở Chrome hoặc Edge, rồi kéo tệp thả vào cửa sổ đó.
+2) Hoặc bấm chuột phải vào tệp, chọn Edge·Chrome trong [연결 프로그램] (Mở bằng).
+👀 Trước khi in, kiểm tra ở bản xem trước tất cả các trang đều có màu.
+
+📖 Bấm vào đây để xem hướng dẫn bằng hình.
+[[go:guide-print.html#browser|Xem cách in bằng Chrome · Edge]]
+
+@@8
+#q en: I pressed [인쇄] (Print) on the machine and it shows [PC]. Should I press it?
+#a en
+✅ Yes, you're on the right track!
+It means the file to print is on the PC.
+👉 Press the round [PC] button.
+
+📖 Tap here for the picture guide.
+[[go:guide-print.html#mfp|How to print at the printer machine]]
+#q zh: 在复合机上按了［인쇄］（打印）后出现［PC］，可以按吗？
+#a zh
+✅ 是的，操作没错！
+意思是要打印的文件在电脑里。
+👉 请按圆形的［PC］。
+
+📖 点这里查看详细的图片说明。
+[[go:guide-print.html#mfp|详细查看在复合机上打印的方法]]
+#q vi: Tôi bấm [인쇄] (In) trên máy thì hiện [PC]. Có bấm được không?
+#a vi
+✅ Đúng rồi, bạn đang làm đúng!
+Nghĩa là tệp cần in nằm trong máy tính.
+👉 Hãy bấm nút tròn [PC].
+
+📖 Bấm vào đây để xem hướng dẫn bằng hình.
+[[go:guide-print.html#mfp|Xem cách in ở máy in đa năng]]
+
+@@22
+#q en: I want to print a file on my phone.
+#a en
+📱 Get your phone files by logging in to KakaoTalk for PC with a QR code.
+📧 You can also send it by email. But we can't teach you in the store how to send email from your phone. Please learn it before you come.
+
+📲 How to log in to KakaoTalk for PC with a QR code
+1. Open KakaoTalk on the store PC and press the [QR코드 로그인] (QR code login) button.
+[[img:images/print/kakao-qr-1.png]]
+2. A QR code appears on the PC screen. Scan it with your phone before time runs out.
+[[img:images/print/kakao-pc-qr.png]]
+3. Open KakaoTalk on your phone and press [···(더보기)] (More) at the bottom right. (Most important!) Press the lens icon [[ico:images/print/kakao-lens.png]] at the top, then scan the QR code on the PC screen.
+[[img:images/print/kakao-phone-scan4.png]]
+4. When the 'QR code login' screen appears on your phone, press [1회용 인증하기] (One-time verify).
+[[img:images/print/kakao-once.png]]
+5. A 4-digit number (verification code) appears in the 'Security verification' window on the PC. Type those 4 digits on the phone's 'Security verification' screen and press [확인] (OK). Then KakaoTalk on the PC logs in.
+[[img:images/print/kakao-auth.png]]
+6. Save the file you sent to 'Chat with myself' on your phone to the PC, then open it and print.
+
+⚠️ When you're done, always [로그아웃] (Log out)! Don't check 'auto login'. Your KakaoTalk could be seen by the next customer.
+💻 When you're done, please shut down the PC too.
+- It's best to shut down the PC right after using it. If you forget, it shuts down automatically after 10 minutes if no one uses it.
+- If you leave without shutting it down, the next customer can use it right away before it shuts down automatically. Please shut it down before you leave if you can.
+- If you opened important sites or documents with personal information, be sure to shut the PC down properly and check before you leave.
+💡 The QR code disappears after a while. Press the refresh icon at the bottom right to make a new one.
+💡 Menu positions and names may be slightly different depending on your phone's KakaoTalk version.
+
+📖 Tap here for the picture guide.
+[[go:guide-print.html#store|How to bring a file to the PC and print it]]
+#q zh: 我想打印手机里的文件。
+#a zh
+📱 手机文件请用二维码登录 KakaoTalk 电脑版来接收。
+📧 也可以用邮件发送接收。但店里很难教您怎么用手机发邮件，请来之前先学会。
+
+📲 KakaoTalk 电脑版二维码登录方法
+1. 在店内电脑上打开 KakaoTalk，按［QR코드 로그인］（二维码登录）按钮。
+[[img:images/print/kakao-qr-1.png]]
+2. 电脑屏幕上会出现二维码。请在时间过去之前用手机扫描。
+[[img:images/print/kakao-pc-qr.png]]
+3. 在手机上打开 KakaoTalk，按画面最下方右边的［···(더보기)］（更多）。（最重要！）按上方的镜头图标 [[ico:images/print/kakao-lens.png]] 后，扫描电脑屏幕上的二维码。
+[[img:images/print/kakao-phone-scan4.png]]
+4. 手机上出现“二维码登录”画面后，按［1회용 인증하기］（一次性验证）。
+[[img:images/print/kakao-once.png]]
+5. 电脑上的“安全验证”窗口会出现 4 个数字（验证码）。在手机的“安全验证”画面输入这 4 个数字，按［확인］（确认）。电脑上的 KakaoTalk 就登录了。
+[[img:images/print/kakao-auth.png]]
+6. 把在手机上发到“与自己聊天”的文件保存到电脑上，然后打开打印。
+
+⚠️ 用完后一定要［로그아웃］（退出登录）！不要勾选“自动登录”。您的 KakaoTalk 可能会被下一位顾客看到。
+💻 用完后也请关掉电脑。
+- 用完的电脑最好马上关机。忘了也没关系，没人使用的话 10 分钟后会自动关机。
+- 不关机就离开的话，在自动关机之前下一位顾客可以马上使用。请尽量关机后再离开。
+- 如果打开过重要网站或有个人信息的文件，请一定正常关机并确认后再离开。
+💡 二维码过一段时间会消失。请按右下角的刷新图标重新生成。
+💡 根据手机 KakaoTalk 版本不同，菜单位置和名称会稍有不同。
+
+📖 点这里查看详细的图片说明。
+[[go:guide-print.html#store|详细查看把文件拷到电脑上打印的方法]]
+#q vi: Tôi muốn in tệp trong điện thoại.
+#a vi
+📱 Tệp trong điện thoại hãy nhận bằng cách đăng nhập KakaoTalk bản PC bằng mã QR.
+📧 Cũng có thể gửi qua email để nhận. Nhưng ở cửa hàng khó hướng dẫn cách gửi email từ điện thoại, hãy tìm hiểu trước khi đến.
+
+📲 Cách đăng nhập KakaoTalk bản PC bằng mã QR
+1. Mở KakaoTalk trên máy tính cửa hàng và bấm nút [QR코드 로그인] (Đăng nhập bằng mã QR).
+[[img:images/print/kakao-qr-1.png]]
+2. Mã QR sẽ hiện trên màn hình máy tính. Hãy quét bằng điện thoại trước khi hết giờ.
+[[img:images/print/kakao-pc-qr.png]]
+3. Mở KakaoTalk trên điện thoại và bấm [···(더보기)] (Thêm) ở góc dưới cùng bên phải. (Quan trọng nhất!) Bấm biểu tượng ống kính [[ico:images/print/kakao-lens.png]] ở phía trên, rồi quét mã QR trên màn hình máy tính.
+[[img:images/print/kakao-phone-scan4.png]]
+4. Khi điện thoại hiện màn hình 'Đăng nhập bằng mã QR', bấm [1회용 인증하기] (Xác thực một lần).
+[[img:images/print/kakao-once.png]]
+5. Cửa sổ 'Xác thực bảo mật' trên máy tính sẽ hiện 4 chữ số (mã xác thực). Nhập 4 số đó vào màn hình 'Xác thực bảo mật' trên điện thoại rồi bấm [확인] (Xác nhận). KakaoTalk trên máy tính sẽ được đăng nhập.
+[[img:images/print/kakao-auth.png]]
+6. Lưu tệp bạn đã gửi vào 'Trò chuyện với chính mình' trên điện thoại vào máy tính, rồi mở và in.
+
+⚠️ Dùng xong nhất định phải [로그아웃] (Đăng xuất)! Đừng đánh dấu 'Tự động đăng nhập'. KakaoTalk của bạn có thể bị khách sau nhìn thấy.
+💻 Dùng xong hãy tắt máy tính.
+- Tốt nhất là tắt máy ngay sau khi dùng. Nếu quên, máy sẽ tự tắt sau 10 phút nếu không ai dùng.
+- Nếu đi mà không tắt máy, khách sau có thể dùng ngay trước khi máy tự tắt. Nếu được, hãy tắt máy rồi mới đi.
+- Nếu đã mở trang web quan trọng hoặc tài liệu có thông tin cá nhân, nhất định phải tắt máy đúng cách và kiểm tra rồi mới rời đi.
+💡 Mã QR sẽ biến mất sau một thời gian. Bấm biểu tượng làm mới ở góc dưới bên phải để tạo mã mới.
+💡 Vị trí và tên menu có thể hơi khác tùy phiên bản KakaoTalk trên điện thoại.
+
+📖 Bấm vào đây để xem hướng dẫn bằng hình.
+[[go:guide-print.html#store|Xem cách đưa tệp vào máy tính và in]]
+
+@@5
+#q en: Can I print directly from my phone?
+#a en
+📵 You can't print directly from your phone.
+
+💻 The store PCs have internet. Do this.
+1. First send the phone file by email or KakaoTalk.
+2. Log in on the store PC and download the file.
+3. Print the downloaded file.
+
+📖 Tap here for the picture guide.
+[[go:guide-print.html#store|How to print from the PC]]
+#q zh: 可以直接用手机打印文件吗？
+#a zh
+📵 不能直接从手机打印。
+
+💻 店内电脑可以上网。请这样做。
+1. 先用邮件或 KakaoTalk 发送手机里的文件。
+2. 在店内电脑上登录并下载文件。
+3. 打印下载的文件。
+
+📖 点这里查看详细的图片说明。
+[[go:guide-print.html#store|详细查看在电脑上打印的方法]]
+#q vi: Có thể in trực tiếp từ điện thoại không?
+#a vi
+📵 Không thể in trực tiếp từ điện thoại.
+
+💻 Máy tính cửa hàng có internet. Hãy làm thế này.
+1. Trước tiên gửi tệp trong điện thoại qua email hoặc KakaoTalk.
+2. Đăng nhập trên máy tính cửa hàng và tải tệp về.
+3. In tệp đã tải về.
+
+📖 Bấm vào đây để xem hướng dẫn bằng hình.
+[[go:guide-print.html#store|Xem cách in từ máy tính]]
+
+@@14
+#q en: Can I use paper I brought myself?
+#a en
+❌ No. You can only use the paper in the store.
+Different paper can smudge colors or jam in the printer machine.
+
+📄 Store paper
+- A4: Double A 75g
+- B4, A3: Hi-Plus 75g
+
+🙏 Paper you bring can jam or break the machine. Please always use the store's paper.
+#q zh: 可以用自己带来的纸吗？
+#a zh
+❌ 不可以。只能用店里的纸。
+纸不同的话，颜色可能会晕开，或者在复合机里卡纸。
+
+📄 店里的纸
+- A4：Double A 75g
+- B4、A3：Hi-Plus 75g
+
+🙏 用自己带来的纸可能会卡纸或弄坏机器。请一定用店里的纸。
+#q vi: Tôi có thể dùng giấy tự mang đến không?
+#a vi
+❌ Không được. Chỉ được dùng giấy của cửa hàng.
+Giấy khác có thể làm lem màu hoặc bị kẹt trong máy in đa năng.
+
+📄 Giấy của cửa hàng
+- A4: Double A 75g
+- B4, A3: Hi-Plus 75g
+
+🙏 Dùng giấy mang đến có thể bị kẹt giấy hoặc làm hỏng máy. Nhất định hãy dùng giấy của cửa hàng.
+
+@@3
+#q en: Can I print A3 too?
+#a en
+✅ Yes, every store can print and copy in A4, B4 and A3.
+Yeongtong Station store (영통역점)
+🖨️ Machine 1: A4 only
+🖨️ Machine 2: A4, B4, A3
+Seojeongni Station store (서정리역점)
+🖨️ Machine 1: A4, B4, A3
+🖨️ Machine 2: A4 only
+All other stores
+🖨️ Machine 1: A4, B4
+🖨️ Machine 2: A4, A3
+#q zh: 也能打印 A3 吗？
+#a zh
+✅ 可以，所有门店都能用 A4、B4、A3 打印·复印。
+灵通站店（영통역점）
+🖨️ 1 号复合机：只能用 A4
+🖨️ 2 号复合机：A4、B4、A3
+西井里站店（서정리역점）
+🖨️ 1 号复合机：A4、B4、A3
+🖨️ 2 号复合机：只能用 A4
+其余门店
+🖨️ 1 号复合机：A4、B4
+🖨️ 2 号复合机：A4、A3
+#q vi: Có in được khổ A3 không?
+#a vi
+✅ Được, tất cả cửa hàng đều in·photo được khổ A4, B4, A3.
+Cửa hàng ga Yeongtong (영통역점)
+🖨️ Máy số 1: chỉ A4
+🖨️ Máy số 2: A4, B4, A3
+Cửa hàng ga Seojeongni (서정리역점)
+🖨️ Máy số 1: A4, B4, A3
+🖨️ Máy số 2: chỉ A4
+Các cửa hàng còn lại
+🖨️ Máy số 1: A4, B4
+🖨️ Máy số 2: A4, A3
+
+@@9
+#q en: What is the number I type at the printer machine?
+#a en
+🔢 It's the 4-digit PIN you typed on the PC.
+The PIN on the PC and the PIN number at the printer machine mean the same thing. It's like a temporary password to find the document you printed from the PC. We suggest using the last 4 digits of your phone number.
+⚠️ Don't use numbers anyone might use, like 1234 or 1111. Other people's documents may show up along with yours.
+
+📜 If you choose the certificate printer ([증명서전용PIN9999]) on the PC
+- No PIN box appears. 9999 is entered automatically and it's sent to the printer machine.
+- At the PIN step on the printer machine, type 9999.
+- Other customers may have used the certificate printer too, so several documents may appear for 9999. Check the time and document name, and pay and print only yours.
+
+📖 Picture guide for printing certificates (TOEIC · TOEIC Speaking)
+[[go:guide-print.html#cert|How to print certificates]]
+
+📖 Tap here for the picture guide.
+[[go:guide-print.html#store|How to type the PIN]]
+#q zh: 在复合机上输入的号码是什么？
+#a zh
+🔢 是在电脑上输入的 4 位个人识别码（PIN）。
+个人识别码在复合机上和 PIN 号码是同一个意思。就像在复合机上找电脑打印的文件时用的临时密码。推荐用手机号码后 4 位。
+⚠️ 不要用 1234、1111 这种谁都可能用的号码。在复合机上查询时，可能会连别人的文件一起出来。
+
+📜 在电脑上选择证书专用打印机（［증명서전용PIN9999］）的话
+- 不会出现输入个人识别码的窗口。会自动填入 9999 发送到复合机。
+- 在复合机输入 PIN 号码这一步请输入 9999。
+- 其他顾客也可能用了证书专用打印机，所以用 9999 查询可能会出现好几个文件。请确认时间和文件名，只为自己的文件付款打印。
+
+📖 证书（TOEIC·TOEIC Speaking）打印图片说明
+[[go:guide-print.html#cert|详细查看证书打印方法]]
+
+📖 点这里查看详细的图片说明。
+[[go:guide-print.html#store|详细查看个人识别码（PIN）输入方法]]
+#q vi: Số nhập ở máy in đa năng là gì?
+#a vi
+🔢 Đó là mã PIN 4 số bạn đã nhập trên máy tính.
+Mã PIN trên máy tính và số PIN ở máy in đa năng là một. Nó giống như mật khẩu tạm để tìm tài liệu bạn đã in từ máy tính. Nên dùng 4 số cuối số điện thoại của bạn.
+⚠️ Đừng dùng số ai cũng có thể dùng như 1234, 1111. Khi tìm ở máy in đa năng, tài liệu của người khác có thể hiện ra cùng.
+
+📜 Nếu chọn máy in chứng chỉ ([증명서전용PIN9999]) trên máy tính
+- Sẽ không hiện ô nhập mã PIN. Máy tự điền 9999 và gửi đến máy in đa năng.
+- Ở bước nhập số PIN trên máy in đa năng, hãy nhập 9999.
+- Khách khác cũng có thể đã dùng máy in chứng chỉ, nên tìm bằng 9999 có thể ra nhiều tài liệu. Hãy kiểm tra thời gian và tên tài liệu, chỉ thanh toán và in tài liệu của bạn.
+
+📖 Hướng dẫn bằng hình cách in chứng chỉ (TOEIC · TOEIC Speaking)
+[[go:guide-print.html#cert|Xem cách in chứng chỉ]]
+
+📖 Bấm vào đây để xem hướng dẫn bằng hình.
+[[go:guide-print.html#store|Xem cách nhập mã PIN]]
+
+@@13
+#q en: How do I use laminating and heat binding?
+#a en
+There are two kinds of laminators. Check which one your store has first.
+⚫ Black PL-1506 (laminating only)
+⚪ White SAFA-BM100 (laminating · binding in one)
+
+👍 If the store has both, please use the PL-1506 first. It warms up and laminates faster.
+📖 Follow the guide for your laminator in the top menu [사용방법] (How to Use) → [코팅] (Laminate).
+💰 First check how many pouches there are, and pay first.
+
+📚 How to use heat binding
+Heat binding puts your prints in a cover and melts the glue inside the cover with heat to make them into a book. No hole punching or springs. Heat binding is done on the white combination machine (SAFA-BM100).
+1. Choose a heat-binding cover that fits your number of sheets. You can put in only up to the number written on the cover.
+2. Pay for the cover at the Toss kiosk. It's 1,500 won per cover.
+3. Press the power button, then press the heat [온열] button once to warm it up. After about 3 minutes an alarm sounds and the light stops — warm-up is done.
+4. Put the pages neatly so they touch the glue inside the cover, and push the cover, closed end first, deep into the long slot on top.
+5. Press the timer and wait.
+6. When it's done, take it out, cool it for 10+ minutes, then open it.
+⚠️ Too few sheets (e.g. 5 or 10) can't be bound.
+
+📖 Tap here for the picture guide.
+[[go:guide-coat.html#coat|How to laminate]]
+[[go:guide-bind.html#bind|How to use heat binding]]
+#q zh: 塑封·热熔装订怎么用？
+#a zh
+塑封机有两种。请先确认店里的塑封机。
+⚫ 黑色 PL-1506（塑封专用机）
+⚪ 白色 SAFA-BM100（塑封·装订两用机）
+
+👍 两种都有的话，请先用预热和塑封更快的 PL-1506。
+📖 请按网站上方菜单［사용방법］（使用方法）→［코팅］（塑封）中适合您塑封机的方法操作。
+💰 请先确认有几张塑封膜，并先付款。
+
+📚 热熔装订这样使用
+热熔装订是把打印纸放进封面，用热把封面里面的胶（胶水）熔化粘住，做成书的服务。不打孔，也不用弹簧装订。热熔装订用白色两用机（SAFA-BM100）做。
+1. 选择和打印纸张数相符的热熔装订封面。只能放到封面上写的张数。
+2. 在 Toss 自助机上支付封面费用。每个封面 1,500 韩元。
+3. 按电源按钮后，按一次加热［온열］按钮预热。大约 3 分钟后响起提示音，灯停止闪烁，就是预热完成了。
+4. 把打印纸整齐地放进去，让它碰到封面里面的胶，再把封面封住的一端先深深地放进上方的长入口。
+5. 按定时等待。
+6. 完成后取出，冷却 10 分钟以上再打开。
+⚠️ 张数太少（例：5 张、10 张）的话无法装订。
+
+📖 点这里查看详细的图片说明。
+[[go:guide-coat.html#coat|详细查看塑封使用方法]]
+[[go:guide-bind.html#bind|详细查看热熔装订使用方法]]
+#q vi: Dùng máy ép plastic và đóng sách nhiệt thế nào?
+#a vi
+Có hai loại máy ép. Hãy xem cửa hàng có loại nào trước.
+⚫ Máy đen PL-1506 (chỉ để ép)
+⚪ Máy trắng SAFA-BM100 (ép · đóng sách 2 trong 1)
+
+👍 Nếu có cả hai loại, hãy dùng PL-1506 trước vì làm nóng và ép nhanh hơn.
+📖 Làm theo hướng dẫn cho máy ép của bạn ở menu trên cùng [사용방법] (Hướng dẫn) → [코팅] (Ép plastic).
+💰 Trước tiên kiểm tra còn bao nhiêu túi ép, và thanh toán trước.
+
+📚 Cách dùng đóng sách nhiệt
+Đóng sách nhiệt là cho giấy in vào bìa, dùng nhiệt làm chảy keo bên trong bìa để dán thành cuốn như sách. Không đục lỗ, không dùng lò xo. Đóng sách nhiệt làm bằng máy trắng 2 trong 1 (SAFA-BM100).
+1. Chọn bìa đóng nhiệt vừa với số tờ của bạn. Chỉ được cho vào đến số tờ ghi trên bìa.
+2. Thanh toán tiền bìa ở máy kiosk Toss. Mỗi bìa 1.500 won.
+3. Bấm nút nguồn, rồi bấm nút nhiệt [온열] một lần để làm nóng. Khoảng 3 phút sau có tiếng chuông và đèn ngừng nhấp nháy là đã nóng xong.
+4. Cho giấy ngay ngắn sao cho chạm vào keo bên trong bìa, rồi đẩy bìa, phần gáy trước, vào sâu trong khe dài phía trên.
+5. Bấm hẹn giờ và chờ.
+6. Xong thì lấy ra, để nguội từ 10 phút trở lên rồi mới mở.
+⚠️ Quá ít tờ (ví dụ 5 tờ, 10 tờ) thì không đóng được.
+
+📖 Bấm vào đây để xem hướng dẫn bằng hình.
+[[go:guide-coat.html#coat|Xem cách ép plastic]]
+[[go:guide-bind.html#bind|Xem cách đóng sách nhiệt]]
+
+@@36
+#q en: I want to copy my ID card.
+#a en
+🆔 ID cards are copied on the glass.
+⛔ Don't put them in the document feeder (ADF) on top of the printer machine.
+
+1. Put the ID card at the top-left corner of the glass, at the white arrow.
+2. Put it with the ID content facing the glass. (content down)
+3. On the machine screen, choose the [신분증복사] (ID Copy) option inside [복사] (Copy).
+
+⚠️ Only an ID-card-sized area is copied. If the position is even a little off, it comes out cut off.
+📌 There is a [신분증 복사 방법] (How to copy ID) notice on the wall next to the printer machine. Please follow it.
+
+📖 Tap here for the picture guide.
+[[go:guide-copy.html#glass|How to copy an ID card, with pictures]]
+#q zh: 我想复印身份证。
+#a zh
+🆔 身份证放在玻璃板上复印。
+⛔ 不要放进复合机上方放原件的地方（ADF）。
+
+1. 把身份证对准玻璃板左上角的白色箭头位置放好。
+2. 身份证的内容朝向玻璃板放。（内容朝下）
+3. 在复合机屏幕上选择［복사］（复印）里的［신분증복사］（身份证复印）选项。
+
+⚠️ 只复印身份证大小的范围。放的位置稍有偏差就会被切掉。
+📌 复合机旁边的墙上贴着［신분증 복사 방법］（身份证复印方法）的说明。请照着做。
+
+📖 点这里查看详细的图片说明。
+[[go:guide-copy.html#glass|用图片详细查看身份证复印方法]]
+#q vi: Tôi muốn photo thẻ căn cước.
+#a vi
+🆔 Thẻ căn cước được photo trên mặt kính.
+⛔ Đừng cho vào khay nạp bản gốc (ADF) phía trên máy in đa năng.
+
+1. Đặt thẻ ở góc trên bên trái mặt kính, đúng chỗ mũi tên trắng.
+2. Đặt mặt có thông tin của thẻ úp xuống mặt kính. (nội dung hướng xuống)
+3. Trên màn hình máy, chọn tùy chọn [신분증복사] (Photo thẻ) trong [복사] (Photo).
+
+⚠️ Chỉ photo vùng bằng kích thước thẻ. Đặt lệch một chút là sẽ bị cắt mất.
+📌 Trên tường cạnh máy in đa năng có dán hướng dẫn [신분증 복사 방법] (Cách photo thẻ). Hãy làm theo.
+
+📖 Bấm vào đây để xem hướng dẫn bằng hình.
+[[go:guide-copy.html#glass|Xem cách photo thẻ căn cước bằng hình]]
+
+@@37
+#q en: How do I put in originals for copy · scan · fax?
+#a en
+📄 Single-sheet originals go in the 'document feeder (ADF)' on top of the printer machine.
+[[sm:images/common/adf-feeder.jpg]]
+- You can put in up to 100 sheets at once.
+- Put them in with the content facing up.
+- A4 with the long edge to the left; B4·A3 with the short edge to the left.
+- Push them all the way in, and hold them straight with the top and bottom paper guides.
+- When you start, the originals should go into the machine and come back out. If they don't go in, cancel and try again.
+
+📘 Put these originals on the glass, one at a time.
+- Books, ID cards, bankbooks, passports
+- Wrinkled paper, paper with notes stuck on, stapled paper
+- On the glass, line it up with the white arrow at the top-left corner.
+- Put it with the content facing the glass. (Opposite of the ADF!)
+
+⚠️ Leave the original orientation option at [세로] (Portrait) and don't change it. If you change it, the content gets cut off.
+
+📖 Tap here for the picture guide.
+[[go:guide-copy.html#adf|How to use the document feeder (ADF)]]
+[[go:guide-copy.html#glass|How to put originals on the glass]]
+#q zh: 复印·扫描·传真时原件怎么放？
+#a zh
+📄 单张原件放进复合机上方的“放原件的地方（ADF）”。
+[[sm:images/common/adf-feeder.jpg]]
+- 一次最多可以放 100 张。
+- 内容朝上放。
+- A4 长边朝左，B4·A3 短边朝左放。
+- 一直推到底，用上下的文件导板把纸夹正。
+- 开始后原件要进到机器里再出来才是正常的。没进去的话请取消重来。
+
+📘 下面这些原件请一张一张放在玻璃板上。
+- 书、身份证、存折、护照
+- 皱了的纸、贴着便条的纸、有订书钉的纸
+- 在玻璃板上对准左上角的白色箭头放。
+- 内容朝向玻璃板放。（和 ADF 相反！）
+
+⚠️ 原稿方向选项请保持［세로］（纵向），不要改。改了内容会被切掉。
+
+📖 点这里查看详细的图片说明。
+[[go:guide-copy.html#adf|详细查看 ADF（放原件的地方）的用法]]
+[[go:guide-copy.html#glass|详细查看放在玻璃板上的方法]]
+#q vi: Đặt bản gốc thế nào khi photo · scan · fax?
+#a vi
+📄 Bản gốc tờ rời đặt vào 'khay nạp bản gốc (ADF)' phía trên máy in đa năng.
+[[sm:images/common/adf-feeder.jpg]]
+- Mỗi lần đặt được tối đa 100 tờ.
+- Đặt mặt có nội dung hướng lên trên.
+- A4 thì cạnh dài về bên trái, B4·A3 thì cạnh ngắn về bên trái.
+- Đẩy vào hết, và giữ thẳng bằng thanh chặn giấy trên · dưới.
+- Khi bắt đầu, bản gốc phải vào máy rồi ra lại mới là bình thường. Nếu không vào, hãy hủy và làm lại.
+
+📘 Những bản gốc dưới đây đặt từng tờ lên mặt kính.
+- Sách, thẻ căn cước, sổ ngân hàng, hộ chiếu
+- Giấy nhàu, giấy có dán ghi chú, giấy có ghim bấm
+- Trên mặt kính, căn theo mũi tên trắng ở góc trên bên trái.
+- Đặt mặt có nội dung úp xuống mặt kính. (Ngược với ADF!)
+
+⚠️ Để tùy chọn hướng bản gốc là [세로] (Dọc) và đừng đổi. Nếu đổi, nội dung sẽ bị cắt.
+
+📖 Bấm vào đây để xem hướng dẫn bằng hình.
+[[go:guide-copy.html#adf|Xem cách dùng khay nạp bản gốc (ADF)]]
+[[go:guide-copy.html#glass|Xem cách đặt bản gốc lên mặt kính]]
+
+@@38
+#q en: When copying/scanning on the glass, it asks 'Scan another page?' (다른 면을 스캔하시겠습니까?).
+#a en
+This message always appears when you work on the glass.
+
+1. If you have more originals: first change the original on the glass, then press [예] (Yes).
+2. If you have no more originals: press [아니오] (No).
+
+⚠️ If you press [예] (Yes) without changing the original, the same page keeps getting scanned.
+💡 If the extra-scan window doesn't go away, move to the other printer machine and try there. If it still doesn't work, tell us on TalkTalk. (Phone also works weekdays 9 AM–9 PM)
+
+📖 Tap here for the picture guide.
+[[go:guide-copy.html#glass|About the 'Scan another page?' window]]
+#q zh: 放在玻璃板上复印·扫描时，出现“다른 면을 스캔하시겠습니까?”（要扫描其他页面吗？）。
+#a zh
+放在玻璃板上操作时一定会出现这个提示。
+
+1. 还有原件的话：先在玻璃板上换好原件，再按［예］（是）。
+2. 没有原件了的话：按［아니오］（否）。
+
+⚠️ 不换原件就按［예］（是）的话，会一直扫描同一页。
+💡 追加扫描的窗口一直不消失的话，请换到旁边的复合机试试。还是不行的话请通过 TalkTalk 告诉我们。（工作日上午 9 点~晚上 9 点也可以打电话）
+
+📖 点这里查看详细的图片说明。
+[[go:guide-copy.html#glass|详细查看“要扫描其他页面吗？”窗口的说明]]
+#q vi: Khi photo/scan trên mặt kính thì hiện 'Scan trang khác?' (다른 면을 스캔하시겠습니까?).
+#a vi
+Thông báo này luôn hiện ra khi làm trên mặt kính.
+
+1. Nếu còn bản gốc: trước tiên đổi bản gốc trên mặt kính, rồi bấm [예] (Có).
+2. Nếu hết bản gốc: bấm [아니오] (Không).
+
+⚠️ Nếu bấm [예] (Có) mà không đổi bản gốc, cùng một trang sẽ bị scan mãi.
+💡 Nếu cửa sổ scan thêm không biến mất, hãy chuyển sang máy in đa năng bên cạnh để thử. Nếu vẫn không được, hãy báo qua TalkTalk. (Ngày thường 9 giờ sáng–9 giờ tối có thể gọi điện)
+
+📖 Bấm vào đây để xem hướng dẫn bằng hình.
+[[go:guide-copy.html#glass|Xem giải thích cửa sổ 'Scan trang khác?']]
+
+@@39
+#q en: Where is my scanned file?
+#a en
+💻 Scanned files are on the store PC desktop.
+- If you scanned on machine 1: the [1번복합기스캔함] (Machine 1 scan folder) folder
+- If you scanned on machine 2: the [2번복합기스캔함] (Machine 2 scan folder) folder
+
+📁 You can choose PDF or JPG for the file type. (Searchable-text PDFs are not available)
+⏳ Files are deleted 30 minutes after you pay. Move the file somewhere else as soon as it's made.
+🔌 If you have a USB, move it there. If not, send it to your email over the internet.
+💰 Scanning costs 100 won per side, no matter the size or color/B&W.
+
+📖 Tap here for the picture guide.
+[[go:guide-scan.html#scan|How to find your scanned file]]
+#q zh: 扫描的文件在哪里？
+#a zh
+💻 扫描的文件在店内电脑的桌面上。
+- 在 1 号复合机扫描的话：［1번복합기스캔함］（1 号复合机扫描文件夹）文件夹
+- 在 2 号复合机扫描的话：［2번복합기스캔함］（2 号复合机扫描文件夹）文件夹
+
+📁 文件格式可以选 PDF 或 JPG。（不支持可以搜索文字的 PDF）
+⏳ 从付款时间起 30 分钟后文件会被删除。文件生成后请马上移到别的地方。
+🔌 有 U 盘的话移到 U 盘里，没有的话用网络发到邮箱带走。
+💰 扫描费用不管尺寸和彩色·黑白，每面 100 韩元。
+
+📖 点这里查看详细的图片说明。
+[[go:guide-scan.html#scan|详细查看找扫描文件的方法]]
+#q vi: Tệp đã scan ở đâu?
+#a vi
+💻 Tệp đã scan nằm trên màn hình nền máy tính cửa hàng.
+- Scan ở máy số 1: thư mục [1번복합기스캔함] (thư mục scan máy số 1)
+- Scan ở máy số 2: thư mục [2번복합기스캔함] (thư mục scan máy số 2)
+
+📁 Có thể chọn loại tệp PDF hoặc JPG. (Không có PDF tìm kiếm được chữ)
+⏳ Tệp sẽ bị xóa 30 phút sau khi thanh toán. Khi tệp được tạo, hãy chuyển ngay sang chỗ khác.
+🔌 Nếu có USB thì chép vào USB, nếu không thì gửi qua internet vào email để mang đi.
+💰 Phí scan là 100 won mỗi mặt, không phân biệt khổ giấy hay màu·đen trắng.
+
+📖 Bấm vào đây để xem hướng dẫn bằng hình.
+[[go:guide-scan.html#scan|Xem cách tìm tệp đã scan]]
+
+@@40
+#q en: Is it cheaper to print two-sided?
+#a en
+❌ Printing two-sided doesn't lower the price. Only the paper comes out two-sided.
+- The payment info screen shows the full number of pages.
+- Two-sided is charged as 2 sides.
+
+⚠️ A file with only 1 page (e.g. a photo/image) can't be printed two-sided even if you increase the copies.
+A file must have 2 or more pages to print two-sided.
+#q zh: 双面打印会便宜吗？
+#a zh
+❌ 双面打印费用也不会减少。只是纸张两面打印。
+- 收费信息窗口会显示原来的全部页数。
+- 双面按 2 面的费用计算。
+
+⚠️ 只有 1 页的文件（例：照片·图片）即使增加份数也不能双面打印。
+一个文件要有 2 页以上才能双面打印。
+#q vi: In 2 mặt có rẻ hơn không?
+#a vi
+❌ In 2 mặt không làm giảm giá. Chỉ là giấy được in 2 mặt.
+- Màn hình thông tin thanh toán hiện toàn bộ số trang ban đầu.
+- In 2 mặt tính tiền như 2 mặt.
+
+⚠️ Tệp chỉ có 1 trang (ví dụ ảnh·hình) thì dù tăng số bản cũng không in 2 mặt được.
+Một tệp phải có từ 2 trang trở lên mới in 2 mặt được.
+
+@@41
+#q en: How do I print files from a USB or a compressed file?
+#a en
+📂 Always save the file to the PC first, then open and print it.
+- If you open and print a file directly from the USB, it may come out blank.
+- Unzip compressed files (zip, etc.) before opening and printing them.
+- Saving to the desktop makes it easy to find.
+
+🔍 If you can't find the saved file
+- Files from the internet: [파일 탐색기] (File Explorer) → [다운로드] (Downloads) folder
+- Files from KakaoTalk: [파일 탐색기] (File Explorer) → [문서] (Documents) → [카카오톡] (KakaoTalk) folder
+
+⚠️ Blank or cut-off prints caused by not following the guide are not refunded.
+
+📖 Tap here for the picture guide.
+[[go:guide-print.html#store|How to save a file to the PC and print it]]
+#q zh: U 盘或压缩文件怎么打印？
+#a zh
+📂 文件一定要先保存到电脑上，再打开打印。
+- 直接打开 U 盘里的文件打印，可能会打印成白纸。
+- 压缩文件（zip 等）请先解压，再打开打印。
+- 保存到桌面比较好找。
+
+🔍 找不到保存的文件的话
+- 从网上下载的文件：［파일 탐색기］（文件资源管理器）→［다운로드］（下载）文件夹
+- 用 KakaoTalk 接收的文件：［파일 탐색기］（文件资源管理器）→［문서］（文档）→［카카오톡］（KakaoTalk）文件夹
+
+⚠️ 没按说明操作造成的白纸·内容被切掉，不予退款。
+
+📖 点这里查看详细的图片说明。
+[[go:guide-print.html#store|详细查看把文件保存到电脑后打印的方法]]
+#q vi: In tệp từ USB hoặc tệp nén thế nào?
+#a vi
+📂 Nhất định phải lưu tệp vào máy tính trước, rồi mới mở và in.
+- Nếu mở và in thẳng tệp trong USB, có thể ra giấy trắng.
+- Tệp nén (zip, v.v.) hãy giải nén rồi mới mở và in.
+- Lưu ra màn hình nền thì dễ tìm.
+
+🔍 Nếu không thấy tệp đã lưu
+- Tệp tải từ internet: [파일 탐색기] (File Explorer) → thư mục [다운로드] (Tải xuống)
+- Tệp nhận qua KakaoTalk: [파일 탐색기] (File Explorer) → [문서] (Tài liệu) → thư mục [카카오톡] (KakaoTalk)
+
+⚠️ Giấy trắng hoặc bị cắt do không làm theo hướng dẫn sẽ không được hoàn tiền.
+
+📖 Bấm vào đây để xem hướng dẫn bằng hình.
+[[go:guide-print.html#store|Xem cách lưu tệp vào máy tính và in]]
+
+@@42
+#q en: The payment info screen shows something I didn't want.
+#a en
+🛑 Don't pay. Just send it again from the PC.
+
+1. Don't pay at the printer machine. Leave it as it is.
+2. Set the print options again on the PC.
+3. Change your PIN to a new number and print again.
+4. Look it up with the new number at the printer machine, then pay.
+
+💡 Unpaid items are deleted automatically after 30 minutes.
+⚠️ If you pay without checking the payment info screen, there is no refund.
+
+📖 Tap here for the picture guide.
+[[go:guide-print.html#ptips|How to check the payment info screen]]
+[[go:guide-print.html#mfp|How to pay at the printer machine]]
+#q zh: 收费信息窗口出现了不想要的内容。
+#a zh
+🛑 不要付款。在电脑上重新发送就行。
+
+1. 在复合机上不要付款，保持原样。
+2. 在电脑上重新设置打印选项。
+3. 把个人识别码（PIN）换成新号码重新打印。
+4. 在复合机上用新号码查询后付款。
+
+💡 没付款的列表 30 分钟后会自动删除。
+⚠️ 没确认收费信息窗口就付款的，不予退款。
+
+📖 点这里查看详细的图片说明。
+[[go:guide-print.html#ptips|详细查看如何确认收费信息窗口]]
+[[go:guide-print.html#mfp|详细查看在复合机上付款的方法]]
+#q vi: Màn hình thông tin thanh toán hiện nội dung tôi không muốn.
+#a vi
+🛑 Đừng thanh toán. Chỉ cần gửi lại từ máy tính.
+
+1. Đừng thanh toán ở máy in đa năng, để nguyên như vậy.
+2. Cài lại tùy chọn in trên máy tính.
+3. Đổi mã PIN sang số mới rồi in lại.
+4. Tìm bằng số mới ở máy in đa năng rồi thanh toán.
+
+💡 Danh sách chưa thanh toán sẽ tự xóa sau 30 phút.
+⚠️ Thanh toán mà không kiểm tra màn hình thông tin thanh toán thì không được hoàn tiền.
+
+📖 Bấm vào đây để xem hướng dẫn bằng hình.
+[[go:guide-print.html#ptips|Xem cách kiểm tra màn hình thông tin thanh toán]]
+[[go:guide-print.html#mfp|Xem cách thanh toán ở máy in đa năng]]
+
+@@43
+#q en: Several files show up in the printer machine's list. Which one should I choose?
+#a en
+👀 Choose and pay only for your own documents.
+- Before paying, match the time and file name to make sure the documents in the list are yours.
+- Documents printed because you paid without checking can't be refunded.
+- If you used the certificate printer ([증명서전용PIN9999]), look up 9999 and find your document.
+
+⚠️ Be careful with [모두선택] (Select all)!
+If you pay for someone else's file along with yours without noticing, there is no refund.
+
+📖 Tap here for the picture guide.
+[[go:guide-print.html#mfp|How to choose from the list at the printer machine]]
+#q zh: 复合机列表里出现了好几个文件。该选哪个？
+#a zh
+👀 只选自己的文件付款。
+- 付款前，请核对时间和文件名，确认列表里的文件是不是自己的。
+- 没确认就付款打印出来的文件，不属于退款对象。
+- 用了证书专用打印机（［증명서전용PIN9999］）的话，用 9999 查询后找自己的文件。
+
+⚠️ 小心［모두선택］（全选）！
+不知道里面混着别人的文件，一起付了款的，也不予退款。
+
+📖 点这里查看详细的图片说明。
+[[go:guide-print.html#mfp|详细查看在复合机上选择列表的方法]]
+#q vi: Danh sách trên máy in đa năng hiện nhiều tệp. Tôi nên chọn cái nào?
+#a vi
+👀 Chỉ chọn và thanh toán tài liệu của bạn.
+- Trước khi thanh toán, hãy đối chiếu thời gian và tên tệp để chắc chắn tài liệu trong danh sách là của bạn.
+- Tài liệu in ra do thanh toán mà không kiểm tra thì không được hoàn tiền.
+- Nếu đã dùng máy in chứng chỉ ([증명서전용PIN9999]), hãy tìm bằng 9999 rồi chọn tài liệu của bạn.
+
+⚠️ Cẩn thận với [모두선택] (Chọn tất cả)!
+Nếu không biết có tệp của người khác lẫn vào mà thanh toán luôn, cũng không được hoàn tiền.
+
+📖 Bấm vào đây để xem hướng dẫn bằng hình.
+[[go:guide-print.html#mfp|Xem cách chọn trong danh sách ở máy in đa năng]]
+
+@@44
+#q en: Can I connect my laptop to the printer machine and print?
+#a en
+❌ No. You can't connect a personal laptop directly to the printer machine or print over Wi-Fi.
+
+👉 Change your file to PDF, move it by USB, email or KakaoTalk, and print it from the store PC.
+#q zh: 可以把自己的笔记本电脑连到复合机上打印吗？
+#a zh
+❌ 不可以。个人笔记本电脑不能直接连接复合机，也不能用 Wi-Fi 打印。
+
+👉 请把文件转成 PDF，用 U 盘或邮件·KakaoTalk 传过来，在店内电脑上打印。
+#q vi: Tôi có thể kết nối laptop của mình với máy in đa năng để in không?
+#a vi
+❌ Không được. Không thể kết nối trực tiếp laptop cá nhân với máy in đa năng hay in qua Wi-Fi.
+
+👉 Hãy chuyển tệp sang PDF, chuyển qua USB hoặc email·KakaoTalk, rồi in từ máy tính cửa hàng.
+
+@@45
+#q en: Can I print with no margins (full bleed)?
+#a en
+❌ There is a margin of about 5mm on all sides, no matter the paper size.
+
+To print with no margins, please use a professional print shop. 🙏
+#q zh: 可以无边距满版打印吗？
+#a zh
+❌ 不管纸张大小，四周都会留约 5mm 的边距。
+
+想无边距打印的话，请去印刷店。🙏
+#q vi: Có thể in tràn lề, không có lề không?
+#a vi
+❌ Dù khổ giấy nào, bốn phía cũng có lề khoảng 5mm.
+
+Muốn in không lề, hãy dùng tiệm in chuyên nghiệp. 🙏
+
+@@46
+#q en: How much does it cost?
+#a en
+💰 Printing · copying (per side)
+- B&W: A4 70 won, B4 120 won, A3 140 won
+- Color: A4 250 won, B4 400 won, A3 500 won
+- Two-sided is charged as 2 sides.
+
+📄 Scanning: 100 won per side (same for any size)
+📠 Fax: 500 won per side (sent in black and white only)
+✨ Laminating: A4 400 won/sheet, A3 800 won/sheet
+📚 Heat binding: 1,500 won per cover (same for any thickness)
+🛍️ Products: L-folders · slide-binder files · document envelopes 600 won each
+
+💡 You can also see the price list in the [서비스] (Services) menu of the website.
+
+📖 Tap here for the picture guide.
+[[go:services.html#price|See the price list]]
+#q zh: 使用费用是多少？
+#a zh
+💰 打印·复印（每面）
+- 黑白：A4 70 韩元、B4 120 韩元、A3 140 韩元
+- 彩色：A4 250 韩元、B4 400 韩元、A3 500 韩元
+- 双面按 2 面的费用计算。
+
+📄 扫描：每面 100 韩元（不管尺寸都一样）
+📠 传真：每面 500 韩元（只能以黑白发送）
+✨ 塑封：A4 400 韩元/张、A3 800 韩元/张
+📚 热熔装订：每个封面 1,500 韩元（不管厚度都一样）
+🛍️ 商品：L 型文件夹·抽杆文件夹·文件袋 每个 600 韩元
+
+💡 在网站的［서비스］（服务）菜单中也能看到价目表。
+
+📖 点这里查看详细的图片说明。
+[[go:services.html#price|详细查看价目表]]
+#q vi: Giá sử dụng là bao nhiêu?
+#a vi
+💰 In · photo (mỗi mặt)
+- Đen trắng: A4 70 won, B4 120 won, A3 140 won
+- Màu: A4 250 won, B4 400 won, A3 500 won
+- In 2 mặt tính tiền như 2 mặt.
+
+📄 Scan: 100 won mỗi mặt (khổ nào cũng như nhau)
+📠 Fax: 500 won mỗi mặt (chỉ gửi đen trắng)
+✨ Ép plastic: A4 400 won/tờ, A3 800 won/tờ
+📚 Đóng sách nhiệt: 1.500 won mỗi bìa (dày mỏng như nhau)
+🛍️ Sản phẩm: bìa kẹp chữ L · bìa kẹp thanh trượt · phong bì tài liệu 600 won mỗi cái
+
+💡 Cũng có thể xem bảng giá ở menu [서비스] (Dịch vụ) của trang web.
+
+📖 Bấm vào đây để xem hướng dẫn bằng hình.
+[[go:services.html#price|Xem bảng giá]]

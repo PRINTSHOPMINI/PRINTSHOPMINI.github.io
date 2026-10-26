@@ -1,0 +1,1566 @@
+@@31
+#q en: How do I get a parking discount (parking registration)?
+#a en
+🅿️ Apply for a parking discount at '주차등록' (Parking registration).
+
+🚫 Stores with no parking discount
+- Gwonseon store (권선점)
+- Dongbaek Station store (동백역점)
+These two stores have parking lots, but they are paid.
+PrintShop Mini does not give parking discounts there. 🙏
+
+✅ For other stores, tap the picture below to apply.
+
+📋 Each store has a different parking discount policy!
+When you choose your store (branch) on the site, its parking discount policy appears.
+Read the policy carefully before applying for the discount.
+
+👇 The parking registration site opens.
+[[btn:images/faq/btn-parking2.png|https://fax.printnuri.com/parking|Go to parking registration]]
+💻 There is also a [주차할인] (Parking discount) icon on the store PC desktop. You can apply there too.
+
+📝 Do this
+1. In [지점명] (Store name), choose the store where you parked. Its parking discount info (time, conditions) appears. Please read it carefully.
+2. In [카드 구분] (Card type), choose how you paid.
+   - Samsung Pay · Apple Pay · kiosk payment (binding · laminating): enter the [승인번호(8자리)] (8-digit approval number).
+   - Credit card (physical card): enter the [앞 4자리] (first 4 digits) and [뒤 4자리] (last 4 digits) of the card number.
+3. Enter [차량번호(4자리)] (car number, 4 digits).
+4. Press [검색] (Search). It may take a little while to find your car. Please wait until the screen changes.
+5. Check that your car number, entry time and car photo are correct.
+6. Press [주차할인적용] (Apply parking discount), and when "주차 할인권을 적용하시겠습니까?" (Apply the parking discount?) appears, press [주차할인적용] once more.
+7. When "주차 할인권이 등록되었습니다" (Parking discount registered) appears, you're done.
+
+🔎 Tap to see how to find the approval number.
+[[go:faq.html#faq-6|How to find the Samsung Pay · Apple Pay approval number]]
+
+⚠️ If you see these screens, do this
+- "결제 정보를 찾을 수가 없습니다" (Payment info not found): check the store, card type and card number (approval number) again.
+- "차량 정보를 찾을 수가 없습니다" (Car info not found): check the car number again.
+- "결제하신 금액이 주차 할인을 받기 위한 최소 금액보다 적습니다" (Amount paid is less than the minimum): check the minimum payment in your store's parking discount info.
+- "이미 주차 등록된 이력이 존재합니다" (Already registered): it's already registered with the same payment.
+- "등록이 실패하였습니다" (Registration failed): tell us on TalkTalk as shown below.
+
+⚠️ If registration doesn't work on the site, don't drive out — tell us on TalkTalk. (Phone also works weekdays 9 AM–9 PM)
+✉️ What to send on TalkTalk
+1. Store name
+2. Contact number
+3. Last 4 digits of the car number
+4. The problem (parking discount site error)
+⏳ Please wait in the store for a moment while a manager checks. The store isn't responsible for parking fees if you drive out first without contacting us.
+💳 If you paid several times with the same card, you may be able to register them together. (Different cards can't be combined)
+#q zh: 停车优惠（停车登记）怎么办理？
+#a zh
+🅿️ 停车优惠在“주차등록”（停车登记）中申请。
+
+🚫 没有停车优惠的门店
+- 劝善店（권선점）
+- 冬柏站店（동백역점）
+这两家店有停车场，但是收费的。
+PrintShop Mini 不提供停车优惠。🙏
+
+✅ 其他门店请点下面的图片申请。
+
+📋 每家门店的停车优惠政策不同！
+在网站上选择您的门店（分店）后，会出现该店的停车优惠政策。
+请仔细阅读政策后再办理停车优惠。
+
+👇 会打开停车登记网站。
+[[btn:images/faq/btn-parking2.png|https://fax.printnuri.com/parking|去办理停车登记]]
+💻 店内电脑桌面上也有［주차할인］（停车优惠）图标，也可以在那里申请。
+
+📝 请这样做
+1. 在［지점명］（门店名称）中选择停车的门店。会出现该店的停车优惠说明（时间·条件），请仔细阅读。
+2. 在［카드 구분］（卡类型）中选择自己的付款方式。
+   - 三星支付·Apple Pay·自助机付款（装订·塑封）：输入［승인번호(8자리)］（批准号 8 位）。
+   - 信用卡（实体卡）：输入卡号的［앞 4자리］（前 4 位）和［뒤 4자리］（后 4 位）。
+3. 输入［차량번호(4자리)］（车牌号 4 位）。
+4. 按［검색］（搜索）。查找车辆可能需要一点时间。请等画面变化。
+5. 确认自己的车牌号、入场时间、车辆照片是否正确。
+6. 按［주차할인적용］（适用停车优惠），出现“주차 할인권을 적용하시겠습니까?”（要适用停车优惠券吗？）时，再按一次［주차할인적용］。
+7. 出现“주차 할인권이 등록되었습니다”（停车优惠券已登记）就完成了。
+
+🔎 想知道怎么确认批准号，请点击。
+[[go:faq.html#faq-6|确认三星支付·Apple Pay 批准号的方法]]
+
+⚠️ 出现这些画面时请这样做
+- “결제 정보를 찾을 수가 없습니다”（找不到付款信息）：请重新确认门店、卡类型、卡号（批准号）。
+- “차량 정보를 찾을 수가 없습니다”（找不到车辆信息）：请重新确认车牌号。
+- “결제하신 금액이 주차 할인을 받기 위한 최소 금액보다 적습니다”（付款金额低于停车优惠的最低金额）：请在您门店的停车优惠说明中确认最低付款金额。
+- “이미 주차 등록된 이력이 존재합니다”（已有停车登记记录）：已经用同一笔付款登记过了。
+- “등록이 실패하였습니다”（登记失败）：请按下面的说明通过 TalkTalk 告诉我们。
+
+⚠️ 在网站上登记不了的话，先不要出场，请通过 TalkTalk 告诉我们。（工作日上午 9 点~晚上 9 点也可以打电话）
+✉️ 通过 TalkTalk 发送的内容
+1. 门店名称
+2. 联系方式
+3. 车牌号后 4 位
+4. 问题内容（停车优惠登记网站故障）
+⏳ 管理员确认期间，请在店里稍等。不联系就先出场产生的停车费，门店不负责。
+💳 用同一张卡付了好几次款的话，有时可以合并登记。（不同的卡不能合并）
+#q vi: Làm thế nào để được giảm phí gửi xe (đăng ký gửi xe)?
+#a vi
+🅿️ Đăng ký giảm phí gửi xe ở '주차등록' (Đăng ký gửi xe).
+
+🚫 Cửa hàng không giảm phí gửi xe
+- Cửa hàng Gwonseon (권선점)
+- Cửa hàng ga Dongbaek (동백역점)
+Hai cửa hàng này có bãi đỗ xe nhưng có thu phí.
+PrintShop Mini không giảm phí gửi xe ở đó. 🙏
+
+✅ Các cửa hàng khác hãy bấm vào hình dưới đây để đăng ký.
+
+📋 Mỗi cửa hàng có chính sách giảm phí gửi xe khác nhau!
+Khi chọn cửa hàng (chi nhánh) của bạn trên trang web, chính sách giảm phí của cửa hàng đó sẽ hiện ra.
+Hãy đọc kỹ chính sách rồi mới đăng ký giảm phí.
+
+👇 Trang đăng ký gửi xe sẽ mở ra.
+[[btn:images/faq/btn-parking2.png|https://fax.printnuri.com/parking|Đi đăng ký gửi xe]]
+💻 Trên màn hình nền máy tính cửa hàng cũng có biểu tượng [주차할인] (Giảm phí gửi xe). Có thể đăng ký ở đó.
+
+📝 Hãy làm thế này
+1. Ở [지점명] (Tên cửa hàng), chọn cửa hàng bạn đỗ xe. Thông tin giảm phí (thời gian, điều kiện) của cửa hàng đó sẽ hiện ra. Hãy đọc kỹ.
+2. Ở [카드 구분] (Loại thẻ), chọn cách bạn đã thanh toán.
+   - Samsung Pay · Apple Pay · thanh toán ở kiosk (đóng sách · ép): nhập [승인번호(8자리)] (số phê duyệt 8 số).
+   - Thẻ tín dụng (thẻ vật lý): nhập [앞 4자리] (4 số đầu) và [뒤 4자리] (4 số cuối) của số thẻ.
+3. Nhập [차량번호(4자리)] (biển số xe, 4 số).
+4. Bấm [검색] (Tìm kiếm). Tìm xe có thể mất một chút thời gian. Hãy chờ đến khi màn hình thay đổi.
+5. Kiểm tra biển số, giờ vào và ảnh xe có đúng không.
+6. Bấm [주차할인적용] (Áp dụng giảm phí), khi hiện "주차 할인권을 적용하시겠습니까?" (Áp dụng phiếu giảm phí?) thì bấm [주차할인적용] thêm một lần nữa.
+7. Khi hiện "주차 할인권이 등록되었습니다" (Đã đăng ký phiếu giảm phí) là xong.
+
+🔎 Muốn biết cách xem số phê duyệt, hãy bấm vào đây.
+[[go:faq.html#faq-6|Cách xem số phê duyệt Samsung Pay · Apple Pay]]
+
+⚠️ Nếu hiện những màn hình này, hãy làm thế này
+- "결제 정보를 찾을 수가 없습니다" (Không tìm thấy thông tin thanh toán): kiểm tra lại cửa hàng, loại thẻ, số thẻ (số phê duyệt).
+- "차량 정보를 찾을 수가 없습니다" (Không tìm thấy thông tin xe): kiểm tra lại biển số xe.
+- "결제하신 금액이 주차 할인을 받기 위한 최소 금액보다 적습니다" (Số tiền thanh toán thấp hơn mức tối thiểu): xem số tiền tối thiểu trong thông tin giảm phí của cửa hàng bạn.
+- "이미 주차 등록된 이력이 존재합니다" (Đã có lịch sử đăng ký): đã đăng ký bằng cùng giao dịch này rồi.
+- "등록이 실패하였습니다" (Đăng ký thất bại): hãy báo qua TalkTalk như hướng dẫn dưới đây.
+
+⚠️ Nếu không đăng ký được trên trang web, đừng lái xe ra mà hãy báo qua TalkTalk. (Ngày thường 9 giờ sáng–9 giờ tối có thể gọi điện)
+✉️ Nội dung gửi qua TalkTalk
+1. Tên cửa hàng
+2. Số liên lạc
+3. 4 số cuối biển số xe
+4. Sự cố (lỗi trang đăng ký giảm phí gửi xe)
+⏳ Hãy chờ trong cửa hàng một chút trong lúc quản lý kiểm tra. Phí gửi xe phát sinh do lái xe ra trước mà không liên hệ thì cửa hàng không chịu trách nhiệm.
+💳 Nếu thanh toán nhiều lần bằng cùng một thẻ, có trường hợp có thể gộp lại để đăng ký. (Không gộp được nhiều thẻ khác nhau)
+
+@@6
+#q en: I need a receipt. Can I get one?
+#a en
+🧾 You can get a receipt at '영수증신청' (Receipt request).
+👇 Tap the picture below to open the receipt request site.
+[[btn:images/faq/btn-receipt2.png|https://fax.printnuri.com/receipt|Go to receipt request]]
+💻 There is also a [영수증신청] (Receipt request) icon on the store PC desktop. You can apply there too.
+
+📝 Do this
+1. In [지점명] (Store name), choose the store where you paid.
+2. In [결제일자] (Payment date), choose the date you paid.
+3. In [카드 구분] (Card type), choose how you paid.
+   - Samsung Pay · Apple Pay · kiosk payment (binding · laminating): enter the [승인번호(8자리)] (8-digit approval number).
+   - Credit card (physical card): enter the [앞 4자리] (first 4 digits) and [뒤 4자리] (last 4 digits) of the card number.
+4. Press [검색] (Search). When your payments appear, check the one you need a receipt for.
+5. Choose the receipt type you want.
+   - Card receipt (image)
+   - Statement of transaction (PDF)
+6. Enter [고객명] (Customer name) and [고객연락처] (Customer contact). Add [비고] (Notes) if needed.
+7. Press [발급하기] (Issue), and when the window opens, press [다운로드] (Download) to save the file. Please wait a moment while the file is made.
+
+🔎 Where do I find the approval number?
+If you paid with Samsung Pay, tap the payment in the Samsung Pay app. The 8-digit [승인번호] (approval number) at ③ appears.
+[[img:images/faq/pay-approve-samsung.jpg]]
+If you paid with Apple Pay, check it in the Hyundai Card app as shown below.
+[[img:images/faq/pay-approve-apple.jpg]]
+
+⚠️ If "결제 정보를 찾을 수가 없습니다" (Payment info not found) appears, check the store, payment date and card number (approval number) again and search.
+💡 If you paid several times with the same card, the receipts may come out combined.
+#q zh: 我需要收据，可以拿到吗？
+#a zh
+🧾 收据可以在“영수증신청”（申请收据）中获取。
+👇 点下面的图片会打开申请收据的网站。
+[[btn:images/faq/btn-receipt2.png|https://fax.printnuri.com/receipt|去申请收据]]
+💻 店内电脑桌面上也有［영수증신청］（申请收据）图标，也可以在那里申请。
+
+📝 请这样做
+1. 在［지점명］（门店名称）中选择付款的门店。
+2. 在［결제일자］（付款日期）中选择付款的日期。
+3. 在［카드 구분］（卡类型）中选择自己的付款方式。
+   - 三星支付·Apple Pay·自助机付款（装订·塑封）：输入［승인번호(8자리)］（批准号 8 位）。
+   - 信用卡（实体卡）：输入卡号的［앞 4자리］（前 4 位）和［뒤 4자리］（后 4 位）。
+4. 按［검색］（搜索）。出现付款记录后，确认需要收据的那一笔。
+5. 选择想要的收据样式。
+   - 刷卡收据（图片）
+   - 交易明细单（PDF）
+6. 输入［고객명］（顾客姓名）和［고객연락처］（顾客联系方式）。需要的话也填写［비고］（备注）。
+7. 按［발급하기］（开具），出现窗口后按［다운로드］（下载）保存文件。生成文件期间请稍等。
+
+🔎 批准号在哪里看？
+用三星支付付款的话，在三星支付应用里点付款记录，会出现 ③ 号的 8 位［승인번호］（批准号）。
+[[img:images/faq/pay-approve-samsung.jpg]]
+用 Apple Pay 付款的话，像下图一样在现代卡应用里确认。
+[[img:images/faq/pay-approve-apple.jpg]]
+
+⚠️ 出现“결제 정보를 찾을 수가 없습니다”（找不到付款信息）的话，请重新确认门店、付款日期、卡号（批准号）再查询。
+💡 用同一张卡付了好几次款的话，收据可能会合并开出。
+#q vi: Tôi cần hóa đơn. Có lấy được không?
+#a vi
+🧾 Có thể lấy hóa đơn ở '영수증신청' (Yêu cầu hóa đơn).
+👇 Bấm vào hình dưới đây sẽ mở trang yêu cầu hóa đơn.
+[[btn:images/faq/btn-receipt2.png|https://fax.printnuri.com/receipt|Đi yêu cầu hóa đơn]]
+💻 Trên màn hình nền máy tính cửa hàng cũng có biểu tượng [영수증신청] (Yêu cầu hóa đơn). Có thể yêu cầu ở đó.
+
+📝 Hãy làm thế này
+1. Ở [지점명] (Tên cửa hàng), chọn cửa hàng bạn đã thanh toán.
+2. Ở [결제일자] (Ngày thanh toán), chọn ngày đã thanh toán.
+3. Ở [카드 구분] (Loại thẻ), chọn cách bạn đã thanh toán.
+   - Samsung Pay · Apple Pay · thanh toán ở kiosk (đóng sách · ép): nhập [승인번호(8자리)] (số phê duyệt 8 số).
+   - Thẻ tín dụng (thẻ vật lý): nhập [앞 4자리] (4 số đầu) và [뒤 4자리] (4 số cuối) của số thẻ.
+4. Bấm [검색] (Tìm kiếm). Khi lịch sử thanh toán hiện ra, kiểm tra giao dịch cần hóa đơn.
+5. Chọn kiểu hóa đơn bạn muốn.
+   - Hóa đơn thẻ (hình ảnh)
+   - Bảng kê giao dịch (PDF)
+6. Nhập [고객명] (Tên khách) và [고객연락처] (Số liên lạc). Nếu cần, ghi thêm [비고] (Ghi chú).
+7. Bấm [발급하기] (Xuất), khi cửa sổ hiện ra thì bấm [다운로드] (Tải xuống) để lưu tệp. Chờ một chút trong lúc tạo tệp.
+
+🔎 Số phê duyệt xem ở đâu?
+Nếu thanh toán bằng Samsung Pay, bấm vào giao dịch trong ứng dụng Samsung Pay. Số [승인번호] (số phê duyệt) 8 chữ số ở mục ③ sẽ hiện ra.
+[[img:images/faq/pay-approve-samsung.jpg]]
+Nếu thanh toán bằng Apple Pay, hãy xem trong ứng dụng thẻ Hyundai như hình dưới đây.
+[[img:images/faq/pay-approve-apple.jpg]]
+
+⚠️ Nếu hiện "결제 정보를 찾을 수가 없습니다" (Không tìm thấy thông tin thanh toán), hãy kiểm tra lại cửa hàng, ngày thanh toán, số thẻ (số phê duyệt) rồi tìm lại.
+💡 Nếu thanh toán nhiều lần bằng cùng một thẻ, hóa đơn có thể được gộp lại.
+
+@@70
+#q en: Refunds at a glance: what is and isn't refunded
+#a en
+📝 Please know this first
+- For a refund you must file a [환불접수] (Refund request). Without filing, there is no refund.
+- ⏰ You must file within 7 days of the problem. After 7 days, we can't process the refund.
+- Filing doesn't mean an instant refund. A manager checks it, processes only eligible cases, and tells you the result separately at the contact you gave.
+- Leave the problem print in the store when you file. If you don't leave it, there is no refund.
+[[btn:images/faq/btn-refund2.png|https://fax.printnuri.com/refund|Go to refund request]]
+💻 You can also file with the [환불신청] (Refund request) icon on the store PC desktop.
+
+✅ Eligible for a refund (processed after a manager checks)
+- Machine breakdown, paper jam, toner smudge
+- Blank pages because the printer machine broke
+- A long white line appears
+- Colors are smudged
+- A single color comes out like a gradient
+- Shapes unrelated to the original are printed all over
+- You paid but nothing printed after more than 10 minutes (don't pay again — contact us first)
+- Pages that didn't print because it stopped with "no paper" (only the pages that didn't print)
+- You chose the Color printer but it came out black and white (we partly cancel: the total minus the B&W price)
+- The fax failed ([전송실패], Send failed) because the receiving number was wrong (we cancel the payment)
+- You couldn't laminate or bind because the machine broke (only unused pouches and heat-binding covers are refunded)
+
+❌ Not refunded
+
+📌 You didn't file
+- You didn't file, or 7 days have passed
+- You didn't leave the print
+- You left the store without contacting us
+
+📌 You didn't check before paying
+- You paid without looking at the payment info screen (B&W/color, two-sided/one-sided, paper size, pages, price)
+- You paid without checking it was your document, or paid for other people's files too with [모두선택] (Select all)
+
+📌 You didn't read the guide or check the preview
+- It went wrong because you worked without reading the guide
+- You could see in the preview that content was cut off, but printed anyway
+- You printed without checking color/B&W in the preview (e.g. you chose the Color printer but printed even though the preview was black and white)
+- You printed a USB file without saving it to the PC, and it came out blank
+- You didn't save a compressed file to the PC, unzip it, and open the unzipped file by double-clicking before printing
+- You didn't save a file from email · cloud · web drive to the PC and open the saved file by double-clicking before printing
+
+📌 You put it in or typed it wrong
+- The original was put in wrong, so it came out blank or cut off (copy · scan · fax)
+- You typed the wrong fax number, but it was a working fax number, so it shows [전송완료] (Sent)
+
+📌 The colors are different (a color difference from the original is never refunded, for any reason)
+- It's different from the colors on the PC screen
+- The colors are different every time you copy the same original
+- Gold/silver comes out dark, highlighter colors don't show
+- The watermark doesn't show
+- You copied a paper that was already printed or copied, and part of it doesn't show
+- Pencil writing comes out faint, a scanned document is blurry
+
+📌 Other
+- Highlighter color in a Hangul file doesn't show (the Hangul viewer has no highlighter function)
+- The paper has tiny dots (specks)
+- The pages of a heat-bound book fall out (they didn't touch the glue evenly, weren't pushed all the way in, or you opened it without cooling for 10 minutes)
+
+📌 You paid again or paid twice
+- You paid again because nothing printed, and then your first print came out
+- You sent a fax again without waiting and paid twice
+- You paid twice by mistake at the Toss kiosk (refunded minus a fee)
+
+📌 Certificate · government sites
+- Problems from PC crashes while using sites where you get a document after paying, sites with limited print counts, or government/financial sites
+- The PC crashed because you didn't choose [증명서전용PIN9999] (certificate printer) for TOEIC, school transcripts/graduation certificates or Certpia (the certificate fee is not refunded)
+
+💳 If you paid at the Toss kiosk
+- It can't be cancelled on the card. We refund to a bank account.
+- In the refund request, choose [직접입력] (Enter directly) as the reason, and write the bank name, account number and account holder's name.
+
+👇 If you've read the above, please file a refund.
+[[btn:images/faq/btn-refund2.png|https://fax.printnuri.com/refund|Go to refund request]]
+💻 You can also file with the [환불신청] (Refund request) icon on the store PC desktop.
+
+📖 Tap below for more details.
+[[go:faq.html#faq-12|My print came out wrong. Can I get a refund?]]
+[[go:faq.html#faq-54|When and how are refunds processed?]]
+[[go:faq.html#faq-18|My print has lines or smudged colors]]
+[[go:faq.html#faq-17|I chose the Color printer but it came out black and white]]
+#q zh: 一眼看懂能退款和不能退款的情况
+#a zh
+📝 请先了解
+- 退款必须申请［환불접수］（退款申请）。不申请的话不予退款。
+- ⏰ 必须在出问题当天起 7 天内申请。超过 7 天无法退款。
+- 申请了也不是马上退款。管理员确认后只处理退款对象，结果另外通过申请时的联系方式通知您。
+- 有问题的打印件请留在店里再申请。不留下的话不予退款。
+[[btn:images/faq/btn-refund2.png|https://fax.printnuri.com/refund|去申请退款]]
+💻 也可以用店内电脑桌面上的［환불신청］（申请退款）图标申请。
+
+✅ 属于退款对象的情况（管理员确认后处理）
+- 机器故障、卡纸、碳粉晕开
+- 因复合机故障打印出白纸
+- 出现长长的白色条纹
+- 颜色晕开了
+- 单一颜色却像渐变一样打印出来
+- 整页打印出和原件无关的图形
+- 付款后过了 10 分钟还没打印出来（不要再付款，请先联系我们）
+- 打印中途显示“没有纸”而停下，没打印出来的页（只退没出来的部分）
+- 选了彩色打印机却打印成黑白（从总付款金额中减去黑白金额，部分取消剩下的部分）
+- 传真接收号码写错而［전송실패］（发送失败）的（取消付款）
+- 因塑封·热熔装订机器故障而没能使用的（只退没用的塑封膜、热熔装订封面）
+
+❌ 不能退款的情况
+
+📌 没有申请的
+- 没有申请或超过 7 天的
+- 没留下打印件的
+- 不联系就离开门店的
+
+📌 付款前没确认的
+- 没看收费信息窗口（黑白/彩色、双面/单面、纸张大小、页数、金额）就付款的
+- 没确认是不是自己的文件就付款的，用［모두선택］（全选）把别人的文件也一起付款的
+
+📌 没看使用方法或预览的
+- 没看说明的使用方法就操作，结果出错的
+- 预览中能看到内容被切掉，却照样打印的
+- 没在预览中确认彩色·黑白就打印的（例：选了彩色打印机，预览是黑白却照样打印）
+- U 盘文件没保存到电脑就打印，打印成白纸的
+- 压缩文件没有保存到电脑、解压后双击打开解压出的文件再打印的
+- 邮箱·云盘·网盘里的文件没有保存到电脑后双击打开保存的文件再打印的
+
+📌 自己放错或写错的
+- 原件放错而打印成白纸或被切掉的（复印·扫描·传真）
+- 传真号码写错，但那个号码是正在使用的传真，所以显示［전송완료］（发送完成）的
+
+📌 颜色不同（和原件颜色不同，无论什么理由都不退款）
+- 和电脑屏幕的颜色不一样
+- 同一张原件每次复印颜色都不一样
+- 金色·银色变暗、荧光色出不来
+- 水印出不来
+- 复印打印或复印过的纸，有一部分出不来
+- 铅笔字打得很淡、扫描文件模糊
+
+📌 其他
+- 韩文文件的荧光色出不来（韩文查看器没有荧光笔功能）
+- 纸上有小点（杂点）
+- 热熔装订的纸掉下来（没整齐地碰到胶、没深深地放进去，或没冷却 10 分钟就打开的）
+
+📌 重新付款或重复付款的
+- 付款后没打印出来就又付了一次，结果先付款的打印件出来了
+- 没等传真就重新发送，重复付款的
+- 在 Toss 自助机因不小心重复付款的（只退扣除手续费后的金额）
+
+📌 证书·政府网站
+- 使用付款后获取文件的网站、限制打印次数的网站、政府·金融机构网站时，电脑冲突造成的问题
+- 在 TOEIC、学校成绩·毕业证明、Certpia 没把打印机选为［증명서전용PIN9999］（证书专用）导致电脑死机的（证书发放费用不退）
+
+💳 在 Toss 自助机付款的话
+- 不能取消刷卡。会退到银行账户。
+- 申请退款时把理由选为［직접입력］（直接输入），写上银行名称、账号、账户持有人姓名。
+
+👇 确认了上面的内容后，请申请退款。
+[[btn:images/faq/btn-refund2.png|https://fax.printnuri.com/refund|去申请退款]]
+💻 也可以用店内电脑桌面上的［환불신청］（申请退款）图标申请。
+
+📖 更详细的内容请点下面。
+[[go:faq.html#faq-12|打印错了能退款吗？]]
+[[go:faq.html#faq-54|退款什么时候、怎么处理？]]
+[[go:faq.html#faq-18|打印出来有条纹或颜色晕开了]]
+[[go:faq.html#faq-17|选了彩色打印机却打印成了黑白]]
+#q vi: Xem nhanh: trường hợp được và không được hoàn tiền
+#a vi
+📝 Hãy biết trước điều này
+- Muốn hoàn tiền phải đăng ký [환불접수] (Đăng ký hoàn tiền). Không đăng ký thì không được hoàn tiền.
+- ⏰ Phải đăng ký trong vòng 7 ngày kể từ ngày xảy ra sự cố. Quá 7 ngày sẽ không được hoàn tiền.
+- Đăng ký không có nghĩa là được hoàn tiền ngay. Quản lý kiểm tra, chỉ xử lý trường hợp đủ điều kiện, và báo kết quả riêng qua số liên lạc đã đăng ký.
+- Hãy để lại bản in bị lỗi ở cửa hàng khi đăng ký. Không để lại thì không được hoàn tiền.
+[[btn:images/faq/btn-refund2.png|https://fax.printnuri.com/refund|Đi đăng ký hoàn tiền]]
+💻 Cũng có thể đăng ký bằng biểu tượng [환불신청] (Đăng ký hoàn tiền) trên màn hình nền máy tính cửa hàng.
+
+✅ Trường hợp được hoàn tiền (xử lý sau khi quản lý kiểm tra)
+- Máy hỏng, kẹt giấy, lem mực
+- Ra giấy trắng do máy in đa năng hỏng
+- Xuất hiện sọc trắng dài
+- Màu bị lem
+- Một màu mà in ra như chuyển màu
+- In ra hình không liên quan đến bản gốc khắp trang
+- Đã thanh toán nhưng quá 10 phút vẫn không in ra (đừng thanh toán lại, hãy liên hệ trước)
+- Trang không in ra vì máy dừng với thông báo "không có giấy" (chỉ phần không in ra)
+- Đã chọn máy in màu mà in ra đen trắng (hủy một phần: tổng tiền trừ giá đen trắng)
+- Fax bị [전송실패] (Gửi thất bại) vì ghi sai số nhận (hủy thanh toán)
+- Không ép hay đóng sách được vì máy hỏng (chỉ hoàn túi ép, bìa đóng nhiệt chưa dùng)
+
+❌ Trường hợp không được hoàn tiền
+
+📌 Không đăng ký
+- Không đăng ký hoặc đã quá 7 ngày
+- Không để lại bản in
+- Rời cửa hàng mà không liên hệ
+
+📌 Không kiểm tra trước khi thanh toán
+- Thanh toán mà không xem màn hình thông tin thanh toán (đen trắng/màu, 2 mặt/1 mặt, khổ giấy, số trang, số tiền)
+- Thanh toán mà không kiểm tra có phải tài liệu của mình, hoặc dùng [모두선택] (Chọn tất cả) thanh toán luôn cả tệp của người khác
+
+📌 Không xem hướng dẫn hoặc bản xem trước
+- Làm mà không xem hướng dẫn nên bị sai
+- Có thể thấy ở bản xem trước nội dung bị cắt nhưng vẫn in
+- In mà không kiểm tra màu·đen trắng ở bản xem trước (ví dụ: chọn máy in màu mà bản xem trước đen trắng vẫn in)
+- In tệp USB mà không lưu vào máy tính nên ra giấy trắng
+- Không lưu tệp nén vào máy tính, giải nén, rồi bấm đúp mở tệp đã giải nén để in
+- Không lưu tệp từ email · đám mây · ổ web vào máy tính rồi bấm đúp mở tệp đã lưu để in
+
+📌 Tự đặt sai hoặc ghi sai
+- Đặt sai bản gốc nên ra giấy trắng hoặc bị cắt (photo · scan · fax)
+- Ghi sai số fax nhưng số đó là số fax đang dùng nên hiện [전송완료] (Đã gửi)
+
+📌 Màu khác (màu khác với bản gốc không được hoàn tiền vì bất kỳ lý do gì)
+- Khác với màu trên màn hình máy tính
+- Photo cùng bản gốc mà mỗi lần màu lại khác
+- Màu vàng·bạc ra tối, màu dạ quang không ra
+- Hình mờ không ra
+- Photo lại giấy đã in hoặc đã photo mà một phần không ra
+- Chữ bút chì ra mờ, tài liệu scan bị mờ
+
+📌 Khác
+- Màu dạ quang trong tệp Hangul không ra (trình xem Hangul không có chức năng bút dạ quang)
+- Giấy có chấm nhỏ (vết lốm đốm)
+- Giấy trong cuốn đóng nhiệt bị rơi ra (không chạm đều vào keo, không đẩy vào sâu hết, hoặc mở ra mà không để nguội 10 phút)
+
+📌 Thanh toán lại hoặc thanh toán trùng
+- Thấy không in ra nên thanh toán lại, rồi bản in trước đó in ra
+- Không chờ fax mà gửi lại nên thanh toán trùng
+- Sơ ý thanh toán trùng ở kiosk Toss (chỉ hoàn lại số tiền sau khi trừ phí)
+
+📌 Chứng chỉ · trang web chính phủ
+- Sự cố do máy tính xung đột khi dùng trang web thanh toán xong mới nhận tài liệu, trang giới hạn số lần in, hoặc trang của cơ quan chính phủ·tài chính
+- Máy tính bị treo vì không chọn máy in [증명서전용PIN9999] (máy in chứng chỉ) cho TOEIC, bảng điểm·giấy chứng nhận tốt nghiệp của trường, Certpia (phí cấp chứng chỉ không được hoàn)
+
+💳 Nếu đã thanh toán ở kiosk Toss
+- Không hủy được trên thẻ. Chúng tôi hoàn tiền vào tài khoản ngân hàng.
+- Khi đăng ký hoàn tiền, chọn lý do là [직접입력] (Nhập trực tiếp), rồi ghi tên ngân hàng, số tài khoản, tên chủ tài khoản.
+
+👇 Nếu đã đọc nội dung trên, hãy đăng ký hoàn tiền.
+[[btn:images/faq/btn-refund2.png|https://fax.printnuri.com/refund|Đi đăng ký hoàn tiền]]
+💻 Cũng có thể đăng ký bằng biểu tượng [환불신청] (Đăng ký hoàn tiền) trên màn hình nền máy tính cửa hàng.
+
+📖 Bấm vào đây để xem chi tiết hơn.
+[[go:faq.html#faq-12|In sai thì có được hoàn tiền không?]]
+[[go:faq.html#faq-54|Hoàn tiền được xử lý khi nào và như thế nào?]]
+[[go:faq.html#faq-18|Bản in bị sọc hoặc lem màu]]
+[[go:faq.html#faq-17|Đã chọn máy in màu nhưng in ra đen trắng]]
+
+@@26
+#q en: The product I want to buy isn't on display.
+#a en
+📦 L-folders, document envelopes, slide-binder files, laminating pouches and heat-binding covers can only be paid for and used if they are on display.
+
+🙏 Please don't take out stock stored in the store without a manager's permission.
+
+What if the type or amount you want isn't there?
+- Use only what's on display.
+- Please come another day to buy the rest.
+
+🙏 We check the display stock often so you aren't inconvenienced. But it's hard to know when things will sell out, so you may not be able to buy what you want. We appreciate your understanding.
+#q zh: 想买的商品没有陈列。
+#a zh
+📦 L 型文件夹、文件袋、抽杆文件夹、塑封膜、热熔装订封面，只有陈列的才能付款使用。
+
+🙏 店里存放的库存，请不要未经管理员允许拿出来用。
+
+没有想要的种类或数量的话？
+- 只用陈列着的。
+- 其余的请改天来购买。
+
+🙏 我们会经常检查陈列库存，尽量不给您带来不便。但很难知道什么时候会卖完，所以您可能买不到想要的商品。敬请谅解。
+#q vi: Sản phẩm tôi muốn mua không có trên kệ.
+#a vi
+📦 Bìa kẹp chữ L, phong bì tài liệu, bìa kẹp thanh trượt, túi ép, bìa đóng nhiệt chỉ được thanh toán và dùng những cái đang bày trên kệ.
+
+🙏 Xin đừng tự ý lấy hàng tồn kho cất trong cửa hàng khi chưa được quản lý cho phép.
+
+Nếu không có loại hoặc số lượng bạn muốn?
+- Chỉ dùng những gì đang bày.
+- Phần còn lại hãy đến mua vào hôm khác.
+
+🙏 Chúng tôi thường xuyên kiểm tra hàng trên kệ để bạn không bất tiện. Nhưng khó biết khi nào hàng sẽ hết, nên bạn có thể không mua được sản phẩm mong muốn. Mong bạn thông cảm.
+
+@@27
+#q en: I paid at the Toss kiosk. Can I take a different product with the same price?
+#a en
+🙏 Please take exactly the product you paid for.
+
+L-folders, document envelopes and slide-binder files are currently (as of 2026) the same price: 600 won each. But we need to track stock, so swapping is hard.
+e.g.) If you paid for 1 L-folder (600 won) at Toss, take an L-folder. Please don't take a document envelope or slide-binder file.
+
+🙋 If you really need to swap, tell us on Naver TalkTalk.
+1. Scan the Naver TalkTalk QR posted in the store.
+2. Leave the store name, the product you paid for, and the product you took instead.
+It helps us a lot with checking stock. 🙏
+
+📅 Prices are scheduled to change from 2027.
+#q zh: 在 Toss 自助机付了款，可以拿同样价格的其他商品吗？
+#a zh
+🙏 请拿走付款的那件商品。
+
+L 型文件夹、文件袋、抽杆文件夹目前（2026 年）每个 600 韩元，价格一样。但需要核对库存，所以很难换着拿。
+例）在 Toss 上为 1 个 L 型文件夹（600 韩元）付了款的话，请拿 L 型文件夹。请不要拿文件袋或抽杆文件夹。
+
+🙋 一定要换着拿的话，请通过 Naver TalkTalk 告诉我们。
+1. 扫描店里贴着的 Naver TalkTalk 二维码。
+2. 留下门店名称、付款的商品、换着拿走的商品。
+这对核对库存帮助很大。🙏
+
+📅 价格预计从 2027 年起调整。
+#q vi: Tôi đã thanh toán ở kiosk Toss. Có thể lấy sản phẩm khác cùng giá không?
+#a vi
+🙏 Hãy lấy đúng sản phẩm bạn đã thanh toán.
+
+Bìa kẹp chữ L, phong bì tài liệu, bìa kẹp thanh trượt hiện nay (năm 2026) cùng giá 600 won một cái. Nhưng chúng tôi cần kiểm tra hàng tồn nên khó cho đổi.
+Ví dụ) Nếu đã thanh toán 1 bìa kẹp chữ L (600 won) ở Toss thì hãy lấy bìa kẹp chữ L. Xin đừng lấy phong bì hay bìa kẹp thanh trượt.
+
+🙋 Nếu thật sự cần đổi, hãy báo qua Naver TalkTalk.
+1. Quét mã QR Naver TalkTalk dán trong cửa hàng.
+2. Ghi lại tên cửa hàng, sản phẩm đã thanh toán, sản phẩm đã lấy thay.
+Điều này giúp ích rất nhiều cho việc kiểm tra hàng tồn. 🙏
+
+📅 Giá dự kiến sẽ thay đổi từ năm 2027.
+
+@@60
+#q en: I left without paying for a product.
+#a en
+🙏 Products are taken out after paying. It's okay if you forgot to pay.
+
+👉 If you noticed later, send this on Naver TalkTalk.
+- Store name
+- Contact number
+- The time you used the store
+- The type and number of products you used
+A manager will check and tell you how to pay.
+
+⚠️ Taking products without paying can be a legal problem. Please tell us as soon as you notice.
+💡 First check the products are there, pay first, then take them out.
+#q zh: 没付款就把商品拿走了。
+#a zh
+🙏 商品是付款后再拿出来用的。忘了付款也没关系。
+
+👉 后来发现的话，请通过 Naver TalkTalk 发送下面的内容。
+- 门店名称
+- 联系方式
+- 使用的时间段
+- 使用的商品种类和数量
+管理员确认后会告诉您付款方法。
+
+⚠️ 不付款拿走可能会成为法律问题。发现后请马上告诉我们。
+💡 商品请先确认有没有，先付款再拿出来用。
+#q vi: Tôi đã đi mà quên thanh toán sản phẩm.
+#a vi
+🙏 Sản phẩm phải thanh toán rồi mới lấy ra dùng. Quên thanh toán cũng không sao.
+
+👉 Nếu biết sau, hãy gửi những điều sau qua Naver TalkTalk.
+- Tên cửa hàng
+- Số liên lạc
+- Khoảng thời gian sử dụng
+- Loại và số lượng sản phẩm đã dùng
+Quản lý sẽ kiểm tra và hướng dẫn cách thanh toán.
+
+⚠️ Lấy mà không thanh toán có thể thành vấn đề pháp lý. Khi biết hãy báo ngay.
+💡 Hãy kiểm tra sản phẩm có sẵn không, thanh toán trước rồi mới lấy ra dùng.
+
+@@72
+#q en: Opening hours and store information (24 hours · phone support · Wi-Fi)
+#a en
+🏪 This is how PrintShop Mini works.
+
+⏰ Opening hours
+✅ Every store is open 24 hours a day, 365 days a year, with no days off.
+✅ Open on public holidays, Korean holidays, long weekends and temporary holidays too.
+🤖 It's an unmanned store with no staff. Customers do things themselves, and if there's a problem, contact us by phone or TalkTalk.
+
+📞 Phone support hours
+- Phone support is only on weekdays (Mon–Fri) 9 AM–9 PM.
+- The phone number is posted all around the store, such as on the PC desktop and monitors.
+🚫 No phone support on Saturdays, Sundays and public holidays.
+💬 At other times and on weekends/holidays, please contact us on Naver TalkTalk.
+
+📝 What to send on TalkTalk
+1. Store name (written on the PC desktop or the sign next to the PC)
+2. Printer machine number
+3. The problem
+4. Contact number
+A manager will contact you after checking.
+
+📍 Store location
+Search '프린트샵미니 + store name' on Naver to see the location, building name, floor and phone number.
+
+🚫 Please follow these rules
+- Pets are not allowed in the store.
+- Food is not allowed in the store either.
+Please help keep it clean and safe. 🙏
+
+📶 Free Wi-Fi
+- Wi-Fi name: PrintshopMini
+- Password: printshopmini
+- Type it exactly, with the same upper and lower case.
+💻 The store PCs have internet too.
+
+🏪 We don't run franchises yet. All PrintShop Mini stores are directly operated.
+
+📖 To see more
+[[go:faq.html#faq-28|Are stores open on long weekends and temporary holidays?]]
+[[go:faq.html#faq-61|Can I ask questions by phone?]]
+[[go:faq.html#faq-55|Can I bring pets or food into the store?]]
+[[go:faq.html#faq-62|Can I use Wi-Fi in the store?]]
+[[go:faq.html#faq-63|Can I open a franchise store?]]
+#q zh: 营业时间和门店运营说明（24 小时·电话咨询·Wi-Fi）
+#a zh
+🏪 PrintShop Mini 是这样运营的。
+
+⏰ 营业时间
+✅ 所有门店 24 小时、全年 365 天无休营业。
+✅ 公休日、节日、连休、临时公休日也营业。
+🤖 是店里没有员工的无人门店。需要的事情由顾客自己做，出了问题请通过电话或 TalkTalk 联系我们。
+
+📞 电话咨询时间
+- 只在工作日（周一~周五）上午 9 点~晚上 9 点提供电话咨询。
+- 电话号码写在店内电脑桌面、显示器等店里各处。
+🚫 周六、周日、公休日不提供电话咨询。
+💬 其他时间和周六·周日·公休日请通过 Naver TalkTalk 咨询。
+
+📝 通过 TalkTalk 发送的内容
+1. 门店名称（写在电脑桌面或电脑旁边的告示牌上）
+2. 复合机编号
+3. 问题内容
+4. 联系方式
+管理员确认后会联系您。
+
+📍 门店位置
+在 Naver 搜索“프린트샵미니 + 门店名”，会显示位置、建筑名、楼层、电话号码。
+
+🚫 使用时请遵守
+- 宠物不能进入门店。
+- 也不能带食物进来。
+请帮助我们保持干净安全。🙏
+
+📶 免费 Wi-Fi
+- Wi-Fi 名称：PrintshopMini
+- 密码：printshopmini
+- 请区分大小写，原样输入。
+💻 店内电脑也能上网。
+
+🏪 目前还不做加盟（特许经营）业务。现在运营的 PrintShop Mini 全部是直营店。
+
+📖 想看更详细的内容
+[[go:faq.html#faq-28|连休、临时公休日门店营业吗？]]
+[[go:faq.html#faq-61|可以打电话咨询吗？]]
+[[go:faq.html#faq-55|可以带宠物或食物进店吗？]]
+[[go:faq.html#faq-62|店里可以用 Wi-Fi 吗？]]
+[[go:faq.html#faq-63|可以开加盟店（特许经营）吗？]]
+#q vi: Giờ mở cửa và thông tin vận hành cửa hàng (24 giờ · tư vấn điện thoại · Wi-Fi)
+#a vi
+🏪 PrintShop Mini hoạt động như sau.
+
+⏰ Giờ mở cửa
+✅ Tất cả cửa hàng mở 24 giờ, 365 ngày, không nghỉ ngày nào.
+✅ Mở cửa cả ngày lễ, Tết, kỳ nghỉ dài và ngày nghỉ tạm thời.
+🤖 Đây là cửa hàng không người trực, không có nhân viên. Khách tự làm những việc cần thiết, nếu có sự cố hãy liên hệ qua điện thoại hoặc TalkTalk.
+
+📞 Giờ tư vấn qua điện thoại
+- Chỉ tư vấn qua điện thoại vào ngày thường (thứ 2–thứ 6) 9 giờ sáng–9 giờ tối.
+- Số điện thoại được ghi khắp cửa hàng như trên màn hình nền máy tính, màn hình.
+🚫 Thứ 7, Chủ nhật và ngày lễ không tư vấn qua điện thoại.
+💬 Ngoài giờ đó và thứ 7·Chủ nhật·ngày lễ, hãy liên hệ qua Naver TalkTalk.
+
+📝 Nội dung gửi qua TalkTalk
+1. Tên cửa hàng (ghi trên màn hình nền máy tính hoặc bảng thông báo cạnh máy tính)
+2. Số máy in đa năng
+3. Sự cố
+4. Số liên lạc
+Quản lý sẽ liên hệ sau khi kiểm tra.
+
+📍 Vị trí cửa hàng
+Tìm '프린트샵미니 + tên cửa hàng' trên Naver sẽ thấy vị trí, tên tòa nhà, tầng và số điện thoại.
+
+🚫 Khi sử dụng hãy tuân thủ
+- Không được mang thú cưng vào cửa hàng.
+- Cũng không được mang đồ ăn vào.
+Hãy giúp giữ cửa hàng sạch sẽ và an toàn. 🙏
+
+📶 Wi-Fi miễn phí
+- Tên Wi-Fi: PrintshopMini
+- Mật khẩu: printshopmini
+- Hãy nhập đúng chữ hoa, chữ thường.
+💻 Máy tính cửa hàng cũng có internet.
+
+🏪 Chúng tôi chưa làm nhượng quyền. Tất cả cửa hàng PrintShop Mini hiện nay đều do công ty trực tiếp vận hành.
+
+📖 Muốn xem chi tiết hơn
+[[go:faq.html#faq-28|Cửa hàng có mở vào kỳ nghỉ dài, ngày nghỉ tạm thời không?]]
+[[go:faq.html#faq-61|Có thể hỏi qua điện thoại không?]]
+[[go:faq.html#faq-55|Có thể mang thú cưng hoặc đồ ăn vào cửa hàng không?]]
+[[go:faq.html#faq-62|Có dùng Wi-Fi ở cửa hàng được không?]]
+[[go:faq.html#faq-63|Có thể mở cửa hàng nhượng quyền không?]]
+
+@@12
+#q en: My print came out wrong. Can I get a refund?
+#a en
+📝 For a refund you must file a 'refund request'!
+Without filing, there is no refund.
+⏰ You must file a refund within 7 days of the problem. If you don't file in time, we can't process the refund.
+👇 Tap the picture below to open the refund request site.
+[[btn:images/faq/btn-refund2.png|https://fax.printnuri.com/refund|Go to refund request]]
+💻 There is also a [환불신청] (Refund request) icon on the store PC desktop. You can file there too.
+
+✅ Refunded / handled
+Machine problems like printer breakdowns, paper jams, toner smudges and blank prints are handled by the store.
+(Blank prints only count when the printer machine is broken. Blank pages from user mistakes are not refunded.)
+
+❌ Hard to refund or reprint
+- It went wrong because you worked without reading the guide
+- It went wrong because you misunderstood the guide
+- Problems from PC crashes while using sites where you get a document after paying, sites with limited print counts, or government/financial sites (no compensation or refund)
+- The fee paid to issue a certificate when the PC crashed because you didn't choose [증명서전용PIN9999] (certificate printer) on TOEIC, school transcript/graduation certificate or Certpia sites (not refunded)
+- Content was cut off when printing (when you could have checked it in the preview)
+- You chose the Color printer but it printed in black and white (with the Color printer, the preview should be in color. You printed without changing options even though the preview was black and white, so you paid the color price but it printed in black and white)
+- You chose B&W, thought it would print in color because the preview was in color, and ask for a refund because it isn't in color
+- You printed a USB file without saving it to the PC, and it came out blank
+- You didn't save a compressed file to the PC, unzip it, and open the unzipped file by double-clicking before printing, so part or all came out blank
+- You didn't save a file from email · cloud · web drive to the PC and open the saved file by double-clicking before printing, so it came out wrong
+- The payment info screen showed B&W/color, two-sided/one-sided, paper size, pages and price before paying, but you paid without checking and then ask for a refund because it printed wrong
+
+⚠️ Always check the payment info screen before paying!
+The payment info screen appears on the printer machine before the final payment. It shows:
+- B&W/color
+- Two-sided/one-sided
+- Paper size
+- Number of pages
+- Price
+If you pay without checking and it prints, there is no refund.
+
+🤔 e.g.) You printed only 3 pages on the PC, but the printer machine asks for 2,500 won. 3 B&W pages can't cost that much.
+👉 If the pages or price are different from what you expect, don't pay.
+#q zh: 打印错了，能退款吗？
+#a zh
+📝 退款一定要申请“退款申请”！
+不申请的话不予退款。
+⏰ 必须在出问题当天起 7 天内申请退款。不在期限内申请的，无法退款。
+👇 点下面的图片会打开退款申请网站。
+[[btn:images/faq/btn-refund2.png|https://fax.printnuri.com/refund|去申请退款]]
+💻 店内电脑桌面上也有［환불신청］（申请退款）图标，也可以在那里申请。
+
+✅ 可以退款·处理的情况
+打印机故障、卡纸、碳粉晕开、打印出白纸这类机器问题，由门店处理。
+（打印出白纸也只限于复合机故障的情况。因使用者失误打出的白纸不予退款。）
+
+❌ 很难退款·重印的情况
+- 没看说明的使用方法就操作，结果出错的
+- 理解错说明的内容操作，结果出错的
+- 使用付款后获取文件的网站、限制打印次数的网站、政府·金融机构网站时，因电脑冲突造成的问题（不予赔偿和退款）
+- 在 TOEIC、学校成绩·毕业证明、Certpia 网站没把打印机选为［증명서전용PIN9999］（证书专用）导致电脑死机，为发放证书付的费用（不予退款）
+- 打印时内容被切掉的（可以用预览确认的情况）
+- 选了彩色打印机却打印成黑白的（选了彩色打印机，预览应该是彩色才正常。预览是黑白也没改选项就照样打印，结果按彩色价格付款却打印成黑白的情况）
+- 选了黑白，以为预览是彩色就会打印成彩色，结果说不是彩色要求退款的
+- U 盘文件没保存到电脑就打印，打印成白纸的
+- 压缩文件没有保存到电脑、解压后双击打开解压出的文件再打印，结果部分或全部打印成白纸的
+- 邮箱·云盘·网盘里的文件没有保存到电脑后双击打开保存的文件再打印，结果打印错的
+- 付款前收费信息窗口显示了黑白/彩色、双面/单面、纸张大小、页数、金额，却没确认就付款，之后说打印错了要求退款的
+
+⚠️ 付款前一定要确认收费信息窗口！
+在复合机上最终付款前会出现收费信息窗口。这个窗口会显示下面的内容。
+- 黑白/彩色
+- 双面/单面
+- 纸张大小
+- 页数
+- 金额
+没确认就付款打印出来的，不予退款。
+
+🤔 例）在电脑上只打印了 3 页，在复合机付款时却显示 2,500 韩元。如果是黑白 3 页，不可能这么多。
+👉 页数和金额和您知道的不一样的话，请不要付款。
+#q vi: In sai thì có được hoàn tiền không?
+#a vi
+📝 Muốn hoàn tiền nhất định phải 'đăng ký hoàn tiền'!
+Không đăng ký thì không được hoàn tiền.
+⏰ Phải đăng ký hoàn tiền trong vòng 7 ngày kể từ ngày xảy ra sự cố. Nếu không đăng ký đúng hạn, sẽ không được hoàn tiền.
+👇 Bấm vào hình dưới đây sẽ mở trang đăng ký hoàn tiền.
+[[btn:images/faq/btn-refund2.png|https://fax.printnuri.com/refund|Đi đăng ký hoàn tiền]]
+💻 Trên màn hình nền máy tính cửa hàng cũng có biểu tượng [환불신청] (Đăng ký hoàn tiền). Có thể đăng ký ở đó.
+
+✅ Được hoàn tiền·xử lý
+Lỗi máy như máy in hỏng, kẹt giấy, lem mực, ra giấy trắng thì cửa hàng xử lý.
+(Ra giấy trắng chỉ tính khi máy in đa năng hỏng. Giấy trắng do người dùng làm sai thì không hoàn tiền.)
+
+❌ Khó hoàn tiền·in lại
+- Làm mà không xem hướng dẫn nên bị sai
+- Hiểu sai hướng dẫn nên làm sai
+- Sự cố do máy tính xung đột khi dùng trang web thanh toán xong mới nhận tài liệu, trang giới hạn số lần in, hoặc trang của cơ quan chính phủ·tài chính (không bồi thường và không hoàn tiền)
+- Phí đã trả để cấp chứng chỉ khi máy tính bị treo vì không chọn máy in [증명서전용PIN9999] (máy in chứng chỉ) trên trang TOEIC, bảng điểm·giấy chứng nhận tốt nghiệp của trường, Certpia (không hoàn tiền)
+- Nội dung bị cắt khi in (trường hợp có thể kiểm tra bằng bản xem trước)
+- Đã chọn máy in màu nhưng in ra đen trắng (chọn máy in màu thì bản xem trước phải có màu mới đúng. Bản xem trước đen trắng mà vẫn không đổi tùy chọn và in luôn, nên trả giá màu mà in ra đen trắng)
+- Chọn đen trắng nhưng nghĩ bản xem trước có màu thì sẽ in màu, rồi yêu cầu hoàn tiền vì không ra màu
+- In tệp USB mà không lưu vào máy tính nên ra giấy trắng
+- Không lưu tệp nén vào máy tính, giải nén, rồi bấm đúp mở tệp đã giải nén để in, nên một phần hoặc toàn bộ ra giấy trắng
+- Không lưu tệp từ email · đám mây · ổ web vào máy tính rồi bấm đúp mở tệp đã lưu để in, nên in ra sai
+- Trước khi thanh toán, màn hình thông tin thanh toán đã hiện đen trắng/màu, 2 mặt/1 mặt, khổ giấy, số trang, số tiền mà vẫn thanh toán không kiểm tra, rồi yêu cầu hoàn tiền vì in sai
+
+⚠️ Trước khi thanh toán nhất định kiểm tra màn hình thông tin thanh toán!
+Trước khi thanh toán lần cuối, máy in đa năng sẽ hiện màn hình thông tin thanh toán. Màn hình này hiện:
+- Đen trắng/màu
+- 2 mặt/1 mặt
+- Khổ giấy
+- Số trang
+- Số tiền
+Nếu thanh toán mà không kiểm tra rồi in ra thì không được hoàn tiền.
+
+🤔 Ví dụ) Trên máy tính chỉ in 3 trang mà khi thanh toán ở máy in đa năng lại hiện 2.500 won. 3 trang đen trắng không thể nhiều như vậy.
+👉 Nếu số trang và số tiền khác với điều bạn biết, đừng thanh toán.
+
+@@54
+#q en: When and how are refunds processed?
+#a en
+📝 Refunds are processed after you file a refund request and a manager checks it.
+⏰ You must file a refund within 7 days of the problem. If you don't file in time, we can't process the refund.
+
+1. File it with the [환불신청] (Refund request) icon on the store PC desktop or on the refund request site.
+2. Write the last digits of your card, the amount, the time and the problem.
+3. Leave the problem print in the store when you file. (If you don't leave it, there is no refund)
+4. A manager checks what you filed.
+5. If a refund is possible, it's usually processed the next day. If card cancellation is hard, we refund to a bank account.
+
+ℹ️ A manager tells you separately whether you'll get a refund, at the contact you gave.
+💡 If you have a reason you can't leave the print, ask a manager on Naver TalkTalk.
+
+💳 Toss kiosk payments are refunded like this.
+- They can't be cancelled electronically. We refund to a bank account.
+- When filing, choose [직접입력] (Enter directly) as the reason and enter the bank name, account number and account holder's name.
+- If you paid twice at the Toss kiosk by your own mistake, we send back the amount minus the fee. Never pay twice.
+- There are warnings posted on the Toss kiosk, so please read them.
+[[btn:images/faq/btn-refund2.png|https://fax.printnuri.com/refund|Go to refund request]]
+#q zh: 退款什么时候、怎么处理？
+#a zh
+📝 退款是在您申请退款后，由管理员确认后处理。
+⏰ 必须在出问题当天起 7 天内申请退款。不在期限内申请的，无法退款。
+
+1. 在店内电脑桌面上的［환불신청］（申请退款）图标或退款申请网站上申请。
+2. 填写卡号后几位、金额、时间、问题内容。
+3. 有问题的打印件请留在店里再申请。（不留下的话不予退款）
+4. 管理员确认申请的内容。
+5. 可以退款的话，通常第二天处理。刷卡取消有困难的话，退到银行账户。
+
+ℹ️ 是否退款，管理员会通过申请时的联系方式另外通知您。
+💡 如果有不能留下打印件的情况，请通过 Naver TalkTalk 咨询管理员。
+
+💳 在 Toss 自助机付的款，退款这样处理。
+- 不能在系统上取消付款。会退到银行账户。
+- 申请退款时把理由选为［직접입력］（直接输入），输入银行名称、账号、账户持有人姓名。
+- 因顾客自己不小心在 Toss 自助机重复付款的，会扣除手续费后退回。绝对不要重复付款。
+- Toss 自助机上贴着注意事项，请一定阅读。
+[[btn:images/faq/btn-refund2.png|https://fax.printnuri.com/refund|去申请退款]]
+#q vi: Hoàn tiền được xử lý khi nào và như thế nào?
+#a vi
+📝 Hoàn tiền được xử lý sau khi bạn đăng ký hoàn tiền và quản lý kiểm tra.
+⏰ Phải đăng ký hoàn tiền trong vòng 7 ngày kể từ ngày xảy ra sự cố. Nếu không đăng ký đúng hạn, sẽ không được hoàn tiền.
+
+1. Đăng ký bằng biểu tượng [환불신청] (Đăng ký hoàn tiền) trên màn hình nền máy tính cửa hàng hoặc trên trang đăng ký hoàn tiền.
+2. Ghi các số cuối của thẻ, số tiền, thời gian và sự cố.
+3. Hãy để lại bản in bị lỗi ở cửa hàng khi đăng ký. (Không để lại thì không được hoàn tiền)
+4. Quản lý kiểm tra nội dung đã đăng ký.
+5. Nếu hoàn tiền được, thường được xử lý vào hôm sau. Nếu khó hủy trên thẻ, sẽ hoàn vào tài khoản ngân hàng.
+
+ℹ️ Quản lý sẽ báo riêng có được hoàn tiền hay không qua số liên lạc đã đăng ký.
+💡 Nếu có lý do không thể để lại bản in, hãy hỏi quản lý qua Naver TalkTalk.
+
+💳 Tiền thanh toán ở kiosk Toss được hoàn như sau.
+- Không hủy thanh toán trên hệ thống được. Chúng tôi hoàn tiền vào tài khoản ngân hàng.
+- Khi đăng ký hoàn tiền, chọn lý do là [직접입력] (Nhập trực tiếp) rồi nhập tên ngân hàng, số tài khoản, tên chủ tài khoản.
+- Nếu bạn sơ ý thanh toán trùng ở kiosk Toss, chúng tôi gửi lại số tiền sau khi trừ phí. Tuyệt đối đừng thanh toán trùng.
+- Trên kiosk Toss có dán lưu ý, hãy đọc kỹ.
+[[btn:images/faq/btn-refund2.png|https://fax.printnuri.com/refund|Đi đăng ký hoàn tiền]]
+
+@@32
+#q en: I want to check the fax I sent.
+#a en
+📠 Look up sent faxes at '팩스확인' (Fax check).
+🔎 Enter the receiver's fax number.
+👇 Tap the picture to open the site.
+[[btn:images/faq/btn-faxcheck2.png|https://fax.printnuri.com/webfax|Check fax sending result]]
+💻 There is also a [팩스확인] (Fax check) icon on the store PC desktop. You can check there too.
+
+📝 Do this
+1. In [수신 번호] (Receiving number), enter the number of the place receiving the fax.
+2. Press [검색] (Search).
+3. In the table, check [전송 시간] (Send time), [전송 지점명] (Sending store), [수신 번호] (Receiving number), [페이지 수] (Pages), [전송 결과] (Result) and [수신 시간] (Received time).
+
+⏳ 1. Faxes may be slow
+It's an internet fax, so it's slower than a phone-line fax.
+It may take a while depending on the connection and the number of pages.
+👍 If you have many pages, send them 30 at a time!
+⚠️ If you send it again without waiting, you'll pay twice. Double payments are not refunded.
+
+🔍 2. Please wait even if nothing shows up at all
+It's an internet fax, so lookups can be a bit slow.
+If you enter the receiving number and nothing shows up
+1. ⏰ Look it up again after 5–10 minutes.
+2. ⛔ Don't send the fax again and pay twice just because it doesn't show up!
+3. 💬 Check with a manager first.
+   Send these 2 things on Naver TalkTalk.
+   - Store name
+   - Last 4 digits of the card you paid with
+4. ✅ A manager checks and tells you.
+
+📖 Tap here for the picture guide.
+[[go:guide-fax.html#fax|How to check the fax sending result]]
+#q zh: 我想确认发出的传真。
+#a zh
+📠 发出的传真在“팩스확인”（传真确认）中查询。
+🔎 请输入接收方的传真号码（接收号码）。
+👇 点图片会打开网站。
+[[btn:images/faq/btn-faxcheck2.png|https://fax.printnuri.com/webfax|确认传真发送结果]]
+💻 店内电脑桌面上也有［팩스확인］（传真确认）图标，也可以在那里确认。
+
+📝 请这样做
+1. 在［수신 번호］（接收号码）中输入接收传真的号码。
+2. 按［검색］（搜索）。
+3. 在表格中确认［전송 시간］（发送时间）、［전송 지점명］（发送门店）、［수신 번호］（接收号码）、［페이지 수］（页数）、［전송 결과］（发送结果）、［수신 시간］（接收时间）。
+
+⏳ 1. 传真可能会慢
+因为是网络传真，比电话（有线）传真慢。
+根据网络状况和原件数量，可能需要较长时间。
+👍 数量多的话，请每 30 张分开发送！
+⚠️ 不等就重新发送的话会重复付款。重复付款的不予退款。
+
+🔍 2. 完全查不到也请等待
+因为是网络传真，查询可能会有点慢。
+输入接收号码查询却什么都没有的话
+1. ⏰ 5~10 分钟后再查询试试。
+2. ⛔ 不要因为查不到就重新发送传真重复付款！
+3. 💬 请先向管理员确认。
+   请通过 Naver TalkTalk 发送下面 2 项。
+   - 门店名称
+   - 付款卡号后 4 位
+4. ✅ 管理员确认后会告诉您。
+
+📖 点这里查看详细的图片说明。
+[[go:guide-fax.html#fax|详细查看确认传真发送结果的方法]]
+#q vi: Tôi muốn kiểm tra fax đã gửi.
+#a vi
+📠 Tra cứu fax đã gửi ở '팩스확인' (Kiểm tra fax).
+🔎 Hãy nhập số fax của nơi nhận (số nhận).
+👇 Bấm vào hình sẽ mở trang web.
+[[btn:images/faq/btn-faxcheck2.png|https://fax.printnuri.com/webfax|Kiểm tra kết quả gửi fax]]
+💻 Trên màn hình nền máy tính cửa hàng cũng có biểu tượng [팩스확인] (Kiểm tra fax). Có thể kiểm tra ở đó.
+
+📝 Hãy làm thế này
+1. Ở [수신 번호] (Số nhận), nhập số của nơi nhận fax.
+2. Bấm [검색] (Tìm kiếm).
+3. Trong bảng, kiểm tra [전송 시간] (Giờ gửi), [전송 지점명] (Cửa hàng gửi), [수신 번호] (Số nhận), [페이지 수] (Số trang), [전송 결과] (Kết quả) và [수신 시간] (Giờ nhận).
+
+⏳ 1. Fax có thể đến chậm
+Vì là fax qua internet nên chậm hơn fax qua đường điện thoại.
+Có thể mất thời gian tùy kết nối và số tờ.
+👍 Nếu nhiều tờ, hãy chia ra mỗi lần 30 tờ!
+⚠️ Nếu không chờ mà gửi lại sẽ bị thanh toán trùng. Thanh toán trùng không được hoàn tiền.
+
+🔍 2. Dù tra không ra gì cũng hãy chờ
+Vì là fax qua internet nên tra cứu có thể hơi chậm.
+Nếu nhập số nhận để tra mà không ra gì
+1. ⏰ Hãy tra lại sau 5–10 phút.
+2. ⛔ Đừng vì tra không ra mà gửi lại fax rồi thanh toán trùng!
+3. 💬 Hãy hỏi quản lý trước.
+   Gửi 2 điều sau qua Naver TalkTalk.
+   - Tên cửa hàng
+   - 4 số cuối của thẻ đã thanh toán
+4. ✅ Quản lý sẽ kiểm tra và hướng dẫn.
+
+📖 Bấm vào đây để xem hướng dẫn bằng hình.
+[[go:guide-fax.html#fax|Xem cách kiểm tra kết quả gửi fax]]
+
+@@35
+#q en: The other person says they didn't receive my fax.
+#a en
+"Didn't receive it" can mean two things.
+First check the sending result on the fax check site. (See 'I want to check the fax I sent' above)
+
+❌ 1. It wasn't sent ([전송실패], Send failed)
+If the fax check site says [전송실패] (Send failed), try in this order.
+
+🔢 ① First check again that the receiving fax number is correct.
+
+✅ ② If the number is correct
+It may have failed because of a temporary connection problem.
+- Press [재전송] (Resend) on the fax check site.
+- ⚠️ You can resend only once.
+- Wait a moment, then check the sending result again.
+
+❌ ③ If it shows [전송실패] (Send failed) because the number was wrong
+👉 Please file a refund. We'll cancel the payment.
+
+⚠️ But if you typed the wrong number and that number is a working fax number, so it shows [전송완료] (Sent), we can't refund you.
+
+📄 2. They received a blank page, or the content was cut off
+This happens when the original is put in the wrong way.
+
+📌 The ADF is the 'place to put originals' on top of the printer machine.
+[[sm:images/common/adf-feeder.jpg]]- They received a blank page
+  → The original had to go into the document feeder (ADF) with the content facing up, but it was put in with the content facing down.
+- The content was cut off
+  → The content was facing up, but the short edge of the original went to the left instead of the long edge.
+
+📝 Please file a refund first.
+- A manager checks it and tells you separately at the contact you gave whether you'll get a refund.
+- If the customer put the original in wrong, we can't refund. (Because the original has already become data and was sent to the fax server)
+
+⏰ You must file a refund within 7 days of the problem. If you don't file in time, we can't process the refund.
+
+👇 File a refund with the picture below.
+[[btn:images/faq/btn-refund2.png|https://fax.printnuri.com/refund|Go to refund request]]
+💻 You can also file with the [환불신청] (Refund request) icon on the store PC desktop.
+
+📖 Tap here for the picture guide.
+[[go:guide-fax.html#fax|How to send a fax]]
+#q zh: 对方说没收到传真。
+#a zh
+对方说没收到，可能有两种意思。
+请先在传真确认网站上确认发送结果。（参考上面的“我想确认发出的传真”）
+
+❌ 1. 没有发送成功的情况（［전송실패］发送失败）
+传真确认网站上显示［전송실패］（发送失败）的话，请按下面的顺序做。
+
+🔢 ① 先重新确认接收的传真号码对不对。
+
+✅ ② 号码正确的话
+可能是暂时的通信问题导致失败。
+- 请在传真确认网站上按［재전송］（重新发送）。
+- ⚠️ 只能重新发送一次。
+- 稍等后再确认发送结果。
+
+❌ ③ 因号码错误而显示［전송실패］（发送失败）的话
+👉 请申请退款。会取消付款。
+
+⚠️ 但是，号码输错了，而那个号码是正在使用的传真号码，所以显示［전송완료］（发送完成）的话，无法退款。
+
+📄 2. 收到白纸，或内容被切掉的情况
+原件放法不对就会这样。
+
+📌 ADF 是复合机上方“放原件的地方”。
+[[sm:images/common/adf-feeder.jpg]]- 收到的是白纸
+  → 原件本应内容朝上放进 ADF（放原件的地方），却把内容朝下放进去了。
+- 内容被切掉了
+  → 内容朝上放了，但原件不是长边，而是短边朝左放进去了。
+
+📝 请先申请退款。
+- 管理员确认后，会通过申请时的联系方式另外通知是否退款。
+- 顾客把原件放错的，无法退款。（因为原件已经变成数据，发送到传真服务器了）
+
+⏰ 必须在出问题当天起 7 天内申请退款。不在期限内申请的，无法退款。
+
+👇 退款请点下面的图片申请。
+[[btn:images/faq/btn-refund2.png|https://fax.printnuri.com/refund|去申请退款]]
+💻 也可以用店内电脑桌面上的［환불신청］（申请退款）图标申请。
+
+📖 点这里查看详细的图片说明。
+[[go:guide-fax.html#fax|详细查看发传真的方法]]
+#q vi: Người nhận nói không nhận được fax.
+#a vi
+"Không nhận được" có thể có hai nghĩa.
+Trước tiên hãy kiểm tra kết quả gửi trên trang kiểm tra fax. (Xem câu 'Tôi muốn kiểm tra fax đã gửi' ở trên)
+
+❌ 1. Không gửi được ([전송실패], Gửi thất bại)
+Nếu trang kiểm tra fax hiện [전송실패] (Gửi thất bại), hãy làm theo thứ tự sau.
+
+🔢 ① Trước tiên kiểm tra lại số fax nhận có đúng không.
+
+✅ ② Nếu số đúng
+Có thể thất bại do sự cố kết nối tạm thời.
+- Bấm [재전송] (Gửi lại) trên trang kiểm tra fax.
+- ⚠️ Chỉ gửi lại được một lần.
+- Chờ một chút rồi kiểm tra lại kết quả gửi.
+
+❌ ③ Nếu bị [전송실패] (Gửi thất bại) vì sai số
+👉 Hãy đăng ký hoàn tiền. Chúng tôi sẽ hủy thanh toán.
+
+⚠️ Nhưng nếu nhập sai số mà số đó là số fax đang dùng nên hiện [전송완료] (Đã gửi), chúng tôi không thể hoàn tiền.
+
+📄 2. Người nhận nhận được trang trắng, hoặc nội dung bị cắt
+Điều này xảy ra khi đặt bản gốc sai cách.
+
+📌 ADF là 'chỗ đặt bản gốc' ở phía trên máy in đa năng.
+[[sm:images/common/adf-feeder.jpg]]- Nhận được trang trắng
+  → Bản gốc phải đặt vào khay nạp (ADF) với mặt có nội dung hướng lên, nhưng lại đặt úp nội dung xuống.
+- Nội dung bị cắt
+  → Đã đặt nội dung hướng lên, nhưng cạnh ngắn của bản gốc lại về bên trái thay vì cạnh dài.
+
+📝 Trước tiên hãy đăng ký hoàn tiền.
+- Quản lý kiểm tra rồi báo riêng có được hoàn tiền hay không qua số liên lạc đã đăng ký.
+- Nếu khách đặt sai bản gốc, chúng tôi không thể hoàn tiền. (Vì bản gốc đã thành dữ liệu và đã gửi xong đến máy chủ fax)
+
+⏰ Phải đăng ký hoàn tiền trong vòng 7 ngày kể từ ngày xảy ra sự cố. Nếu không đăng ký đúng hạn, sẽ không được hoàn tiền.
+
+👇 Hãy đăng ký hoàn tiền bằng hình bên dưới.
+[[btn:images/faq/btn-refund2.png|https://fax.printnuri.com/refund|Đi đăng ký hoàn tiền]]
+💻 Cũng có thể đăng ký bằng biểu tượng [환불신청] (Đăng ký hoàn tiền) trên màn hình nền máy tính cửa hàng.
+
+📖 Bấm vào đây để xem hướng dẫn bằng hình.
+[[go:guide-fax.html#fax|Xem cách gửi fax]]
+
+@@28
+#q en: Are stores open on long weekends and temporary holidays?
+#a en
+✅ Yes, we're open 24 hours a day, 365 days a year, with no days off.
+
+Every PrintShop Mini store is registered on Naver Smart Place.
+📍 Search on Naver to check the location, building name and floor before you visit.
+#q zh: 连休、临时公休日门店营业吗？
+#a zh
+✅ 是的，全年 365 天 24 小时无休营业。
+
+PrintShop Mini 运营的所有门店都在 Naver Smart Place 上登记了。
+📍 请在 Naver 上搜索，确认位置、建筑名、楼层后再来。
+#q vi: Cửa hàng có mở vào kỳ nghỉ dài, ngày nghỉ tạm thời không?
+#a vi
+✅ Có, chúng tôi mở 24 giờ, 365 ngày, không nghỉ ngày nào.
+
+Tất cả cửa hàng PrintShop Mini đều đã đăng ký trên Naver Smart Place.
+📍 Hãy tìm trên Naver để xem vị trí, tên tòa nhà, tầng rồi mới đến.
+
+@@55
+#q en: Can I bring pets or food into the store?
+#a en
+❌ Pets are not allowed in the store.
+❌ Food is not allowed in the store either.
+
+Please help keep it clean and safe. 🙏
+#q zh: 可以带宠物或食物进店吗？
+#a zh
+❌ 宠物不能进入门店。
+❌ 也不能带食物进来。
+
+请帮助我们保持干净安全。🙏
+#q vi: Có thể mang thú cưng hoặc đồ ăn vào cửa hàng không?
+#a vi
+❌ Không được mang thú cưng vào cửa hàng.
+❌ Cũng không được mang đồ ăn vào.
+
+Hãy giúp giữ cửa hàng sạch sẽ và an toàn. 🙏
+
+@@61
+#q en: Can I ask questions by phone?
+#a en
+📞 The phone number is posted all around the store. (PC desktop, monitors, etc.)
+🔎 Or search '프린트샵미니 + store name' on Naver to find the phone number.
+📞 But phone support is only on weekdays (Mon–Fri) 9 AM–9 PM.
+🚫 No phone support on Saturdays, Sundays and public holidays.
+💬 At other times and on weekends/holidays, please contact us on Naver TalkTalk.
+
+📝 What to send on TalkTalk
+1. Store name
+2. The problem
+3. Contact number
+
+💡 The store name is written on the PC desktop or the sign next to the PC.
+💡 The phone number is posted in the store.
+#q zh: 可以打电话咨询吗？
+#a zh
+📞 电话号码写在店里各处。（电脑桌面、显示器等）
+🔎 或者在 Naver 搜索“프린트샵미니 + 门店名”，会显示电话号码。
+📞 但是，电话咨询只在工作日（周一~周五）上午 9 点~晚上 9 点。
+🚫 周六、周日、公休日不提供电话咨询。
+💬 其他时间和周六·周日·公休日请通过 Naver TalkTalk 咨询。
+
+📝 通过 TalkTalk 发送的内容
+1. 门店名称
+2. 问题内容
+3. 联系方式
+
+💡 门店名称写在电脑桌面或电脑旁边的告示牌上。
+💡 电话号码写在店里。
+#q vi: Có thể hỏi qua điện thoại không?
+#a vi
+📞 Số điện thoại được ghi khắp cửa hàng. (Màn hình nền máy tính, màn hình, v.v.)
+🔎 Hoặc tìm '프린트샵미니 + tên cửa hàng' trên Naver để thấy số điện thoại.
+📞 Nhưng chỉ tư vấn qua điện thoại vào ngày thường (thứ 2–thứ 6) 9 giờ sáng–9 giờ tối.
+🚫 Thứ 7, Chủ nhật và ngày lễ không tư vấn qua điện thoại.
+💬 Ngoài giờ đó và thứ 7·Chủ nhật·ngày lễ, hãy liên hệ qua Naver TalkTalk.
+
+📝 Nội dung gửi qua TalkTalk
+1. Tên cửa hàng
+2. Sự cố
+3. Số liên lạc
+
+💡 Tên cửa hàng ghi trên màn hình nền máy tính hoặc bảng thông báo cạnh máy tính.
+💡 Số điện thoại được ghi trong cửa hàng.
+
+@@62
+#q en: Can I use Wi-Fi in the store?
+#a en
+✅ Yes, you can use free Wi-Fi.
+
+📶 Wi-Fi name: PrintshopMini
+🔑 Password: printshopmini
+
+💡 Type it exactly, with the same upper and lower case.
+💻 The store PCs have internet too.
+#q zh: 店里可以用 Wi-Fi 吗？
+#a zh
+✅ 可以，能用免费 Wi-Fi。
+
+📶 Wi-Fi 名称：PrintshopMini
+🔑 密码：printshopmini
+
+💡 请区分大小写，原样输入。
+💻 店内电脑也能上网。
+#q vi: Có dùng Wi-Fi ở cửa hàng được không?
+#a vi
+✅ Được, có Wi-Fi miễn phí.
+
+📶 Tên Wi-Fi: PrintshopMini
+🔑 Mật khẩu: printshopmini
+
+💡 Hãy nhập đúng chữ hoa, chữ thường.
+💻 Máy tính cửa hàng cũng có internet.
+
+@@68
+#q en: I paid and it was printing fine, then it suddenly said "no paper" and stopped printing.
+#a en
+😮 Was it printing fine and then suddenly stopped saying "no matching paper"?
+This happens because the PDF file has a page with a different size.
+
+🔎 Why does this happen?
+- It can happen even if the sizes in the machine's list all look right (A4·B4·A3).
+- Some page in the PDF may not be A4·B4·A3 size.
+  e.g.) In a 10-page PDF, one of pages 2–10 has a different size
+- When printing reaches that page, it says "no matching paper".
+- It's hard to know in advance. You only find out when you actually print.
+
+✅ How to prevent it (always do this before printing)
+1. Open the PDF files one at a time.
+2. In the print options, find 'PDF 페이지 크기에 따라 용지 소스 선택' (choose paper source by PDF page size).
+3. Be sure to uncheck that box.
+4. Send the print job again, starting from the part that didn't print.
+5. Go to the printer machine and pay.
+💡 When sending several files together, uncheck it in every PDF file.
+
+💸 Already paid and some parts didn't print?
+1. File a refund with the [환불신청] (Refund request) icon on the PC desktop.
+2. For the payment amount, write what you actually paid.
+3. For the refund amount, calculate and write the price of the parts that didn't print.
+⏰ You must file within 7 days of the problem. If you didn't file, or filed after 7 days, there is no refund.
+ℹ️ Filing doesn't mean an instant refund. A manager checks it, processes only eligible cases, and tells you the result at the contact you gave.
+
+📖 Tap here for the PDF print settings pictures.
+[[go:guide-print.html#acrobat|See PDF print settings]]
+#q zh: 付款后打印得好好的，突然显示“没有纸”，打印不了。
+#a zh
+😮 打印得好好的，突然显示“没有合适的纸张”就停了吗？
+这是因为 PDF 文件里有尺寸不同的页面。
+
+🔎 为什么会这样？
+- 即使复合机列表上的尺寸看起来都是 A4·B4·A3，也可能出现。
+- PDF 里的某一页可能不是 A4·B4·A3 尺寸。
+  例）10 页的 PDF 中，第 2~10 页里有一页尺寸不同
+- 打印到那一页时，就会显示“没有合适的纸张”。
+- 很难事先知道。只有实际打印才知道。
+
+✅ 这样就能预防（打印前一定要做）
+1. 一个一个打开 PDF 文件。
+2. 在打印选项中找到“PDF 페이지 크기에 따라 용지 소스 선택”（按 PDF 页面大小选择纸张来源）。
+3. 一定要取消这一栏的勾选。
+4. 从没打印出来的部分开始重新发送打印。
+5. 到复合机上付款。
+💡 一起发送多个文件时，请在所有 PDF 文件中都取消勾选。
+
+💸 已经付款了，却有没打印出来的部分？
+1. 用电脑桌面上的［환불신청］（申请退款）图标申请退款。
+2. 付款金额填写实际付款的金额。
+3. 退款金额计算没打印出来部分的金额后填写。
+⏰ 必须在出问题当天起 7 天内申请。没有申请或超过 7 天申请的，不予退款。
+ℹ️ 申请了也不是马上退款。管理员确认后只处理符合条件的，结果会通过申请时填写的联系方式通知您。
+
+📖 PDF 打印设置的图片请点这里。
+[[go:guide-print.html#acrobat|查看 PDF 打印设置]]
+#q vi: Đã thanh toán và đang in bình thường, bỗng hiện "không có giấy" và không in được.
+#a vi
+😮 Đang in bình thường thì bỗng dừng và hiện "không có giấy phù hợp"?
+Điều này xảy ra vì trong tệp PDF có trang khác khổ.
+
+🔎 Tại sao lại như vậy?
+- Có thể xảy ra dù khổ giấy trong danh sách trên máy trông đều đúng (A4·B4·A3).
+- Một trang nào đó trong PDF có thể không phải khổ A4·B4·A3.
+  Ví dụ) Trong tệp PDF 10 trang, một trong các trang 2–10 có khổ khác
+- Khi in đến trang đó, máy sẽ báo "không có giấy phù hợp".
+- Khó biết trước. Chỉ khi in thật mới biết.
+
+✅ Cách phòng tránh (nhất định làm trước khi in)
+1. Mở từng tệp PDF.
+2. Trong tùy chọn in, tìm 'PDF 페이지 크기에 따라 용지 소스 선택' (chọn nguồn giấy theo khổ trang PDF).
+3. Nhất định bỏ dấu chọn ở ô đó.
+4. Gửi lại lệnh in, bắt đầu từ phần chưa in ra.
+5. Đến máy in đa năng và thanh toán.
+💡 Khi gửi nhiều tệp cùng lúc, hãy bỏ dấu chọn ở tất cả các tệp PDF.
+
+💸 Đã thanh toán mà có phần không in ra?
+1. Đăng ký hoàn tiền bằng biểu tượng [환불신청] (Đăng ký hoàn tiền) trên màn hình nền máy tính.
+2. Ở số tiền thanh toán, ghi số tiền đã thực sự thanh toán.
+3. Ở số tiền hoàn, tính và ghi số tiền của phần không in ra.
+⏰ Phải đăng ký trong vòng 7 ngày kể từ ngày xảy ra sự cố. Nếu không đăng ký hoặc đăng ký sau 7 ngày, sẽ không được hoàn tiền.
+ℹ️ Đăng ký không có nghĩa là được hoàn tiền ngay. Quản lý kiểm tra, chỉ xử lý trường hợp đủ điều kiện, và báo kết quả qua số liên lạc đã đăng ký.
+
+📖 Bấm vào đây để xem hình cài đặt in PDF.
+[[go:guide-print.html#acrobat|Xem cài đặt in PDF]]
+
+@@71
+#q en: How do I get the lost-and-found box password? (How to use the lost item check site)
+#a en
+🔑 You get the lost-and-found box password by text message at '분실물확인' (Lost item check).
+👇 Tap the picture below to open the lost item check site.
+[[btn:images/faq/btn-lostfound2.png|https://fax.printnuri.com/lostfound|Go to lost item check]]
+💻 You can also open it with the [분실물확인] (Lost item check) icon on the store PC desktop.
+
+⚠️ Please do it yourself. Managers won't tell you instead.
+💡 Only payments made within the last 30 days can be checked.
+💬 Text messages are sent at most 3 times a day. If you don't get one, check your spam folder too.
+
+📝 Do this
+1. Read the notice at the top and press [동의합니다] (I agree).
+   - Check and take only your own item, and put other items back in the box.
+   - When you're done, be sure to lock the box, check that it's locked, then leave.
+   - You may be responsible for problems caused by leaving the box open.
+2. In [지점명] (Store name), choose the store.
+3. Choose [분실하신 물건] (Lost item). (USB memory, credit/debit card, resident registration card, driver's license, passport, bankbook, other) For 'other', type it yourself.
+4. Enter [결제일자] (Payment date), [결제시간] (Payment time) and [결제 금액] (Payment amount). This is a payment you made at this store.
+5. Choose [카드 구분] (Card type).
+   - Samsung Pay · Apple Pay · kiosk payment (binding · laminating): enter the [승인번호(8자리)] (8-digit approval number).
+   - Credit card (physical card): enter the [앞 4자리] (first 4 digits) and [뒤 4자리] (last 4 digits) of the card number.
+6. Enter [연락처] (Contact number). Numbers only, without "-". (e.g. 01012345678)
+7. Press [비밀번호 요청] (Request password), and the box password is sent by text to the phone number you entered.
+
+🔎 Tap to see how to find the approval number.
+[[go:faq.html#faq-6|How to find the Samsung Pay · Apple Pay approval number]]
+
+⚠️ If you see these screens, do this
+- "결제 정보를 찾을 수가 없습니다" (Payment info not found): check the store, date, time, amount and card number (approval number) again.
+- "문자 전송이 실패하였습니다" (Text message failed): check your phone number again.
+- "SMS 전송횟수를 초과하였습니다" (SMS limit exceeded): you've gone over 3 times today. Check your phone's spam messages.
+
+📖 To learn what the lost-and-found box is and what to do if you lose an ID card or card, see the question below.
+[[go:faq.html#faq-29|I left my ID card, card or USB behind. Can you keep it for me?]]
+#q zh: 失物保管箱的密码怎么确认？（失物确认网站使用方法）
+#a zh
+🔑 失物保管箱的密码在“분실물확인”（失物确认）中通过短信接收。
+👇 点下面的图片会打开失物确认网站。
+[[btn:images/faq/btn-lostfound2.png|https://fax.printnuri.com/lostfound|去确认失物]]
+💻 也可以用店内电脑桌面上的［분실물확인］（失物确认）图标打开。
+
+⚠️ 请一定本人亲自操作。管理员不会代为告知。
+💡 只能确认最近 30 天内的付款记录。
+💬 短信每天最多发 3 次。收不到短信的话，也请一定查看垃圾短信箱。
+
+📝 请这样做
+1. 阅读最上面的说明后按［동의합니다］（我同意）。
+   - 只确认并拿走自己的东西，其他东西请放回保管箱。
+   - 用完后一定要锁好保管箱，确认锁上后再离开。
+   - 开着保管箱离开造成的问题，可能需要承担责任。
+2. 在［지점명］（门店名称）中选择门店。
+3. 选择［분실하신 물건］（丢失的物品）。（U 盘、信用卡·借记卡、居民身份证、驾照、护照、存折、其他）其他请自己填写。
+4. 输入［결제일자］（付款日期）、［결제시간］（付款时间）、［결제 금액］（付款金额）。是在这家门店付款的记录。
+5. 选择［카드 구분］（卡类型）。
+   - 三星支付·Apple Pay·自助机付款（装订·塑封）：输入［승인번호(8자리)］（批准号 8 位）。
+   - 信用卡（实体卡）：输入卡号的［앞 4자리］（前 4 位）和［뒤 4자리］（后 4 位）。
+6. 输入［연락처］（联系方式）。不加“-”，只写数字。（例：01012345678）
+7. 按［비밀번호 요청］（申请密码），保管箱密码会通过短信发到输入的手机上。
+
+🔎 想知道怎么确认批准号，请点击。
+[[go:faq.html#faq-6|确认三星支付·Apple Pay 批准号的方法]]
+
+⚠️ 出现这些画面时请这样做
+- “결제 정보를 찾을 수가 없습니다”（找不到付款信息）：请重新确认门店、日期、时间、金额、卡号（批准号）。
+- “문자 전송이 실패하였습니다”（短信发送失败）：请重新确认手机号码。
+- “SMS 전송횟수를 초과하였습니다”（超过短信发送次数）：一天超过 3 次了。请查看手机短信的垃圾箱。
+
+📖 失物保管箱是什么、丢了身份证·银行卡怎么办，可以在下面的问题中查看。
+[[go:faq.html#faq-29|把身份证·银行卡·U 盘落在店里了，能帮我保管吗？]]
+#q vi: Lấy mật khẩu hộp đồ thất lạc thế nào? (Cách dùng trang kiểm tra đồ thất lạc)
+#a vi
+🔑 Mật khẩu hộp đồ thất lạc được gửi qua tin nhắn ở '분실물확인' (Kiểm tra đồ thất lạc).
+👇 Bấm vào hình dưới đây sẽ mở trang kiểm tra đồ thất lạc.
+[[btn:images/faq/btn-lostfound2.png|https://fax.printnuri.com/lostfound|Đi kiểm tra đồ thất lạc]]
+💻 Cũng có thể mở bằng biểu tượng [분실물확인] (Kiểm tra đồ thất lạc) trên màn hình nền máy tính cửa hàng.
+
+⚠️ Nhất định phải tự làm. Quản lý không làm thay.
+💡 Chỉ kiểm tra được giao dịch trong 30 ngày gần nhất.
+💬 Tin nhắn chỉ gửi tối đa 3 lần một ngày. Nếu không nhận được, hãy kiểm tra cả hộp thư rác.
+
+📝 Hãy làm thế này
+1. Đọc thông báo ở trên cùng rồi bấm [동의합니다] (Tôi đồng ý).
+   - Chỉ kiểm tra và lấy đồ của mình, đồ khác hãy để lại vào hộp.
+   - Dùng xong nhất định khóa hộp, kiểm tra đã khóa rồi mới đi.
+   - Bạn có thể phải chịu trách nhiệm cho sự cố do để hộp mở rồi bỏ đi.
+2. Ở [지점명] (Tên cửa hàng), chọn cửa hàng.
+3. Chọn [분실하신 물건] (Đồ bị mất). (USB, thẻ tín dụng·ghi nợ, thẻ đăng ký cư trú, bằng lái xe, hộ chiếu, sổ ngân hàng, khác) Mục 'khác' thì tự ghi.
+4. Nhập [결제일자] (Ngày thanh toán), [결제시간] (Giờ thanh toán), [결제 금액] (Số tiền thanh toán). Đây là giao dịch bạn đã thanh toán ở cửa hàng này.
+5. Chọn [카드 구분] (Loại thẻ).
+   - Samsung Pay · Apple Pay · thanh toán ở kiosk (đóng sách · ép): nhập [승인번호(8자리)] (số phê duyệt 8 số).
+   - Thẻ tín dụng (thẻ vật lý): nhập [앞 4자리] (4 số đầu) và [뒤 4자리] (4 số cuối) của số thẻ.
+6. Nhập [연락처] (Số liên lạc). Chỉ ghi số, không có "-". (ví dụ: 01012345678)
+7. Bấm [비밀번호 요청] (Yêu cầu mật khẩu), mật khẩu hộp sẽ được gửi qua tin nhắn đến số điện thoại đã nhập.
+
+🔎 Muốn biết cách xem số phê duyệt, hãy bấm vào đây.
+[[go:faq.html#faq-6|Cách xem số phê duyệt Samsung Pay · Apple Pay]]
+
+⚠️ Nếu hiện những màn hình này, hãy làm thế này
+- "결제 정보를 찾을 수가 없습니다" (Không tìm thấy thông tin thanh toán): kiểm tra lại cửa hàng, ngày, giờ, số tiền, số thẻ (số phê duyệt).
+- "문자 전송이 실패하였습니다" (Gửi tin nhắn thất bại): kiểm tra lại số điện thoại.
+- "SMS 전송횟수를 초과하였습니다" (Vượt quá số lần gửi SMS): đã quá 3 lần trong ngày. Hãy xem hộp tin nhắn rác trên điện thoại.
+
+📖 Hộp đồ thất lạc là gì, và cần làm gì khi mất thẻ căn cước·thẻ ngân hàng, xem ở câu hỏi dưới đây.
+[[go:faq.html#faq-29|Tôi để quên thẻ căn cước·thẻ ngân hàng·USB ở cửa hàng. Có thể giữ giúp tôi không?]]
+
+@@63
+#q en: Can I open a franchise store?
+#a en
+We don't run a franchise business yet.
+All PrintShop Mini stores now are directly operated. 🏪
+#q zh: 可以开加盟店（特许经营）吗？
+#a zh
+目前还不做加盟·特许经营业务。
+现在运营的 PrintShop Mini 全部是直营店。🏪
+#q vi: Có thể mở cửa hàng nhượng quyền không?
+#a vi
+Chúng tôi chưa làm kinh doanh nhượng quyền.
+Tất cả cửa hàng PrintShop Mini hiện nay đều do công ty trực tiếp vận hành. 🏪
+
+@@cat mini
+#c en: Mini programs | Parking · receipts · refunds · fax check · lost items (how to use PrintShop Mini's own sites)
+#c zh: 迷你专用程序 | 停车 · 收据 · 退款 · 传真确认 · 失物确认（PrintShop Mini 专用网站使用方法）
+#c vi: Chương trình riêng | Gửi xe · hóa đơn · hoàn tiền · kiểm tra fax · đồ thất lạc (cách dùng trang riêng của PrintShop Mini)
+@@cat broken
+#c en: Problems | When the machine acts strange or a print comes out wrong
+#c zh: 故障 | 机器不正常，或打印错了的时候
+#c vi: Sự cố | Khi máy có vấn đề hoặc in ra bị sai
+@@cat use
+#c en: How to use | When you want to know how to use something
+#c zh: 使用方法 | 想知道怎么用的时候
+#c vi: Cách dùng | Khi muốn biết cách sử dụng
+@@cat buy
+#c en: Products | L-folders · document envelopes · slide-binder files
+#c zh: 购买商品 | L 型文件夹 · 文件袋 · 抽杆文件夹
+#c vi: Mua sản phẩm | Bìa kẹp chữ L · phong bì tài liệu · bìa kẹp thanh trượt
+@@cat store
+#c en: Store operation | Hours · holidays · pets · phone · Wi-Fi · franchise
+#c zh: 门店运营 | 营业时间 · 连休 · 宠物 · 电话咨询 · Wi-Fi · 加盟
+#c vi: Vận hành cửa hàng | Giờ mở cửa · ngày lễ · thú cưng · điện thoại · Wi-Fi · nhượng quyền
+@@cat pc
+#c en: PC programs | When a program on the PC acts strange
+#c zh: 电脑程序 | 电脑上用的程序不正常的时候
+#c vi: Chương trình máy tính | Khi chương trình trên máy tính có vấn đề
+@@cat cmv3cynpb
+#c en: Lost items | ID cards, cards, other items
+#c zh: 失物 | 身份证、银行卡、其他物品
+#c vi: Đồ thất lạc | Thẻ căn cước, thẻ ngân hàng, đồ khác
+@@cat cmv3djben
+#c en: CCTV viewing | Viewing CCTV, storing and sending footage
+#c zh: 查看监控 | 查看 CCTV、录像保存、录像发送
+#c vi: Xem CCTV | Xem camera, lưu video, gửi video
+
+@@ui 🔎 전체
+#u en: 🔎 All
+#u zh: 🔎 全部
+#u vi: 🔎 Tất cả
+@@ui 📌 기타
+#u en: 📌 Other
+#u zh: 📌 其他
+#u vi: 📌 Khác
+@@ui 이 묶음에는 없어요 🙈
+#u en: Not in this group 🙈
+#u zh: 这个分类里没有 🙈
+#u vi: Không có trong nhóm này 🙈
+@@ui 다른 묶음에 {n}가 있어요.
+#u en: There are {n} in other groups.
+#u zh: 其他分类里有 {n}。
+#u vi: Có {n} ở nhóm khác.
+@@ui 개
+#u en: <empty>
+#u zh: 个
+#u vi: <empty>
+@@ui 전체에서 보기
+#u en: See all
+#u zh: 在全部中查看
+#u vi: Xem tất cả
+@@ui "{q}"에 대한 검색 결과가 없습니다.
+#u en: No results for "{q}".
+#u zh: 没有找到“{q}”的搜索结果。
+#u vi: Không có kết quả cho "{q}".
+@@ui 다른 키워드로 검색하거나, 아래 톡톡으로 문의해 주세요.
+#u en: Try other words, or ask us on TalkTalk below.
+#u zh: 请换个关键词搜索，或通过下面的 TalkTalk 咨询。
+#u vi: Hãy thử từ khác, hoặc hỏi chúng tôi qua TalkTalk bên dưới.
+@@ui 이 묶음에는 아직 질문이 없어요.
+#u en: There are no questions in this group yet.
+#u zh: 这个分类里还没有问题。
+#u vi: Nhóm này chưa có câu hỏi nào.
+@@ui {n}의 질문을 찾았습니다.
+#u en: Found {n} questions.
+#u zh: 找到了 {n}问题。
+#u vi: Đã tìm thấy {n} câu hỏi.
+@@ui 🔗 이 질문 링크 복사
+#u en: 🔗 Copy link to this question
+#u zh: 🔗 复制这个问题的链接
+#u vi: 🔗 Sao chép liên kết câu hỏi này
+@@ui ✓ 복사됐어요
+#u en: ✓ Copied
+#u zh: ✓ 已复制
+#u vi: ✓ Đã sao chép
+@@ui 주소
+#u en: Link
+#u zh: 链接
+#u vi: Liên kết
+@@ui FAQ가 없습니다.
+#u en: No FAQs.
+#u zh: 没有常见问题。
+#u vi: Không có câu hỏi nào.
+@@ui FAQ를 불러오지 못했습니다.
+#u en: Couldn't load the FAQs.
+#u zh: 无法加载常见问题。
+#u vi: Không tải được câu hỏi.
+@@ui 설명 그림
+#u en: Explanation picture
+#u zh: 说明图片
+#u vi: Hình minh họa
+@@ui 렌즈 모양 아이콘
+#u en: Lens icon
+#u zh: 镜头图标
+#u vi: Biểu tượng ống kính
+@@ui (한국어)
+#u en: (Korean only — translation coming soon)
+#u zh: （仅韩语 — 翻译准备中）
+#u vi: (Chỉ tiếng Hàn — đang chuẩn bị bản dịch)
+@@pin en: refund=70
+@@pin zh: 退款=70
+@@pin vi: hoàn=70

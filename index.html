@@ -643,6 +643,8 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 
 
 <script>
+// 외국어 페이지(/en/ /zh/ /vi/)에서는 i18n 도구가 I18N_UI(화면 문구 번역)를 먼저 넣어 줘요
+function T(s){var U=window.I18N_UI;return (U&&Object.prototype.hasOwnProperty.call(U,s))?U[s]:s;}
 function toggleChat(){
   document.getElementById('chatPopup').classList.toggle('open');
   document.querySelector('.fab-dot').style.display='none';
@@ -652,7 +654,7 @@ function sendMsg(){
   if(!i.value.trim())return;
   var d=document.createElement('div');d.className='cp-msg u';d.textContent=i.value;
   b.appendChild(d);i.value='';b.scrollTop=9999;
-  setTimeout(function(){var r=document.createElement('div');r.className='cp-msg';r.textContent='문의 감사합니다! 담당자가 곧 답변 드리겠습니다.';b.appendChild(r);b.scrollTop=9999;},900);
+  setTimeout(function(){var r=document.createElement('div');r.className='cp-msg';r.textContent=T('문의 감사합니다! 담당자가 곧 답변 드리겠습니다.');b.appendChild(r);b.scrollTop=9999;},900);
 }
 var SB_URL='https://wbcfciiuiootbdezxfwy.supabase.co';
 var SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndiY2ZjaWl1aW9vdGJkZXp4Znd5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc1MjkyMTQsImV4cCI6MjA5MzEwNTIxNH0.UV4ukUXuAYKAqq85B4FTHO2BtIOqPaBHgAJN5lqyU5s';
@@ -673,25 +675,25 @@ async function loadBranches(){
     renderFilterBtns(data);
     document.querySelectorAll('.js-bcount').forEach(function(e){e.textContent=data.length;});
   }catch(e){
-    document.getElementById('branchList').innerHTML='<div style="padding:32px;text-align:center;color:var(--text3)">지점 정보를 불러오지 못했습니다.</div>';
+    document.getElementById('branchList').innerHTML='<div style="padding:32px;text-align:center;color:var(--text3)">'+T('지점 정보를 불러오지 못했습니다.')+'</div>';
   }
 }
 function renderBranches(branches){
   var list=document.getElementById('branchList');
-  if(!branches.length){list.innerHTML='<div style="padding:32px;text-align:center;color:var(--text3)">등록된 지점이 없습니다.</div>';return;}
+  if(!branches.length){list.innerHTML='<div style="padding:32px;text-align:center;color:var(--text3)">'+T('등록된 지점이 없습니다.')+'</div>';return;}
   var regions={},order=[];
   branches.forEach(function(b){if(!regions[b.region]){regions[b.region]=[];order.push(b.region);}regions[b.region].push(b);});
   var html='';
   order.forEach(function(region){
     var rows=regions[region];
-    html+='<div class="region-header" data-region="'+escHtml(region)+'">'+escHtml(region)+' · '+rows.length+'개 지점</div>';
+    html+='<div class="region-header" data-region="'+escHtml(region)+'">'+escHtml(region)+' · '+T('{n}개 지점').replace('{n}',rows.length)+'</div>';
     rows.forEach(function(b){
       html+='<div class="branch-card" data-id="'+b.id+'" data-region="'+escHtml(b.region)+'" onclick="selectBranchById(this,'+b.id+')">'+
-        '<div class="bc-name">프린트샵미니 '+escHtml(b.name)+'</div>'+
+        '<div class="bc-name">'+T('프린트샵미니')+' '+escHtml(b.name)+'</div>'+
         '<div class="bc-tags">'+
           (b.hours24!==false?'<span class="bc-t t24">⏰ 24H</span>':'')+
-          (b.subway?'<span class="bc-t topen">🚇 역세권</span>':'')+
-          (b.parking?'<span class="bc-t tpark">🅿️ 주차</span>':'')+
+          (b.subway?'<span class="bc-t topen">'+T('🚇 역세권')+'</span>':'')+
+          (b.parking?'<span class="bc-t tpark">'+T('🅿️ 주차')+'</span>':'')+
         '</div></div>';
     });
   });
@@ -700,7 +702,7 @@ function renderBranches(branches){
 function renderFilterBtns(branches){
   var regions={};
   branches.forEach(function(b){regions[b.region]=(regions[b.region]||0)+1;});
-  var html='<div class="region-btn on" onclick="filterRegion(\'전체\',this)">전체</div>';
+  var html='<div class="region-btn on" onclick="filterRegion(\'전체\',this)">'+T('전체')+'</div>';
   Object.keys(regions).forEach(function(r){
     html+='<div class="region-btn" data-r="'+escHtml(r)+'" onclick="filterRegion(this.dataset.r,this)">📍 '+escHtml(r)+' ('+regions[r]+')</div>';
   });
@@ -718,16 +720,16 @@ function selectBranchById(el,id){
   wrap.innerHTML=
     '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:36px 24px;width:100%;text-align:center">'+
       '<div style="font-size:54px;filter:drop-shadow(0 4px 12px rgba(27,138,196,0.25))">📍</div>'+
-      '<div style="font-size:17px;font-weight:900;color:#1B8AC4;letter-spacing:-.3px">프린트샵미니 '+escHtml(b.name)+'</div>'+
+      '<div style="font-size:17px;font-weight:900;color:#1B8AC4;letter-spacing:-.3px">'+T('프린트샵미니')+' '+escHtml(b.name)+'</div>'+
       '<div style="font-size:12px;color:#6B7280;line-height:1.9;max-width:300px;word-break:keep-all">'+escHtml(b.address)+'</div>'+
       '<a href="'+escHtml(naverUrl)+'" target="_blank" rel="noopener noreferrer" '+
         'style="margin-top:8px;background:#03C75A;color:white;font-size:14px;font-weight:700;padding:13px 32px;border-radius:10px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 16px rgba(3,199,90,0.35);transition:all .2s" '+
         'onmouseover="this.style.transform=\'scale(1.04)\';this.style.boxShadow=\'0 6px 20px rgba(3,199,90,0.45)\'" '+
-        'onmouseout="this.style.transform=\'scale(1)\';this.style.boxShadow=\'0 4px 16px rgba(3,199,90,0.35)\'">🗺️ 네이버 지도로 보기</a>'+
+        'onmouseout="this.style.transform=\'scale(1)\';this.style.boxShadow=\'0 4px 16px rgba(3,199,90,0.35)\'">'+T('🗺️ 네이버 지도로 보기')+'</a>'+
     '</div>';
   document.getElementById('naverMapBtn').style.display='none';
   document.getElementById('branchDetail').style.display='block';
-  document.getElementById('detailName').textContent='프린트샵미니 '+b.name;
+  document.getElementById('detailName').textContent=T('프린트샵미니')+' '+b.name;
   document.getElementById('detailAddr').textContent=b.address;
   var tel=branchPhones[String(b.id)]||'';
   var telRow=document.getElementById('detailTelRow'),telA=document.getElementById('detailTel');
@@ -760,19 +762,19 @@ async function loadMainNotices(){
     var d=await r.json();
     if(!Array.isArray(d))throw new Error('notices');
     if(!d.length){
-      list.innerHTML='<div style="padding:28px;text-align:center;color:var(--text3);font-size:14px">등록된 공지사항이 없습니다.</div>';
-      if(side)side.innerHTML='<div style="font-size:13px;color:var(--text3)">등록된 공지가 없습니다.</div>';
+      list.innerHTML='<div style="padding:28px;text-align:center;color:var(--text3);font-size:14px">'+T('등록된 공지사항이 없습니다.')+'</div>';
+      if(side)side.innerHTML='<div style="font-size:13px;color:var(--text3)">'+T('등록된 공지가 없습니다.')+'</div>';
       return;
     }
     list.innerHTML=d.map(function(n){
-      return '<div class="post-row" onclick="'+go(n.id)+'"><span class="pb pn">공지</span><div class="pi"><div class="pt">'+escHtml(n.title)+'</div><div class="pm">관리자 · '+escHtml(n.date)+'</div></div><div class="ps"><span>👁 '+(n.views||0)+'</span></div></div>';
+      return '<div class="post-row" onclick="'+go(n.id)+'"><span class="pb pn">'+T('공지')+'</span><div class="pi"><div class="pt">'+escHtml(n.title)+'</div><div class="pm">'+T('관리자')+' · '+escHtml(n.date)+'</div></div><div class="ps"><span>👁 '+(n.views||0)+'</span></div></div>';
     }).join('');
     if(side)side.innerHTML=d.slice(0,3).map(function(n){
       return '<div class="ni" style="cursor:pointer" onclick="'+go(n.id)+'"><div class="ndot"></div><span>'+escHtml(n.title)+'</span></div>';
     }).join('');
   }catch(e){
-    list.innerHTML='<div style="padding:28px;text-align:center;color:var(--text3);font-size:14px">공지사항을 불러오지 못했어요. <a href="community.html" style="color:var(--blue);font-weight:700">공지사항 전체 보기 →</a></div>';
-    if(side)side.innerHTML='<div style="font-size:13px;color:var(--text3)">공지를 불러오지 못했어요.</div>';
+    list.innerHTML='<div style="padding:28px;text-align:center;color:var(--text3);font-size:14px">'+T('공지사항을 불러오지 못했어요.')+' <a href="community.html" style="color:var(--blue);font-weight:700">'+T('공지사항 전체 보기 →')+'</a></div>';
+    if(side)side.innerHTML='<div style="font-size:13px;color:var(--text3)">'+T('공지를 불러오지 못했어요.')+'</div>';
   }
 }
 loadMainNotices();

@@ -238,6 +238,9 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 var SB_URL='https://wbcfciiuiootbdezxfwy.supabase.co';
 var SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndiY2ZjaWl1aW9vdGJkZXp4Znd5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc1MjkyMTQsImV4cCI6MjA5MzEwNTIxNH0.UV4ukUXuAYKAqq85B4FTHO2BtIOqPaBHgAJN5lqyU5s';
 var SB_HDR={'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY};
+// 외국어 페이지(/en/ /zh/ /vi/)에서는 i18n 도구가 I18N_UI(화면 문구)·I18N_FAQ(질문 번역)·I18N_ROOT('../')를 먼저 넣어 줘요
+function T(s){var U=window.I18N_UI;return (U&&Object.prototype.hasOwnProperty.call(U,s))?U[s]:s;}
+var ROOT=window.I18N_ROOT||'';
 function escH(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 
 var FAQS=[];
@@ -254,11 +257,11 @@ function renderAnswer(text,terms){
   var re=/(\[\[vid:videos\/[A-Za-z0-9_\-]+\.mp4\]\]|\[\[(?:img|ico|sm):images\/[A-Za-z0-9_\-\/\.]+\]\]|\[\[btn:images\/[A-Za-z0-9_\-\/\.]+\|https:\/\/[A-Za-z0-9.\-]+\/[A-Za-z0-9_\-\/\.?=&%#]*\|[^\]|]+\]\]|\[\[go:[A-Za-z0-9_\-]+\.html(?:#[A-Za-z0-9_\-]+)?\|[^\]|]+\]\])/;
   return String(text||'').split(re).map(function(part){
     var m=/^\[\[(img|ico|sm):(images\/[A-Za-z0-9_\-\/\.]+)\]\]$/.exec(part);
-    if(m&&m[1]==='img') return '<img class="faq-img" src="'+m[2]+'" alt="설명 그림" loading="lazy">';
-    if(m&&m[1]==='sm') return '<img class="faq-img faq-img-sm" src="'+m[2]+'" alt="설명 그림" loading="lazy">';
-    if(m&&m[1]==='ico') return '<img class="faq-ico" src="'+m[2]+'" alt="렌즈 모양 아이콘">';
+    if(m&&m[1]==='img') return '<img class="faq-img" src="'+ROOT+m[2]+'" alt="'+T('설명 그림')+'" loading="lazy">';
+    if(m&&m[1]==='sm') return '<img class="faq-img faq-img-sm" src="'+ROOT+m[2]+'" alt="'+T('설명 그림')+'" loading="lazy">';
+    if(m&&m[1]==='ico') return '<img class="faq-ico" src="'+ROOT+m[2]+'" alt="'+T('렌즈 모양 아이콘')+'">';
     var v=/^\[\[vid:(videos\/[A-Za-z0-9_\-]+)\.mp4\]\]$/.exec(part);
-    if(v) return '<video class="faq-vid" controls preload="none" playsinline poster="'+v[1]+'.jpg" onclick="event.stopPropagation()"><source src="'+v[1]+'.mp4" type="video/mp4"></video>';
+    if(v) return '<video class="faq-vid" controls preload="none" playsinline poster="'+ROOT+v[1]+'.jpg" onclick="event.stopPropagation()"><source src="'+ROOT+v[1]+'.mp4" type="video/mp4"></video>';
     // [[go:faq.html#faq-64|설명]] — 같은 FAQ 안의 다른 질문으로 이동 (그 질문을 열고 그 자리로 스크롤)
     var gf=/^\[\[go:faq\.html#faq-(\d+)\|([^\]|]+)\]\]$/.exec(part);
     if(gf) return '<a class="faq-golink" href="#faq-'+gf[1]+'" onclick="event.stopPropagation();setTimeout(openFaqFromHash,0)">👉 '+escH(gf[2])+' →</a>';
@@ -267,13 +270,14 @@ function renderAnswer(text,terms){
     var b=/^\[\[btn:(images\/[A-Za-z0-9_\-\/\.]+)\|(https:\/\/[A-Za-z0-9.\-]+\/[A-Za-z0-9_\-\/\.?=&%#]*)\|([^\]|]+)\]\]$/.exec(part);
     if(b&&/(^|\.)printnuri\.com\//.test(b[2].replace(/^https:\/\//,''))){
       return '<a class="faq-btnimg" href="'+b[2]+'" target="_blank" rel="noopener" onclick="event.stopPropagation()">'+
-        '<img src="'+b[1]+'" alt="'+escH(b[3])+'" loading="lazy"><span>'+escH(b[3])+' ↗</span></a>';
+        '<img src="'+ROOT+b[1]+'" alt="'+escH(b[3])+'" loading="lazy"><span>'+escH(b[3])+' ↗</span></a>';
     }
     return hl(part,terms).replace(/\n/g,'<br>');
   }).join('');
 }
 var CATS=[],CMAP={},CUR='all';
 var SEARCH_PIN={'환불':70};   // 검색어 → 맨 위에 보여 줄 종합 FAQ id
+if(window.I18N_PIN)for(var _k in I18N_PIN)SEARCH_PIN[_k]=I18N_PIN[_k];
 function catOf(f){var id=CMAP[f.id];for(var i=0;i<CATS.length;i++){if(CATS[i].id===id)return CATS[i];}return null;}
 function catLabel(c){return (c.icon?c.icon+' ':'')+c.name;}
 function setCat(k){CUR=k;renderFaqs();scrollToListTop();}
@@ -306,7 +310,7 @@ function renderFaqs(){
   var chipBox=document.getElementById('faqCats');
   var descBox=document.getElementById('faqCatDesc');
   if(CATS.length){
-    var chips=[{k:'all',t:'🔎 전체',n:hit.length,z:false}];
+    var chips=[{k:'all',t:T('🔎 전체'),n:hit.length,z:false}];
     CATS.forEach(function(c){
       var tot=FAQS.filter(function(f){return CMAP[f.id]===c.id;}).length;
       if(!tot)return;
@@ -316,7 +320,7 @@ function renderFaqs(){
     var noneTot=FAQS.filter(function(f){return !catOf(f);}).length;
     if(noneTot){
       var nn=hit.filter(function(f){return !catOf(f);}).length;
-      chips.push({k:'none',t:'📌 기타',n:nn,z:terms.length>0&&nn===0});
+      chips.push({k:'none',t:T('📌 기타'),n:nn,z:terms.length>0&&nn===0});
     }
     if(!chips.some(function(c){return c.k===CUR;}))CUR='all';
     chipBox.innerHTML=chips.map(function(c){
@@ -337,16 +341,16 @@ function renderFaqs(){
     count.innerHTML='';
     var msg;
     if(terms.length&&hit.length&&CUR!=='all'){
-      msg='<b>이 묶음에는 없어요 🙈</b>다른 묶음에 <b style="display:inline;color:var(--blue);font-size:inherit">'+hit.length+'개</b>가 있어요.<br><button type="button" onclick="setCat(\'all\')">전체에서 보기</button>';
+      msg='<b>'+T('이 묶음에는 없어요 🙈')+'</b>'+T('다른 묶음에 {n}가 있어요.').replace('{n}','<b style="display:inline;color:var(--blue);font-size:inherit">'+hit.length+T('개')+'</b>')+'<br><button type="button" onclick="setCat(\'all\')">'+T('전체에서 보기')+'</button>';
     }else if(terms.length){
-      msg='<b>"'+escH(raw)+'"에 대한 검색 결과가 없습니다.</b>다른 키워드로 검색하거나, 아래 톡톡으로 문의해 주세요.';
+      msg='<b>'+T('"{q}"에 대한 검색 결과가 없습니다.').replace('{q}',escH(raw))+'</b>'+T('다른 키워드로 검색하거나, 아래 톡톡으로 문의해 주세요.');
     }else{
-      msg='<b>이 묶음에는 아직 질문이 없어요.</b>';
+      msg='<b>'+T('이 묶음에는 아직 질문이 없어요.')+'</b>';
     }
     list.innerHTML='<div class="faq-empty">'+msg+'</div>';
     return;
   }
-  count.innerHTML=terms.length?'<b>'+rows.length+'개</b>의 질문을 찾았습니다.':'';
+  count.innerHTML=terms.length?T('{n}의 질문을 찾았습니다.').replace('{n}','<b>'+rows.length+T('개')+'</b>'):'';
   list.innerHTML=rows.map(function(f){
     var open=terms.length?' open':'';
     var c=catOf(f);
@@ -354,7 +358,7 @@ function renderFaqs(){
     if(SHOW_NO)tag='<span class="q-no">No.'+(FAQS.indexOf(f)+1)+'</span>'+tag;
     return '<div class="faq-item'+open+'" id="faq-'+f.id+'" onclick="toggleFaq(this,event)">'+
       '<div class="faq-q"><span>'+tag+hl(f.question,terms)+'</span> <span class="q-icon">+</span></div>'+
-      '<div class="faq-a">'+renderAnswer(f.answer,terms)+'<div class="q-copy-row"><button type="button" class="q-copy" onclick="copyFaqLink('+f.id+',this,event)">🔗 이 질문 링크 복사</button></div></div>'+
+      '<div class="faq-a">'+renderAnswer(f.answer,terms)+'<div class="q-copy-row"><button type="button" class="q-copy" onclick="copyFaqLink('+f.id+',this,event)">'+T('🔗 이 질문 링크 복사')+'</button></div></div>'+
     '</div>';
   }).join('');
 }
@@ -363,12 +367,12 @@ var SHOW_NO=/[?&]no=1(&|$)/.test(location.search);
 // 질문 링크 복사: 손님에게 보내 줄 때 쓰는 바로가기 주소 (고유번호 기준이라 순서가 바뀌어도 그대로예요)
 function copyFaqLink(id,btn,ev){
   if(ev&&ev.stopPropagation)ev.stopPropagation();
-  var url='https://www.printshopmini.com/faq.html#faq-'+id;
+  var url='https://www.printshopmini.com/'+(window.I18N_LANG?I18N_LANG+'/':'')+'faq.html#faq-'+id;
   function done(ok){
     if(!btn)return;
     var old=btn.getAttribute('data-t')||btn.textContent;
     btn.setAttribute('data-t',old);
-    btn.textContent=ok?'✓ 복사됐어요':'주소: '+url;
+    btn.textContent=ok?T('✓ 복사됐어요'):T('주소')+': '+url;
     setTimeout(function(){btn.textContent=old;},ok?1600:6000);
   }
   try{
@@ -381,6 +385,18 @@ function copyFaqLink(id,btn,ev){
       document.body.appendChild(ta);ta.select();var ok=document.execCommand('copy');document.body.removeChild(ta);done(ok);
     }catch(e){done(false);}
   }
+}
+
+// 외국어 페이지: 번역표에 있는 질문은 번역으로 바꿔요. 한국어 질문·답이 그 뒤에 고쳐졌으면(지문이 다르면) 잘못된 옛 번역 대신 한국어 그대로 보여 줘요
+function faqHash(s){var h=5381;for(var i=0;i<s.length;i++)h=(Math.imul(h,33)^s.charCodeAt(i))>>>0;return h.toString(36);}
+function applyFaqI18n(){
+  var D=window.I18N_FAQ;if(!D)return;
+  FAQS=FAQS.map(function(f){
+    var t=D.items[f.id];
+    if(t&&t.h===faqHash((f.question||'')+'\n'+(f.answer||'')))return Object.assign({},f,{question:t.q,answer:t.a});
+    return Object.assign({},f,{question:f.question+' '+T('(한국어)')});
+  });
+  CATS=CATS.map(function(c){var t=D.cats&&D.cats[c.id];return t?Object.assign({},c,{name:t.name,desc:t.desc}):c;});
 }
 
 function onFaqSearch(){renderFaqs();scrollToListTop();}
@@ -400,12 +416,13 @@ async function loadFaqs(){
       });
     }catch(e){}
     var list=document.getElementById('faqList');
-    if(!data||!data.length){list.innerHTML='<div style="text-align:center;padding:40px;color:var(--text3)">FAQ가 없습니다.</div>';return;}
+    if(!data||!data.length){list.innerHTML='<div style="text-align:center;padding:40px;color:var(--text3)">'+T('FAQ가 없습니다.')+'</div>';return;}
     FAQS=data;
+    applyFaqI18n();
     renderFaqs();
     openFaqFromHash();
   }catch(e){
-    document.getElementById('faqList').innerHTML='<div style="text-align:center;padding:40px;color:#EF4444">FAQ를 불러오지 못했습니다.</div>';
+    document.getElementById('faqList').innerHTML='<div style="text-align:center;padding:40px;color:#EF4444">'+T('FAQ를 불러오지 못했습니다.')+'</div>';
   }
 }
 

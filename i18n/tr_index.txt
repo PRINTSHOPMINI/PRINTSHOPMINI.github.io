@@ -1,0 +1,372 @@
+# 메인(index.html) 번역 — 지점 이름·지역·공지 글은 DB 그대로(한국어), 그 둘레 글자만 번역
+
+@@ff1dad3f27
+en: PrintShop Mini - 24-hour self-service print shop
+zh: PrintShop Mini - 24 小时无人自助打印
+vi: PrintShop Mini - In tự phục vụ 24 giờ
+@@f754560482
+en: PrintShop Mini, an unmanned self-service print shop open 24/7. Print · copy · scan · fax · laminate · bind. Find a store near you.
+zh: PrintShop Mini，24 小时 365 天无人自助打印店。打印·复印·扫描·传真·塑封·装订，查找附近的门店。
+vi: PrintShop Mini, cửa hàng in tự phục vụ không người trực mở 24/7. In · photo · scan · fax · ép plastic · đóng sách. Tìm cửa hàng gần bạn.
+@@225478f41f
+en: Unmanned self-service print shop, open 24/7. Print · copy · scan · fax · laminate · bind
+zh: 24 小时 365 天无人自助打印店。打印·复印·扫描·传真·塑封·装订
+vi: Cửa hàng in tự phục vụ không người trực, mở 24/7. In · photo · scan · fax · ép plastic · đóng sách
+@@c81b73ac7f
+en: <a class="nav-logo" href="#"> <img alt="Logo" class="logo-img" src="logo.jpg"/> <span class="nav-logo-name">PrintShop Mini</span> </a>
+zh: <a class="nav-logo" href="#"> <img alt="标志" class="logo-img" src="logo.jpg"/> <span class="nav-logo-name">PrintShop Mini</span> </a>
+vi: <a class="nav-logo" href="#"> <img alt="Logo" class="logo-img" src="logo.jpg"/> <span class="nav-logo-name">PrintShop Mini</span> </a>
+@@b13f9f7661
+en: <a class="nav-cta" href="#branches">Find a Store</a>
+zh: <a class="nav-cta" href="#branches">查找门店</a>
+vi: <a class="nav-cta" href="#branches">Tìm cửa hàng</a>
+@@e1b3ae6f30
+en: Open 24/7, no staff
+zh: 24 小时 365 天无人营业
+vi: Mở 24/7, không người trực
+@@439b307634
+en: <span class="blue">On your own</span>, easily,<br/> print any time
+zh: <span class="blue">一个人</span>也能轻松，<br/> 随时打印
+vi: <span class="blue">Tự mình</span> làm dễ dàng,<br/> in bất cứ lúc nào
+@@abe639c61d
+en: A 24-hour print shop you use by yourself, with no staff.<br/> When you need it, find the PrintShop Mini nearest you.
+zh: 没有员工、自助使用的 24 小时打印店。<br/> 需要的时候，找找离您最近的 PrintShop Mini。
+vi: Cửa hàng in 24 giờ tự phục vụ, không có nhân viên.<br/> Khi cần, hãy tìm PrintShop Mini gần bạn nhất.
+@@b3cf4d71e0
+en: <a class="htile" href="guide-print.html"><span class="ic">🖨️</span><span class="tx"><b>Print</b><small>Your file on paper</small></span></a> <a class="htile" href="guide-copy.html"><span class="ic">📋</span><span class="tx"><b>Copy</b><small>Same as the original</small></span></a> <a class="htile" href="guide-scan.html"><span class="ic">📄</span><span class="tx"><b>Scan</b><small>Paper into a file</small></span></a> <a class="htile" href="guide-fax.html"><span class="ic">📠</span><span class="tx"><b>Fax</b><small>Send · check</small></span></a> <a class="htile" href="guide-coat.html"><span class="ic">✨</span><span class="tx"><b>Laminate</b><small>Shiny protection</small></span></a> <a class="htile" href="guide-bind.html"><span class="ic">📚</span><span class="tx"><b>Bind</b><small>Like a book</small></span></a>
+zh: <a class="htile" href="guide-print.html"><span class="ic">🖨️</span><span class="tx"><b>打印</b><small>把文件印到纸上</small></span></a> <a class="htile" href="guide-copy.html"><span class="ic">📋</span><span class="tx"><b>复印</b><small>和原件一样</small></span></a> <a class="htile" href="guide-scan.html"><span class="ic">📄</span><span class="tx"><b>扫描</b><small>把纸变成文件</small></span></a> <a class="htile" href="guide-fax.html"><span class="ic">📠</span><span class="tx"><b>传真</b><small>发送·确认</small></span></a> <a class="htile" href="guide-coat.html"><span class="ic">✨</span><span class="tx"><b>塑封</b><small>亮晶晶的保护</small></span></a> <a class="htile" href="guide-bind.html"><span class="ic">📚</span><span class="tx"><b>装订</b><small>像书一样</small></span></a>
+vi: <a class="htile" href="guide-print.html"><span class="ic">🖨️</span><span class="tx"><b>In</b><small>Tệp ra giấy</small></span></a> <a class="htile" href="guide-copy.html"><span class="ic">📋</span><span class="tx"><b>Photo</b><small>Giống bản gốc</small></span></a> <a class="htile" href="guide-scan.html"><span class="ic">📄</span><span class="tx"><b>Scan</b><small>Giấy thành tệp</small></span></a> <a class="htile" href="guide-fax.html"><span class="ic">📠</span><span class="tx"><b>Fax</b><small>Gửi · kiểm tra</small></span></a> <a class="htile" href="guide-coat.html"><span class="ic">✨</span><span class="tx"><b>Ép plastic</b><small>Bảo vệ bóng đẹp</small></span></a> <a class="htile" href="guide-bind.html"><span class="ic">📚</span><span class="tx"><b>Đóng sách</b><small>Như một cuốn sách</small></span></a>
+@@abd1f09749
+en: <a href="#branches">📍 Find a store near you →</a>
+zh: <a href="#branches">📍 查找附近的门店 →</a>
+vi: <a href="#branches">📍 Tìm cửa hàng gần bạn →</a>
+@@7bfda1a2a9
+en: Mini Friends group photo
+zh: 迷你朋友合影
+vi: Ảnh nhóm Mini Friends
+@@e84c98526f
+en: Hello! We're the Mini Friends 👋
+zh: 你好！我们是迷你朋友 👋
+vi: Xin chào! Chúng mình là Mini Friends 👋
+@@690394359b
+en: <a class="hf s1" href="guide-coat.html" style="--c:#7C3AED"><img alt="Laminating turtle" src="img/friends/coat.webp"/><span>Laminate</span></a> <a class="hf s2" href="guide-scan.html" style="--c:#12BDB0"><img alt="Scanning owl" src="img/friends/scan.webp"/><span>Scan</span></a> <a class="hf s3" href="guide-print.html" style="--c:#22B24C"><img alt="Printing penguin" src="img/friends/print.webp"/><span>Print</span></a> <span class="hf s4" style="--c:var(--blue)"><img alt="Raccoon" src="img/friends/raccoon.webp"/><span>PrintShop Mini</span></span> <a class="hf s3" href="guide-copy.html" style="--c:#018FFB"><img alt="Copying parrot" src="img/friends/copy.webp"/><span>Copy</span></a> <a class="hf s2" href="guide-fax.html" style="--c:#F3732C"><img alt="Fax pigeon" src="img/friends/fax.webp"/><span>Fax</span></a> <a class="hf s1" href="guide-bind.html" style="--c:#EC4899"><img alt="Binding beaver" src="img/friends/bind.webp"/><span>Bind</span></a>
+zh: <a class="hf s1" href="guide-coat.html" style="--c:#7C3AED"><img alt="塑封乌龟" src="img/friends/coat.webp"/><span>塑封</span></a> <a class="hf s2" href="guide-scan.html" style="--c:#12BDB0"><img alt="扫描猫头鹰" src="img/friends/scan.webp"/><span>扫描</span></a> <a class="hf s3" href="guide-print.html" style="--c:#22B24C"><img alt="打印企鹅" src="img/friends/print.webp"/><span>打印</span></a> <span class="hf s4" style="--c:var(--blue)"><img alt="浣熊" src="img/friends/raccoon.webp"/><span>PrintShop Mini</span></span> <a class="hf s3" href="guide-copy.html" style="--c:#018FFB"><img alt="复印鹦鹉" src="img/friends/copy.webp"/><span>复印</span></a> <a class="hf s2" href="guide-fax.html" style="--c:#F3732C"><img alt="传真鸽子" src="img/friends/fax.webp"/><span>传真</span></a> <a class="hf s1" href="guide-bind.html" style="--c:#EC4899"><img alt="装订河狸" src="img/friends/bind.webp"/><span>装订</span></a>
+vi: <a class="hf s1" href="guide-coat.html" style="--c:#7C3AED"><img alt="Rùa ép plastic" src="img/friends/coat.webp"/><span>Ép plastic</span></a> <a class="hf s2" href="guide-scan.html" style="--c:#12BDB0"><img alt="Cú scan" src="img/friends/scan.webp"/><span>Scan</span></a> <a class="hf s3" href="guide-print.html" style="--c:#22B24C"><img alt="Chim cánh cụt in" src="img/friends/print.webp"/><span>In</span></a> <span class="hf s4" style="--c:var(--blue)"><img alt="Gấu mèo" src="img/friends/raccoon.webp"/><span>PrintShop Mini</span></span> <a class="hf s3" href="guide-copy.html" style="--c:#018FFB"><img alt="Vẹt photo" src="img/friends/copy.webp"/><span>Photo</span></a> <a class="hf s2" href="guide-fax.html" style="--c:#F3732C"><img alt="Bồ câu fax" src="img/friends/fax.webp"/><span>Fax</span></a> <a class="hf s1" href="guide-bind.html" style="--c:#EC4899"><img alt="Hải ly đóng sách" src="img/friends/bind.webp"/><span>Đóng sách</span></a>
+@@032e05ddc5
+en: Laminating turtle
+zh: 塑封乌龟
+vi: Rùa ép plastic
+@@25f1b32a2f
+en: Scanning owl
+zh: 扫描猫头鹰
+vi: Cú scan
+@@d8abb2275f
+en: Printing penguin
+zh: 打印企鹅
+vi: Chim cánh cụt in
+@@6bcdabe3fe
+en: Copying parrot
+zh: 复印鹦鹉
+vi: Vẹt photo
+@@612525b13e
+en: Fax pigeon
+zh: 传真鸽子
+vi: Bồ câu fax
+@@2743e7964e
+en: Binding beaver
+zh: 装订河狸
+vi: Hải ly đóng sách
+@@1b9cd150de
+en: Open every day
+zh: 全年无休
+vi: Mở mọi ngày
+@@2d6f04823a
+en: 6<span style="font-size:18px;font-weight:700"> kinds</span>
+zh: 6<span style="font-size:18px;font-weight:700">种</span>
+vi: 6<span style="font-size:18px;font-weight:700"> loại</span>
+@@0ba3db0a5f
+en: Self-service
+zh: 自助服务
+vi: Tự phục vụ
+@@edd4514eb1
+en: Gyeonggi area
+zh: 京畿道地区
+vi: Khu vực Gyeonggi
+@@faf87d4f9a
+en: stores open
+zh: 家门店营业中
+vi: cửa hàng đang hoạt động
+@@e9d07421eb
+en: 6 self-service options
+zh: 6 种自助服务
+vi: 6 dịch vụ tự phục vụ
+@@44d36c2fce
+en: With videos and picture guides, anyone can do it alone from the very first time!
+zh: 有视频和图片说明，谁都能从第一次开始自己操作！
+vi: Có video và hướng dẫn bằng hình, ai cũng tự làm được ngay từ lần đầu!
+@@c20539d5cd
+en: Send your file from the PC, then find it at the printer machine with a 4-digit PIN and print — self-printing in 6 steps
+zh: 在电脑上发送文件后，在复合机上用 4 位个人识别码（PIN）找到并打印 — 6 步自助打印
+vi: Gửi tệp từ máy tính, rồi tìm ở máy in đa năng bằng mã PIN 4 số và in — tự in trong 6 bước
+@@b3e9d5b586
+en: <span class="svc-tag">①Choose printer</span><span class="svc-tag">②Type PIN</span><span class="svc-tag">③Go to machine</span><span class="svc-tag">④Find number</span><span class="svc-tag">⑤Check price</span><span class="svc-tag">⑥Pay by card</span>
+zh: <span class="svc-tag">①选打印机</span><span class="svc-tag">②输入密码</span><span class="svc-tag">③去复合机</span><span class="svc-tag">④查号码</span><span class="svc-tag">⑤确认金额</span><span class="svc-tag">⑥刷卡付款</span>
+vi: <span class="svc-tag">①Chọn máy in</span><span class="svc-tag">②Nhập PIN</span><span class="svc-tag">③Đến máy</span><span class="svc-tag">④Tìm số</span><span class="svc-tag">⑤Kiểm tra giá</span><span class="svc-tag">⑥Trả bằng thẻ</span>
+@@730407a951
+en: See how to use
+zh: 查看详细使用方法
+vi: Xem cách dùng
+@@7339100edb
+en: Put the original on the printer machine, set it up and pay — self-copying in 6 steps
+zh: 把原件放到复合机上，设置后付款 — 6 步自助复印
+vi: Đặt bản gốc lên máy in đa năng, cài đặt rồi thanh toán — tự photo trong 6 bước
+@@765d1caeba
+en: <span class="svc-tag">①Put original</span><span class="svc-tag">②Copy menu</span><span class="svc-tag">③Set up</span><span class="svc-tag">④Check price</span><span class="svc-tag">⑤Pay by card</span><span class="svc-tag">⑥Done</span>
+zh: <span class="svc-tag">①放原件</span><span class="svc-tag">②复印菜单</span><span class="svc-tag">③设置</span><span class="svc-tag">④确认金额</span><span class="svc-tag">⑤刷卡付款</span><span class="svc-tag">⑥打印完成</span>
+vi: <span class="svc-tag">①Đặt bản gốc</span><span class="svc-tag">②Menu photo</span><span class="svc-tag">③Cài đặt</span><span class="svc-tag">④Kiểm tra giá</span><span class="svc-tag">⑤Trả bằng thẻ</span><span class="svc-tag">⑥Xong</span>
+@@3a82efc5ba
+en: Put the original on the scanner, pay, then get the file from the PC folder — self-scanning in 5 steps
+zh: 把原件放到扫描部，付款后在电脑文件夹里确认文件 — 5 步自助扫描
+vi: Đặt bản gốc lên máy scan, thanh toán rồi lấy tệp ở thư mục trên máy tính — tự scan trong 5 bước
+@@43215f2a68
+en: <span class="svc-tag">①Put original</span><span class="svc-tag">②Scan menu</span><span class="svc-tag">③Check price</span><span class="svc-tag">④Pay by card</span><span class="svc-tag">⑤Get file</span>
+zh: <span class="svc-tag">①放原件</span><span class="svc-tag">②扫描菜单</span><span class="svc-tag">③确认金额</span><span class="svc-tag">④刷卡付款</span><span class="svc-tag">⑤确认文件</span>
+vi: <span class="svc-tag">①Đặt bản gốc</span><span class="svc-tag">②Menu scan</span><span class="svc-tag">③Kiểm tra giá</span><span class="svc-tag">④Trả bằng thẻ</span><span class="svc-tag">⑤Lấy tệp</span>
+@@e75f50e344
+en: Scan the original, type the fax number, pay, then check it was sent with a QR code — self-faxing in 6 steps
+zh: 扫描原件后输入传真号码，付款后用二维码确认发送 — 6 步自助传真
+vi: Scan bản gốc, nhập số fax, thanh toán rồi kiểm tra đã gửi bằng mã QR — tự gửi fax trong 6 bước
+@@68e6bda8d5
+en: <span class="svc-tag">①Put original</span><span class="svc-tag">②Fax menu</span><span class="svc-tag">③Type number</span><span class="svc-tag">④Set up</span><span class="svc-tag">⑤Check price</span><span class="svc-tag">⑥Pay · send</span>
+zh: <span class="svc-tag">①放原件</span><span class="svc-tag">②传真菜单</span><span class="svc-tag">③输入号码</span><span class="svc-tag">④设置</span><span class="svc-tag">⑤确认金额</span><span class="svc-tag">⑥付款·发送</span>
+vi: <span class="svc-tag">①Đặt bản gốc</span><span class="svc-tag">②Menu fax</span><span class="svc-tag">③Nhập số</span><span class="svc-tag">④Cài đặt</span><span class="svc-tag">⑤Kiểm tra giá</span><span class="svc-tag">⑥Trả · gửi</span>
+@@bd064e3a87
+en: Check how many pouches there are and pay, turn on the power to warm up, then feed in the pouch — self-laminating
+zh: 确认塑封膜数量并付款后，开电源预热（加热），再放入塑封膜 — 自助塑封
+vi: Kiểm tra số túi ép và thanh toán, bật nguồn làm nóng, rồi đưa túi ép vào — tự ép plastic
+@@73e65ed6fe
+en: <span class="svc-tag">①Check · pay</span><span class="svc-tag">②Power · warm up</span><span class="svc-tag">③Put in print</span><span class="svc-tag">④Feed in</span><span class="svc-tag">⑤Check it out</span><span class="svc-tag">⑥Power OFF</span>
+zh: <span class="svc-tag">①确认数量·付款</span><span class="svc-tag">②开电源·预热</span><span class="svc-tag">③放打印纸</span><span class="svc-tag">④放入</span><span class="svc-tag">⑤确认出膜</span><span class="svc-tag">⑥关电源</span>
+vi: <span class="svc-tag">①Kiểm tra · trả tiền</span><span class="svc-tag">②Bật · làm nóng</span><span class="svc-tag">③Cho giấy vào</span><span class="svc-tag">④Đưa vào máy</span><span class="svc-tag">⑤Xem túi ra</span><span class="svc-tag">⑥Tắt nguồn</span>
+@@ba77c965a8
+en: Choose a heat-binding cover and pay, warm up, put in your prints to bind, and cool for 10+ minutes — self-binding in 7 steps
+zh: 选热熔装订封面并付款后预热（加热），放入打印纸装订，再冷却 10 分钟以上 — 7 步自助装订
+vi: Chọn bìa đóng nhiệt và thanh toán, làm nóng, cho giấy vào để đóng, rồi để nguội từ 10 phút trở lên — tự đóng sách trong 7 bước
+@@a101601afe
+en: <span class="svc-tag">①Cover · pay</span><span class="svc-tag">②Power · warm up</span><span class="svc-tag">③Open slot</span><span class="svc-tag">④Into cover</span><span class="svc-tag">⑤Into machine</span><span class="svc-tag">⑥Timer</span><span class="svc-tag">⑦Cool · done</span>
+zh: <span class="svc-tag">①选封面·付款</span><span class="svc-tag">②开电源·预热</span><span class="svc-tag">③打开入口</span><span class="svc-tag">④放进封面</span><span class="svc-tag">⑤放进机器</span><span class="svc-tag">⑥定时</span><span class="svc-tag">⑦冷却完成</span>
+vi: <span class="svc-tag">①Chọn bìa · trả tiền</span><span class="svc-tag">②Bật · làm nóng</span><span class="svc-tag">③Mở khe</span><span class="svc-tag">④Cho vào bìa</span><span class="svc-tag">⑤Đưa vào máy</span><span class="svc-tag">⑥Hẹn giờ</span><span class="svc-tag">⑦Để nguội · xong</span>
+@@18779b5cf2
+en: No staff means faster<br/>and cheaper
+zh: 无人运营，更快、<br/>更便宜
+vi: Không người trực nên nhanh hơn,<br/>rẻ hơn
+@@69283d1adf
+en: PrintShop Mini is a self-service print shop open 24 hours with no staff. No complicated steps — use the service you want right at the machine.
+zh: PrintShop Mini 是 24 小时无人运营的自助打印店。没有复杂的手续，在机器前就能马上使用想要的服务。
+vi: PrintShop Mini là cửa hàng in tự phục vụ mở 24 giờ, không có nhân viên. Không thủ tục rườm rà — dùng ngay dịch vụ bạn muốn tại máy.
+@@d99c9dfd03
+en: No waiting for staff
+zh: 不用等员工，马上使用
+vi: Dùng ngay, không chờ nhân viên
+@@5d26e967f1
+en: Every service is self-service on unmanned machines, so there's no waiting.
+zh: 所有服务都能用无人设备自助使用，不用排队等待。
+vi: Mọi dịch vụ đều tự làm trên máy không người trực nên không phải chờ.
+@@b6b0e7b987
+en: Card · Samsung Pay · QR easy pay all accepted
+zh: 刷卡·三星支付·二维码简易支付都可以
+vi: Nhận thẻ · Samsung Pay · thanh toán nhanh QR
+@@5112271164
+en: Many payment methods make it easy to use.
+zh: 支持多种付款方式，使用方便。
+vi: Hỗ trợ nhiều cách thanh toán nên rất tiện.
+@@34aeecc7e6
+en: Open 24 hours, every day of the year
+zh: 全年无休 24 小时营业
+vi: Mở 24 giờ, mọi ngày trong năm
+@@8db21068c3
+en: Use it any time — early morning or weekends.
+zh: 无论凌晨还是周末，随时都能使用。
+vi: Dùng được bất cứ lúc nào, dù sáng sớm hay cuối tuần.
+@@6c5b3924d2
+en: 6<span class="stat-unit"> kinds</span>
+zh: 6<span class="stat-unit">种</span>
+vi: 6<span class="stat-unit"> loại</span>
+@@9b0437c5a6
+en: Services
+zh: 打印服务
+vi: Dịch vụ
+@@98358e3a68
+en: No staff
+zh: 无人运营
+vi: Không người trực
+@@b1c380c4dc
+en: Find a Store
+zh: 查找门店
+vi: Tìm cửa hàng
+@@618e289488
+en: <span class="js-bcount">16</span> stores in the Gyeonggi area — find the PrintShop Mini nearest you.
+zh: 京畿道地区 <span class="js-bcount">16</span> 家门店 — 找找离您最近的 PrintShop Mini。
+vi: <span class="js-bcount">16</span> cửa hàng ở khu vực Gyeonggi — tìm PrintShop Mini gần bạn nhất.
+@@8331050729
+en: <span class="filter-label">Choose area</span>
+zh: <span class="filter-label">选择地区</span>
+vi: <span class="filter-label">Chọn khu vực</span>
+@@7e4f8300d0
+en: <span class="filter-count"><strong id="visibleCount">-</strong> stores in total</span>
+zh: <span class="filter-count">共 <strong id="visibleCount">-</strong> 家门店</span>
+vi: <span class="filter-count">Tổng <strong id="visibleCount">-</strong> cửa hàng</span>
+@@d1d0de88c6
+en: All
+zh: 全部
+vi: Tất cả
+@@f34eca8770
+en: Loading stores...
+zh: 正在加载门店信息...
+vi: Đang tải thông tin cửa hàng...
+@@4dafc68c85
+en: Please choose a store
+zh: 请选择门店
+vi: Hãy chọn cửa hàng
+@@1c1d7b6ead
+en: Click the store you want in the list
+zh: 请在列表中点击想要的门店
+vi: Bấm vào cửa hàng bạn muốn trong danh sách
+@@2efa4b3f7b
+en: <a class="map-btn primary" href="#" id="naverMapBtn" style="pointer-events:none;opacity:0.4" target="_blank">🗺️ See on Naver Map</a>
+zh: <a class="map-btn primary" href="#" id="naverMapBtn" style="pointer-events:none;opacity:0.4" target="_blank">🗺️ 在 Naver 地图上查看</a>
+vi: <a class="map-btn primary" href="#" id="naverMapBtn" style="pointer-events:none;opacity:0.4" target="_blank">🗺️ Xem trên Naver Map</a>
+@@354d7bc638
+en: Store name
+zh: 门店名称
+vi: Tên cửa hàng
+@@7afbd2bcfd
+en: <span class="bd-key">📍 Address</span><span class="bd-val" id="detailAddr" style="line-height:1.6">-</span>
+zh: <span class="bd-key">📍 地址</span><span class="bd-val" id="detailAddr" style="line-height:1.6">-</span>
+vi: <span class="bd-key">📍 Địa chỉ</span><span class="bd-val" id="detailAddr" style="line-height:1.6">-</span>
+@@5441df7bed
+en: <span class="bd-key">📞 Phone</span><span class="bd-val"><a href="#" id="detailTel" style="color:inherit;font-weight:700;text-decoration:none"></a></span>
+zh: <span class="bd-key">📞 电话</span><span class="bd-val"><a href="#" id="detailTel" style="color:inherit;font-weight:700;text-decoration:none"></a></span>
+vi: <span class="bd-key">📞 Điện thoại</span><span class="bd-val"><a href="#" id="detailTel" style="color:inherit;font-weight:700;text-decoration:none"></a></span>
+@@75174f56c8
+en: <span class="bd-key">⏰ Hours</span><span class="bd-val">24 hours, 365 days, no days off</span>
+zh: <span class="bd-key">⏰ 营业</span><span class="bd-val">24 小时 365 天全年无休</span>
+vi: <span class="bd-key">⏰ Giờ mở cửa</span><span class="bd-val">24 giờ, 365 ngày, không nghỉ</span>
+@@f58fb3075e
+en: <span class="bd-key">🖨️ Services</span><span class="bd-val">Print · Copy · Scan · Fax · Laminate · Bind</span>
+zh: <span class="bd-key">🖨️ 服务</span><span class="bd-val">打印 · 复印 · 扫描 · 传真 · 塑封 · 装订</span>
+vi: <span class="bd-key">🖨️ Dịch vụ</span><span class="bd-val">In · Photo · Scan · Fax · Ép plastic · Đóng sách</span>
+@@a6deb04d24
+en: Notices
+zh: 公告
+vi: Thông báo
+@@af6156d8b3
+en: See PrintShop Mini's latest notices. (Notices are written in Korean.)
+zh: 查看 PrintShop Mini 的最新公告。（公告为韩语。）
+vi: Xem thông báo mới nhất của PrintShop Mini. (Thông báo viết bằng tiếng Hàn.)
+@@743c71f27a
+en: <a href="community.html" onmouseout="this.style.background='transparent';this.style.color='var(--blue)'" onmouseover="this.style.background='var(--blue)';this.style.color='white'" style="color:var(--blue);font-size:13px;font-weight:700;padding:8px 16px;border-radius:50px;border:1.5px solid var(--blue);transition:all .2s">See all →</a>
+zh: <a href="community.html" onmouseout="this.style.background='transparent';this.style.color='var(--blue)'" onmouseover="this.style.background='var(--blue)';this.style.color='white'" style="color:var(--blue);font-size:13px;font-weight:700;padding:8px 16px;border-radius:50px;border:1.5px solid var(--blue);transition:all .2s">查看全部 →</a>
+vi: <a href="community.html" onmouseout="this.style.background='transparent';this.style.color='var(--blue)'" onmouseover="this.style.background='var(--blue)';this.style.color='white'" style="color:var(--blue);font-size:13px;font-weight:700;padding:8px 16px;border-radius:50px;border:1.5px solid var(--blue);transition:all .2s">Xem tất cả →</a>
+@@fd9f7a27e3
+en: Loading notices...
+zh: 正在加载公告...
+vi: Đang tải thông báo...
+@@e4a9b3a5b5
+en: <a class="chat-btn" href="https://naver.me/GJErAoQ7" rel="noopener" style="margin-top:14px;display:inline-block;text-align:center" target="_blank">💬 Ask on TalkTalk</a>
+zh: <a class="chat-btn" href="https://naver.me/GJErAoQ7" rel="noopener" style="margin-top:14px;display:inline-block;text-align:center" target="_blank">💬 TalkTalk 咨询</a>
+vi: <a class="chat-btn" href="https://naver.me/GJErAoQ7" rel="noopener" style="margin-top:14px;display:inline-block;text-align:center" target="_blank">💬 Hỏi qua TalkTalk</a>
+@@3e70aca614
+en: Contact
+zh: 咨询
+vi: Liên hệ
+@@a5f3b8d81d
+en: For any questions about PrintShop Mini,<br/>please ask us on Naver TalkTalk.
+zh: 有关 PrintShop Mini 的<br/>疑问，请通过 Naver TalkTalk 咨询。
+vi: Mọi thắc mắc về PrintShop Mini,<br/>hãy hỏi chúng tôi qua Naver TalkTalk.
+@@d3accf3ed1
+en: Raccoon character
+zh: 浣熊角色
+vi: Nhân vật gấu mèo
+@@bb0679fba8
+en: Call me if you need help!
+zh: 需要帮忙就叫我吧！
+vi: Cần giúp thì gọi mình nhé!
+@@2d4133c4fa
+en: <a href="#services">Print · Copy · Scan</a>
+zh: <a href="#services">打印 · 复印 · 扫描</a>
+vi: <a href="#services">In · Photo · Scan</a>
+@@783a133514
+en: <a href="#services">Fax · Laminate · Bind</a>
+zh: <a href="#services">传真 · 塑封 · 装订</a>
+vi: <a href="#services">Fax · Ép plastic · Đóng sách</a>
+@@c9eb0ee90c
+en: <a href="#branches">Find a Store</a>
+zh: <a href="#branches">查找门店</a>
+vi: <a href="#branches">Tìm cửa hàng</a>
+
+# ---- 페이지 스크립트가 화면에 쓰는 글자 T('...') ----
+@@ui 문의 감사합니다! 담당자가 곧 답변 드리겠습니다.
+en: Thank you for your question! We'll answer soon.
+zh: 感谢您的咨询！负责人会尽快答复。
+vi: Cảm ơn bạn đã hỏi! Chúng tôi sẽ trả lời sớm.
+@@ui 지점 정보를 불러오지 못했습니다.
+en: Couldn't load store information.
+zh: 无法加载门店信息。
+vi: Không tải được thông tin cửa hàng.
+@@ui 등록된 지점이 없습니다.
+en: No stores registered.
+zh: 没有已登记的门店。
+vi: Chưa có cửa hàng nào.
+@@ui {n}개 지점
+en: {n} stores
+zh: {n} 家门店
+vi: {n} cửa hàng
+@@ui 프린트샵미니
+en: PrintShop Mini
+zh: PrintShop Mini
+vi: PrintShop Mini
+@@ui 🚇 역세권
+en: 🚇 Near subway
+zh: 🚇 地铁站附近
+vi: 🚇 Gần ga tàu
+@@ui 🅿️ 주차
+en: 🅿️ Parking
+zh: 🅿️ 停车
+vi: 🅿️ Đỗ xe
+@@ui 전체
+en: All
+zh: 全部
+vi: Tất cả
+@@ui 🗺️ 네이버 지도로 보기
+en: 🗺️ See on Naver Map
+zh: 🗺️ 在 Naver 地图上查看
+vi: 🗺️ Xem trên Naver Map
+@@ui 등록된 공지사항이 없습니다.
+en: No notices yet.
+zh: 还没有公告。
+vi: Chưa có thông báo nào.
+@@ui 등록된 공지가 없습니다.
+en: No notices yet.
+zh: 还没有公告。
+vi: Chưa có thông báo nào.
+@@ui 공지
+en: Notice
+zh: 公告
+vi: Thông báo
+@@ui 관리자
+en: Manager
+zh: 管理员
+vi: Quản lý
+@@ui 공지사항을 불러오지 못했어요.
+en: Couldn't load notices.
+zh: 无法加载公告。
+vi: Không tải được thông báo.
+@@ui 공지사항 전체 보기 →
+en: See all notices →
+zh: 查看全部公告 →
+vi: Xem tất cả thông báo →
+@@ui 공지를 불러오지 못했어요.
+en: Couldn't load notices.
+zh: 无法加载公告。
+vi: Không tải được thông báo.

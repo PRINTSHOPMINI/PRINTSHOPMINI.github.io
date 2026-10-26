@@ -1,0 +1,767 @@
+@@30
+#q en: The store has CCTV, right? I want to see the footage.
+#a en
+✅ You can see footage of the time you were there, after we confirm your identity.
+
+📹 2 ways to see the footage
+1. See it in person
+- Meet a manager, confirm your identity, then watch the footage.
+- You don't choose the date and time yourself; you agree on it with the manager.
+2. Hear it by phone
+- If meeting is hard, after confirming your identity we briefly tell you what's in the footage by phone.
+⚠️ Asking to check footage doesn't mean we check it right away.
+
+💬 How to apply
+Send these 3 things on Naver TalkTalk.
+1. The date and time of the footage you want to check
+2. The last 4 digits of the card you paid with
+3. Why you want to check the footage
+A manager will contact you separately after checking.
+
+👥 What if other people are in the footage?
+- We blur other people so they can't be recognized (de-identification) before showing it.
+- The person who asked for the footage pays the cost of blurring.
+
+⏳ It isn't processed right away
+Even if you ask by phone or TalkTalk, we can't do it right away. It may take a few days for a manager to receive the request and check the footage.
+A manager will contact you separately after checking.
+
+📹 It may be hard to find with footage
+- Footage is kept for 7 days from the time it was recorded. Even within that period, it may not be viewable if there's a problem with the CCTV company's server or viewing equipment.
+- There are blind spots, and things like an ID card left inside the scanner may not be visible.
+#q zh: 店里有监控（CCTV）吧？我想看录像。
+#a zh
+✅ 本人在场时间段的录像，确认本人身份后可以查看。
+
+📹 查看录像的 2 种方法
+1. 当面查看
+- 和管理员见面确认本人身份后查看录像。
+- 日期和时间不是自己定，要和管理员商量决定。
+2. 电话告知
+- 不方便见面的话，确认本人身份后通过电话简单告诉您录像内容。
+⚠️ 申请查看录像，并不是马上就能查看。
+
+💬 申请方法
+请通过 Naver TalkTalk 发送下面 3 项。
+1. 想查看的录像的录制日期和时间
+2. 付款卡号后 4 位
+3. 查看录像的用途
+确认后管理员会另外联系您。
+
+👥 录像里拍到了其他人？
+- 会把其他人遮挡到无法辨认（去识别化处理）后再给您看。
+- 遮挡所需的费用由申请录像的人承担。
+
+⏳ 不会马上处理
+即使通过电话或 TalkTalk 申请，也不能马上处理。管理员收到申请到查看录像可能需要几天时间。
+管理员确认后会另外联系您。
+
+📹 用录像也可能很难找到
+- 录像从拍摄时间起保存 7 天。即使在保存期内，如果监控公司的服务器或查看设备出了问题，也可能无法查看。
+- 有拍不到的死角，放在复合机扫描仪里面的身份证这类东西可能看不到。
+#q vi: Cửa hàng có camera (CCTV) phải không? Tôi muốn xem video.
+#a vi
+✅ Bạn có thể xem video vào khoảng thời gian bạn có mặt, sau khi xác minh danh tính.
+
+📹 2 cách xem video
+1. Xem trực tiếp
+- Gặp quản lý, xác minh danh tính rồi xem video.
+- Ngày giờ không phải do bạn tự chọn mà thỏa thuận với quản lý.
+2. Nghe qua điện thoại
+- Nếu khó gặp mặt, sau khi xác minh danh tính, chúng tôi sẽ báo ngắn gọn nội dung video qua điện thoại.
+⚠️ Yêu cầu xem video không có nghĩa là được kiểm tra ngay.
+
+💬 Cách đăng ký
+Hãy gửi 3 điều sau qua Naver TalkTalk.
+1. Ngày và giờ của video bạn muốn xem
+2. 4 số cuối của thẻ đã thanh toán
+3. Mục đích xem video
+Quản lý sẽ liên hệ riêng sau khi kiểm tra.
+
+👥 Nếu video có cả người khác?
+- Chúng tôi che người khác để không nhận ra được (xử lý ẩn danh) rồi mới cho xem.
+- Người yêu cầu xem video trả chi phí che hình.
+
+⏳ Không xử lý ngay
+Dù yêu cầu qua điện thoại hay TalkTalk, chúng tôi cũng không làm ngay được. Từ khi quản lý nhận yêu cầu đến khi kiểm tra video có thể mất vài ngày.
+Quản lý sẽ liên hệ riêng sau khi kiểm tra.
+
+📹 Có thể khó tìm bằng video
+- Video được lưu 7 ngày kể từ lúc quay. Dù trong thời hạn lưu, nếu máy chủ của công ty CCTV hoặc thiết bị xem có sự cố thì cũng có thể không xem được.
+- Có góc khuất, và những thứ như thẻ căn cước để bên trong máy scan có thể không nhìn thấy.
+
+@@29
+#q en: I left my ID card, card or USB behind. Can you keep it for me?
+#a en
+This is an unmanned store, so it's hard for us to keep items left behind. 🙏
+
+🆔 If you lost an ID card or credit card
+1. First contact the issuer (card company, etc.) to report the loss or suspend it.
+2. Come to the store as soon as possible.
+3. Look around where you sat.
+4. If it isn't there, check the [분실물보관함] (Lost-and-found box) in the store that looks like a mailbox.
+
+📮 How the lost-and-found box is used
+- When customers or managers find an item, they put it in the box.
+- Some customers find items but don't put them in.
+- It does not mean we keep a lost-item log or take responsibility for keeping items.
+- It's a minimum measure to stop others from using ID cards or cards.
+
+🔒 The box is locked with a password
+- How to get the password is on the notice near the box. Follow it.
+- If you lost the card you paid with at the store and don't know the payment details: pay again in the store with another card, and use that payment to get the password.
+- If there's nothing to buy in the store: check the payment details, such as the approval number, with your card company to get the password.
+
+⚠️ Managers do not tell you past payment details by phone.
+The steps are complicated, so please be careful not to lose your things.
+
+🔒 The lost-and-found box is provided for customers' convenience. We are not responsible for keeping, returning or losing items.
+⛔ Don't use the box to leave your own things, only for items found in the store.
+💍 Don't put valuables like cash or jewelry in it.
+
+🔑 How to get the password
+[[go:faq.html#faq-71|How to use the lost-and-found check site]]
+- Press the [분실물확인] (Lost item check) icon on the store PC desktop.
+- Enter your payment details and phone number, and get the password by text message.
+- Please do it yourself. Managers won't tell you instead.
+- After checking the box, be sure to lock it properly.
+
+👮 If you find out someone took it, report it to the police.
+
+⏳ Items not picked up for a long time may be disposed of.
+
+⚖️ Related law (simple explanation)
+- Lost Articles Act, Article 1: a person who finds an item must return it to the owner or hand it to the police.
+- Civil Act, Article 693: 'keeping' an item only exists when the person leaving it and the person receiving it agree. An unmanned store never agreed to keep customers' items. So it's hard to ask the store manager to find it for you.
+
+🚓 Check with the police too
+Found items are sometimes handed to the police. You can search the National Police Agency's lost-item portal Lost112 (www.lost112.go.kr) or call 182.
+#q zh: 把身份证·银行卡·U 盘落在店里了，能帮我保管吗？
+#a zh
+因为是无人门店，很难为您保管落下的东西。🙏
+
+🆔 丢了身份证·信用卡的话
+1. 先联系相关机构（发卡公司等）挂失或申请停用。
+2. 尽快来门店。
+3. 看看坐过的位置和周围。
+4. 没有的话，请查看店里像邮筒一样的［분실물보관함］（失物保管箱）。
+
+📮 失物保管箱是这样用的
+- 顾客或管理员发现东西会放进保管箱。
+- 也有顾客发现了却不放进去。
+- 这并不表示会记录失物台账或负责保管。
+- 这是为了防止身份证·银行卡被别人使用而设的最低限度的措施。
+
+🔒 保管箱用密码锁着
+- 确认密码的方法贴在保管箱旁边的说明上。请照着做。
+- 如果丢了在店里付款用的卡，不知道付款记录：请用别的卡在店里重新付款，再用那笔记录确认密码。
+- 店里没有要用的东西的话：请向发卡公司确认批准号等付款记录来确认密码。
+
+⚠️ 管理员不会通过电话告诉您以前的付款记录。
+手续比较麻烦，请小心不要丢东西。
+
+🔒 失物保管箱是为了方便顾客设置的。对保管·归还·丢失不承担责任。
+⛔ 不要用保管箱寄存自己的东西，它只用于放在店里发现的失物。
+💍 不要放现金·贵金属等贵重物品。
+
+🔑 确认密码的方法
+[[go:faq.html#faq-71|详细查看失物确认网站的使用方法]]
+- 点店内电脑桌面上的［분실물확인］（失物确认）图标。
+- 输入付款信息和手机号码，就会通过短信收到密码。
+- 请一定本人亲自操作。管理员不会代为告知。
+- 确认保管箱后，请一定锁好。
+
+👮 确认被人拿走的话，请报警。
+
+⏳ 长期没人领取的物品可能会被处理。
+
+⚖️ 相关法律（简单说明）
+- 《遗失物法》第 1 条：捡到东西的人要还给失主或交给警察局。
+- 《民法》第 693 条：物品“保管”需要寄存人和接收人双方约定才成立。无人门店从没约定过为顾客保管物品。所以很难要求门店管理员帮您找。
+
+🚓 也请向警察局确认
+捡到的东西有时会交到警察局。可以在警察厅失物门户网站 Lost112（www.lost112.go.kr）或拨打电话 182 查找。
+#q vi: Tôi để quên thẻ căn cước·thẻ ngân hàng·USB ở cửa hàng. Có thể giữ giúp tôi không?
+#a vi
+Đây là cửa hàng không người trực nên khó giữ giúp đồ để quên. 🙏
+
+🆔 Nếu bị mất thẻ căn cước·thẻ tín dụng
+1. Trước tiên liên hệ nơi cấp (công ty thẻ, v.v.) để báo mất hoặc khóa thẻ.
+2. Đến cửa hàng càng sớm càng tốt.
+3. Tìm quanh chỗ bạn đã ngồi.
+4. Nếu không thấy, hãy kiểm tra [분실물보관함] (Hộp đồ thất lạc) trông giống hộp thư trong cửa hàng.
+
+📮 Hộp đồ thất lạc được dùng như sau
+- Khách hoặc quản lý thấy đồ thì bỏ vào hộp.
+- Cũng có khách thấy mà không bỏ vào.
+- Điều này không có nghĩa là chúng tôi ghi sổ đồ thất lạc hay chịu trách nhiệm giữ đồ.
+- Đây là biện pháp tối thiểu để người khác không dùng thẻ căn cước·thẻ ngân hàng.
+
+🔒 Hộp được khóa bằng mật khẩu
+- Cách lấy mật khẩu được dán ở thông báo gần hộp. Hãy làm theo.
+- Nếu bị mất thẻ đã thanh toán ở cửa hàng và không biết thông tin thanh toán: hãy thanh toán mới ở cửa hàng bằng thẻ khác, rồi dùng giao dịch đó để lấy mật khẩu.
+- Nếu không có gì cần mua ở cửa hàng: hãy hỏi công ty thẻ thông tin thanh toán như số phê duyệt để lấy mật khẩu.
+
+⚠️ Quản lý không cho biết thông tin thanh toán cũ qua điện thoại.
+Thủ tục phức tạp nên hãy cẩn thận để không làm mất đồ.
+
+🔒 Hộp đồ thất lạc được đặt để tiện cho khách. Chúng tôi không chịu trách nhiệm về việc giữ·trả lại·mất đồ.
+⛔ Đừng dùng hộp để gửi đồ của mình; hộp chỉ dành cho đồ thất lạc tìm thấy trong cửa hàng.
+💍 Đừng bỏ đồ giá trị như tiền mặt, trang sức vào.
+
+🔑 Cách lấy mật khẩu
+[[go:faq.html#faq-71|Xem cách dùng trang kiểm tra đồ thất lạc]]
+- Bấm biểu tượng [분실물확인] (Kiểm tra đồ thất lạc) trên màn hình nền máy tính cửa hàng.
+- Nhập thông tin thanh toán và số điện thoại, bạn sẽ nhận mật khẩu qua tin nhắn.
+- Nhất định phải tự làm. Quản lý không làm thay.
+- Kiểm tra hộp xong nhớ khóa lại cẩn thận.
+
+👮 Nếu biết có người lấy mất, hãy báo cảnh sát.
+
+⏳ Đồ không ai đến lấy trong thời gian dài có thể bị xử lý.
+
+⚖️ Luật liên quan (giải thích đơn giản)
+- Luật Đồ thất lạc, Điều 1: người nhặt được đồ phải trả cho chủ hoặc nộp cho đồn cảnh sát.
+- Bộ luật Dân sự, Điều 693: việc 'giữ hộ' đồ chỉ có khi người gửi và người nhận cùng thỏa thuận. Cửa hàng không người trực chưa từng thỏa thuận giữ đồ cho khách. Vì vậy khó yêu cầu quản lý cửa hàng tìm giúp.
+
+🚓 Hãy hỏi cả đồn cảnh sát
+Đồ nhặt được đôi khi được nộp cho cảnh sát. Có thể tìm trên cổng thông tin đồ thất lạc của Cảnh sát Lost112 (www.lost112.go.kr) hoặc gọi số 182.
+
+@@21
+#q en: I was using a site with limited print counts and the PC froze.
+#a en
+⚠️ If the PC has a problem while you're using the sites below, we can't compensate you.
+- Sites where you get a document after paying
+- Sites with a limited number of prints
+- Sites where you can't save the document you made
+(There's a notice on the store PC too.)
+
+🤔 Why do problems happen?
+- We don't block any particular site.
+- But the security programs those sites install can conflict with the store PC and cause problems.
+
+🔄 When the store PC restarts, all downloaded programs and login info are erased. Be careful with sites that need the PC to be restarted.
+#q zh: 在使用限制打印次数的网站时电脑卡住了。
+#a zh
+⚠️ 使用下面这些网站时电脑出了问题，我们无法赔偿。
+- 付款后才能获取文件的网站
+- 限制打印次数的网站
+- 无法保存所写文件的网站
+（店内电脑上也贴着说明。）
+
+🤔 为什么会出问题？
+- 我们没有屏蔽特定网站。
+- 但这些网站安装的安全程序可能会和店内电脑冲突，从而出问题。
+
+🔄 店内电脑重启后，下载的程序和登录信息都会被删除。使用需要重启电脑的网站时请小心。
+#q vi: Tôi đang dùng trang web giới hạn số lần in thì máy tính bị treo.
+#a vi
+⚠️ Nếu máy tính gặp sự cố khi đang dùng các trang web dưới đây, chúng tôi không thể bồi thường.
+- Trang web thanh toán xong mới nhận được tài liệu
+- Trang web giới hạn số lần in
+- Trang web không lưu được tài liệu đã soạn
+(Trên máy tính cửa hàng cũng có dán thông báo.)
+
+🤔 Tại sao lại có sự cố?
+- Chúng tôi không chặn trang web cụ thể nào.
+- Nhưng chương trình bảo mật mà các trang đó cài đặt có thể xung đột với máy tính cửa hàng và gây ra sự cố.
+
+🔄 Khi máy tính cửa hàng khởi động lại, mọi chương trình đã tải và thông tin đăng nhập đều bị xóa. Hãy cẩn thận khi dùng trang web cần khởi động lại máy tính.
+
+@@19
+#q en: I was trying to print my TOEIC score report and the PC froze.
+#a en
+📜 When printing certificates from the YBM site (TOEIC · TOEIC Speaking · TOEFL score certificates) or school graduation/transcript sites that use Certpia, always choose the printer [증명서전용PIN9999] (certificate printer).
+(This does not apply to Government24 · Hometax · court sites.)
+
+⚠️ If you choose the Color or B&W printer, the PC freezes, and you may have to pay again to get the certificate.
+
+1. Pay on the site and get the certificate.
+2. When you open the document and print, choose the printer [증명서전용PIN9999].
+3. At the printer machine, look up PIN 9999 and pay, and it prints.
+
+💡 The PIN is the number you typed on the PC. It's like a temporary password for finding the document you sent from the PC at the printer machine.
+
+❌ We don't compensate for money lost because the guide wasn't followed. (There's a notice in the store too.)
+
+📖 Tap here for the picture guide.
+[[go:guide-print.html#cert|How to print certificates]]
+#q zh: 想打印托业成绩单，电脑卡住了。
+#a zh
+📜 在 YBM 网站（TOEIC·TOEIC Speaking·TOEFL 成绩证明）或使用 Certpia 的学校毕业证明·成绩证明网站打印证书时，打印机一定要选［증명서전용PIN9999］（证书专用）。
+（不适用于政府 24·Hometax·法院网站。）
+
+⚠️ 选彩色或黑白打印机的话，电脑会卡住，可能需要再付一次款才能拿到证书。
+
+1. 在网站上付款并获取证书。
+2. 打开文件打印时，打印机选［증명서전용PIN9999］。
+3. 在复合机上用 PIN 号码 9999 查询并付款，就会打印出来。
+
+💡 PIN 号码就是在电脑上输入的个人识别码。就像在复合机上找电脑发来的文件时用的临时密码。
+
+❌ 没按说明操作造成的金钱损失不予赔偿。（店里也贴着说明。）
+
+📖 点这里查看详细的图片说明。
+[[go:guide-print.html#cert|详细查看证书打印方法]]
+#q vi: Tôi định in bảng điểm TOEIC thì máy tính bị treo.
+#a vi
+📜 Khi in chứng chỉ từ trang YBM (giấy chứng nhận điểm TOEIC · TOEIC Speaking · TOEFL) hoặc trang giấy chứng nhận tốt nghiệp·bảng điểm của trường dùng Certpia, nhất định chọn máy in [증명서전용PIN9999] (máy in chứng chỉ).
+(Không áp dụng cho trang Chính phủ 24 · Hometax · tòa án.)
+
+⚠️ Nếu chọn máy in màu hoặc đen trắng, máy tính sẽ bị treo và bạn có thể phải thanh toán lại để lấy chứng chỉ.
+
+1. Thanh toán trên trang web và nhận chứng chỉ.
+2. Khi mở tài liệu để in, chọn máy in [증명서전용PIN9999].
+3. Ở máy in đa năng, tìm mã PIN 9999 và thanh toán là sẽ in ra.
+
+💡 Mã PIN là số bạn đã nhập trên máy tính. Nó giống như mật khẩu tạm để tìm ở máy in đa năng tài liệu bạn gửi từ máy tính.
+
+❌ Chúng tôi không bồi thường thiệt hại tiền bạc do không làm theo hướng dẫn. (Trong cửa hàng cũng có dán thông báo.)
+
+📖 Bấm vào đây để xem hướng dẫn bằng hình.
+[[go:guide-print.html#cert|Xem cách in chứng chỉ]]
+
+@@23
+#q en: My Hangul file's text is broken and the layout is off.
+#a en
+📄 Hangul on the store PC is a view-only program (viewer).
+If the store PC doesn't have the fonts of the computer that made the file, text may break, strange symbols may appear, or the layout may get messed up.
+
+👉 Please bring Hangul files converted to PDF.
+
+👀 Before printing, always check for broken text or strange symbols.
+⚠️ We can't take responsibility for wrong prints made without checking.
+Problems from different fonts or program versions can't be fixed in the store.
+
+📖 Tap here for the picture guide.
+[[go:guide-print.html#hancom|How to print Hangul files]]
+#q zh: 韩文文件的文字乱码，排版也乱了。
+#a zh
+📄 店内电脑的韩文是只能查看的程序（查看器）。
+店内电脑如果没有制作文件的电脑上的字体，文字可能会乱码、出现奇怪的符号，或者排版变乱。
+
+👉 韩文文件请转成 PDF 带来。
+
+👀 打印前，一定要确认文字有没有乱码、有没有奇怪的符号。
+⚠️ 没确认就打印造成打错的，我们无法负责。
+因字体或程序版本不同而出现的问题，在店里无法修改。
+
+📖 点这里查看详细的图片说明。
+[[go:guide-print.html#hancom|详细查看韩文文件打印方法]]
+#q vi: Tệp Hangul bị lỗi chữ và lệch bố cục.
+#a vi
+📄 Hangul trên máy tính cửa hàng là chương trình chỉ xem (trình xem).
+Nếu máy tính cửa hàng không có phông chữ của máy đã làm tệp, chữ có thể bị lỗi, hiện ký hiệu lạ hoặc bố cục bị xô lệch.
+
+👉 Tệp Hangul hãy chuyển sang PDF rồi mang đến.
+
+👀 Trước khi in, nhất định kiểm tra chữ có bị lỗi, có ký hiệu lạ không.
+⚠️ Chúng tôi không chịu trách nhiệm cho bản in sai do in mà không kiểm tra.
+Sự cố do khác phông chữ hoặc phiên bản chương trình không thể sửa ở cửa hàng.
+
+📖 Bấm vào đây để xem hướng dẫn bằng hình.
+[[go:guide-print.html#hancom|Xem cách in tệp Hangul]]
+
+@@20
+#q en: Documents won't open on the Internet Registry Office, Government24 or court sites.
+#a en
+Government and financial sites have frequent security updates. So they can conflict with Windows, the browser and other programs on the store PC.
+
+🙏 In this case there is nothing the store can do for you.
+⚠️ We don't compensate for problems that happen while using these sites. (There's a notice on the store PC too.)
+#q zh: 在互联网登记所、政府 24、法院网站上打不开文件。
+#a zh
+政府网站和金融网站经常进行安全更新。所以可能会和店内电脑的 Windows、浏览器、其他程序冲突。
+
+🙏 这种情况下，店里没有能为您做的。
+⚠️ 使用这些网站时出现的问题不予赔偿。（店内电脑上也贴着说明。）
+#q vi: Không mở được tài liệu trên trang Đăng ký trực tuyến, Chính phủ 24 hoặc tòa án.
+#a vi
+Trang web chính phủ và tài chính thường xuyên cập nhật bảo mật. Vì vậy có thể xung đột với Windows, trình duyệt và các chương trình khác trên máy tính cửa hàng.
+
+🙏 Trường hợp này cửa hàng không thể giúp được gì.
+⚠️ Chúng tôi không bồi thường cho sự cố xảy ra khi dùng các trang này. (Trên máy tính cửa hàng cũng có dán thông báo.)
+
+@@10
+#q en: When I opened my Hangul file, I see unknown symbols (□).
+#a en
+It's not broken! 👌
+It happens because the fonts (letter styles) on the computer that made the file are different from the store PC.
+
+It prints exactly as you see on the screen.
+👉 Please save Hangul files as PDF before you come.
+
+📖 Tap here for the picture guide.
+[[go:guide-print.html#hancom|How to print Hangul files]]
+#q zh: 打开韩文文件后出现了不认识的符号（□）。
+#a zh
+不是坏了！👌
+是因为制作文件的电脑和店内电脑的字体（字的样子）不同。
+
+屏幕上看到什么就会打印出什么。
+👉 韩文文件请保存成 PDF 带来。
+
+📖 点这里查看详细的图片说明。
+[[go:guide-print.html#hancom|详细查看韩文文件打印方法]]
+#q vi: Mở tệp Hangul thì thấy ký hiệu lạ (□).
+#a vi
+Không phải lỗi máy đâu! 👌
+Đó là do phông chữ (kiểu chữ) của máy đã làm tệp khác với máy tính cửa hàng.
+
+Màn hình hiện thế nào sẽ in ra đúng như vậy.
+👉 Tệp Hangul hãy lưu thành PDF rồi mang đến.
+
+📖 Bấm vào đây để xem hướng dẫn bằng hình.
+[[go:guide-print.html#hancom|Xem cách in tệp Hangul]]
+
+@@57
+#q en: Can I edit PDF or Hangul files?
+#a en
+❌ PDF and Hangul (HWP) are view-only programs (viewers), so you can't edit.
+
+💡 For Hangul files, you can make simple edits with the [한글편집(Polaris)] (Hangul editor, Polaris) program on the desktop.
+But the layout may break depending on the file size or version.
+
+👉 Please edit files at home first and bring them as PDF.
+
+📖 Tap here for the picture guide.
+[[go:guide-print.html#hancom|How to print Hangul files]]
+#q zh: 可以修改 PDF 或韩文文件吗？
+#a zh
+❌ PDF 和韩文（HWP）是只能查看的程序（查看器），不能修改。
+
+💡 韩文文件可以用桌面上的［한글편집(Polaris)］（韩文编辑 Polaris）程序做简单的修改。
+但根据文件大小或版本，排版可能会乱。
+
+👉 需要修改的文件请在家里先改好，转成 PDF 带来。
+
+📖 点这里查看详细的图片说明。
+[[go:guide-print.html#hancom|详细查看韩文文件打印方法]]
+#q vi: Có sửa được tệp PDF hoặc Hangul không?
+#a vi
+❌ PDF và Hangul (HWP) là chương trình chỉ xem (trình xem) nên không sửa được.
+
+💡 Tệp Hangul có thể sửa đơn giản bằng chương trình [한글편집(Polaris)] (Sửa Hangul Polaris) trên màn hình nền.
+Nhưng tùy dung lượng hoặc phiên bản tệp, bố cục có thể bị vỡ.
+
+👉 Tệp cần sửa hãy sửa trước ở nhà rồi mang đến dạng PDF.
+
+📖 Bấm vào đây để xem hướng dẫn bằng hình.
+[[go:guide-print.html#hancom|Xem cách in tệp Hangul]]
+
+@@58
+#q en: Can I print certificates from Government24 or Hometax? What about digital certificates?
+#a en
+✅ Yes, you can use public sites like Government24 and Hometax. You can use digital certificates too.
+
+🔑 Bring your digital certificate on a USB or move it to the PC. (It's erased when the PC restarts)
+
+⚠️ Government and financial sites have many security programs and can conflict with the store PC. We don't compensate for problems that happen then.
+⚠️ Some certificates may print blank because of file size or format. Always check the preview before printing.
+🆘 We recommend not using documents you have to pay for or documents with a limited number of prints.
+
+🚫 Don't use [증명서전용PIN9999] (certificate printer) for Government24 · Hometax · court (Internet Registry Office) documents.
+💳 What you pay on these sites to issue documents has nothing to do with PrintShop Mini. You pay PrintShop Mini at the printer machine, and the document prints at the end after paying.
+🖨️ Open the document you got from the site on the PC, send the print job, then pay at the printer machine.
+[[go:guide-print.html#store|How to print]]
+#q zh: 可以在政府 24 或 Hometax 打印证明吗？认证书呢？
+#a zh
+✅ 可以，政府 24·Hometax 这类公共机关网站都能用。认证书也能用。
+
+🔑 认证书请存在 U 盘里带来，或拷到电脑上使用。（电脑重启后会被删除）
+
+⚠️ 政府·金融网站安全程序很多，可能会和店内电脑冲突。这时出现的问题不予赔偿。
+⚠️ 有些证明可能因为文件大小·格式打印成白纸。打印前请一定确认预览。
+🆘 建议不要用需要付费才能获取的文件，或限制打印次数的文件。
+
+🚫 政府 24·Hometax·法院（互联网登记所）的文件不用［증명서전용PIN9999］（证书专用）。
+💳 在这些网站上为发放文件付的费用，和 PrintShop Mini 无关。PrintShop Mini 的费用在复合机上付，付款后最后才打印出文件。
+🖨️ 从网站获取的文件，请在电脑上打开并发送打印后，在复合机上付款。
+[[go:guide-print.html#store|详细查看打印方法]]
+#q vi: Có in được giấy chứng nhận từ Chính phủ 24 hoặc Hometax không? Còn chứng thư số thì sao?
+#a vi
+✅ Được, có thể dùng các trang của cơ quan công như Chính phủ 24, Hometax. Cũng dùng được chứng thư số.
+
+🔑 Chứng thư số hãy mang theo trong USB hoặc chép vào máy tính để dùng. (Khởi động lại máy tính thì sẽ bị xóa)
+
+⚠️ Trang chính phủ·tài chính có nhiều chương trình bảo mật nên có thể xung đột với máy tính cửa hàng. Sự cố khi đó không được bồi thường.
+⚠️ Một số giấy chứng nhận có thể in ra trắng do dung lượng·định dạng tệp. Trước khi in nhất định kiểm tra bản xem trước.
+🆘 Chúng tôi khuyên không nên dùng tài liệu phải trả tiền mới nhận được hoặc tài liệu giới hạn số lần in.
+
+🚫 Tài liệu của Chính phủ 24 · Hometax · tòa án (Đăng ký trực tuyến) không dùng [증명서전용PIN9999] (máy in chứng chỉ).
+💳 Tiền bạn trả trên các trang này để cấp tài liệu không liên quan đến PrintShop Mini. Tiền của PrintShop Mini trả ở máy in đa năng, và tài liệu in ra sau cùng khi đã thanh toán.
+🖨️ Tài liệu nhận từ trang web hãy mở trên máy tính và gửi lệnh in, rồi thanh toán ở máy in đa năng.
+[[go:guide-print.html#store|Xem cách in]]
+
+@@59
+#q en: How do I print files from special programs like CAD?
+#a en
+❌ The store PCs don't have programs like CAD, Photoshop or Illustrator.
+
+👉 Please convert them to PDF at home before you come.
+🖼️ Combining several images into one PDF is hard with the store PC's programs. Use an outside site or make it before you come.
+📂 If you got the PDF as a compressed file, unzip it before printing.
+#q zh: CAD 这类特殊程序的文件怎么打印？
+#a zh
+❌ 店内电脑没有 CAD、Photoshop、Illustrator 这类程序。
+
+👉 请在家里转成 PDF 带来。
+🖼️ 用店内电脑的程序很难把多张图片合成一个 PDF。请使用外部网站或事先做好带来。
+📂 PDF 是以压缩文件接收的话，请解压后再打印。
+#q vi: In tệp của chương trình đặc biệt như CAD thế nào?
+#a vi
+❌ Máy tính cửa hàng không có các chương trình như CAD, Photoshop, Illustrator.
+
+👉 Hãy chuyển sang PDF ở nhà rồi mang đến.
+🖼️ Gộp nhiều hình thành một PDF bằng chương trình trên máy tính cửa hàng thì khó. Hãy dùng trang web bên ngoài hoặc làm sẵn rồi mang đến.
+📂 Nếu nhận PDF dạng tệp nén, hãy giải nén rồi mới in.
+
+@@24
+#q en: I don't have a card. Can I pay with cash or bank transfer? (Toss kiosk prepaid top-up)
+#a en
+⚠️ If you have an IC card (credit/debit) or Samsung Pay, don't pay at the Toss kiosk!
+💳 At the payment step, insert your IC card into the printer machine's card reader, or hold Samsung Pay to it.
+💸 If you pay by mistake at the Toss kiosk, refunds are returned minus a fee.
+
+❌ Cash and bank transfer are not accepted.
+🧾 No card? No problem! Pay first at the Toss kiosk with Apple Pay · Kakao Pay · Toss Pay · QR easy pay, and use the top-up card.
+
+🎬 Watch the video first
+[[vid:videos/guide-toss.mp4]]
+
+📍 Where is the Toss kiosk?
+It's on the desk with the white binding·laminating machine (SAFA-BM100). Products like laminating pouches, L-folders and document envelopes are usually on this desk too.
+[[img:images/faq/pay-toss-where.png]]
+
+🧮 First check the price at the printer machine
+
+🖨️ For printing
+1. 💻 Open the file to print on the PC, and go as far as typing your PIN (4 digits).
+2. At the printer machine, press [인쇄] (Print) → [PC] and type your PIN.
+3. Choose your document and press [시작] (Start), and the price screen appears. Look at B&W/color, pages and price, and remember them.
+
+📋 For copy · scan · fax
+- Read the guide first, and work out the price from how many originals there are and whether it's B&W or color.
+
+🏧 Pay at the Toss kiosk
+1. Go to the Toss kiosk and press [결제하기] (Pay).
+[[img:images/faq/pay-toss-kiosk.png]]
+2. Press [선불충전] (Prepaid top-up) in the tabs at the top.
+[[img:images/faq/pay-toss-s1-tab.png]]
+3. Choose exactly what you saw on the printer machine. e.g.) Printing B&W → [복사/인쇄-A4-흑백-1장] (Copy/Print-A4-B&W-1 sheet), Scanning 1 sheet → [스캔-1장] (Scan-1 sheet)
+[[img:images/faq/pay-toss-s2-item.png]]
+4. When "안내를 받으셨습니까?" (Did you receive guidance?) appears, press [예(안내를 받았습니다.)] (Yes). Adjust the number of sheets with [+] [−].
+[[img:images/faq/pay-toss-s3-agree.png]]
+💡 You have to press [예] (Yes) at "Did you receive guidance?" to continue paying.
+💡 But you don't have to call a manager to use the prepaid top-up. If you've read and understood this guide, press [예] (Yes) and continue without calling.
+💡 If you're still not sure, ask a manager by phone or TalkTalk.
+💡 The moment you pay the prepaid top-up, the money is loaded onto the top-up card hanging from the printer machine's card reader.
+5. Press [바로 결제] (Pay now), or if you have more to pay for, press [담기] (Add to cart) and pay from the cart.
+[[img:images/faq/pay-toss-s4-direct.png]]
+6. When "이대로 결제할까요?" (Pay like this?) appears, press [○○원 결제하기] (Pay ○○ won).
+[[img:images/faq/pay-toss-s5-confirm.png]]
+7. Choose a payment method: [애플·NFC] (Apple·NFC) or [QR 간편결제] (QR easy pay). For apps like Kakao Pay or Naver Pay, press [QR 간편결제] (QR easy pay). (For Samsung Pay, pay directly at the printer machine's card reader)
+[[img:images/faq/pay-toss-s6-method-v2.png]]
+8. If you pressed [QR 간편결제] (QR easy pay), hold your phone's payment QR code up to the Toss kiosk screen.
+[[img:images/faq/pay-toss-s7-qr.png]]
+💡 For both B&W and color, press [담기] (Add to cart), add one more with [더 담기 +] (Add more +), and pay together.
+
+💳 Tap the top-up card at the printer machine
+1. After paying, go to the printer machine. For copy · scan · fax, put in the originals following the guide, do the job, and press [확인] (OK) on the price screen.
+2. When it says "카드를 대 주세요" (Please tap your card), tap the white card hanging on a string from the card reader, like a T-money card.
+[[img:images/faq/pay-card-terminal.png]]
+
+✅ After paying, prints and copies come out, scans become files, and faxes turn the originals into a file and start sending.
+
+⚠️ The price at the printer machine and the amount you paid at the Toss kiosk must be exactly the same.
+⚠️ Money paid at the Toss kiosk stays on the top-up card for only 20 minutes. Don't pay first; check the price at the printer machine, then pay.
+⚠️ Don't pay twice. Double payments are refunded minus a fee.
+💡 Toss kiosk payments are refunded only to a bank account. For details, see 'When and how are refunds processed?'.
+
+📖 Tap to learn how to do the job first.
+[[go:guide-print.html#store|How to print]]
+[[go:guide-copy.html|How to copy]]
+[[go:guide-scan.html|How to scan]]
+[[go:guide-fax.html|How to send a fax]]
+#q zh: 我没有卡。可以用现金或转账付款吗？（Toss 自助机预付充值）
+#a zh
+⚠️ 有 IC 卡（信用卡/借记卡）或三星支付的话，不要在 Toss 自助机付款！
+💳 在付款步骤，IC 卡请插入复合机的刷卡机，三星支付请直接贴上。
+💸 在 Toss 自助机付错款申请退款的，会扣除手续费后退回。
+
+❌ 不能用现金和转账。
+🧾 没有卡也没关系！先在 Toss 自助机上用 Apple Pay·Kakao Pay·Toss Pay·二维码简易支付付款，再用充值卡使用。
+
+🎬 先看视频
+[[vid:videos/guide-toss.mp4]]
+
+📍 Toss 自助机在哪里？
+在放着白色装订·塑封两用机（SAFA-BM100）的桌子上。塑封膜·L 型文件夹·文件袋这类商品通常也放在这张桌子上。
+[[img:images/faq/pay-toss-where.png]]
+
+🧮 先在复合机上确认金额
+
+🖨️ 打印时
+1. 💻 在电脑上打开要打印的文件，一直操作到输入个人识别码（PIN 4 位）。
+2. 在复合机上按［인쇄］（打印）→［PC］，输入 PIN 号码。
+3. 选择自己的文件按［시작］（开始），会出现金额确认窗口。请一定看清黑白/彩色、页数、金额并记下来。
+
+📋 复印·扫描·传真时
+- 请先看使用方法，确认原件有几张、是黑白还是彩色，算出金额。
+
+🏧 在 Toss 自助机付款
+1. 到 Toss 自助机前按［결제하기］（付款）。
+[[img:images/faq/pay-toss-kiosk.png]]
+2. 在上方的标签中按［선불충전］（预付充值）。
+[[img:images/faq/pay-toss-s1-tab.png]]
+3. 选择和在复合机上看到的完全一样的项目。例）黑白打印 →［복사/인쇄-A4-흑백-1장］（复印/打印-A4-黑白-1 张），扫描 1 张 →［스캔-1장］（扫描-1 张）
+[[img:images/faq/pay-toss-s2-item.png]]
+4. 出现“안내를 받으셨습니까?”（您收到说明了吗？）时，按［예(안내를 받았습니다.)］（是）。张数用［+］［−］调整。
+[[img:images/faq/pay-toss-s3-agree.png]]
+💡 在“您收到说明了吗？”中按［예］（是）才能继续付款。
+💡 但并不是一定要和管理员通话才能使用预付充值。如果读懂了这个说明，不用打电话，直接按［예］（是）继续。
+💡 还是不太明白的话，请通过电话或 TalkTalk 咨询管理员。
+💡 预付充值付款的那一刻，金额就会充值到挂在复合机刷卡机上的充值卡里。
+5. 按［바로 결제］（立即付款），或者还有要一起付的就按［담기］（加入购物车），到购物车里付款。
+[[img:images/faq/pay-toss-s4-direct.png]]
+6. 出现“이대로 결제할까요?”（就这样付款吗？）时，按［○○원 결제하기］（支付 ○○ 韩元）。
+[[img:images/faq/pay-toss-s5-confirm.png]]
+7. 选择付款方式。选［애플·NFC］（Apple·NFC）或［QR 간편결제］（二维码简易支付）。Kakao Pay·Naver Pay 这类应用请按［QR 간편결제］（二维码简易支付）。（三星支付请直接在复合机刷卡机上付款）
+[[img:images/faq/pay-toss-s6-method-v2.png]]
+8. 按了［QR 간편결제］（二维码简易支付）的话，把手机上的付款二维码对准 Toss 自助机屏幕。
+[[img:images/faq/pay-toss-s7-qr.png]]
+💡 黑白和彩色一起做时，按［담기］（加入购物车），再用［더 담기 +］（继续添加 +）加一项，一次付款。
+
+💳 在复合机上刷充值卡
+1. 付款后到复合机前。复印·扫描·传真请按使用方法放好原件操作后，在金额确认窗口按［확인］（确认）。
+2. 听到“카드를 대 주세요”（请刷卡）的声音后，把用绳子挂在刷卡机上的白色卡像 T-money 卡一样贴一下。
+[[img:images/faq/pay-card-terminal.png]]
+
+✅ 付款完成后，打印·复印会打印出来，扫描会生成文件，传真会把原件变成文件开始发送。
+
+⚠️ 复合机的金额和在 Toss 自助机付的金额必须完全一样。
+⚠️ 在 Toss 自助机付的钱只在充值卡里保留 20 分钟。不要先付款，请在复合机上确认金额后再付款。
+⚠️ 不要重复付款。重复付款的只退扣除手续费后的金额。
+💡 Toss 自助机的付款金额只能退到银行账户。详细内容请看“退款什么时候、怎么处理？”。
+
+📖 想先了解操作方法的话请点击。
+[[go:guide-print.html#store|查看打印方法]]
+[[go:guide-copy.html|查看复印方法]]
+[[go:guide-scan.html|查看扫描方法]]
+[[go:guide-fax.html|查看发传真方法]]
+#q vi: Tôi không có thẻ. Có thể trả bằng tiền mặt hoặc chuyển khoản không? (Nạp tiền trả trước ở kiosk Toss)
+#a vi
+⚠️ Nếu có thẻ IC (tín dụng/ghi nợ) hoặc Samsung Pay, đừng thanh toán ở máy kiosk Toss!
+💳 Ở bước thanh toán, cắm thẻ IC vào máy quẹt thẻ của máy in đa năng, Samsung Pay thì áp trực tiếp.
+💸 Nếu thanh toán nhầm ở kiosk Toss rồi hoàn tiền, sẽ trừ phí trước khi trả lại.
+
+❌ Không nhận tiền mặt và chuyển khoản.
+🧾 Không có thẻ cũng không sao! Hãy thanh toán trước ở máy kiosk Toss bằng Apple Pay · Kakao Pay · Toss Pay · thanh toán nhanh QR, rồi dùng thẻ nạp tiền.
+
+🎬 Xem video trước
+[[vid:videos/guide-toss.mp4]]
+
+📍 Máy kiosk Toss ở đâu?
+Ở trên bàn đặt máy ép·đóng sách màu trắng (SAFA-BM100). Các sản phẩm như túi ép, bìa kẹp chữ L, phong bì tài liệu thường cũng để trên bàn này.
+[[img:images/faq/pay-toss-where.png]]
+
+🧮 Trước tiên kiểm tra giá ở máy in đa năng
+
+🖨️ Khi in
+1. 💻 Mở tệp cần in trên máy tính, làm đến bước nhập mã PIN (4 số).
+2. Ở máy in đa năng, bấm [인쇄] (In) → [PC] rồi nhập mã PIN.
+3. Chọn tài liệu của bạn và bấm [시작] (Bắt đầu), màn hình giá tiền sẽ hiện ra. Nhất định xem kỹ đen trắng/màu, số trang, số tiền và ghi nhớ.
+
+📋 Khi photo · scan · fax
+- Hãy xem hướng dẫn trước, kiểm tra bản gốc có mấy tờ, đen trắng hay màu để tính tiền.
+
+🏧 Thanh toán ở máy kiosk Toss
+1. Đến máy kiosk Toss và bấm [결제하기] (Thanh toán).
+[[img:images/faq/pay-toss-kiosk.png]]
+2. Bấm [선불충전] (Nạp tiền trả trước) ở các thẻ phía trên.
+[[img:images/faq/pay-toss-s1-tab.png]]
+3. Chọn giống hệt những gì bạn thấy ở máy in đa năng. Ví dụ) In đen trắng → [복사/인쇄-A4-흑백-1장] (Photo/In-A4-đen trắng-1 tờ), scan 1 tờ → [스캔-1장] (Scan-1 tờ)
+[[img:images/faq/pay-toss-s2-item.png]]
+4. Khi hiện "안내를 받으셨습니까?" (Bạn đã được hướng dẫn chưa?), bấm [예(안내를 받았습니다.)] (Có). Chỉnh số tờ bằng [+] [−].
+[[img:images/faq/pay-toss-s3-agree.png]]
+💡 Phải bấm [예] (Có) ở câu "Bạn đã được hướng dẫn chưa?" thì mới tiếp tục thanh toán được.
+💡 Nhưng không bắt buộc phải gọi cho quản lý mới dùng được nạp tiền trả trước. Nếu đã đọc và hiểu hướng dẫn này, cứ bấm [예] (Có) và tiếp tục mà không cần gọi.
+💡 Nếu vẫn chưa rõ, hãy hỏi quản lý qua điện thoại hoặc TalkTalk.
+💡 Ngay lúc thanh toán nạp tiền trả trước, số tiền sẽ được nạp vào thẻ nạp tiền treo ở máy quẹt thẻ của máy in đa năng.
+5. Bấm [바로 결제] (Thanh toán ngay), hoặc nếu còn món khác cần thanh toán thì bấm [담기] (Thêm vào giỏ) rồi vào giỏ hàng để thanh toán.
+[[img:images/faq/pay-toss-s4-direct.png]]
+6. Khi hiện "이대로 결제할까요?" (Thanh toán như vậy nhé?), bấm [○○원 결제하기] (Thanh toán ○○ won).
+[[img:images/faq/pay-toss-s5-confirm.png]]
+7. Chọn phương thức thanh toán: [애플·NFC] (Apple·NFC) hoặc [QR 간편결제] (Thanh toán nhanh QR). Các ứng dụng như Kakao Pay, Naver Pay thì bấm [QR 간편결제] (Thanh toán nhanh QR). (Samsung Pay thì thanh toán trực tiếp ở máy quẹt thẻ của máy in đa năng)
+[[img:images/faq/pay-toss-s6-method-v2.png]]
+8. Nếu đã bấm [QR 간편결제] (Thanh toán nhanh QR), hãy đưa mã QR thanh toán trên điện thoại vào màn hình kiosk Toss.
+[[img:images/faq/pay-toss-s7-qr.png]]
+💡 Khi làm cả đen trắng và màu, bấm [담기] (Thêm vào giỏ), thêm một món bằng [더 담기 +] (Thêm nữa +), rồi thanh toán một lần.
+
+💳 Chạm thẻ nạp tiền ở máy in đa năng
+1. Thanh toán xong, đến máy in đa năng. Photo · scan · fax thì đặt bản gốc theo hướng dẫn, làm xong bấm [확인] (Xác nhận) ở màn hình giá tiền.
+2. Khi nghe "카드를 대 주세요" (Hãy chạm thẻ), chạm chiếc thẻ trắng treo bằng dây ở máy quẹt thẻ, giống như thẻ T-money.
+[[img:images/faq/pay-card-terminal.png]]
+
+✅ Thanh toán xong, in·photo sẽ in ra, scan sẽ tạo tệp, fax sẽ chuyển bản gốc thành tệp và bắt đầu gửi.
+
+⚠️ Số tiền ở máy in đa năng và số tiền thanh toán ở kiosk Toss phải giống hệt nhau.
+⚠️ Tiền thanh toán ở kiosk Toss chỉ nằm trong thẻ nạp tiền 20 phút. Đừng thanh toán trước; hãy kiểm tra giá ở máy in đa năng rồi mới thanh toán.
+⚠️ Đừng thanh toán 2 lần. Thanh toán trùng chỉ được hoàn lại số tiền sau khi trừ phí.
+💡 Tiền thanh toán ở kiosk Toss chỉ hoàn vào tài khoản ngân hàng. Chi tiết xem câu 'Hoàn tiền được xử lý khi nào và như thế nào?'.
+
+📖 Muốn biết cách làm trước, hãy bấm vào đây.
+[[go:guide-print.html#store|Xem cách in]]
+[[go:guide-copy.html|Xem cách photo]]
+[[go:guide-scan.html|Xem cách scan]]
+[[go:guide-fax.html|Xem cách gửi fax]]
+
+@@67
+#q en: Can I pay with Kakao Pay or Naver Pay? How?
+#a en
+✅ You can pay at the Toss kiosk. The card reader next to the printer machine accepts only credit/debit cards and Samsung Pay.
+The way depends on the service you want to use.
+
+🛍️ When paying for products (laminating pouches · heat-binding covers · L-folders · slide-binder files · document envelopes)
+1. Press [결제하기] (Pay) at the Toss kiosk and choose the product.
+2. For the payment method, press [QR 간편결제] (QR easy pay).
+3. On your phone, open the payment QR code in the Kakao Pay (or Naver Pay) app.
+4. Hold the QR code up to the kiosk screen (the camera at the top).
+5. Wait until the payment is done.
+
+🖨️ For printing · copying · scanning · fax
+- Pay with [선불충전] (Prepaid top-up) at the Toss kiosk.
+- Press [QR 간편결제] (QR easy pay) as the payment method to use Kakao Pay · Naver Pay.
+- There are many steps, so be sure to read the guide with pictures. It's explained in detail in 'FAQ: I don't have a card. Can I pay with cash or bank transfer? (Toss kiosk prepaid top-up)'.
+#q zh: 可以用 Kakao Pay·Naver Pay 付款吗？怎么付？
+#a zh
+✅ 可以在 Toss 自助机上付款。复合机旁边的刷卡机只能用信用卡·借记卡和三星支付。
+根据要使用的服务，方法不同。
+
+🛍️ 购买商品时（塑封膜·热熔装订封面·L 型文件夹·抽杆文件夹·文件袋）
+1. 在 Toss 自助机上按［결제하기］（付款），选择要付款的商品。
+2. 付款方式选［QR 간편결제］（二维码简易支付）。
+3. 在手机上打开 Kakao Pay（或 Naver Pay）应用的付款二维码。
+4. 把二维码对准自助机屏幕（上方的摄像头）。
+5. 等待付款完成。
+
+🖨️ 打印·复印·扫描·传真时
+- 用 Toss 自助机的［선불충전］（预付充值）付款。
+- 付款方式按［QR 간편결제］（二维码简易支付）就能用 Kakao Pay·Naver Pay。
+- 步骤比较多，请一定看有图片的说明。“常见问题：我没有卡。可以用现金或转账付款吗？（Toss 自助机预付充值）”中有详细说明。
+#q vi: Có thể thanh toán bằng Kakao Pay·Naver Pay không? Làm thế nào?
+#a vi
+✅ Có thể thanh toán ở máy kiosk Toss. Máy quẹt thẻ cạnh máy in đa năng chỉ nhận thẻ tín dụng·ghi nợ và Samsung Pay.
+Cách làm khác nhau tùy dịch vụ bạn muốn dùng.
+
+🛍️ Khi thanh toán sản phẩm (túi ép · bìa đóng nhiệt · bìa kẹp chữ L · bìa kẹp thanh trượt · phong bì tài liệu)
+1. Bấm [결제하기] (Thanh toán) ở kiosk Toss và chọn sản phẩm.
+2. Ở phương thức thanh toán, bấm [QR 간편결제] (Thanh toán nhanh QR).
+3. Trên điện thoại, mở mã QR thanh toán trong ứng dụng Kakao Pay (hoặc Naver Pay).
+4. Đưa mã QR vào màn hình kiosk (camera phía trên).
+5. Chờ đến khi thanh toán xong.
+
+🖨️ Khi in · photo · scan · fax
+- Thanh toán bằng [선불충전] (Nạp tiền trả trước) ở kiosk Toss.
+- Bấm [QR 간편결제] (Thanh toán nhanh QR) ở phương thức thanh toán để dùng Kakao Pay · Naver Pay.
+- Có nhiều bước nên nhất định hãy xem hướng dẫn có hình. Chi tiết có trong 'Câu hỏi: Tôi không có thẻ. Có thể trả bằng tiền mặt hoặc chuyển khoản không? (Nạp tiền trả trước ở kiosk Toss)'.

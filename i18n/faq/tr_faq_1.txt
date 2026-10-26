@@ -1,0 +1,950 @@
+@@4
+#q en: The printer machine broke while I was using it.
+#a en
+📞 Please contact us at the phone number posted in the store, or on Naver TalkTalk.
+
+⏰ Phone: weekdays (Mon–Fri) 9 AM–9 PM
+🚫 No phone support on Saturdays, Sundays and public holidays.
+💬 At other times and on weekends/holidays: send these 4 things on Naver TalkTalk.
+1. Store name (written on the PC desktop or the sign next to the PC)
+2. Printer machine number
+3. What's wrong
+4. Your contact number
+We'll contact you after checking.
+
+🙋 If you contacted us but got no answer, file a refund with the [환불신청] (Refund request) icon on the PC desktop and come back another day.
+⏰ You must file a refund within 7 days of the problem. If you don't file in time, we can't process the refund.
+
+⚠️ Even if nothing prints after you pay, NEVER pay again!
+Big files can take more than 10 minutes to print. If your first print comes out while you are paying again, there is no refund. Always contact us first.
+#q zh: 使用中复合机坏了。
+#a zh
+📞 请拨打店内写的电话号码，或通过 Naver TalkTalk 联系我们。
+
+⏰ 电话咨询：工作日（周一~周五）上午 9 点~晚上 9 点
+🚫 周六、周日、公休日不提供电话咨询。
+💬 其他时间和周六·周日·公休日：请通过 Naver TalkTalk 发送下面 4 项。
+1. 门店名称（写在电脑桌面或电脑旁边的告示牌上）
+2. 复合机编号
+3. 故障内容
+4. 联系方式
+确认后会联系您。
+
+🙋 联系了却没有得到回复的话，请用电脑桌面上的［환불신청］（申请退款）图标申请退款，改天再来使用。
+⏰ 必须在出问题当天起 7 天内申请退款。不在期限内申请的，无法退款。
+
+⚠️ 付款后即使没有打印出来，也绝对不要再付一次款！
+文件大的话，可能要 10 分钟以上才打印出来。再次付款期间，先付款的打印件出来了的话，不予退款。请一定先联系我们。
+#q vi: Máy in đa năng bị hỏng khi tôi đang dùng.
+#a vi
+📞 Hãy liên hệ số điện thoại ghi trong cửa hàng, hoặc qua Naver TalkTalk.
+
+⏰ Gọi điện: ngày thường (thứ 2–thứ 6) 9 giờ sáng–9 giờ tối
+🚫 Thứ 7, Chủ nhật và ngày lễ không tư vấn qua điện thoại.
+💬 Ngoài giờ đó và thứ 7·Chủ nhật·ngày lễ: hãy gửi 4 điều sau qua Naver TalkTalk.
+1. Tên cửa hàng (ghi trên màn hình nền máy tính hoặc bảng thông báo cạnh máy tính)
+2. Số máy in đa năng
+3. Lỗi gặp phải
+4. Số liên lạc
+Chúng tôi sẽ liên hệ sau khi kiểm tra.
+
+🙋 Nếu đã liên hệ mà chưa có trả lời, hãy đăng ký hoàn tiền bằng biểu tượng [환불신청] (Đăng ký hoàn tiền) trên màn hình nền máy tính và quay lại vào ngày khác.
+⏰ Phải đăng ký hoàn tiền trong vòng 7 ngày kể từ ngày xảy ra sự cố. Nếu không đăng ký đúng hạn, sẽ không được hoàn tiền.
+
+⚠️ Dù thanh toán xong mà không in ra, tuyệt đối đừng thanh toán lại!
+Tệp lớn có thể mất hơn 10 phút mới in ra. Nếu trong lúc bạn thanh toán lại mà bản in trước đó in ra, sẽ không được hoàn tiền. Nhất định phải liên hệ trước.
+
+@@15
+#q en: I paid, but nothing is printing.
+#a en
+⛔ Don't pay for the same file again!
+
+1. ⏳ Wait about 10 minutes.
+2. 📞 If nothing after 10 minutes, send the store name and the problem on Naver TalkTalk. (Phone is only answered weekdays 9 AM–9 PM)
+   e.g.) "Gwanggyo store, machine 1: I paid but nothing printed after 10 minutes"
+A manager will contact you after checking.
+
+🐢 Why is it slow?
+- The file is big.
+- The printer machine is slow.
+- The store internet slowed down for a moment.
+
+🚀 How to print faster (stores have 2 or 3 PCs)
+- Stores with 2 PCs: if you worked on PC1, pay at machine 2; if on PC2, pay at machine 1.
+- Stores with 3 PCs: if you worked on PC1 or PC2, pay at machine 2; if on PC3, pay at machine 1.
+
+🌙 If you paid when there's no phone support (weekdays 9 PM–9 AM, weekends, holidays) and nothing prints and TalkTalk doesn't answer right away, still don't pay again. File a [환불신청] (Refund request) and a manager will contact you the next day.
+
+⏰ Your print may come out after 10 minutes. Even if you're busy, please wait in the store for 10 minutes.
+
+📝 To file a refund: the [환불신청] (Refund request) icon on the store PC desktop
+⏰ You must file a refund within 7 days of the problem. If you don't file in time, we can't process the refund.
+
+👀 How to tell if it's printing
+- If there is a printer icon at the top of the machine screen, it's getting ready to print.
+- If the light at the bottom center of the screen blinks, it's printing.
+- Please wait at this time.
+
+⚠️ If you leave the store without contacting us, it will be hard to refund you later.
+#q zh: 付款了却没有打印出来。
+#a zh
+⛔ 不要为同一个文件再付一次款！
+
+1. ⏳ 请等 10 分钟左右。
+2. 📞 过了 10 分钟还不行的话，请通过 Naver TalkTalk 发送门店名称和问题。（电话只在工作日上午 9 点~晚上 9 点接听）
+   例）“光教店 1 号复合机付款后过了 10 分钟还没打印出来”
+管理员确认后会联系您。
+
+🐢 为什么慢？
+- 文件太大。
+- 复合机慢。
+- 店里的网络暂时变慢了。
+
+🚀 更快打印的方法（店里有 2 台或 3 台电脑）
+- 2 台电脑的门店：在 PC1 上操作的话在 2 号复合机付款，在 PC2 上操作的话在 1 号复合机付款。
+- 3 台电脑的门店：在 PC1·PC2 上操作的话在 2 号复合机付款，在 PC3 上操作的话在 1 号复合机付款。
+
+🌙 在没有电话咨询的时间（工作日晚 9 点~早 9 点、周六·周日·公休日）付款后没有打印出来，TalkTalk 也没有马上回复，也不要再付款。申请［환불신청］（申请退款）后，第二天管理员会联系您。
+
+⏰ 过了 10 分钟后也可能打印出来。即使很忙，也请在店里等满 10 分钟。
+
+📝 申请退款：店内电脑桌面上的［환불신청］（申请退款）图标
+⏰ 必须在出问题当天起 7 天内申请退款。不在期限内申请的，无法退款。
+
+👀 确认是否正在打印的方法
+- 复合机屏幕上方有打印机图标的话，是在准备打印。
+- 屏幕下方中间的灯闪烁的话，是在打印中。
+- 这时请等待。
+
+⚠️ 不联系就离开门店的话，之后很难给您退款。
+#q vi: Tôi đã thanh toán nhưng không in ra.
+#a vi
+⛔ Đừng thanh toán lại cho cùng một tệp!
+
+1. ⏳ Hãy chờ khoảng 10 phút.
+2. 📞 Nếu sau 10 phút vẫn không được, hãy gửi tên cửa hàng và sự cố qua Naver TalkTalk. (Điện thoại chỉ nghe ngày thường 9 giờ sáng–9 giờ tối)
+   Ví dụ) "Cửa hàng Gwanggyo, máy số 1: đã thanh toán mà sau 10 phút vẫn không in ra"
+Quản lý sẽ liên hệ sau khi kiểm tra.
+
+🐢 Tại sao chậm?
+- Tệp lớn.
+- Máy in đa năng chậm.
+- Mạng của cửa hàng tạm thời chậm.
+
+🚀 Cách in nhanh hơn (cửa hàng có 2 hoặc 3 máy tính)
+- Cửa hàng có 2 máy tính: làm ở PC1 thì thanh toán ở máy số 2, làm ở PC2 thì thanh toán ở máy số 1.
+- Cửa hàng có 3 máy tính: làm ở PC1·PC2 thì thanh toán ở máy số 2, làm ở PC3 thì thanh toán ở máy số 1.
+
+🌙 Nếu thanh toán vào giờ không có tư vấn điện thoại (ngày thường 9 giờ tối–9 giờ sáng, thứ 7, Chủ nhật, ngày lễ) mà không in ra và TalkTalk chưa trả lời ngay, cũng đừng thanh toán lại. Hãy đăng ký [환불신청] (Đăng ký hoàn tiền), hôm sau quản lý sẽ liên hệ.
+
+⏰ Bản in có thể ra sau 10 phút. Dù bận, hãy chờ trong cửa hàng đủ 10 phút.
+
+📝 Đăng ký hoàn tiền: biểu tượng [환불신청] (Đăng ký hoàn tiền) trên màn hình nền máy tính cửa hàng
+⏰ Phải đăng ký hoàn tiền trong vòng 7 ngày kể từ ngày xảy ra sự cố. Nếu không đăng ký đúng hạn, sẽ không được hoàn tiền.
+
+👀 Cách biết máy có đang in không
+- Nếu phía trên màn hình máy có biểu tượng máy in, máy đang chuẩn bị in.
+- Nếu đèn ở giữa phía dưới màn hình nhấp nháy, máy đang in.
+- Lúc này hãy chờ.
+
+⚠️ Nếu rời cửa hàng mà không liên hệ, sau này sẽ khó hoàn tiền.
+
+@@2
+#q en: I sent my file, but I can't see it on the printer machine.
+#a en
+Look at the [흑백출력] (B&W) / [컬러출력] (Color) print queue window on the PC.
+👀 If something is still in the list, it's still on its way to the printer machine.
+⚠️ If it stays stuck in the list, you can't find it on the printer machine.
+
+Try this.
+1. ⏳ If the file is big, wait a little.
+2. 🔄 If it still doesn't work, restart the PC and print again.
+3. 🔢 Check that the PIN you typed at the printer machine is the same as the PIN you typed on the PC.
+
+🗑️ Files are deleted automatically 30 minutes after you send them.
+#q zh: 文件发送了，复合机上却看不到文件。
+#a zh
+请看电脑上的［흑백출력］（黑白）/［컬러출력］（彩色）打印任务列表窗口。
+👀 列表还在的话，文件还在发往复合机的路上。
+⚠️ 列表一直卡着的话，在复合机上就找不到。
+
+请这样试试。
+1. ⏳ 文件大的话请稍等。
+2. 🔄 还是不行的话，重启电脑后重新打印。
+3. 🔢 确认在复合机上输入的 PIN 号码和在电脑上输入的个人识别码是否一样。
+
+🗑️ 发送 30 分钟后文件会自动删除。
+#q vi: Tôi đã gửi tệp nhưng không thấy tệp trên máy in đa năng.
+#a vi
+Hãy xem cửa sổ danh sách lệnh in [흑백출력] (đen trắng) / [컬러출력] (màu) trên máy tính.
+👀 Nếu danh sách vẫn còn, tệp vẫn đang trên đường đến máy in đa năng.
+⚠️ Nếu danh sách bị kẹt mãi, sẽ không tìm thấy ở máy in đa năng.
+
+Hãy thử như sau.
+1. ⏳ Nếu tệp lớn, hãy chờ một chút.
+2. 🔄 Nếu vẫn không được, khởi động lại máy tính rồi in lại.
+3. 🔢 Kiểm tra mã PIN nhập ở máy in đa năng có giống mã PIN đã nhập trên máy tính không.
+
+🗑️ Tệp sẽ tự động bị xóa 30 phút sau khi gửi.
+
+@@16
+#q en: Paper got jammed while printing or copying.
+#a en
+⛔ Don't pull out the jammed paper!
+The toner hasn't set yet and can get on your hands. There are no tissues in the store.
+
+1. Leave the paper as it is, and file a [환불신청] (Refund request) on the PC desktop.
+2. For A4: send the print again from the PC, then pay and print at the other machine.
+3. For B4 or A3: first send the details on Naver TalkTalk, and wait for the manager's answer about whether there is a fix.
+   If the manager answers that there is no fix, we're sorry, but please file a refund and come back the next day.
+
+⏰ You must file a refund within 7 days of the problem. If you don't file in time, we can't process the refund.
+#q zh: 打印或复印时卡纸了。
+#a zh
+⛔ 不要把卡住的纸拉出来！
+碳粉还没定住，可能会沾到手上。店里没有纸巾。
+
+1. 纸保持原样，在电脑桌面上申请［환불신청］（申请退款）。
+2. A4 的话：在电脑上重新发送打印，在旁边的复合机上重新付款打印。
+3. B4、A3 的话：请先通过 Naver TalkTalk 发送情况，等待管理员回复是否有解决办法。
+   如果管理员回复没有解决办法，很抱歉，请申请退款，第二天再来使用。
+
+⏰ 必须在出问题当天起 7 天内申请退款。不在期限内申请的，无法退款。
+#q vi: Bị kẹt giấy khi đang in hoặc photo.
+#a vi
+⛔ Đừng kéo tờ giấy bị kẹt ra!
+Mực chưa khô nên có thể dính vào tay. Cửa hàng không có khăn giấy.
+
+1. Để nguyên tờ giấy, rồi đăng ký [환불신청] (Đăng ký hoàn tiền) trên màn hình nền máy tính.
+2. Nếu là A4: gửi lệnh in lại từ máy tính, rồi thanh toán và in ở máy bên cạnh.
+3. Nếu là B4, A3: trước tiên hãy gửi nội dung qua Naver TalkTalk và chờ quản lý trả lời có cách xử lý không.
+   Nếu quản lý trả lời không có cách xử lý, rất xin lỗi, hãy đăng ký hoàn tiền và quay lại vào hôm sau.
+
+⏰ Phải đăng ký hoàn tiền trong vòng 7 ngày kể từ ngày xảy ra sự cố. Nếu không đăng ký đúng hạn, sẽ không được hoàn tiền.
+
+@@17
+#q en: I chose the Color printer, but it came out in black and white.
+#a en
+🎨 To print in color, always check these 3 things.
+1. On the print screen, choose the printer [컬러출력] (Color).
+2. In the preview, check that every page is in color.
+3. On the price screen at the printer machine, check once more that it says [컬러] (Color).
+
+❌ Cases with no refund
+- You didn't choose the Color printer, but thought it would print in color because the preview was in color.
+- You don't remember whether the preview was in color or black and white.
+- You chose the Color printer, so you thought it would print in color even though the preview was black and white.
+- You checked the preview, but some of the pages came out black and white.
+- You chose the Color printer and checked the preview, but it came out black and white. (You mistook the editing screen for the preview)
+- You chose the B&W printer, but thought it would print in color because the preview was in color. (You also didn't check the price screen)
+
+💸 If you chose the Color printer and it came out black and white
+- We partly cancel the payment: the total minus the black-and-white price.
+- File a refund, and send a photo of the black-and-white print on Naver TalkTalk.
+- You must file a refund within 7 days of the problem. If you don't file in time, we can't process the refund.
+- We won't process it if the file was edited or you send a different file.
+- If you don't agree to this and ask for a full refund, there is no refund.
+- If you chose the B&W printer and paid, black and white is expected, so there is no refund.
+
+📖 Tap here for the picture guide.
+[[go:guide-print.html#ptips|How to check color in the preview]]
+#q zh: 选了彩色打印机，却打印成了黑白。
+#a zh
+🎨 想打印彩色的话，一定要确认这 3 点。
+1. 在打印画面把打印机选为［컬러출력］（彩色）。
+2. 在预览中确认所有页面都是彩色。
+3. 在复合机金额确认画面上再确认一次是否为［컬러］（彩色）。
+
+❌ 不能退款的情况
+- 没选彩色打印机，但因为预览是彩色，以为会打印成彩色。
+- 不记得预览是彩色还是黑白。
+- 选了彩色打印机，所以以为即使预览是黑白也会打印成彩色。
+- 看了预览，但多页中有一部分打印成了黑白。
+- 选了彩色打印机也看了预览，却打印成了黑白。（把编辑画面误当成预览的情况）
+- 选了黑白打印机，但因为预览是彩色，以为会打印成彩色。（也没看金额确认画面的情况）
+
+💸 选了彩色打印机却打印成黑白的情况
+- 从总付款金额中减去黑白金额，部分取消剩下的部分。
+- 请申请退款，并通过 Naver TalkTalk 发送打印成黑白的打印件照片。
+- 必须在出问题当天起 7 天内申请退款。不在期限内申请的，无法退款。
+- 修改过文件或发送其他文件的，不予处理。
+- 不同意这个方法而要求全额退款的，不予退款。
+- 选了黑白打印机付款的，黑白是理所当然的，不予退款。
+
+📖 点这里查看详细的图片说明。
+[[go:guide-print.html#ptips|详细查看如何确认彩色打印预览]]
+#q vi: Tôi đã chọn máy in màu nhưng lại in ra đen trắng.
+#a vi
+🎨 Muốn in màu, hãy luôn kiểm tra 3 điều này.
+1. Ở màn hình in, chọn máy in [컬러출력] (màu).
+2. Ở bản xem trước, kiểm tra tất cả các trang đều có màu.
+3. Ở màn hình giá tiền của máy in đa năng, kiểm tra lại một lần nữa có phải [컬러] (màu) không.
+
+❌ Những trường hợp không được hoàn tiền
+- Không chọn máy in màu, nhưng nghĩ sẽ in màu vì bản xem trước có màu.
+- Không nhớ bản xem trước là màu hay đen trắng.
+- Đã chọn máy in màu nên nghĩ sẽ in màu dù bản xem trước là đen trắng.
+- Đã xem bản xem trước nhưng một số trang trong nhiều trang in ra đen trắng.
+- Đã chọn máy in màu và xem bản xem trước nhưng in ra đen trắng. (Nhầm màn hình chỉnh sửa với bản xem trước)
+- Đã chọn máy in đen trắng nhưng nghĩ sẽ in màu vì bản xem trước có màu. (Cũng không xem màn hình giá tiền)
+
+💸 Trường hợp đã chọn máy in màu mà in ra đen trắng
+- Chúng tôi hủy một phần thanh toán: tổng tiền trừ đi giá đen trắng.
+- Hãy đăng ký hoàn tiền và gửi ảnh bản in đen trắng qua Naver TalkTalk.
+- Phải đăng ký hoàn tiền trong vòng 7 ngày kể từ ngày xảy ra sự cố. Nếu không đăng ký đúng hạn, sẽ không được hoàn tiền.
+- Nếu tệp đã bị sửa hoặc gửi tệp khác, chúng tôi không xử lý.
+- Nếu không đồng ý cách này mà yêu cầu hoàn toàn bộ tiền, sẽ không được hoàn tiền.
+- Nếu đã chọn máy in đen trắng và thanh toán, in đen trắng là đúng nên không được hoàn tiền.
+
+📖 Bấm vào đây để xem hướng dẫn bằng hình.
+[[go:guide-print.html#ptips|Xem cách kiểm tra màu ở bản xem trước]]
+
+@@18
+#q en: My print has lines or smudged colors. Can I get a refund?
+#a en
+Only these 4 line/color/shape problems are refunded. (For blank prints, paper jams, etc., see those FAQs.)
+
+✅ Refunded
+1. A long white line appears. (left to right, or top to bottom)
+2. Colors are smudged.
+3. A single color comes out like a gradient.
+4. Geometric shapes that have nothing to do with the original are printed all over.
+
+📝 How to get a refund
+Leave the print in the store and file it with the [환불신청] (Refund request) icon on the PC desktop.
+⚠️ If you don't leave the print, there is no refund.
+⚠️ If you don't file a refund by pressing the [환불신청] (Refund request) icon and filling it in, we can't process a refund.
+⏰ You must file a refund within 7 days of the problem. If you don't file in time, we can't process the refund.
+
+❌ Not refunded
+1. It's different from the colors on the PC screen. (darker, duller, light blue looks navy, etc.)
+2. The colors are different every time you copy the same color original.
+   → Even the same original can come out in different colors each time. A color difference from the original is never refunded, for any reason.
+3. You printed the same file many times and the colors are different. (Even the same file can come out in different colors.)
+4. It's a Hangul file and the highlighter color doesn't show. (The Hangul viewer has no highlighter function.)
+5. You copied it, but the original's watermark doesn't show. (Watermarks are faint, so they don't copy.)
+6. You copied a certificate and the gold/silver looks strange. (Shiny colors can't be reproduced and come out dark.)
+7. You copied a paper that was already printed once, and part of it doesn't show.
+   → Don't copy a paper that was printed or copied. It gets faint and doesn't show.
+8. It's a PDF made on an iPad and the color doesn't show.
+   → In Acrobat Reader, the preview with [컬러출력] (Color) doesn't show color. You didn't check the preview, so there is no refund.
+   → For iPad PDFs, drag the file into Edge or Chrome and press [인쇄] (Print). Check in the preview that every page is in color, then print.
+9. It's a PDF made in a web design program like Canva and the color doesn't show.
+   → You didn't check the preview, so there is no refund.
+   → Open it in Edge or Chrome and press [인쇄] (Print). Check in the preview that every page is in color, then print.
+10. Pencil writing comes out faint or doesn't show.
+11. A document made by scanning is blurry, or highlighter/transparent colors don't show.
+12. You printed several copies of the same original and the content position is slightly different. (This happens with machines that feed one sheet at a time)
+13. The paper has tiny dots (specks). (They come from paper-making, so they are not defects)
+#q zh: 打印出来有条纹或颜色晕开了。能退款吗？
+#a zh
+因条纹·颜色·形状问题可以退款的只有下面 4 种。（白纸打印、卡纸等请看相关的常见问题。）
+
+✅ 可以退款的情况
+1. 出现长长的白色条纹。（左右方向或从上到下）
+2. 颜色晕开了。
+3. 单一颜色却像渐变一样打印出来。
+4. 整页打印出和原件无关的几何图形。
+
+📝 退款方法
+把打印件留在店里，用电脑桌面上的［환불신청］（申请退款）图标申请。
+⚠️ 不留下打印件的话，不予退款。
+⚠️ 不点［환불신청］（申请退款）图标填写内容申请退款的话，无法办理退款。
+⏰ 必须在出问题当天起 7 天内申请退款。不在期限内申请的，无法退款。
+
+❌ 不能退款的情况
+1. 和电脑屏幕的颜色不一样。（暗、发灰、亮蓝色像藏青色等）
+2. 复印同一张彩色原件，每次颜色都不一样。
+   → 即使是同一张原件，每次复印的颜色也可能不同。和原件颜色不同，无论什么理由都不退款。
+3. 同一个文件打印了好几张，颜色不一样。（即使是同一个文件，颜色也可能不同。）
+4. 是韩文文件，荧光色没打出来。（韩文查看器没有荧光笔功能。）
+5. 复印后原件的水印没出来。（水印很淡，复印不出来。）
+6. 复印奖状，金色·银色很奇怪。（闪亮的颜色无法表现，会打印得很暗。）
+7. 复印打印过一次的纸，有一部分没出来。
+   → 不要再复印打印或复印过的纸。会变淡，出不来。
+8. 是在 iPad 上做的 PDF，彩色出不来。
+   → 在 Acrobat Reader 中用［컬러출력］（彩色）看预览，看不到彩色。因为没确认预览，不予退款。
+   → iPad 的 PDF 请拖到 Edge 或 Chrome 里，按［인쇄］（打印）。在预览中确认所有页面都是彩色后再打印。
+9. 是在 Canva 等网页设计程序中做的 PDF，彩色出不来。
+   → 因为没确认预览，不予退款。
+   → 请用 Edge 或 Chrome 打开，按［인쇄］（打印）。在预览中确认所有页面都是彩色后再打印。
+10. 铅笔写的字打印得很淡或出不来。
+11. 扫描做成的文件模糊，或荧光色·透明色出不来。
+12. 同一张原件打印了好几份，内容的位置有一点点不同。（一张一张送纸的复合机会出现这种情况）
+13. 纸上有小点（杂点）。（是造纸时产生的，不是瑕疵）
+#q vi: Bản in bị sọc hoặc lem màu. Có được hoàn tiền không?
+#a vi
+Chỉ 4 trường hợp lỗi sọc·màu·hình dạng dưới đây được hoàn tiền. (In ra giấy trắng, kẹt giấy, v.v. hãy xem các câu hỏi liên quan.)
+
+✅ Được hoàn tiền
+1. Xuất hiện một sọc trắng dài. (ngang hoặc từ trên xuống dưới)
+2. Màu bị lem.
+3. Một màu mà in ra giống như chuyển màu (gradient).
+4. Hình hình học không liên quan đến bản gốc bị in khắp trang.
+
+📝 Cách hoàn tiền
+Để lại bản in ở cửa hàng và đăng ký bằng biểu tượng [환불신청] (Đăng ký hoàn tiền) trên màn hình nền máy tính.
+⚠️ Nếu không để lại bản in, sẽ không được hoàn tiền.
+⚠️ Nếu không bấm biểu tượng [환불신청] (Đăng ký hoàn tiền) và điền nội dung để đăng ký, sẽ không xử lý hoàn tiền được.
+⏰ Phải đăng ký hoàn tiền trong vòng 7 ngày kể từ ngày xảy ra sự cố. Nếu không đăng ký đúng hạn, sẽ không được hoàn tiền.
+
+❌ Không được hoàn tiền
+1. Màu khác với màn hình máy tính. (tối hơn, xỉn, xanh nhạt trông như xanh đậm, v.v.)
+2. Photo cùng một bản gốc màu mà mỗi lần màu lại khác.
+   → Dù cùng bản gốc, mỗi lần photo màu có thể khác. Màu khác với bản gốc không được hoàn tiền vì bất kỳ lý do gì.
+3. In cùng một tệp nhiều lần mà màu khác nhau. (Dù cùng tệp, màu vẫn có thể khác.)
+4. Là tệp Hangul mà màu dạ quang không in ra. (Trình xem Hangul không có chức năng bút dạ quang.)
+5. Photo mà hình mờ (watermark) của bản gốc không ra. (Hình mờ rất nhạt nên photo không ra.)
+6. Photo giấy khen mà màu vàng·bạc trông lạ. (Màu ánh kim không thể hiện được và sẽ ra màu tối.)
+7. Photo một tờ đã được in một lần mà một phần không ra.
+   → Đừng photo lại giấy đã in hoặc đã photo. Sẽ bị mờ và không ra.
+8. Là PDF làm trên iPad mà không in ra màu.
+   → Trong Acrobat Reader, xem trước với [컬러출력] (màu) sẽ không thấy màu. Vì không kiểm tra bản xem trước nên không được hoàn tiền.
+   → PDF iPad hãy kéo vào Edge hoặc Chrome và bấm [인쇄] (In). Kiểm tra ở bản xem trước tất cả các trang đều có màu rồi mới in.
+9. Là PDF làm bằng chương trình thiết kế web như Canva mà không in ra màu.
+   → Vì không kiểm tra bản xem trước nên không được hoàn tiền.
+   → Hãy mở bằng Edge hoặc Chrome và bấm [인쇄] (In). Kiểm tra ở bản xem trước tất cả các trang đều có màu rồi mới in.
+10. Chữ viết bằng bút chì in ra mờ hoặc không ra.
+11. Tài liệu làm bằng cách scan bị mờ, hoặc màu dạ quang·màu trong suốt không ra.
+12. In nhiều bản cùng một bản gốc mà vị trí nội dung hơi khác nhau. (Đây là điều xảy ra ở máy đưa từng tờ giấy một)
+13. Giấy có chấm nhỏ (vết lốm đốm). (Đó là do quá trình làm giấy nên không phải lỗi)
+
+@@66
+#q en: I printed/copied in color, but the colors look different from the screen (original). Is the machine broken?
+#a en
+Usually the machine is not broken. A monitor makes colors with light (RGB), and a printer makes colors with 4 toner colors (CMYK), so the screen and paper can never be exactly the same.
+
+■ Colors are especially different when
+· Vivid colors like red, blue, purple, green; highlighter colors; gold and silver
+· Even the same file can differ page to page and sheet to sheet (especially PDFs made in web design tools like Canva or Miricanvas, PPT, or iPad notes)
+· When copying: gold/silver foil comes out dark, and highlighter colors come out faint or not at all. Light colors (watermarks) may disappear, and copying a paper that was already printed may leave only the dark colors. Documents with anti-copy patterns, like resident registration copies and certificates, may show a pattern like "사본" (Copy).
+· Highlighter in Hangul files does not print in the store's Hangul viewer.
+
+■ Try this
+1. Open the PDF in Chrome or Edge, preview all pages, then print
+2. Bring it as a JPG instead of a PDF and print (text may be slightly less sharp)
+※ These raise the chance of smaller color differences. It won't come out 100% the same.
+
+■ Refund rules for color print problems (no exceptions)
+We refund only these 3: lines, smudged colors, a single color coming out as a gradient. Any other color difference is not eligible for a refund or reprint.
+
+[[img:images/faq/color-notice-poster2.jpg]]
+#q zh: 用彩色打印·复印了，颜色却和屏幕（原件）不一样。是机器坏了吗？
+#a zh
+大部分情况不是机器坏了。显示器用光（RGB）显示颜色，打印机用 4 色碳粉（CMYK）做出颜色，所以屏幕和纸上的颜色不可能完全一样。
+
+■ 这种时候颜色特别不一样
+· 红·蓝·紫·绿等鲜艳的颜色、荧光色、金色·银色
+· 同一个文件，每页·每张也会不同（特别是用 Canva·Miricanvas 等网页设计工具、PPT、iPad 笔记做的 PDF）
+· 复印时：烫金·烫银会变暗，荧光色会变淡或完全出不来。浅色（水印）可能会变白消失，再复印打印过一次的打印件可能只剩深色。户口本·证明这类有防复印花纹的文件，可能会显出“사본”（副本）这样的花纹。
+· 韩文文件里的荧光笔在店里的韩文查看器中打印不出来。
+
+■ 请这样试试
+1. PDF 用 Chrome·Edge 打开，预览所有页面后再打印
+2. 不用 PDF，改用 JPG 带来打印（文字可能稍微不那么清晰）
+※ 这是提高减少色差概率的方法。不会 100% 一样。
+
+■ 彩色打印颜色问题的退款标准（没有例外）
+只有条纹 · 颜色晕开 · 单色打印成渐变这 3 种才退款。其他色差不属于退款·重印对象。
+
+[[img:images/faq/color-notice-poster2.jpg]]
+#q vi: Tôi in/photo màu nhưng màu khác với màn hình (bản gốc). Có phải máy hỏng không?
+#a vi
+Hầu hết không phải máy hỏng. Màn hình tạo màu bằng ánh sáng (RGB), còn máy in tạo màu bằng 4 màu mực (CMYK), nên màu trên màn hình và trên giấy không thể giống hệt nhau.
+
+■ Màu đặc biệt khác khi
+· Màu tươi như đỏ·xanh dương·tím·xanh lá, màu dạ quang, màu vàng·bạc
+· Cùng một tệp nhưng mỗi trang·mỗi tờ lại khác (nhất là PDF làm bằng công cụ thiết kế web như Canva·Miricanvas, PPT, ghi chú iPad)
+· Khi photo: nhũ vàng·nhũ bạc ra tối, màu dạ quang ra mờ hoặc không ra. Màu nhạt (hình mờ) có thể bị mất, photo lại bản đã in có thể chỉ còn màu đậm. Giấy tờ có hoa văn chống sao chép như bản sao hộ khẩu·giấy chứng nhận có thể hiện hoa văn như chữ "사본" (Bản sao).
+· Bút dạ quang trong tệp Hangul không in ra được bằng trình xem Hangul của cửa hàng.
+
+■ Hãy thử thế này
+1. Mở PDF bằng Chrome·Edge, xem trước tất cả các trang rồi mới in
+2. Mang tệp JPG thay vì PDF để in (chữ có thể hơi kém sắc nét)
+※ Đây là cách tăng khả năng giảm chênh lệch màu. Không ra giống 100%.
+
+■ Tiêu chuẩn hoàn tiền cho lỗi màu khi in màu (không có ngoại lệ)
+Chỉ hoàn tiền 3 trường hợp: bị sọc · lem màu · một màu in ra thành chuyển màu. Các chênh lệch màu khác không được hoàn tiền hay in lại.
+
+[[img:images/faq/color-notice-poster2.jpg]]
+
+@@47
+#q en: My print came out blank (empty paper).
+#a en
+📄 There are usually two reasons for a blank print.
+
+1️⃣ The preview had no content
+- Before printing, always check in the preview that every page has content.
+- If the preview looks white, it prints blank.
+
+2️⃣ You opened and printed it straight from a USB
+- USB files must be saved to the PC, then opened and printed.
+- Compressed files must be unzipped before you open them.
+
+🔁 Try printing again like this
+
+📌 It's a PDF made in a web design tool like Canva or Miricanvas
+1. Open Chrome or Edge and drag the file onto that window. (Or right-click the file and choose Edge/Chrome in [연결 프로그램] (Open with).)
+2. Press [인쇄] (Print).
+3. Check in the preview that every page has content.
+4. If all the content shows, print.
+
+📌 It's a PDF but you don't know where it was made
+1. Open Chrome or Edge and drag the file onto that window, or right-click the file and choose Edge/Chrome in [연결 프로그램] (Open with). This fixes most problems with strange colors or blank prints.
+2. Check in the preview that every page has content.
+3. If all the content shows, print again.
+
+💸 File a refund for the blank paper
+1. If you take the blank paper with you or don't leave it where we ask, you may not get a refund. We need to check it really came out blank.
+2. Put the blank paper neatly where the paper is stacked.
+3. Press the [환불신청] (Refund request) icon on the store PC desktop and file a refund.
+4. A manager checks it, processes it if it's eligible, and tells you the result at the phone number you wrote in the refund request.
+
+⏰ You must file a refund within 7 days of the problem. If you didn't file, or filed after 7 days, there is no refund.
+ℹ️ Filing doesn't mean an instant refund. A manager checks it and processes only eligible cases.
+
+📖 To see how to open it in Chrome/Edge and check the preview, tap here.
+[[go:guide-print.html#browser|How to print in Chrome · Edge]]
+#q zh: 打印出来是白纸（空白纸）。
+#a zh
+📄 打印成白纸通常有两个原因。
+
+1️⃣ 预览里没有内容
+- 打印前，一定要在预览中看所有页面是否都有内容。
+- 预览是白的，就会打印成白纸。
+
+2️⃣ 直接从 U 盘打开打印
+- U 盘里的文件要先保存到电脑上，再打开打印。
+- 压缩文件要先解压再打开。
+
+🔁 请这样重新打印
+
+📌 是 PDF 文件，用 Canva·Miricanvas 等网页设计工具做的
+1. 打开 Chrome 或 Edge，把文件拖到那个窗口上。（或者用鼠标右键点文件，在［연결 프로그램］（打开方式）中选 Edge·Chrome。）
+2. 按［인쇄］（打印）。
+3. 在预览中看所有页面是否都有内容。
+4. 内容都显示的话就打印。
+
+📌 是 PDF 文件，但不知道在哪里做的
+1. 打开 Chrome 或 Edge，把文件拖到那个窗口上，或者用鼠标右键点文件，在［연결 프로그램］（打开方式）中选 Edge·Chrome 打开。颜色奇怪或打印成白纸的问题大部分都能解决。
+2. 在预览中看所有页面是否都有内容。
+3. 内容都显示的话再重新打印。
+
+💸 打印成白纸的纸请申请退款
+1. 把白纸带走，或者不放在指定的位置，可能无法退款。需要确认是否真的打印成了白纸。
+2. 请把白纸好好放在纸张堆放的地方。
+3. 点店内电脑桌面上的［환불신청］（申请退款）图标申请退款。
+4. 管理员确认后，属于退款对象的会处理，结果会通过申请时填写的手机号码通知您。
+
+⏰ 必须在出问题当天起 7 天内申请退款。没有申请或超过 7 天申请的，不予退款。
+ℹ️ 申请了也不是马上退款。管理员确认后只处理符合条件的。
+
+📖 想知道怎么用 Chrome·Edge 打开并确认预览，请点这里。
+[[go:guide-print.html#browser|查看用 Chrome·Edge 打印的方法]]
+#q vi: Bản in ra giấy trắng (trang trống).
+#a vi
+📄 In ra giấy trắng thường có hai lý do.
+
+1️⃣ Bản xem trước không có nội dung
+- Trước khi in, nhất định kiểm tra ở bản xem trước tất cả các trang đều có nội dung.
+- Nếu bản xem trước trắng trơn, sẽ in ra giấy trắng.
+
+2️⃣ Mở và in thẳng từ USB
+- Tệp trong USB phải lưu vào máy tính rồi mới mở và in.
+- Tệp nén phải giải nén rồi mới mở.
+
+🔁 Hãy in lại như sau
+
+📌 Là tệp PDF làm bằng công cụ thiết kế web như Canva·Miricanvas
+1. Mở Chrome hoặc Edge và kéo tệp thả vào cửa sổ đó. (Hoặc bấm chuột phải vào tệp, chọn Edge·Chrome trong [연결 프로그램] (Mở bằng).)
+2. Bấm [인쇄] (In).
+3. Kiểm tra ở bản xem trước tất cả các trang đều có nội dung.
+4. Nếu thấy đủ nội dung thì in.
+
+📌 Là tệp PDF nhưng không biết làm ở đâu
+1. Mở Chrome hoặc Edge và kéo tệp thả vào cửa sổ đó, hoặc bấm chuột phải vào tệp, chọn Edge·Chrome trong [연결 프로그램] (Mở bằng) để mở. Hầu hết lỗi màu lạ hoặc in ra giấy trắng sẽ được khắc phục.
+2. Kiểm tra ở bản xem trước tất cả các trang đều có nội dung.
+3. Nếu thấy đủ nội dung thì in lại.
+
+💸 Giấy in ra trắng thì hãy đăng ký hoàn tiền
+1. Nếu mang tờ giấy trắng đi hoặc không để đúng chỗ được hướng dẫn, có thể không được hoàn tiền. Chúng tôi cần kiểm tra có thật là in ra trắng không.
+2. Hãy để tờ giấy trắng gọn gàng ở chỗ xếp giấy.
+3. Bấm biểu tượng [환불신청] (Đăng ký hoàn tiền) trên màn hình nền máy tính cửa hàng để đăng ký hoàn tiền.
+4. Quản lý kiểm tra, nếu đủ điều kiện sẽ xử lý, và báo kết quả qua số điện thoại bạn ghi khi đăng ký.
+
+⏰ Phải đăng ký hoàn tiền trong vòng 7 ngày kể từ ngày xảy ra sự cố. Nếu không đăng ký hoặc đăng ký sau 7 ngày, sẽ không được hoàn tiền.
+ℹ️ Đăng ký không có nghĩa là được hoàn tiền ngay. Quản lý kiểm tra rồi chỉ xử lý trường hợp đủ điều kiện.
+
+📖 Muốn biết cách mở bằng Chrome·Edge và kiểm tra bản xem trước, hãy bấm vào đây.
+[[go:guide-print.html#browser|Xem cách in bằng Chrome · Edge]]
+
+@@69
+#q en: My copy came out blank (empty paper).
+#a en
+🔄 If the original is put in the wrong way, it can come out blank.
+
+📌 The ADF (automatic document feeder) is the 'place to put originals' on top of the printer machine.
+[[sm:images/common/adf-feeder.jpg]]
+There are two places to put originals, and each one needs a different direction.
+
+📄 1. When putting it in the ADF (top of the machine)
+→ Put it in with the content facing up.
+
+📘 2. When putting it on the glass
+→ Open the top cover of the printer machine.
+→ Put the original with the content facing down toward the glass. (Opposite of the ADF!)
+
+⚠️ If it came out blank because you put it in wrong, you may not get a refund.
+
+✅ If you put it in correctly and it still came out blank, the machine may have a problem. Please file a refund.
+A manager checks it, processes only the eligible cases, and tells you the result at the contact you gave.
+Filing doesn't mean an instant refund.
+⏰ You must file within 7 days of the problem.
+
+👇 File a refund with the picture below.
+[[btn:images/faq/btn-refund2.png|https://fax.printnuri.com/refund|Go to refund request]]
+💻 There is also a [환불신청] (Refund request) icon on the store PC desktop. You can file there too.
+
+📖 Tap here for the picture guide.
+[[go:guide-copy.html#adf|How to use the document feeder (ADF)]]
+[[go:guide-copy.html#glass|How to put originals on the glass]]
+#q zh: 复印出来是白纸（空白纸）。
+#a zh
+🔄 原件放的方向错了，可能会复印出白纸。
+
+📌 ADF（自动输稿器）是复合机上方“放原件的地方”。
+[[sm:images/common/adf-feeder.jpg]]
+放原件的地方有两个，每个地方的方向不一样。
+
+📄 1. 放进 ADF（复合机上方放原件的地方）时
+→ 原件的内容朝上放。
+
+📘 2. 放在玻璃板上时
+→ 打开复合机上方的盖子。
+→ 原件的内容朝向玻璃板（朝下）放。（和 ADF 相反！）
+
+⚠️ 因自己放错而复印出白纸的，可能不予退款。
+
+✅ 按上面的方法放了还是出白纸的话，可能是机器的问题。请申请退款。
+管理员确认后只处理确认属于退款对象的，并通过申请时的联系方式通知结果。
+申请退款不等于马上退款。
+⏰ 必须在出问题当天起 7 天内申请。
+
+👇 退款请点下面的图片申请。
+[[btn:images/faq/btn-refund2.png|https://fax.printnuri.com/refund|去申请退款]]
+💻 店内电脑桌面上也有［환불신청］（申请退款）图标，也可以在那里申请。
+
+📖 点这里查看详细的图片说明。
+[[go:guide-copy.html#adf|详细查看 ADF（放原件的地方）的用法]]
+[[go:guide-copy.html#glass|详细查看放在玻璃板上的方法]]
+#q vi: Bản photo ra giấy trắng (trang trống).
+#a vi
+🔄 Nếu đặt bản gốc sai hướng, có thể ra giấy trắng.
+
+📌 ADF (khay nạp bản gốc tự động) là 'chỗ đặt bản gốc' ở phía trên máy in đa năng.
+[[sm:images/common/adf-feeder.jpg]]
+Có hai chỗ đặt bản gốc, mỗi chỗ có hướng đặt khác nhau.
+
+📄 1. Khi đặt vào ADF (chỗ đặt bản gốc phía trên máy)
+→ Đặt mặt có nội dung hướng lên trên.
+
+📘 2. Khi đặt lên mặt kính
+→ Mở nắp phía trên của máy in đa năng.
+→ Đặt mặt có nội dung úp xuống mặt kính. (Ngược với ADF!)
+
+⚠️ Nếu ra giấy trắng do bạn đặt sai, có thể không được hoàn tiền.
+
+✅ Nếu đã đặt đúng như trên mà vẫn ra giấy trắng, có thể máy có vấn đề. Hãy đăng ký hoàn tiền.
+Quản lý kiểm tra, chỉ xử lý trường hợp được xác nhận đủ điều kiện, và báo kết quả qua số liên lạc đã đăng ký.
+Đăng ký hoàn tiền không có nghĩa là được hoàn tiền ngay.
+⏰ Phải đăng ký trong vòng 7 ngày kể từ ngày xảy ra sự cố.
+
+👇 Hãy đăng ký hoàn tiền bằng hình bên dưới.
+[[btn:images/faq/btn-refund2.png|https://fax.printnuri.com/refund|Đi đăng ký hoàn tiền]]
+💻 Trên màn hình nền máy tính cửa hàng cũng có biểu tượng [환불신청] (Đăng ký hoàn tiền). Có thể đăng ký ở đó.
+
+📖 Bấm vào đây để xem hướng dẫn bằng hình.
+[[go:guide-copy.html#adf|Xem cách dùng khay nạp bản gốc (ADF)]]
+[[go:guide-copy.html#glass|Xem cách đặt bản gốc lên mặt kính]]
+
+@@48
+#q en: The printer machine shows a message like 'No matching paper in the tray'.
+#a en
+This message can appear even when the machine has paper. You need to fix the print settings and send it again.
+
+🔎 Check first
+In the machine's list, does [크기] (Size) say 'Custom' or 'Letter' instead of A4·B4·A3?
+
+🛠️ How to fix it
+- PDF: in the print settings, uncheck 'PDF 페이지 크기에 따라 용지 소스 선택' (choose paper source by PDF page size). Then set the paper size you want.
+- Hangul, Word, etc.: [인쇄] (Print) → [컬러출력] (Color) or [흑백출력] (B&W) → [속성] (Properties) → in the [용지] (Paper) tab, set both 'original size' and 'output size' to the same size (e.g. A4).
+
+⛔ Don't change the paper type (heavy paper, premium paper, colored paper, etc.) in the print settings.
+If you do, a message like 'Load paper in the multipurpose tray' appears and it won't print.
+
+🖼️ Don't select many photos (images) and print them with right-click.
+Save them to the PC, then open them one at a time in [알씨] (ALSee) and print.
+
+🔁 If it was printing fine and this message appeared in the middle, see the FAQ below.
+👉 "I paid and it was printing fine, then it suddenly said 'no paper' and stopped printing."
+
+📖 Tap here for the picture guide.
+[[go:guide-print.html#acrobat|PDF print settings]]
+[[go:guide-print.html#hancom|Hangul print settings]]
+[[go:guide-print.html#office|Word · Excel · PowerPoint print settings]]
+#q zh: 复合机出现“纸盒中没有合适的纸张”之类的提示。
+#a zh
+复合机里有纸也可能出现这个提示。需要修改打印设置后重新发送。
+
+🔎 先确认一下
+复合机列表中的［크기］（尺寸）写的不是 A4·B4·A3，而是“Custom（自定义）”或“Letter（信纸）”吗？
+
+🛠️ 修改方法
+- PDF：在打印设置中取消勾选“PDF 페이지 크기에 따라 용지 소스 선택”（按 PDF 页面大小选择纸张来源）。然后把纸张大小设为想要的尺寸。
+- 韩文·Word 等：［인쇄］（打印）→［컬러출력］（彩色）或［흑백출력］（黑白）→［속성］（属性）→ 在［용지］（纸张）标签中，把“原稿尺寸”和“输出尺寸”都设为同样的尺寸（例：A4）。
+
+⛔ 不要在打印设置中更改纸张类型（厚纸、高级纸、彩纸等）。
+改了的话会出现“请在多功能纸盒中放纸”之类的提示，无法打印。
+
+🖼️ 照片（图片）不要选好几张后用右键打印。
+请保存到电脑后，一张一张用［알씨］（ALSee）打开打印。
+
+🔁 如果打印得好好的，中途出现这个提示，请看下面的常见问题。
+👉 “付款后打印得好好的，突然显示‘没有纸’，打印不了。”
+
+📖 点这里查看详细的图片说明。
+[[go:guide-print.html#acrobat|详细查看 PDF 打印设置]]
+[[go:guide-print.html#hancom|详细查看韩文打印设置]]
+[[go:guide-print.html#office|详细查看 Word·Excel·PowerPoint 打印设置]]
+#q vi: Máy in đa năng hiện thông báo kiểu 'Không có giấy phù hợp trong khay'.
+#a vi
+Dù máy có giấy vẫn có thể hiện thông báo này. Cần sửa cài đặt in rồi gửi lại.
+
+🔎 Kiểm tra trước
+Trong danh sách trên máy, mục [크기] (Khổ) có ghi 'Custom' hoặc 'Letter' thay vì A4·B4·A3 không?
+
+🛠️ Cách sửa
+- PDF: trong cài đặt in, bỏ dấu chọn ở 'PDF 페이지 크기에 따라 용지 소스 선택' (chọn nguồn giấy theo khổ trang PDF). Rồi chọn khổ giấy bạn muốn.
+- Hangul·Word, v.v.: [인쇄] (In) → [컬러출력] (màu) hoặc [흑백출력] (đen trắng) → [속성] (Thuộc tính) → ở thẻ [용지] (Giấy), chọn 'khổ bản gốc' và 'khổ in ra' giống nhau (ví dụ A4).
+
+⛔ Đừng đổi loại giấy (giấy dày, giấy cao cấp, giấy màu, v.v.) trong cài đặt in.
+Nếu đổi, sẽ hiện thông báo kiểu 'Hãy cho giấy vào khay đa năng' và không in được.
+
+🖼️ Đừng chọn nhiều ảnh (hình) rồi in bằng chuột phải.
+Hãy lưu vào máy tính, rồi mở từng ảnh bằng [알씨] (ALSee) để in.
+
+🔁 Nếu đang in bình thường mà giữa chừng hiện thông báo này, hãy xem câu hỏi dưới đây.
+👉 "Đã thanh toán và đang in bình thường, bỗng hiện 'không có giấy' và không in được."
+
+📖 Bấm vào đây để xem hướng dẫn bằng hình.
+[[go:guide-print.html#acrobat|Xem cài đặt in PDF]]
+[[go:guide-print.html#hancom|Xem cài đặt in Hangul]]
+[[go:guide-print.html#office|Xem cài đặt in Word · Excel · PowerPoint]]
+
+@@49
+#q en: My card payment doesn't work.
+#a en
+1. 💳 Turn the card around so the IC chip side goes in, and insert it again.
+2. 💳 Try another card.
+3. 🖨️ Look up your PIN again at the other printer machine and pay there.
+
+📱 For Samsung Pay, just hold it to the card reader.
+If it still doesn't work, tell us on TalkTalk. (Phone also works weekdays 9 AM–9 PM) (store name, machine number)
+#q zh: 刷卡付款不成功。
+#a zh
+1. 💳 把卡翻到有 IC 芯片的方向，重新插入试试。
+2. 💳 换一张卡试试。
+3. 🖨️ 在旁边的复合机上重新查询 PIN 号码后付款试试。
+
+📱 三星支付贴在刷卡机上就可以。
+还是不行的话，请通过 TalkTalk 告诉我们。（工作日上午 9 点~晚上 9 点也可以打电话）（门店名称、复合机编号）
+#q vi: Thanh toán bằng thẻ không được.
+#a vi
+1. 💳 Lật thẻ sao cho đầu có chip IC cắm vào, rồi cắm lại.
+2. 💳 Thử thẻ khác.
+3. 🖨️ Tìm lại mã PIN ở máy in đa năng bên cạnh rồi thanh toán.
+
+📱 Samsung Pay thì chỉ cần áp vào máy quẹt thẻ.
+Nếu vẫn không được, hãy báo qua TalkTalk. (Ngày thường 9 giờ sáng–9 giờ tối có thể gọi điện) (tên cửa hàng, số máy)
+
+@@50
+#q en: The PC screen is black or the mouse doesn't move.
+#a en
+😊 Don't worry. Follow these steps.
+
+1. 🔘 Hold down the PC power button. Keep holding until the screen turns off completely.
+2. When the screen is fully off and you can't see the mouse pointer, it has shut down.
+3. ⏳ Leave it for a moment.
+4. Press the power button just once to turn it back on.
+5. Wait until the desktop appears.
+
+💡 If the screen doesn't come on, hold the power button again to turn it off completely, then press it once to turn it on.
+🖥️ If it's the same after restarting, please use another PC.
+
+📞 And tell us on TalkTalk. A manager checks the PC remotely.
+- What to send: store name, PC number (e.g. Gwanggyo store, PC 2)
+#q zh: 电脑屏幕是黑的，或者鼠标不动。
+#a zh
+😊 别慌。请按下面的顺序做。
+
+1. 🔘 长按电脑电源按钮。一直按到屏幕完全关掉。
+2. 屏幕全黑、也看不到鼠标指针，就是关机了。
+3. ⏳ 先放一会儿。
+4. 只按一下电源按钮重新开机。
+5. 等到出现桌面。
+
+💡 开机后屏幕不亮的话，再长按电源按钮完全关掉，然后按一下开机。
+🖥️ 重新开机还是一样的话，请用其他电脑。
+
+📞 然后请通过 TalkTalk 告诉我们。管理员会远程检查电脑。
+- 要告诉的内容：门店名称、电脑编号（例：光教店 2 号电脑）
+#q vi: Màn hình máy tính bị đen hoặc chuột không di chuyển.
+#a vi
+😊 Đừng lo. Hãy làm theo thứ tự sau.
+
+1. 🔘 Nhấn giữ nút nguồn máy tính. Giữ đến khi màn hình tắt hẳn.
+2. Khi màn hình tắt hẳn và không thấy con trỏ chuột là máy đã tắt.
+3. ⏳ Để yên một lúc.
+4. Chỉ bấm nút nguồn một lần để bật lại.
+5. Chờ đến khi màn hình nền hiện ra.
+
+💡 Nếu bật lên mà màn hình không lên, hãy nhấn giữ nút nguồn lần nữa để tắt hẳn, rồi bấm một lần để bật.
+🖥️ Nếu bật lại vẫn vậy, hãy dùng máy tính khác.
+
+📞 Và hãy báo qua TalkTalk. Quản lý sẽ kiểm tra máy tính từ xa.
+- Nội dung cần gửi: tên cửa hàng, số máy tính (ví dụ: cửa hàng Gwanggyo, máy tính số 2)
+
+@@51
+#q en: The black laminator won't turn on.
+#a en
+⚫ The black laminator (PL-1506) normally has a blinking red light at 'POWER'.
+
+1. If the red light isn't blinking, there is no power at all. Push the power switch on the back right side of the laminator sideways to connect the power.
+2. If the POWER light is on, press the [전원] (Power) button → the [문서] (Document) button.
+3. When the green light at 'READY' blinks and then stops after about 1 minute, warm-up is done.
+4. Put your print inside the pouch, and slowly feed it into the slot, sealed end first.
+
+⚠️ Putting in only an empty pouch, or only paper without a pouch, can break the machine. Please follow the guide.
+
+📖 Tap here for the picture guide.
+[[go:guide-coat.html#pl1506|How to use the black laminator (PL-1506)]]
+#q zh: 黑色塑封机打不开。
+#a zh
+⚫ 黑色塑封机（PL-1506）平时“POWER”的红灯也会闪烁。
+
+1. 红灯不闪的话，就是完全没有通电。请把塑封机右后方的电源开关往旁边按，接通电源。
+2. POWER 灯亮着的话，按［전원］（电源）按钮 →［문서］（文件）按钮。
+3. “READY”的绿灯闪烁，大约 1 分钟后停止，就是预热完成了。
+4. 把打印纸放进塑封膜，从封口的一端慢慢放进入口。
+
+⚠️ 不放打印纸只放塑封膜，或者不放塑封膜只放纸的话，机器可能会坏。请按说明操作。
+
+📖 点这里查看详细的图片说明。
+[[go:guide-coat.html#pl1506|详细查看黑色塑封机（PL-1506）使用方法]]
+#q vi: Máy ép màu đen không bật lên được.
+#a vi
+⚫ Máy ép màu đen (PL-1506) bình thường cũng có đèn đỏ nhấp nháy ở 'POWER'.
+
+1. Nếu đèn đỏ không nhấp nháy là hoàn toàn không có điện. Hãy gạt công tắc nguồn ở mặt sau bên phải máy ép sang bên để cấp điện.
+2. Nếu đèn POWER sáng, bấm nút [전원] (Nguồn) → nút [문서] (Tài liệu).
+3. Khi đèn xanh ở 'READY' nhấp nháy rồi ngừng sau khoảng 1 phút là đã làm nóng xong.
+4. Cho giấy in vào túi ép, rồi đưa từ từ vào khe, đầu kín trước.
+
+⚠️ Chỉ cho túi ép rỗng, hoặc chỉ cho giấy mà không có túi ép có thể làm hỏng máy. Hãy làm theo hướng dẫn.
+
+📖 Bấm vào đây để xem hướng dẫn bằng hình.
+[[go:guide-coat.html#pl1506|Xem cách dùng máy ép màu đen (PL-1506)]]
+
+@@52
+#q en: I don't think the laminating worked well.
+#a en
+💡 If something seems wrong, tell us first!
+
+1. If you warmed it up and laminated but it doesn't seem to have worked well, don't keep laminating other things.
+2. Send the store name and "I warmed it up but the laminating doesn't seem to have worked" on Naver TalkTalk.
+3. If you describe the problem in detail, we can find the cause and tell you how to fix it faster.
+4. A manager checks the TalkTalk message and answers you.
+
+💡 If you kept laminating without noticing, we can only check the first one. So please tell us right away.
+ℹ️ Laminating and binding are self-service. If you couldn't do it because the machine broke, we refund the unused pouches and binding covers.
+
+📖 Tap here for the picture guide.
+[[go:guide-coat.html#coat|How to laminate]]
+#q zh: 好像没有塑封好。
+#a zh
+💡 觉得不对劲的话，请先告诉我们！
+
+1. 预热后操作了，但好像没塑封好的话，不要继续塑封其他东西。
+2. 请通过 Naver TalkTalk 发送门店名称和“预热后操作了，但好像没塑封好”。
+3. 具体说明没塑封好的情况，我们能更快找出问题并告诉您解决方法。
+4. TalkTalk 的内容由管理员确认后答复。
+
+💡 如果没发现问题一直塑封下去，只能确认第 1 次的部分。所以请马上告诉我们。
+ℹ️ 塑封·装订是自助操作。因机器故障而无法使用的，未使用的塑封膜、热熔装订封面可以退款。
+
+📖 点这里查看详细的图片说明。
+[[go:guide-coat.html#coat|详细查看塑封使用方法]]
+#q vi: Hình như ép plastic không được tốt.
+#a vi
+💡 Nếu thấy có gì lạ, hãy báo cho chúng tôi trước!
+
+1. Nếu đã làm nóng rồi ép mà có vẻ không được tốt, đừng tiếp tục ép thứ khác.
+2. Hãy gửi tên cửa hàng và "Đã làm nóng rồi ép nhưng có vẻ không được tốt" qua Naver TalkTalk.
+3. Nếu mô tả cụ thể tình trạng, chúng tôi có thể tìm ra vấn đề và hướng dẫn cách xử lý nhanh hơn.
+4. Quản lý sẽ kiểm tra tin nhắn TalkTalk và trả lời.
+
+💡 Nếu không biết có vấn đề mà vẫn tiếp tục ép, chúng tôi chỉ có thể kiểm tra lần đầu tiên. Vì vậy hãy báo ngay.
+ℹ️ Ép plastic·đóng sách là tự phục vụ. Nếu không làm được vì máy hỏng, chúng tôi hoàn tiền túi ép, bìa đóng nhiệt chưa dùng.
+
+📖 Bấm vào đây để xem hướng dẫn bằng hình.
+[[go:guide-coat.html#coat|Xem cách ép plastic]]
+
+@@53
+#q en: The pages of my heat-bound book are falling out.
+#a en
+It's usually one of these reasons. These cases are not refunded.
+- The pages didn't touch the white glue inside the cover evenly.
+- You didn't push the cover all the way into the binder.
+- You opened it without cooling it for 10+ minutes after taking it out. (If you open it before the glue hardens, pages fall out)
+
+✅ The right order
+Warm up (about 3 minutes, beep) → put the pages neatly in the cover → push it all the way in → press the timer (about 1 minute) → when the light stops, take it out carefully → cool for 10+ minutes → open
+
+🤔 If you don't agree, please file a refund. A manager checks it and tells you separately whether it will be refunded.
+⏰ You must file a refund within 7 days of the problem. If you don't file in time, we can't process the refund.
+💡 If binding failed because the machine broke, only the binding covers you paid for are refunded.
+
+📖 Tap here for the picture guide.
+[[go:guide-bind.html#bind|How to use heat binding]]
+#q zh: 热熔装订的纸掉下来了。
+#a zh
+大部分是下面这些原因。这些情况不属于退款对象。
+- 打印纸没有整齐地碰到封面里面的白色胶。
+- 没有把封面深深地放进装订机里。
+- 取出后没冷却 10 分钟以上就打开了。（胶还没变硬就打开的话会掉）
+
+✅ 正确的顺序
+预热（约 3 分钟，哔一声）→ 把打印纸整齐地放进封面 → 深深地放进去 → 按定时（约 1 分钟）→ 灯停了就小心取出 → 冷却 10 分钟以上 → 打开
+
+🤔 不同意的话请申请退款。管理员确认后会另外通知是否退款。
+⏰ 必须在出问题当天起 7 天内申请退款。不在期限内申请的，无法退款。
+💡 因机器故障没能装订的，只退已付款的热熔装订封面。
+
+📖 点这里查看详细的图片说明。
+[[go:guide-bind.html#bind|详细查看热熔装订使用方法]]
+#q vi: Giấy trong cuốn đóng nhiệt bị rơi ra.
+#a vi
+Thường là do một trong những lý do sau. Những trường hợp này không được hoàn tiền.
+- Giấy in không chạm đều vào lớp keo trắng bên trong bìa.
+- Không đẩy bìa vào sâu hết trong máy đóng sách.
+- Lấy ra mà không để nguội từ 10 phút trở lên đã mở ra. (Mở trước khi keo cứng thì giấy sẽ rơi ra)
+
+✅ Thứ tự đúng
+Làm nóng (khoảng 3 phút, tiếng bíp) → cho giấy ngay ngắn vào bìa → đẩy vào sâu hết → bấm hẹn giờ (khoảng 1 phút) → khi đèn ngừng thì lấy ra cẩn thận → để nguội từ 10 phút trở lên → mở ra
+
+🤔 Nếu không đồng ý, hãy đăng ký hoàn tiền. Quản lý sẽ kiểm tra và báo riêng có hoàn tiền hay không.
+⏰ Phải đăng ký hoàn tiền trong vòng 7 ngày kể từ ngày xảy ra sự cố. Nếu không đăng ký đúng hạn, sẽ không được hoàn tiền.
+💡 Nếu không đóng được vì máy hỏng, chỉ hoàn tiền bìa đóng nhiệt đã thanh toán.
+
+📖 Bấm vào đây để xem hướng dẫn bằng hình.
+[[go:guide-bind.html#bind|Xem cách đóng sách nhiệt]]

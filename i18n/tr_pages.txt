@@ -1,0 +1,1034 @@
+# 서비스(services.html) · 소개(about.html) · 지점찾기(branches.html) · 커뮤니티(community.html) 번역
+# 미니프랜즈 이름: 펭프린 Peng Print / 따라복 Polly Copy / 부스캔 Hoo Scan / 팩둘이 Coo Fax / 코북이 Shelly Coat / 차곡이 Stacky / 미니쿤 Mini Koon
+#   (중국어: 企鹅小印 / 鹦鹉小复 / 猫头鹰小扫 / 鸽子小传 / 乌龟小封 / 小叠 / 迷你酷)
+
+@@28930e462f
+en: Services - PrintShop Mini
+zh: 服务介绍 - PrintShop Mini
+vi: Dịch vụ - PrintShop Mini
+@@af3ed16fc2
+en: <a class="active" href="services.html">Services</a>
+zh: <a class="active" href="services.html">服务</a>
+vi: <a class="active" href="services.html">Dịch vụ</a>
+@@32773b8d4d
+en: Services
+zh: 服务介绍
+vi: Dịch vụ
+@@111855623e
+en: 6 self-services — what each one is. For the steps, see the How to Use menu.
+zh: 6 种自助服务 — 介绍每种服务是什么。使用步骤请在“使用方法”菜单中查看。
+vi: 6 dịch vụ tự phục vụ — giới thiệu từng dịch vụ. Các bước sử dụng xem ở menu Hướng dẫn.
+@@6aae1c7a87
+en: <a class="svc-nav-item on" data-view="all" href="#all" onclick="goView('all',event)">All</a> <a class="svc-nav-item" data-view="print" href="#print" onclick="goView('print',event)">🖨️ Print</a> <a class="svc-nav-item" data-view="copy" href="#copy" onclick="goView('copy',event)">📋 Copy</a> <a class="svc-nav-item" data-view="scan" href="#scan" onclick="goView('scan',event)">📄 Scan</a>
+zh: <a class="svc-nav-item on" data-view="all" href="#all" onclick="goView('all',event)">全部</a> <a class="svc-nav-item" data-view="print" href="#print" onclick="goView('print',event)">🖨️ 打印</a> <a class="svc-nav-item" data-view="copy" href="#copy" onclick="goView('copy',event)">📋 复印</a> <a class="svc-nav-item" data-view="scan" href="#scan" onclick="goView('scan',event)">📄 扫描</a>
+vi: <a class="svc-nav-item on" data-view="all" href="#all" onclick="goView('all',event)">Tất cả</a> <a class="svc-nav-item" data-view="print" href="#print" onclick="goView('print',event)">🖨️ In</a> <a class="svc-nav-item" data-view="copy" href="#copy" onclick="goView('copy',event)">📋 Photo</a> <a class="svc-nav-item" data-view="scan" href="#scan" onclick="goView('scan',event)">📄 Scan</a>
+@@41cbfef78e
+en: <a class="svc-nav-item" data-view="coat" href="#coat" onclick="goView('coat',event)">✨ Laminate</a> <a class="svc-nav-item" data-view="bind" href="#bind" onclick="goView('bind',event)">📚 Bind</a> <a class="svc-nav-item" data-view="price" href="#price" onclick="goView('price',event)">💰 Prices</a>
+zh: <a class="svc-nav-item" data-view="coat" href="#coat" onclick="goView('coat',event)">✨ 塑封</a> <a class="svc-nav-item" data-view="bind" href="#bind" onclick="goView('bind',event)">📚 装订</a> <a class="svc-nav-item" data-view="price" href="#price" onclick="goView('price',event)">💰 价目表</a>
+vi: <a class="svc-nav-item" data-view="coat" href="#coat" onclick="goView('coat',event)">✨ Ép plastic</a> <a class="svc-nav-item" data-view="bind" href="#bind" onclick="goView('bind',event)">📚 Đóng sách</a> <a class="svc-nav-item" data-view="price" href="#price" onclick="goView('price',event)">💰 Bảng giá</a>
+@@6b5afe0f67
+en: <span>📖 Want to know the steps (how to use) for each service?</span> <a href="guide.html">See how to use →</a>
+zh: <span>📖 想知道服务的使用步骤（使用方法）吗？</span> <a href="guide.html">查看使用方法 →</a>
+vi: <span>📖 Bạn muốn biết các bước sử dụng (hướng dẫn) từng dịch vụ?</span> <a href="guide.html">Xem hướng dẫn →</a>
+@@ab56aa5e21
+en: <a class="svc-more" href="guide-print.html">See how to print →</a>
+zh: <a class="svc-more" href="guide-print.html">查看打印使用方法 →</a>
+vi: <a class="svc-more" href="guide-print.html">Xem cách in →</a>
+@@bd32bd6aa4
+en: A self-printing service: send your file from the PC, then find it at the printer machine with a 4-digit PIN and print. B&amp;W, color and certificate printing are all available, and you can pay by card (IC, Samsung Pay).
+zh: 在电脑上发送文件，在复合机上用 4 位个人识别码（PIN）找到并打印的自助打印服务。黑白·彩色·证书都能打印，可以刷卡（IC 卡、三星支付）付款。
+vi: Dịch vụ tự in: gửi tệp từ máy tính, rồi tìm ở máy in đa năng bằng mã PIN 4 số và in. In đen trắng, màu và chứng chỉ đều được, thanh toán bằng thẻ (thẻ IC, Samsung Pay).
+@@a5bcf11fd8
+en: <span class="svc-price-label">B&amp;W A4</span><span class="svc-price-val">70 won/side</span>
+zh: <span class="svc-price-label">黑白 A4</span><span class="svc-price-val">70 韩元/面</span>
+vi: <span class="svc-price-label">Đen trắng A4</span><span class="svc-price-val">70 won/mặt</span>
+@@7048dfa5bd
+en: <span class="svc-price-label">Color A4</span><span class="svc-price-val">250 won/side</span>
+zh: <span class="svc-price-label">彩色 A4</span><span class="svc-price-val">250 韩元/面</span>
+vi: <span class="svc-price-label">Màu A4</span><span class="svc-price-val">250 won/mặt</span>
+@@5a4ff61769
+en: <span class="svc-price-label">B&amp;W A3</span><span class="svc-price-val">140 won/side</span>
+zh: <span class="svc-price-label">黑白 A3</span><span class="svc-price-val">140 韩元/面</span>
+vi: <span class="svc-price-label">Đen trắng A3</span><span class="svc-price-val">140 won/mặt</span>
+@@6b38436216
+en: <span class="svc-price-label">Color A3</span><span class="svc-price-val">500 won/side</span>
+zh: <span class="svc-price-label">彩色 A3</span><span class="svc-price-val">500 韩元/面</span>
+vi: <span class="svc-price-label">Màu A3</span><span class="svc-price-val">500 won/mặt</span>
+@@30b14c693f
+en: <a class="svc-more" href="guide-copy.html">See how to copy →</a>
+zh: <a class="svc-more" href="guide-copy.html">查看复印使用方法 →</a>
+vi: <a class="svc-more" href="guide-copy.html">Xem cách photo →</a>
+@@cdb8f80c75
+en: A self-copying service: put your original in the printer machine and <span class="hl">a paper copy comes out</span>. (Unlike scanning, which makes a file, copying <span class="hl">gives you paper.</span>) You choose settings yourself, like B&amp;W/color, A4/A3, one-sided/two-sided, enlarge/reduce, and pay by card.
+zh: 把原件放进复合机，就会<span class="hl">打印出纸质复印件</span>的自助复印服务。（和做成文件的扫描不同，复印<span class="hl">出来的是纸。</span>）可以自己选择黑白·彩色、A4·A3、单面·双面、放大·缩小等多种设置，用卡付款。
+vi: Dịch vụ tự photo: đặt bản gốc vào máy in đa năng và <span class="hl">nhận bản photo bằng giấy</span>. (Khác với scan tạo ra tệp, photo <span class="hl">ra giấy.</span>) Bạn tự chọn đen trắng/màu, A4/A3, 1 mặt/2 mặt, phóng to/thu nhỏ, và thanh toán bằng thẻ.
+@@fe5d3e2c78
+en: <a class="svc-more" href="guide-scan.html">See how to scan →</a>
+zh: <a class="svc-more" href="guide-scan.html">查看扫描使用方法 →</a>
+vi: <a class="svc-more" href="guide-scan.html">Xem cách scan →</a>
+@@56fd8ac04a
+en: A self-scanning service that <span class="hl">turns your original into a file</span> on the printer machine. You can save the scanned file to a USB or send it by email from a store PC.
+zh: 把原件放到复合机上<span class="hl">做成文件</span>的自助扫描服务。扫描的文件可以在店内电脑上存到 U 盘或用邮件发送。
+vi: Dịch vụ tự scan, <span class="hl">biến bản gốc thành tệp</span> trên máy in đa năng. Tệp scan có thể lưu vào USB hoặc gửi qua email từ máy tính trong cửa hàng.
+@@07358fe491
+en: <span class="svc-price-label">Scan A4</span><span class="svc-price-val">100 won/side</span>
+zh: <span class="svc-price-label">扫描 A4</span><span class="svc-price-val">100 韩元/面</span>
+vi: <span class="svc-price-label">Scan A4</span><span class="svc-price-val">100 won/mặt</span>
+@@c51336b74d
+en: <span class="svc-price-label">Scan A3</span><span class="svc-price-val">100 won/side</span>
+zh: <span class="svc-price-label">扫描 A3</span><span class="svc-price-val">100 韩元/面</span>
+vi: <span class="svc-price-label">Scan A3</span><span class="svc-price-val">100 won/mặt</span>
+@@9ddd1f2df6
+en: <a class="svc-more" href="guide-fax.html">See how to send a fax →</a>
+zh: <a class="svc-more" href="guide-fax.html">查看传真使用方法 →</a>
+vi: <a class="svc-more" href="guide-fax.html">Xem cách gửi fax →</a>
+@@7adb843c70
+en: A self-fax service that scans your original and sends it to the other person's fax number. You can check the result with a QR code.
+zh: 扫描原件并发送到对方传真号码的自助传真服务。可以用二维码确认发送结果。
+vi: Dịch vụ tự gửi fax: scan bản gốc rồi gửi đến số fax của người nhận. Có thể kiểm tra kết quả bằng mã QR.
+@@a90e964550
+en: <span class="svc-price-label">Domestic fax</span><span class="svc-price-val">500 won/side</span>
+zh: <span class="svc-price-label">国内传真</span><span class="svc-price-val">500 韩元/面</span>
+vi: <span class="svc-price-label">Fax trong nước</span><span class="svc-price-val">500 won/mặt</span>
+@@3af623e3a8
+en: <span class="svc-price-label">International fax</span><span class="svc-price-val"><span style="color:#EF4444">Not available</span></span>
+zh: <span class="svc-price-label">国际传真</span><span class="svc-price-val"><span style="color:#EF4444">不能发国际传真</span></span>
+vi: <span class="svc-price-label">Fax quốc tế</span><span class="svc-price-val"><span style="color:#EF4444">Không hỗ trợ</span></span>
+@@6f3a0d4042
+en: 📤 <strong>Sending only</strong><br/> 📵 You cannot receive faxes
+zh: 📤 <strong>只能发送</strong><br/> 📵 不能接收
+vi: 📤 <strong>Chỉ gửi được</strong><br/> 📵 Không nhận được fax
+@@978a35d9e8
+en: <a class="svc-more" href="guide-coat.html">See how to laminate →</a>
+zh: <a class="svc-more" href="guide-coat.html">查看塑封使用方法 →</a>
+vi: <a class="svc-more" href="guide-coat.html">Xem cách ép plastic →</a>
+@@a0db3ac2f9
+en: A self-laminating service: put your print in a laminating pouch and laminate it with heat. A4 and A3 pouches are available.
+zh: 把打印纸放进塑封膜（塑封袋）用热塑封的自助塑封服务。可以用 A4·A3 塑封膜。
+vi: Dịch vụ tự ép plastic: cho giấy in vào túi ép và ép bằng nhiệt. Có túi ép A4 và A3.
+@@986e38bc54
+en: <span class="svc-price-label">A4 laminating</span><span class="svc-price-val">400 won/sheet</span>
+zh: <span class="svc-price-label">A4 塑封</span><span class="svc-price-val">400 韩元/张</span>
+vi: <span class="svc-price-label">Ép A4</span><span class="svc-price-val">400 won/tờ</span>
+@@1831e6cf5f
+en: <span class="svc-price-label">A3 laminating</span><span class="svc-price-val">800 won/sheet</span>
+zh: <span class="svc-price-label">A3 塑封</span><span class="svc-price-val">800 韩元/张</span>
+vi: <span class="svc-price-label">Ép A3</span><span class="svc-price-val">800 won/tờ</span>
+@@549825ed35
+en: <a class="svc-more" href="guide-bind.html">See how to bind →</a>
+zh: <a class="svc-more" href="guide-bind.html">查看装订使用方法 →</a>
+vi: <a class="svc-more" href="guide-bind.html">Xem cách đóng sách →</a>
+@@3223b7cfd1
+en: A self-binding service: put your prints in a heat-binding cover and bind them like a book with the heat binder. Great for theses, reports, contracts and more.
+zh: 把打印纸放进热熔装订封面，用热熔装订机装订成书的自助装订服务。可用于论文、报告、合同等。
+vi: Dịch vụ tự đóng sách: cho giấy in vào bìa đóng nhiệt và đóng thành cuốn như sách bằng máy đóng nhiệt. Dùng cho luận văn, báo cáo, hợp đồng, v.v.
+@@b6e821e6a6
+en: <span class="svc-price-label">Heat-binding cover</span><span class="svc-price-val">1,500 won/each</span>
+zh: <span class="svc-price-label">热熔装订封面</span><span class="svc-price-val">1,500 韩元/个</span>
+vi: <span class="svc-price-label">Bìa đóng nhiệt</span><span class="svc-price-val">1.500 won/cái</span>
+@@48edec9707
+en: Price list
+zh: 服务价目表
+vi: Bảng giá dịch vụ
+@@5ce429d113
+en: ※ Prices may differ by store and may change without notice.
+zh: ※ 价格可能因门店而异，并可能在未事先通知的情况下变更。
+vi: ※ Giá có thể khác nhau tùy cửa hàng và có thể thay đổi mà không báo trước.
+@@3bd2412be5
+en: About Us - PrintShop Mini
+zh: 公司介绍 - PrintShop Mini
+vi: Giới thiệu - PrintShop Mini
+@@711aafd58f
+en: <a class="active" href="about.html">About</a>
+zh: <a class="active" href="about.html">介绍</a>
+vi: <a class="active" href="about.html">Giới thiệu</a>
+@@246a3c835d
+en: Whenever you need to print,<br/><span>we're always nearby</span>
+zh: 每个需要打印的时刻，<br/><span>都在您身边</span>
+vi: Mỗi khi bạn cần in,<br/><span>chúng tôi luôn ở gần</span>
+@@81d1a1d662
+en: Stores in Gyeonggi
+zh: 京畿道门店
+vi: Cửa hàng ở Gyeonggi
+@@7f0fd8719d
+en: Founded
+zh: 成立年份
+vi: Năm thành lập
+@@1f62f4f2c0
+en: 🐾 PrintShop Mini mascots
+zh: 🐾 PrintShop Mini 吉祥物
+vi: 🐾 Linh vật PrintShop Mini
+@@2262c5002c
+en: Hello~ We're the <span>Mini Friends</span>!
+zh: 你好~ 我们是<span>迷你朋友</span>！
+vi: Xin chào~ Chúng mình là <span>Mini Friends</span>!
+@@df2bca810d
+en: Each of us is in charge of one service.<br/>Tap a friend and they'll introduce themselves!
+zh: 我们每项服务都有一位负责的朋友。<br/>点一下朋友，它会亲自做自我介绍！
+vi: Mỗi dịch vụ có một bạn phụ trách.<br/>Bấm vào một bạn, bạn ấy sẽ tự giới thiệu!
+@@243bdadd06
+en: <a aria-label="Meet Peng Print" class="mf-li" href="#friend-penpurin" style="--c:#22B24C;--cl:#E7F7EC"><img alt="Peng Print (penguin), printing" height="170" loading="lazy" src="img/friends/print.webp" width="150"/><span class="mf-tag">Peng Print</span></a> <a aria-label="Meet Polly Copy" class="mf-li" href="#friend-ttarabok" style="--c:#018FFB;--cl:#E1F1FF"><img alt="Polly Copy (parrot), copying" height="170" loading="lazy" src="img/friends/copy.webp" width="150"/><span class="mf-tag">Polly Copy</span></a> <a aria-label="Meet Hoo Scan" class="mf-li" href="#friend-buscan" style="--c:#12BDB0;--cl:#E0F7F5"><img alt="Hoo Scan (owl), scanning" height="170" loading="lazy" src="img/friends/scan.webp" width="150"/><span class="mf-tag">Hoo Scan</span></a> <a aria-label="Meet Mini Koon" class="mf-li mf-big" href="#friend-minikoon" style="--c:#1B8AC4;--cl:#E3F2FB"><img alt="Mini Koon (raccoon), store manager · guide" height="170" loading="lazy" src="img/friends/raccoon.webp" width="150"/><span class="mf-tag">Mini Koon</span></a> <a aria-label="Meet Coo Fax" class="mf-li" href="#friend-pakdul" style="--c:#F3732C;--cl:#FFEBDD"><img alt="Coo Fax (pigeon), faxing" height="170" loading="lazy" src="img/friends/fax.webp" width="150"/><span class="mf-tag">Coo Fax</span></a> <a aria-label="Meet Shelly Coat" class="mf-li" href="#friend-kobuki" style="--c:#7C3AED;--cl:#EEE6FD"><img alt="Shelly Coat (turtle), laminating" height="170" loading="lazy" src="img/friends/coat.webp" width="150"/><span class="mf-tag">Shelly Coat</span></a> <a aria-label="Meet Stacky" class="mf-li" href="#friend-chagoki" style="--c:#EC4899;--cl:#FDE7F2"><img alt="Stacky (beaver), binding" height="170" loading="lazy" src="img/friends/bind.webp" width="150"/><span class="mf-tag">Stacky</span></a>
+zh: <a aria-label="认识企鹅小印" class="mf-li" href="#friend-penpurin" style="--c:#22B24C;--cl:#E7F7EC"><img alt="企鹅小印（企鹅）负责打印" height="170" loading="lazy" src="img/friends/print.webp" width="150"/><span class="mf-tag">企鹅小印</span></a> <a aria-label="认识鹦鹉小复" class="mf-li" href="#friend-ttarabok" style="--c:#018FFB;--cl:#E1F1FF"><img alt="鹦鹉小复（鹦鹉）负责复印" height="170" loading="lazy" src="img/friends/copy.webp" width="150"/><span class="mf-tag">鹦鹉小复</span></a> <a aria-label="认识猫头鹰小扫" class="mf-li" href="#friend-buscan" style="--c:#12BDB0;--cl:#E0F7F5"><img alt="猫头鹰小扫（猫头鹰）负责扫描" height="170" loading="lazy" src="img/friends/scan.webp" width="150"/><span class="mf-tag">猫头鹰小扫</span></a> <a aria-label="认识迷你酷" class="mf-li mf-big" href="#friend-minikoon" style="--c:#1B8AC4;--cl:#E3F2FB"><img alt="迷你酷（浣熊）店长 · 负责引导" height="170" loading="lazy" src="img/friends/raccoon.webp" width="150"/><span class="mf-tag">迷你酷</span></a> <a aria-label="认识鸽子小传" class="mf-li" href="#friend-pakdul" style="--c:#F3732C;--cl:#FFEBDD"><img alt="鸽子小传（鸽子）负责传真" height="170" loading="lazy" src="img/friends/fax.webp" width="150"/><span class="mf-tag">鸽子小传</span></a> <a aria-label="认识乌龟小封" class="mf-li" href="#friend-kobuki" style="--c:#7C3AED;--cl:#EEE6FD"><img alt="乌龟小封（乌龟）负责塑封" height="170" loading="lazy" src="img/friends/coat.webp" width="150"/><span class="mf-tag">乌龟小封</span></a> <a aria-label="认识小叠" class="mf-li" href="#friend-chagoki" style="--c:#EC4899;--cl:#FDE7F2"><img alt="小叠（河狸）负责装订" height="170" loading="lazy" src="img/friends/bind.webp" width="150"/><span class="mf-tag">小叠</span></a>
+vi: <a aria-label="Làm quen Peng Print" class="mf-li" href="#friend-penpurin" style="--c:#22B24C;--cl:#E7F7EC"><img alt="Peng Print (chim cánh cụt), phụ trách in" height="170" loading="lazy" src="img/friends/print.webp" width="150"/><span class="mf-tag">Peng Print</span></a> <a aria-label="Làm quen Polly Copy" class="mf-li" href="#friend-ttarabok" style="--c:#018FFB;--cl:#E1F1FF"><img alt="Polly Copy (vẹt), phụ trách photo" height="170" loading="lazy" src="img/friends/copy.webp" width="150"/><span class="mf-tag">Polly Copy</span></a> <a aria-label="Làm quen Hoo Scan" class="mf-li" href="#friend-buscan" style="--c:#12BDB0;--cl:#E0F7F5"><img alt="Hoo Scan (cú), phụ trách scan" height="170" loading="lazy" src="img/friends/scan.webp" width="150"/><span class="mf-tag">Hoo Scan</span></a> <a aria-label="Làm quen Mini Koon" class="mf-li mf-big" href="#friend-minikoon" style="--c:#1B8AC4;--cl:#E3F2FB"><img alt="Mini Koon (gấu mèo), cửa hàng trưởng · hướng dẫn" height="170" loading="lazy" src="img/friends/raccoon.webp" width="150"/><span class="mf-tag">Mini Koon</span></a> <a aria-label="Làm quen Coo Fax" class="mf-li" href="#friend-pakdul" style="--c:#F3732C;--cl:#FFEBDD"><img alt="Coo Fax (bồ câu), phụ trách fax" height="170" loading="lazy" src="img/friends/fax.webp" width="150"/><span class="mf-tag">Coo Fax</span></a> <a aria-label="Làm quen Shelly Coat" class="mf-li" href="#friend-kobuki" style="--c:#7C3AED;--cl:#EEE6FD"><img alt="Shelly Coat (rùa), phụ trách ép plastic" height="170" loading="lazy" src="img/friends/coat.webp" width="150"/><span class="mf-tag">Shelly Coat</span></a> <a aria-label="Làm quen Stacky" class="mf-li" href="#friend-chagoki" style="--c:#EC4899;--cl:#FDE7F2"><img alt="Stacky (hải ly), phụ trách đóng sách" height="170" loading="lazy" src="img/friends/bind.webp" width="150"/><span class="mf-tag">Stacky</span></a>
+@@7c3a4f3b5e
+en: Meet Peng Print
+zh: 认识企鹅小印
+vi: Làm quen Peng Print
+@@269ffa3856
+en: Peng Print (penguin), printing
+zh: 企鹅小印（企鹅）负责打印
+vi: Peng Print (chim cánh cụt), phụ trách in
+@@5e890283f0
+en: Meet Polly Copy
+zh: 认识鹦鹉小复
+vi: Làm quen Polly Copy
+@@c30088b691
+en: Polly Copy (parrot), copying
+zh: 鹦鹉小复（鹦鹉）负责复印
+vi: Polly Copy (vẹt), phụ trách photo
+@@f6f12d3a34
+en: Meet Hoo Scan
+zh: 认识猫头鹰小扫
+vi: Làm quen Hoo Scan
+@@88cf141cf7
+en: Hoo Scan (owl), scanning
+zh: 猫头鹰小扫（猫头鹰）负责扫描
+vi: Hoo Scan (cú), phụ trách scan
+@@ace898e0e7
+en: Meet Mini Koon
+zh: 认识迷你酷
+vi: Làm quen Mini Koon
+@@73896c136a
+en: Mini Koon (raccoon), store manager · guide
+zh: 迷你酷（浣熊）店长 · 负责引导
+vi: Mini Koon (gấu mèo), cửa hàng trưởng · hướng dẫn
+@@0eff670153
+en: Meet Coo Fax
+zh: 认识鸽子小传
+vi: Làm quen Coo Fax
+@@a8ae9006f0
+en: Coo Fax (pigeon), faxing
+zh: 鸽子小传（鸽子）负责传真
+vi: Coo Fax (bồ câu), phụ trách fax
+@@d493a8c05f
+en: Meet Shelly Coat
+zh: 认识乌龟小封
+vi: Làm quen Shelly Coat
+@@330452d261
+en: Shelly Coat (turtle), laminating
+zh: 乌龟小封（乌龟）负责塑封
+vi: Shelly Coat (rùa), phụ trách ép plastic
+@@9d697d5764
+en: Meet Stacky
+zh: 认识小叠
+vi: Làm quen Stacky
+@@dbd7a5f054
+en: Stacky (beaver), binding
+zh: 小叠（河狸）负责装订
+vi: Stacky (hải ly), phụ trách đóng sách
+@@95fbece39a
+en: PrintShop Mini is a 24-hour unmanned self-service print shop built on the idea that "anyone can do it easily, even without staff." It's open to everyone — university students finishing a thesis late at night, business owners who need a contract at dawn, and anyone who wants to print photos.
+zh: PrintShop Mini 是以“没有员工，谁都能轻松使用”为理念打造的 24 小时无人自助打印店。熬夜完成论文的大学生、凌晨需要合同的经营者、想打印照片的任何人，都可以来使用。
+vi: PrintShop Mini là cửa hàng in tự phục vụ không người trực mở 24 giờ, ra đời với ý tưởng "ai cũng làm được dễ dàng, dù không có nhân viên". Cửa hàng dành cho tất cả mọi người — sinh viên hoàn thành luận văn lúc nửa đêm, chủ doanh nghiệp cần hợp đồng lúc sáng sớm, hay bất kỳ ai muốn in ảnh.
+@@b3ad627a2e
+en: Meet the Mini Friends 🐾
+zh: 介绍迷你朋友 🐾
+vi: Làm quen với Mini Friends 🐾
+@@c0b3674f55
+en: Now let's say hello one by one! Hear why each friend took charge of one of the six services you'll find in the store.
+zh: 现在一个一个来打招呼吧！听听负责店里六种服务的朋友们，为什么会负责这项工作。
+vi: Bây giờ chào từng bạn nhé! Hãy nghe vì sao mỗi bạn lại phụ trách một trong sáu dịch vụ ở cửa hàng.
+@@37dd2ad97e
+en: <a class="mf-go" href="guide.html">See all guides at a glance <span aria-hidden="true">→</span></a>
+zh: <a class="mf-go" href="guide.html">一眼看懂使用方法 <span aria-hidden="true">→</span></a>
+vi: <a class="mf-go" href="guide.html">Xem nhanh tất cả hướng dẫn <span aria-hidden="true">→</span></a>
+@@a3f83181e8
+en: 🏪 Store manager · guide
+zh: 🏪 店长 · 负责引导
+vi: 🏪 Cửa hàng trưởng · hướng dẫn
+@@ffb0696d31
+en: Mini Koon <small>Mini Koon</small>
+zh: 迷你酷 <small>Mini Koon</small>
+vi: Mini Koon <small>Mini Koon</small>
+@@f2b584ccfc
+en: 💫 Raccoon · kind manager · handy expert
+zh: 💫 浣熊 · 亲切的店长 · 手巧达人
+vi: 💫 Gấu mèo · cửa hàng trưởng thân thiện · bậc thầy khéo tay
+@@f0b06ed07d
+en: "Welcome! If you don't know something, ask me."
+zh: “欢迎光临！不懂就问我吧。”
+vi: "Chào mừng bạn! Không biết gì cứ hỏi mình nhé."
+@@ab2b46ca22
+en: Hello! I'm the leader of the Mini Friends, <b>store manager Mini Koon</b>! I look after the whole store. <span class="why">Why?</span> Raccoons are very good with their hands. We can fix anything by fiddling with it! So I also help my friends with their jobs. I watch over the store day and night without a break. If there's anything you don't know, ask me!
+zh: 你好！我是迷你朋友的老大，<b>店长迷你酷</b>！我负责整个门店。<span class="why">为什么呢？</span>因为浣熊的手特别巧，摆弄摆弄什么都能搞定！所以朋友们负责的工作我也会好好照看。不管白天黑夜，我都不休息地守着门店。有不懂的就问我吧！
+vi: Xin chào! Mình là trưởng nhóm Mini Friends, <b>cửa hàng trưởng Mini Koon</b>! Mình phụ trách toàn bộ cửa hàng. <span class="why">Vì sao ư?</span> Gấu mèo rất khéo tay. Mân mê một chút là làm được hết! Vì vậy mình cũng giúp các bạn làm tốt việc của họ. Mình trông cửa hàng cả ngày lẫn đêm không nghỉ. Có gì chưa biết thì hỏi mình nhé!
+@@30efcd4164
+en: <a class="mf-go" href="guide-print.html">See how to print <span aria-hidden="true">→</span></a>
+zh: <a class="mf-go" href="guide-print.html">查看打印方法 <span aria-hidden="true">→</span></a>
+vi: <a class="mf-go" href="guide-print.html">Xem cách in <span aria-hidden="true">→</span></a>
+@@f99650c230
+en: 🖨️ Printing
+zh: 🖨️ 负责打印
+vi: 🖨️ Phụ trách in
+@@50b0d1e9b3
+en: Peng Print <small>Peng Print</small>
+zh: 企鹅小印 <small>Peng Print</small>
+vi: Peng Print <small>Peng Print</small>
+@@3e50f0ab5a
+en: 💫 Penguin · line-up champion · neat and tidy
+zh: 💫 企鹅 · 排队达人 · 爱整洁
+vi: 💫 Chim cánh cụt · vua xếp hàng · gọn gàng
+@@095b149a7c
+en: "In a line, one by one! Here comes the paper."
+zh: “排好队，一张张！纸出来啦。”
+vi: "Xếp hàng, từng tờ một! Giấy ra đây."
+@@36a37e2514
+en: Hello! I'm Peng Print, in charge of <b>printing</b> for the Mini Friends! <span class="why">Why?</span> Don't I look just like black letters on white paper, all black and white? And penguins walk in perfect lines. So the paper I print comes out one sheet at a time, all lined up! Black and white is a must, and color is no problem either!
+zh: 你好！我是迷你朋友中负责<b>打印</b>的企鹅小印！<span class="why">为什么呢？</span>我黑白相间的样子，是不是很像白纸上的黑字？而且企鹅走路总是排得整整齐齐。所以我打印的纸也是一张一张排好队出来！黑白是基本，彩色也没问题！
+vi: Xin chào! Mình là Peng Print, phụ trách <b>in</b> trong nhóm Mini Friends! <span class="why">Vì sao ư?</span> Trông mình đen trắng, giống hệt chữ đen trên giấy trắng đúng không? Hơn nữa chim cánh cụt luôn đi thành hàng ngay ngắn. Nên giấy mình in cũng ra từng tờ thẳng hàng! Đen trắng là cơ bản, màu cũng không thành vấn đề!
+@@71a1729f02
+en: <a class="mf-go" href="guide-copy.html">See how to copy <span aria-hidden="true">→</span></a>
+zh: <a class="mf-go" href="guide-copy.html">查看复印方法 <span aria-hidden="true">→</span></a>
+vi: <a class="mf-go" href="guide-copy.html">Xem cách photo <span aria-hidden="true">→</span></a>
+@@c9e7f7475c
+en: 📋 Copying
+zh: 📋 负责复印
+vi: 📋 Phụ trách photo
+@@b356726a12
+en: Polly Copy <small>Polly Copy</small>
+zh: 鹦鹉小复 <small>Polly Copy</small>
+vi: Polly Copy <small>Polly Copy</small>
+@@8e0c7004fa
+en: 💫 Parrot · prankster · copycat
+zh: 💫 鹦鹉 · 调皮鬼 · 模仿达人
+vi: 💫 Vẹt · nghịch ngợm · bắt chước giỏi
+@@0b070d667e
+en: "I'll copy it exactly!"
+zh: “我会一模一样地学！”
+vi: "Mình sẽ bắt chước y hệt!"
+@@c18f000cb6
+en: Hello! I'm Polly Copy, in charge of <b>copying</b> for the Mini Friends! <span class="why">Why?</span> Parrots are famous for repeating exactly what they hear. I look at your original and copy it exactly to make one more. Nobody copies better than me! Isn't my blue shirt cool?
+zh: 你好！我是迷你朋友中负责<b>复印</b>的鹦鹉小复！<span class="why">为什么呢？</span>鹦鹉以一模一样地学别人说话而出名。我看着原件一模一样地学，再给您做出一张。模仿我最厉害！蓝衬衫也很帅吧？
+vi: Xin chào! Mình là Polly Copy, phụ trách <b>photo</b> trong nhóm Mini Friends! <span class="why">Vì sao ư?</span> Vẹt nổi tiếng vì nhại lại y hệt những gì nghe được. Mình nhìn bản gốc rồi làm giống hệt thêm một bản nữa. Bắt chước thì mình giỏi nhất! Áo sơ mi xanh của mình cũng đẹp chứ?
+@@311ec65e1d
+en: <a class="mf-go" href="guide-scan.html">See how to scan <span aria-hidden="true">→</span></a>
+zh: <a class="mf-go" href="guide-scan.html">查看扫描方法 <span aria-hidden="true">→</span></a>
+vi: <a class="mf-go" href="guide-scan.html">Xem cách scan <span aria-hidden="true">→</span></a>
+@@e4cfaf3f88
+en: 📄 Scanning
+zh: 📄 负责扫描
+vi: 📄 Phụ trách scan
+@@fb41ef9dcc
+en: Hoo Scan <small>Hoo Scan</small>
+zh: 猫头鹰小扫 <small>Hoo Scan</small>
+vi: Hoo Scan <small>Hoo Scan</small>
+@@befdc4535e
+en: 💫 Owl · calm bookworm · careful one
+zh: 💫 猫头鹰 · 文静的书虫 · 细心鬼
+vi: 💫 Cú · mọt sách điềm tĩnh · cẩn thận
+@@b609aa58e8
+en: "I'll look at it carefully."
+zh: “我来仔细看看。”
+vi: "Mình sẽ xem thật kỹ."
+@@b2a89ef867
+en: Hello! I'm Hoo Scan, in charge of <b>scanning</b> for the Mini Friends! <span class="why">Why?</span> Owls have big, bright eyes and see well even on dark nights. And with my round glasses, I read every bit of writing on your paper carefully and turn it into a file. No problem even in the middle of the night. Hoo!
+zh: 你好！我是迷你朋友中负责<b>扫描</b>的猫头鹰小扫！<span class="why">为什么呢？</span>猫头鹰眼睛又大又亮，黑夜里也看得很清楚。再加上我戴着圆圆的眼镜，会把纸上的字每个角落都仔细读一遍，变成文件给您。半夜也没问题。咕咕！
+vi: Xin chào! Mình là Hoo Scan, phụ trách <b>scan</b> trong nhóm Mini Friends! <span class="why">Vì sao ư?</span> Cú có đôi mắt to sáng, nhìn rõ cả trong đêm tối. Lại đeo thêm cặp kính tròn, nên mình đọc kỹ từng góc chữ trên giấy rồi biến thành tệp cho bạn. Nửa đêm cũng không thành vấn đề. Hú hú!
+@@da82cbdc46
+en: <a class="mf-go" href="guide-fax.html">See how to send a fax <span aria-hidden="true">→</span></a>
+zh: <a class="mf-go" href="guide-fax.html">查看发传真方法 <span aria-hidden="true">→</span></a>
+vi: <a class="mf-go" href="guide-fax.html">Xem cách gửi fax <span aria-hidden="true">→</span></a>
+@@1149511cde
+en: 📠 Faxing
+zh: 📠 负责传真
+vi: 📠 Phụ trách fax
+@@c3712967c5
+en: Coo Fax <small>Coo Fax</small>
+zh: 鸽子小传 <small>Coo Fax</small>
+vi: Coo Fax <small>Coo Fax</small>
+@@42f9c1d369
+en: 💫 Pigeon · speedy courier · news carrier
+zh: 💫 鸽子 · 快递员 · 消息灵通
+vi: 💫 Bồ câu · người đưa thư nhanh · nhanh tin
+@@0c98fdba61
+en: "I'll send your news flying!"
+zh: “我会把消息飞快送出去！”
+vi: "Mình sẽ đưa tin bay đi!"
+@@2cd73011eb
+en: Hello! I'm Coo Fax, in charge of <b>faxing</b> for the Mini Friends! <span class="why">Why?</span> Since long ago, pigeons have carried letters far away. I send your documents flying too! See the Wi-Fi sign by my head? I send them over the internet. Oh, I only send — I can't receive! Coo coo!
+zh: 你好！我是迷你朋友中负责<b>传真</b>的鸽子小传！<span class="why">为什么呢？</span>鸽子从很久以前就是把信送到远方的信使。我也会把您的文件“嗖”地送出去。看到我头旁边的 Wi-Fi 标志了吗？我是用网络发送的。啊，我只负责发送，不能接收！咕咕！
+vi: Xin chào! Mình là Coo Fax, phụ trách <b>fax</b> trong nhóm Mini Friends! <span class="why">Vì sao ư?</span> Từ xưa bồ câu đã là người đưa thư đi xa. Mình cũng gửi giấy tờ của bạn bay vèo đi! Thấy biểu tượng Wi-Fi cạnh đầu mình không? Mình gửi qua internet. À, mình chỉ gửi thôi, không nhận được đâu! Gù gù!
+@@137020d5c6
+en: <a class="mf-go" href="guide-coat.html">See how to laminate <span aria-hidden="true">→</span></a>
+zh: <a class="mf-go" href="guide-coat.html">查看塑封方法 <span aria-hidden="true">→</span></a>
+vi: <a class="mf-go" href="guide-coat.html">Xem cách ép plastic <span aria-hidden="true">→</span></a>
+@@0cb084491b
+en: ✨ Laminating
+zh: ✨ 负责塑封
+vi: ✨ Phụ trách ép plastic
+@@f936361241
+en: Shelly Coat <small>Shelly Coat</small>
+zh: 乌龟小封 <small>Shelly Coat</small>
+vi: Shelly Coat <small>Shelly Coat</small>
+@@dd0a56b535
+en: 💫 Turtle · slow but trusty guardian
+zh: 💫 乌龟 · 慢悠悠但很可靠的守护者
+vi: 💫 Rùa · chậm rãi nhưng là người bảo vệ đáng tin
+@@4e59726f91
+en: "I'll keep it safe."
+zh: “我一定会保护好它。”
+vi: "Mình sẽ giữ nó an toàn."
+@@cf3b89a794
+en: Hello! I'm Shelly Coat, in charge of <b>laminating</b> for the Mini Friends! <span class="why">Why?</span> Turtles protect themselves with a hard shell. I wrap your precious paper tightly with laminating to protect it too. Laminated paper is strong and stays clean for a long, long time. Can you see the shiny card in my hand?
+zh: 你好！我是迷你朋友中负责<b>塑封</b>的乌龟小封！<span class="why">为什么呢？</span>乌龟用坚硬的龟壳保护身体。我也用塑封把您珍贵的纸紧紧包起来保护好。塑封过的纸又结实，又能长长久久保持干净。看到我手里亮晶晶的卡片了吗？
+vi: Xin chào! Mình là Shelly Coat, phụ trách <b>ép plastic</b> trong nhóm Mini Friends! <span class="why">Vì sao ư?</span> Rùa bảo vệ cơ thể bằng chiếc mai cứng. Mình cũng bọc chặt tờ giấy quý của bạn bằng lớp ép để bảo vệ nó. Giấy đã ép thì chắc chắn và sạch đẹp rất lâu. Bạn thấy tấm thẻ bóng loáng trên tay mình chứ?
+@@f44cd0ec83
+en: <a class="mf-go" href="guide-bind.html">See how to bind <span aria-hidden="true">→</span></a>
+zh: <a class="mf-go" href="guide-bind.html">查看装订方法 <span aria-hidden="true">→</span></a>
+vi: <a class="mf-go" href="guide-bind.html">Xem cách đóng sách <span aria-hidden="true">→</span></a>
+@@0604470127
+en: 📚 Binding
+zh: 📚 负责装订
+vi: 📚 Phụ trách đóng sách
+@@68c0e768b1
+en: Stacky <small>Stacky</small>
+zh: 小叠 <small>Stacky</small>
+vi: Stacky <small>Stacky</small>
+@@a2c544ce82
+en: 💫 Beaver · hard worker · skilled builder
+zh: 💫 河狸 · 勤劳的工匠 · 巧手
+vi: 💫 Hải ly · chăm chỉ · khéo tay
+@@845447f039
+en: "I'll stack them up neatly!"
+zh: “我会整整齐齐地装订好！”
+vi: "Mình sẽ xếp gọn gàng cho bạn!"
+@@30083f4e7d
+en: Hello! I'm Stacky, in charge of <b>binding</b> for the Mini Friends! <span class="why">Why?</span> Beavers are skilled builders who weave branches together to make strong homes. I stack your papers neatly and bind them into a book. I'm in charge of heat binding, which sticks pages with heat. Aren't I cute holding a notebook?
+zh: 你好！我是迷你朋友中负责<b>装订</b>的小叠！<span class="why">为什么呢？</span>河狸是会把树枝编在一起、盖出结实房子的巧手。我会把纸整整齐齐地装订成书。我负责用热粘合的热熔装订。我抱着笔记本的样子很可爱吧？
+vi: Xin chào! Mình là Stacky, phụ trách <b>đóng sách</b> trong nhóm Mini Friends! <span class="why">Vì sao ư?</span> Hải ly là thợ khéo tay, đan cành cây thành ngôi nhà chắc chắn. Mình xếp giấy của bạn gọn gàng rồi đóng thành sách. Mình phụ trách đóng sách nhiệt, dán giấy bằng nhiệt. Trông mình ôm quyển vở dễ thương không?
+@@66c3d7ef04
+en: What we do
+zh: 我们做的事
+vi: Việc chúng tôi làm
+@@5898bd811b
+en: Mini Koon (raccoon)
+zh: 迷你酷（浣熊）
+vi: Mini Koon (gấu mèo)
+@@5155f1ac1b
+en: Store manager Mini Koon's promise
+zh: 店长迷你酷的承诺
+vi: Lời hứa của cửa hàng trưởng Mini Koon
+@@36ae3c4d73
+en: 🎯 Mission
+zh: 🎯 使命
+vi: 🎯 Sứ mệnh
+@@106d000698
+en: We create a place where anyone who needs to print can do it themselves, anytime and anywhere.
+zh: 打造一个让所有需要打印的人，不受时间和地点限制、能自己解决的环境。
+vi: Tạo ra nơi mà ai cần in cũng có thể tự làm, bất cứ lúc nào, ở bất cứ đâu.
+@@46ec0553c1
+en: Hoo Scan (owl)
+zh: 猫头鹰小扫（猫头鹰）
+vi: Hoo Scan (cú)
+@@d7f5846e51
+en: Hoo Scan's far-seeing eyes
+zh: 猫头鹰小扫望向远方的眼睛
+vi: Đôi mắt nhìn xa của Hoo Scan
+@@bae4041966
+en: 🌏 Vision
+zh: 🌏 愿景
+vi: 🌏 Tầm nhìn
+@@9f8260f74c
+en: Beyond Gyeonggi, we're building a world where a PrintShop Mini is the nearest place anywhere in Korea.
+zh: 走出京畿道，打造一个在全国任何地方，离您最近的地方都有 PrintShop Mini 的世界。
+vi: Vượt ra ngoài Gyeonggi, chúng tôi hướng tới một thế giới mà ở bất kỳ đâu tại Hàn Quốc, nơi gần nhất cũng có PrintShop Mini.
+@@2e2a2cacdc
+en: Polly Copy (parrot)
+zh: 鹦鹉小复（鹦鹉）
+vi: Polly Copy (vẹt)
+@@c3e5a8d9db
+en: Polly Copy says it again
+zh: 鹦鹉小复跟着说
+vi: Polly Copy nhắc lại
+@@8f1f965c42
+en: 💡 Slogan
+zh: 💡 口号
+vi: 💡 Khẩu hiệu
+@@1fadd72833
+en: "On your own, easily, print any time"<br/>A guide system that doesn't leave anyone stuck, even the first time.
+zh: “一个人也能轻松，随时打印”<br/>提供一套即使第一次来也不会卡住的引导系统。
+vi: "Tự mình làm dễ dàng, in bất cứ lúc nào"<br/>Hệ thống hướng dẫn giúp ai cũng không bị vướng, kể cả lần đầu.
+@@536f941dfe
+en: The PrintShop Mini<br/>story
+zh: PrintShop Mini<br/>的故事
+vi: Câu chuyện<br/>PrintShop Mini
+@@6ce46a9482
+en: It began in 2021 in the new city of Gwanggyo. With the Gyeonggi Provincial Office and public offices moving in, and Gwanggyo Jungang Station opening on the Shinbundang Line, young people were moving in fast and Gwanggyo was growing into a lively new city. With nearby universities and large apartment complexes drawing people in their 20s to 40s, PrintShop Mini was born from the belief that this city needed a print service people could use conveniently at any time.
+zh: 2021 年，从新城光教开始。随着京畿道厅和政府机关入驻、新盆唐线光教中央站开通，年轻人口快速流入，光教正在成长为充满活力的新城。在这座以周边大学和大型公寓小区为中心、聚集了 20~40 岁年轻人的城市里，我们坚信需要一个随时都能方便使用的打印服务，于是 PrintShop Mini 诞生了。
+vi: Bắt đầu năm 2021 tại thành phố mới Gwanggyo. Khi trụ sở tỉnh Gyeonggi và các cơ quan nhà nước chuyển đến, ga Gwanggyo Jungang trên tuyến Shinbundang khai trương, người trẻ đổ về nhanh và Gwanggyo đang trở thành một thành phố mới sôi động. Với các trường đại học và khu chung cư lớn xung quanh thu hút người từ 20 đến 40 tuổi, PrintShop Mini ra đời từ niềm tin rằng thành phố này cần một dịch vụ in tiện lợi, dùng được bất cứ lúc nào.
+@@f387e45272
+en: At first it was only A4 black-and-white printing, but by listening to customers we grew to 6 services: copy, scan, fax, laminate and bind.
+zh: 一开始只有 A4 黑白打印一项，后来听取顾客的意见，扩展到复印、扫描、传真、塑封、装订共 6 项服务。
+vi: Lúc đầu chỉ có in đen trắng A4, nhưng nhờ lắng nghe khách hàng, chúng tôi đã mở rộng thành 6 dịch vụ: photo, scan, fax, ép plastic và đóng sách.
+@@bb15446d94
+en: Today we run <span class="js-bcount">16</span> stores in <span class="js-rcount">4</span> areas (<span class="js-rnames">수원·화성·용인·평택</span>), used by thousands of customers every month.
+zh: 目前在<span class="js-rnames">수원·화성·용인·평택</span> <span class="js-rcount">4</span> 个地区运营 <span class="js-bcount">16</span> 家门店，每月有数千名顾客使用。
+vi: Hiện chúng tôi vận hành <span class="js-bcount">16</span> cửa hàng ở <span class="js-rcount">4</span> khu vực (<span class="js-rnames">수원·화성·용인·평택</span>), mỗi tháng có hàng nghìn khách sử dụng.
+@@3188741baa
+en: PrintShop Mini 🦝
+zh: PrintShop Mini 🦝
+vi: PrintShop Mini 🦝
+@@24599c2ab8
+en: Gwanggyo store No. 1
+zh: 光教 1 号店
+vi: Cửa hàng số 1 Gwanggyo
+@@581dce3bc7
+en: 10 stores
+zh: 10 家门店
+vi: 10 cửa hàng
+@@e7755cd501
+en: Now
+zh: 现在
+vi: Hiện nay
+@@3fb7159823
+en: Open every day
+zh: 全年无休
+vi: Mở mọi ngày
+@@0335aca94b
+en: Open 365 days
+zh: 365 天营业
+vi: Mở 365 ngày
+@@a15db889bc
+en: Unmanned
+zh: 无人
+vi: Không người trực
+@@19ca0c7ce7
+en: Self-service
+zh: 自助运营
+vi: Tự phục vụ
+@@1f641f3c07
+en: No staff needed
+zh: 不需要员工
+vi: Không cần nhân viên
+@@984d6546c0
+en: Peng Print (penguin)
+zh: 企鹅小印（企鹅）
+vi: Peng Print (chim cánh cụt)
+@@42be8c6150
+en: Coo Fax (pigeon)
+zh: 鸽子小传（鸽子）
+vi: Coo Fax (bồ câu)
+@@aac5afedf8
+en: Shelly Coat (turtle)
+zh: 乌龟小封（乌龟）
+vi: Shelly Coat (rùa)
+@@8216baa9e4
+en: Stacky (beaver)
+zh: 小叠（河狸）
+vi: Stacky (hải ly)
+@@f7884a5c25
+en: Core values
+zh: 核心价值
+vi: Giá trị cốt lõi
+@@f23149b416
+en: 🕐 Accessibility
+zh: 🕐 便利可达
+vi: 🕐 Dễ tiếp cận
+@@849bbef793
+en: Whenever and wherever you need to print, we're at the nearest place
+zh: 无论何时何地，需要打印的时候，我们就在离您最近的地方
+vi: Bất cứ khi nào, ở đâu bạn cần in, chúng tôi ở gần bạn nhất
+@@c6b8c38fc6
+en: Coo Fax: I'll fly anywhere, whoosh!
+zh: 鸽子小传：哪里都“嗖”地飞过去！
+vi: Coo Fax: Đi đâu mình cũng bay vèo tới!
+@@95acb1da43
+en: 👆 Convenience
+zh: 👆 便利性
+vi: 👆 Tiện lợi
+@@ca289eca88
+en: We make it easy for anyone to use by instinct, without complicated explanations
+zh: 打造不用复杂说明、谁都能直观使用的环境
+vi: Tạo môi trường ai cũng dùng được theo trực giác, không cần giải thích phức tạp
+@@e7bc20a9c1
+en: Polly Copy: Just follow along — it's easy!
+zh: 鹦鹉小复：跟着做就很简单！
+vi: Polly Copy: Chỉ cần làm theo là dễ!
+@@a80a07dcc2
+en: 🔒 Reliability
+zh: 🔒 可靠性
+vi: 🔒 Đáng tin cậy
+@@ef4b4cee97
+en: An organized support system that quickly solves everything from machine errors to payment problems
+zh: 从机器故障到付款问题，都能迅速解决的系统化支持体系
+vi: Hệ thống hỗ trợ bài bản, xử lý nhanh mọi việc từ lỗi máy đến lỗi thanh toán
+@@970d47b81c
+en: Shelly Coat: I'll protect you, no worries.
+zh: 乌龟小封：我会稳稳地守护你。
+vi: Shelly Coat: Mình sẽ bảo vệ bạn thật chắc chắn.
+@@b81da6efa1
+en: 🌱 Sustainability
+zh: 🌱 可持续性
+vi: 🌱 Bền vững
+@@ed92871da1
+en: We grow together with the local community and aim for a sustainable service
+zh: 与地区社会共同成长，追求可持续的服务运营
+vi: Cùng phát triển với cộng đồng địa phương và hướng tới vận hành dịch vụ bền vững
+@@821cd52961
+en: Stacky: Neatly stacked, for a long, long time!
+zh: 小叠：整整齐齐，长长久久！
+vi: Stacky: Gọn gàng, bền lâu!
+@@f4a6d0c38d
+en: Our story so far
+zh: 成长故事
+vi: Hành trình phát triển
+@@facec70a06
+en: PrintShop Mini store No. 1 opens
+zh: PrintShop Mini 1 号店开业
+vi: Khai trương cửa hàng PrintShop Mini số 1
+@@f9c0eff9af
+en: Starting with the Suwon Gwanggyo store, the first 24-hour unmanned print service in Gyeonggi
+zh: 以水原光教店为起点，开始京畿道首家 24 小时无人打印服务
+vi: Bắt đầu từ cửa hàng Gwanggyo ở Suwon, dịch vụ in không người trực 24 giờ đầu tiên ở Gyeonggi
+@@68743b0a16
+en: Mini Koon: It all started here!
+zh: 迷你酷：一切都从这里开始！
+vi: Mini Koon: Mọi thứ bắt đầu từ đây!
+@@0697717564
+en: 6 services, 5 stores in Suwon
+zh: 扩展到 6 项服务，水原 5 家门店
+vi: Mở rộng 6 dịch vụ, 5 cửa hàng ở Suwon
+@@92b371f3a3
+en: Expanded from printing to copy · scan · fax · laminate · bind. Grew to 5 stores in Suwon
+zh: 服务从打印扩展到复印·扫描·传真·塑封·装订。在水原发展到 5 家门店
+vi: Mở rộng từ in sang photo · scan · fax · ép plastic · đóng sách. Phát triển thành 5 cửa hàng ở Suwon
+@@281faaebaf
+en: Peng Print: We started with just printing, and now there are six!
+zh: 企鹅小印：从只有打印开始，现在有六种了！
+vi: Peng Print: Bắt đầu chỉ với in, giờ đã có sáu dịch vụ!
+@@31c342d63e
+en: Into Hwaseong · Yongin, 10 stores reached
+zh: 进军华城·龙仁，达到 10 家门店
+vi: Tiến vào Hwaseong · Yongin, đạt 10 cửa hàng
+@@f55c5673b4
+en: Expanded into key areas of southern Gyeonggi, such as Dongtan, Bongdam, Giheung and Suji
+zh: 服务地区扩展到东滩·峰潭·器兴·水枝等京畿南部核心商圈
+vi: Mở rộng đến các khu thương mại chính ở nam Gyeonggi như Dongtan, Bongdam, Giheung, Suji
+@@556044efd3
+en: Coo Fax: Flying far, far away~
+zh: 鸽子小传：飞得远远的~
+vi: Coo Fax: Bay thật xa~
+@@e2522a206f
+en: Into Pyeongtaek, 15 stores reached
+zh: 进军平泽，达到 15 家门店
+vi: Tiến vào Pyeongtaek, đạt 15 cửa hàng
+@@d4319553e8
+en: Covering all of southern Gyeonggi. Chat support and the website community opened
+zh: 覆盖京畿南部全境。开通聊天咨询系统和网站社区
+vi: Phủ khắp nam Gyeonggi. Mở hệ thống hỏi đáp trò chuyện và cộng đồng trên trang web
+@@cae581574d
+en: Polly Copy: Ask your questions on TalkTalk!
+zh: 鹦鹉小复：有问题就用 TalkTalk 问吧！
+vi: Polly Copy: Có thắc mắc thì hỏi qua TalkTalk nhé!
+@@6f6fc86a47
+en: Goal: all of Gyeonggi
+zh: 目标：扩展到京畿道全境
+vi: Mục tiêu: mở rộng khắp Gyeonggi
+@@add8aee65f
+en: Preparing to expand across Gyeonggi, including Seongnam, Anyang, Ansan and Uijeongbu
+zh: 正在准备扩展到城南·安养·安山·议政府等京畿道全境
+vi: Đang chuẩn bị mở rộng khắp Gyeonggi như Seongnam, Anyang, Ansan, Uijeongbu
+@@ad5bfbfcf4
+en: Mini Koon: We'll go all over Gyeonggi with my friends!
+zh: 迷你酷：和朋友们一起走遍京畿道！
+vi: Mini Koon: Mình sẽ cùng các bạn đi khắp Gyeonggi!
+@@80603746cc
+en: Find a Store - PrintShop Mini
+zh: 查找门店 - PrintShop Mini
+vi: Tìm cửa hàng - PrintShop Mini
+@@e995484d6a
+en: <a class="active" href="branches.html">Stores</a>
+zh: <a class="active" href="branches.html">门店</a>
+vi: <a class="active" href="branches.html">Cửa hàng</a>
+@@5bae728596
+en: <span id="subTotal"></span>stores in the Gyeonggi area — find the PrintShop Mini nearest you
+zh: 京畿道地区 <span id="subTotal"></span>门店 — 找找离您最近的 PrintShop Mini
+vi: <span id="subTotal"></span>cửa hàng ở khu vực Gyeonggi — tìm PrintShop Mini gần bạn nhất
+@@4673f716c1
+en: <span class="stat-pill">📍 <b id="statTotal">-</b> stores in total</span> <span class="stat-pill">🕐 <b>24 hours</b>, every day</span> <span class="stat-pill">🗺️ <b id="statRegions">-</b> areas</span> <span class="stat-pill">🖨️ <b>6</b> self-services</span>
+zh: <span class="stat-pill">📍 共 <b id="statTotal">-</b> 家门店</span> <span class="stat-pill">🕐 <b>24 小时</b>全年无休</span> <span class="stat-pill">🗺️ <b id="statRegions">-</b> 个地区</span> <span class="stat-pill">🖨️ 自助服务 <b>6 种</b></span>
+vi: <span class="stat-pill">📍 Tổng <b id="statTotal">-</b> cửa hàng</span> <span class="stat-pill">🕐 <b>24 giờ</b>, mở mọi ngày</span> <span class="stat-pill">🗺️ <b id="statRegions">-</b> khu vực</span> <span class="stat-pill">🖨️ <b>6</b> dịch vụ tự phục vụ</span>
+@@08104b161f
+en: <a class="map-btn" href="#" id="naverMapBtn" style="pointer-events:none;opacity:0.4" target="_blank">🗺️ See on Naver Map</a>
+zh: <a class="map-btn" href="#" id="naverMapBtn" style="pointer-events:none;opacity:0.4" target="_blank">🗺️ 在 Naver 地图上查看</a>
+vi: <a class="map-btn" href="#" id="naverMapBtn" style="pointer-events:none;opacity:0.4" target="_blank">🗺️ Xem trên Naver Map</a>
+@@7fedba326d
+en: Notices - PrintShop Mini
+zh: 公告 - PrintShop Mini
+vi: Thông báo - PrintShop Mini
+@@146a6be6b4
+en: <a class="active" href="community.html">Community</a>
+zh: <a class="active" href="community.html">社区</a>
+vi: <a class="active" href="community.html">Cộng đồng</a>
+@@64a4c13a49
+en: See PrintShop Mini's latest notices (written in Korean)
+zh: 查看 PrintShop Mini 的最新公告（公告为韩语）
+vi: Xem thông báo mới nhất của PrintShop Mini (viết bằng tiếng Hàn)
+@@e706837841
+en: <input class="search-input" id="searchInput" onkeydown="if(event.key==='Enter')doSearch()" placeholder="Search notices..." type="text"/> <button class="search-btn" onclick="doSearch()">Search</button>
+zh: <input class="search-input" id="searchInput" onkeydown="if(event.key==='Enter')doSearch()" placeholder="搜索公告..." type="text"/> <button class="search-btn" onclick="doSearch()">搜索</button>
+vi: <input class="search-input" id="searchInput" onkeydown="if(event.key==='Enter')doSearch()" placeholder="Tìm thông báo..." type="text"/> <button class="search-btn" onclick="doSearch()">Tìm</button>
+@@5ee2d47797
+en: Search notices...
+zh: 搜索公告...
+vi: Tìm thông báo...
+@@a8d523c3da
+en: Type
+zh: 分类
+vi: Loại
+@@df7719e942
+en: Title
+zh: 标题
+vi: Tiêu đề
+@@325bfc59f4
+en: Author
+zh: 作者
+vi: Người viết
+@@2d95a44504
+en: Date
+zh: 日期
+vi: Ngày
+@@66054d80a5
+en: Views
+zh: 浏览
+vi: Lượt xem
+@@5152c7728a
+en: <a href="https://naver.me/GJErAoQ7" onmouseout="this.style.background='var(--blue)'" onmouseover="this.style.background='var(--blue-hover)'" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;background:var(--blue);color:white;font-size:15px;font-weight:900;padding:13px 16px;border-radius:10px;letter-spacing:.5px;transition:background .2s" target="_blank"> 💬 Ask on Naver TalkTalk </a>
+zh: <a href="https://naver.me/GJErAoQ7" onmouseout="this.style.background='var(--blue)'" onmouseover="this.style.background='var(--blue-hover)'" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;background:var(--blue);color:white;font-size:15px;font-weight:900;padding:13px 16px;border-radius:10px;letter-spacing:.5px;transition:background .2s" target="_blank"> 💬 Naver TalkTalk 咨询 </a>
+vi: <a href="https://naver.me/GJErAoQ7" onmouseout="this.style.background='var(--blue)'" onmouseover="this.style.background='var(--blue-hover)'" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;background:var(--blue);color:white;font-size:15px;font-weight:900;padding:13px 16px;border-radius:10px;letter-spacing:.5px;transition:background .2s" target="_blank"> 💬 Hỏi qua Naver TalkTalk </a>
+@@aadbd96bd4
+en: <span class="pb pn">Notice</span>
+zh: <span class="pb pn">公告</span>
+vi: <span class="pb pn">Thông báo</span>
+@@7fed684535
+en: <span>✍️ Manager</span> <span id="pmDate"></span> <span id="pmView"></span>
+zh: <span>✍️ 管理员</span> <span id="pmDate"></span> <span id="pmView"></span>
+vi: <span>✍️ Quản lý</span> <span id="pmDate"></span> <span id="pmView"></span>
+@@c537234916
+en: <button class="pm-back" onclick="closePostModal()">← Back to list</button>
+zh: <button class="pm-back" onclick="closePostModal()">← 返回列表</button>
+vi: <button class="pm-back" onclick="closePostModal()">← Về danh sách</button>
+@@c73309a613
+en: Search results
+zh: 搜索结果
+vi: Kết quả tìm kiếm
+@@b57b994fca
+en: ✏️ Write a post
+zh: ✏️ 写帖子
+vi: ✏️ Viết bài
+@@6406f1017c
+en: <label>Type</label>
+zh: <label>分类</label>
+vi: <label>Loại</label>
+@@37bf0bec5d
+en: <option>Review</option> <option>Question</option> <option>Tip</option>
+zh: <option>使用评价</option> <option>提问</option> <option>小窍门</option>
+vi: <option>Đánh giá</option> <option>Câu hỏi</option> <option>Mẹo</option>
+@@36538c644a
+en: <label>Title</label> <input id="postTitle" placeholder="Type a title" type="text"/>
+zh: <label>标题</label> <input id="postTitle" placeholder="请输入标题" type="text"/>
+vi: <label>Tiêu đề</label> <input id="postTitle" placeholder="Nhập tiêu đề" type="text"/>
+@@84df15885b
+en: Type a title
+zh: 请输入标题
+vi: Nhập tiêu đề
+@@f56b11307b
+en: <label>Content</label> <textarea id="postContent" placeholder="Type your message. Don't include personal information (phone number, address, etc.)."></textarea>
+zh: <label>内容</label> <textarea id="postContent" placeholder="请输入内容。请不要包含个人信息（电话号码、地址等）。"></textarea>
+vi: <label>Nội dung</label> <textarea id="postContent" placeholder="Nhập nội dung. Đừng ghi thông tin cá nhân (số điện thoại, địa chỉ, v.v.)."></textarea>
+@@ad91f5985e
+en: Type your message. Don't include personal information (phone number, address, etc.).
+zh: 请输入内容。请不要包含个人信息（电话号码、地址等）。
+vi: Nhập nội dung. Đừng ghi thông tin cá nhân (số điện thoại, địa chỉ, v.v.).
+@@9578dc49e1
+en: <label>Nickname</label> <input id="postNick" placeholder="Kim**" type="text"/>
+zh: <label>昵称</label> <input id="postNick" placeholder="金**" type="text"/>
+vi: <label>Biệt danh</label> <input id="postNick" placeholder="Nguyễn**" type="text"/>
+@@87675b69ad
+en: Kim**
+zh: 金**
+vi: Nguyễn**
+@@693a37d668
+en: <button class="btn-cancel" onclick="closeModal()">Cancel</button> <button class="btn-submit" onclick="submitPost()">Post</button>
+zh: <button class="btn-cancel" onclick="closeModal()">取消</button> <button class="btn-submit" onclick="submitPost()">发布</button>
+vi: <button class="btn-cancel" onclick="closeModal()">Hủy</button> <button class="btn-submit" onclick="submitPost()">Đăng</button>
+@@0adefc66d9
+en: Your post has been registered!
+zh: 帖子已发布！
+vi: Đã đăng bài viết!
+
+# ---- 페이지 스크립트가 화면에 쓰는 글자 T('...') ----
+@@ui 프린트샵미니
+en: PrintShop Mini
+zh: PrintShop Mini
+vi: PrintShop Mini
+@@ui 관리자
+en: Manager
+zh: 管理员
+vi: Quản lý
+@@ui {n}개
+en: {n}
+zh: {n} 家
+vi: {n}
+@@ui 해당 공지를 찾을 수 없습니다.
+en: Couldn't find that notice.
+zh: 找不到该公告。
+vi: Không tìm thấy thông báo đó.
+@@ui 조회
+en: Views
+zh: 浏览
+vi: Lượt xem
+@@ui 검색어를 입력해 주세요.
+en: Please type a search word.
+zh: 请输入搜索词。
+vi: Hãy nhập từ khóa tìm kiếm.
+@@ui 검색 결과
+en: search results
+zh: 搜索结果
+vi: kết quả tìm kiếm
+@@ui {n}건
+en: {n}
+zh: {n} 条
+vi: {n}
+@@ui 검색 결과가 없습니다
+en: No results
+zh: 没有搜索结果
+vi: Không có kết quả
+@@ui '{q}'에 해당하는 공지사항이 없습니다.
+en: There are no notices for '{q}'.
+zh: 没有与“{q}”相关的公告。
+vi: Không có thông báo nào cho '{q}'.
+@@ui 공지사항을 불러오지 못했습니다.
+en: Couldn't load notices.
+zh: 无法加载公告。
+vi: Không tải được thông báo.
+@@ui 요금 정보가 없습니다.
+en: No price information.
+zh: 没有价格信息。
+vi: Chưa có thông tin giá.
+@@ui 요금 정보를 불러오지 못했습니다.
+en: Couldn't load prices.
+zh: 无法加载价格信息。
+vi: Không tải được bảng giá.
+@@ui {n}원
+en: {n} won
+zh: {n} 韩元
+vi: {n} won
+@@ui /개
+en: /each
+zh: /个
+vi: /cái
+@@ui /장
+en: /sheet
+zh: /张
+vi: /tờ
+@@ui 인쇄·복사 (1면당)
+en: Print · copy (per side)
+zh: 打印·复印（每面）
+vi: In · photo (mỗi mặt)
+@@ui 스캔 (1면당)
+en: Scan (per side)
+zh: 扫描（每面）
+vi: Scan (mỗi mặt)
+@@ui 팩스 (1면당)
+en: Fax (per side)
+zh: 传真（每面）
+vi: Fax (mỗi mặt)
+@@ui 코팅
+en: Laminating
+zh: 塑封
+vi: Ép plastic
+@@ui 제본
+en: Binding
+zh: 装订
+vi: Đóng sách
+@@ui 상품
+en: Products
+zh: 商品
+vi: Sản phẩm
+@@ui L홀더 A4
+en: L-folder A4
+zh: L 型文件夹 A4
+vi: Bìa kẹp chữ L A4
+@@ui 폴대파일 A4
+en: Slide-binder file A4
+zh: 抽杆文件夹 A4
+vi: Bìa kẹp thanh trượt A4
+@@ui 서류봉투 A4
+en: Document envelope A4
+zh: 文件袋 A4
+vi: Phong bì tài liệu A4
+@@ui 스캔 A4
+en: Scan A4
+zh: 扫描 A4
+vi: Scan A4
+@@ui 스캔 B4
+en: Scan B4
+zh: 扫描 B4
+vi: Scan B4
+@@ui 스캔 A3
+en: Scan A3
+zh: 扫描 A3
+vi: Scan A3
+@@ui 흑백 A4
+en: B&W A4
+zh: 黑白 A4
+vi: Đen trắng A4
+@@ui 컬러 A4
+en: Color A4
+zh: 彩色 A4
+vi: Màu A4
+@@ui 흑백 B4
+en: B&W B4
+zh: 黑白 B4
+vi: Đen trắng B4
+@@ui 컬러 B4
+en: Color B4
+zh: 彩色 B4
+vi: Màu B4
+@@ui 흑백 A3
+en: B&W A3
+zh: 黑白 A3
+vi: Đen trắng A3
+@@ui 컬러 A3
+en: Color A3
+zh: 彩色 A3
+vi: Màu A3
+@@ui 열제본표지 1개
+en: 1 heat-binding cover
+zh: 热熔装订封面 1 个
+vi: 1 bìa đóng nhiệt
+@@ui 💰 두께와 상관없이
+en: 💰 Any thickness
+zh: 💰 不管厚度
+vi: 💰 Dày mỏng nào
+@@ui 값이 같아요
+en: Same price
+zh: 价格一样
+vi: Cũng cùng giá
+@@ui 🔥 붙이는 방법
+en: 🔥 How it sticks
+zh: 🔥 粘合方法
+vi: 🔥 Cách dán
+@@ui 표지 안 본드를 열로 녹여 붙여요
+en: Heat melts the glue inside the cover
+zh: 用热熔化封面里面的胶粘合
+vi: Dùng nhiệt làm chảy keo bên trong bìa để dán
+@@ui 📏 2mm 표지
+en: 📏 2mm cover
+zh: 📏 2mm 封面
+vi: 📏 Bìa 2mm
+@@ui 📏 4mm 표지
+en: 📏 4mm cover
+zh: 📏 4mm 封面
+vi: 📏 Bìa 4mm
+@@ui 📏 6mm 표지
+en: 📏 6mm cover
+zh: 📏 6mm 封面
+vi: 📏 Bìa 6mm
+@@ui 📏 8mm 표지
+en: 📏 8mm cover
+zh: 📏 8mm 封面
+vi: 📏 Bìa 8mm
+@@ui 📏 10mm 표지
+en: 📏 10mm cover
+zh: 📏 10mm 封面
+vi: 📏 Bìa 10mm
+@@ui 📏 12mm 표지
+en: 📏 12mm cover
+zh: 📏 12mm 封面
+vi: 📏 Bìa 12mm
+@@ui 📏 15mm 표지
+en: 📏 15mm cover
+zh: 📏 15mm 封面
+vi: 📏 Bìa 15mm
+@@ui 📏 18mm 표지
+en: 📏 18mm cover
+zh: 📏 18mm 封面
+vi: 📏 Bìa 18mm
+@@ui 📏 20mm 표지
+en: 📏 20mm cover
+zh: 📏 20mm 封面
+vi: 📏 Bìa 20mm
+@@ui 종이 20매(장)까지
+en: Up to 20 sheets
+zh: 最多 20 张纸
+vi: Tối đa 20 tờ
+@@ui 종이 40매(장)까지
+en: Up to 40 sheets
+zh: 最多 40 张纸
+vi: Tối đa 40 tờ
+@@ui 종이 60매(장)까지
+en: Up to 60 sheets
+zh: 最多 60 张纸
+vi: Tối đa 60 tờ
+@@ui 종이 80매(장)까지
+en: Up to 80 sheets
+zh: 最多 80 张纸
+vi: Tối đa 80 tờ
+@@ui 종이 100매(장)까지
+en: Up to 100 sheets
+zh: 最多 100 张纸
+vi: Tối đa 100 tờ
+@@ui 종이 120매(장)까지
+en: Up to 120 sheets
+zh: 最多 120 张纸
+vi: Tối đa 120 tờ
+@@ui 종이 150매(장)까지
+en: Up to 150 sheets
+zh: 最多 150 张纸
+vi: Tối đa 150 tờ
+@@ui 종이 180매(장)까지
+en: Up to 180 sheets
+zh: 最多 180 张纸
+vi: Tối đa 180 tờ
+@@ui 종이 200매(장)까지
+en: Up to 200 sheets
+zh: 最多 200 张纸
+vi: Tối đa 200 tờ
+@@ui 💡 알아두기
+en: 💡 Good to know
+zh: 💡 须知
+vi: 💡 Cần biết
+@@ui 정해진 매(장) 수까지만 넣을 수 있어요
+en: You can only put in up to the set number of sheets
+zh: 只能放到规定的张数
+vi: Chỉ cho vào đến đúng số tờ quy định
+@@ui 💡 너무 적으면 안 돼요
+en: 💡 Not too few
+zh: 💡 太少也不行
+vi: 💡 Quá ít thì không được
+@@ui 5장 · 10장은 2mm 표지도 안 돼요 (본드 쪽 빈 곳이 너무 커요)
+en: 5 or 10 sheets won't work even with a 2mm cover (too much empty space at the glue side)
+zh: 5 张 · 10 张用 2mm 封面也不行（胶那边的空隙太大）
+vi: 5 tờ · 10 tờ dù bìa 2mm cũng không được (khoảng trống phía keo quá lớn)
+@@ui 🤔 딱 맞는 표지가 없으면
+en: 🤔 No cover that fits exactly
+zh: 🤔 没有正好合适的封面
+vi: 🤔 Không có bìa vừa đúng
+@@ui 가까운 두께 표지 2개에 넣어 보고, 빈 곳이 적은 표지를 쓰세요 (예: 110장 → 10mm · 12mm)
+en: Try 2 covers close in thickness and use the one with less empty space (e.g. 110 sheets → 10mm · 12mm)
+zh: 放进两个厚度接近的封面试试，用空隙少的那个（例：110 张 → 10mm · 12mm）
+vi: Thử 2 bìa có độ dày gần nhau, dùng bìa ít khoảng trống hơn (ví dụ: 110 tờ → 10mm · 12mm)
+@@ui 코팅지 A4
+en: Laminating pouch A4
+zh: 塑封膜 A4
+vi: Túi ép A4
+@@ui 코팅지 A3
+en: Laminating pouch A3
+zh: 塑封膜 A3
+vi: Túi ép A3
+@@ui 팩스 A4
+en: Fax A4
+zh: 传真 A4
+vi: Fax A4

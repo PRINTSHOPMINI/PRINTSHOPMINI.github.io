@@ -219,9 +219,9 @@ en: Open them in a <b>web browser (Chrome · Edge)</b> to print. This stops some
 zh: 请用<b>浏览器（Chrome · Edge）</b>打开后打印。这样可以防止中间部分印成灰色。
 vi: Hãy mở bằng <b>trình duyệt (Chrome · Edge)</b> để in. Như vậy sẽ không bị in ra màu xám ở giữa.
 @@987e14b600
-en: <a class="faq-go" href="faq.html">See FAQ (in Korean) →</a>
-zh: <a class="faq-go" href="faq.html">查看常见问题（韩语）→</a>
-vi: <a class="faq-go" href="faq.html">Xem câu hỏi thường gặp (tiếng Hàn) →</a>
+en: <a class="faq-go" href="faq.html">See FAQ →</a>
+zh: <a class="faq-go" href="faq.html">查看常见问题 →</a>
+vi: <a class="faq-go" href="faq.html">Xem câu hỏi thường gặp →</a>
 @@e21ff7cf1c
 en: Have more questions?
 zh: 还有其他问题吗？
@@ -551,9 +551,9 @@ en: It doesn't have to be the desktop. Just save it on the PC and <b>remember wh
 zh: 不一定要放桌面。保存到电脑上，<b>只要知道存在哪里（路径）</b>就行。到那个位置双击要打印的文件打开。最容易找到的地方是桌面。
 vi: Không nhất thiết phải là màn hình nền. Chỉ cần lưu vào máy tính và <b>nhớ đã lưu ở đâu</b>. Đến chỗ đó và bấm đúp vào tệp để mở. Màn hình nền là chỗ dễ tìm nhất.
 @@9ebfff9823
-en: 📱 <b>Is your file on your phone?</b> Tap the link below to see how to save it to the PC first.<br/><a href="faq.html#faq-22">How to save phone files to the PC (in Korean) →</a>
-zh: 📱 <b>文件在手机里？</b>请点下面的链接，查看先把手机文件保存到电脑的方法。<br/><a href="faq.html#faq-22">查看把手机文件保存到电脑的方法（韩语）→</a>
-vi: 📱 <b>Tệp ở trong điện thoại?</b> Bấm vào liên kết dưới đây để xem cách lưu tệp vào máy tính trước.<br/><a href="faq.html#faq-22">Xem cách lưu tệp điện thoại vào máy tính (tiếng Hàn) →</a>
+en: 📱 <b>Is your file on your phone?</b> Tap the link below to see how to save it to the PC first.<br/><a href="faq.html#faq-22">How to save phone files to the PC →</a>
+zh: 📱 <b>文件在手机里？</b>请点下面的链接，查看先把手机文件保存到电脑的方法。<br/><a href="faq.html#faq-22">查看把手机文件保存到电脑的方法 →</a>
+vi: 📱 <b>Tệp ở trong điện thoại?</b> Bấm vào liên kết dưới đây để xem cách lưu tệp vào máy tính trước.<br/><a href="faq.html#faq-22">Xem cách lưu tệp điện thoại vào máy tính →</a>
 @@e204916d93
 en: <span>Next</span> · Set print options
 zh: <span>接下来</span> · 设置打印选项

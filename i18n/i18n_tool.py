@@ -8,10 +8,11 @@
 #   python -I i18n/i18n_tool.py build en zh vi     → 번역 페이지 만들기
 import copy, hashlib, json, os, re, sys
 from bs4 import BeautifulSoup, NavigableString, Comment
+sys.stdout.reconfigure(encoding="utf-8")
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 I18N = os.path.join(ROOT, 'i18n')
-PAGES = ['guide.html', 'guide-print.html', 'guide-copy.html', 'guide-scan.html', 'guide-fax.html', 'guide-coat.html', 'guide-bind.html', 'guide-video.html']          # 번역할 페이지 (차례로 늘려 감)
+PAGES = ['guide.html', 'guide-print.html', 'guide-copy.html', 'guide-scan.html', 'guide-fax.html', 'guide-coat.html', 'guide-bind.html', 'guide-video.html', 'faq.html', 'index.html', 'services.html', 'about.html', 'branches.html', 'community.html']          # 번역할 페이지 (차례로 늘려 감)
 LANGS = {'en': ('English', 'en'), 'zh': ('中文', 'zh-Hans'), 'vi': ('Tiếng Việt', 'vi')}
 HANGUL = re.compile('[가-힣]')
 BLOCK = {'div', 'p', 'li', 'ul', 'ol', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'table', 'thead', 'tbody', 'tr', 'td', 'th',
@@ -204,6 +205,14 @@ def build(lang):
         if canon:
             canon['href'] = 'https://www.printshopmini.com/%s/%s' % (lang, page)
         soup.head.append(BeautifulSoup(SW_CSS, 'html.parser'))
+        # 페이지 스크립트가 화면에 쓰는 글자 T('...')의 번역표 — 다른 스크립트보다 먼저
+        ui = load('ui_%s.json' % lang)
+        soup.head.insert(0, BeautifulSoup('<script>window.I18N_LANG=%s;window.I18N_ROOT="../";window.I18N_UI=Object.assign(window.I18N_UI||{},%s);</script>'
+                                          % (json.dumps(lang), json.dumps(ui, ensure_ascii=False)), 'html.parser'))
+        if page == 'faq.html':                 # FAQ 질문·답은 DB에 있어서 i18n/faq/faq_<언어>.js 번역표를 먼저 불러 둠 (compile_faq.py)
+            js = os.path.join(I18N, 'faq', 'faq_%s.js' % lang)
+            ver = hashlib.md5(open(js, 'rb').read()).hexdigest()[:8]
+            soup.head.append(BeautifulSoup('<script src="../i18n/faq/faq_%s.js?v=%s"></script>' % (lang, ver), 'html.parser'))
         body = soup.body
         sw = BeautifulSoup(switcher_html(page, lang), 'html.parser')
         cta = soup.find(class_='nav-cta')

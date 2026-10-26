@@ -309,6 +309,10 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 var SB_URL='https://wbcfciiuiootbdezxfwy.supabase.co';
 var SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndiY2ZjaWl1aW9vdGJkZXp4Znd5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc1MjkyMTQsImV4cCI6MjA5MzEwNTIxNH0.UV4ukUXuAYKAqq85B4FTHO2BtIOqPaBHgAJN5lqyU5s';
 var SB_HDR={'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY};
+// 외국어 페이지(/en/ /zh/ /vi/)에서는 i18n 도구가 I18N_UI(화면 문구 번역)를 먼저 넣어 줘요
+function T(s){var U=window.I18N_UI;return (U&&Object.prototype.hasOwnProperty.call(U,s))?U[s]:s;}
+// 요금 금액: 번역표에 없으면 '70원' → '70 won' 처럼 숫자+원만 바꿔요
+function TP(s){var t=T(s);if(t!==s)return t;return String(s||'').replace(/([\d,]+)원/g,function(m,n){return T('{n}원').replace('{n}',n);}).replace('/개',T('/개')).replace('/장',T('/장'));}
 function escH(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 
 async function loadPriceItems(){
@@ -318,7 +322,7 @@ async function loadPriceItems(){
     var categories=await catRes.json();
     var data=await r.json();
     var grid=document.getElementById('priceGrid');
-    if(!data||!data.length){grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text3)">요금 정보가 없습니다.</div>';return;}
+    if(!data||!data.length){grid.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text3)">'+T('요금 정보가 없습니다.')+'</div>';return;}
     var cats={};
     data.forEach(function(item){
       if(!cats[item.category])cats[item.category]={icon:item.icon,items:[]};
@@ -330,15 +334,15 @@ async function loadPriceItems(){
       var c=cats[cat];
       return '<div class="price-card'+(c.items.length>8?' wide':'')+'"'+(c.items.length>8?' style="grid-column:1/-1"':'')+'>'+
         '<div class="price-card-icon">'+escH(c.icon||'')+'</div>'+
-        '<div class="price-card-title">'+escH(cat)+'</div>'+
+        '<div class="price-card-title">'+escH(T(cat))+'</div>'+
         '<div class="price-rows">'+
           c.items.map(function(item){
-            return '<div class="price-r"><span class="price-r-label">'+escH(item.label)+'</span><span class="price-r-val">'+escH(item.value)+'</span></div>';
+            return '<div class="price-r"><span class="price-r-label">'+escH(T(item.label))+'</span><span class="price-r-val">'+escH(TP(item.value))+'</span></div>';
           }).join('')+
         '</div></div>';
     }).join('');
   }catch(e){
-    document.getElementById('priceGrid').innerHTML='<div style="grid-column:1/-1;text-align:center;padding:40px;color:#EF4444">요금 정보를 불러오지 못했습니다.</div>';
+    document.getElementById('priceGrid').innerHTML='<div style="grid-column:1/-1;text-align:center;padding:40px;color:#EF4444">'+T('요금 정보를 불러오지 못했습니다.')+'</div>';
   }
 }
 

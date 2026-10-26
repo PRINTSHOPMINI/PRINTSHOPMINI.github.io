@@ -441,9 +441,11 @@ async function loadNotices(){
     renderSidebarNotices(data);
     openPostFromHash();
   }catch(e){
-    document.getElementById('postListBody').innerHTML='<div style="padding:32px;text-align:center;color:var(--text3)">공지사항을 불러오지 못했습니다.</div>';
+    document.getElementById('postListBody').innerHTML='<div style="padding:32px;text-align:center;color:var(--text3)">'+T('공지사항을 불러오지 못했습니다.')+'</div>';
   }
 }
+// 외국어 페이지(/en/ /zh/ /vi/)에서는 i18n 도구가 I18N_UI(화면 문구 번역)를 먼저 넣어 줘요
+function T(s){var U=window.I18N_UI;return (U&&Object.prototype.hasOwnProperty.call(U,s))?U[s]:s;}
 function openPostFromHash(){
   var m=(location.hash||'').match(/^#notice-(\d+)$/);
   if(m)openPost(parseInt(m[1],10));
@@ -451,14 +453,14 @@ function openPostFromHash(){
 function renderNotices(notices){
   var el=document.getElementById('postListBody');
   if(!notices.length){
-    el.innerHTML='<div style="padding:32px;text-align:center;color:var(--text3)">등록된 공지사항이 없습니다.</div>';
+    el.innerHTML='<div style="padding:32px;text-align:center;color:var(--text3)">'+T('등록된 공지사항이 없습니다.')+'</div>';
     return;
   }
   el.innerHTML=notices.map(function(n){
     return '<div class="post-row notice" onclick="openPost('+n.id+')">'+
-      '<div><span class="pb pn">공지</span></div>'+
+      '<div><span class="pb pn">'+T('공지')+'</span></div>'+
       '<div class="pt">'+escHtml(n.title)+'</div>'+
-      '<div class="pm">관리자</div>'+
+      '<div class="pm">'+T('관리자')+'</div>'+
       '<div class="pm">'+escHtml(n.date)+'</div>'+
       '<div class="pv">'+(n.views||0)+'</div>'+
       '</div>';
@@ -467,17 +469,17 @@ function renderNotices(notices){
 function renderSidebarNotices(notices){
   var el=document.getElementById('sidebarNoticeList');
   if(!el)return;
-  if(!notices.length){el.innerHTML='<div style="font-size:13px;color:var(--text3)">등록된 공지가 없습니다.</div>';return;}
+  if(!notices.length){el.innerHTML='<div style="font-size:13px;color:var(--text3)">'+T('등록된 공지가 없습니다.')+'</div>';return;}
   el.innerHTML=notices.slice(0,5).map(function(n){
     return '<div class="notice-item" onclick="openPost('+n.id+')">'+escHtml(n.title)+'</div>';
   }).join('');
 }
 function openPost(id){
   var p=noticesCache.find(function(n){return n.id===id;});
-  if(!p){showToast('해당 공지를 찾을 수 없습니다.');return;}
+  if(!p){showToast(T('해당 공지를 찾을 수 없습니다.'));return;}
   document.getElementById('pmTitle').textContent=p.title;
   document.getElementById('pmDate').textContent='📅 '+p.date;
-  document.getElementById('pmView').textContent='👁 조회 '+(p.views||0);
+  document.getElementById('pmView').textContent='👁 '+T('조회')+' '+(p.views||0);
   document.getElementById('pmBody').textContent=p.body;
   document.getElementById('postModal').classList.add('open');
   document.body.style.overflow='hidden';
@@ -493,7 +495,7 @@ function showToast(msg){
 }
 function doSearch(){
   var q=document.getElementById('searchInput').value.trim();
-  if(!q){showToast('검색어를 입력해 주세요.');return;}
+  if(!q){showToast(T('검색어를 입력해 주세요.'));return;}
   var ql=q.toLowerCase();
   var results=noticesCache.filter(function(n){
     return n.title.toLowerCase().indexOf(ql)!==-1||n.body.toLowerCase().indexOf(ql)!==-1;
@@ -503,15 +505,15 @@ function doSearch(){
 function openSearchModal(q,results){
   var title=document.getElementById('searchModalTitle');
   var body=document.getElementById('searchModalBody');
-  title.innerHTML='<span style="color:var(--blue)">\''+escHtml(q)+'\'</span> 검색 결과 <span style="font-size:14px;font-weight:500;color:var(--text3)">('+results.length+'건)</span>';
+  title.innerHTML='<span style="color:var(--blue)">\''+escHtml(q)+'\'</span> '+T('검색 결과')+' <span style="font-size:14px;font-weight:500;color:var(--text3)">('+T('{n}건').replace('{n}',results.length)+')</span>';
   if(results.length===0){
-    body.innerHTML='<div class="search-no-result"><div class="icon">🔍</div><p>검색 결과가 없습니다</p><span>\''+escHtml(q)+'\'에 해당하는 공지사항이 없습니다.</span></div>';
+    body.innerHTML='<div class="search-no-result"><div class="icon">🔍</div><p>'+T('검색 결과가 없습니다')+'</p><span>'+T('\'{q}\'에 해당하는 공지사항이 없습니다.').replace('{q}',escHtml(q))+'</span></div>';
   }else{
     var html='';
     results.forEach(function(r){
       var excerpt=makeExcerpt(r.post.body,q);
       html+='<div class="search-result-item" onclick="closeSearchModal();openPost('+r.key+')">'+
-        '<div class="search-result-badge"><span class="pb pn">공지</span></div>'+
+        '<div class="search-result-badge"><span class="pb pn">'+T('공지')+'</span></div>'+
         '<div class="search-result-title">'+highlightKw(escHtml(r.post.title),q)+'</div>'+
         '<div class="search-result-excerpt">'+highlightKw(escHtml(excerpt),q)+'</div>'+
         '<div class="search-result-meta">📅 '+escHtml(r.post.date)+'</div>'+
