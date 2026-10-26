@@ -199,6 +199,12 @@ def build(lang):
             for el in soup.find_all(tag):
                 if el.get(attr):
                     el[attr] = fix_url(el[attr], lang)
+        for tag, attr in (('source', 'src'), ('video', 'poster')):   # 그 언어 영상(videos/이름_en.mp4 등)이 있으면 그걸로
+            for el in soup.find_all(tag):
+                u = el.get(attr) or ''
+                m = re.match(r'^(\.\./videos/[\w\-]+)(\.mp4|\.jpg)$', u)
+                if m and os.path.exists(os.path.join(ROOT, m.group(1)[3:] + '_' + lang + m.group(2))):
+                    el[attr] = m.group(1) + '_' + lang + m.group(2)
         for el in soup.find_all(style=True):     # style 안의 url(...)
             el['style'] = re.sub(r"url\((['\"]?)(?!https?:|data:|/)([^)'\"]+)\1\)", lambda m: "url(%s../%s%s)" % (m.group(1), m.group(2), m.group(1)), el['style'])
         canon = soup.find('link', rel='canonical')
