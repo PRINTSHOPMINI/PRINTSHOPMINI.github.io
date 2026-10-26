@@ -213,8 +213,9 @@ def build(lang):
         soup.head.append(BeautifulSoup(SW_CSS, 'html.parser'))
         # 페이지 스크립트가 화면에 쓰는 글자 T('...')의 번역표 — 다른 스크립트보다 먼저
         ui = load('ui_%s.json' % lang)
-        soup.head.insert(0, BeautifulSoup('<script>window.I18N_LANG=%s;window.I18N_ROOT="../";window.I18N_UI=Object.assign(window.I18N_UI||{},%s);</script>'
-                                          % (json.dumps(lang), json.dumps(ui, ensure_ascii=False)), 'html.parser'))
+        vids = sorted('videos/' + f[:-len('_%s.mp4' % lang)] for f in os.listdir(os.path.join(ROOT, 'videos')) if f.endswith('_%s.mp4' % lang))
+        soup.head.insert(0, BeautifulSoup('<script>window.I18N_LANG=%s;window.I18N_ROOT="../";window.I18N_VIDS=%s;window.I18N_UI=Object.assign(window.I18N_UI||{},%s);</script>'
+                                          % (json.dumps(lang), json.dumps(vids), json.dumps(ui, ensure_ascii=False)), 'html.parser'))
         if page == 'faq.html':                 # FAQ 질문·답은 DB에 있어서 i18n/faq/faq_<언어>.js 번역표를 먼저 불러 둠 (compile_faq.py)
             js = os.path.join(I18N, 'faq', 'faq_%s.js' % lang)
             ver = hashlib.md5(open(js, 'rb').read()).hexdigest()[:8]
