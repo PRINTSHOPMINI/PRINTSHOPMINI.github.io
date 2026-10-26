@@ -1,0 +1,1963 @@
+{
+ "4dba876e21": {
+  "ko": "프린트샵미니 사용방법 — 인쇄·복사·스캔·팩스·코팅·제본 이용 순서와 자주 묻는 질문을 안내합니다.",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "1314c4ef52": {
+  "ko": "사용방법 - 프린트샵미니",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "571f758a4a": {
+  "ko": "<a class=\"nav-logo\" href=\"index.html\"> <img alt=\"로고\" class=\"logo-img\" src=\"logo.jpg\"/> <span class=\"nav-logo-name\">프린트샵미니</span> </a>",
+  "pages": [
+   "guide.html",
+   "guide-print.html"
+  ]
+ },
+ "0d69c1799d": {
+  "ko": "로고",
+  "pages": [
+   "guide.html",
+   "guide-print.html"
+  ]
+ },
+ "746bce6b91": {
+  "ko": "<a href=\"services.html\">서비스</a>",
+  "pages": [
+   "guide.html",
+   "guide-print.html"
+  ]
+ },
+ "5974784a0b": {
+  "ko": "<a class=\"active\" href=\"guide.html\">사용방법</a>",
+  "pages": [
+   "guide.html",
+   "guide-print.html"
+  ]
+ },
+ "85e056471e": {
+  "ko": "<a href=\"about.html\">소개</a>",
+  "pages": [
+   "guide.html",
+   "guide-print.html"
+  ]
+ },
+ "e1eaf72438": {
+  "ko": "<a href=\"branches.html\">지점찾기</a>",
+  "pages": [
+   "guide.html",
+   "guide-print.html"
+  ]
+ },
+ "2cc04eb419": {
+  "ko": "<a href=\"community.html\">커뮤니티</a>",
+  "pages": [
+   "guide.html",
+   "guide-print.html"
+  ]
+ },
+ "b7b43e0773": {
+  "ko": "<a class=\"nav-cta\" href=\"branches.html\">지점 찾기</a>",
+  "pages": [
+   "guide.html",
+   "guide-print.html"
+  ]
+ },
+ "72ec26f778": {
+  "ko": "프린트샵미니 마스코트",
+  "pages": [
+   "guide.html",
+   "guide-print.html"
+  ]
+ },
+ "ca29d61d1c": {
+  "ko": "라쿤 마스코트",
+  "pages": [
+   "guide.html",
+   "guide-print.html"
+  ]
+ },
+ "7c87dc1ff0": {
+  "ko": "사용방법",
+  "pages": [
+   "guide.html",
+   "guide-print.html"
+  ]
+ },
+ "ea1b26aeef": {
+  "ko": "서비스를 골라 이용 순서를 확인하세요. 인쇄 · 복사 · 스캔 · 팩스 · 코팅 · 제본",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "e9bd7ace89": {
+  "ko": "<a class=\"on\" href=\"guide.html\">사용방법 전체</a> <a href=\"guide-video.html\">▶ 동영상</a> <a href=\"guide-print.html\">🖨️ 인쇄</a> <a href=\"guide-copy.html\">📋 복사</a> <a href=\"guide-scan.html\">📄 스캔</a>",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "6d97b37427": {
+  "ko": "<a href=\"guide-coat.html\">✨ 코팅</a> <a href=\"guide-bind.html\">📚 제본</a>",
+  "pages": [
+   "guide.html",
+   "guide-print.html"
+  ]
+ },
+ "679c3cb214": {
+  "ko": "팩스",
+  "pages": [
+   "guide.html",
+   "guide-print.html"
+  ]
+ },
+ "70a295987f": {
+  "ko": "어떤 서비스를 이용하시나요?",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "809f1249bb": {
+  "ko": "서비스를 고르면 이용 순서를 단계별로 안내합니다. 상단 메뉴 <b>사용방법</b>에서도 바로 이동할 수 있습니다.",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "5657eccbe1": {
+  "ko": "<b style=\"display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1B8AC4)\">프린트샵미니</b> · <b style=\"display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28\">프린트나우</b>는 <span style=\"white-space:nowrap\">(주)굿러닝파트너</span> 법인의 브랜드예요.",
+  "pages": [
+   "guide.html",
+   "guide-print.html"
+  ]
+ },
+ "1d79be91bd": {
+  "ko": "인쇄",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "3eea460a33": {
+  "ko": "내 파일을 종이로 뽑기. PDF · 한글 · MS 오피스 · 크롬 인쇄설정도 안내합니다.",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "aa67a1644b": {
+  "ko": "사용방법 보기 →",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "6acf7ad6e7": {
+  "ko": "복사",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "a69251bbbe": {
+  "ko": "가져온 종이를 똑같이 한 장 더. 신분증 · 통장 · 여권 · 책 복사 방법 포함.",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "9061542696": {
+  "ko": "스캔",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "feb206c04b": {
+  "ko": "종이를 파일로 만들기. 매장 PC의 스캔 파일 보관함에서 파일을 받아 가세요.",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "4644531964": {
+  "ko": "종이 내용을 상대방 팩스 번호로 보내기. 보내기만 가능합니다.",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "311d7856d0": {
+  "ko": "코팅",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "ad28dbc196": {
+  "ko": "인쇄물을 코팅지에 넣어 코팅하기. 코팅지 수량 확인 후 결제를 먼저 해 주세요.",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "eec6b2430a": {
+  "ko": "제본",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "dabb31a8ee": {
+  "ko": "인쇄물을 열제본표지로 책처럼 묶기. 표지 수량 확인 후 결제하고, 10분 이상 식히는 시간이 필요합니다.",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "4320ecf76f": {
+  "ko": "인쇄 · 복사 · 스캔 · 팩스, 무엇이 다른가요?",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "ce8e84b69e": {
+  "ko": "헷갈리기 쉬운 네 가지입니다. <b>무엇을 넣어서 무엇이 나오는지</b>로 구분하시면 쉽습니다. 복합기 화면의 메뉴 색상과 아래 색상이 같습니다.",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "afb0dc3620": {
+  "ko": "<span class=\"term-chip\">내 파일</span><span class=\"term-arrow\">→</span><span class=\"term-chip\">종이</span>",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "34f0eb2fb3": {
+  "ko": "USB · 이메일 · 휴대폰에 있는 <b>파일</b>을 종이로 뽑는 것",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "38989a3630": {
+  "ko": "<b>종이 원본이 없을 때</b> 씁니다. 매장 PC에서 파일을 열어 시작합니다.<br/>예 · 이력서 파일, 과제 PDF, 사진 파일",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "cbf3707a39": {
+  "ko": "<span class=\"term-chip\">종이</span><span class=\"term-arrow\">→</span><span class=\"term-chip\">종이</span>",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "ebf296de7e": {
+  "ko": "가지고 온 <b>종이</b>를 똑같이 한 장 더 만드는 것",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "61f6c35cb8": {
+  "ko": "<b>종이 원본이 있을 때</b> 씁니다. 복합기에 종이를 올려놓고 시작하며, PC는 쓰지 않습니다.<br/>예 · 신분증, 서류 사본, 시험지",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "0136ca7810": {
+  "ko": "<span class=\"term-chip\">종이</span><span class=\"term-arrow\">→</span><span class=\"term-chip\">파일</span>",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "e23a567665": {
+  "ko": "<b>종이</b>를 사진 찍듯 <b>파일</b>로 만드는 것",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "c12ab2e03c": {
+  "ko": "종이는 그대로 돌려받고, 내용만 파일이 됩니다. 이메일이나 USB로 받으시면 됩니다.<br/>예 · 서류를 파일로 보관하거나 메일로 보낼 때",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "e707d63cae": {
+  "ko": "<span class=\"term-chip\">종이</span><span class=\"term-arrow\">→</span><span class=\"term-chip\">상대방</span>",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "403cb01ba2": {
+  "ko": "<b>종이</b> 내용을 상대방 <b>팩스 번호</b>로 보내는 것",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "39a10dab8e": {
+  "ko": "받는 곳의 팩스 번호를 알아야 보낼 수 있습니다. 내 손에는 아무것도 남지 않습니다.<br/>예 · 관공서 · 병원 · 회사에 서류 제출",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "5d3dad6e87": {
+  "ko": "꼭 기억해 주세요",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "cfd420b959": {
+  "ko": "이 세 가지만 지키면 출력 사고의 대부분을 막을 수 있습니다.",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "ed5187d4d6": {
+  "ko": "컬러로 뽑으려면",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "0e7b1b1f26": {
+  "ko": "<b>[컬러 출력]</b> 프린터를 꼭 선택하고, 미리보기에서 <b>모든 페이지가 컬러인지</b> 확인하세요.",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "1379acc48a": {
+  "ko": "한글(HWP) 파일은",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "b6451eb67b": {
+  "ko": "<b>PDF로 저장</b>해서 가져오세요. 글꼴과 편집 상태가 원본 그대로 유지됩니다.",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "737da982cb": {
+  "ko": "캔바 · 아이패드 PDF는",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "e03f11ac66": {
+  "ko": "<b>브라우저(크롬 · 엣지)</b>로 열어서 인쇄하세요. 중간이 회색조로 나오는 것을 막아줍니다.",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "987e14b600": {
+  "ko": "<a class=\"faq-go\" href=\"faq.html\">자주 묻는 질문(FAQ) 보기 →</a>",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "e21ff7cf1c": {
+  "ko": "더 궁금한 점이 있으신가요?",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "ace26430f9": {
+  "ko": "자주 묻는 질문을 한곳에 모았습니다. 원하는 답이 없으면 이메일로 문의해 주세요.",
+  "pages": [
+   "guide.html"
+  ]
+ },
+ "62bc150866": {
+  "ko": "프린트샵미니",
+  "pages": [
+   "guide.html",
+   "guide-print.html"
+  ]
+ },
+ "08279ea9f2": {
+  "ko": "24시간 365일 운영되는<br/>무인 셀프 프린트 전문점입니다.",
+  "pages": [
+   "guide.html",
+   "guide-print.html"
+  ]
+ },
+ "0af74d46ed": {
+  "ko": "<a href=\"guide-print.html\">인쇄하는 방법</a>",
+  "pages": [
+   "guide.html",
+   "guide-print.html"
+  ]
+ },
+ "8664f30a98": {
+  "ko": "<a href=\"guide-copy.html\">복사하는 방법</a>",
+  "pages": [
+   "guide.html",
+   "guide-print.html"
+  ]
+ },
+ "c501e3f577": {
+  "ko": "<a href=\"guide-scan.html\">스캔하는 방법</a>",
+  "pages": [
+   "guide.html",
+   "guide-print.html"
+  ]
+ },
+ "7dc1b06173": {
+  "ko": "<a href=\"guide-fax.html\">팩스 보내는 방법</a>",
+  "pages": [
+   "guide.html",
+   "guide-print.html"
+  ]
+ },
+ "a33001cc7b": {
+  "ko": "<a href=\"guide-coat.html\">코팅하는 방법</a>",
+  "pages": [
+   "guide.html",
+   "guide-print.html"
+  ]
+ },
+ "ef1b133ef0": {
+  "ko": "<a href=\"guide-bind.html\">제본하는 방법</a>",
+  "pages": [
+   "guide.html",
+   "guide-print.html"
+  ]
+ },
+ "ed8523f6aa": {
+  "ko": "바로가기",
+  "pages": [
+   "guide.html",
+   "guide-print.html"
+  ]
+ },
+ "b3ff9534a1": {
+  "ko": "<a href=\"services.html\">서비스 안내</a>",
+  "pages": [
+   "guide.html",
+   "guide-print.html"
+  ]
+ },
+ "b365991d07": {
+  "ko": "<a href=\"faq.html\">자주 묻는 질문</a>",
+  "pages": [
+   "guide.html",
+   "guide-print.html"
+  ]
+ },
+ "d6d20a394c": {
+  "ko": "<a href=\"branches.html\">지점 찾기</a>",
+  "pages": [
+   "guide.html",
+   "guide-print.html"
+  ]
+ },
+ "5ade7fd923": {
+  "ko": "<a href=\"about.html\">브랜드 소개</a>",
+  "pages": [
+   "guide.html",
+   "guide-print.html"
+  ]
+ },
+ "c6722e45cb": {
+  "ko": "© 2025 프린트샵미니. All rights reserved.",
+  "pages": [
+   "guide.html",
+   "guide-print.html"
+  ]
+ },
+ "43a7d82cbf": {
+  "ko": "개인정보처리방침 · 이용약관",
+  "pages": [
+   "guide.html",
+   "guide-print.html"
+  ]
+ },
+ "83973dda29": {
+  "ko": "프린트샵미니 인쇄 사용방법 — 인쇄하는 순서와 PDF·한글·MS 오피스·크롬·알씨 인쇄설정을 안내합니다.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "7231005cec": {
+  "ko": "인쇄 사용방법 - 프린트샵미니",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "bc4572e806": {
+  "ko": "인쇄 사용방법",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "a41717e590": {
+  "ko": "내 파일을 매장 PC에서 열어 종이로 뽑는 방법입니다. 프로그램별 인쇄설정도 함께 안내합니다.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "ac66b5ed65": {
+  "ko": "<a href=\"guide.html\">사용방법 전체</a> <a href=\"guide-video.html\">▶ 동영상</a> <a class=\"on\" href=\"guide-print.html\">🖨️ 인쇄</a> <a href=\"guide-copy.html\">📋 복사</a> <a href=\"guide-scan.html\">📄 스캔</a>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "5d993ae141": {
+  "ko": "미니프랜즈 소개 보기",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "138b288b8c": {
+  "ko": "<span class=\"fr-more\">친구들 더 보기 →</span>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "7f48ea9f52": {
+  "ko": "펭프린 (Peng Print)",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "bec9e6cd80": {
+  "ko": "<b>펭프린</b><i>Peng Print</i><span class=\"fr-pill\">인쇄 담당</span><br/>안녕하세요! 저는 인쇄를 담당하는 펭프린이에요. 줄 서서 쏙쏙 종이가 나오는 방법, 지금부터 알려 드릴게요!",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "f21fec3fda": {
+  "ko": "잘못된 인쇄설정으로 인한 오출력은 환불이 어렵습니다. <span>출력 전 반드시 <b>미리보기로 전체 페이지</b>를 확인해 주세요. 화면에 보이는 그대로 인쇄됩니다.</span>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "e04c44fc6a": {
+  "ko": "<button class=\"tab on\" onclick=\"jump('store',this)\">인쇄하는 방법</button> <button class=\"tab\" onclick=\"jump('ptips',this)\">인쇄 꿀팁</button> <button class=\"tab\" onclick=\"jump('acrobat',this)\">PDF</button> <button class=\"tab\" onclick=\"jump('hancom',this)\">한글</button> <button class=\"tab\" onclick=\"jump('office',this)\">MS 오피스</button> <button class=\"tab\" onclick=\"jump('browser',this)\">크롬 · 엣지</button> <button class=\"tab\" onclick=\"jump('alsee',this)\">알씨</button> <button class=\"tab\" onclick=\"jump('cert',this)\">증명서</button>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "c4d337af93": {
+  "ko": "인쇄하는 방법 <span class=\"pill\">PRINT</span>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "aff696cb1e": {
+  "ko": "<b>내 파일을 매장 PC에서 열어 종이로 뽑는 서비스입니다.</b> PC에서 내 파일을 열어 인쇄 작업을 하고 나서, <b>복합기로 이동하여 문서를 개인식별번호로 찾아 결제하면 출력이 됩니다.</b><br/>⚠️ <b>PC에서 인쇄 작업을 마친 뒤 복합기로 이동하여, PC에서 입력한 개인식별번호로 조회하고 결제해야 마지막으로 출력이 돼요.</b> <b>복합기 카드 단말기에서</b> 결제하기 전에는 인쇄물이 나오지 않습니다.<br/><span style=\"font-weight:600\">※ PC에서 서류 발급 요금 등을 결제했더라도, 인쇄는 <b>복합기 카드 단말기에서 따로 결제</b>해야 출력돼요.</span>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "05767b9f46": {
+  "ko": "<span class=\"gvid-play\">▶</span>인쇄하는 방법 영상으로 먼저 보기 <small>소리 없이 봐도 돼요</small>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "6611ecf89b": {
+  "ko": "영상을 재생할 수 없는 브라우저예요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "a92bb4567a": {
+  "ko": "🔢 인쇄 순서 · 모든 파일 형식 공통 <span>꼭 이 순서대로!</span>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "20a9f38cbc": {
+  "ko": "<b>🖨️ 프린터를 먼저 선택</b>하세요.<br/><b>흑백출력</b> 또는 <b>컬러출력</b> 프린터를 가장 먼저 고릅니다.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "86fce6dade": {
+  "ko": "<b>⚙️ 상세 인쇄 옵션을 설정</b>하세요.<br/>용지 크기 · 단면/양면 · 매수 · 페이지 수 등을 정합니다.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "32a23b4c33": {
+  "ko": "<b>👀 미리보기를 확인</b>하세요.<br/>내용이 빠짐없이 나왔는지, 컬러출력이면 컬러인지 봅니다.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "051321f27d": {
+  "ko": "<b>✅ 마지막으로 [인쇄] 버튼을 누르세요.</b><br/>프로그램에 따라 <b>[인쇄] 버튼</b>, <b>프린터 모양</b>, <b>[확인] 버튼</b>이에요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "e26e03c180": {
+  "ko": "🚫 옵션을 정한 뒤에는 프린터를 바꾸지 마세요!",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "6be8149021": {
+  "ko": "프린터를 고르고 옵션을 정한 뒤 <b>프린터를 다시 바꾸면, 옵션도 처음부터 새로 해야 해요.</b> 프린터를 바꾸면 옵션이 모두 달라집니다.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "255f3e56d1": {
+  "ko": "❌ <b>이런 경우가 가장 위험해요</b><br/>프린터를 고르지 않고 옵션부터 정함 → 나중에 프린터를 <b>흑백출력에서 컬러출력으로 변경</b> → 옵션이 달라졌는데 확인하지 않고 그대로 진행 → 옵션이 이상하게 적용되어 <b>출력이 잘못 나와요.</b>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "1d4f1d5027": {
+  "ko": "✅ <b>항상 프린터 선택 → 옵션 설정 → 미리보기 → 인쇄 버튼</b> 순서를 지키세요. 프린터를 바꿨다면 옵션을 <b>처음부터 다시</b> 확인하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "2880bba452": {
+  "ko": "PC에서 파일을 열고 흑백/컬러/증명서전용 선택하는 화면",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "1079ec0cd1": {
+  "ko": "파일 열고 프린터 선택",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "7d46ef6750": {
+  "ko": "PC에서 파일 열기 → <b>[인쇄]</b> → 프린터 고르기<br/>흑백 / 컬러 / 증명서전용(PIN9999) 선택",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "bc59c17747": {
+  "ko": "💾 이메일·USB·핸드폰에 있는 파일은 <b>먼저 PC에 저장</b>해야 해요. 아래에서 내 파일 형식을 누르면 맨 앞 <b>1단계(파일 열기)</b>에 자세히 나와요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "f8fbbf85b8": {
+  "ko": "📄 파일 형식마다 인쇄옵션 설정 방법이 다릅니다.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "48a9212f26": {
+  "ko": "인쇄설정방법 — 내 파일 형식을 눌러 보세요",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "15aebbe777": {
+  "ko": "<button class=\"ftype-btn pdf\" onclick=\"goType('acrobat')\" type=\"button\"><b>PDF 파일</b></button><button class=\"ftype-btn hwp\" onclick=\"goType('hancom')\" type=\"button\"><b>한글 파일</b></button><button class=\"ftype-btn office\" onclick=\"goType('office','we')\" type=\"button\"><b>MS 오피스</b><small>워드 · 엑셀 · 파워포인트</small></button><button class=\"ftype-btn img\" onclick=\"goType('alsee')\" type=\"button\"><b>이미지 파일</b><small>사진 JPG · PNG</small></button><button class=\"ftype-btn web\" onclick=\"goType('browser')\" type=\"button\"><b>브라우저 인쇄</b><small>웹 디자인 툴에서 만든 PDF</small></button><button class=\"ftype-btn cert\" onclick=\"goType('cert')\" type=\"button\"><b>증명서</b><small>토익 · 토익스피킹</small></button>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "cff46c4fe6": {
+  "ko": "개인 식별 번호(PIN) 입력 화면",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "80caf4aa9e": {
+  "ko": "개인식별번호 4자리(PIN) 입력",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "440e7c5b54": {
+  "ko": "휴대폰 번호 뒤 4자리를 넣으세요<br/>증명서전용은 9999가 자동으로 들어가요",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "ac3ba8ac9f": {
+  "ko": "복합기 메인 화면에서 인쇄 메뉴 선택",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "a02cb82715": {
+  "ko": "인쇄할 파일 위치로 PC 선택하는 화면",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "2c0284defe": {
+  "ko": "복합기에서 인쇄 메뉴 → PC 선택",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "f43ee4c322": {
+  "ko": "매장 내 복합기로 이동 → 인쇄(PRINT) 메뉴 선택 → PC 선택<br/>화면이 꺼져 있으면 화면을 눌러 켜세요",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "66183bc08a": {
+  "ko": "개인식별번호 4자리(PIN) 입력 후 인쇄 작업 목록에서 파일 선택하는 화면",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "1613705999": {
+  "ko": "개인식별번호(PIN) 넣고 [확인] → 목록 고르기 → [시작] 누르기",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "5df972a2fa": {
+  "ko": "PC에서 정한 개인식별번호(PIN)를 넣고 [확인] → 목록에서 파일 고르기 → [시작] 누르기",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "c26ecb9e79": {
+  "ko": "종이 크기가 Letter(레터)로 되어 있으면 PC에서 A4로 다시 바꾸세요",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "374eb4f955": {
+  "ko": "과금정보(총 가격, 페이지 수) 확인 화면",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "ea05213db4": {
+  "ko": "금액 확인 (과금정보)",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "1a79ccc30d": {
+  "ko": "총 가격·페이지수·컬러 여부 확인<br/>맞으면 [확인]을 누르세요",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "6f8f55009a": {
+  "ko": "<span class=\"bh\">🧾 과금정보창 확인 필수!</span><b>과금정보창의 내용을 모두 확인하세요. 내용을 확인하지 않고 결제하여 문제가 발생하면 환불 · 보상하지 않습니다.</b><br/>과금정보창의 내용을 <b>모두 확인하고 맞을 때만 [확인]</b>을 눌러 결제해 주세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "1667291acc": {
+  "ko": "IC카드 또는 삼성페이로 결제하는 모습",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "fbd279b98b": {
+  "ko": "카드 결제",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "9e3f61d80c": {
+  "ko": "카드 찍는 기계에서 음성이 나오면 <b>IC카드(신용·체크)는 꽂고</b>,<br/>삼성페이는 와이파이 표시가 있는 면에 대 주세요",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "e36ca1793f": {
+  "ko": "인쇄 꿀팁",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "f232b8d1b4": {
+  "ko": "인쇄할 때 자주 놓치는 부분입니다.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "49302fca4b": {
+  "ko": "🎨 컬러는 미리보기로 확인!",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "2059f3e8c9": {
+  "ko": "<b>컬러출력 프린터</b>를 골랐다면 <b>미리보기도 컬러</b>인지 꼭 보세요. 페이지가 여러 개면 <b>모든 페이지</b>를 확인하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "5298c195da": {
+  "ko": "🖍️ 색이 다르게 나올 수 있어요",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "e219f1c4f4": {
+  "ko": "PC 화면 색과 <b>인쇄된 색이 다를 수 있어요.</b> 같은 파일도 <b>페이지마다 색이 다르게</b> 나올 수 있어요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "4a4d84d0a3": {
+  "ko": "🧾 결제 전 과금정보창 확인!",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "dd39f660b9": {
+  "ko": "복합기에서 결제 전에 <b>'과금정보창'</b>이 나와요. 알고 있는 내용과 <b>다르면 절대 결제하지 마세요.</b> PC에서 인쇄옵션을 다시 확인하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "1b031abd09": {
+  "ko": "<a class=\"goto\" href=\"#print-step2\" onclick=\"goStep2();return false\"><span>PDF 인쇄 옵션은 여기까지예요! [인쇄]를 누르면 개인식별번호 입력창이 나와요.</span><b>위 ‘인쇄하는 방법’ 2단계(개인식별번호 4자리 입력)부터 이어서 하세요 ⬆</b></a>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "38ebcda244": {
+  "ko": "PDF 파일은 어도비 아크로벳 리더 뷰어에서 열립니다 <span class=\"pill\">PDF</span>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "0cd6fc029e": {
+  "ko": "매장 PC에 설치된 PDF 전용 프로그램(<b>어도비 아크로벳 리더</b>)입니다. PDF 파일을 열고 <b>프린터 모양</b>이나 <b>[파일] → [인쇄]</b>를 누르거나 키보드 <b>Ctrl</b>과 <b>P</b>를 같이 누르면 아래 인쇄 화면이 나와요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "c03e0309d9": {
+  "ko": "<span class=\"open1-n\">1단계</span>PC에서 인쇄할 파일을 열어요",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "737d806d78": {
+  "ko": "바탕화면에 있는 PDF 파일을 마우스로 두 번 눌러 여는 모습",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "30cc97975b": {
+  "ko": "인쇄할 파일을 PC에서 <b>더블클릭</b>해서 열어요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "64de8e221c": {
+  "ko": "이메일이나 USB에 있는 파일은 <b>먼저 PC 바탕화면에 저장</b>해 주세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "35a186a638": {
+  "ko": "꼭 바탕화면이 아니어도 돼요. PC에 저장하고 <b>어디에 저장했는지(경로)만 알면</b> 돼요. 그 경로에 가서 인쇄할 파일을 더블클릭해서 열어요. 가장 쉽게 찾을 수 있는 곳이 바탕화면이에요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "9ebfff9823": {
+  "ko": "📱 <b>핸드폰에 파일이 있다면?</b> 아래 링크를 눌러 핸드폰에 있는 파일을 먼저 PC에 저장하는 방법을 확인하세요.<br/><a href=\"faq.html#faq-22\">핸드폰 파일을 PC에 저장하는 방법 보기 →</a>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "e204916d93": {
+  "ko": "<span>이어서</span> · 인쇄 옵션 설정",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "d8676c1484": {
+  "ko": "PDF 인쇄 화면. 프린터 선택, 맞추기, 용지 소스 선택 체크 해제 부분을 번호와 함께 확대해서 보여 주는 모습",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "cce2d50024": {
+  "ko": "① ② ③ 번호가 붙은 곳을 확인하세요 <span style=\"color:var(--text3);font-weight:600\">(사진을 누르면 크게 열려요)</span>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "c4a2b3247d": {
+  "ko": "<b>프린터</b>에서 <b>흑백출력</b> 또는 <b>컬러출력</b> 프린터를 선택하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "6358b717e2": {
+  "ko": "<b>페이지 크기 조정 및 처리</b>에서 반드시 <b>'맞추기'</b>가 선택되어 있어야 해요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "6491212192": {
+  "ko": "⚠️ <b>'PDF 페이지 크기에 따라 용지 소스 선택(Z)'</b>에 <b>체크가 없어야 해요!</b><br/>체크가 되어 있으면 용지 크기를 A4 · B4 · A3로 골라도 복합기에서 조회할 때 <b>Custom</b>이라고 표시돼요. <b>반드시 체크를 풀고</b> 인쇄 작업을 진행하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "e59213a20e": {
+  "ko": "PDF 인쇄 화면. 페이지 설정 버튼, 회색 명암으로 인쇄 체크, 미리보기, 인쇄 버튼을 번호와 함께 확대해서 보여 주는 모습",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "fc9b449ada": {
+  "ko": "④ ⑤ ⑥ 번호가 붙은 곳을 확인하세요 <span style=\"color:var(--text3);font-weight:600\">(사진을 누르면 크게 열려요)</span>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "7c4ae78644": {
+  "ko": "아래 <b>[페이지 설정...]</b>을 눌러 원하는 <b>용지 크기</b>를 선택하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "b3f67d7b05": {
+  "ko": "<b>미리보기</b>에서 전체 페이지가 정상으로 보이는지 확인하세요.<br/><b>컬러출력</b>을 골랐다면 오른쪽 작은 미리보기가 <b>반드시 컬러</b>로 보여야 해요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "f5ddcf7b97": {
+  "ko": "컬러로 안 보이면",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "46b097b932": {
+  "ko": "위쪽 <b>'회색 명암(흑백)으로 인쇄'</b>에 체크되어 있는지 보고, 되어 있으면 <b>체크를 풀어요.</b>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "6fe6d567d6": {
+  "ko": "풀었는데도 흑백이면 <b>PC를 다시 켜고</b>(재부팅) 파일을 다시 열어서 진행해요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "3a20988b47": {
+  "ko": "그래도 흑백이면 그 파일을 <b>엣지나 크롬</b>에서 열어 <b>컬러출력</b> 프린터를 선택하고, 미리보기가 컬러인지 확인한 뒤 인쇄하세요. <a class=\"plink\" href=\"#browser\" onclick=\"goType('browser');return false\">엣지·크롬 방법 보기</a>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "edb6b3e104": {
+  "ko": "모든 인쇄 옵션 설정이 끝나면 <b>[인쇄]</b> 버튼을 누르세요. <b>개인식별번호</b> 입력창이 나와요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "b0e20d4260": {
+  "ko": "<a class=\"goto\" href=\"#print-step2\" onclick=\"goStep2();return false\"><span>한글 인쇄 옵션은 여기까지예요! [인쇄]를 누르면 개인식별번호 입력창이 나와요.</span><b>위 ‘인쇄하는 방법’ 2단계(개인식별번호 4자리 입력)부터 이어서 하세요 ⬆</b></a>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "696333dbe1": {
+  "ko": "한글 파일은 한컴 한글 뷰어에서 열립니다 <span class=\"pill\">한글</span>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "ec0509301b": {
+  "ko": "매장 PC에는 <b>편집 기능이 없는 열람 전용 뷰어</b>가 설치되어 있습니다. 파일을 만든 환경과 다르면 화면이 달라질 수 있습니다.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "7e98d27871": {
+  "ko": "바탕화면에 있는 한글 파일을 마우스로 두 번 눌러 여는 모습",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "19b824ed23": {
+  "ko": "한글 인쇄 화면. 프린터 선택, 설정 버튼, 인쇄 매수, 인쇄 범위, 인쇄 방식, 인쇄 버튼에 번호를 붙인 그림",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "dc83359e6c": {
+  "ko": "1~6번 번호가 붙은 곳을 순서대로 확인하세요 <span style=\"color:var(--text3);font-weight:600\">(사진을 누르면 크게 열려요)</span>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "63e9ea55ee": {
+  "ko": "<b>프린터 선택</b>: 프린터 목록에서 원하는 프린터(<b>흑백출력</b> 또는 <b>컬러출력</b>)를 누르세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "c4ed16cf2c": {
+  "ko": "<b>설정 버튼</b>: <b>[설정]</b> 버튼을 누르면 <b>[프린터 속성]</b> 창이 나와요. 이 창에는 <b>[기본] 탭</b>과 <b>[용지] 탭</b>이 있어요. 아래 <b>2-1</b>, <b>2-2</b>를 차례로 확인하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "28f2281758": {
+  "ko": "<span class=\"sub2-n\">2-1</span> [기본] 탭 — 인쇄 방향 · 단면/양면",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "2dc25698e5": {
+  "ko": "프린터 속성 창의 기본 탭. A는 용지 방향, B는 양면 인쇄 옵션",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "550b5625e2": {
+  "ko": "<b>용지 방향</b>: 인쇄 방향을 고르세요. <b>[세로]</b> 또는 <b>[가로]</b>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "ba9a7caad6": {
+  "ko": "<b>양면 인쇄</b>: 한 면만 인쇄하려면 <b>[사용안함]</b>, 양면으로 인쇄하려면 <b>[긴면 묶음]</b> 또는 <b>[짧은면 묶음]</b>을 고르세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "e9acc68a39": {
+  "ko": "<span class=\"sub2-n\">2-2</span> [용지] 탭 — 용지 크기",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "cd15a29130": {
+  "ko": "프린터 속성 창의 용지 탭. A는 원본 문서 크기, B는 출력 문서 크기",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "8a3b53fc04": {
+  "ko": "<b>원본 문서 크기</b>: 인쇄하려는 용지 크기(<b>A4 · B4 · A3</b>)로 선택하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "1c040cc254": {
+  "ko": "<b>출력 문서 크기</b>: 여기도 <b>A와 똑같은 크기</b>로 선택하세요. <b>[원본 문서 크기와 동일]</b>로 두지 마세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "acbff02b70": {
+  "ko": "📌 <b>예)</b> A4로 인쇄하고 싶으면 <b>A</b>와 <b>B</b> 두 곳 모두 <b>A4</b>로 선택하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "abccac3f6e": {
+  "ko": "⚠️ 파일에 따라 <b>[출력 문서 크기]</b>를 설정하지 않으면, 복합기에서 조회할 때 용지 크기가 <b>Letter(레터)</b>나 <b>Custom(커스텀)</b> 등 <b>한글 파일 크기</b>로 나와요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "c48beb3dec": {
+  "ko": "<b>인쇄 매수</b>를 정하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "c401725a11": {
+  "ko": "<b>인쇄할 페이지 범위</b>를 고르세요. <b>전체</b> 또는 특정 페이지만 인쇄하려면 <b>[일부분]</b>을 고르고 페이지 번호를 입력하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "b115d60e5f": {
+  "ko": "<b>한 면에 인쇄할 페이지 수</b>: 한 면에 한 페이지는 <b>[기본 인쇄]</b>를 고르세요. 한 면에 여러 페이지는 <b>[모아 찍기]</b>를 고르고 인쇄할 페이지 수를 입력하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "be8ccc918d": {
+  "ko": "모든 설정이 끝났으면 <b>[인쇄]</b> 버튼을 눌러 진행하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "cf76c43eab": {
+  "ko": "※ <b>공용 PC라서 인쇄 설정이 매번 달라져요.</b> 원하는 인쇄 옵션을 <b>모두 확인하고 설정한 뒤</b> 인쇄하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "8a87f2ef38": {
+  "ko": "💡 파일을 만든 PC와 글꼴이 달라서 글꼴 · 줄 간격 · 표가 틀어지거나 <b>원본에 없던 기호(□)</b>가 나올 수 있어요. 한글에서 <b>[다른 이름으로 저장] → PDF</b>로 바꿔 오시면 원본 그대로 출력됩니다.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "6539d13016": {
+  "ko": "엑셀 · 워드 · 파워포인트 파일은 MS 오피스에서 열립니다 <span class=\"pill\">MS 오피스</span>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "1154e17b4c": {
+  "ko": "워드 · 엑셀 · 파워포인트 파일의 인쇄 설정 방법입니다. 프로그램마다 화면 구성은 다르지만 <b>[파일] → [인쇄]</b>로 들어가는 순서는 같습니다.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "c96fb73008": {
+  "ko": "바탕화면에 있는 워드·엑셀·파워포인트 파일을 마우스로 두 번 눌러 여는 모습",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "30dfe423a6": {
+  "ko": "<button class=\"otab on\" onclick=\"officeTab('we',this)\">워드 · 엑셀</button> <button class=\"otab\" onclick=\"officeTab('ppt',this)\">파워포인트</button>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "07d320a32c": {
+  "ko": "<a class=\"goto\" href=\"#print-step2\" onclick=\"goStep2();return false\"><span>워드 · 엑셀 인쇄 옵션은 여기까지예요! [인쇄]를 누르면 개인식별번호 입력창이 나와요.</span><b>위 ‘인쇄하는 방법’ 2단계(개인식별번호 4자리 입력)부터 이어서 하세요 ⬆</b></a>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "00b63cd704": {
+  "ko": "워드 인쇄 화면. 프린터를 누르면 펼쳐지는 목록을 확대해서 보여 주는 모습",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "e594b51665": {
+  "ko": "워드 화면 — 번호가 붙은 곳을 순서대로 확인하세요 <span style=\"color:var(--text3);font-weight:600\">(사진을 누르면 크게 열려요)</span>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "85901a18ef": {
+  "ko": "엑셀 인쇄 화면. 프린터를 누르면 펼쳐지는 목록을 확대해서 보여 주는 모습",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "599d0e46b6": {
+  "ko": "엑셀 화면 — 워드와 똑같아요 <span style=\"color:var(--text3);font-weight:600\">(사진을 누르면 크게 열려요)</span>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "8c0c2be442": {
+  "ko": "<b>엑셀</b> 또는 <b>워드</b> 파일을 열고 왼쪽 메뉴의 <b>[인쇄]</b>를 누르세요.<br/>인쇄 옵션 화면은 <b>엑셀과 워드가 똑같아요.</b>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "12f178ebe2": {
+  "ko": "<b>프린터</b> 칸 오른쪽 끝의 <b>▼ 모양</b>을 눌러 목록을 펼친 뒤, <b>흑백출력</b> 또는 <b>컬러출력</b>을 선택하세요. (글자 '프린터'를 누르는 것이 아니에요!)",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "00e994532b": {
+  "ko": "⚠️ <b>컬러출력</b> 프린터를 선택했다면 <b>미리보기도 컬러인지</b> 확인하세요. 미리보기에서 <b>인쇄할 모든 페이지가 컬러</b>인지 넘겨서 꼭 확인하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "4abc52f89a": {
+  "ko": "<b>용지 사이즈</b>를 고르세요. 고른 뒤 <b>미리보기</b>로 원하는 내용이 다 나왔는지 확인하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "34307a93c8": {
+  "ko": "⚠️ <b>용지 사이즈</b>가 <b>'레터'</b>가 아니라, <b>인쇄하려는 사이즈(A4 · B4 · A3)</b>로 되어 있는지 꼭 확인하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "0982735678": {
+  "ko": "<b>단면 / 양면</b> 등의 인쇄 옵션을 고르세요. 고른 뒤 <b>미리보기</b>로 원하는 대로 나왔는지 확인하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "d0e01742ed": {
+  "ko": "위쪽 <b>[인쇄] 프린터 모양</b> 버튼을 누르세요. <b>개인식별번호</b> 입력창이 나오면 <b>아무 숫자 4자리</b>를 넣으세요. <b>내 핸드폰 번호 뒤 4자리</b>를 추천해요.<br/>여기까지 하면, 그 뒤 <b>복합기에서 하는 부분은 똑같아요.</b>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "3e0b1728c3": {
+  "ko": "<a class=\"goto\" href=\"#print-step2\" onclick=\"goStep2();return false\"><span>파워포인트 인쇄 옵션은 여기까지예요! [인쇄]를 누르면 개인식별번호 입력창이 나와요.</span><b>위 ‘인쇄하는 방법’ 2단계(개인식별번호 4자리 입력)부터 이어서 하세요 ⬆</b></a>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "8ca152b1ce": {
+  "ko": "파워포인트 인쇄 화면. 복사본, 프린터, 슬라이드, 단면, 컬러, 프린터 속성, 인쇄 버튼에 번호를 붙인 그림",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "a489d7ee92": {
+  "ko": "1~8번 번호가 붙은 곳을 순서대로 확인하세요 <span style=\"color:var(--text3);font-weight:600\">(사진을 누르면 크게 열려요)</span>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "473ed56473": {
+  "ko": "<b>인쇄 매수</b>(복사본)를 정하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "cf8769aa60": {
+  "ko": "<b>프린터</b>: 빨간 <b>▼</b> 버튼을 누른 뒤 <b>[더보기]</b>를 눌러요. 프린터 목록에서 <b>흑백출력 · 컬러출력 · 증명서전용</b> 중 하나를 선택하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "c97c1e332e": {
+  "ko": "프린터 목록에서 더보기를 눌러 흑백출력, 컬러출력, 증명서전용 중에서 고르는 그림",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "f773213f5d": {
+  "ko": "<b>인쇄할 슬라이드</b>: <b>▼</b> 버튼을 누르고 인쇄할 슬라이드를 고르세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "d439632dd7": {
+  "ko": "인쇄할 슬라이드를 고르는 그림",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "5ee17e1d90": {
+  "ko": "<b>한 면에 인쇄할 슬라이드 수</b>: <b>▼</b> 버튼을 누르고 고르세요. 고른 뒤 <b>미리보기</b>로 꼭 확인하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "49ec76b050": {
+  "ko": "한 면에 인쇄할 슬라이드 수를 고르는 그림",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "27d4ab7543": {
+  "ko": "<b>단면 / 양면</b>: <b>▼</b> 버튼을 누르고 고르세요. 양면은 <b>긴 면 · 짧은 면</b> 인쇄 방향을 확인한 뒤 선택하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "ebbcc68336": {
+  "ko": "단면 인쇄와 양면 인쇄를 고르는 그림",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "b6133d4bb7": {
+  "ko": "⚠️ <b>컬러</b>: <b>컬러출력 · 증명서전용</b> 프린터를 골랐다면 이 칸을 꼭 <b>[컬러]</b>로 선택하세요.<br/><b>[회색조]</b>로 되어 있으면 컬러출력 프린터를 골라도 <b>흑백으로 출력</b>되는데 <b>금액은 컬러 금액</b>으로 결제돼요. <b>[컬러]</b>로 맞추고 <b>미리보기가 컬러인지</b> 꼭 확인하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "91bcd8768f": {
+  "ko": "컬러, 회색조, 흑백 중에서 컬러를 고르는 그림",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "81c3977d85": {
+  "ko": "<b>용지 크기를 바꿀 때</b>: 파워포인트는 설정 칸에 <b>용지 크기를 고르는 곳이 없어요.</b> 대신 <b>[프린터 속성]</b>을 누르세요. 창이 나오면 <b>[용지]</b> 탭에서 <b>[원본 문서 크기]</b>와 <b>[출력 문서 크기]</b>를 <b>두 곳 모두 똑같이</b> 맞추세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "acb9ea5d36": {
+  "ko": "📌 <b>예)</b> A4로 인쇄하고 싶으면 <b>[원본 문서 크기]</b>와 <b>[출력 문서 크기]</b>를 <b>모두 A4</b>로 선택하세요. A3로 하고 싶으면 둘 다 A3로 선택하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "dbac9a1c99": {
+  "ko": "⚠️ 한쪽만 바꾸면 복합기에서 조회할 때 용지 크기가 <b>Letter(레터)</b>나 <b>Custom(커스텀)</b>으로 나올 수 있어요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "96717b3418": {
+  "ko": "💡 <b>워드 · 엑셀 · 한글</b>은 설정 화면에서 용지 크기를 바로 고르지만, <b>파워포인트만</b> 프린터 속성에서 정해요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "8c546d49be": {
+  "ko": "모든 옵션을 골랐으면 <b>[인쇄]</b> 버튼을 눌러 진행하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "d7b5ef5c6b": {
+  "ko": "⚠️ 설정을 다 한 뒤에 <b>② 프린터 선택을 바꾸면</b> 옵션이 바뀔 수 있어요. 그때는 <b>모든 옵션을 처음부터 다시 확인</b>하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "8fd3d23ae2": {
+  "ko": "<a class=\"goto\" href=\"#mfp\"><span>PC에서 할 일은 여기까지예요!</span><b>아래 ‘복합기에서 인쇄하기’로 이어서 하세요 ⬇</b></a>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "06b97beb94": {
+  "ko": "파일을 크롬 · 엣지 브라우저로 열었을 때 <span class=\"pill\">캔바 · 웹 PDF</span>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "441170e443": {
+  "ko": "캔바 · 미리캔버스 · 웹 디자인 프로그램 · 아이패드 메모 앱에서 만든 PDF는 <span class=\"hl-t\">브라우저로 연 뒤, 미리보기에서 컬러 표현이 모두 되는지 확인하고 인쇄 작업을 하세요.</span>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "30fdef1efd": {
+  "ko": "<span class=\"open1-n\">1단계</span>인쇄할 파일을 엣지나 크롬으로 열어요",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "3ee14aa519": {
+  "ko": "엣지나 크롬 창 위로 바탕화면의 PDF 파일을 끌어다 놓는 모습",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "c41e357c8d": {
+  "ko": "PDF 파일은 <b>더블클릭하면 아크로벳</b>으로 열리도록 되어 있어요. 브라우저(엣지·크롬)로 열려면 아래 <b>둘 중 하나</b>로 해 주세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "da36320220": {
+  "ko": "① 먼저 <b>엣지나 크롬을 열고</b>, 파일을 그 창 위로 <b>끌어다 놓으세요.</b>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "401a2da604": {
+  "ko": "② 파일을 <b>마우스 오른쪽 버튼</b>으로 눌러 <b>연결 프로그램</b>을 <b>엣지 또는 크롬</b>으로 선택하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "983eaffdd1": {
+  "ko": "이메일이나 USB에 있는 파일은 <b>먼저 PC 바탕화면에 저장</b>해 주세요. 저장한 곳(경로)만 알면 돼요. 가장 쉽게 찾을 수 있는 곳이 바탕화면이에요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "c725cc1b25": {
+  "ko": "🔎 내 파일이 열린 브라우저를 먼저 확인하세요 <span>엣지와 크롬은 인쇄 화면이 달라요</span>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "c162ec7f8a": {
+  "ko": "PC에서 파일이 <b>엣지(Edge)</b>로 열려 있으면 아래 <b>엣지 방법</b>, <b>크롬(Chrome)</b>으로 열려 있으면 아래 <b>크롬 방법</b>(1~5단계)을 따라 하세요. <b>개인식별번호를 넣고 인쇄 작업 창 확인(5단계)</b>까지 끝나면, 아래로 내려가 <b>복합기에서 인쇄하기</b>로 이어서 하세요. <b>엣지 · 크롬 · 알씨 모두 똑같아요.</b>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "2491a841fe": {
+  "ko": "<span class=\"bsub-ico\">e</span><span class=\"bsub-t\">엣지(Edge)에서 인쇄하기</span><small>1~5단계</small>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "e19d215314": {
+  "ko": "[인쇄] 누르기",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "7ea85997db": {
+  "ko": "브라우저에서 인쇄할 파일이 열린 상태에서 <b>[인쇄]</b> 또는 <b>프린터 모양</b>을 누르세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "ba72df3bda": {
+  "ko": "엣지 인쇄 화면에서 프린터 목록의 흑백출력(BlackOnly)을 선택하는 모습",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "bcc1aa539e": {
+  "ko": "흑백출력 프린터 선택",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "e33cd365a3": {
+  "ko": "엣지 인쇄 화면에서 프린터 목록의 컬러출력(ColorOnly)을 선택하는 모습",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "2fd9bfac13": {
+  "ko": "컬러출력 프린터 선택",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "11321cc2ee": {
+  "ko": "엣지 인쇄 화면 그림. 프린터의 컬러출력과 색 칸을 돋보기처럼 크게 확대해서 보여 주는 모습",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "4fabb197d8": {
+  "ko": "🔍 빨간 상자 부분을 크게 확대했어요 — <b>컬러출력 프린터</b>를 선택하고, <b>'색'</b> 칸에서 <b>[색]</b>을 선택한 뒤 <b>오른쪽 미리보기가 컬러로 나오는지</b> 꼭 확인하세요 <span style=\"color:var(--text3);font-weight:600\">(사진을 누르면 크게 열려요)</span>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "b52b8d1e89": {
+  "ko": "프린터 선택",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "3a5b525821": {
+  "ko": "프린터에서 <b>흑백출력</b> 또는 <b>컬러출력</b> 프린터를 선택하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "31d509c9e7": {
+  "ko": "⚠️ <b>컬러출력 프린터</b>를 선택했다면 <b>'색'</b> 칸에서 <b>[색]</b>을 선택하고, 오른쪽 <b>미리보기가 컬러로 나오는지 반드시 확인</b>하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "7419195181": {
+  "ko": "엣지 인쇄 화면 그림. 양면 인쇄, 용지 크기, 한 면에 인쇄할 페이지 수를 돋보기처럼 크게 확대해서 보여 주는 모습",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "a3efd71dd8": {
+  "ko": "🔍 빨간 상자 부분을 크게 확대했어요 — 번호 상자 안을 확인하세요: <b>양면/단면 · 용지 크기 · 한 면에 인쇄할 페이지 수</b> <span style=\"color:var(--text3);font-weight:600\">(사진을 누르면 크게 열려요)</span>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "484334c5a2": {
+  "ko": "인쇄 옵션 선택 · 확인",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "dd65759274": {
+  "ko": "<b>[기타 설정]</b>을 눌러 <b>용지 사이즈, 양면/단면, 한 면에 인쇄할 페이지 수</b> 등 인쇄 옵션을 선택하거나 확인하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "1cad9c6e67": {
+  "ko": "개인 식별 번호 입력창에 숫자 4자리를 입력하는 모습",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "a3269184a7": {
+  "ko": "[인쇄] 누르고 번호 입력",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "ae9f55e16e": {
+  "ko": "아래쪽 <b>[인쇄]</b> 버튼을 누르면 <b>개인식별번호</b> 입력창이 나와요. <b>아무 숫자 4자리</b>를 넣으세요. <b>내 핸드폰 번호 뒤 4자리</b>를 추천해요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "e0a9a607ed": {
+  "ko": "이 번호(PIN번호)는 복합기에서 내 문서를 찾을 때 쓰는 임시 비밀번호 같은 거예요. 꼭 기억하세요!",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "c39796945c": {
+  "ko": "인쇄 작업 창에 문서 목록이 남아 있는 모습",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "3712ee4a1e": {
+  "ko": "목록이 남아 있어요 → 없어질 때까지 기다리기",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "db29b994cb": {
+  "ko": "인쇄 작업 창에 문서 목록이 없는 모습",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "a79641284e": {
+  "ko": "목록이 없어요 → 복합기로 전송 완료",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "17b0c18ee0": {
+  "ko": "인쇄 작업 창 확인",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "42d0355128": {
+  "ko": "<b>흑백출력</b> 또는 <b>컬러출력</b> 인쇄 작업 창을 보세요.<br/>목록이 <b>하나도 없으면</b> 인쇄 작업이 복합기로 전송된 상태예요.<br/>목록이 남아 있으면 <b>없어질 때까지 기다려</b> 주세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "1792fc51aa": {
+  "ko": "<span class=\"bsub-ico\">C</span><span class=\"bsub-t\">크롬(Chrome)에서 인쇄하기</span><small>1~5단계</small>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "28efa2f2aa": {
+  "ko": "인쇄할 파일이 <b>크롬</b>에서 열린 상태에서 <b>[인쇄]</b> 또는 <b>프린터 모양</b>을 누르거나, 키보드 <b>Ctrl</b>과 <b>P</b>를 같이 누르세요.<br/>인쇄 설정 창이 나와요. <b>왼쪽은 미리보기</b>, <b>오른쪽은 인쇄 옵션 설정 창</b>이에요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "fad07c8c4a": {
+  "ko": "크롬 인쇄 화면 그림. 대상을 누르면 기본으로 흑백출력이 나오고 아래에 더보기가 있는 모습을 돋보기처럼 확대해서 보여 주는 모습",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "b8db334dd4": {
+  "ko": "① <b>'대상'</b>을 누르면 기본으로 <b>흑백출력</b>이 나와요. 컬러출력이 없으면 <b>[더보기...]</b>를 누르세요 <span style=\"color:var(--text3);font-weight:600\">(사진을 누르면 크게 열려요)</span>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "91370c1b96": {
+  "ko": "대상 선택 창에서 흑백출력(BlackOnly)과 컬러출력(ColorOnly)을 고르는 모습",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "480de74bcf": {
+  "ko": "② 전체 프린터 목록에서 <b>흑백출력</b> 또는 <b>컬러출력</b>을 선택하세요 <span style=\"color:var(--text3);font-weight:600\">(사진을 누르면 크게 열려요)</span>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "a8cb4d68d9": {
+  "ko": "크롬 인쇄 화면 그림. 컬러출력 프린터를 선택하고 컬러 칸에서 컬러를 선택하는 모습을 돋보기처럼 확대해서 보여 주는 모습",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "52a498b254": {
+  "ko": "③ <b>컬러출력</b>을 선택했다면 <b>'컬러'</b> 칸에서 <b>[컬러]</b>를 선택하고, 왼쪽 <b>미리보기가 컬러인지</b> 꼭 확인하세요 <span style=\"color:var(--text3);font-weight:600\">(사진을 누르면 크게 열려요)</span>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "c6bb56f773": {
+  "ko": "프린터(대상) 선택",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "4e4f8761f4": {
+  "ko": "오른쪽 설정 창에서 <b>'대상'</b>이 프린터를 고르는 곳이에요. 누르면 기본으로 <b>흑백출력</b> 프린터가 나와요.<br/><b>컬러출력</b>이 안 보이면 아래의 <b>[더보기...]</b>를 누르세요. 전체 프린터 목록이 나와요.<br/><b>흑백출력</b> 또는 <b>컬러출력</b> 프린터를 선택하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "553c0a7a35": {
+  "ko": "⚠️ <b>컬러출력 프린터</b>를 선택했다면 <b>'컬러'</b> 칸(레이아웃 아래)에서 <b>[컬러]</b>를 선택하세요. 그리고 왼쪽 <b>미리보기가 컬러인지</b>, 인쇄할 <b>모든 페이지가 컬러로 나오는지</b> 반드시 확인하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "a6273e144c": {
+  "ko": "크롬 인쇄 화면 그림. 용지 크기, 시트당 페이지 수, 양면 옵션을 돋보기처럼 확대해서 보여 주는 모습",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "35ed108e9d": {
+  "ko": "🔍 빨간 번호 상자 안을 확인하세요(✔ 표시한 곳): <b>용지 크기 · 시트당 페이지 수 · 양면</b> <span style=\"color:var(--text3);font-weight:600\">(사진을 누르면 크게 열려요)</span>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "af74316d25": {
+  "ko": "<b>[설정 더보기]</b>를 누르면 <b>용지 크기, 양면, 시트당 페이지 수</b> 등 인쇄 옵션이 나와요. 원하는 대로 선택하거나 확인하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "89ba901980": {
+  "ko": "사진 · 이미지 파일은 알씨에서 열립니다 <span class=\"pill\">알씨</span>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "e9503b110a": {
+  "ko": "사진이나 이미지 파일을 인쇄할 때 사용합니다. 한 장에 여러 장 배치도 가능합니다. 매장 PC 바탕화면의 <b>알씨</b> 아이콘으로 사진을 열면 됩니다.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "0f3c930d1b": {
+  "ko": "바탕화면에 있는 사진(JPG·PNG) 파일을 마우스로 두 번 눌러 여는 모습",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "7d1c6ce962": {
+  "ko": "파일 열고 인쇄 메뉴",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "e915777b51": {
+  "ko": "사진을 알씨로 연 뒤 상단 <b>[메뉴] → [인쇄하기]</b>를 선택합니다. 키보드 <b>Ctrl</b>과 <b>P</b>를 같이 눌러도 돼요",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "efa3621a4d": {
+  "ko": "<b>컬러출력</b> 또는 <b>흑백출력</b> 중에서 고릅니다. 컬러 사진은 반드시 <b>컬러출력</b>을 선택하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "ec77d428da": {
+  "ko": "프린터를 고르면 나오는 인쇄 창. 왼쪽 아래 프린터 설정 글자에 표시",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "adf48af32f": {
+  "ko": "인쇄 창에서 [프린터 설정] 누르기",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "de6e78df80": {
+  "ko": "프린터를 고르면 아래 <b>인쇄 창</b>이 나와요. 용지 크기나 세로 / 가로를 바꾸려면 왼쪽 아래 <b>[프린터 설정]</b>을 누르세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "d87e83e87f": {
+  "ko": "인쇄 설정 창. 용지 크기 A4와 방향 세로, 확인 버튼에 표시",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "645e0c2432": {
+  "ko": "용지 크기 · 방향 정하고 [확인]",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "598b0cefc2": {
+  "ko": "<b>용지 크기(A4 · B4 · A3 등)</b>와 <b>세로 / 가로</b>를 정한 뒤 <b>[확인]</b>을 누르세요. 그러면 다시 인쇄 창으로 돌아와요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "81fcd121c1": {
+  "ko": "💡 위쪽 <b>이름</b> 칸에는 앞에서 고른 프린터(<b>컬러출력</b> 또는 <b>흑백출력</b>)가 나와요. 바꾸지 마세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "35bd492864": {
+  "ko": "크기 설정",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "d3701817f4": {
+  "ko": "다시 인쇄 창이에요. <b>[크기설정]</b> 탭에서 <b>용지 크기에 맞춤</b>을 체크하면 사진이 용지에 꽉 차게 인쇄됩니다. 비율을 지키려면 <b>용지 비율에 맞춤</b>을 선택하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "032c3d19a3": {
+  "ko": "여백 · 위치",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "b8a3225d9e": {
+  "ko": "<b>[여백/위치]</b> 탭에서 위 · 아래 · 좌 · 우 여백(mm)과 사진을 놓을 위치를 정합니다.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "fa5b9c02be": {
+  "ko": "장 수 정하고 인쇄",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "0817d066c7": {
+  "ko": "<b>[기타]</b> 탭에서 <b>인쇄할 장 수</b>를 정하세요. 왼쪽 <b>미리보기로 전체를 확인한 뒤</b> <b>[인쇄]</b>를 누르세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "1fc6287610": {
+  "ko": "<b>[인쇄]</b>를 누르면 <b>개인식별번호</b> 입력창이 나와요. <b>아무 숫자 4자리</b>를 넣으세요. <b>내 핸드폰 번호 뒤 4자리</b>를 추천해요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "992b51bde9": {
+  "ko": "<a class=\"goto\" href=\"#mfp\"><span>복합기 사용 순서가 헷갈리면</span><b>아래 ‘복합기에서 인쇄하기’를 보세요 ⬇</b></a>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "e2995cac54": {
+  "ko": "토익 증명서는 이렇게 인쇄해요 <span class=\"pill\">토익 · 토익스피킹</span>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "e0094573d0": {
+  "ko": "토익·토익스피킹(YBM) 증명서는 <span class=\"hl-t\">PC에서 [증명서전용PIN9999]로 먼저 인쇄</span>하세요. 다른 프린터를 고르면 <b>PC가 멈춰요!</b>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "91b4f37503": {
+  "ko": "⚠️ 사이트에서 발급(결제)만 하면 인쇄가 안 돼요 <span>꼭 읽어 보세요</span>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "5449006e56": {
+  "ko": "증명서는 <b>① PC에서 [증명서전용PIN9999]로 인쇄</b>를 보낸 뒤 <b>② 복합기에서 번호 9999</b>로 찾아 결제해야 나와요.<br/>PC에서 인쇄를 안 보내고 복합기에서 9999만 누르면 <b>아무것도 안 나와요.</b>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "3927c33e00": {
+  "ko": "사이트에서 증명서를 열어요",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "935e55d3a1": {
+  "ko": "토익 사이트에서 성적표를 발급받으면 <b>증명서가 뷰어 창으로 열려요.</b>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "7aef32a692": {
+  "ko": "대학교 성적·졸업증명서, 써트피아 그림 안내는 <b>준비 중</b>이에요. 그 증명서도 <b>프린터는 똑같이 [증명서전용PIN9999]</b>로 고르세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "5f6a1be15d": {
+  "ko": "증명서 뷰어 창. 오른쪽 위의 노란 성적표 출력 버튼에 1번 표시",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "3f1cdb6be3": {
+  "ko": "[성적표 출력] 누르기",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "71add2ee1a": {
+  "ko": "뷰어 오른쪽 위의 노란 <b>[성적표 출력]</b>을 누르세요.<br/><b>[테스트 출력]</b>은 시험용이에요. 누르지 마세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "da276d333d": {
+  "ko": "프린터 선택 창. 프린터 목록에서 증명서전용PIN9999를 고르고 인쇄 버튼을 누르는 모습",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "b975d76128": {
+  "ko": "프린터는 [증명서전용PIN9999]만!",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "fa9fbef470": {
+  "ko": "프린터 선택 창에서 <b>[증명서전용PIN9999]</b>를 고르고 <b>[인쇄]</b>를 누르세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "6986ffffc8": {
+  "ko": "⚠️ <b>흑백출력 · 컬러출력</b>을 고르면 <b>PC가 멈춰요!</b> 그러면 증명서 발급 비용을 돌려받기 어려워요. 꼭 <b>[증명서전용PIN9999]</b>만 고르세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "d77adaedfc": {
+  "ko": "출력이 끝났다는 글이 나오면 끝!",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "6234cff847": {
+  "ko": "[증명서전용PIN9999]는 <b>개인식별번호 창이 안 나와요.</b> 자동으로 <b>9999</b>가 들어가니까 정상이에요.<br/>출력이 완료되었다고 나오면 PC에서 할 일은 끝이에요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "578fd628c5": {
+  "ko": "복합기에서 번호 9999로 찾아요",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "bf39fe1803": {
+  "ko": "복합기에서 <b>[인쇄]</b> → <b>[PC]</b>를 누르고 번호 <b>9999</b>를 넣어요.<br/>목록이 나오면 <b>내 증명서만</b> 골라 <b>[시작]</b> 후 결제하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "bec10b3d7a": {
+  "ko": "⚠️ 다른 손님도 9999를 썼을 수 있어서 목록에 문서가 <b>여러 개</b> 나올 수 있어요. <b>시간과 이름을 꼭 확인</b>하고 내 것만 결제하세요. <b>[모두선택]은 누르지 마세요.</b>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "e24533e7f7": {
+  "ko": "복합기에서 인쇄하기 <span class=\"pill\">엣지 · 크롬 · 알씨 공통</span>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "2f2a96c660": {
+  "ko": "<b>PC에서 개인식별번호를 넣고 인쇄 작업을 보낸 뒤</b>에 하는 단계예요. 엣지, 크롬, 알씨 모두 똑같아요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "8e6faabe6f": {
+  "ko": "복1",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "82ada80ea4": {
+  "ko": "복합기에서 인쇄 → PC → 번호 입력",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "4073c80670": {
+  "ko": "복합기로 이동해서 <b>[인쇄]</b> → <b>[PC]</b>를 누르세요.<br/><b>PIN번호</b> 입력란에 PC에서 넣은 <b>4자리 번호</b>를 입력하고 <b>[OK]</b>를 터치하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "1bb66d1416": {
+  "ko": "복2",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "91725efdd2": {
+  "ko": "PIN번호 입력 후 인쇄 작업 목록이 나온 복합기 화면",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "17f959acd8": {
+  "ko": "내 문서 목록 확인",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "0eda929fcc": {
+  "ko": "목록이 나오면 <b>문서 이름, 작업 시간, 흑백/컬러, 양면/단면, 페이지 수, 용지 사이즈</b> 등 목록에 나오는 내용을 꼼꼼히 확인하세요.<br/><b>내 문서가 맞는지</b>, 인쇄 옵션이 <b>원하는 대로</b> 되어 있는지 봐 주세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "acdd828efa": {
+  "ko": "복3",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "912e236685": {
+  "ko": "목록 누르고 [시작]",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "3dafd06efe": {
+  "ko": "내 문서 <b>목록을 터치</b>한 뒤 <b>[시작]</b> 버튼을 터치하세요.<br/>목록이 여러 개라면 위쪽의 <b>[모두 인쇄]</b>를 누르거나, <b>인쇄할 목록만 여러 개 터치</b>한 뒤 <b>[시작]</b>을 누르세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "8a4b661858": {
+  "ko": "복4",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "e16eb5fb3d": {
+  "ko": "마지막으로 <b>과금정보 창</b>이 나와요. 내용을 모두 꼼꼼히 확인하고, <b>가격</b>까지 맞으면 <b>[확인]</b>을 터치하세요.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "abdd5e40e0": {
+  "ko": "⚠️ 과금정보 창의 페이지 수나 금액이 내가 알고 있는 것과 다르면 <b>결제하지 마세요.</b>",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "415ff3e05c": {
+  "ko": "복5",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "7772e7ee2b": {
+  "ko": "카드 찍는 기계에서 음성이 나오면 <b>IC카드(신용·체크)는 꽂고</b>, <b>삼성페이는 대 주세요</b>.",
+  "pages": [
+   "guide-print.html"
+  ]
+ },
+ "99934d01f4": {
+  "ko": "<b>💳 신용·체크카드는 IC칩이 있는 쪽을 카드 단말기 투입구에 꽂으세요.</b>",
+  "pages": [
+   "guide-print.html"
+  ]
+ }
+}

@@ -1,0 +1,1292 @@
+# 사용방법 허브(guide.html) + 인쇄(guide-print.html) 번역
+# 형식: @@문장id 다음 줄에 en: / zh: / vi: (한 줄씩). HTML 태그·속성은 한국어 원문과 똑같이 둔다.
+# 기계·PC 화면에 한국어로 보이는 이름은 [한국어]로 같이 적는다 (glossary.md)
+
+@@4dba876e21
+en: PrintShop Mini How to Use — steps and FAQs for printing, copying, scanning, fax, laminating and binding.
+zh: PrintShop Mini 使用方法 — 介绍打印、复印、扫描、传真、塑封、装订的使用步骤和常见问题。
+vi: Hướng dẫn sử dụng PrintShop Mini — các bước và câu hỏi thường gặp về in, photo, scan, fax, ép plastic và đóng sách.
+@@1314c4ef52
+en: How to Use - PrintShop Mini
+zh: 使用方法 - PrintShop Mini
+vi: Hướng dẫn sử dụng - PrintShop Mini
+@@571f758a4a
+en: <a class="nav-logo" href="index.html"> <img alt="Logo" class="logo-img" src="logo.jpg"/> <span class="nav-logo-name">PrintShop Mini</span> </a>
+zh: <a class="nav-logo" href="index.html"> <img alt="标志" class="logo-img" src="logo.jpg"/> <span class="nav-logo-name">PrintShop Mini</span> </a>
+vi: <a class="nav-logo" href="index.html"> <img alt="Logo" class="logo-img" src="logo.jpg"/> <span class="nav-logo-name">PrintShop Mini</span> </a>
+@@0d69c1799d
+en: Logo
+zh: 标志
+vi: Logo
+@@746bce6b91
+en: <a href="services.html">Services</a>
+zh: <a href="services.html">服务</a>
+vi: <a href="services.html">Dịch vụ</a>
+@@5974784a0b
+en: <a class="active" href="guide.html">How to Use</a>
+zh: <a class="active" href="guide.html">使用方法</a>
+vi: <a class="active" href="guide.html">Hướng dẫn</a>
+@@85e056471e
+en: <a href="about.html">About</a>
+zh: <a href="about.html">介绍</a>
+vi: <a href="about.html">Giới thiệu</a>
+@@e1eaf72438
+en: <a href="branches.html">Stores</a>
+zh: <a href="branches.html">门店</a>
+vi: <a href="branches.html">Cửa hàng</a>
+@@2cc04eb419
+en: <a href="community.html">Community</a>
+zh: <a href="community.html">社区</a>
+vi: <a href="community.html">Cộng đồng</a>
+@@b7b43e0773
+en: <a class="nav-cta" href="branches.html">Find a Store</a>
+zh: <a class="nav-cta" href="branches.html">查找门店</a>
+vi: <a class="nav-cta" href="branches.html">Tìm cửa hàng</a>
+@@72ec26f778
+en: PrintShop Mini mascot
+zh: PrintShop Mini 吉祥物
+vi: Linh vật PrintShop Mini
+@@ca29d61d1c
+en: Raccoon mascot
+zh: 浣熊吉祥物
+vi: Linh vật gấu mèo
+@@7c87dc1ff0
+en: How to Use
+zh: 使用方法
+vi: Hướng dẫn sử dụng
+@@ea1b26aeef
+en: Choose a service to see the steps. Print · Copy · Scan · Fax · Laminate · Bind
+zh: 选择服务，查看使用步骤。打印 · 复印 · 扫描 · 传真 · 塑封 · 装订
+vi: Chọn dịch vụ để xem các bước. In · Photo · Scan · Fax · Ép plastic · Đóng sách
+@@e9bd7ace89
+en: <a class="on" href="guide.html">All guides</a> <a href="guide-video.html">▶ Videos</a> <a href="guide-print.html">🖨️ Print</a> <a href="guide-copy.html">📋 Copy</a> <a href="guide-scan.html">📄 Scan</a>
+zh: <a class="on" href="guide.html">全部使用方法</a> <a href="guide-video.html">▶ 视频</a> <a href="guide-print.html">🖨️ 打印</a> <a href="guide-copy.html">📋 复印</a> <a href="guide-scan.html">📄 扫描</a>
+vi: <a class="on" href="guide.html">Tất cả hướng dẫn</a> <a href="guide-video.html">▶ Video</a> <a href="guide-print.html">🖨️ In</a> <a href="guide-copy.html">📋 Photo</a> <a href="guide-scan.html">📄 Scan</a>
+@@6d97b37427
+en: <a href="guide-coat.html">✨ Laminate</a> <a href="guide-bind.html">📚 Bind</a>
+zh: <a href="guide-coat.html">✨ 塑封</a> <a href="guide-bind.html">📚 装订</a>
+vi: <a href="guide-coat.html">✨ Ép plastic</a> <a href="guide-bind.html">📚 Đóng sách</a>
+@@679c3cb214
+en: Fax
+zh: 传真
+vi: Fax
+@@70a295987f
+en: Which service do you need?
+zh: 您要使用哪项服务？
+vi: Bạn muốn dùng dịch vụ nào?
+@@809f1249bb
+en: Pick a service to see the steps one by one. You can also go there from <b>How to Use</b> in the top menu.
+zh: 选择服务后，会一步一步告诉您怎么用。也可以从上方菜单的<b>使用方法</b>直接进入。
+vi: Chọn dịch vụ để xem từng bước. Bạn cũng có thể vào từ mục <b>Hướng dẫn</b> ở menu trên cùng.
+@@5657eccbe1
+en: <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1B8AC4)">PrintShop Mini</b> and <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">PrintNow</b> are brands of <span style="white-space:nowrap">Good Learning Partner Co., Ltd.</span>
+zh: <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1B8AC4)">PrintShop Mini</b> · <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">PrintNow</b> 是 <span style="white-space:nowrap">(株)Good Learning Partner</span> 公司的品牌。
+vi: <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1B8AC4)">PrintShop Mini</b> · <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">PrintNow</b> là thương hiệu của công ty <span style="white-space:nowrap">Good Learning Partner</span>.
+@@1d79be91bd
+en: Print
+zh: 打印
+vi: In
+@@3eea460a33
+en: Print your own file on paper. Also covers print settings for PDF, Hangul (HWP), MS Office and Chrome.
+zh: 把自己的文件打印到纸上。也介绍 PDF、韩文（HWP）、MS Office、Chrome 的打印设置。
+vi: In tệp của bạn ra giấy. Có hướng dẫn cài đặt in cho PDF, Hangul (HWP), MS Office và Chrome.
+@@aa67a1644b
+en: See how →
+zh: 查看使用方法 →
+vi: Xem hướng dẫn →
+@@6acf7ad6e7
+en: Copy
+zh: 复印
+vi: Photo
+@@a69251bbbe
+en: Make one more of the same paper. Includes ID card, bankbook, passport and book copies.
+zh: 把带来的纸再复印出一样的一张。包括身份证、存折、护照、书本的复印方法。
+vi: Sao thêm một bản giống tờ giấy bạn mang đến. Có cách photo thẻ căn cước, sổ ngân hàng, hộ chiếu, sách.
+@@9061542696
+en: Scan
+zh: 扫描
+vi: Scan
+@@feb206c04b
+en: Turn paper into a file. Get your file from the scan folder on the store PC.
+zh: 把纸变成文件。请在店内电脑的扫描文件夹里取走文件。
+vi: Biến giấy thành tệp. Hãy lấy tệp trong thư mục scan trên máy tính của cửa hàng.
+@@4644531964
+en: Send a paper to the other person's fax number. Sending only.
+zh: 把纸上的内容发送到对方的传真号码。只能发送。
+vi: Gửi nội dung tờ giấy đến số fax của người nhận. Chỉ gửi được, không nhận được.
+@@311d7856d0
+en: Laminate
+zh: 塑封
+vi: Ép plastic
+@@ad28dbc196
+en: Put your print in a laminating pouch and laminate it. Check how many pouches you need and pay first.
+zh: 把打印好的纸放进塑封膜里塑封。请先确认塑封膜数量并付款。
+vi: Cho giấy in vào túi ép plastic để ép. Hãy kiểm tra số túi ép và thanh toán trước.
+@@eec6b2430a
+en: Bind
+zh: 装订
+vi: Đóng sách
+@@dabb31a8ee
+en: Bind your prints like a book with a heat-binding cover. Check how many covers you need and pay first. It needs 10+ minutes to cool.
+zh: 用热熔装订封面把打印好的纸装订成书。请先确认封面数量并付款。需要冷却 10 分钟以上。
+vi: Đóng giấy in thành cuốn như sách bằng bìa đóng nhiệt. Hãy kiểm tra số bìa và thanh toán trước. Cần để nguội từ 10 phút trở lên.
+@@4320ecf76f
+en: Print · Copy · Scan · Fax — what's the difference?
+zh: 打印 · 复印 · 扫描 · 传真，有什么不同？
+vi: In · Photo · Scan · Fax — khác nhau thế nào?
+@@ce8e84b69e
+en: These four are easy to mix up. Just think: <b>what goes in, and what comes out</b>. The colors below match the menu colors on the printer machine screen.
+zh: 这四种很容易混淆。只要想<b>放进去什么、出来什么</b>就容易分清。复合机屏幕上的菜单颜色和下面的颜色一样。
+vi: Bốn dịch vụ này dễ nhầm. Hãy nghĩ: <b>cho vào cái gì, nhận ra cái gì</b>. Màu bên dưới giống màu menu trên màn hình máy in đa năng.
+@@afb0dc3620
+en: <span class="term-chip">My file</span><span class="term-arrow">→</span><span class="term-chip">Paper</span>
+zh: <span class="term-chip">我的文件</span><span class="term-arrow">→</span><span class="term-chip">纸</span>
+vi: <span class="term-chip">Tệp của tôi</span><span class="term-arrow">→</span><span class="term-chip">Giấy</span>
+@@34f0eb2fb3
+en: Printing a <b>file</b> from a USB, email or phone onto paper
+zh: 把 U 盘、邮箱、手机里的<b>文件</b>打印到纸上
+vi: In <b>tệp</b> trong USB, email hoặc điện thoại ra giấy
+@@38989a3630
+en: Use it <b>when you have no paper original</b>. You start by opening the file on the store PC.<br/>e.g. · résumé file, homework PDF, photo file
+zh: <b>没有纸质原件时</b>使用。在店内电脑上打开文件开始。<br/>例 · 简历文件、作业 PDF、照片文件
+vi: Dùng <b>khi bạn không có bản giấy</b>. Bắt đầu bằng cách mở tệp trên máy tính của cửa hàng.<br/>Ví dụ · tệp sơ yếu lý lịch, bài tập PDF, tệp ảnh
+@@cbf3707a39
+en: <span class="term-chip">Paper</span><span class="term-arrow">→</span><span class="term-chip">Paper</span>
+zh: <span class="term-chip">纸</span><span class="term-arrow">→</span><span class="term-chip">纸</span>
+vi: <span class="term-chip">Giấy</span><span class="term-arrow">→</span><span class="term-chip">Giấy</span>
+@@ebf296de7e
+en: Making one more of the same <b>paper</b> you brought
+zh: 把带来的<b>纸</b>再做出一样的一张
+vi: Làm thêm một bản giống hệt tờ <b>giấy</b> bạn mang đến
+@@61f6c35cb8
+en: Use it <b>when you have the paper original</b>. Put the paper on the printer machine and start. You don't use the PC.<br/>e.g. · ID card, document copies, test papers
+zh: <b>有纸质原件时</b>使用。把纸放在复合机上开始，不用电脑。<br/>例 · 身份证、文件副本、试卷
+vi: Dùng <b>khi bạn có bản giấy</b>. Đặt giấy lên máy in đa năng rồi bắt đầu. Không dùng máy tính.<br/>Ví dụ · thẻ căn cước, bản sao giấy tờ, đề thi
+@@0136ca7810
+en: <span class="term-chip">Paper</span><span class="term-arrow">→</span><span class="term-chip">File</span>
+zh: <span class="term-chip">纸</span><span class="term-arrow">→</span><span class="term-chip">文件</span>
+vi: <span class="term-chip">Giấy</span><span class="term-arrow">→</span><span class="term-chip">Tệp</span>
+@@e23a567665
+en: Turning <b>paper</b> into a <b>file</b>, like taking a photo
+zh: 像拍照一样把<b>纸</b>变成<b>文件</b>
+vi: Biến <b>giấy</b> thành <b>tệp</b>, giống như chụp ảnh
+@@c12ab2e03c
+en: You keep your paper. Only the content becomes a file. Get it by email or USB.<br/>e.g. · keeping documents as files, or sending them by email
+zh: 纸会原样还给您，只有内容变成文件。用邮箱或 U 盘取走即可。<br/>例 · 把文件存成电子档，或用邮件发送时
+vi: Tờ giấy vẫn là của bạn, chỉ nội dung thành tệp. Nhận tệp qua email hoặc USB.<br/>Ví dụ · lưu giấy tờ thành tệp, hoặc gửi qua email
+@@e707d63cae
+en: <span class="term-chip">Paper</span><span class="term-arrow">→</span><span class="term-chip">Receiver</span>
+zh: <span class="term-chip">纸</span><span class="term-arrow">→</span><span class="term-chip">对方</span>
+vi: <span class="term-chip">Giấy</span><span class="term-arrow">→</span><span class="term-chip">Người nhận</span>
+@@403cb01ba2
+en: Sending what is on the <b>paper</b> to the other person's <b>fax number</b>
+zh: 把<b>纸</b>上的内容发送到对方的<b>传真号码</b>
+vi: Gửi nội dung trên <b>giấy</b> đến <b>số fax</b> của người nhận
+@@39a10dab8e
+en: You must know the receiver's fax number. Nothing new comes out for you.<br/>e.g. · sending documents to a government office, hospital or company
+zh: 必须知道对方的传真号码才能发送。您手里不会多出任何东西。<br/>例 · 向政府机关、医院、公司提交文件
+vi: Bạn phải biết số fax của nơi nhận. Bạn sẽ không nhận được bản nào.<br/>Ví dụ · nộp giấy tờ cho cơ quan nhà nước, bệnh viện, công ty
+@@5d3dad6e87
+en: Please remember
+zh: 请一定记住
+vi: Hãy nhớ kỹ
+@@cfd420b959
+en: Follow these three things and you can avoid most printing mistakes.
+zh: 只要做到这三点，就能避免大部分打印失误。
+vi: Chỉ cần làm đúng 3 điều này là tránh được hầu hết lỗi in.
+@@ed5187d4d6
+en: To print in color
+zh: 想打印彩色时
+vi: Muốn in màu
+@@0e7b1b1f26
+en: Always choose the <b>[컬러 출력] (Color)</b> printer, and check in preview that <b>every page is in color</b>.
+zh: 一定要选择<b>［컬러 출력］（彩色）</b>打印机，并在预览中确认<b>所有页面都是彩色</b>。
+vi: Nhớ chọn máy in <b>[컬러 출력] (màu)</b>, và kiểm tra ở bản xem trước rằng <b>tất cả các trang đều có màu</b>.
+@@1379acc48a
+en: Hangul (HWP) files
+zh: 韩文（HWP）文件
+vi: Tệp Hangul (HWP)
+@@b6451eb67b
+en: Please <b>save as PDF</b> before you come. The fonts and layout stay the same as the original.
+zh: 请<b>另存为 PDF</b> 后带来。字体和排版会和原件一样。
+vi: Hãy <b>lưu thành PDF</b> rồi mang đến. Phông chữ và bố cục sẽ giữ nguyên như bản gốc.
+@@737da982cb
+en: PDFs made in Canva or on iPad
+zh: Canva · iPad 做的 PDF
+vi: PDF làm bằng Canva · iPad
+@@e03f11ac66
+en: Open them in a <b>web browser (Chrome · Edge)</b> to print. This stops some parts from coming out gray.
+zh: 请用<b>浏览器（Chrome · Edge）</b>打开后打印。这样可以防止中间部分印成灰色。
+vi: Hãy mở bằng <b>trình duyệt (Chrome · Edge)</b> để in. Như vậy sẽ không bị in ra màu xám ở giữa.
+@@987e14b600
+en: <a class="faq-go" href="faq.html">See FAQ (in Korean) →</a>
+zh: <a class="faq-go" href="faq.html">查看常见问题（韩语）→</a>
+vi: <a class="faq-go" href="faq.html">Xem câu hỏi thường gặp (tiếng Hàn) →</a>
+@@e21ff7cf1c
+en: Have more questions?
+zh: 还有其他问题吗？
+vi: Bạn còn thắc mắc?
+@@ace26430f9
+en: We put common questions in one place. If you can't find your answer, please email us.
+zh: 我们把常见问题集中在一起。如果没有您要的答案，请发邮件咨询。
+vi: Chúng tôi gom các câu hỏi thường gặp vào một chỗ. Nếu không có câu trả lời, hãy gửi email cho chúng tôi.
+@@62bc150866
+en: PrintShop Mini
+zh: PrintShop Mini
+vi: PrintShop Mini
+@@08279ea9f2
+en: An unmanned self-service print shop<br/>open 24 hours, 365 days.
+zh: 24 小时 365 天营业的<br/>无人自助打印店。
+vi: Cửa hàng in tự phục vụ không người trực,<br/>mở cửa 24 giờ, 365 ngày.
+@@0af74d46ed
+en: <a href="guide-print.html">How to print</a>
+zh: <a href="guide-print.html">打印方法</a>
+vi: <a href="guide-print.html">Cách in</a>
+@@8664f30a98
+en: <a href="guide-copy.html">How to copy</a>
+zh: <a href="guide-copy.html">复印方法</a>
+vi: <a href="guide-copy.html">Cách photo</a>
+@@c501e3f577
+en: <a href="guide-scan.html">How to scan</a>
+zh: <a href="guide-scan.html">扫描方法</a>
+vi: <a href="guide-scan.html">Cách scan</a>
+@@7dc1b06173
+en: <a href="guide-fax.html">How to send a fax</a>
+zh: <a href="guide-fax.html">发传真方法</a>
+vi: <a href="guide-fax.html">Cách gửi fax</a>
+@@a33001cc7b
+en: <a href="guide-coat.html">How to laminate</a>
+zh: <a href="guide-coat.html">塑封方法</a>
+vi: <a href="guide-coat.html">Cách ép plastic</a>
+@@ef1b133ef0
+en: <a href="guide-bind.html">How to bind</a>
+zh: <a href="guide-bind.html">装订方法</a>
+vi: <a href="guide-bind.html">Cách đóng sách</a>
+@@ed8523f6aa
+en: Quick links
+zh: 快捷链接
+vi: Liên kết nhanh
+@@b3ff9534a1
+en: <a href="services.html">Services</a>
+zh: <a href="services.html">服务介绍</a>
+vi: <a href="services.html">Dịch vụ</a>
+@@b365991d07
+en: <a href="faq.html">FAQ</a>
+zh: <a href="faq.html">常见问题</a>
+vi: <a href="faq.html">Câu hỏi thường gặp</a>
+@@d6d20a394c
+en: <a href="branches.html">Find a Store</a>
+zh: <a href="branches.html">查找门店</a>
+vi: <a href="branches.html">Tìm cửa hàng</a>
+@@5ade7fd923
+en: <a href="about.html">About us</a>
+zh: <a href="about.html">品牌介绍</a>
+vi: <a href="about.html">Giới thiệu</a>
+@@c6722e45cb
+en: © 2025 PrintShop Mini. All rights reserved.
+zh: © 2025 PrintShop Mini. All rights reserved.
+vi: © 2025 PrintShop Mini. All rights reserved.
+@@43a7d82cbf
+en: Privacy Policy · Terms of Use
+zh: 隐私政策 · 使用条款
+vi: Chính sách bảo mật · Điều khoản sử dụng
+@@83973dda29
+en: PrintShop Mini printing guide — the printing steps and print settings for PDF, Hangul (HWP), MS Office, Chrome and ALSee.
+zh: PrintShop Mini 打印使用方法 — 介绍打印步骤，以及 PDF、韩文（HWP）、MS Office、Chrome、ALSee 的打印设置。
+vi: Hướng dẫn in của PrintShop Mini — các bước in và cài đặt in cho PDF, Hangul (HWP), MS Office, Chrome và ALSee.
+@@7231005cec
+en: How to Print - PrintShop Mini
+zh: 打印使用方法 - PrintShop Mini
+vi: Cách in - PrintShop Mini
+@@bc4572e806
+en: How to Print
+zh: 打印使用方法
+vi: Cách in
+@@a41717e590
+en: How to open your file on the store PC and print it on paper. Print settings for each program are also here.
+zh: 在店内电脑上打开您的文件并打印到纸上的方法。也介绍各个程序的打印设置。
+vi: Cách mở tệp của bạn trên máy tính cửa hàng và in ra giấy. Có cả cách cài đặt in cho từng chương trình.
+@@ac66b5ed65
+en: <a href="guide.html">All guides</a> <a href="guide-video.html">▶ Videos</a> <a class="on" href="guide-print.html">🖨️ Print</a> <a href="guide-copy.html">📋 Copy</a> <a href="guide-scan.html">📄 Scan</a>
+zh: <a href="guide.html">全部使用方法</a> <a href="guide-video.html">▶ 视频</a> <a class="on" href="guide-print.html">🖨️ 打印</a> <a href="guide-copy.html">📋 复印</a> <a href="guide-scan.html">📄 扫描</a>
+vi: <a href="guide.html">Tất cả hướng dẫn</a> <a href="guide-video.html">▶ Video</a> <a class="on" href="guide-print.html">🖨️ In</a> <a href="guide-copy.html">📋 Photo</a> <a href="guide-scan.html">📄 Scan</a>
+@@5d993ae141
+en: Meet the Mini Friends
+zh: 认识迷你朋友 Mini Friends
+vi: Làm quen với Mini Friends
+@@138b288b8c
+en: <span class="fr-more">See more friends →</span>
+zh: <span class="fr-more">查看更多朋友 →</span>
+vi: <span class="fr-more">Xem thêm các bạn →</span>
+@@7f48ea9f52
+en: Peng Print
+zh: 企鹅小印 (Peng Print)
+vi: Peng Print
+@@bec9e6cd80
+en: <b>Peng Print</b><i>Peng Print</i><span class="fr-pill">Printing</span><br/>Hello! I'm Peng Print, in charge of printing. Let me show you how the papers come out one by one!
+zh: <b>企鹅小印</b><i>Peng Print</i><span class="fr-pill">负责打印</span><br/>你好！我是负责打印的企鹅小印。现在就告诉你怎么让纸一张张打印出来吧！
+vi: <b>Peng Print</b><i>Peng Print</i><span class="fr-pill">Phụ trách in</span><br/>Xin chào! Mình là Peng Print, phụ trách việc in. Bây giờ mình sẽ chỉ bạn cách in ra từng tờ nhé!
+@@f21fec3fda
+en: We can't refund prints that came out wrong because of wrong print settings. <span>Before printing, always check <b>all pages in preview</b>. It prints exactly what you see on the screen.</span>
+zh: 因打印设置错误而印错的，很难退款。<span>打印前请一定用<b>预览检查所有页面</b>。屏幕上看到什么就会印出什么。</span>
+vi: In sai do cài đặt sai thì rất khó hoàn tiền. <span>Trước khi in, hãy luôn kiểm tra <b>tất cả các trang ở bản xem trước</b>. Màn hình hiện thế nào thì sẽ in ra đúng như vậy.</span>
+@@e04c44fc6a
+en: <button class="tab on" onclick="jump('store',this)">How to print</button> <button class="tab" onclick="jump('ptips',this)">Tips</button> <button class="tab" onclick="jump('acrobat',this)">PDF</button> <button class="tab" onclick="jump('hancom',this)">Hangul</button> <button class="tab" onclick="jump('office',this)">MS Office</button> <button class="tab" onclick="jump('browser',this)">Chrome · Edge</button> <button class="tab" onclick="jump('alsee',this)">ALSee</button> <button class="tab" onclick="jump('cert',this)">Certificates</button>
+zh: <button class="tab on" onclick="jump('store',this)">打印方法</button> <button class="tab" onclick="jump('ptips',this)">打印小窍门</button> <button class="tab" onclick="jump('acrobat',this)">PDF</button> <button class="tab" onclick="jump('hancom',this)">韩文</button> <button class="tab" onclick="jump('office',this)">MS Office</button> <button class="tab" onclick="jump('browser',this)">Chrome · Edge</button> <button class="tab" onclick="jump('alsee',this)">ALSee</button> <button class="tab" onclick="jump('cert',this)">证书</button>
+vi: <button class="tab on" onclick="jump('store',this)">Cách in</button> <button class="tab" onclick="jump('ptips',this)">Mẹo in</button> <button class="tab" onclick="jump('acrobat',this)">PDF</button> <button class="tab" onclick="jump('hancom',this)">Hangul</button> <button class="tab" onclick="jump('office',this)">MS Office</button> <button class="tab" onclick="jump('browser',this)">Chrome · Edge</button> <button class="tab" onclick="jump('alsee',this)">ALSee</button> <button class="tab" onclick="jump('cert',this)">Chứng chỉ</button>
+@@c4d337af93
+en: How to print <span class="pill">PRINT</span>
+zh: 打印方法 <span class="pill">PRINT</span>
+vi: Cách in <span class="pill">PRINT</span>
+@@aff696cb1e
+en: <b>Open your file on the store PC and print it on paper.</b> First open your file on the PC and send the print job. Then <b>go to the printer machine, find your document with your PIN, and pay. Then it prints.</b><br/>⚠️ <b>After you finish on the PC, go to the printer machine. Find your document with the PIN you typed on the PC, and pay. Only then does it print.</b> Nothing comes out until you pay <b>at the printer machine's card reader</b>.<br/><span style="font-weight:600">※ Even if you already paid a fee on the PC (e.g. for issuing a document), you must <b>pay again for printing at the printer machine's card reader</b>.</span>
+zh: <b>在店内电脑上打开您的文件，打印到纸上的服务。</b>先在电脑上打开文件并发送打印，然后<b>到复合机前，用个人识别码（PIN）找到文件并付款，就会打印出来。</b><br/>⚠️ <b>在电脑上发送打印后，到复合机前，用在电脑上输入的个人识别码查询并付款，最后才会打印出来。</b>在<b>复合机的刷卡机</b>付款之前，不会打印出来。<br/><span style="font-weight:600">※ 即使在电脑上已经付了证明文件发放费等，打印也要<b>在复合机刷卡机上另外付款</b>才会打印出来。</span>
+vi: <b>Đây là dịch vụ mở tệp của bạn trên máy tính cửa hàng và in ra giấy.</b> Mở tệp trên máy tính và gửi lệnh in. Sau đó <b>đến máy in đa năng, tìm tài liệu bằng mã PIN và thanh toán thì sẽ in ra.</b><br/>⚠️ <b>Sau khi gửi lệnh in trên máy tính, hãy đến máy in đa năng, tìm bằng mã PIN đã nhập trên máy tính và thanh toán. Lúc đó mới in ra.</b> Nếu chưa thanh toán <b>ở máy quẹt thẻ của máy in đa năng</b> thì sẽ không in ra.<br/><span style="font-weight:600">※ Dù đã trả phí trên máy tính (ví dụ phí cấp giấy tờ), việc in vẫn phải <b>thanh toán riêng ở máy quẹt thẻ của máy in đa năng</b> mới in ra.</span>
+@@05767b9f46
+en: <span class="gvid-play">▶</span>Watch the printing video first <small>No sound needed</small>
+zh: <span class="gvid-play">▶</span>先看打印方法视频 <small>没有声音也能看懂</small>
+vi: <span class="gvid-play">▶</span>Xem video cách in trước <small>Không cần bật tiếng</small>
+@@6611ecf89b
+en: Your browser can't play this video.
+zh: 您的浏览器无法播放视频。
+vi: Trình duyệt của bạn không phát được video.
+@@a92bb4567a
+en: 🔢 Printing order · same for all file types <span>Always in this order!</span>
+zh: 🔢 打印顺序 · 所有文件格式通用 <span>一定按这个顺序！</span>
+vi: 🔢 Thứ tự in · giống nhau cho mọi loại tệp <span>Nhất định theo thứ tự này!</span>
+@@20a9f38cbc
+en: <b>🖨️ Choose the printer first.</b><br/>Pick the <b>[흑백출력] (B&amp;W)</b> or <b>[컬러출력] (Color)</b> printer before anything else.
+zh: <b>🖨️ 先选择打印机。</b><br/>最先选好<b>［흑백출력］（黑白）</b>或<b>［컬러출력］（彩色）</b>打印机。
+vi: <b>🖨️ Chọn máy in trước.</b><br/>Đầu tiên hãy chọn máy in <b>[흑백출력] (đen trắng)</b> hoặc <b>[컬러출력] (màu)</b>.
+@@86fce6dade
+en: <b>⚙️ Set the print options.</b><br/>Paper size · one-sided/two-sided · copies · pages, etc.
+zh: <b>⚙️ 设置详细打印选项。</b><br/>纸张大小 · 单面/双面 · 份数 · 页数等。
+vi: <b>⚙️ Cài đặt các tùy chọn in.</b><br/>Khổ giấy · in 1 mặt/2 mặt · số bản · số trang, v.v.
+@@32a23b4c33
+en: <b>👀 Check the preview.</b><br/>Make sure nothing is missing, and that it's in color if you chose color.
+zh: <b>👀 检查预览。</b><br/>看内容是否完整，选彩色的话是否是彩色。
+vi: <b>👀 Kiểm tra bản xem trước.</b><br/>Xem nội dung có đủ không, nếu in màu thì có màu không.
+@@051321f27d
+en: <b>✅ Finally, press the [인쇄] (Print) button.</b><br/>Depending on the program, it's the <b>[인쇄] button</b>, a <b>printer icon</b>, or the <b>[확인] (OK) button</b>.
+zh: <b>✅ 最后按［인쇄］（打印）按钮。</b><br/>根据程序不同，是<b>［인쇄］按钮</b>、<b>打印机图标</b>或<b>［확인］（确认）按钮</b>。
+vi: <b>✅ Cuối cùng, bấm nút [인쇄] (In).</b><br/>Tùy chương trình, đó là <b>nút [인쇄]</b>, <b>biểu tượng máy in</b> hoặc <b>nút [확인] (Xác nhận)</b>.
+@@e26e03c180
+en: 🚫 Don't change the printer after setting the options!
+zh: 🚫 设置好选项后，不要再换打印机！
+vi: 🚫 Đã cài tùy chọn rồi thì đừng đổi máy in!
+@@6be8149021
+en: If you <b>change the printer after setting the options, you must set all the options again.</b> Changing the printer changes all the options.
+zh: 选好打印机、设置好选项后，<b>如果再换打印机，选项就要从头重新设置。</b>换打印机后，所有选项都会改变。
+vi: Nếu <b>đổi máy in sau khi đã cài tùy chọn, bạn phải cài lại tất cả từ đầu.</b> Đổi máy in thì mọi tùy chọn đều thay đổi.
+@@255f3e56d1
+en: ❌ <b>This is the most risky case</b><br/>You set the options without choosing a printer → later you <b>change from B&amp;W to Color</b> → the options changed but you don't check → the options are applied strangely and <b>the print comes out wrong.</b>
+zh: ❌ <b>这种情况最危险</b><br/>没选打印机就先设置选项 → 后来把打印机<b>从黑白改成彩色</b> → 选项变了却没检查就继续 → 选项被奇怪地应用，<b>打印出错。</b>
+vi: ❌ <b>Trường hợp nguy hiểm nhất</b><br/>Cài tùy chọn mà chưa chọn máy in → sau đó <b>đổi từ đen trắng sang màu</b> → tùy chọn đã thay đổi nhưng không kiểm tra → tùy chọn bị áp dụng sai và <b>in ra bị lỗi.</b>
+@@1d4f1d5027
+en: ✅ <b>Always: choose printer → set options → preview → print button.</b> If you changed the printer, check the options again <b>from the start</b>.
+zh: ✅ <b>请一直遵守：选打印机 → 设置选项 → 预览 → 打印按钮</b>的顺序。如果换了打印机，请<b>从头重新</b>检查选项。
+vi: ✅ <b>Luôn theo thứ tự: chọn máy in → cài tùy chọn → xem trước → nút in.</b> Nếu đã đổi máy in, hãy kiểm tra lại tùy chọn <b>từ đầu</b>.
+@@2880bba452
+en: Screen for opening a file on the PC and choosing B&W / Color / Certificate
+zh: 在电脑上打开文件并选择黑白/彩色/证书专用的画面
+vi: Màn hình mở tệp trên máy tính và chọn đen trắng / màu / chứng chỉ
+@@1079ec0cd1
+en: Open the file and choose a printer
+zh: 打开文件，选择打印机
+vi: Mở tệp và chọn máy in
+@@7d46ef6750
+en: Open the file on the PC → <b>[인쇄] (Print)</b> → choose a printer<br/>B&amp;W / Color / Certificate (PIN9999)
+zh: 在电脑上打开文件 → <b>［인쇄］（打印）</b> → 选择打印机<br/>黑白 / 彩色 / 证书专用（PIN9999）
+vi: Mở tệp trên máy tính → <b>[인쇄] (In)</b> → chọn máy in<br/>Đen trắng / Màu / Chứng chỉ (PIN9999)
+@@bc59c17747
+en: 💾 Files in email, USB or your phone must be <b>saved to the PC first</b>. Tap your file type below — <b>Step 1 (Open the file)</b> explains it.
+zh: 💾 邮箱、U 盘、手机里的文件，要<b>先保存到电脑</b>。点下面您的文件格式，最前面的<b>第 1 步（打开文件）</b>有详细说明。
+vi: 💾 Tệp trong email, USB hoặc điện thoại phải <b>lưu vào máy tính trước</b>. Bấm loại tệp của bạn bên dưới — <b>Bước 1 (Mở tệp)</b> có hướng dẫn chi tiết.
+@@f8fbbf85b8
+en: 📄 Each file type has a different way to set print options.
+zh: 📄 每种文件格式的打印选项设置方法都不一样。
+vi: 📄 Mỗi loại tệp có cách cài tùy chọn in khác nhau.
+@@48a9212f26
+en: Print settings — tap your file type
+zh: 打印设置方法 — 请点您的文件格式
+vi: Cách cài đặt in — hãy bấm loại tệp của bạn
+@@15aebbe777
+en: <button class="ftype-btn pdf" onclick="goType('acrobat')" type="button"><b>PDF file</b></button><button class="ftype-btn hwp" onclick="goType('hancom')" type="button"><b>Hangul file</b></button><button class="ftype-btn office" onclick="goType('office','we')" type="button"><b>MS Office</b><small>Word · Excel · PowerPoint</small></button><button class="ftype-btn img" onclick="goType('alsee')" type="button"><b>Image file</b><small>Photo JPG · PNG</small></button><button class="ftype-btn web" onclick="goType('browser')" type="button"><b>Browser printing</b><small>PDFs made in web design tools</small></button><button class="ftype-btn cert" onclick="goType('cert')" type="button"><b>Certificates</b><small>TOEIC · TOEIC Speaking</small></button>
+zh: <button class="ftype-btn pdf" onclick="goType('acrobat')" type="button"><b>PDF 文件</b></button><button class="ftype-btn hwp" onclick="goType('hancom')" type="button"><b>韩文文件</b></button><button class="ftype-btn office" onclick="goType('office','we')" type="button"><b>MS Office</b><small>Word · Excel · PowerPoint</small></button><button class="ftype-btn img" onclick="goType('alsee')" type="button"><b>图片文件</b><small>照片 JPG · PNG</small></button><button class="ftype-btn web" onclick="goType('browser')" type="button"><b>浏览器打印</b><small>网页设计工具做的 PDF</small></button><button class="ftype-btn cert" onclick="goType('cert')" type="button"><b>证书</b><small>TOEIC · TOEIC Speaking</small></button>
+vi: <button class="ftype-btn pdf" onclick="goType('acrobat')" type="button"><b>Tệp PDF</b></button><button class="ftype-btn hwp" onclick="goType('hancom')" type="button"><b>Tệp Hangul</b></button><button class="ftype-btn office" onclick="goType('office','we')" type="button"><b>MS Office</b><small>Word · Excel · PowerPoint</small></button><button class="ftype-btn img" onclick="goType('alsee')" type="button"><b>Tệp hình ảnh</b><small>Ảnh JPG · PNG</small></button><button class="ftype-btn web" onclick="goType('browser')" type="button"><b>In từ trình duyệt</b><small>PDF làm bằng công cụ thiết kế web</small></button><button class="ftype-btn cert" onclick="goType('cert')" type="button"><b>Chứng chỉ</b><small>TOEIC · TOEIC Speaking</small></button>
+@@cff46c4fe6
+en: PIN entry screen
+zh: 个人识别码（PIN）输入画面
+vi: Màn hình nhập mã PIN
+@@80caf4aa9e
+en: Type a 4-digit PIN
+zh: 输入 4 位个人识别码（PIN）
+vi: Nhập mã PIN 4 số
+@@440e7c5b54
+en: Type the last 4 digits of your phone number<br/>For the certificate printer, 9999 is entered automatically
+zh: 请输入手机号码后 4 位<br/>证书专用打印机会自动填入 9999
+vi: Hãy nhập 4 số cuối số điện thoại của bạn<br/>Máy in chứng chỉ sẽ tự điền 9999
+@@ac3ba8ac9f
+en: Choosing the Print menu on the printer machine's main screen
+zh: 在复合机主画面选择打印菜单
+vi: Chọn menu In trên màn hình chính của máy in đa năng
+@@a02cb82715
+en: Screen for choosing PC as the file location
+zh: 选择 PC 作为打印文件位置的画面
+vi: Màn hình chọn PC làm nơi chứa tệp cần in
+@@2c0284defe
+en: On the printer machine: Print menu → PC
+zh: 在复合机上：打印菜单 → PC
+vi: Trên máy in đa năng: menu In → PC
+@@f43ee4c322
+en: Go to the printer machine in the store → choose the [인쇄] (PRINT) menu → choose [PC]<br/>If the screen is off, touch it to turn it on
+zh: 到店内的复合机前 → 选择［인쇄］（PRINT 打印）菜单 → 选择［PC］<br/>如果屏幕是黑的，请点一下屏幕
+vi: Đến máy in đa năng trong cửa hàng → chọn menu [인쇄] (PRINT) → chọn [PC]<br/>Nếu màn hình tắt, hãy chạm vào màn hình để bật
+@@66183bc08a
+en: Screen for typing the 4-digit PIN and choosing your file from the print job list
+zh: 输入 4 位个人识别码后，在打印任务列表中选择文件的画面
+vi: Màn hình nhập mã PIN 4 số và chọn tệp trong danh sách lệnh in
+@@1613705999
+en: Type PIN and [확인] (OK) → choose from list → press [시작] (Start)
+zh: 输入个人识别码并按［확인］（确认）→ 选择列表 → 按［시작］（开始）
+vi: Nhập mã PIN và bấm [확인] (Xác nhận) → chọn trong danh sách → bấm [시작] (Bắt đầu)
+@@5df972a2fa
+en: Type the PIN you set on the PC and press [확인] (OK) → choose your file from the list → press [시작] (Start)
+zh: 输入在电脑上设定的个人识别码，按［확인］（确认）→ 在列表中选择文件 → 按［시작］（开始）
+vi: Nhập mã PIN đã đặt trên máy tính và bấm [확인] (Xác nhận) → chọn tệp trong danh sách → bấm [시작] (Bắt đầu)
+@@c26ecb9e79
+en: If the paper size says Letter, go back to the PC and change it to A4
+zh: 如果纸张大小显示 Letter，请回到电脑改成 A4
+vi: Nếu khổ giấy hiện Letter, hãy quay lại máy tính đổi thành A4
+@@374eb4f955
+en: Payment info screen (total price, number of pages)
+zh: 收费信息（总价、页数）确认画面
+vi: Màn hình thông tin thanh toán (tổng tiền, số trang)
+@@ea05213db4
+en: Check the price [과금정보]
+zh: 确认金额［과금정보］
+vi: Kiểm tra số tiền [과금정보]
+@@1a79ccc30d
+en: Check total price · pages · color or not<br/>If correct, press [확인] (OK)
+zh: 确认总价 · 页数 · 是否彩色<br/>正确的话请按［확인］（确认）
+vi: Kiểm tra tổng tiền · số trang · màu hay không<br/>Nếu đúng, bấm [확인] (Xác nhận)
+@@6f8f55009a
+en: <span class="bh">🧾 You must check the payment info screen [과금정보]!</span><b>Check everything on the payment info screen. If you pay without checking and something is wrong, there is no refund or compensation.</b><br/>Press <b>[확인] (OK) to pay only after checking everything and it is all correct</b>.
+zh: <span class="bh">🧾 必须确认收费信息窗口［과금정보］！</span><b>请确认收费信息窗口的全部内容。没确认就付款而出了问题的，不退款、不赔偿。</b><br/>请<b>全部确认、正确无误后再按［확인］（确认）</b>付款。
+vi: <span class="bh">🧾 Bắt buộc kiểm tra màn hình thông tin thanh toán [과금정보]!</span><b>Hãy kiểm tra hết nội dung trên màn hình thanh toán. Nếu thanh toán mà không kiểm tra và có vấn đề, chúng tôi không hoàn tiền hay bồi thường.</b><br/>Chỉ bấm <b>[확인] (Xác nhận) để thanh toán khi đã kiểm tra hết và thấy đúng</b>.
+@@1667291acc
+en: Paying with an IC card or Samsung Pay
+zh: 用 IC 卡或三星支付付款的样子
+vi: Thanh toán bằng thẻ IC hoặc Samsung Pay
+@@fbd279b98b
+en: Card payment
+zh: 刷卡付款
+vi: Thanh toán bằng thẻ
+@@9e3f61d80c
+en: When the card reader speaks, <b>insert your IC card (credit/debit)</b>,<br/>or hold Samsung Pay to the side with the Wi-Fi mark
+zh: 刷卡机发出语音后，<b>IC 卡（信用卡/借记卡）请插入</b>，<br/>三星支付请贴在有 Wi-Fi 标志的一面
+vi: Khi máy quẹt thẻ phát tiếng, <b>hãy cắm thẻ IC (tín dụng/ghi nợ)</b>,<br/>Samsung Pay thì áp vào mặt có biểu tượng Wi-Fi
+@@e36ca1793f
+en: Printing tips
+zh: 打印小窍门
+vi: Mẹo in
+@@f232b8d1b4
+en: Things people often miss when printing.
+zh: 打印时经常忽略的地方。
+vi: Những điều hay bị bỏ sót khi in.
+@@49302fca4b
+en: 🎨 Check color in the preview!
+zh: 🎨 彩色要用预览确认！
+vi: 🎨 Kiểm tra màu ở bản xem trước!
+@@2059f3e8c9
+en: If you chose the <b>Color printer [컬러출력]</b>, make sure the <b>preview is also in color</b>. If there are many pages, check <b>every page</b>.
+zh: 如果选了<b>彩色打印机［컬러출력］</b>，一定要看<b>预览也是彩色</b>。有很多页时，请检查<b>所有页面</b>。
+vi: Nếu đã chọn <b>máy in màu [컬러출력]</b>, hãy chắc chắn <b>bản xem trước cũng có màu</b>. Nếu có nhiều trang, hãy kiểm tra <b>tất cả các trang</b>.
+@@5298c195da
+en: 🖍️ Colors may look different
+zh: 🖍️ 颜色可能会不一样
+vi: 🖍️ Màu có thể khác
+@@e219f1c4f4
+en: <b>Printed colors can be different</b> from the PC screen. Even in the same file, <b>colors can differ from page to page</b>.
+zh: <b>打印出来的颜色可能和电脑屏幕不一样。</b>同一个文件，<b>每页的颜色</b>也可能不一样。
+vi: <b>Màu in ra có thể khác</b> màu trên màn hình máy tính. Cùng một tệp, <b>màu mỗi trang cũng có thể khác nhau</b>.
+@@4a4d84d0a3
+en: 🧾 Check the payment info screen before paying!
+zh: 🧾 付款前确认收费信息窗口！
+vi: 🧾 Kiểm tra màn hình thanh toán trước khi trả tiền!
+@@dd39f660b9
+en: Before you pay, the printer machine shows the <b>payment info screen [과금정보]</b>. If it is <b>different from what you expect, do NOT pay.</b> Check the print options on the PC again.
+zh: 在复合机付款前会出现<b>“收费信息窗口［과금정보］”</b>。如果和您知道的<b>不一样，绝对不要付款。</b>请回到电脑重新检查打印选项。
+vi: Trước khi trả tiền, máy in đa năng sẽ hiện <b>màn hình thông tin thanh toán [과금정보]</b>. Nếu <b>khác với điều bạn biết, tuyệt đối đừng thanh toán.</b> Hãy kiểm tra lại tùy chọn in trên máy tính.
+@@1b031abd09
+en: <a class="goto" href="#print-step2" onclick="goStep2();return false"><span>That's all for PDF print options! Press [인쇄] (Print) and the PIN box appears.</span><b>Continue from Step 2 (type a 4-digit PIN) of ‘How to print’ above ⬆</b></a>
+zh: <a class="goto" href="#print-step2" onclick="goStep2();return false"><span>PDF 打印选项到这里就完成了！按［인쇄］（打印）会出现个人识别码输入窗口。</span><b>请从上面“打印方法”第 2 步（输入 4 位个人识别码）继续 ⬆</b></a>
+vi: <a class="goto" href="#print-step2" onclick="goStep2();return false"><span>Tùy chọn in PDF đến đây là xong! Bấm [인쇄] (In) sẽ hiện ô nhập mã PIN.</span><b>Hãy làm tiếp từ Bước 2 (nhập mã PIN 4 số) ở phần ‘Cách in’ phía trên ⬆</b></a>
+@@38ebcda244
+en: PDF files open in Adobe Acrobat Reader <span class="pill">PDF</span>
+zh: PDF 文件用 Adobe Acrobat Reader 打开 <span class="pill">PDF</span>
+vi: Tệp PDF mở bằng Adobe Acrobat Reader <span class="pill">PDF</span>
+@@0cd6fc029e
+en: This is the PDF program on the store PC (<b>Adobe Acrobat Reader</b>). Open the PDF file and press the <b>printer icon</b> or <b>[파일] (File) → [인쇄] (Print)</b>, or press <b>Ctrl</b> and <b>P</b> together. The print screen below appears.
+zh: 这是店内电脑上安装的 PDF 专用程序（<b>Adobe Acrobat Reader</b>）。打开 PDF 文件，按<b>打印机图标</b>或<b>［파일］（文件）→［인쇄］（打印）</b>，或同时按键盘 <b>Ctrl</b> 和 <b>P</b>，就会出现下面的打印画面。
+vi: Đây là chương trình PDF trên máy tính cửa hàng (<b>Adobe Acrobat Reader</b>). Mở tệp PDF rồi bấm <b>biểu tượng máy in</b> hoặc <b>[파일] (Tệp) → [인쇄] (In)</b>, hoặc bấm cùng lúc <b>Ctrl</b> và <b>P</b>. Màn hình in bên dưới sẽ hiện ra.
+@@c03e0309d9
+en: <span class="open1-n">Step 1</span>Open the file to print on the PC
+zh: <span class="open1-n">第 1 步</span>在电脑上打开要打印的文件
+vi: <span class="open1-n">Bước 1</span>Mở tệp cần in trên máy tính
+@@737d806d78
+en: Double-clicking a PDF file on the desktop to open it
+zh: 用鼠标双击桌面上的 PDF 文件打开
+vi: Bấm đúp chuột vào tệp PDF trên màn hình nền để mở
+@@30cc97975b
+en: <b>Double-click</b> the file on the PC to open it.
+zh: 在电脑上<b>双击</b>要打印的文件打开。
+vi: <b>Bấm đúp</b> vào tệp trên máy tính để mở.
+@@64de8e221c
+en: Files in email or USB: <b>save them to the PC desktop first</b>.
+zh: 邮箱或 U 盘里的文件，请<b>先保存到电脑桌面</b>。
+vi: Tệp trong email hoặc USB: hãy <b>lưu ra màn hình nền máy tính trước</b>.
+@@35a186a638
+en: It doesn't have to be the desktop. Just save it on the PC and <b>remember where you saved it</b>. Go there and double-click the file to open it. The desktop is the easiest place to find.
+zh: 不一定要放桌面。保存到电脑上，<b>只要知道存在哪里（路径）</b>就行。到那个位置双击要打印的文件打开。最容易找到的地方是桌面。
+vi: Không nhất thiết phải là màn hình nền. Chỉ cần lưu vào máy tính và <b>nhớ đã lưu ở đâu</b>. Đến chỗ đó và bấm đúp vào tệp để mở. Màn hình nền là chỗ dễ tìm nhất.
+@@9ebfff9823
+en: 📱 <b>Is your file on your phone?</b> Tap the link below to see how to save it to the PC first.<br/><a href="faq.html#faq-22">How to save phone files to the PC (in Korean) →</a>
+zh: 📱 <b>文件在手机里？</b>请点下面的链接，查看先把手机文件保存到电脑的方法。<br/><a href="faq.html#faq-22">查看把手机文件保存到电脑的方法（韩语）→</a>
+vi: 📱 <b>Tệp ở trong điện thoại?</b> Bấm vào liên kết dưới đây để xem cách lưu tệp vào máy tính trước.<br/><a href="faq.html#faq-22">Xem cách lưu tệp điện thoại vào máy tính (tiếng Hàn) →</a>
+@@e204916d93
+en: <span>Next</span> · Set print options
+zh: <span>接下来</span> · 设置打印选项
+vi: <span>Tiếp theo</span> · Cài tùy chọn in
+@@d8676c1484
+en: PDF print screen, with numbered close-ups of printer choice, Fit, and the paper source checkbox to uncheck
+zh: PDF 打印画面。用编号放大显示选择打印机、适合、取消勾选纸张来源的位置
+vi: Màn hình in PDF, phóng to có đánh số phần chọn máy in, Vừa khít và ô chọn nguồn giấy cần bỏ chọn
+@@cce2d50024
+en: Check the spots marked ① ② ③ <span style="color:var(--text3);font-weight:600">(tap the picture to enlarge)</span>
+zh: 请确认标有 ① ② ③ 的地方 <span style="color:var(--text3);font-weight:600">（点图片可放大）</span>
+vi: Hãy kiểm tra các chỗ đánh số ① ② ③ <span style="color:var(--text3);font-weight:600">(bấm vào ảnh để phóng to)</span>
+@@c4a2b3247d
+en: In <b>[프린터] (Printer)</b>, choose the <b>[흑백출력] (B&amp;W)</b> or <b>[컬러출력] (Color)</b> printer.
+zh: 在<b>［프린터］（打印机）</b>中选择<b>［흑백출력］（黑白）</b>或<b>［컬러출력］（彩色）</b>打印机。
+vi: Ở <b>[프린터] (Máy in)</b>, chọn máy in <b>[흑백출력] (đen trắng)</b> hoặc <b>[컬러출력] (màu)</b>.
+@@6358b717e2
+en: In <b>Page Sizing [페이지 크기 조정 및 처리]</b>, <b>[맞추기] (Fit)</b> must be selected.
+zh: 在<b>页面大小调整［페이지 크기 조정 및 처리］</b>中，一定要选<b>［맞추기］（适合）</b>。
+vi: Ở <b>Điều chỉnh khổ trang [페이지 크기 조정 및 처리]</b>, phải chọn <b>[맞추기] (Vừa khít)</b>.
+@@6491212192
+en: ⚠️ <b>[PDF 페이지 크기에 따라 용지 소스 선택(Z)]</b> (choose paper source by PDF page size) <b>must NOT be checked!</b><br/>If it is checked, the printer machine shows <b>Custom</b> even if you chose A4 · B4 · A3. <b>Always uncheck it</b> before printing.
+zh: ⚠️ <b>［PDF 페이지 크기에 따라 용지 소스 선택(Z)］</b>（按 PDF 页面大小选择纸张来源）<b>一定不能勾选！</b><br/>如果勾选了，即使选 A4 · B4 · A3，在复合机查询时也会显示 <b>Custom</b>。<b>请一定取消勾选</b>后再打印。
+vi: ⚠️ <b>[PDF 페이지 크기에 따라 용지 소스 선택(Z)]</b> (chọn nguồn giấy theo khổ trang PDF) <b>không được đánh dấu!</b><br/>Nếu đánh dấu, dù chọn A4 · B4 · A3 thì máy in đa năng vẫn hiện <b>Custom</b>. <b>Hãy bỏ dấu chọn</b> rồi mới in.
+@@e59213a20e
+en: PDF print screen, with numbered close-ups of Page Setup, Print in grayscale, preview and the Print button
+zh: PDF 打印画面。用编号放大显示页面设置按钮、以灰度打印勾选、预览、打印按钮
+vi: Màn hình in PDF, phóng to có đánh số nút Thiết lập trang, In thang xám, xem trước và nút In
+@@fc9b449ada
+en: Check the spots marked ④ ⑤ ⑥ <span style="color:var(--text3);font-weight:600">(tap the picture to enlarge)</span>
+zh: 请确认标有 ④ ⑤ ⑥ 的地方 <span style="color:var(--text3);font-weight:600">（点图片可放大）</span>
+vi: Hãy kiểm tra các chỗ đánh số ④ ⑤ ⑥ <span style="color:var(--text3);font-weight:600">(bấm vào ảnh để phóng to)</span>
+@@7c4ae78644
+en: Press <b>[페이지 설정...] (Page Setup)</b> at the bottom and choose the <b>paper size</b> you want.
+zh: 按下方的<b>［페이지 설정...］（页面设置）</b>，选择想要的<b>纸张大小</b>。
+vi: Bấm <b>[페이지 설정...] (Thiết lập trang)</b> ở phía dưới và chọn <b>khổ giấy</b> bạn muốn.
+@@b3f67d7b05
+en: Check in the <b>preview</b> that all pages look right.<br/>If you chose <b>Color [컬러출력]</b>, the small preview on the right <b>must be in color</b>.
+zh: 在<b>预览</b>中确认所有页面都正常。<br/>如果选了<b>彩色［컬러출력］</b>，右边的小预览<b>一定要是彩色</b>。
+vi: Kiểm tra ở <b>bản xem trước</b> rằng tất cả các trang đều đúng.<br/>Nếu chọn <b>màu [컬러출력]</b>, bản xem trước nhỏ bên phải <b>phải có màu</b>.
+@@f5ddcf7b97
+en: If it's not in color
+zh: 如果不是彩色
+vi: Nếu không có màu
+@@46b097b932
+en: Check if <b>[회색 명암(흑백)으로 인쇄] (Print in grayscale)</b> at the top is checked. If it is, <b>uncheck it.</b>
+zh: 看上方的<b>［회색 명암(흑백)으로 인쇄］（以灰度打印）</b>是否被勾选，如果勾选了就<b>取消勾选。</b>
+vi: Xem ô <b>[회색 명암(흑백)으로 인쇄] (In thang xám)</b> ở phía trên có được đánh dấu không. Nếu có, hãy <b>bỏ dấu chọn.</b>
+@@6fe6d567d6
+en: If it's still black and white, <b>restart the PC</b> and open the file again.
+zh: 取消后还是黑白的话，请<b>重启电脑</b>，再重新打开文件。
+vi: Nếu vẫn đen trắng, hãy <b>khởi động lại máy tính</b> và mở lại tệp.
+@@3a20988b47
+en: If it's still black and white, open the file in <b>Edge or Chrome</b>, choose the <b>Color [컬러출력]</b> printer, check that the preview is in color, then print. <a class="plink" href="#browser" onclick="goType('browser');return false">See the Edge · Chrome way</a>
+zh: 还是黑白的话，请用 <b>Edge 或 Chrome</b> 打开文件，选择<b>彩色［컬러출력］</b>打印机，确认预览是彩色后再打印。<a class="plink" href="#browser" onclick="goType('browser');return false">查看 Edge · Chrome 方法</a>
+vi: Nếu vẫn đen trắng, hãy mở tệp bằng <b>Edge hoặc Chrome</b>, chọn máy in <b>màu [컬러출력]</b>, kiểm tra bản xem trước có màu rồi in. <a class="plink" href="#browser" onclick="goType('browser');return false">Xem cách làm với Edge · Chrome</a>
+@@edb6b3e104
+en: When all print options are set, press the <b>[인쇄] (Print)</b> button. The <b>PIN</b> box appears.
+zh: 所有打印选项设置好后，按<b>［인쇄］（打印）</b>按钮，会出现<b>个人识别码</b>输入窗口。
+vi: Khi đã cài xong mọi tùy chọn in, bấm nút <b>[인쇄] (In)</b>. Ô nhập <b>mã PIN</b> sẽ hiện ra.
+@@b0e20d4260
+en: <a class="goto" href="#print-step2" onclick="goStep2();return false"><span>That's all for Hangul print options! Press [인쇄] (Print) and the PIN box appears.</span><b>Continue from Step 2 (type a 4-digit PIN) of ‘How to print’ above ⬆</b></a>
+zh: <a class="goto" href="#print-step2" onclick="goStep2();return false"><span>韩文打印选项到这里就完成了！按［인쇄］（打印）会出现个人识别码输入窗口。</span><b>请从上面“打印方法”第 2 步（输入 4 位个人识别码）继续 ⬆</b></a>
+vi: <a class="goto" href="#print-step2" onclick="goStep2();return false"><span>Tùy chọn in Hangul đến đây là xong! Bấm [인쇄] (In) sẽ hiện ô nhập mã PIN.</span><b>Hãy làm tiếp từ Bước 2 (nhập mã PIN 4 số) ở phần ‘Cách in’ phía trên ⬆</b></a>
+@@696333dbe1
+en: Hangul files open in the Hancom Hangul Viewer <span class="pill">Hangul</span>
+zh: 韩文文件用韩文（Hancom）查看器打开 <span class="pill">韩文</span>
+vi: Tệp Hangul mở bằng Hancom Hangul Viewer <span class="pill">Hangul</span>
+@@ec0509301b
+en: The store PC has a <b>view-only viewer with no editing</b>. If it's different from where the file was made, the screen may look different.
+zh: 店内电脑安装的是<b>不能编辑、只能查看的查看器</b>。如果和制作文件的环境不同，画面可能会不一样。
+vi: Máy tính cửa hàng chỉ có <b>trình xem, không chỉnh sửa được</b>. Nếu khác với máy đã làm tệp, màn hình có thể trông khác.
+@@7e98d27871
+en: Double-clicking a Hangul file on the desktop to open it
+zh: 用鼠标双击桌面上的韩文文件打开
+vi: Bấm đúp chuột vào tệp Hangul trên màn hình nền để mở
+@@19b824ed23
+en: Hangul print screen, with numbers on printer choice, Settings button, copies, page range, print method and the Print button
+zh: 韩文打印画面。在选择打印机、设置按钮、打印份数、打印范围、打印方式、打印按钮上标了编号的图
+vi: Màn hình in Hangul, có đánh số ở chọn máy in, nút Cài đặt, số bản, phạm vi trang, cách in và nút In
+@@dc83359e6c
+en: Check spots 1 to 6 in order <span style="color:var(--text3);font-weight:600">(tap the picture to enlarge)</span>
+zh: 请按顺序确认 1~6 号位置 <span style="color:var(--text3);font-weight:600">（点图片可放大）</span>
+vi: Hãy kiểm tra lần lượt các chỗ số 1 đến 6 <span style="color:var(--text3);font-weight:600">(bấm vào ảnh để phóng to)</span>
+@@63e9ea55ee
+en: <b>Choose printer</b>: In the printer list, click the printer you want (<b>[흑백출력] (B&amp;W)</b> or <b>[컬러출력] (Color)</b>).
+zh: <b>选择打印机</b>：在打印机列表中点想要的打印机（<b>［흑백출력］（黑白）</b>或<b>［컬러출력］（彩色）</b>）。
+vi: <b>Chọn máy in</b>: Trong danh sách máy in, bấm máy in bạn muốn (<b>[흑백출력] (đen trắng)</b> hoặc <b>[컬러출력] (màu)</b>).
+@@c4ed16cf2c
+en: <b>Settings button</b>: Press <b>[설정] (Settings)</b> and the <b>[프린터 속성] (Printer Properties)</b> window opens. It has a <b>[기본] (Basic) tab</b> and a <b>[용지] (Paper) tab</b>. Check <b>2-1</b> and <b>2-2</b> below in order.
+zh: <b>设置按钮</b>：按<b>［설정］（设置）</b>会出现<b>［프린터 속성］（打印机属性）</b>窗口。这个窗口有<b>［기본］（基本）标签</b>和<b>［용지］（纸张）标签</b>。请依次确认下面的 <b>2-1</b>、<b>2-2</b>。
+vi: <b>Nút cài đặt</b>: Bấm <b>[설정] (Cài đặt)</b> sẽ hiện cửa sổ <b>[프린터 속성] (Thuộc tính máy in)</b>. Cửa sổ này có <b>thẻ [기본] (Cơ bản)</b> và <b>thẻ [용지] (Giấy)</b>. Hãy kiểm tra lần lượt <b>2-1</b>, <b>2-2</b> bên dưới.
+@@28f2281758
+en: <span class="sub2-n">2-1</span> [기본] (Basic) tab — orientation · one-sided/two-sided
+zh: <span class="sub2-n">2-1</span> ［기본］（基本）标签 — 打印方向 · 单面/双面
+vi: <span class="sub2-n">2-1</span> Thẻ [기본] (Cơ bản) — hướng in · 1 mặt/2 mặt
+@@2dc25698e5
+en: Basic tab of Printer Properties. A is paper orientation, B is two-sided printing
+zh: 打印机属性窗口的基本标签。A 是纸张方向，B 是双面打印选项
+vi: Thẻ Cơ bản của Thuộc tính máy in. A là hướng giấy, B là in 2 mặt
+@@550b5625e2
+en: <b>Orientation</b>: Choose <b>[세로] (Portrait)</b> or <b>[가로] (Landscape)</b>.
+zh: <b>纸张方向</b>：选择打印方向。<b>［세로］（纵向）</b>或<b>［가로］（横向）</b>
+vi: <b>Hướng giấy</b>: Chọn <b>[세로] (Dọc)</b> hoặc <b>[가로] (Ngang)</b>.
+@@ba9a7caad6
+en: <b>Two-sided</b>: For one side only choose <b>[사용안함] (Off)</b>. For two sides choose <b>[긴면 묶음] (long edge)</b> or <b>[짧은면 묶음] (short edge)</b>.
+zh: <b>双面打印</b>：只印一面选<b>［사용안함］（不使用）</b>，双面打印选<b>［긴면 묶음］（长边装订）</b>或<b>［짧은면 묶음］（短边装订）</b>。
+vi: <b>In 2 mặt</b>: In 1 mặt thì chọn <b>[사용안함] (Không dùng)</b>. In 2 mặt thì chọn <b>[긴면 묶음] (lật cạnh dài)</b> hoặc <b>[짧은면 묶음] (lật cạnh ngắn)</b>.
+@@e9acc68a39
+en: <span class="sub2-n">2-2</span> [용지] (Paper) tab — paper size
+zh: <span class="sub2-n">2-2</span> ［용지］（纸张）标签 — 纸张大小
+vi: <span class="sub2-n">2-2</span> Thẻ [용지] (Giấy) — khổ giấy
+@@cd15a29130
+en: Paper tab of Printer Properties. A is original size, B is output size
+zh: 打印机属性窗口的纸张标签。A 是原稿尺寸，B 是输出尺寸
+vi: Thẻ Giấy của Thuộc tính máy in. A là khổ bản gốc, B là khổ in ra
+@@8a3b53fc04
+en: <b>Original size [원본 문서 크기]</b>: Choose the paper size you want (<b>A4 · B4 · A3</b>).
+zh: <b>原稿尺寸［원본 문서 크기］</b>：选择要打印的纸张大小（<b>A4 · B4 · A3</b>）。
+vi: <b>Khổ bản gốc [원본 문서 크기]</b>: Chọn khổ giấy muốn in (<b>A4 · B4 · A3</b>).
+@@1c040cc254
+en: <b>Output size [출력 문서 크기]</b>: Choose <b>the same size as A</b> here too. Don't leave it as <b>[원본 문서 크기와 동일] (same as original)</b>.
+zh: <b>输出尺寸［출력 문서 크기］</b>：这里也选<b>和 A 一样的尺寸</b>。不要保留<b>［원본 문서 크기와 동일］（与原稿尺寸相同）</b>。
+vi: <b>Khổ in ra [출력 문서 크기]</b>: Ở đây cũng chọn <b>khổ giống hệt A</b>. Đừng để <b>[원본 문서 크기와 동일] (giống khổ bản gốc)</b>.
+@@acbff02b70
+en: 📌 <b>e.g.)</b> To print on A4, choose <b>A4</b> in both <b>A</b> and <b>B</b>.
+zh: 📌 <b>例）</b>想印 A4 的话，<b>A</b> 和 <b>B</b> 两处都选 <b>A4</b>。
+vi: 📌 <b>Ví dụ)</b> Muốn in A4 thì chọn <b>A4</b> ở cả hai chỗ <b>A</b> và <b>B</b>.
+@@abccac3f6e
+en: ⚠️ For some files, if you don't set <b>[출력 문서 크기] (Output size)</b>, the printer machine shows the <b>Hangul file's size</b>, such as <b>Letter</b> or <b>Custom</b>.
+zh: ⚠️ 有些文件如果不设置<b>［출력 문서 크기］（输出尺寸）</b>，在复合机查询时纸张大小会显示为 <b>Letter</b> 或 <b>Custom</b> 等<b>韩文文件的尺寸</b>。
+vi: ⚠️ Với một số tệp, nếu không cài <b>[출력 문서 크기] (Khổ in ra)</b>, máy in đa năng sẽ hiện <b>khổ của tệp Hangul</b> như <b>Letter</b> hoặc <b>Custom</b>.
+@@c48beb3dec
+en: Set the <b>number of copies</b>.
+zh: 设置<b>打印份数</b>。
+vi: Chọn <b>số bản in</b>.
+@@c401725a11
+en: Choose the <b>pages to print</b>. Choose <b>[전체] (All)</b>, or to print only some pages choose <b>[일부분] (Some)</b> and type the page numbers.
+zh: 选择<b>要打印的页面范围</b>。选<b>［전체］（全部）</b>，或者只印部分页面就选<b>［일부분］（部分）</b>并输入页码。
+vi: Chọn <b>phạm vi trang cần in</b>. Chọn <b>[전체] (Tất cả)</b>, hoặc muốn in một số trang thì chọn <b>[일부분] (Một phần)</b> và nhập số trang.
+@@b115d60e5f
+en: <b>Pages per side</b>: For one page per side choose <b>[기본 인쇄] (Normal)</b>. For several pages on one side choose <b>[모아 찍기] (N-up)</b> and type the number.
+zh: <b>每面打印页数</b>：一面一页选<b>［기본 인쇄］（基本打印）</b>。一面印多页选<b>［모아 찍기］（合并打印）</b>并输入页数。
+vi: <b>Số trang trên 1 mặt</b>: 1 trang/mặt thì chọn <b>[기본 인쇄] (In thường)</b>. Nhiều trang/mặt thì chọn <b>[모아 찍기] (In gộp)</b> và nhập số trang.
+@@be8ccc918d
+en: When all settings are done, press the <b>[인쇄] (Print)</b> button.
+zh: 所有设置完成后，按<b>［인쇄］（打印）</b>按钮继续。
+vi: Khi cài xong tất cả, bấm nút <b>[인쇄] (In)</b>.
+@@cf76c43eab
+en: ※ <b>This is a shared PC, so print settings change every time.</b> <b>Check and set all the options you want</b> before printing.
+zh: ※ <b>这是公用电脑，打印设置每次都会不一样。</b>请<b>确认并设置好所有想要的选项</b>后再打印。
+vi: ※ <b>Đây là máy tính dùng chung nên cài đặt in mỗi lần mỗi khác.</b> Hãy <b>kiểm tra và cài hết tùy chọn bạn muốn</b> rồi mới in.
+@@8a87f2ef38
+en: 💡 The fonts are different from the PC where the file was made, so fonts, line spacing or tables can shift, or <b>symbols (□) not in the original</b> can appear. In Hangul, use <b>[다른 이름으로 저장] (Save As) → PDF</b> and bring that, and it prints just like the original.
+zh: 💡 因为和制作文件的电脑字体不同，字体、行距、表格可能会乱，也可能出现<b>原稿没有的符号（□）</b>。在韩文里用<b>［다른 이름으로 저장］（另存为）→ PDF</b> 后带来，就能和原稿一样打印。
+vi: 💡 Do phông chữ khác với máy đã làm tệp, phông chữ · khoảng cách dòng · bảng có thể bị lệch, hoặc hiện <b>ký hiệu (□) không có trong bản gốc</b>. Trong Hangul, hãy dùng <b>[다른 이름으로 저장] (Lưu thành) → PDF</b> rồi mang đến, sẽ in đúng như bản gốc.
+@@6539d13016
+en: Excel · Word · PowerPoint files open in MS Office <span class="pill">MS Office</span>
+zh: Excel · Word · PowerPoint 文件用 MS Office 打开 <span class="pill">MS Office</span>
+vi: Tệp Excel · Word · PowerPoint mở bằng MS Office <span class="pill">MS Office</span>
+@@1154e17b4c
+en: Print settings for Word · Excel · PowerPoint files. Each program looks a bit different, but you always go to <b>[파일] (File) → [인쇄] (Print)</b>.
+zh: Word · Excel · PowerPoint 文件的打印设置方法。每个程序画面不同，但进入<b>［파일］（文件）→［인쇄］（打印）</b>的顺序是一样的。
+vi: Cách cài đặt in cho tệp Word · Excel · PowerPoint. Mỗi chương trình trông hơi khác, nhưng đều vào <b>[파일] (Tệp) → [인쇄] (In)</b>.
+@@c96fb73008
+en: Double-clicking a Word · Excel · PowerPoint file on the desktop to open it
+zh: 用鼠标双击桌面上的 Word · Excel · PowerPoint 文件打开
+vi: Bấm đúp chuột vào tệp Word · Excel · PowerPoint trên màn hình nền để mở
+@@30dfe423a6
+en: <button class="otab on" onclick="officeTab('we',this)">Word · Excel</button> <button class="otab" onclick="officeTab('ppt',this)">PowerPoint</button>
+zh: <button class="otab on" onclick="officeTab('we',this)">Word · Excel</button> <button class="otab" onclick="officeTab('ppt',this)">PowerPoint</button>
+vi: <button class="otab on" onclick="officeTab('we',this)">Word · Excel</button> <button class="otab" onclick="officeTab('ppt',this)">PowerPoint</button>
+@@07d320a32c
+en: <a class="goto" href="#print-step2" onclick="goStep2();return false"><span>That's all for Word · Excel print options! Press [인쇄] (Print) and the PIN box appears.</span><b>Continue from Step 2 (type a 4-digit PIN) of ‘How to print’ above ⬆</b></a>
+zh: <a class="goto" href="#print-step2" onclick="goStep2();return false"><span>Word · Excel 打印选项到这里就完成了！按［인쇄］（打印）会出现个人识别码输入窗口。</span><b>请从上面“打印方法”第 2 步（输入 4 位个人识别码）继续 ⬆</b></a>
+vi: <a class="goto" href="#print-step2" onclick="goStep2();return false"><span>Tùy chọn in Word · Excel đến đây là xong! Bấm [인쇄] (In) sẽ hiện ô nhập mã PIN.</span><b>Hãy làm tiếp từ Bước 2 (nhập mã PIN 4 số) ở phần ‘Cách in’ phía trên ⬆</b></a>
+@@00b63cd704
+en: Word print screen, with a close-up of the list that opens when you click Printer
+zh: Word 打印画面。放大显示点打印机后展开的列表
+vi: Màn hình in Word, phóng to danh sách hiện ra khi bấm Máy in
+@@e594b51665
+en: Word screen — check the numbered spots in order <span style="color:var(--text3);font-weight:600">(tap the picture to enlarge)</span>
+zh: Word 画面 — 请按顺序确认标号的位置 <span style="color:var(--text3);font-weight:600">（点图片可放大）</span>
+vi: Màn hình Word — kiểm tra lần lượt các chỗ đánh số <span style="color:var(--text3);font-weight:600">(bấm vào ảnh để phóng to)</span>
+@@85901a18ef
+en: Excel print screen, with a close-up of the list that opens when you click Printer
+zh: Excel 打印画面。放大显示点打印机后展开的列表
+vi: Màn hình in Excel, phóng to danh sách hiện ra khi bấm Máy in
+@@599d0e46b6
+en: Excel screen — same as Word <span style="color:var(--text3);font-weight:600">(tap the picture to enlarge)</span>
+zh: Excel 画面 — 和 Word 一样 <span style="color:var(--text3);font-weight:600">（点图片可放大）</span>
+vi: Màn hình Excel — giống hệt Word <span style="color:var(--text3);font-weight:600">(bấm vào ảnh để phóng to)</span>
+@@8c0c2be442
+en: Open the <b>Excel</b> or <b>Word</b> file and click <b>[인쇄] (Print)</b> in the left menu.<br/>The print options screen is <b>the same in Excel and Word.</b>
+zh: 打开 <b>Excel</b> 或 <b>Word</b> 文件，点左侧菜单的<b>［인쇄］（打印）</b>。<br/>打印选项画面<b>Excel 和 Word 一样。</b>
+vi: Mở tệp <b>Excel</b> hoặc <b>Word</b> rồi bấm <b>[인쇄] (In)</b> ở menu bên trái.<br/>Màn hình tùy chọn in <b>của Excel và Word giống nhau.</b>
+@@12f178ebe2
+en: Click the <b>▼</b> at the right end of the <b>[프린터] (Printer)</b> box to open the list, then choose <b>[흑백출력] (B&amp;W)</b> or <b>[컬러출력] (Color)</b>. (Don't click the word 'Printer' itself!)
+zh: 点<b>［프린터］（打印机）</b>栏右端的 <b>▼</b> 展开列表，然后选择<b>［흑백출력］（黑白）</b>或<b>［컬러출력］（彩色）</b>。（不是点“打印机”这几个字！）
+vi: Bấm dấu <b>▼</b> ở cuối bên phải ô <b>[프린터] (Máy in)</b> để mở danh sách, rồi chọn <b>[흑백출력] (đen trắng)</b> hoặc <b>[컬러출력] (màu)</b>. (Không bấm vào chữ 'Máy in'!)
+@@00e994532b
+en: ⚠️ If you chose the <b>Color [컬러출력]</b> printer, check that the <b>preview is also in color</b>. Scroll through the preview and make sure <b>every page you print is in color</b>.
+zh: ⚠️ 如果选了<b>彩色［컬러출력］</b>打印机，请确认<b>预览也是彩色</b>。在预览中翻页，一定要确认<b>要打印的所有页面都是彩色</b>。
+vi: ⚠️ Nếu đã chọn máy in <b>màu [컬러출력]</b>, hãy kiểm tra <b>bản xem trước cũng có màu</b>. Lật qua bản xem trước để chắc chắn <b>mọi trang cần in đều có màu</b>.
+@@4abc52f89a
+en: Choose the <b>paper size</b>. Then check in the <b>preview</b> that everything you want is there.
+zh: 选择<b>纸张大小</b>。选好后用<b>预览</b>确认想要的内容都出来了。
+vi: Chọn <b>khổ giấy</b>. Sau đó kiểm tra ở <b>bản xem trước</b> rằng nội dung đã đầy đủ.
+@@34307a93c8
+en: ⚠️ Make sure the <b>paper size</b> is not <b>Letter</b>, but <b>the size you want to print (A4 · B4 · A3)</b>.
+zh: ⚠️ 一定要确认<b>纸张大小</b>不是 <b>Letter</b>，而是<b>您要打印的尺寸（A4 · B4 · A3）</b>。
+vi: ⚠️ Hãy chắc chắn <b>khổ giấy</b> không phải <b>Letter</b>, mà là <b>khổ bạn muốn in (A4 · B4 · A3)</b>.
+@@0982735678
+en: Choose print options like <b>one-sided / two-sided</b>. Then check in the <b>preview</b> that it looks the way you want.
+zh: 选择<b>单面 / 双面</b>等打印选项。选好后用<b>预览</b>确认是否符合要求。
+vi: Chọn các tùy chọn như <b>in 1 mặt / 2 mặt</b>. Sau đó kiểm tra ở <b>bản xem trước</b> xem có đúng ý không.
+@@d0e01742ed
+en: Click the <b>[인쇄] (Print) printer-icon</b> button at the top. When the <b>PIN</b> box appears, type <b>any 4 digits</b>. We suggest <b>the last 4 digits of your phone number</b>.<br/>After this, <b>the steps at the printer machine are the same.</b>
+zh: 点上方的<b>［인쇄］（打印）打印机图标</b>按钮。出现<b>个人识别码</b>输入窗口后，输入<b>任意 4 位数字</b>。推荐用<b>自己手机号码后 4 位</b>。<br/>到这里后，<b>在复合机上的步骤都一样。</b>
+vi: Bấm nút <b>[인쇄] (In) hình máy in</b> ở phía trên. Khi ô nhập <b>mã PIN</b> hiện ra, hãy nhập <b>4 số bất kỳ</b>. Nên dùng <b>4 số cuối số điện thoại của bạn</b>.<br/>Sau bước này, <b>các bước ở máy in đa năng đều giống nhau.</b>
+@@3e0b1728c3
+en: <a class="goto" href="#print-step2" onclick="goStep2();return false"><span>That's all for PowerPoint print options! Press [인쇄] (Print) and the PIN box appears.</span><b>Continue from Step 2 (type a 4-digit PIN) of ‘How to print’ above ⬆</b></a>
+zh: <a class="goto" href="#print-step2" onclick="goStep2();return false"><span>PowerPoint 打印选项到这里就完成了！按［인쇄］（打印）会出现个人识别码输入窗口。</span><b>请从上面“打印方法”第 2 步（输入 4 位个人识别码）继续 ⬆</b></a>
+vi: <a class="goto" href="#print-step2" onclick="goStep2();return false"><span>Tùy chọn in PowerPoint đến đây là xong! Bấm [인쇄] (In) sẽ hiện ô nhập mã PIN.</span><b>Hãy làm tiếp từ Bước 2 (nhập mã PIN 4 số) ở phần ‘Cách in’ phía trên ⬆</b></a>
+@@8ca152b1ce
+en: PowerPoint print screen, with numbers on copies, printer, slides, one-sided, color, printer properties and the Print button
+zh: PowerPoint 打印画面。在份数、打印机、幻灯片、单面、颜色、打印机属性、打印按钮上标了编号的图
+vi: Màn hình in PowerPoint, có đánh số ở số bản, máy in, trang chiếu, 1 mặt, màu, thuộc tính máy in và nút In
+@@a489d7ee92
+en: Check spots 1 to 8 in order <span style="color:var(--text3);font-weight:600">(tap the picture to enlarge)</span>
+zh: 请按顺序确认 1~8 号位置 <span style="color:var(--text3);font-weight:600">（点图片可放大）</span>
+vi: Hãy kiểm tra lần lượt các chỗ số 1 đến 8 <span style="color:var(--text3);font-weight:600">(bấm vào ảnh để phóng to)</span>
+@@473ed56473
+en: Set the <b>number of copies</b> [복사본].
+zh: 设置<b>打印份数</b>［복사본］。
+vi: Chọn <b>số bản in</b> [복사본].
+@@cf8769aa60
+en: <b>Printer</b>: Click the red <b>▼</b>, then click <b>[더보기] (More)</b>. In the printer list, choose one of <b>[흑백출력] (B&amp;W) · [컬러출력] (Color) · [증명서전용] (Certificate)</b>.
+zh: <b>打印机</b>：点红色 <b>▼</b> 按钮后，点<b>［더보기］（更多）</b>。在打印机列表中从<b>［흑백출력］（黑白）·［컬러출력］（彩色）·［증명서전용］（证书专用）</b>中选一个。
+vi: <b>Máy in</b>: Bấm nút <b>▼</b> màu đỏ, rồi bấm <b>[더보기] (Xem thêm)</b>. Trong danh sách máy in, chọn một trong <b>[흑백출력] (đen trắng) · [컬러출력] (màu) · [증명서전용] (chứng chỉ)</b>.
+@@c97c1e332e
+en: Clicking More in the printer list and choosing B&W, Color or Certificate
+zh: 在打印机列表中点更多，从黑白、彩色、证书专用中选择的图
+vi: Bấm Xem thêm trong danh sách máy in và chọn đen trắng, màu hoặc chứng chỉ
+@@f773213f5d
+en: <b>Slides to print</b>: Click <b>▼</b> and choose which slides to print.
+zh: <b>要打印的幻灯片</b>：点 <b>▼</b> 按钮，选择要打印的幻灯片。
+vi: <b>Trang chiếu cần in</b>: Bấm <b>▼</b> và chọn các trang chiếu cần in.
+@@d439632dd7
+en: Choosing the slides to print
+zh: 选择要打印的幻灯片的图
+vi: Chọn các trang chiếu cần in
+@@5ee17e1d90
+en: <b>Slides per page</b>: Click <b>▼</b> and choose. Then be sure to check the <b>preview</b>.
+zh: <b>每面打印的幻灯片数</b>：点 <b>▼</b> 按钮选择。选好后一定要用<b>预览</b>确认。
+vi: <b>Số trang chiếu trên 1 mặt</b>: Bấm <b>▼</b> và chọn. Sau đó nhớ kiểm tra <b>bản xem trước</b>.
+@@49ec76b050
+en: Choosing how many slides per page
+zh: 选择每面打印幻灯片数的图
+vi: Chọn số trang chiếu trên 1 mặt
+@@27d4ab7543
+en: <b>One-sided / Two-sided</b>: Click <b>▼</b> and choose. For two-sided, check the direction (<b>long edge · short edge</b>) before choosing.
+zh: <b>单面 / 双面</b>：点 <b>▼</b> 按钮选择。双面请先确认<b>长边 · 短边</b>的打印方向再选择。
+vi: <b>1 mặt / 2 mặt</b>: Bấm <b>▼</b> và chọn. In 2 mặt thì kiểm tra hướng lật (<b>cạnh dài · cạnh ngắn</b>) rồi mới chọn.
+@@ebbcc68336
+en: Choosing one-sided or two-sided printing
+zh: 选择单面打印或双面打印的图
+vi: Chọn in 1 mặt hoặc in 2 mặt
+@@b6133d4bb7
+en: ⚠️ <b>Color</b>: If you chose the <b>[컬러출력] (Color) · [증명서전용] (Certificate)</b> printer, be sure to set this box to <b>[컬러] (Color)</b>.<br/>If it says <b>[회색조] (Grayscale)</b>, it <b>prints in black and white</b> even with the Color printer, but <b>you pay the color price</b>. Set it to <b>[컬러] (Color)</b> and check that <b>the preview is in color</b>.
+zh: ⚠️ <b>颜色</b>：如果选了<b>［컬러출력］（彩色）·［증명서전용］（证书专用）</b>打印机，这一栏一定要选<b>［컬러］（彩色）</b>。<br/>如果是<b>［회색조］（灰度）</b>，即使选了彩色打印机也会<b>印成黑白</b>，但<b>按彩色价格</b>付款。请设成<b>［컬러］（彩色）</b>，并确认<b>预览是彩色</b>。
+vi: ⚠️ <b>Màu</b>: Nếu đã chọn máy in <b>[컬러출력] (màu) · [증명서전용] (chứng chỉ)</b>, nhớ chọn ô này là <b>[컬러] (Màu)</b>.<br/>Nếu để <b>[회색조] (Thang xám)</b>, dù chọn máy in màu vẫn sẽ <b>in ra đen trắng</b> nhưng <b>vẫn trả tiền giá màu</b>. Hãy chọn <b>[컬러] (Màu)</b> và kiểm tra <b>bản xem trước có màu</b>.
+@@91bcd8768f
+en: Choosing Color from Color, Grayscale and Black and White
+zh: 从彩色、灰度、黑白中选择彩色的图
+vi: Chọn Màu trong Màu, Thang xám và Đen trắng
+@@81c3977d85
+en: <b>To change the paper size</b>: PowerPoint <b>has no paper size box</b> in its settings. Instead, click <b>[프린터 속성] (Printer Properties)</b>. In the window, go to the <b>[용지] (Paper)</b> tab and set <b>[원본 문서 크기] (Original size)</b> and <b>[출력 문서 크기] (Output size)</b> <b>to the same size</b>.
+zh: <b>要改纸张大小时</b>：PowerPoint 的设置栏里<b>没有选纸张大小的地方。</b>请点<b>［프린터 속성］（打印机属性）</b>。出现窗口后，在<b>［용지］（纸张）</b>标签中把<b>［원본 문서 크기］（原稿尺寸）</b>和<b>［출력 문서 크기］（输出尺寸）</b><b>两处设成一样</b>。
+vi: <b>Khi muốn đổi khổ giấy</b>: PowerPoint <b>không có ô chọn khổ giấy</b> trong phần cài đặt. Thay vào đó, bấm <b>[프린터 속성] (Thuộc tính máy in)</b>. Khi cửa sổ hiện ra, vào thẻ <b>[용지] (Giấy)</b> và chọn <b>[원본 문서 크기] (Khổ bản gốc)</b> và <b>[출력 문서 크기] (Khổ in ra)</b> <b>giống nhau ở cả hai chỗ</b>.
+@@acb9ea5d36
+en: 📌 <b>e.g.)</b> To print on A4, set both <b>[원본 문서 크기]</b> and <b>[출력 문서 크기]</b> <b>to A4</b>. For A3, set both to A3.
+zh: 📌 <b>例）</b>想印 A4 的话，<b>［원본 문서 크기］</b>和<b>［출력 문서 크기］</b><b>都选 A4</b>。想印 A3 的话，两处都选 A3。
+vi: 📌 <b>Ví dụ)</b> Muốn in A4 thì chọn cả <b>[원본 문서 크기]</b> và <b>[출력 문서 크기]</b> <b>là A4</b>. Muốn in A3 thì cả hai chọn A3.
+@@dbac9a1c99
+en: ⚠️ If you change only one, the printer machine may show the paper size as <b>Letter</b> or <b>Custom</b>.
+zh: ⚠️ 只改一处的话，在复合机查询时纸张大小可能显示为 <b>Letter</b> 或 <b>Custom</b>。
+vi: ⚠️ Nếu chỉ đổi một chỗ, máy in đa năng có thể hiện khổ giấy là <b>Letter</b> hoặc <b>Custom</b>.
+@@96717b3418
+en: 💡 <b>Word · Excel · Hangul</b> let you choose the paper size right in the settings, but <b>only PowerPoint</b> uses Printer Properties.
+zh: 💡 <b>Word · Excel · 韩文</b>可以在设置画面直接选纸张大小，<b>只有 PowerPoint</b> 要在打印机属性里设置。
+vi: 💡 <b>Word · Excel · Hangul</b> chọn khổ giấy ngay trong màn hình cài đặt, nhưng <b>chỉ PowerPoint</b> phải chọn trong Thuộc tính máy in.
+@@8c546d49be
+en: When you've chosen all options, press the <b>[인쇄] (Print)</b> button.
+zh: 选好所有选项后，按<b>［인쇄］（打印）</b>按钮继续。
+vi: Khi đã chọn xong mọi tùy chọn, bấm nút <b>[인쇄] (In)</b>.
+@@d7b5ef5c6b
+en: ⚠️ If you <b>change ② the printer</b> after setting everything, the options may change. Then <b>check all options again from the start</b>.
+zh: ⚠️ 全部设置完后，如果<b>改了 ② 打印机</b>，选项可能会变。这时请<b>从头重新检查所有选项</b>。
+vi: ⚠️ Sau khi cài xong, nếu <b>đổi ② máy in</b> thì tùy chọn có thể thay đổi. Khi đó hãy <b>kiểm tra lại mọi tùy chọn từ đầu</b>.
+@@8fd3d23ae2
+en: <a class="goto" href="#mfp"><span>That's all you do on the PC!</span><b>Continue with ‘Printing at the printer machine’ below ⬇</b></a>
+zh: <a class="goto" href="#mfp"><span>电脑上的步骤到这里就完成了！</span><b>请接着看下面的“在复合机上打印” ⬇</b></a>
+vi: <a class="goto" href="#mfp"><span>Phần làm trên máy tính đến đây là xong!</span><b>Hãy làm tiếp phần ‘In ở máy in đa năng’ bên dưới ⬇</b></a>
+@@06b97beb94
+en: When you open the file in Chrome · Edge <span class="pill">Canva · web PDF</span>
+zh: 用 Chrome · Edge 浏览器打开文件时 <span class="pill">Canva · 网页 PDF</span>
+vi: Khi mở tệp bằng trình duyệt Chrome · Edge <span class="pill">Canva · PDF web</span>
+@@441170e443
+en: For PDFs made in Canva · Miricanvas · web design programs · iPad note apps, <span class="hl-t">open them in a browser, check in the preview that all colors show, and then print.</span>
+zh: 用 Canva · Miricanvas · 网页设计程序 · iPad 笔记应用做的 PDF，<span class="hl-t">请用浏览器打开，在预览中确认颜色都正常显示后再打印。</span>
+vi: PDF làm bằng Canva · Miricanvas · chương trình thiết kế web · ứng dụng ghi chú iPad thì <span class="hl-t">hãy mở bằng trình duyệt, kiểm tra ở bản xem trước rằng màu hiện đầy đủ rồi mới in.</span>
+@@30fdef1efd
+en: <span class="open1-n">Step 1</span>Open the file in Edge or Chrome
+zh: <span class="open1-n">第 1 步</span>用 Edge 或 Chrome 打开要打印的文件
+vi: <span class="open1-n">Bước 1</span>Mở tệp cần in bằng Edge hoặc Chrome
+@@3ee14aa519
+en: Dragging a PDF file from the desktop onto an Edge or Chrome window
+zh: 把桌面上的 PDF 文件拖到 Edge 或 Chrome 窗口上的样子
+vi: Kéo tệp PDF từ màn hình nền thả vào cửa sổ Edge hoặc Chrome
+@@c41e357c8d
+en: PDF files are set to <b>open in Acrobat when you double-click</b>. To open them in a browser (Edge · Chrome), do <b>one of the two</b> below.
+zh: PDF 文件设定为<b>双击时用 Acrobat 打开</b>。要用浏览器（Edge · Chrome）打开，请用下面<b>两种方法之一</b>。
+vi: Tệp PDF được cài để <b>mở bằng Acrobat khi bấm đúp</b>. Muốn mở bằng trình duyệt (Edge · Chrome), hãy làm <b>một trong hai cách</b> dưới đây.
+@@da36320220
+en: ① First <b>open Edge or Chrome</b>, then <b>drag the file onto that window.</b>
+zh: ① 先<b>打开 Edge 或 Chrome</b>，再把文件<b>拖到那个窗口上。</b>
+vi: ① Trước tiên <b>mở Edge hoặc Chrome</b>, rồi <b>kéo tệp thả vào cửa sổ đó.</b>
+@@401a2da604
+en: ② <b>Right-click</b> the file and choose <b>[연결 프로그램] (Open with)</b> → <b>Edge or Chrome</b>.
+zh: ② 用<b>鼠标右键</b>点文件，在<b>［연결 프로그램］（打开方式）</b>中选择 <b>Edge 或 Chrome</b>。
+vi: ② <b>Bấm chuột phải</b> vào tệp, chọn <b>[연결 프로그램] (Mở bằng)</b> → <b>Edge hoặc Chrome</b>.
+@@983eaffdd1
+en: Files in email or USB: <b>save them to the PC desktop first</b>. You just need to know where you saved it. The desktop is the easiest place to find.
+zh: 邮箱或 U 盘里的文件，请<b>先保存到电脑桌面</b>。只要知道保存的位置（路径）就行。最容易找到的地方是桌面。
+vi: Tệp trong email hoặc USB: hãy <b>lưu ra màn hình nền máy tính trước</b>. Chỉ cần nhớ đã lưu ở đâu. Màn hình nền là chỗ dễ tìm nhất.
+@@c725cc1b25
+en: 🔎 First check which browser opened your file <span>Edge and Chrome have different print screens</span>
+zh: 🔎 先确认文件是用哪个浏览器打开的 <span>Edge 和 Chrome 的打印画面不一样</span>
+vi: 🔎 Trước tiên xem tệp đang mở bằng trình duyệt nào <span>Edge và Chrome có màn hình in khác nhau</span>
+@@c162ec7f8a
+en: If your file is open in <b>Edge</b>, follow the <b>Edge steps</b> below. If it's open in <b>Chrome</b>, follow the <b>Chrome steps</b> (Steps 1–5). After you <b>type the PIN and check the print queue window (Step 5)</b>, scroll down to <b>Printing at the printer machine</b>. <b>It's the same for Edge · Chrome · ALSee.</b>
+zh: 如果文件是用 <b>Edge</b> 打开的，请按下面的 <b>Edge 方法</b>；如果是用 <b>Chrome</b> 打开的，请按下面的 <b>Chrome 方法</b>（第 1~5 步）。<b>输入个人识别码并确认打印任务窗口（第 5 步）</b>后，请往下看<b>在复合机上打印</b>。<b>Edge · Chrome · ALSee 都一样。</b>
+vi: Nếu tệp đang mở bằng <b>Edge</b>, làm theo <b>cách của Edge</b> bên dưới. Nếu mở bằng <b>Chrome</b>, làm theo <b>cách của Chrome</b> (Bước 1–5). Sau khi <b>nhập mã PIN và kiểm tra cửa sổ lệnh in (Bước 5)</b>, hãy kéo xuống phần <b>In ở máy in đa năng</b>. <b>Edge · Chrome · ALSee đều giống nhau.</b>
+@@2491a841fe
+en: <span class="bsub-ico">e</span><span class="bsub-t">Printing in Edge</span><small>Steps 1–5</small>
+zh: <span class="bsub-ico">e</span><span class="bsub-t">在 Edge 中打印</span><small>第 1~5 步</small>
+vi: <span class="bsub-ico">e</span><span class="bsub-t">In bằng Edge</span><small>Bước 1–5</small>
+@@e19d215314
+en: Press [인쇄] (Print)
+zh: 按［인쇄］（打印）
+vi: Bấm [인쇄] (In)
+@@7ea85997db
+en: With the file open in the browser, press <b>[인쇄] (Print)</b> or the <b>printer icon</b>.
+zh: 在浏览器中打开要打印的文件后，按<b>［인쇄］（打印）</b>或<b>打印机图标</b>。
+vi: Khi tệp cần in đang mở trên trình duyệt, bấm <b>[인쇄] (In)</b> hoặc <b>biểu tượng máy in</b>.
+@@ba72df3bda
+en: Choosing B&W (BlackOnly) from the printer list in Edge
+zh: 在 Edge 打印画面的打印机列表中选择黑白（BlackOnly）
+vi: Chọn đen trắng (BlackOnly) trong danh sách máy in của Edge
+@@bcc1aa539e
+en: Choose the B&W printer
+zh: 选择黑白打印机
+vi: Chọn máy in đen trắng
+@@e33cd365a3
+en: Choosing Color (ColorOnly) from the printer list in Edge
+zh: 在 Edge 打印画面的打印机列表中选择彩色（ColorOnly）
+vi: Chọn màu (ColorOnly) trong danh sách máy in của Edge
+@@2fd9bfac13
+en: Choose the Color printer
+zh: 选择彩色打印机
+vi: Chọn máy in màu
+@@11321cc2ee
+en: Edge print screen, with a magnified close-up of the Color printer and the Color box
+zh: Edge 打印画面。像放大镜一样放大显示打印机的彩色和颜色栏
+vi: Màn hình in Edge, phóng to như kính lúp phần máy in màu và ô Màu
+@@4fabb197d8
+en: 🔍 The red box is enlarged — choose the <b>Color printer [컬러출력]</b>, choose <b>[색] (Color)</b> in the <b>'색'</b> box, and make sure <b>the preview on the right is in color</b> <span style="color:var(--text3);font-weight:600">(tap the picture to enlarge)</span>
+zh: 🔍 把红框部分放大了 — 选择<b>彩色打印机［컬러출력］</b>，在<b>“색”</b>栏选<b>［색］（彩色）</b>，然后一定要确认<b>右边的预览是彩色</b> <span style="color:var(--text3);font-weight:600">（点图片可放大）</span>
+vi: 🔍 Phần khung đỏ đã được phóng to — chọn <b>máy in màu [컬러출력]</b>, chọn <b>[색] (Màu)</b> ở ô <b>'색'</b>, và nhớ kiểm tra <b>bản xem trước bên phải có màu</b> <span style="color:var(--text3);font-weight:600">(bấm vào ảnh để phóng to)</span>
+@@b52b8d1e89
+en: Choose the printer
+zh: 选择打印机
+vi: Chọn máy in
+@@3a5b525821
+en: In the printer box, choose the <b>[흑백출력] (B&amp;W)</b> or <b>[컬러출력] (Color)</b> printer.
+zh: 在打印机中选择<b>［흑백출력］（黑白）</b>或<b>［컬러출력］（彩色）</b>打印机。
+vi: Ở ô máy in, chọn máy in <b>[흑백출력] (đen trắng)</b> hoặc <b>[컬러출력] (màu)</b>.
+@@31d509c9e7
+en: ⚠️ If you chose the <b>Color printer [컬러출력]</b>, choose <b>[색] (Color)</b> in the <b>'색'</b> box, and <b>always check that the preview on the right is in color</b>.
+zh: ⚠️ 如果选了<b>彩色打印机［컬러출력］</b>，请在<b>“색”</b>栏选<b>［색］（彩色）</b>，并<b>一定要确认右边的预览是彩色</b>。
+vi: ⚠️ Nếu đã chọn <b>máy in màu [컬러출력]</b>, hãy chọn <b>[색] (Màu)</b> ở ô <b>'색'</b>, và <b>luôn kiểm tra bản xem trước bên phải có màu</b>.
+@@7419195181
+en: Edge print screen, with a magnified close-up of two-sided, paper size and pages per sheet
+zh: Edge 打印画面。像放大镜一样放大显示双面打印、纸张大小、每面打印页数
+vi: Màn hình in Edge, phóng to như kính lúp phần in 2 mặt, khổ giấy và số trang trên 1 mặt
+@@a3efd71dd8
+en: 🔍 The red box is enlarged — check inside the numbered boxes: <b>two-sided/one-sided · paper size · pages per sheet</b> <span style="color:var(--text3);font-weight:600">(tap the picture to enlarge)</span>
+zh: 🔍 把红框部分放大了 — 请确认编号框里的内容：<b>双面/单面 · 纸张大小 · 每面打印页数</b> <span style="color:var(--text3);font-weight:600">（点图片可放大）</span>
+vi: 🔍 Phần khung đỏ đã được phóng to — kiểm tra trong các ô đánh số: <b>2 mặt/1 mặt · khổ giấy · số trang trên 1 mặt</b> <span style="color:var(--text3);font-weight:600">(bấm vào ảnh để phóng to)</span>
+@@484334c5a2
+en: Choose and check print options
+zh: 选择 · 确认打印选项
+vi: Chọn · kiểm tra tùy chọn in
+@@dd65759274
+en: Press <b>[기타 설정] (More settings)</b> and choose or check options like <b>paper size, two-sided/one-sided, pages per sheet</b>.
+zh: 按<b>［기타 설정］（其他设置）</b>，选择或确认<b>纸张大小、双面/单面、每面打印页数</b>等打印选项。
+vi: Bấm <b>[기타 설정] (Cài đặt khác)</b> để chọn hoặc kiểm tra các tùy chọn như <b>khổ giấy, 2 mặt/1 mặt, số trang trên 1 mặt</b>.
+@@1cad9c6e67
+en: Typing 4 digits into the PIN box
+zh: 在个人识别码输入窗口输入 4 位数字的样子
+vi: Nhập 4 số vào ô mã PIN
+@@a3269184a7
+en: Press [인쇄] (Print) and type the number
+zh: 按［인쇄］（打印）并输入号码
+vi: Bấm [인쇄] (In) và nhập số
+@@ae9f55e16e
+en: Press the <b>[인쇄] (Print)</b> button at the bottom and the <b>PIN</b> box appears. Type <b>any 4 digits</b>. We suggest <b>the last 4 digits of your phone number</b>.
+zh: 按下方的<b>［인쇄］（打印）</b>按钮，会出现<b>个人识别码</b>输入窗口。请输入<b>任意 4 位数字</b>。推荐用<b>自己手机号码后 4 位</b>。
+vi: Bấm nút <b>[인쇄] (In)</b> ở phía dưới, ô nhập <b>mã PIN</b> sẽ hiện ra. Hãy nhập <b>4 số bất kỳ</b>. Nên dùng <b>4 số cuối số điện thoại của bạn</b>.
+@@e0a9a607ed
+en: This number (PIN) is like a temporary password to find your document at the printer machine. Be sure to remember it!
+zh: 这个号码（PIN）就像在复合机上找自己文件用的临时密码。请一定记住！
+vi: Số này (mã PIN) giống như mật khẩu tạm để tìm tài liệu của bạn ở máy in đa năng. Nhớ kỹ nhé!
+@@c39796945c
+en: The print queue window still shows a document
+zh: 打印任务窗口里还留有文件列表的样子
+vi: Cửa sổ lệnh in vẫn còn tài liệu trong danh sách
+@@3712ee4a1e
+en: Still in the list → wait until it's gone
+zh: 列表还在 → 等到消失为止
+vi: Vẫn còn trong danh sách → chờ đến khi biến mất
+@@db29b994cb
+en: The print queue window is empty
+zh: 打印任务窗口里没有文件列表的样子
+vi: Cửa sổ lệnh in không còn tài liệu
+@@a79641284e
+en: List is empty → sent to the printer machine
+zh: 列表没有了 → 已发送到复合机
+vi: Danh sách trống → đã gửi đến máy in đa năng
+@@17b0c18ee0
+en: Check the print queue window
+zh: 确认打印任务窗口
+vi: Kiểm tra cửa sổ lệnh in
+@@42d0355128
+en: Look at the <b>[흑백출력] (B&amp;W)</b> or <b>[컬러출력] (Color)</b> print queue window.<br/>If the list is <b>empty</b>, your job has been sent to the printer machine.<br/>If something is still in the list, please <b>wait until it's gone</b>.
+zh: 请看<b>［흑백출력］（黑白）</b>或<b>［컬러출력］（彩色）</b>打印任务窗口。<br/>列表<b>一个都没有</b>的话，打印任务已发送到复合机。<br/>列表还在的话，请<b>等到消失为止</b>。
+vi: Hãy xem cửa sổ lệnh in <b>[흑백출력] (đen trắng)</b> hoặc <b>[컬러출력] (màu)</b>.<br/>Nếu danh sách <b>trống</b>, lệnh in đã được gửi đến máy in đa năng.<br/>Nếu vẫn còn, hãy <b>chờ đến khi biến mất</b>.
+@@1792fc51aa
+en: <span class="bsub-ico">C</span><span class="bsub-t">Printing in Chrome</span><small>Steps 1–5</small>
+zh: <span class="bsub-ico">C</span><span class="bsub-t">在 Chrome 中打印</span><small>第 1~5 步</small>
+vi: <span class="bsub-ico">C</span><span class="bsub-t">In bằng Chrome</span><small>Bước 1–5</small>
+@@28efa2f2aa
+en: With the file open in <b>Chrome</b>, press <b>[인쇄] (Print)</b> or the <b>printer icon</b>, or press <b>Ctrl</b> and <b>P</b> together.<br/>The print window opens. <b>The left is the preview</b>, and <b>the right is the print options</b>.
+zh: 在 <b>Chrome</b> 中打开要打印的文件后，按<b>［인쇄］（打印）</b>或<b>打印机图标</b>，或同时按键盘 <b>Ctrl</b> 和 <b>P</b>。<br/>会出现打印设置窗口。<b>左边是预览</b>，<b>右边是打印选项设置</b>。
+vi: Khi tệp đang mở bằng <b>Chrome</b>, bấm <b>[인쇄] (In)</b> hoặc <b>biểu tượng máy in</b>, hoặc bấm cùng lúc <b>Ctrl</b> và <b>P</b>.<br/>Cửa sổ cài đặt in sẽ hiện ra. <b>Bên trái là bản xem trước</b>, <b>bên phải là tùy chọn in</b>.
+@@fad07c8c4a
+en: Chrome print screen, magnified: clicking Destination shows B&W by default, with See more below
+zh: Chrome 打印画面。像放大镜一样放大显示：点目标打印机后默认出现黑白，下面有查看更多
+vi: Màn hình in Chrome, phóng to: bấm Đích sẽ hiện đen trắng mặc định, bên dưới có Xem thêm
+@@b8db334dd4
+en: ① Click <b>[대상] (Destination)</b> and <b>B&amp;W [흑백출력]</b> shows by default. If Color isn't there, click <b>[더보기...] (See more)</b> <span style="color:var(--text3);font-weight:600">(tap the picture to enlarge)</span>
+zh: ① 点<b>［대상］（目标打印机）</b>后默认出现<b>黑白［흑백출력］</b>。没有彩色的话，请点<b>［더보기...］（查看更多）</b> <span style="color:var(--text3);font-weight:600">（点图片可放大）</span>
+vi: ① Bấm <b>[대상] (Đích)</b> sẽ hiện mặc định <b>đen trắng [흑백출력]</b>. Nếu không có máy in màu, bấm <b>[더보기...] (Xem thêm)</b> <span style="color:var(--text3);font-weight:600">(bấm vào ảnh để phóng to)</span>
+@@91370c1b96
+en: Choosing B&W (BlackOnly) or Color (ColorOnly) in the destination window
+zh: 在选择目标打印机窗口中选择黑白（BlackOnly）或彩色（ColorOnly）
+vi: Chọn đen trắng (BlackOnly) hoặc màu (ColorOnly) trong cửa sổ chọn đích
+@@480de74bcf
+en: ② In the full printer list, choose <b>[흑백출력] (B&amp;W)</b> or <b>[컬러출력] (Color)</b> <span style="color:var(--text3);font-weight:600">(tap the picture to enlarge)</span>
+zh: ② 在全部打印机列表中选择<b>［흑백출력］（黑白）</b>或<b>［컬러출력］（彩色）</b> <span style="color:var(--text3);font-weight:600">（点图片可放大）</span>
+vi: ② Trong danh sách đầy đủ, chọn <b>[흑백출력] (đen trắng)</b> hoặc <b>[컬러출력] (màu)</b> <span style="color:var(--text3);font-weight:600">(bấm vào ảnh để phóng to)</span>
+@@a8cb4d68d9
+en: Chrome print screen, magnified: choosing the Color printer and Color in the Color box
+zh: Chrome 打印画面。像放大镜一样放大显示选择彩色打印机并在颜色栏选择彩色
+vi: Màn hình in Chrome, phóng to: chọn máy in màu và chọn Màu ở ô Màu
+@@52a498b254
+en: ③ If you chose <b>Color [컬러출력]</b>, choose <b>[컬러] (Color)</b> in the <b>'컬러'</b> box, and make sure <b>the preview on the left is in color</b> <span style="color:var(--text3);font-weight:600">(tap the picture to enlarge)</span>
+zh: ③ 如果选了<b>彩色［컬러출력］</b>，请在<b>“컬러”</b>栏选<b>［컬러］（彩色）</b>，并一定要确认<b>左边的预览是彩色</b> <span style="color:var(--text3);font-weight:600">（点图片可放大）</span>
+vi: ③ Nếu đã chọn <b>màu [컬러출력]</b>, hãy chọn <b>[컬러] (Màu)</b> ở ô <b>'컬러'</b>, và nhớ kiểm tra <b>bản xem trước bên trái có màu</b> <span style="color:var(--text3);font-weight:600">(bấm vào ảnh để phóng to)</span>
+@@c6bb56f773
+en: Choose the printer [대상] (Destination)
+zh: 选择打印机［대상］（目标打印机）
+vi: Chọn máy in [대상] (Đích)
+@@4e4f8761f4
+en: In the settings on the right, <b>[대상] (Destination)</b> is where you choose the printer. Click it and the <b>[흑백출력] (B&amp;W)</b> printer shows by default.<br/>If you don't see <b>[컬러출력] (Color)</b>, click <b>[더보기...] (See more)</b> below. The full printer list appears.<br/>Choose the <b>[흑백출력] (B&amp;W)</b> or <b>[컬러출력] (Color)</b> printer.
+zh: 右边设置窗口中的<b>［대상］（目标打印机）</b>就是选打印机的地方。点一下默认会出现<b>［흑백출력］（黑白）</b>打印机。<br/>看不到<b>［컬러출력］（彩色）</b>的话，请点下面的<b>［더보기...］（查看更多）</b>，会出现全部打印机列表。<br/>请选择<b>［흑백출력］（黑白）</b>或<b>［컬러출력］（彩色）</b>打印机。
+vi: Trong phần cài đặt bên phải, <b>[대상] (Đích)</b> là chỗ chọn máy in. Bấm vào sẽ hiện mặc định máy in <b>[흑백출력] (đen trắng)</b>.<br/>Nếu không thấy <b>[컬러출력] (màu)</b>, bấm <b>[더보기...] (Xem thêm)</b> bên dưới. Danh sách đầy đủ sẽ hiện ra.<br/>Chọn máy in <b>[흑백출력] (đen trắng)</b> hoặc <b>[컬러출력] (màu)</b>.
+@@553c0a7a35
+en: ⚠️ If you chose the <b>Color printer [컬러출력]</b>, choose <b>[컬러] (Color)</b> in the <b>'컬러'</b> box (below Layout). Then <b>always check</b> that the preview on the left is in color and that <b>every page you print is in color</b>.
+zh: ⚠️ 如果选了<b>彩色打印机［컬러출력］</b>，请在<b>“컬러”</b>栏（布局下面）选<b>［컬러］（彩色）</b>。然后<b>一定要确认</b>左边的<b>预览是彩色</b>，要打印的<b>所有页面都是彩色</b>。
+vi: ⚠️ Nếu đã chọn <b>máy in màu [컬러출력]</b>, hãy chọn <b>[컬러] (Màu)</b> ở ô <b>'컬러'</b> (dưới Bố cục). Sau đó <b>luôn kiểm tra</b> bản xem trước bên trái có màu và <b>mọi trang cần in đều có màu</b>.
+@@a6273e144c
+en: Chrome print screen, magnified: paper size, pages per sheet and two-sided options
+zh: Chrome 打印画面。像放大镜一样放大显示纸张大小、每张页数、双面选项
+vi: Màn hình in Chrome, phóng to: khổ giấy, số trang trên 1 tờ và in 2 mặt
+@@35ed108e9d
+en: 🔍 Check inside the red numbered boxes (marked ✔): <b>paper size · pages per sheet · two-sided</b> <span style="color:var(--text3);font-weight:600">(tap the picture to enlarge)</span>
+zh: 🔍 请确认红色编号框里的内容（标 ✔ 的地方）：<b>纸张大小 · 每张页数 · 双面</b> <span style="color:var(--text3);font-weight:600">（点图片可放大）</span>
+vi: 🔍 Kiểm tra trong các ô số màu đỏ (chỗ có dấu ✔): <b>khổ giấy · số trang trên 1 tờ · in 2 mặt</b> <span style="color:var(--text3);font-weight:600">(bấm vào ảnh để phóng to)</span>
+@@af74316d25
+en: Click <b>[설정 더보기] (More settings)</b> to see options like <b>paper size, two-sided, pages per sheet</b>. Choose or check them as you want.
+zh: 点<b>［설정 더보기］（更多设置）</b>会出现<b>纸张大小、双面、每张页数</b>等打印选项。请按需要选择或确认。
+vi: Bấm <b>[설정 더보기] (Cài đặt khác)</b> sẽ hiện các tùy chọn như <b>khổ giấy, in 2 mặt, số trang trên 1 tờ</b>. Hãy chọn hoặc kiểm tra theo ý muốn.
+@@89ba901980
+en: Photos and image files open in ALSee <span class="pill">ALSee</span>
+zh: 照片 · 图片文件用 ALSee 看图（알씨）打开 <span class="pill">ALSee</span>
+vi: Tệp ảnh · hình ảnh mở bằng ALSee <span class="pill">ALSee</span>
+@@e9503b110a
+en: Use this to print photos or image files. You can also put several photos on one page. Open your photo with the <b>ALSee (알씨)</b> icon on the store PC desktop.
+zh: 打印照片或图片文件时使用。也可以一张纸上排多张。用店内电脑桌面上的 <b>ALSee（알씨）</b>图标打开照片即可。
+vi: Dùng khi in ảnh hoặc tệp hình. Có thể xếp nhiều ảnh trên một tờ. Hãy mở ảnh bằng biểu tượng <b>ALSee (알씨)</b> trên màn hình nền máy tính cửa hàng.
+@@0f3c930d1b
+en: Double-clicking a photo (JPG · PNG) file on the desktop to open it
+zh: 用鼠标双击桌面上的照片（JPG · PNG）文件打开
+vi: Bấm đúp chuột vào tệp ảnh (JPG · PNG) trên màn hình nền để mở
+@@7d1c6ce962
+en: Open the file and the Print menu
+zh: 打开文件，进入打印菜单
+vi: Mở tệp và vào menu In
+@@e915777b51
+en: Open the photo in ALSee, then choose <b>[메뉴] (Menu) → [인쇄하기] (Print)</b> at the top. You can also press <b>Ctrl</b> and <b>P</b> together.
+zh: 用 ALSee 打开照片后，选择上方的<b>［메뉴］（菜单）→［인쇄하기］（打印）</b>。也可以同时按键盘 <b>Ctrl</b> 和 <b>P</b>。
+vi: Mở ảnh bằng ALSee rồi chọn <b>[메뉴] (Menu) → [인쇄하기] (In)</b> ở phía trên. Cũng có thể bấm cùng lúc <b>Ctrl</b> và <b>P</b>.
+@@efa3621a4d
+en: Choose <b>[컬러출력] (Color)</b> or <b>[흑백출력] (B&amp;W)</b>. For color photos, always choose <b>[컬러출력] (Color)</b>.
+zh: 从<b>［컬러출력］（彩色）</b>或<b>［흑백출력］（黑白）</b>中选择。彩色照片一定要选<b>［컬러출력］（彩色）</b>。
+vi: Chọn <b>[컬러출력] (màu)</b> hoặc <b>[흑백출력] (đen trắng)</b>. Ảnh màu thì nhất định chọn <b>[컬러출력] (màu)</b>.
+@@ec77d428da
+en: The print window after choosing a printer, with Printer Settings at the bottom left marked
+zh: 选好打印机后出现的打印窗口。左下角的打印机设置字样有标记
+vi: Cửa sổ in hiện ra sau khi chọn máy in, có đánh dấu chữ Cài đặt máy in ở góc dưới bên trái
+@@adf48af32f
+en: Press [프린터 설정] (Printer Settings) in the print window
+zh: 在打印窗口按［프린터 설정］（打印机设置）
+vi: Bấm [프린터 설정] (Cài đặt máy in) trong cửa sổ in
+@@de6e78df80
+en: After you choose a printer, the <b>print window</b> below appears. To change paper size or portrait/landscape, press <b>[프린터 설정] (Printer Settings)</b> at the bottom left.
+zh: 选好打印机后会出现下面的<b>打印窗口</b>。要改纸张大小或纵向/横向，请按左下角的<b>［프린터 설정］（打印机设置）</b>。
+vi: Sau khi chọn máy in, <b>cửa sổ in</b> bên dưới sẽ hiện ra. Muốn đổi khổ giấy hoặc dọc/ngang, bấm <b>[프린터 설정] (Cài đặt máy in)</b> ở góc dưới bên trái.
+@@d87e83e87f
+en: Print settings window, with paper size A4, portrait and the OK button marked
+zh: 打印设置窗口。在纸张大小 A4、方向纵向、确认按钮上有标记
+vi: Cửa sổ cài đặt in, có đánh dấu khổ giấy A4, hướng dọc và nút Xác nhận
+@@645e0c2432
+en: Set paper size · orientation and press [확인] (OK)
+zh: 设定纸张大小 · 方向后按［확인］（确认）
+vi: Chọn khổ giấy · hướng rồi bấm [확인] (Xác nhận)
+@@598b0cefc2
+en: Set the <b>paper size (A4 · B4 · A3, etc.)</b> and <b>portrait / landscape</b>, then press <b>[확인] (OK)</b>. You go back to the print window.
+zh: 设定好<b>纸张大小（A4 · B4 · A3 等）</b>和<b>纵向 / 横向</b>后，按<b>［확인］（确认）</b>，就会回到打印窗口。
+vi: Chọn <b>khổ giấy (A4 · B4 · A3, v.v.)</b> và <b>dọc / ngang</b>, rồi bấm <b>[확인] (Xác nhận)</b>. Bạn sẽ quay lại cửa sổ in.
+@@81fcd121c1
+en: 💡 The <b>[이름] (Name)</b> box at the top shows the printer you chose (<b>[컬러출력] (Color)</b> or <b>[흑백출력] (B&amp;W)</b>). Don't change it.
+zh: 💡 上方的<b>［이름］（名称）</b>栏会显示前面选的打印机（<b>［컬러출력］（彩色）</b>或<b>［흑백출력］（黑白）</b>）。请不要改。
+vi: 💡 Ô <b>[이름] (Tên)</b> ở phía trên hiện máy in bạn đã chọn (<b>[컬러출력] (màu)</b> hoặc <b>[흑백출력] (đen trắng)</b>). Đừng thay đổi.
+@@35bd492864
+en: Size settings
+zh: 尺寸设置
+vi: Cài đặt kích thước
+@@d3701817f4
+en: You're back in the print window. In the <b>[크기설정] (Size)</b> tab, check <b>[용지 크기에 맞춤] (Fit to paper)</b> to fill the paper with the photo. To keep the photo's shape, choose <b>[용지 비율에 맞춤] (Fit to paper ratio)</b>.
+zh: 又回到打印窗口了。在<b>［크기설정］（尺寸设置）</b>标签中勾选<b>［용지 크기에 맞춤］（适合纸张大小）</b>，照片就会铺满纸张。想保持比例的话，请选<b>［용지 비율에 맞춤］（适合纸张比例）</b>。
+vi: Bạn đã quay lại cửa sổ in. Ở thẻ <b>[크기설정] (Kích thước)</b>, đánh dấu <b>[용지 크기에 맞춤] (Vừa khổ giấy)</b> để ảnh in kín giấy. Muốn giữ đúng tỉ lệ ảnh, chọn <b>[용지 비율에 맞춤] (Vừa tỉ lệ giấy)</b>.
+@@032c3d19a3
+en: Margins · position
+zh: 页边距 · 位置
+vi: Lề · vị trí
+@@b8a3225d9e
+en: In the <b>[여백/위치] (Margins/Position)</b> tab, set the top · bottom · left · right margins (mm) and where to place the photo.
+zh: 在<b>［여백/위치］（页边距/位置）</b>标签中设定上 · 下 · 左 · 右页边距（mm）和照片放的位置。
+vi: Ở thẻ <b>[여백/위치] (Lề/Vị trí)</b>, chọn lề trên · dưới · trái · phải (mm) và vị trí đặt ảnh.
+@@fa5b9c02be
+en: Set the number of copies and print
+zh: 设定张数后打印
+vi: Chọn số tờ rồi in
+@@0817d066c7
+en: In the <b>[기타] (Other)</b> tab, set <b>how many to print</b>. <b>Check everything in the preview on the left</b>, then press <b>[인쇄] (Print)</b>.
+zh: 在<b>［기타］（其他）</b>标签中设定<b>打印张数</b>。<b>用左边的预览确认全部内容后</b>，按<b>［인쇄］（打印）</b>。
+vi: Ở thẻ <b>[기타] (Khác)</b>, chọn <b>số tờ cần in</b>. <b>Kiểm tra hết ở bản xem trước bên trái</b> rồi bấm <b>[인쇄] (In)</b>.
+@@1fc6287610
+en: Press <b>[인쇄] (Print)</b> and the <b>PIN</b> box appears. Type <b>any 4 digits</b>. We suggest <b>the last 4 digits of your phone number</b>.
+zh: 按<b>［인쇄］（打印）</b>会出现<b>个人识别码</b>输入窗口。请输入<b>任意 4 位数字</b>。推荐用<b>自己手机号码后 4 位</b>。
+vi: Bấm <b>[인쇄] (In)</b> sẽ hiện ô nhập <b>mã PIN</b>. Hãy nhập <b>4 số bất kỳ</b>. Nên dùng <b>4 số cuối số điện thoại của bạn</b>.
+@@992b51bde9
+en: <a class="goto" href="#mfp"><span>Not sure what to do at the printer machine?</span><b>See ‘Printing at the printer machine’ below ⬇</b></a>
+zh: <a class="goto" href="#mfp"><span>复合机的使用顺序搞不清楚的话</span><b>请看下面的“在复合机上打印” ⬇</b></a>
+vi: <a class="goto" href="#mfp"><span>Nếu chưa rõ thứ tự dùng máy in đa năng</span><b>Hãy xem phần ‘In ở máy in đa năng’ bên dưới ⬇</b></a>
+@@e2995cac54
+en: How to print a TOEIC certificate <span class="pill">TOEIC · TOEIC Speaking</span>
+zh: TOEIC 证书这样打印 <span class="pill">TOEIC · TOEIC Speaking</span>
+vi: Cách in chứng chỉ TOEIC <span class="pill">TOEIC · TOEIC Speaking</span>
+@@e0094573d0
+en: For TOEIC · TOEIC Speaking (YBM) certificates, <span class="hl-t">first print on the PC with [증명서전용PIN9999] (certificate printer)</span>. If you choose another printer, <b>the PC freezes!</b>
+zh: TOEIC · TOEIC Speaking（YBM）证书，<span class="hl-t">请先在电脑上用［증명서전용PIN9999］（证书专用）打印</span>。选其他打印机的话，<b>电脑会卡住！</b>
+vi: Chứng chỉ TOEIC · TOEIC Speaking (YBM) thì <span class="hl-t">trước tiên in trên máy tính bằng [증명서전용PIN9999] (máy in chứng chỉ)</span>. Nếu chọn máy in khác, <b>máy tính sẽ bị treo!</b>
+@@91b4f37503
+en: ⚠️ Just issuing (paying) on the website does not print it <span>Please read this</span>
+zh: ⚠️ 只在网站上发放（付款）是不会打印出来的 <span>请一定要看</span>
+vi: ⚠️ Chỉ cấp (thanh toán) trên trang web thì chưa in ra được <span>Hãy đọc kỹ</span>
+@@5449006e56
+en: A certificate comes out only after you <b>① send it to print on the PC with [증명서전용PIN9999]</b>, then <b>② find it at the printer machine with number 9999</b> and pay.<br/>If you don't send it on the PC and only type 9999 at the printer machine, <b>nothing comes out.</b>
+zh: 证书要<b>① 在电脑上用［증명서전용PIN9999］发送打印</b>后，<b>② 在复合机上用号码 9999</b> 找到并付款才会打印出来。<br/>如果没在电脑上发送打印，只在复合机上输 9999，<b>什么都不会出来。</b>
+vi: Chứng chỉ chỉ in ra khi bạn <b>① gửi lệnh in trên máy tính bằng [증명서전용PIN9999]</b>, rồi <b>② tìm ở máy in đa năng bằng số 9999</b> và thanh toán.<br/>Nếu không gửi lệnh in trên máy tính mà chỉ nhập 9999 ở máy in đa năng thì <b>sẽ không có gì in ra.</b>
+@@3927c33e00
+en: Open the certificate on the website
+zh: 在网站上打开证书
+vi: Mở chứng chỉ trên trang web
+@@935e55d3a1
+en: When you get your score report on the TOEIC website, <b>the certificate opens in a viewer window.</b>
+zh: 在 TOEIC 网站上发放成绩单后，<b>证书会在查看器窗口中打开。</b>
+vi: Khi được cấp bảng điểm trên trang web TOEIC, <b>chứng chỉ sẽ mở trong cửa sổ xem.</b>
+@@7aef32a692
+en: Picture guides for university transcripts, graduation certificates and Certpia are <b>coming soon</b>. For those certificates too, <b>choose the [증명서전용PIN9999] printer</b>.
+zh: 大学成绩证明、毕业证明、Certpia 的图片说明<b>正在准备中</b>。这些证书也<b>一样选择［증명서전용PIN9999］打印机</b>。
+vi: Hướng dẫn bằng hình cho bảng điểm đại học, giấy chứng nhận tốt nghiệp và Certpia <b>đang chuẩn bị</b>. Với các giấy tờ đó cũng <b>chọn máy in [증명서전용PIN9999]</b>.
+@@5f6a1be15d
+en: Certificate viewer window, with the yellow score report print button at the top right marked 1
+zh: 证书查看器窗口。右上角黄色的成绩单打印按钮上标了 1 号
+vi: Cửa sổ xem chứng chỉ, nút in bảng điểm màu vàng ở góc trên bên phải được đánh số 1
+@@3f1cdb6be3
+en: Press [성적표 출력] (Print score report)
+zh: 按［성적표 출력］（打印成绩单）
+vi: Bấm [성적표 출력] (In bảng điểm)
+@@71add2ee1a
+en: Press the yellow <b>[성적표 출력] (Print score report)</b> at the top right of the viewer.<br/><b>[테스트 출력] (Test print)</b> is only for testing. Don't press it.
+zh: 按查看器右上角黄色的<b>［성적표 출력］（打印成绩单）</b>。<br/><b>［테스트 출력］（测试打印）</b>是测试用的，请不要按。
+vi: Bấm nút màu vàng <b>[성적표 출력] (In bảng điểm)</b> ở góc trên bên phải cửa sổ xem.<br/><b>[테스트 출력] (In thử)</b> chỉ để thử. Đừng bấm.
+@@da276d333d
+en: Printer selection window, choosing [증명서전용PIN9999] from the list and pressing Print
+zh: 打印机选择窗口。在打印机列表中选［증명서전용PIN9999］并按打印按钮的样子
+vi: Cửa sổ chọn máy in, chọn [증명서전용PIN9999] trong danh sách và bấm nút In
+@@b975d76128
+en: Printer: only [증명서전용PIN9999]!
+zh: 打印机只能选［증명서전용PIN9999］！
+vi: Máy in: chỉ chọn [증명서전용PIN9999]!
+@@fa9fbef470
+en: In the printer window, choose <b>[증명서전용PIN9999]</b> and press <b>[인쇄] (Print)</b>.
+zh: 在打印机选择窗口中选<b>［증명서전용PIN9999］</b>，按<b>［인쇄］（打印）</b>。
+vi: Trong cửa sổ chọn máy in, chọn <b>[증명서전용PIN9999]</b> và bấm <b>[인쇄] (In)</b>.
+@@6986ffffc8
+en: ⚠️ If you choose <b>[흑백출력] (B&amp;W) · [컬러출력] (Color)</b>, <b>the PC freezes!</b> Then it's hard to get back the certificate fee. <b>Only choose [증명서전용PIN9999].</b>
+zh: ⚠️ 选<b>［흑백출력］（黑白）·［컬러출력］（彩色）</b>的话，<b>电脑会卡住！</b>那样证书发放费很难退回。请<b>只选［증명서전용PIN9999］</b>。
+vi: ⚠️ Nếu chọn <b>[흑백출력] (đen trắng) · [컬러출력] (màu)</b>, <b>máy tính sẽ bị treo!</b> Khi đó rất khó lấy lại phí cấp chứng chỉ. <b>Chỉ chọn [증명서전용PIN9999].</b>
+@@d77adaedfc
+en: Done when it says printing is finished!
+zh: 出现打印完成的字样就结束了！
+vi: Hiện chữ in xong là xong!
+@@6234cff847
+en: [증명서전용PIN9999] <b>doesn't show a PIN box.</b> <b>9999</b> is entered automatically, so this is normal.<br/>When it says printing is complete, you're done on the PC.
+zh: ［증명서전용PIN9999］<b>不会出现个人识别码窗口。</b>会自动填入 <b>9999</b>，所以是正常的。<br/>显示打印完成后，电脑上的步骤就结束了。
+vi: [증명서전용PIN9999] <b>không hiện ô nhập mã PIN.</b> Máy tự điền <b>9999</b> nên đó là bình thường.<br/>Khi hiện đã in xong, phần trên máy tính là xong.
+@@578fd628c5
+en: Find it at the printer machine with number 9999
+zh: 在复合机上用号码 9999 查找
+vi: Tìm ở máy in đa năng bằng số 9999
+@@bf39fe1803
+en: At the printer machine, press <b>[인쇄] (Print)</b> → <b>[PC]</b> and type <b>9999</b>.<br/>When the list appears, choose <b>only your certificate</b>, press <b>[시작] (Start)</b>, then pay.
+zh: 在复合机上按<b>［인쇄］（打印）</b>→<b>［PC］</b>，输入号码 <b>9999</b>。<br/>出现列表后，<b>只选自己的证书</b>，按<b>［시작］（开始）</b>后付款。
+vi: Ở máy in đa năng, bấm <b>[인쇄] (In)</b> → <b>[PC]</b> và nhập số <b>9999</b>.<br/>Khi danh sách hiện ra, <b>chỉ chọn chứng chỉ của bạn</b>, bấm <b>[시작] (Bắt đầu)</b> rồi thanh toán.
+@@bec10b3d7a
+en: ⚠️ Other customers may have used 9999 too, so <b>several documents</b> may be in the list. <b>Check the time and name</b> and pay only for yours. <b>Don't press [모두선택] (Select all).</b>
+zh: ⚠️ 其他顾客也可能用了 9999，所以列表里可能有<b>好几个文件</b>。<b>请一定确认时间和名字</b>，只为自己的付款。<b>不要按［모두선택］（全选）。</b>
+vi: ⚠️ Khách khác cũng có thể đã dùng 9999 nên danh sách có thể có <b>nhiều tài liệu</b>. <b>Hãy kiểm tra thời gian và tên</b>, chỉ thanh toán cho tài liệu của bạn. <b>Đừng bấm [모두선택] (Chọn tất cả).</b>
+@@e24533e7f7
+en: Printing at the printer machine <span class="pill">Same for Edge · Chrome · ALSee</span>
+zh: 在复合机上打印 <span class="pill">Edge · Chrome · ALSee 通用</span>
+vi: In ở máy in đa năng <span class="pill">Giống nhau cho Edge · Chrome · ALSee</span>
+@@2f2a96c660
+en: Do these steps <b>after you type the PIN on the PC and send the print job</b>. It's the same for Edge, Chrome and ALSee.
+zh: 这是<b>在电脑上输入个人识别码并发送打印之后</b>的步骤。Edge、Chrome、ALSee 都一样。
+vi: Đây là các bước làm <b>sau khi nhập mã PIN trên máy tính và gửi lệnh in</b>. Edge, Chrome và ALSee đều giống nhau.
+@@8e6faabe6f
+en: M1
+zh: 复1
+vi: M1
+@@82ada80ea4
+en: On the printer machine: Print → PC → type the number
+zh: 在复合机上：打印 → PC → 输入号码
+vi: Trên máy in đa năng: In → PC → nhập số
+@@4073c80670
+en: Go to the printer machine and press <b>[인쇄] (Print)</b> → <b>[PC]</b>.<br/>In the <b>PIN</b> box, type the <b>4-digit number</b> you used on the PC and touch <b>[OK]</b>.
+zh: 到复合机前，按<b>［인쇄］（打印）</b>→<b>［PC］</b>。<br/>在 <b>PIN 号码</b>输入栏里输入在电脑上填的 <b>4 位号码</b>，点<b>［OK］</b>。
+vi: Đến máy in đa năng và bấm <b>[인쇄] (In)</b> → <b>[PC]</b>.<br/>Ở ô <b>mã PIN</b>, nhập <b>4 số</b> đã nhập trên máy tính rồi chạm <b>[OK]</b>.
+@@1bb66d1416
+en: M2
+zh: 复2
+vi: M2
+@@91725efdd2
+en: Printer machine screen showing the print job list after typing the PIN
+zh: 输入 PIN 号码后出现打印任务列表的复合机画面
+vi: Màn hình máy in đa năng hiện danh sách lệnh in sau khi nhập mã PIN
+@@17f959acd8
+en: Check your document list
+zh: 确认我的文件列表
+vi: Kiểm tra danh sách tài liệu
+@@0eda929fcc
+en: When the list appears, carefully check what it shows: <b>document name, time, B&amp;W/color, two-sided/one-sided, pages, paper size</b>, etc.<br/>Make sure <b>it is your document</b> and the print options are <b>what you wanted</b>.
+zh: 出现列表后，请仔细确认列表上的<b>文件名、时间、黑白/彩色、双面/单面、页数、纸张大小</b>等内容。<br/>请看<b>是不是自己的文件</b>，打印选项是否<b>符合您的要求</b>。
+vi: Khi danh sách hiện ra, hãy kiểm tra kỹ: <b>tên tài liệu, thời gian, đen trắng/màu, 2 mặt/1 mặt, số trang, khổ giấy</b>, v.v.<br/>Xem <b>có đúng tài liệu của bạn không</b>, và tùy chọn in có <b>đúng ý không</b>.
+@@acdd828efa
+en: M3
+zh: 复3
+vi: M3
+@@912e236685
+en: Touch the list and [시작] (Start)
+zh: 点列表后按［시작］（开始）
+vi: Chạm vào danh sách rồi bấm [시작] (Bắt đầu)
+@@3dafd06efe
+en: <b>Touch your document</b> in the list, then touch the <b>[시작] (Start)</b> button.<br/>If there are several, press <b>[모두 인쇄] (Print all)</b> at the top, or <b>touch only the ones you want</b> and press <b>[시작] (Start)</b>.
+zh: <b>点一下自己的文件</b>，再点<b>［시작］（开始）</b>按钮。<br/>有好几个的话，按上方的<b>［모두 인쇄］（全部打印）</b>，或者<b>只点要打印的几个</b>后按<b>［시작］（开始）</b>。
+vi: <b>Chạm vào tài liệu của bạn</b> trong danh sách, rồi chạm nút <b>[시작] (Bắt đầu)</b>.<br/>Nếu có nhiều tài liệu, bấm <b>[모두 인쇄] (In tất cả)</b> ở phía trên, hoặc <b>chỉ chạm những cái cần in</b> rồi bấm <b>[시작] (Bắt đầu)</b>.
+@@8a4b661858
+en: M4
+zh: 复4
+vi: M4
+@@e16eb5fb3d
+en: Finally, the <b>payment info screen [과금정보]</b> appears. Check everything carefully, and if the <b>price</b> is right too, touch <b>[확인] (OK)</b>.
+zh: 最后会出现<b>收费信息窗口［과금정보］</b>。请仔细确认全部内容，<b>价格</b>也正确的话，点<b>［확인］（确认）</b>。
+vi: Cuối cùng, <b>màn hình thông tin thanh toán [과금정보]</b> sẽ hiện ra. Kiểm tra kỹ mọi thứ, nếu <b>giá tiền</b> cũng đúng thì chạm <b>[확인] (Xác nhận)</b>.
+@@abdd5e40e0
+en: ⚠️ If the pages or price on the payment info screen are different from what you expect, <b>do NOT pay.</b>
+zh: ⚠️ 如果收费信息窗口的页数或金额和您知道的不一样，<b>请不要付款。</b>
+vi: ⚠️ Nếu số trang hoặc số tiền trên màn hình thanh toán khác với điều bạn biết, <b>đừng thanh toán.</b>
+@@415ff3e05c
+en: M5
+zh: 复5
+vi: M5
+@@7772e7ee2b
+en: When the card reader speaks, <b>insert your IC card (credit/debit)</b>, or <b>hold Samsung Pay to it</b>.
+zh: 刷卡机发出语音后，<b>IC 卡（信用卡/借记卡）请插入</b>，<b>三星支付请贴上</b>。
+vi: Khi máy quẹt thẻ phát tiếng, <b>hãy cắm thẻ IC (tín dụng/ghi nợ)</b>, hoặc <b>áp Samsung Pay vào</b>.
+@@99934d01f4
+en: <b>💳 Insert your credit/debit card into the card reader slot, chip side in.</b>
+zh: <b>💳 信用卡/借记卡请把有 IC 芯片的一端插入刷卡机插口。</b>
+vi: <b>💳 Thẻ tín dụng/ghi nợ: cắm đầu có chip IC vào khe của máy quẹt thẻ.</b>

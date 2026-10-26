@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8"/>
+<meta content="PrintShop Mini 打印使用方法 — 介绍打印步骤，以及 PDF、韩文（HWP）、MS Office、Chrome、ALSee 的打印设置。" name="description"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>打印使用方法 - PrintShop Mini</title>
+<link href="https://www.printshopmini.com/zh/guide-print.html" rel="canonical"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&amp;family=Jua&amp;family=Gamja+Flower&amp;display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#1B8AC4;--blue-hover:#1470A8;--blue-light:#E8F4FC;--blue-mid:#4AAAD6;
+  --text:#111827;--text2:#374151;--text3:#6B7280;--border:#E5E7EB;
+  --bg:#F9FAFB;--white:#FFFFFF;--radius:14px;
+  --print:#22B24C;--copy:#018FFB;--scan:#12BDB0;--fax:#F3732C;--warn:#D93025;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--white);line-height:1.7;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:70px;display:flex;align-items:center;padding:0 6%}
+.nav-logo{display:flex;align-items:center;gap:10px;flex-shrink:0;margin-right:48px}
+.nav-logo img.logo-img{width:36px;height:36px;object-fit:contain;border-radius:8px}
+.nav-logo-name{font-size:17px;font-weight:900;color:var(--blue);letter-spacing:-0.5px}
+.nav-links{display:flex;list-style:none;gap:2px;flex:1}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);padding:8px 16px;border-radius:8px;transition:all .18s}
+.nav-links a:hover,.nav-links a.active{color:var(--blue);background:var(--blue-light)}
+.nav-right{display:flex;align-items:center;gap:0;margin-left:auto}
+.nav-cta{background:var(--blue);color:white;font-size:13px;font-weight:700;padding:9px 22px;border-radius:50px;transition:background .2s;white-space:nowrap}
+.nav-cta:hover{background:var(--blue-hover)}
+.nav-raccoon{width:56px;height:56px;flex-shrink:0;margin-left:6px;position:relative;top:2px}
+.nav-raccoon img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.15));transition:transform .3s}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{width:22px;height:2px;background:var(--text);border-radius:2px;display:block}
+
+/* PAGE HEADER */
+.page-header{margin-top:70px;background:var(--white);border-bottom:1px solid var(--border);padding:52px 6% 44px}
+.ph-inner{max-width:1160px;margin:0 auto}
+.ph-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:var(--blue);letter-spacing:1px;margin-bottom:14px}
+.ph-eyebrow::before{content:'';width:20px;height:2px;background:var(--blue);border-radius:2px}
+.ph-h1{font-size:clamp(28px,4vw,48px);font-weight:900;letter-spacing:-2px;margin-bottom:10px}
+.ph-sub{font-size:15px;color:var(--text3)}
+
+/* 경고 배너 */
+.warnbar{background:#FEF2F2;border-bottom:1px solid #FADCDC;padding:18px 6%}
+.warnbar-in{max-width:1160px;margin:0 auto;display:flex;gap:14px;align-items:flex-start}
+.warnbar-ico{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:var(--warn);color:#fff;font-size:15px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.warnbar-tx{font-size:14.5px;font-weight:700;color:#8A1C15;line-height:1.6}
+.warnbar-tx span{font-weight:500;color:#A3453E;display:block;margin-top:3px;font-size:13.5px}
+
+/* 탭 */
+.tabs{background:var(--bg);border-bottom:1px solid var(--border);padding:0 6%;position:sticky;top:70px;z-index:100}
+.tabs-in{max-width:1160px;margin:0 auto;display:flex;overflow-x:auto}
+.tabs-in::-webkit-scrollbar{display:none}
+.tab{padding:16px 20px;font-size:13.5px;font-weight:700;color:var(--text3);white-space:nowrap;cursor:pointer;border-bottom:2px solid transparent;transition:all .2s;background:none;border-top:none;border-left:none;border-right:none;font-family:inherit}
+.tab:hover,.tab.on{color:var(--blue);border-bottom-color:var(--blue)}
+
+/* 섹션 */
+.sec{padding:64px 6%;border-bottom:1px solid var(--border)}
+.sec.alt{background:var(--bg)}
+.sec-in{max-width:1160px;margin:0 auto}
+.sec-head{display:flex;align-items:center;gap:18px;margin-bottom:10px;flex-wrap:wrap}
+.sec-ico{width:60px;height:60px;border-radius:16px;background:var(--sc-light,var(--blue-light));display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.sec-h2{font-size:clamp(22px,3vw,32px);font-weight:900;letter-spacing:-1px}
+.sec-tagline{font-size:14.5px;color:var(--text3);margin-bottom:34px}
+.sec-tagline .hl-t{color:var(--sc,var(--blue));font-weight:800}
+.pill{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.5px;padding:4px 11px;border-radius:50px;background:var(--sc,var(--blue));color:#fff;vertical-align:middle;margin-left:2px}
+
+/* 단계 카드 */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:18px}
+.step{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px 22px 26px;display:flex;flex-direction:column}
+.sec.alt .step{background:var(--white)}
+.step-no{width:32px;height:32px;border-radius:50%;background:var(--sc,var(--blue));color:#fff;font-size:15px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.step-fig{min-height:106px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.step-h{font-size:16.5px;font-weight:900;letter-spacing:-.4px;margin-bottom:7px;line-height:1.35}
+.step-p{font-size:13.8px;color:var(--text2);line-height:1.65}
+.step-p b{font-weight:700;color:var(--sc,var(--blue))}
+.step-p .r{color:var(--warn);font-weight:700}
+
+/* 핵심 팁 */
+.tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:18px}
+.tip{border:2px solid var(--blue-light);border-radius:var(--radius);padding:26px 24px;background:var(--white);text-align:center}
+.tip-fig{margin-bottom:12px;display:flex;justify-content:center}
+.tip-h{font-size:17px;font-weight:900;color:var(--blue);margin-bottom:8px;letter-spacing:-.4px}
+.tip-p{font-size:14px;color:var(--text2);line-height:1.65}
+.tip-p b{font-weight:700;color:var(--text)}
+
+.sec-rule{height:4px;border-radius:4px;background:var(--sc,var(--blue));width:56px;margin-bottom:16px}
+.subhead{font-size:15px;font-weight:900;color:var(--sc,var(--blue));margin:34px 0 14px;padding-left:12px;border-left:4px solid var(--sc,var(--blue))}
+
+/* 용어 카드 */
+.terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:18px}
+.term{border:2px solid var(--tc);border-radius:var(--radius);background:var(--white);padding:0;overflow:hidden;display:flex;flex-direction:column}
+.term-top{background:var(--tc);padding:14px 20px;display:flex;align-items:center;gap:12px}
+.term-name{font-size:20px;font-weight:900;color:#fff;letter-spacing:-.6px}
+.term-en{font-size:11.5px;font-weight:800;color:#fff;opacity:.8;letter-spacing:.6px}
+.term-body{padding:22px 20px 24px;flex:1;display:flex;flex-direction:column}
+.term-flow{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.term-chip{font-size:13px;font-weight:800;padding:6px 13px;border-radius:50px;background:#F1F4F7;color:var(--text2)}
+.term-arrow{font-size:15px;font-weight:900;color:var(--tc)}
+.term-def{font-size:14.5px;font-weight:700;line-height:1.6;margin-bottom:10px}
+.term-ex{font-size:13.4px;color:var(--text3);line-height:1.65}
+.term-ex b{color:var(--text2);font-weight:700}
+
+/* ADF 금지 원본 경고 */
+.adfw{border:2.5px solid #E4574D;border-radius:var(--radius);background:#FEF6F5;padding:22px 24px;margin-top:22px}
+.adfw-h{display:flex;gap:11px;align-items:center;font-size:18px;font-weight:900;color:#B31E16;margin-bottom:14px;line-height:1.35}
+.adfw-h .x{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:#C0261C;color:#fff;font-size:16px;font-weight:900;display:flex;align-items:center;justify-content:center}
+.adfw-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.adfw-box{background:#fff;border-radius:10px;padding:16px 18px}
+.adfw-box.ok{border:1.5px solid #BFE3C6}
+.adfw-box.no{border:1.5px solid #F3C3BF}
+.adfw-t{font-size:14.5px;font-weight:900;margin-bottom:9px}
+.adfw-box.ok .adfw-t{color:#1B7A2C}
+.adfw-box.no .adfw-t{color:#C0261C}
+.adfw-box ul{margin:0;padding-left:17px}
+.adfw-box li{font-size:13.6px;color:var(--text2);line-height:1.6;margin-bottom:5px}
+.adfw-foot{margin-top:15px;font-size:13.8px;line-height:1.65;color:#8A1C15;font-weight:600}
+.adfw-foot b{font-weight:900;color:#B31E16}
+
+/* 커버 여는 안내 */
+.openbox{margin-bottom:20px}
+.ob{background:#fff;border:2px solid var(--sc,var(--blue));border-radius:var(--radius);padding:18px;display:flex;gap:22px;align-items:center}
+@media(max-width:760px){.ob{flex-direction:column}}
+.ob-fig{flex:0 0 46%;display:flex;justify-content:center}
+.ob-h{font-size:16px;font-weight:900;margin-bottom:6px;line-height:1.35}
+.ob-p{font-size:13.6px;color:var(--text2);line-height:1.62}
+.ob-p b{color:var(--sc,var(--blue));font-weight:700}
+.ob-p .r{color:var(--warn);font-weight:700}
+
+/* 특수 복사 카드 */
+.minis{display:grid;grid-template-columns:repeat(auto-fit,minmax(304px,1fr));gap:18px}
+.mini{border:1px solid var(--border);border-radius:var(--radius);background:#fff;overflow:hidden;display:flex;flex-direction:column}
+.mini-top{background:var(--sc,var(--blue));color:#fff;padding:13px 18px;font-size:16.5px;font-weight:900;display:flex;align-items:center;gap:10px;letter-spacing:-.4px}
+.mini-fig{margin:0 0 16px}
+.mini-fig img{width:100%;border-radius:8px;border:1px solid var(--border);display:block}
+.mini-body{padding:20px 18px 22px;flex:1;display:flex;flex-direction:column}
+.mini ol{margin:0;padding-left:19px}
+.mini li{font-size:13.8px;color:var(--text2);line-height:1.62;margin-bottom:10px}
+.mini li:last-child{margin-bottom:0}
+.mini li b{color:var(--sc,var(--blue));font-weight:700}
+.mini li .r{color:var(--warn);font-weight:700}
+.mini-warn{margin-top:14px;background:#FEF2F2;border:2px solid #E4574D;border-radius:10px;padding:14px 16px}
+.mini-warn-h{font-size:14.5px;font-weight:900;color:#C0261C;line-height:1.45;display:flex;gap:8px;align-items:flex-start;margin-bottom:6px}
+.mini-warn-h .x{flex:0 0 auto;width:20px;height:20px;border-radius:50%;background:#C0261C;color:#fff;font-size:13px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.mini-warn-p{font-size:13.2px;color:#8A1C15;line-height:1.6;font-weight:600;padding-left:28px}
+.mini-warn-p b{font-weight:900;color:#C0261C}
+.mini-note{margin-top:14px;background:#F5F8FA;border-radius:9px;padding:13px 15px;font-size:13px;color:var(--text2);line-height:1.6}
+.mini-note b{color:var(--text);font-weight:700}
+
+/* MS 오피스 서브탭 */
+.otabs{display:flex;gap:8px;margin-bottom:30px;flex-wrap:wrap}
+.otab{padding:10px 22px;font-size:13.5px;font-weight:800;border-radius:50px;border:2px solid var(--border);background:#fff;color:var(--text2);cursor:pointer;font-family:inherit;transition:all .18s}
+.otab:hover{border-color:var(--blue);color:var(--blue)}
+.otab.on{background:var(--blue);border-color:var(--blue);color:#fff}
+
+/* MS 오피스 화면 목업 (실제 인쇄 화면 재현) */
+.steps-office{grid-template-columns:repeat(auto-fit,minmax(288px,1fr))}
+.steps-office .step-fig{min-height:auto;margin-bottom:16px}
+.omock{border:1px solid #D7DDE3;border-radius:8px;overflow:hidden;background:#fff;box-shadow:0 1px 5px rgba(17,24,39,.07);width:100%}
+.omock-bar{height:18px;background:#EEF1F5;display:flex;align-items:center;gap:4px;padding:0 8px;border-bottom:1px solid #E5E7EB}
+.omock-dot{width:5px;height:5px;border-radius:50%;background:#D7DDE3}
+.omock-body{display:flex;height:158px}
+.omock-side{width:58px;flex:0 0 auto;background:var(--oc,#1B8AC4);padding:8px 0;display:flex;flex-direction:column;gap:1px}
+.omock-side div{color:rgba(255,255,255,.68);font-size:8.6px;font-weight:700;padding:5px 0 5px 10px}
+.omock-side div.on{color:#fff;background:rgba(255,255,255,.18);border-left:3px solid #fff;padding-left:7px}
+.omock-fields{width:124px;flex:0 0 auto;background:#F7F8FA;padding:8px 8px;display:flex;flex-direction:column;gap:5px;border-right:1px solid #E5E7EB;overflow:hidden}
+.omock-cap{font-size:7.6px;color:#9AA5B1;font-weight:800;letter-spacing:.3px;margin-top:3px}
+.omock-cap:first-child{margin-top:0}
+.omock-field{background:#fff;border:1px solid #C9D3DB;border-radius:4px;padding:4px 14px 4px 7px;font-size:8.2px;font-weight:700;color:#374151;position:relative;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.omock-field::after{content:'▾';position:absolute;right:5px;top:50%;transform:translateY(-50%);color:#9AA5B1;font-size:6.5px}
+.omock-row.hi .omock-field{border-color:#D93025;background:#FEF2F2;color:#B31E16;box-shadow:0 0 0 2px rgba(217,48,37,.14)}
+.omock-row.hi .omock-cap{color:#D93025}
+.omock-preview{flex:1;background:#EDEFF2;display:flex;align-items:center;justify-content:center;padding:10px;position:relative}
+.omock-page{width:66%;height:88%;background:#fff;border:1px solid #D7DDE3;box-shadow:0 1px 5px rgba(0,0,0,.09);display:flex;align-items:center;justify-content:center}
+.omock-tag{position:absolute;background:#D93025;color:#fff;font-size:8px;font-weight:800;padding:3px 8px;border-radius:5px;white-space:nowrap;box-shadow:0 2px 5px rgba(217,48,37,.3)}
+.omock-cap.hi{color:#D93025}
+.omock-fields .omock-row.hi{margin:0 -3px;padding:2px 3px;background:rgba(217,48,37,.06);border-radius:5px}
+
+/* 준비중 */
+.soon{border:1px dashed #C9D3DB;border-radius:var(--radius);padding:44px 24px;text-align:center;background:var(--white)}
+.soon-h{font-size:16px;font-weight:800;color:var(--text3);margin-bottom:6px}
+.soon-p{font-size:13.5px;color:var(--text3)}
+
+/* FAQ */
+.faq{border-top:1px solid var(--border)}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-q{width:100%;text-align:left;background:none;border:none;font-family:inherit;font-size:15.5px;font-weight:700;color:var(--text);padding:20px 40px 20px 0;cursor:pointer;position:relative;line-height:1.5}
+.faq-q::after{content:'+';position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:22px;font-weight:400;color:var(--blue)}
+.faq-item.open .faq-q::after{content:'−'}
+.faq-a{display:none;font-size:14.2px;color:var(--text2);line-height:1.75;padding:0 0 22px}
+.faq-item.open .faq-a{display:block}
+
+/* FOOTER */
+footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
+.ft-wrap{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:56px}
+.ft-brand img{width:32px;height:32px;object-fit:contain;border-radius:6px;margin-bottom:14px}
+.ft-brand-name{color:white;font-size:18px;font-weight:900;margin-bottom:10px}
+.ft-brand p{font-size:13px;line-height:2}
+.ft-col h4{color:white;font-size:13px;font-weight:700;margin-bottom:14px;letter-spacing:.5px}
+.ft-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.ft-col a{font-size:13px;transition:color .2s}
+.ft-col a:hover{color:white}
+.ft-bottom{max-width:1160px;margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.ft-bottom p{font-size:12px;color:rgba(255,255,255,.25)}
+
+@media(max-width:820px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .nav-links.show{display:flex;position:absolute;top:70px;left:0;right:0;background:#fff;flex-direction:column;padding:10px 6%;border-bottom:1px solid var(--border)}
+  .sec{padding:48px 6%}
+  .ft-wrap{grid-template-columns:1fr}
+  .nav-raccoon{display:none}
+}
+
+/* ===== 사용방법 하위 구조 추가 스타일 ===== */
+.svc-switch{background:#fff;border-bottom:1px solid var(--border);padding:14px 6%}
+.svc-switch-in{max-width:1160px;margin:0 auto;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.svc-switch a{padding:8px 18px;font-size:13.5px;font-weight:800;border-radius:50px;border:2px solid var(--border);background:#fff;color:var(--text2);transition:all .18s}
+.svc-switch a:hover{border-color:var(--blue);color:var(--blue)}
+.svc-switch a.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.svc-switch a.home{border-style:dashed;color:var(--text3)}
+.svc-switch-label{font-size:12.5px;font-weight:800;color:var(--text3);margin-right:4px}
+
+.steps-wide{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.step-figs{margin-bottom:16px;display:grid;gap:10px}
+.step-figs.two{grid-template-columns:1fr 1fr}
+.step-photo{width:100%;height:auto;border-radius:8px;border:1px solid var(--border);display:block}
+.step-dual{grid-column:span 2}
+.open1{background:#EEF7FD;border:1.5px solid #BFDDF0;border-radius:16px;padding:18px 20px;margin:16px 0 8px}
+.open1-h{font-size:17px;font-weight:900;color:var(--text)}
+.open1-n{display:inline-block;background:var(--blue);color:#fff;border-radius:50px;padding:2px 11px;font-size:13px;margin-right:8px;vertical-align:1px}
+.open1-body{display:flex;gap:18px;align-items:flex-start;margin-top:14px}
+.open1-img{width:300px;max-width:42%;flex-shrink:0}
+.open1-txt p{font-size:14.5px;line-height:1.8;color:var(--text2);margin:0 0 8px}
+.open1-txt p b{color:var(--text)}
+.open1-txt .open1-phone{background:#fff;border-radius:12px;padding:10px 14px;margin:10px 0 0}
+.open1-phone a{color:var(--blue);font-weight:800}
+.open2-label{margin:18px 0 8px;font-size:15px;font-weight:900;color:var(--text)}
+.open2-label span{color:var(--blue)}
+@media(max-width:640px){.open1-body{flex-direction:column}.open1-img{width:100%;max-width:100%}}
+.step-note{margin-top:12px;background:#F5F8FA;border-radius:9px;padding:11px 14px;font-size:13px;color:var(--text2);line-height:1.6}
+.step-note b{color:var(--text);font-weight:700}
+.step-note.warn{background:#FEF2F2;color:#8A1C15;font-weight:600}
+.step-note.warn b{color:#B31E16}
+.sec-note{margin:0 0 22px;max-width:720px}
+.pgroup{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:26px;align-items:start;background:#fff;border:1px solid var(--border);border-radius:14px;padding:22px;margin-bottom:20px;max-width:1100px}
+.pfig{margin:0}
+.plist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:16px}
+.plist>li{display:flex;gap:12px;align-items:flex-start}
+.pn{flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:#E5252A;color:#fff;font-weight:900;font-size:15px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.pb{flex:1;min-width:0;font-size:14.2px;color:var(--text2);line-height:1.7}
+.pb b{font-weight:800;color:var(--text)}
+.pwarn{margin-top:8px;background:#FEF2F2;border:1.5px solid #E4574D;border-radius:10px;padding:10px 13px;font-size:13.4px;color:#8A1C15;font-weight:600;line-height:1.65}
+.pwarn b{color:#B31E16;font-weight:900}
+.pwarn ol{margin:6px 0 0;padding-left:20px}
+.pwarn li{margin-bottom:4px}
+.plink{display:inline-block;margin-top:2px;color:var(--blue);font-weight:800;text-decoration:underline}
+@media(max-width:820px){.pgroup{grid-template-columns:1fr;padding:16px}}
+.pg2{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr)}
+.pg2 .pfig{position:sticky;top:130px}
+.pimg{margin:10px 0 4px;max-width:460px}
+.pimg img{display:block;width:100%;height:auto;border:1px solid var(--border);border-radius:8px}
+@media(max-width:820px){.pg2{grid-template-columns:1fr}.pg2 .pfig{position:static}}
+.pg1{grid-template-columns:1fr}
+.order-box{background:#fff;border:2px solid var(--blue);border-radius:14px;padding:18px 20px;margin:0 0 26px;max-width:1000px}
+.order-h{font-size:17px;font-weight:900;color:var(--text);margin-bottom:12px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.order-h span{font-size:12.5px;font-weight:800;background:var(--blue);color:#fff;padding:3px 11px;border-radius:50px}
+.order-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.order-list li{display:flex;gap:11px;align-items:flex-start;background:#F3F9FE;border:1px solid #CFE6F8;border-radius:12px;padding:12px 13px;font-size:13.8px;line-height:1.6;color:var(--text2)}
+.order-list li>div{flex:1;min-width:0}
+.order-list .on{flex:0 0 auto;width:28px;height:28px;border-radius:50%;background:var(--blue);color:#fff;font-weight:900;font-size:15px;display:flex;align-items:center;justify-content:center}
+.order-warn{margin-top:14px;background:#FEF2F2;border:2px solid #E4574D;border-radius:12px;padding:14px 16px;color:#8A1C15;font-size:14px;line-height:1.7}
+.order-warn-h{font-size:16px;font-weight:900;color:#C0261C;margin-bottom:6px}
+.order-warn p{margin:0 0 8px}
+.order-warn b{color:#B31E16;font-weight:900}
+.order-ex{background:#fff;border-radius:8px;padding:9px 12px}
+.order-ok{margin-bottom:0!important;font-weight:700}
+.we-pics{display:flex;flex-direction:column;gap:20px;max-width:940px;margin:0 0 22px}
+.wefig{margin:0;background:#fff;border:1px solid var(--border);border-radius:14px;padding:12px}
+.wefig img{display:block;width:100%;height:auto;border-radius:8px}
+.sub2{margin:12px 0 4px;padding:12px 14px;background:#F8FAFC;border:1px solid var(--border);border-radius:12px}
+.sub2-h{font-weight:900;color:var(--text);font-size:14.5px;margin-bottom:6px}
+.sub2-n{display:inline-block;padding:2px 9px;border-radius:50px;background:var(--blue);color:#fff;font-size:12.5px;margin-right:6px}
+.ablist{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:8px}
+.ablist li{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.65;color:var(--text2)}
+.ablist li>div{flex:1;min-width:0}
+.ab{flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:#E5252A;color:#fff;font-weight:900;font-size:13.5px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.ftype-box{margin-top:14px;background:#E8F4FC;border:2px solid var(--blue);border-radius:12px;padding:14px 14px 16px}
+.ftype-h{font-size:14.5px;font-weight:900;color:var(--text);line-height:1.45}
+.ftype-sub{font-size:12.5px;font-weight:700;color:var(--text2);margin:3px 0 11px}
+.ftype-btns{display:flex;flex-wrap:wrap;gap:8px}
+.ftype-btn{border:0;color:#fff;font-family:inherit;font-weight:800;font-size:13.5px;padding:10px 16px;border-radius:50px;cursor:pointer;box-shadow:0 2px 6px rgba(17,24,39,.18);transition:transform .15s}
+.ftype-btn:hover{transform:translateY(-2px)}
+.ftype-btn.pdf{background:#D93025}.ftype-btn.hwp{background:#0F6CBD}.ftype-btn.office{background:#2B579A}.ftype-btn.img{background:#16A34A}.ftype-btn.web{background:#7C3AED}.ftype-btn.cert{background:#D97706}
+.ftype-btn{border-radius:16px;text-align:center;line-height:1.3}
+.ftype-btn b{display:block;font-weight:900}
+.ftype-btn small{display:block;font-size:11px;font-weight:700;opacity:.95;margin-top:2px}
+.step-no.mfp{font-size:12.5px;letter-spacing:-.5px}
+.goto{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 14px;margin:22px 0 4px;padding:16px 22px;border-radius:14px;background:#E7F7EC;border:2px solid #22B24C;color:#14532D;text-decoration:none;font-size:14.5px;line-height:1.5}
+.goto span{font-weight:700}
+.goto b{font-weight:900;color:#0B3D1E;font-size:16px}
+.goto:hover{background:#d5f0dd}
+.bsub{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:48px 0 20px;padding:15px 22px;border-radius:14px;color:#fff;font-size:23px;font-weight:900;letter-spacing:-.5px;line-height:1.3;box-shadow:0 4px 14px rgba(17,24,39,.14)}
+.bsub:first-of-type{margin-top:26px}
+.bsub-ico{flex:0 0 auto;width:38px;height:38px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:23px;font-weight:900;line-height:1}
+.bsub small{margin-left:auto;font-size:14px;font-weight:800;background:rgba(255,255,255,.24);padding:5px 14px;border-radius:50px;letter-spacing:0;white-space:nowrap}
+.bsub.edge{background:#0F6CBD}.bsub.edge .bsub-ico{color:#0F6CBD;font-family:Georgia,serif}
+.bsub.chrome{background:#D93025}.bsub.chrome .bsub-ico{color:#D93025}
+.bsub.common{background:#22B24C}.bsub.common .bsub-ico{font-size:21px}
+@media(max-width:560px){.bsub{font-size:19px;padding:13px 16px;gap:10px}.bsub small{margin-left:0;font-size:13px}}
+.steps-edge{grid-template-columns:1fr;max-width:1000px}
+.steps-edge .step{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);column-gap:28px;align-items:start}
+.steps-edge .step-no{grid-column:1/-1}
+.steps-edge .step-figs{grid-column:1;margin-bottom:0}
+.steps-edge .est-txt{grid-column:2}
+.steps-edge .step.noimg{grid-template-columns:1fr}
+.steps-edge .step.noimg .est-txt{grid-column:1}
+.est-fig{margin:0}
+.est-two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.est-cap{font-size:12.5px;font-weight:700;color:var(--text2);margin-top:6px;line-height:1.5}
+@media(max-width:719px){
+  .steps-edge .step{grid-template-columns:1fr}
+  .steps-edge .step-figs,.steps-edge .est-txt{grid-column:1}
+  .steps-edge .step-figs{margin-bottom:16px}
+}
+@media(max-width:719px){
+  .step-dual{grid-column:span 1}
+  .step-figs.two{grid-template-columns:1fr}
+}
+
+/* 사용방법 허브: 서비스 선택 카드 */
+.gcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:18px}
+.gcard{border:2px solid var(--tc);border-radius:var(--radius);background:#fff;overflow:hidden;display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s}
+.gcard:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(17,24,39,.1)}
+.gcard-top{background:var(--tc);padding:14px 20px;display:flex;align-items:center;gap:12px}
+.gcard-name{font-size:20px;font-weight:900;color:#fff;letter-spacing:-.6px}
+.gcard-body{padding:20px;flex:1;display:flex;flex-direction:column;gap:14px}
+.gcard-desc{font-size:14px;color:var(--text2);line-height:1.65;flex:1}
+.gcard-go{font-size:13.5px;font-weight:900;color:var(--tc)}
+
+.nav-links li{position:relative}
+@media(max-width:900px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .nav-links.show{display:flex;position:absolute;top:70px;left:0;right:0;background:#fff;flex-direction:column;padding:10px 6%;border-bottom:1px solid var(--border)}
+  .nav-links{max-height:calc(100vh - 70px);overflow-y:auto}
+}
+/* 상단 제목·서비스 선택 고정: 아래 내용만 스크롤 */
+.stick-top{position:sticky;top:70px;margin-top:70px;z-index:90}
+.stick-top .page-header{margin-top:0;position:static}
+.page-header{padding:10px 6% 8px}
+.ph-eyebrow{display:none}
+.ph-h1{font-size:clamp(22px,3vw,30px);letter-spacing:-1px;margin-bottom:0;line-height:1.3}
+.ph-sub{font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.svc-switch{padding:8px 6%}
+.svc-switch a{padding:6px 15px}
+[id]{scroll-margin-top:215px}
+@media(max-width:760px){
+  .page-header{padding:10px 5% 8px}
+  .ph-h1{font-size:19px}
+  .ph-sub{display:none}
+  .svc-switch{padding:7px 5%}
+  .svc-switch-in{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .svc-switch-in::-webkit-scrollbar{display:none}
+  .svc-switch a,.svc-switch-label{flex:0 0 auto;white-space:nowrap}
+  .svc-switch-label{display:none}
+  [id]{scroll-margin-top:165px}
+}
+/* 2단계 메뉴: 서비스 페이지와 같은 밑줄 탭 */
+.svc-switch{background:var(--bg);border-bottom:1px solid var(--border);padding:0 6%}
+.svc-switch-in{max-width:1160px;margin:0 auto;display:flex;flex-wrap:nowrap;gap:0;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.svc-switch-in::-webkit-scrollbar{display:none}
+.svc-switch a,.svc-switch a.home{display:block;flex:0 0 auto;white-space:nowrap;padding:11px 18px;font-size:13px;font-weight:700;color:var(--text3);background:none;border:none;border-bottom:2px solid transparent;border-radius:0;transition:all .2s}
+.svc-switch a:hover,.svc-switch a.on{color:var(--blue);background:none;border-bottom-color:var(--blue)}
+@media(max-width:760px){.svc-switch{padding:0 5%}.svc-switch a{padding:10px 15px}}
+.fax-ico{vertical-align:-2px;margin-right:1px}
+.bill-warn{margin-top:12px;background:#FEF2F2;border:2px solid #D93025;border-radius:10px;padding:11px 13px;font-size:13.4px;line-height:1.65;color:#8A1C15;font-weight:600}
+.bill-warn b{color:#B31E16;font-weight:900}
+.bill-warn .bh{display:block;font-size:14px;font-weight:900;color:#C0261C;margin-bottom:4px}
+/* FAQ 등에서 #이름 으로 들어올 때, 구역 제목이 고정 메뉴 바로 아래에 보이도록 */
+.sec[id]{scroll-margin-top:167px}
+@media(max-width:700px){.sec[id]{scroll-margin-top:122px}}
+
+/* 미니프랜즈 꾸밈 캐릭터 (제목 오른쪽) */
+.ph-inner{position:relative;padding-right:84px}
+.ph-pal{position:absolute;right:0;bottom:-8px;height:70px;width:auto;pointer-events:none;filter:drop-shadow(0 3px 4px rgba(0,0,0,.08))}
+@media(max-width:760px){.ph-inner{padding-right:50px}.ph-pal{height:42px;bottom:-6px}}
+
+/* 미니프랜즈 담당 친구 소개 띠 */
+.fr-band{max-width:1160px;margin:0 auto;padding:14px 6% 0}
+.fr-in{display:flex;align-items:center;gap:16px;background:var(--cl);border:3px dashed var(--c);border-radius:26px;padding:10px 20px 10px 14px;text-decoration:none;color:inherit;transition:transform .2s}
+.fr-in:hover{transform:translateY(-2px)}
+.fr-in img{flex:0 0 auto;height:92px;width:auto;filter:drop-shadow(0 4px 4px rgba(0,0,0,.15))}
+.fr-txt{flex:1;min-width:0;font-size:14.5px;line-height:1.75;color:#374151}
+.fr-txt b{font-family:'Jua','Noto Sans KR',sans-serif;font-weight:400;font-size:20px;color:var(--c);margin-right:6px}
+.fr-txt i{font-style:normal;font-family:'Gamja Flower','Jua',sans-serif;font-size:18px;color:var(--c);opacity:.85;margin-right:8px}
+.fr-txt span.fr-pill{display:inline-block;background:var(--c);color:#fff;font-size:12.5px;font-weight:700;padding:0 10px;border-radius:50px;margin-right:6px;vertical-align:2px}
+.fr-more{flex:0 0 auto;font-weight:700;font-size:13.5px;color:#fff;background:var(--c);padding:7px 14px;border-radius:50px;white-space:nowrap}
+@media(max-width:700px){
+  .fr-band{padding:10px 4% 0}
+  .fr-in{gap:10px;padding:8px 12px 8px 8px;border-radius:20px}
+  .fr-in img{height:68px}
+  .fr-txt{font-size:13px;line-height:1.6}
+  .fr-txt b{font-size:17px}
+  .fr-more{display:none}
+}
+</style>
+<style>
+/* 사용방법 동영상 */
+.gvid{max-width:820px;margin:0 0 34px;background:var(--sc-light,#E8F4FC);border:2px solid var(--sc,var(--blue));border-radius:18px;padding:14px 14px 16px}
+.gvid-h{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-weight:900;font-size:16px;color:var(--text);margin:0 4px 10px}
+.gvid-h .gvid-play{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--sc,var(--blue));color:#fff;font-size:12px}
+.gvid-h small{font-size:12.5px;font-weight:700;color:var(--text3)}
+.gvid video{display:block;width:100%;aspect-ratio:16/9;border-radius:12px;background:#000}
+</style>
+<style id="nav-lang-css">.nav-lang{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:#1B8AC4;border:1.5px solid #1B8AC4;border-radius:50px;padding:7px 13px;margin-right:8px;white-space:nowrap;background:#fff}.nav-lang:hover{background:#E8F4FC}.nav-links a{white-space:nowrap}@media(max-width:1180px){.nav-lang .t{display:none}.nav-lang{padding:6px 9px;font-size:15px}}@media(max-width:480px){.nav-lang{padding:4px 6px;margin-right:6px;font-size:14px}.nav-cta{padding:8px 13px!important;font-size:12.5px!important}}@media(max-width:400px){nav{padding-left:12px!important;padding-right:12px!important}.nav-logo-name{font-size:15px!important}.nav-logo{gap:6px!important}.nav-cta{padding:7px 9px!important;font-size:12px!important}.nav-lang,.lang-sel{margin-right:5px!important}.hamburger{margin-left:4px!important}}</style>
+<style>.lang-sel{display:inline-flex;align-items:center;gap:4px;margin-right:8px;border:1.5px solid #1B8AC4;border-radius:50px;padding:3px 4px 3px 10px;background:#fff;font-size:15px}.lang-sel select{border:none;background:transparent;font:700 13px sans-serif;color:#1B8AC4;padding:4px 2px;cursor:pointer;outline:none}.nav-links a{padding:8px 11px!important}@media(max-width:1280px){.nav-raccoon{display:none!important}}.lang-sel .cur{display:none}@media(max-width:480px){.nav-cta{display:none!important}.lang-sel{position:relative;margin-right:6px;padding:6px 10px;gap:5px}.lang-sel .cur{display:inline;white-space:nowrap;font:700 13px sans-serif;color:#1B8AC4}.lang-sel select{position:absolute;inset:0;width:100%;opacity:0}}.lang-sw{position:fixed;right:10px;bottom:12px;z-index:400}.tr-note{max-width:1160px;margin:0 auto;padding:10px 6% 0;font-size:12.5px;color:#9CA3AF}</style></head>
+<body>
+<!-- NAV -->
+<nav> <a class="nav-logo" href="../index.html"> <img alt="标志" class="logo-img" src="../logo.jpg"/> <span class="nav-logo-name">PrintShop Mini</span> </a> <ul class="nav-links" id="navLinks">
+<li><a href="../services.html">服务</a></li>
+<li><a class="active" href="guide.html">使用方法</a></li>
+<li><a href="../faq.html">FAQ</a></li>
+<li><a href="../about.html">介绍</a></li>
+<li><a href="../branches.html">门店</a></li>
+<li><a href="../community.html">社区</a></li>
+</ul>
+<div class="nav-right"> <label class="lang-sel" title="Language · 语言 · Ngôn ngữ"><span aria-hidden="true">🌐</span><span aria-hidden="true" class="cur">ZH ▾</span><select aria-label="Language" onchange="location.href=this.value"><option lang="ko" value="../guide-print.html">한국어</option><option lang="en" value="../en/guide-print.html">English</option><option lang="zh-Hans" selected="" value="../zh/guide-print.html">中文</option><option lang="vi" value="../vi/guide-print.html">Tiếng Việt</option></select></label><a class="nav-cta" href="../branches.html">查找门店</a> <div class="nav-raccoon" title="PrintShop Mini 吉祥物">
+<img alt="浣熊吉祥物" src="../raccoon1.png"/>
+</div>
+</div>
+<button class="hamburger" onclick="toggleMenu()">
+<span></span><span></span><span></span>
+</button>
+</nav>
+<!-- HEADER -->
+<div class="stick-top">
+<div class="page-header">
+<div class="ph-inner">
+<img alt="" aria-hidden="true" class="ph-pal" src="../img/friends/print.webp"/>
+<div class="ph-eyebrow">GUIDE · PRINT</div>
+<h1 class="ph-h1">打印使用方法</h1>
+<p class="ph-sub">在店内电脑上打开您的文件并打印到纸上的方法。也介绍各个程序的打印设置。</p>
+</div>
+</div>
+<div class="svc-switch"><div class="svc-switch-in"> <a href="guide.html">全部使用方法</a> <a href="../guide-video.html">▶ 视频</a> <a class="on" href="guide-print.html">🖨️ 打印</a> <a href="../guide-copy.html">📋 复印</a> <a href="../guide-scan.html">📄 扫描</a> <a href="../guide-fax.html"><svg aria-hidden="true" class="fax-ico" fill="none" height="15" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 48 48" width="15"><path d="M9 36V5h18l8 8v9" stroke="currentColor" stroke-width="4.2"></path><path d="M15 15h10M15 22h6" stroke="currentColor" stroke-width="4.2"></path><g transform="translate(20 21) scale(1.04)"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke-width="7" style="stroke:var(--bg)"></path><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="3.99"></path></g></svg> 传真 </a> <a href="../guide-coat.html">✨ 塑封</a> <a href="../guide-bind.html">📚 装订</a> </div></div>
+</div>
+<div class="fr-band" style="--c:#22B24C;--cl:#E7F7EC">
+<a class="fr-in" href="../about.html#friend-penpurin" title="认识迷你朋友 Mini Friends">
+<img alt="企鹅小印 (Peng Print)" height="92" src="../img/friends/print.webp" width="92"/>
+<div class="fr-txt"><b>企鹅小印</b><i>Peng Print</i><span class="fr-pill">负责打印</span><br/>你好！我是负责打印的企鹅小印。现在就告诉你怎么让纸一张张打印出来吧！</div> <span class="fr-more">查看更多朋友 →</span> </a>
+</div>
+<!-- 경고 배너 -->
+<div class="warnbar">
+<div class="warnbar-in">
+<div class="warnbar-ico">!</div>
+<div class="warnbar-tx">因打印设置错误而印错的，很难退款。<span>打印前请一定用<b>预览检查所有页面</b>。屏幕上看到什么就会印出什么。</span></div>
+</div>
+</div>
+<!-- 탭 -->
+<div class="tabs">
+<div class="tabs-in"><button class="tab on" onclick="jump('store',this)">打印方法</button> <button class="tab" onclick="jump('ptips',this)">打印小窍门</button> <button class="tab" onclick="jump('acrobat',this)">PDF</button> <button class="tab" onclick="jump('hancom',this)">韩文</button> <button class="tab" onclick="jump('office',this)">MS Office</button> <button class="tab" onclick="jump('browser',this)">Chrome · Edge</button> <button class="tab" onclick="jump('alsee',this)">ALSee</button> <button class="tab" onclick="jump('cert',this)">证书</button></div>
+</div>
+<div class="sec" id="store" style="--sc:#22B24C;--sc-light:#E7F7EC">
+<div class="sec-in">
+<div class="sec-head">
+<div class="sec-ico">
+<svg fill="none" height="34" viewbox="0 0 48 48" width="34">
+<rect height="9" rx="2" stroke="#1B8AC4" stroke-width="3" width="30" x="9" y="10"></rect>
+<rect height="14" rx="3" stroke="#1B8AC4" stroke-width="3" width="38" x="5" y="19"></rect>
+<rect height="7" rx="2" stroke="#1B8AC4" stroke-width="3" width="30" x="9" y="33"></rect>
+</svg>
+</div>
+<h2 class="sec-h2">打印方法 <span class="pill">PRINT</span></h2>
+</div>
+<p class="sec-tagline"><b>在店内电脑上打开您的文件，打印到纸上的服务。</b>先在电脑上打开文件并发送打印，然后<b>到复合机前，用个人识别码（PIN）找到文件并付款，就会打印出来。</b><br/>⚠️ <b>在电脑上发送打印后，到复合机前，用在电脑上输入的个人识别码查询并付款，最后才会打印出来。</b>在<b>复合机的刷卡机</b>付款之前，不会打印出来。<br/><span style="font-weight:600">※ 即使在电脑上已经付了证明文件发放费等，打印也要<b>在复合机刷卡机上另外付款</b>才会打印出来。</span></p>
+<div class="gvid"><div class="gvid-h"><span class="gvid-play">▶</span>先看打印方法视频 <small>没有声音也能看懂</small></div><video controls="" playsinline="" poster="../videos/guide-print.jpg" preload="none"><source src="../videos/guide-print.mp4" type="video/mp4"/> 您的浏览器无法播放视频。 </video></div>
+<div class="order-box"><div class="order-h">🔢 打印顺序 · 所有文件格式通用 <span>一定按这个顺序！</span></div><ol class="order-list"><li><span class="on">1</span><div><b>🖨️ 先选择打印机。</b><br/>最先选好<b>［흑백출력］（黑白）</b>或<b>［컬러출력］（彩色）</b>打印机。</div></li><li><span class="on">2</span><div><b>⚙️ 设置详细打印选项。</b><br/>纸张大小 · 单面/双面 · 份数 · 页数等。</div></li><li><span class="on">3</span><div><b>👀 检查预览。</b><br/>看内容是否完整，选彩色的话是否是彩色。</div></li><li><span class="on">4</span><div><b>✅ 最后按［인쇄］（打印）按钮。</b><br/>根据程序不同，是<b>［인쇄］按钮</b>、<b>打印机图标</b>或<b>［확인］（确认）按钮</b>。</div></li></ol><div class="order-warn"><div class="order-warn-h">🚫 设置好选项后，不要再换打印机！</div><p>选好打印机、设置好选项后，<b>如果再换打印机，选项就要从头重新设置。</b>换打印机后，所有选项都会改变。</p><p class="order-ex">❌ <b>这种情况最危险</b><br/>没选打印机就先设置选项 → 后来把打印机<b>从黑白改成彩色</b> → 选项变了却没检查就继续 → 选项被奇怪地应用，<b>打印出错。</b></p><p class="order-ok">✅ <b>请一直遵守：选打印机 → 设置选项 → 预览 → 打印按钮</b>的顺序。如果换了打印机，请<b>从头重新</b>检查选项。</p></div></div>
+<div id="guideFiles"></div>
+<div class="steps steps-wide">
+<div class="step">
+<div class="step-no">1</div>
+<div class="step-figs"><img alt="在电脑上打开文件并选择黑白/彩色/证书专用的画面" class="step-photo" loading="lazy" src="../images/print/print-select.png"/></div>
+<div class="step-h">打开文件，选择打印机</div>
+<p class="step-p">在电脑上打开文件 → <b>［인쇄］（打印）</b> → 选择打印机<br/>黑白 / 彩色 / 证书专用（PIN9999）</p>
+<div class="step-note">💾 邮箱、U 盘、手机里的文件，要<b>先保存到电脑</b>。点下面您的文件格式，最前面的<b>第 1 步（打开文件）</b>有详细说明。</div>
+<div class="ftype-box"><div class="ftype-h">📄 每种文件格式的打印选项设置方法都不一样。</div><div class="ftype-sub">打印设置方法 — 请点您的文件格式</div><div class="ftype-btns"><button class="ftype-btn pdf" onclick="goType('acrobat')" type="button"><b>PDF 文件</b></button><button class="ftype-btn hwp" onclick="goType('hancom')" type="button"><b>韩文文件</b></button><button class="ftype-btn office" onclick="goType('office','we')" type="button"><b>MS Office</b><small>Word · Excel · PowerPoint</small></button><button class="ftype-btn img" onclick="goType('alsee')" type="button"><b>图片文件</b><small>照片 JPG · PNG</small></button><button class="ftype-btn web" onclick="goType('browser')" type="button"><b>浏览器打印</b><small>网页设计工具做的 PDF</small></button><button class="ftype-btn cert" onclick="goType('cert')" type="button"><b>证书</b><small>TOEIC · TOEIC Speaking</small></button></div></div>
+</div>
+<div class="step" id="print-step2">
+<div class="step-no">2</div>
+<div class="step-figs"><img alt="个人识别码（PIN）输入画面" class="step-photo" loading="lazy" src="../images/print/print-pin.png"/></div>
+<div class="step-h">输入 4 位个人识别码（PIN）</div>
+<p class="step-p">请输入手机号码后 4 位<br/>证书专用打印机会自动填入 9999</p>
+</div>
+<div class="step step-dual">
+<div class="step-no">3</div>
+<div class="step-figs two"><img alt="在复合机主画面选择打印菜单" class="step-photo" loading="lazy" src="../images/print/print-machine1.png"/><img alt="选择 PC 作为打印文件位置的画面" class="step-photo" loading="lazy" src="../images/print/print-machine2.png"/></div>
+<div class="step-h">在复合机上：打印菜单 → PC</div>
+<p class="step-p">到店内的复合机前 → 选择［인쇄］（PRINT 打印）菜单 → 选择［PC］<br/>如果屏幕是黑的，请点一下屏幕</p>
+</div>
+<div class="step">
+<div class="step-no">4</div>
+<div class="step-figs"><img alt="输入 4 位个人识别码后，在打印任务列表中选择文件的画面" class="step-photo" loading="lazy" src="../images/print/print-serch.png"/></div>
+<div class="step-h">输入个人识别码并按［확인］（确认）→ 选择列表 → 按［시작］（开始）</div>
+<p class="step-p">输入在电脑上设定的个人识别码，按［확인］（确认）→ 在列表中选择文件 → 按［시작］（开始）</p>
+<div class="step-note">如果纸张大小显示 Letter，请回到电脑改成 A4</div>
+</div>
+<div class="step">
+<div class="step-no">5</div>
+<div class="step-figs"><img alt="收费信息（总价、页数）确认画面" class="step-photo" loading="lazy" src="../images/print/print-price.png?v=2"/></div>
+<div class="step-h">确认金额［과금정보］</div>
+<p class="step-p">确认总价 · 页数 · 是否彩色<br/>正确的话请按［확인］（确认）</p><div class="bill-warn"><span class="bh">🧾 必须确认收费信息窗口［과금정보］！</span><b>请确认收费信息窗口的全部内容。没确认就付款而出了问题的，不退款、不赔偿。</b><br/>请<b>全部确认、正确无误后再按［확인］（确认）</b>付款。</div>
+</div>
+<div class="step">
+<div class="step-no">6</div>
+<div class="step-figs"><img alt="用 IC 卡或三星支付付款的样子" class="step-photo" loading="lazy" src="../images/print/print-pay.png?v=3"/></div>
+<div class="step-h">刷卡付款</div>
+<p class="step-p">刷卡机发出语音后，<b>IC 卡（信用卡/借记卡）请插入</b>，<br/>三星支付请贴在有 Wi-Fi 标志的一面</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sec alt" id="ptips" style="--sc:#22B24C;--sc-light:#E7F7EC">
+<div class="sec-in">
+<div class="sec-head"><h2 class="sec-h2">打印小窍门</h2></div>
+<p class="sec-tagline">打印时经常忽略的地方。</p>
+<div class="tips">
+<div class="tip"><div class="tip-h">🎨 彩色要用预览确认！</div><p class="tip-p">如果选了<b>彩色打印机［컬러출력］</b>，一定要看<b>预览也是彩色</b>。有很多页时，请检查<b>所有页面</b>。</p></div>
+<div class="tip"><div class="tip-h">🖍️ 颜色可能会不一样</div><p class="tip-p"><b>打印出来的颜色可能和电脑屏幕不一样。</b>同一个文件，<b>每页的颜色</b>也可能不一样。</p></div>
+<div class="tip"><div class="tip-h">🧾 付款前确认收费信息窗口！</div><p class="tip-p">在复合机付款前会出现<b>“收费信息窗口［과금정보］”</b>。如果和您知道的<b>不一样，绝对不要付款。</b>请回到电脑重新检查打印选项。</p></div>
+</div>
+</div>
+</div>
+<div class="sec" id="acrobat">
+<div class="sec-in">
+<div class="sec-head">
+<div class="sec-ico">
+<svg fill="none" height="34" viewbox="0 0 48 48" width="34">
+<path d="M12 5h16l9 9v29H12z" stroke="#1B8AC4" stroke-linejoin="round" stroke-width="3"></path>
+<path d="M28 5v9h9" stroke="#1B8AC4" stroke-linejoin="round" stroke-width="3"></path>
+<text fill="#1B8AC4" font-family="Noto Sans KR" font-size="11" font-weight="900" text-anchor="middle" x="24" y="35">PDF</text>
+</svg>
+</div>
+<h2 class="sec-h2">PDF 文件用 Adobe Acrobat Reader 打开 <span class="pill">PDF</span></h2>
+</div>
+<p class="sec-tagline">这是店内电脑上安装的 PDF 专用程序（<b>Adobe Acrobat Reader</b>）。打开 PDF 文件，按<b>打印机图标</b>或<b>［파일］（文件）→［인쇄］（打印）</b>，或同时按键盘 <b>Ctrl</b> 和 <b>P</b>，就会出现下面的打印画面。</p>
+<div class="open1">
+<div class="open1-h"><span class="open1-n">第 1 步</span>在电脑上打开要打印的文件</div>
+<div class="open1-body">
+<img alt="用鼠标双击桌面上的 PDF 文件打开" class="step-photo open1-img" loading="lazy" src="../images/print/open-file-pdf.png?v=2"/>
+<div class="open1-txt">
+<p>在电脑上<b>双击</b>要打印的文件打开。</p>
+<p>邮箱或 U 盘里的文件，请<b>先保存到电脑桌面</b>。</p>
+<p>不一定要放桌面。保存到电脑上，<b>只要知道存在哪里（路径）</b>就行。到那个位置双击要打印的文件打开。最容易找到的地方是桌面。</p>
+<p class="open1-phone">📱 <b>文件在手机里？</b>请点下面的链接，查看先把手机文件保存到电脑的方法。<br/><a href="../faq.html#faq-22">查看把手机文件保存到电脑的方法（韩语）→</a></p>
+</div>
+</div>
+</div>
+<div class="open2-label"><span>接下来</span> · 设置打印选项</div>
+<div class="pgroup"><figure class="pfig"><a href="../images/print/pdf-ui-options.png?v=1" rel="noopener" target="_blank"><img alt="PDF 打印画面。用编号放大显示选择打印机、适合、取消勾选纸张来源的位置" class="step-photo" loading="lazy" src="../images/print/pdf-ui-options.png?v=1"/></a><figcaption class="est-cap">请确认标有 ① ② ③ 的地方 <span style="color:var(--text3);font-weight:600">（点图片可放大）</span></figcaption></figure><ol class="plist"><li><span class="pn">1</span><div class="pb">在<b>［프린터］（打印机）</b>中选择<b>［흑백출력］（黑白）</b>或<b>［컬러출력］（彩色）</b>打印机。</div></li><li><span class="pn">2</span><div class="pb">在<b>页面大小调整［페이지 크기 조정 및 처리］</b>中，一定要选<b>［맞추기］（适合）</b>。</div></li><li><span class="pn">3</span><div class="pb"><div class="pwarn" style="margin-top:0">⚠️ <b>［PDF 페이지 크기에 따라 용지 소스 선택(Z)］</b>（按 PDF 页面大小选择纸张来源）<b>一定不能勾选！</b><br/>如果勾选了，即使选 A4 · B4 · A3，在复合机查询时也会显示 <b>Custom</b>。<b>请一定取消勾选</b>后再打印。</div></div></li></ol></div>
+<div class="pgroup"><figure class="pfig"><a href="../images/print/pdf-ui-print.png?v=1" rel="noopener" target="_blank"><img alt="PDF 打印画面。用编号放大显示页面设置按钮、以灰度打印勾选、预览、打印按钮" class="step-photo" loading="lazy" src="../images/print/pdf-ui-print.png?v=1"/></a><figcaption class="est-cap">请确认标有 ④ ⑤ ⑥ 的地方 <span style="color:var(--text3);font-weight:600">（点图片可放大）</span></figcaption></figure><ol class="plist"><li><span class="pn">4</span><div class="pb">按下方的<b>［페이지 설정...］（页面设置）</b>，选择想要的<b>纸张大小</b>。</div></li><li><span class="pn">5</span><div class="pb"> 在<b>预览</b>中确认所有页面都正常。<br/>如果选了<b>彩色［컬러출력］</b>，右边的小预览<b>一定要是彩色</b>。 <div class="pwarn"> 如果不是彩色 <ol><li>看上方的<b>［회색 명암(흑백)으로 인쇄］（以灰度打印）</b>是否被勾选，如果勾选了就<b>取消勾选。</b></li><li>取消后还是黑白的话，请<b>重启电脑</b>，再重新打开文件。</li><li>还是黑白的话，请用 <b>Edge 或 Chrome</b> 打开文件，选择<b>彩色［컬러출력］</b>打印机，确认预览是彩色后再打印。<a class="plink" href="#browser" onclick="goType('browser');return false">查看 Edge · Chrome 方法</a></li></ol></div></div></li><li><span class="pn">6</span><div class="pb">所有打印选项设置好后，按<b>［인쇄］（打印）</b>按钮，会出现<b>个人识别码</b>输入窗口。</div></li></ol></div> <a class="goto" href="#print-step2" onclick="goStep2();return false"><span>PDF 打印选项到这里就完成了！按［인쇄］（打印）会出现个人识别码输入窗口。</span><b>请从上面“打印方法”第 2 步（输入 4 位个人识别码）继续 ⬆</b></a> </div>
+</div>
+<div class="sec alt" id="hancom">
+<div class="sec-in">
+<div class="sec-head">
+<div class="sec-ico">
+<svg fill="none" height="34" viewbox="0 0 48 48" width="34">
+<path d="M12 5h16l9 9v29H12z" stroke="#1B8AC4" stroke-linejoin="round" stroke-width="3"></path>
+<path d="M28 5v9h9" stroke="#1B8AC4" stroke-linejoin="round" stroke-width="3"></path>
+<text fill="#1B8AC4" font-family="Noto Sans KR" font-size="11" font-weight="900" text-anchor="middle" x="24" y="35">HWP</text>
+</svg>
+</div>
+<h2 class="sec-h2">韩文文件用韩文（Hancom）查看器打开 <span class="pill">韩文</span></h2>
+</div>
+<p class="sec-tagline">店内电脑安装的是<b>不能编辑、只能查看的查看器</b>。如果和制作文件的环境不同，画面可能会不一样。</p>
+<div class="open1">
+<div class="open1-h"><span class="open1-n">第 1 步</span>在电脑上打开要打印的文件</div>
+<div class="open1-body">
+<img alt="用鼠标双击桌面上的韩文文件打开" class="step-photo open1-img" loading="lazy" src="../images/print/open-file-hwp.png?v=2"/>
+<div class="open1-txt">
+<p>在电脑上<b>双击</b>要打印的文件打开。</p>
+<p>邮箱或 U 盘里的文件，请<b>先保存到电脑桌面</b>。</p>
+<p>不一定要放桌面。保存到电脑上，<b>只要知道存在哪里（路径）</b>就行。到那个位置双击要打印的文件打开。最容易找到的地方是桌面。</p>
+<p class="open1-phone">📱 <b>文件在手机里？</b>请点下面的链接，查看先把手机文件保存到电脑的方法。<br/><a href="../faq.html#faq-22">查看把手机文件保存到电脑的方法（韩语）→</a></p>
+</div>
+</div>
+</div>
+<div class="open2-label"><span>接下来</span> · 设置打印选项</div>
+<div class="pgroup pg2"><figure class="pfig"><a href="../images/print/hwp-ui-main.png?v=1" rel="noopener" target="_blank"><img alt="韩文打印画面。在选择打印机、设置按钮、打印份数、打印范围、打印方式、打印按钮上标了编号的图" class="step-photo" loading="lazy" src="../images/print/hwp-ui-main.png?v=1"/></a><figcaption class="est-cap">请按顺序确认 1~6 号位置 <span style="color:var(--text3);font-weight:600">（点图片可放大）</span></figcaption></figure><ol class="plist"><li><span class="pn">1</span><div class="pb"><b>选择打印机</b>：在打印机列表中点想要的打印机（<b>［흑백출력］（黑白）</b>或<b>［컬러출력］（彩色）</b>）。</div></li><li><span class="pn">2</span><div class="pb"> <b>设置按钮</b>：按<b>［설정］（设置）</b>会出现<b>［프린터 속성］（打印机属性）</b>窗口。这个窗口有<b>［기본］（基本）标签</b>和<b>［용지］（纸张）标签</b>。请依次确认下面的 <b>2-1</b>、<b>2-2</b>。 <div class="sub2"><div class="sub2-h"><span class="sub2-n">2-1</span> ［기본］（基本）标签 — 打印方向 · 单面/双面</div><figure class="pimg"><a href="../images/print/hwp-ui-prop1.png?v=1" rel="noopener" target="_blank"><img alt="打印机属性窗口的基本标签。A 是纸张方向，B 是双面打印选项" loading="lazy" src="../images/print/hwp-ui-prop1.png?v=1"/></a></figure><ul class="ablist"><li><span class="ab">A</span><div><b>纸张方向</b>：选择打印方向。<b>［세로］（纵向）</b>或<b>［가로］（横向）</b></div></li><li><span class="ab">B</span><div><b>双面打印</b>：只印一面选<b>［사용안함］（不使用）</b>，双面打印选<b>［긴면 묶음］（长边装订）</b>或<b>［짧은면 묶음］（短边装订）</b>。</div></li></ul></div><div class="sub2"><div class="sub2-h"><span class="sub2-n">2-2</span> ［용지］（纸张）标签 — 纸张大小</div><figure class="pimg"><a href="../images/print/hwp-ui-prop2.png?v=1" rel="noopener" target="_blank"><img alt="打印机属性窗口的纸张标签。A 是原稿尺寸，B 是输出尺寸" loading="lazy" src="../images/print/hwp-ui-prop2.png?v=1"/></a></figure><ul class="ablist"><li><span class="ab">A</span><div><b>原稿尺寸［원본 문서 크기］</b>：选择要打印的纸张大小（<b>A4 · B4 · A3</b>）。</div></li><li><span class="ab">B</span><div><b>输出尺寸［출력 문서 크기］</b>：这里也选<b>和 A 一样的尺寸</b>。不要保留<b>［원본 문서 크기와 동일］（与原稿尺寸相同）</b>。</div></li></ul><div class="pwarn" style="background:#EAF4FF;border-color:#1B8AC4;color:#10425F">📌 <b>例）</b>想印 A4 的话，<b>A</b> 和 <b>B</b> 两处都选 <b>A4</b>。</div><div class="pwarn">⚠️ 有些文件如果不设置<b>［출력 문서 크기］（输出尺寸）</b>，在复合机查询时纸张大小会显示为 <b>Letter</b> 或 <b>Custom</b> 等<b>韩文文件的尺寸</b>。</div></div></div></li><li><span class="pn">3</span><div class="pb">设置<b>打印份数</b>。</div></li><li><span class="pn">4</span><div class="pb">选择<b>要打印的页面范围</b>。选<b>［전체］（全部）</b>，或者只印部分页面就选<b>［일부분］（部分）</b>并输入页码。</div></li><li><span class="pn">5</span><div class="pb"><b>每面打印页数</b>：一面一页选<b>［기본 인쇄］（基本打印）</b>。一面印多页选<b>［모아 찍기］（合并打印）</b>并输入页数。</div></li><li><span class="pn">6</span><div class="pb"> 所有设置完成后，按<b>［인쇄］（打印）</b>按钮继续。 <div class="pwarn">※ <b>这是公用电脑，打印设置每次都会不一样。</b>请<b>确认并设置好所有想要的选项</b>后再打印。</div></div></li></ol></div>
+<div class="step-note" style="max-width:1100px;margin:0 0 18px">💡 因为和制作文件的电脑字体不同，字体、行距、表格可能会乱，也可能出现<b>原稿没有的符号（□）</b>。在韩文里用<b>［다른 이름으로 저장］（另存为）→ PDF</b> 后带来，就能和原稿一样打印。</div> <a class="goto" href="#print-step2" onclick="goStep2();return false"><span>韩文打印选项到这里就完成了！按［인쇄］（打印）会出现个人识别码输入窗口。</span><b>请从上面“打印方法”第 2 步（输入 4 位个人识别码）继续 ⬆</b></a> </div>
+</div>
+<div class="sec" id="office">
+<div class="sec-in">
+<div class="sec-head">
+<div class="sec-ico">
+<svg fill="none" height="34" viewbox="0 0 48 48" width="34">
+<rect height="30" rx="4" stroke="#1B8AC4" stroke-width="3" width="34" x="7" y="9"></rect>
+<path d="M7 18h34" stroke="#1B8AC4" stroke-width="3"></path>
+<path d="M18 18v21" stroke="#1B8AC4" stroke-width="3"></path>
+</svg>
+</div>
+<h2 class="sec-h2">Excel · Word · PowerPoint 文件用 MS Office 打开 <span class="pill">MS Office</span></h2>
+</div>
+<p class="sec-tagline">Word · Excel · PowerPoint 文件的打印设置方法。每个程序画面不同，但进入<b>［파일］（文件）→［인쇄］（打印）</b>的顺序是一样的。</p>
+<div class="open1">
+<div class="open1-h"><span class="open1-n">第 1 步</span>在电脑上打开要打印的文件</div>
+<div class="open1-body">
+<img alt="用鼠标双击桌面上的 Word · Excel · PowerPoint 文件打开" class="step-photo open1-img" loading="lazy" src="../images/print/open-file-office.png?v=2"/>
+<div class="open1-txt">
+<p>在电脑上<b>双击</b>要打印的文件打开。</p>
+<p>邮箱或 U 盘里的文件，请<b>先保存到电脑桌面</b>。</p>
+<p>不一定要放桌面。保存到电脑上，<b>只要知道存在哪里（路径）</b>就行。到那个位置双击要打印的文件打开。最容易找到的地方是桌面。</p>
+<p class="open1-phone">📱 <b>文件在手机里？</b>请点下面的链接，查看先把手机文件保存到电脑的方法。<br/><a href="../faq.html#faq-22">查看把手机文件保存到电脑的方法（韩语）→</a></p>
+</div>
+</div>
+</div>
+<div class="open2-label"><span>接下来</span> · 设置打印选项</div>
+<div class="otabs"><button class="otab on" onclick="officeTab('we',this)">Word · Excel</button> <button class="otab" onclick="officeTab('ppt',this)">PowerPoint</button></div>
+<!-- 엑셀 -->
+<div class="opanel" id="office-we">
+<div class="we-pics"><figure class="wefig"><a href="../images/print/wd-ui.png?v=1" rel="noopener" target="_blank"><img alt="Word 打印画面。放大显示点打印机后展开的列表" loading="lazy" src="../images/print/wd-ui.png?v=1"/></a><figcaption class="est-cap">Word 画面 — 请按顺序确认标号的位置 <span style="color:var(--text3);font-weight:600">（点图片可放大）</span></figcaption></figure><figure class="wefig"><a href="../images/print/xl-ui.png?v=1" rel="noopener" target="_blank"><img alt="Excel 打印画面。放大显示点打印机后展开的列表" loading="lazy" src="../images/print/xl-ui.png?v=1"/></a><figcaption class="est-cap">Excel 画面 — 和 Word 一样 <span style="color:var(--text3);font-weight:600">（点图片可放大）</span></figcaption></figure></div>
+<div class="pgroup pg1"><ol class="plist"><li><span class="pn">1</span><div class="pb">打开 <b>Excel</b> 或 <b>Word</b> 文件，点左侧菜单的<b>［인쇄］（打印）</b>。<br/>打印选项画面<b>Excel 和 Word 一样。</b></div></li><li><span class="pn">2</span><div class="pb"> 点<b>［프린터］（打印机）</b>栏右端的 <b>▼</b> 展开列表，然后选择<b>［흑백출력］（黑白）</b>或<b>［컬러출력］（彩色）</b>。（不是点“打印机”这几个字！） <div class="pwarn" style="margin-top:8px">⚠️ 如果选了<b>彩色［컬러출력］</b>打印机，请确认<b>预览也是彩色</b>。在预览中翻页，一定要确认<b>要打印的所有页面都是彩色</b>。</div></div></li><li><span class="pn">3</span><div class="pb"> 选择<b>纸张大小</b>。选好后用<b>预览</b>确认想要的内容都出来了。 <div class="pwarn">⚠️ 一定要确认<b>纸张大小</b>不是 <b>Letter</b>，而是<b>您要打印的尺寸（A4 · B4 · A3）</b>。</div></div></li><li><span class="pn">4</span><div class="pb">选择<b>单面 / 双面</b>等打印选项。选好后用<b>预览</b>确认是否符合要求。</div></li><li><span class="pn">5</span><div class="pb">点上方的<b>［인쇄］（打印）打印机图标</b>按钮。出现<b>个人识别码</b>输入窗口后，输入<b>任意 4 位数字</b>。推荐用<b>自己手机号码后 4 位</b>。<br/>到这里后，<b>在复合机上的步骤都一样。</b></div></li></ol></div> <a class="goto" href="#print-step2" onclick="goStep2();return false"><span>Word · Excel 打印选项到这里就完成了！按［인쇄］（打印）会出现个人识别码输入窗口。</span><b>请从上面“打印方法”第 2 步（输入 4 位个人识别码）继续 ⬆</b></a> </div>
+<!-- 파워포인트 -->
+<div class="opanel" id="office-ppt" style="display:none">
+<div class="pgroup pg2"><figure class="pfig"><a href="../images/print/ppt-ui-main.png?v=1" rel="noopener" target="_blank"><img alt="PowerPoint 打印画面。在份数、打印机、幻灯片、单面、颜色、打印机属性、打印按钮上标了编号的图" class="step-photo" loading="lazy" src="../images/print/ppt-ui-main.png?v=1"/></a><figcaption class="est-cap">请按顺序确认 1~8 号位置 <span style="color:var(--text3);font-weight:600">（点图片可放大）</span></figcaption></figure><ol class="plist"><li><span class="pn">1</span><div class="pb">设置<b>打印份数</b>［복사본］。</div></li><li><span class="pn">2</span><div class="pb"> <b>打印机</b>：点红色 <b>▼</b> 按钮后，点<b>［더보기］（更多）</b>。在打印机列表中从<b>［흑백출력］（黑白）·［컬러출력］（彩色）·［증명서전용］（证书专用）</b>中选一个。 <figure class="pimg"><a href="../images/print/ppt-ui-printer.png?v=1" rel="noopener" target="_blank"><img alt="在打印机列表中点更多，从黑白、彩色、证书专用中选择的图" loading="lazy" src="../images/print/ppt-ui-printer.png?v=1"/></a></figure></div></li><li><span class="pn">3</span><div class="pb"> <b>要打印的幻灯片</b>：点 <b>▼</b> 按钮，选择要打印的幻灯片。 <figure class="pimg"><a href="../images/print/ppt-ui-range.png?v=1" rel="noopener" target="_blank"><img alt="选择要打印的幻灯片的图" loading="lazy" src="../images/print/ppt-ui-range.png?v=1"/></a></figure></div></li><li><span class="pn">4</span><div class="pb"> <b>每面打印的幻灯片数</b>：点 <b>▼</b> 按钮选择。选好后一定要用<b>预览</b>确认。 <figure class="pimg"><a href="../images/print/ppt-ui-shape.png?v=1" rel="noopener" target="_blank"><img alt="选择每面打印幻灯片数的图" loading="lazy" src="../images/print/ppt-ui-shape.png?v=1"/></a></figure></div></li><li><span class="pn">5</span><div class="pb"> <b>单面 / 双面</b>：点 <b>▼</b> 按钮选择。双面请先确认<b>长边 · 短边</b>的打印方向再选择。 <figure class="pimg"><a href="../images/print/ppt-ui-duplex.png?v=1" rel="noopener" target="_blank"><img alt="选择单面打印或双面打印的图" loading="lazy" src="../images/print/ppt-ui-duplex.png?v=1"/></a></figure></div></li><li><span class="pn">6</span><div class="pb"><div class="pwarn" style="margin-top:0">⚠️ <b>颜色</b>：如果选了<b>［컬러출력］（彩色）·［증명서전용］（证书专用）</b>打印机，这一栏一定要选<b>［컬러］（彩色）</b>。<br/>如果是<b>［회색조］（灰度）</b>，即使选了彩色打印机也会<b>印成黑白</b>，但<b>按彩色价格</b>付款。请设成<b>［컬러］（彩色）</b>，并确认<b>预览是彩色</b>。</div><figure class="pimg"><a href="../images/print/ppt-ui-color.png?v=1" rel="noopener" target="_blank"><img alt="从彩色、灰度、黑白中选择彩色的图" loading="lazy" src="../images/print/ppt-ui-color.png?v=1"/></a></figure></div></li><li><span class="pn">7</span><div class="pb"> <b>要改纸张大小时</b>：PowerPoint 的设置栏里<b>没有选纸张大小的地方。</b>请点<b>［프린터 속성］（打印机属性）</b>。出现窗口后，在<b>［용지］（纸张）</b>标签中把<b>［원본 문서 크기］（原稿尺寸）</b>和<b>［출력 문서 크기］（输出尺寸）</b><b>两处设成一样</b>。 <div class="pwarn" style="background:#EAF4FF;border-color:#1B8AC4;color:#10425F">📌 <b>例）</b>想印 A4 的话，<b>［원본 문서 크기］</b>和<b>［출력 문서 크기］</b><b>都选 A4</b>。想印 A3 的话，两处都选 A3。</div><div class="pwarn" style="margin-top:8px">⚠️ 只改一处的话，在复合机查询时纸张大小可能显示为 <b>Letter</b> 或 <b>Custom</b>。</div><div class="pwarn" style="background:#F3F4F6;border-color:#9CA3AF;color:#374151">💡 <b>Word · Excel · 韩文</b>可以在设置画面直接选纸张大小，<b>只有 PowerPoint</b> 要在打印机属性里设置。</div></div></li><li><span class="pn">8</span><div class="pb"> 选好所有选项后，按<b>［인쇄］（打印）</b>按钮继续。 <div class="pwarn">⚠️ 全部设置完后，如果<b>改了 ② 打印机</b>，选项可能会变。这时请<b>从头重新检查所有选项</b>。</div></div></li></ol></div> <a class="goto" href="#print-step2" onclick="goStep2();return false"><span>PowerPoint 打印选项到这里就完成了！按［인쇄］（打印）会出现个人识别码输入窗口。</span><b>请从上面“打印方法”第 2 步（输入 4 位个人识别码）继续 ⬆</b></a> </div>
+</div>
+</div>
+<div class="sec alt" id="browser">
+<div class="sec-in">
+<div class="sec-head">
+<div class="sec-ico">
+<svg fill="none" height="34" viewbox="0 0 48 48" width="34">
+<circle cx="24" cy="24" r="17" stroke="#1B8AC4" stroke-width="3"></circle>
+<ellipse cx="24" cy="24" rx="7.5" ry="17" stroke="#1B8AC4" stroke-width="2.6"></ellipse>
+<path d="M7 24h34M10 15h28M10 33h28" stroke="#1B8AC4" stroke-width="2.6"></path>
+</svg>
+</div>
+<h2 class="sec-h2">用 Chrome · Edge 浏览器打开文件时 <span class="pill">Canva · 网页 PDF</span></h2>
+</div>
+<p class="sec-tagline">用 Canva · Miricanvas · 网页设计程序 · iPad 笔记应用做的 PDF，<span class="hl-t">请用浏览器打开，在预览中确认颜色都正常显示后再打印。</span></p>
+<div class="open1">
+<div class="open1-h"><span class="open1-n">第 1 步</span>用 Edge 或 Chrome 打开要打印的文件</div>
+<div class="open1-body">
+<img alt="把桌面上的 PDF 文件拖到 Edge 或 Chrome 窗口上的样子" class="step-photo open1-img" loading="lazy" src="../images/print/open-file-drag.png?v=1"/>
+<div class="open1-txt">
+<p>PDF 文件设定为<b>双击时用 Acrobat 打开</b>。要用浏览器（Edge · Chrome）打开，请用下面<b>两种方法之一</b>。</p>
+<p>① 先<b>打开 Edge 或 Chrome</b>，再把文件<b>拖到那个窗口上。</b></p>
+<p>② 用<b>鼠标右键</b>点文件，在<b>［연결 프로그램］（打开方式）</b>中选择 <b>Edge 或 Chrome</b>。</p>
+<p>邮箱或 U 盘里的文件，请<b>先保存到电脑桌面</b>。只要知道保存的位置（路径）就行。最容易找到的地方是桌面。</p>
+<p class="open1-phone">📱 <b>文件在手机里？</b>请点下面的链接，查看先把手机文件保存到电脑的方法。<br/><a href="../faq.html#faq-22">查看把手机文件保存到电脑的方法（韩语）→</a></p>
+</div>
+</div>
+</div>
+<div class="open2-label"><span>接下来</span> · 设置打印选项</div>
+<div class="prestep" style="margin-bottom:6px">
+<div class="prestep-h">🔎 先确认文件是用哪个浏览器打开的 <span>Edge 和 Chrome 的打印画面不一样</span></div>
+<p style="font-size:14px;color:#5C4300;line-height:1.7">如果文件是用 <b>Edge</b> 打开的，请按下面的 <b>Edge 方法</b>；如果是用 <b>Chrome</b> 打开的，请按下面的 <b>Chrome 方法</b>（第 1~5 步）。<b>输入个人识别码并确认打印任务窗口（第 5 步）</b>后，请往下看<b>在复合机上打印</b>。<b>Edge · Chrome · ALSee 都一样。</b></p>
+</div>
+<div class="bsub edge"><span class="bsub-ico">e</span><span class="bsub-t">在 Edge 中打印</span><small>第 1~5 步</small></div>
+<div class="steps steps-edge">
+<div class="step noimg">
+<div class="step-no">1</div>
+<div class="est-txt">
+<div class="step-h">按［인쇄］（打印）</div>
+<p class="step-p">在浏览器中打开要打印的文件后，按<b>［인쇄］（打印）</b>或<b>打印机图标</b>。</p>
+</div>
+</div>
+<div class="step">
+<div class="step-no">2</div>
+<div class="step-figs"><div class="est-two"><figure class="est-fig"><img alt="在 Edge 打印画面的打印机列表中选择黑白（BlackOnly）" class="step-photo" loading="lazy" src="../images/print/edge-ui-black.png?v=1"/><figcaption class="est-cap">选择黑白打印机</figcaption></figure><figure class="est-fig"><img alt="在 Edge 打印画面的打印机列表中选择彩色（ColorOnly）" class="step-photo" loading="lazy" src="../images/print/edge-ui-colorlist.png?v=1"/><figcaption class="est-cap">选择彩色打印机</figcaption></figure></div><figure class="est-fig"><a href="../images/print/edge-ui-color.png?v=1" rel="noopener" target="_blank"><img alt="Edge 打印画面。像放大镜一样放大显示打印机的彩色和颜色栏" class="step-photo" loading="lazy" src="../images/print/edge-ui-color.png?v=1"/></a><figcaption class="est-cap">🔍 把红框部分放大了 — 选择<b>彩色打印机［컬러출력］</b>，在<b>“색”</b>栏选<b>［색］（彩色）</b>，然后一定要确认<b>右边的预览是彩色</b> <span style="color:var(--text3);font-weight:600">（点图片可放大）</span></figcaption></figure></div>
+<div class="est-txt">
+<div class="step-h">选择打印机</div>
+<p class="step-p">在打印机中选择<b>［흑백출력］（黑白）</b>或<b>［컬러출력］（彩色）</b>打印机。</p><div class="step-note warn">⚠️ 如果选了<b>彩色打印机［컬러출력］</b>，请在<b>“색”</b>栏选<b>［색］（彩色）</b>，并<b>一定要确认右边的预览是彩色</b>。</div>
+</div>
+</div>
+<div class="step">
+<div class="step-no">3</div>
+<div class="step-figs"><figure class="est-fig"><a href="../images/print/edge-ui-options.png?v=1" rel="noopener" target="_blank"><img alt="Edge 打印画面。像放大镜一样放大显示双面打印、纸张大小、每面打印页数" class="step-photo" loading="lazy" src="../images/print/edge-ui-options.png?v=1"/></a><figcaption class="est-cap">🔍 把红框部分放大了 — 请确认编号框里的内容：<b>双面/单面 · 纸张大小 · 每面打印页数</b> <span style="color:var(--text3);font-weight:600">（点图片可放大）</span></figcaption></figure></div>
+<div class="est-txt">
+<div class="step-h">选择 · 确认打印选项</div>
+<p class="step-p">按<b>［기타 설정］（其他设置）</b>，选择或确认<b>纸张大小、双面/单面、每面打印页数</b>等打印选项。</p>
+</div>
+</div>
+<div class="step">
+<div class="step-no">4</div>
+<div class="step-figs"><figure class="est-fig"><img alt="在个人识别码输入窗口输入 4 位数字的样子" class="step-photo" loading="lazy" src="../images/print/pin-dialog.png?v=1"/></figure></div>
+<div class="est-txt">
+<div class="step-h">按［인쇄］（打印）并输入号码</div>
+<p class="step-p">按下方的<b>［인쇄］（打印）</b>按钮，会出现<b>个人识别码</b>输入窗口。请输入<b>任意 4 位数字</b>。推荐用<b>自己手机号码后 4 位</b>。</p><div class="step-note">这个号码（PIN）就像在复合机上找自己文件用的临时密码。请一定记住！</div>
+</div>
+</div>
+<div class="step">
+<div class="step-no">5</div>
+<div class="step-figs"><figure class="est-fig"><img alt="打印任务窗口里还留有文件列表的样子" class="step-photo" loading="lazy" src="../images/print/queue-wait.png?v=1"/><figcaption class="est-cap">列表还在 → 等到消失为止</figcaption></figure><figure class="est-fig"><img alt="打印任务窗口里没有文件列表的样子" class="step-photo" loading="lazy" src="../images/print/queue-empty.png?v=1"/><figcaption class="est-cap">列表没有了 → 已发送到复合机</figcaption></figure></div>
+<div class="est-txt">
+<div class="step-h">确认打印任务窗口</div>
+<p class="step-p">请看<b>［흑백출력］（黑白）</b>或<b>［컬러출력］（彩色）</b>打印任务窗口。<br/>列表<b>一个都没有</b>的话，打印任务已发送到复合机。<br/>列表还在的话，请<b>等到消失为止</b>。</p>
+</div>
+</div>
+</div> <a class="goto" href="#mfp"><span>电脑上的步骤到这里就完成了！</span><b>请接着看下面的“在复合机上打印” ⬇</b></a> <div class="bsub chrome"><span class="bsub-ico">C</span><span class="bsub-t">在 Chrome 中打印</span><small>第 1~5 步</small></div>
+<div class="steps steps-edge">
+<div class="step noimg">
+<div class="step-no">1</div>
+<div class="est-txt">
+<div class="step-h">按［인쇄］（打印）</div>
+<p class="step-p">在 <b>Chrome</b> 中打开要打印的文件后，按<b>［인쇄］（打印）</b>或<b>打印机图标</b>，或同时按键盘 <b>Ctrl</b> 和 <b>P</b>。<br/>会出现打印设置窗口。<b>左边是预览</b>，<b>右边是打印选项设置</b>。</p>
+</div>
+</div>
+<div class="step">
+<div class="step-no">2</div>
+<div class="step-figs"><figure class="est-fig"><a href="../images/print/chrome-ui-printer.png?v=1" rel="noopener" target="_blank"><img alt="Chrome 打印画面。像放大镜一样放大显示：点目标打印机后默认出现黑白，下面有查看更多" class="step-photo" loading="lazy" src="../images/print/chrome-ui-printer.png?v=1"/></a><figcaption class="est-cap">① 点<b>［대상］（目标打印机）</b>后默认出现<b>黑白［흑백출력］</b>。没有彩色的话，请点<b>［더보기...］（查看更多）</b> <span style="color:var(--text3);font-weight:600">（点图片可放大）</span></figcaption></figure><figure class="est-fig"><a href="../images/print/chrome-ui-list.png?v=1" rel="noopener" target="_blank"><img alt="在选择目标打印机窗口中选择黑白（BlackOnly）或彩色（ColorOnly）" class="step-photo" loading="lazy" src="../images/print/chrome-ui-list.png?v=1"/></a><figcaption class="est-cap">② 在全部打印机列表中选择<b>［흑백출력］（黑白）</b>或<b>［컬러출력］（彩色）</b> <span style="color:var(--text3);font-weight:600">（点图片可放大）</span></figcaption></figure><figure class="est-fig"><a href="../images/print/chrome-ui-color.png?v=1" rel="noopener" target="_blank"><img alt="Chrome 打印画面。像放大镜一样放大显示选择彩色打印机并在颜色栏选择彩色" class="step-photo" loading="lazy" src="../images/print/chrome-ui-color.png?v=1"/></a><figcaption class="est-cap">③ 如果选了<b>彩色［컬러출력］</b>，请在<b>“컬러”</b>栏选<b>［컬러］（彩色）</b>，并一定要确认<b>左边的预览是彩色</b> <span style="color:var(--text3);font-weight:600">（点图片可放大）</span></figcaption></figure></div>
+<div class="est-txt">
+<div class="step-h">选择打印机［대상］（目标打印机）</div>
+<p class="step-p">右边设置窗口中的<b>［대상］（目标打印机）</b>就是选打印机的地方。点一下默认会出现<b>［흑백출력］（黑白）</b>打印机。<br/>看不到<b>［컬러출력］（彩色）</b>的话，请点下面的<b>［더보기...］（查看更多）</b>，会出现全部打印机列表。<br/>请选择<b>［흑백출력］（黑白）</b>或<b>［컬러출력］（彩色）</b>打印机。</p><div class="step-note warn">⚠️ 如果选了<b>彩色打印机［컬러출력］</b>，请在<b>“컬러”</b>栏（布局下面）选<b>［컬러］（彩色）</b>。然后<b>一定要确认</b>左边的<b>预览是彩色</b>，要打印的<b>所有页面都是彩色</b>。</div>
+</div>
+</div>
+<div class="step">
+<div class="step-no">3</div>
+<div class="step-figs"><figure class="est-fig"><a href="../images/print/chrome-ui-options.png?v=1" rel="noopener" target="_blank"><img alt="Chrome 打印画面。像放大镜一样放大显示纸张大小、每张页数、双面选项" class="step-photo" loading="lazy" src="../images/print/chrome-ui-options.png?v=1"/></a><figcaption class="est-cap">🔍 请确认红色编号框里的内容（标 ✔ 的地方）：<b>纸张大小 · 每张页数 · 双面</b> <span style="color:var(--text3);font-weight:600">（点图片可放大）</span></figcaption></figure></div>
+<div class="est-txt">
+<div class="step-h">选择 · 确认打印选项</div>
+<p class="step-p">点<b>［설정 더보기］（更多设置）</b>会出现<b>纸张大小、双面、每张页数</b>等打印选项。请按需要选择或确认。</p>
+</div>
+</div>
+<div class="step">
+<div class="step-no">4</div>
+<div class="step-figs"><figure class="est-fig"><img alt="在个人识别码输入窗口输入 4 位数字的样子" class="step-photo" loading="lazy" src="../images/print/pin-dialog.png?v=1"/></figure></div>
+<div class="est-txt">
+<div class="step-h">按［인쇄］（打印）并输入号码</div>
+<p class="step-p">按下方的<b>［인쇄］（打印）</b>按钮，会出现<b>个人识别码</b>输入窗口。请输入<b>任意 4 位数字</b>。推荐用<b>自己手机号码后 4 位</b>。</p><div class="step-note">这个号码（PIN）就像在复合机上找自己文件用的临时密码。请一定记住！</div>
+</div>
+</div>
+<div class="step">
+<div class="step-no">5</div>
+<div class="step-figs"><figure class="est-fig"><img alt="打印任务窗口里还留有文件列表的样子" class="step-photo" loading="lazy" src="../images/print/chrome-queue-wait.jpg"/><figcaption class="est-cap">列表还在 → 等到消失为止</figcaption></figure><figure class="est-fig"><img alt="打印任务窗口里没有文件列表的样子" class="step-photo" loading="lazy" src="../images/print/chrome-queue-empty.jpg"/><figcaption class="est-cap">列表没有了 → 已发送到复合机</figcaption></figure></div>
+<div class="est-txt">
+<div class="step-h">确认打印任务窗口</div>
+<p class="step-p">请看<b>［흑백출력］（黑白）</b>或<b>［컬러출력］（彩色）</b>打印任务窗口。<br/>列表<b>一个都没有</b>的话，打印任务已发送到复合机。<br/>列表还在的话，请<b>等到消失为止</b>。</p>
+</div>
+</div>
+</div> <a class="goto" href="#mfp"><span>电脑上的步骤到这里就完成了！</span><b>请接着看下面的“在复合机上打印” ⬇</b></a> </div>
+</div>
+<div class="sec" id="alsee">
+<div class="sec-in">
+<div class="sec-head">
+<div class="sec-ico">
+<svg fill="none" height="34" viewbox="0 0 48 48" width="34">
+<rect height="26" rx="4" stroke="#1B8AC4" stroke-width="3" width="34" x="7" y="11"></rect>
+<circle cx="17" cy="20" r="3.4" stroke="#1B8AC4" stroke-width="2.6"></circle>
+<path d="M9 33l10-10 7 7 6-5 8 8" stroke="#1B8AC4" stroke-linejoin="round" stroke-width="3"></path>
+</svg>
+</div>
+<h2 class="sec-h2">照片 · 图片文件用 ALSee 看图（알씨）打开 <span class="pill">ALSee</span></h2>
+</div>
+<p class="sec-tagline">打印照片或图片文件时使用。也可以一张纸上排多张。用店内电脑桌面上的 <b>ALSee（알씨）</b>图标打开照片即可。</p>
+<div class="open1">
+<div class="open1-h"><span class="open1-n">第 1 步</span>在电脑上打开要打印的文件</div>
+<div class="open1-body">
+<img alt="用鼠标双击桌面上的照片（JPG · PNG）文件打开" class="step-photo open1-img" loading="lazy" src="../images/print/open-file-img.png?v=2"/>
+<div class="open1-txt">
+<p>在电脑上<b>双击</b>要打印的文件打开。</p>
+<p>邮箱或 U 盘里的文件，请<b>先保存到电脑桌面</b>。</p>
+<p>不一定要放桌面。保存到电脑上，<b>只要知道存在哪里（路径）</b>就行。到那个位置双击要打印的文件打开。最容易找到的地方是桌面。</p>
+<p class="open1-phone">📱 <b>文件在手机里？</b>请点下面的链接，查看先把手机文件保存到电脑的方法。<br/><a href="../faq.html#faq-22">查看把手机文件保存到电脑的方法（韩语）→</a></p>
+</div>
+</div>
+</div>
+<div class="open2-label"><span>接下来</span> · 设置打印选项</div>
+<div class="steps">
+<div class="step">
+<div class="step-no">1</div>
+<div class="step-fig"><img alt="打开文件，进入打印菜单" class="step-photo" loading="lazy" src="../images/print/alsee-1-menu.png?v=1"/></div>
+<div class="step-h">打开文件，进入打印菜单</div>
+<p class="step-p">用 ALSee 打开照片后，选择上方的<b>［메뉴］（菜单）→［인쇄하기］（打印）</b>。也可以同时按键盘 <b>Ctrl</b> 和 <b>P</b>。</p>
+</div>
+<div class="step">
+<div class="step-no">2</div>
+<div class="step-fig"><img alt="选择打印机" class="step-photo" loading="lazy" src="../images/print/alsee-2-printer.png?v=1"/></div>
+<div class="step-h">选择打印机</div>
+<p class="step-p">从<b>［컬러출력］（彩色）</b>或<b>［흑백출력］（黑白）</b>中选择。彩色照片一定要选<b>［컬러출력］（彩色）</b>。</p>
+</div>
+<div class="step">
+<div class="step-no">3</div>
+<div class="step-fig"><img alt="选好打印机后出现的打印窗口。左下角的打印机设置字样有标记" class="step-photo" loading="lazy" src="../images/print/alsee-3-printer-setting.png?v=9"/></div>
+<div class="step-h">在打印窗口按［프린터 설정］（打印机设置）</div>
+<p class="step-p">选好打印机后会出现下面的<b>打印窗口</b>。要改纸张大小或纵向/横向，请按左下角的<b>［프린터 설정］（打印机设置）</b>。</p>
+</div>
+<div class="step">
+<div class="step-no">4</div>
+<div class="step-fig"><img alt="打印设置窗口。在纸张大小 A4、方向纵向、确认按钮上有标记" class="step-photo" loading="lazy" src="../images/print/alsee-3-setup.png?v=2"/></div>
+<div class="step-h">设定纸张大小 · 方向后按［확인］（确认）</div>
+<p class="step-p">设定好<b>纸张大小（A4 · B4 · A3 等）</b>和<b>纵向 / 横向</b>后，按<b>［확인］（确认）</b>，就会回到打印窗口。</p><div class="step-note">💡 上方的<b>［이름］（名称）</b>栏会显示前面选的打印机（<b>［컬러출력］（彩色）</b>或<b>［흑백출력］（黑白）</b>）。请不要改。</div>
+</div>
+<div class="step">
+<div class="step-no">5</div>
+<div class="step-fig"><img alt="尺寸设置" class="step-photo" loading="lazy" src="../images/print/alsee-4-size.png?v=9"/></div>
+<div class="step-h">尺寸设置</div>
+<p class="step-p">又回到打印窗口了。在<b>［크기설정］（尺寸设置）</b>标签中勾选<b>［용지 크기에 맞춤］（适合纸张大小）</b>，照片就会铺满纸张。想保持比例的话，请选<b>［용지 비율에 맞춤］（适合纸张比例）</b>。</p>
+</div>
+<div class="step">
+<div class="step-no">6</div>
+<div class="step-fig"><img alt="页边距 · 位置" class="step-photo" loading="lazy" src="../images/print/alsee-5-margin.png?v=9"/></div>
+<div class="step-h">页边距 · 位置</div>
+<p class="step-p">在<b>［여백/위치］（页边距/位置）</b>标签中设定上 · 下 · 左 · 右页边距（mm）和照片放的位置。</p>
+</div>
+<div class="step">
+<div class="step-no">7</div>
+<div class="step-fig"><img alt="设定张数后打印" class="step-photo" loading="lazy" src="../images/print/alsee-6-etc.png?v=9"/></div>
+<div class="step-h">设定张数后打印</div>
+<p class="step-p">在<b>［기타］（其他）</b>标签中设定<b>打印张数</b>。<b>用左边的预览确认全部内容后</b>，按<b>［인쇄］（打印）</b>。</p>
+</div>
+<div class="step">
+<div class="step-no">8</div>
+<div class="step-figs"><figure class="est-fig"><img alt="在个人识别码输入窗口输入 4 位数字的样子" class="step-photo" loading="lazy" src="../images/print/pin-dialog.png?v=1" style="max-width:420px"/></figure></div>
+<div class="step-h">按［인쇄］（打印）并输入号码</div>
+<p class="step-p">按<b>［인쇄］（打印）</b>会出现<b>个人识别码</b>输入窗口。请输入<b>任意 4 位数字</b>。推荐用<b>自己手机号码后 4 位</b>。</p><div class="step-note">这个号码（PIN）就像在复合机上找自己文件用的临时密码。请一定记住！</div>
+</div>
+<div class="step">
+<div class="step-no">9</div>
+<div class="step-figs"><figure class="est-fig"><img alt="打印任务窗口里还留有文件列表的样子" class="step-photo" loading="lazy" src="../images/print/queue-wait.png?v=1"/><figcaption class="est-cap">列表还在 → 等到消失为止</figcaption></figure><figure class="est-fig"><img alt="打印任务窗口里没有文件列表的样子" class="step-photo" loading="lazy" src="../images/print/queue-empty.png?v=1"/><figcaption class="est-cap">列表没有了 → 已发送到复合机</figcaption></figure></div>
+<div class="step-h">确认打印任务窗口</div>
+<p class="step-p">请看<b>［흑백출력］（黑白）</b>或<b>［컬러출력］（彩色）</b>打印任务窗口。<br/>列表<b>一个都没有</b>的话，打印任务已发送到复合机。<br/>列表还在的话，请<b>等到消失为止</b>。</p>
+</div>
+</div> <a class="goto" href="#mfp"><span>电脑上的步骤到这里就完成了！</span><b>请接着看下面的“在复合机上打印” ⬇</b></a> </div>
+</div>
+<div class="sec alt" id="cert" style="--sc:#D97706;--sc-light:#FEF3C7">
+<div class="sec-in">
+<div class="sec-head">
+<div class="sec-ico">
+<svg fill="none" height="34" viewbox="0 0 48 48" width="34">
+<path d="M12 5h24v38H12z" stroke="#D97706" stroke-linejoin="round" stroke-width="3"></path>
+<path d="M18 14h12M18 21h12M18 28h7" stroke="#D97706" stroke-linecap="round" stroke-width="3"></path>
+<circle cx="33" cy="34" fill="#fff" r="6" stroke="#D97706" stroke-width="3"></circle>
+</svg>
+</div>
+<h2 class="sec-h2">TOEIC 证书这样打印 <span class="pill">TOEIC · TOEIC Speaking</span></h2>
+</div>
+<p class="sec-tagline">TOEIC · TOEIC Speaking（YBM）证书，<span class="hl-t">请先在电脑上用［증명서전용PIN9999］（证书专用）打印</span>。选其他打印机的话，<b>电脑会卡住！</b></p>
+<div class="prestep" style="margin-bottom:10px">
+<div class="prestep-h">⚠️ 只在网站上发放（付款）是不会打印出来的 <span>请一定要看</span></div>
+<p style="font-size:14px;color:#5C4300;line-height:1.7">证书要<b>① 在电脑上用［증명서전용PIN9999］发送打印</b>后，<b>② 在复合机上用号码 9999</b> 找到并付款才会打印出来。<br/>如果没在电脑上发送打印，只在复合机上输 9999，<b>什么都不会出来。</b></p>
+</div>
+<div class="steps steps-edge">
+<div class="step noimg">
+<div class="step-no">1</div>
+<div class="est-txt">
+<div class="step-h">在网站上打开证书</div>
+<p class="step-p">在 TOEIC 网站上发放成绩单后，<b>证书会在查看器窗口中打开。</b></p>
+<div class="step-note">大学成绩证明、毕业证明、Certpia 的图片说明<b>正在准备中</b>。这些证书也<b>一样选择［증명서전용PIN9999］打印机</b>。</div>
+</div>
+</div>
+<div class="step">
+<div class="step-no">2</div>
+<div class="step-figs"><figure class="est-fig"><a href="../images/print/cert-ui-viewer.png?v=1" rel="noopener" target="_blank"><img alt="证书查看器窗口。右上角黄色的成绩单打印按钮上标了 1 号" class="step-photo" loading="lazy" src="../images/print/cert-ui-viewer.png?v=1"/></a></figure></div>
+<div class="est-txt">
+<div class="step-h">按［성적표 출력］（打印成绩单）</div>
+<p class="step-p">按查看器右上角黄色的<b>［성적표 출력］（打印成绩单）</b>。<br/><b>［테스트 출력］（测试打印）</b>是测试用的，请不要按。</p>
+</div>
+</div>
+<div class="step">
+<div class="step-no">3</div>
+<div class="step-figs"><figure class="est-fig"><a href="../images/print/cert-ui-printer.png?v=1" rel="noopener" target="_blank"><img alt="打印机选择窗口。在打印机列表中选［증명서전용PIN9999］并按打印按钮的样子" class="step-photo" loading="lazy" src="../images/print/cert-ui-printer.png?v=1"/></a></figure></div>
+<div class="est-txt">
+<div class="step-h">打印机只能选［증명서전용PIN9999］！</div>
+<p class="step-p">在打印机选择窗口中选<b>［증명서전용PIN9999］</b>，按<b>［인쇄］（打印）</b>。</p>
+<div class="step-note warn">⚠️ 选<b>［흑백출력］（黑白）·［컬러출력］（彩色）</b>的话，<b>电脑会卡住！</b>那样证书发放费很难退回。请<b>只选［증명서전용PIN9999］</b>。</div>
+</div>
+</div>
+<div class="step noimg">
+<div class="step-no">4</div>
+<div class="est-txt">
+<div class="step-h">出现打印完成的字样就结束了！</div>
+<p class="step-p">［증명서전용PIN9999］<b>不会出现个人识别码窗口。</b>会自动填入 <b>9999</b>，所以是正常的。<br/>显示打印完成后，电脑上的步骤就结束了。</p>
+</div>
+</div>
+<div class="step noimg">
+<div class="step-no">5</div>
+<div class="est-txt">
+<div class="step-h">在复合机上用号码 9999 查找</div>
+<p class="step-p">在复合机上按<b>［인쇄］（打印）</b>→<b>［PC］</b>，输入号码 <b>9999</b>。<br/>出现列表后，<b>只选自己的证书</b>，按<b>［시작］（开始）</b>后付款。</p>
+<div class="step-note warn">⚠️ 其他顾客也可能用了 9999，所以列表里可能有<b>好几个文件</b>。<b>请一定确认时间和名字</b>，只为自己的付款。<b>不要按［모두선택］（全选）。</b></div>
+</div>
+</div>
+</div> <a class="goto" href="#mfp"><span>复合机的使用顺序搞不清楚的话</span><b>请看下面的“在复合机上打印” ⬇</b></a> </div>
+</div>
+<div class="sec" id="mfp" style="--sc:#22B24C;--sc-light:#E7F7EC">
+<div class="sec-in">
+<div class="sec-head">
+<div class="sec-ico"><svg fill="none" height="34" viewbox="0 0 48 48" width="34"><rect height="20" rx="4" stroke="#22B24C" stroke-width="3" width="36" x="6" y="16"></rect><rect height="10" rx="2" stroke="#22B24C" stroke-width="3" width="24" x="12" y="8"></rect><rect fill="#fff" height="12" rx="2" stroke="#22B24C" stroke-width="3" width="20" x="14" y="30"></rect></svg></div>
+<h2 class="sec-h2">在复合机上打印 <span class="pill">Edge · Chrome · ALSee 通用</span></h2>
+</div>
+<p class="sec-tagline">这是<b>在电脑上输入个人识别码并发送打印之后</b>的步骤。Edge、Chrome、ALSee 都一样。</p>
+<div class="steps steps-edge">
+<div class="step">
+<div class="step-no mfp">复1</div>
+<div class="step-figs"><div class="est-two"><figure class="est-fig"><img alt="在复合机主画面选择打印菜单" class="step-photo" loading="lazy" src="../images/print/print-machine1.png"/></figure><figure class="est-fig"><img alt="选择 PC 作为打印文件位置的画面" class="step-photo" loading="lazy" src="../images/print/print-machine2.png"/></figure></div></div>
+<div class="est-txt">
+<div class="step-h">在复合机上：打印 → PC → 输入号码</div>
+<p class="step-p">到复合机前，按<b>［인쇄］（打印）</b>→<b>［PC］</b>。<br/>在 <b>PIN 号码</b>输入栏里输入在电脑上填的 <b>4 位号码</b>，点<b>［OK］</b>。</p>
+</div>
+</div>
+<div class="step">
+<div class="step-no mfp">复2</div>
+<div class="step-figs"><figure class="est-fig"><img alt="输入 PIN 号码后出现打印任务列表的复合机画面" class="step-photo" loading="lazy" src="../images/print/print-serch.png"/></figure></div>
+<div class="est-txt">
+<div class="step-h">确认我的文件列表</div>
+<p class="step-p">出现列表后，请仔细确认列表上的<b>文件名、时间、黑白/彩色、双面/单面、页数、纸张大小</b>等内容。<br/>请看<b>是不是自己的文件</b>，打印选项是否<b>符合您的要求</b>。</p>
+</div>
+</div>
+<div class="step noimg">
+<div class="step-no mfp">复3</div>
+<div class="est-txt">
+<div class="step-h">点列表后按［시작］（开始）</div>
+<p class="step-p"><b>点一下自己的文件</b>，再点<b>［시작］（开始）</b>按钮。<br/>有好几个的话，按上方的<b>［모두 인쇄］（全部打印）</b>，或者<b>只点要打印的几个</b>后按<b>［시작］（开始）</b>。</p>
+</div>
+</div>
+<div class="step">
+<div class="step-no mfp">复4</div>
+<div class="step-figs"><figure class="est-fig"><img alt="收费信息（总价、页数）确认画面" class="step-photo" loading="lazy" src="../images/print/print-price.png?v=2"/></figure></div>
+<div class="est-txt">
+<div class="step-h">确认金额［과금정보］</div>
+<p class="step-p">最后会出现<b>收费信息窗口［과금정보］</b>。请仔细确认全部内容，<b>价格</b>也正确的话，点<b>［확인］（确认）</b>。</p><div class="step-note warn">⚠️ 如果收费信息窗口的页数或金额和您知道的不一样，<b>请不要付款。</b></div><div class="bill-warn"><span class="bh">🧾 必须确认收费信息窗口［과금정보］！</span><b>请确认收费信息窗口的全部内容。没确认就付款而出了问题的，不退款、不赔偿。</b><br/>请<b>全部确认、正确无误后再按［확인］（确认）</b>付款。</div>
+</div>
+</div>
+<div class="step">
+<div class="step-no mfp">复5</div>
+<div class="step-figs"><figure class="est-fig"><img alt="用 IC 卡或三星支付付款的样子" class="step-photo" loading="lazy" src="../images/print/print-pay.png?v=3"/></figure></div>
+<div class="est-txt">
+<div class="step-h">刷卡付款</div>
+<p class="step-p">刷卡机发出语音后，<b>IC 卡（信用卡/借记卡）请插入</b>，<b>三星支付请贴上</b>。</p><div class="step-note"><b>💳 信用卡/借记卡请把有 IC 芯片的一端插入刷卡机插口。</b></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p class="tr-note">本页由韩语翻译而来。如有不准确之处，请通过 Naver TalkTalk 告诉我们。机器屏幕为韩语，韩语按钮名称写在［括号］里。</p><footer>
+<div class="ft-wrap">
+<div class="ft-brand">
+<img alt="标志" src="../logo.jpg"/>
+<div class="ft-brand-name">PrintShop Mini</div>
+<p>24 小时 365 天营业的<br/>无人自助打印店。</p>
+</div>
+<div class="ft-col">
+<h4>使用方法</h4>
+<ul>
+<li><a href="guide-print.html">打印方法</a></li>
+<li><a href="../guide-copy.html">复印方法</a></li>
+<li><a href="../guide-scan.html">扫描方法</a></li>
+<li><a href="../guide-fax.html">发传真方法</a></li>
+<li><a href="../guide-coat.html">塑封方法</a></li>
+<li><a href="../guide-bind.html">装订方法</a></li>
+</ul>
+</div>
+<div class="ft-col">
+<h4>快捷链接</h4>
+<ul>
+<li><a href="../services.html">服务介绍</a></li>
+<li><a href="../faq.html">常见问题</a></li>
+<li><a href="../branches.html">查找门店</a></li>
+<li><a href="../community.html">社区</a></li>
+<li><a href="../about.html">品牌介绍</a></li>
+</ul>
+</div>
+</div>
+<div class="ft-corp" style="word-break:keep-all;max-width:1160px;margin:0 auto 20px;font-size:13px;line-height:1.9;color:#9CA3AF"><b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1B8AC4)">PrintShop Mini</b> · <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">PrintNow</b> 是 <span style="white-space:nowrap">(株)Good Learning Partner</span> 公司的品牌。</div>
+<div class="ft-bottom">
+<p>© 2025 PrintShop Mini. All rights reserved.</p>
+<p>隐私政策 · 使用条款</p>
+</div>
+</footer>
+<script>
+function toggleMenu(){document.getElementById("navLinks").classList.toggle("show");}
+function goStep2(){
+  var el=document.getElementById('print-step2');
+  document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('on')});
+  var first=document.querySelector('.tabs .tab'); if(first) first.classList.add('on');
+  window.scrollTo({top:el.getBoundingClientRect().top+window.pageYOffset-130,behavior:'smooth'});
+}
+function goType(id, office){
+  if(office){
+    var ot=Array.prototype.slice.call(document.querySelectorAll('.otab')).filter(function(b){return (b.getAttribute('onclick')||'').indexOf("'"+office+"'")>-1})[0];
+    if(ot) officeTab(office, ot);
+  }
+  var tabs=document.querySelectorAll('.tabs .tab');
+  tabs.forEach(function(t){t.classList.remove('on'); if((t.getAttribute('onclick')||'').indexOf("'"+id+"'")>-1) t.classList.add('on');});
+  var y=document.getElementById(id).getBoundingClientRect().top+window.pageYOffset-118;
+  window.scrollTo({top:y,behavior:'smooth'});
+}
+function jump(id, el){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
+  el.classList.add('on');
+  const y = document.getElementById(id).getBoundingClientRect().top + window.pageYOffset - 118;
+  window.scrollTo({top:y, behavior:'smooth'});
+}
+function officeTab(name, el){
+  document.querySelectorAll('.otab').forEach(t=>t.classList.remove('on'));
+  el.classList.add('on');
+  document.querySelectorAll('.opanel').forEach(p=>p.style.display='none');
+  document.getElementById('office-'+name).style.display='';
+}
+</script>
+<script>window.GUIDE_SERVICE='print';</script>
+<script src="../service-guides.js?v=2"></script>
+<script>
+/* 2단계 메뉴: 현재 탭이 화면 밖이면 보이는 위치로 이동 */
+(function(){var a=document.querySelector('.svc-switch a.on'),w=a&&a.parentElement;if(w)w.scrollLeft=Math.max(0,a.offsetLeft-(w.clientWidth-a.offsetWidth)/2);})();
+</script>
+
+<script defer="" src="../lightbox.js?v=1"></script>
+</body>
+</html>

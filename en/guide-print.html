@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="PrintShop Mini printing guide — the printing steps and print settings for PDF, Hangul (HWP), MS Office, Chrome and ALSee." name="description"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>How to Print - PrintShop Mini</title>
+<link href="https://www.printshopmini.com/en/guide-print.html" rel="canonical"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&amp;family=Jua&amp;family=Gamja+Flower&amp;display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#1B8AC4;--blue-hover:#1470A8;--blue-light:#E8F4FC;--blue-mid:#4AAAD6;
+  --text:#111827;--text2:#374151;--text3:#6B7280;--border:#E5E7EB;
+  --bg:#F9FAFB;--white:#FFFFFF;--radius:14px;
+  --print:#22B24C;--copy:#018FFB;--scan:#12BDB0;--fax:#F3732C;--warn:#D93025;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--white);line-height:1.7;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:70px;display:flex;align-items:center;padding:0 6%}
+.nav-logo{display:flex;align-items:center;gap:10px;flex-shrink:0;margin-right:48px}
+.nav-logo img.logo-img{width:36px;height:36px;object-fit:contain;border-radius:8px}
+.nav-logo-name{font-size:17px;font-weight:900;color:var(--blue);letter-spacing:-0.5px}
+.nav-links{display:flex;list-style:none;gap:2px;flex:1}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);padding:8px 16px;border-radius:8px;transition:all .18s}
+.nav-links a:hover,.nav-links a.active{color:var(--blue);background:var(--blue-light)}
+.nav-right{display:flex;align-items:center;gap:0;margin-left:auto}
+.nav-cta{background:var(--blue);color:white;font-size:13px;font-weight:700;padding:9px 22px;border-radius:50px;transition:background .2s;white-space:nowrap}
+.nav-cta:hover{background:var(--blue-hover)}
+.nav-raccoon{width:56px;height:56px;flex-shrink:0;margin-left:6px;position:relative;top:2px}
+.nav-raccoon img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.15));transition:transform .3s}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{width:22px;height:2px;background:var(--text);border-radius:2px;display:block}
+
+/* PAGE HEADER */
+.page-header{margin-top:70px;background:var(--white);border-bottom:1px solid var(--border);padding:52px 6% 44px}
+.ph-inner{max-width:1160px;margin:0 auto}
+.ph-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:var(--blue);letter-spacing:1px;margin-bottom:14px}
+.ph-eyebrow::before{content:'';width:20px;height:2px;background:var(--blue);border-radius:2px}
+.ph-h1{font-size:clamp(28px,4vw,48px);font-weight:900;letter-spacing:-2px;margin-bottom:10px}
+.ph-sub{font-size:15px;color:var(--text3)}
+
+/* 경고 배너 */
+.warnbar{background:#FEF2F2;border-bottom:1px solid #FADCDC;padding:18px 6%}
+.warnbar-in{max-width:1160px;margin:0 auto;display:flex;gap:14px;align-items:flex-start}
+.warnbar-ico{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:var(--warn);color:#fff;font-size:15px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.warnbar-tx{font-size:14.5px;font-weight:700;color:#8A1C15;line-height:1.6}
+.warnbar-tx span{font-weight:500;color:#A3453E;display:block;margin-top:3px;font-size:13.5px}
+
+/* 탭 */
+.tabs{background:var(--bg);border-bottom:1px solid var(--border);padding:0 6%;position:sticky;top:70px;z-index:100}
+.tabs-in{max-width:1160px;margin:0 auto;display:flex;overflow-x:auto}
+.tabs-in::-webkit-scrollbar{display:none}
+.tab{padding:16px 20px;font-size:13.5px;font-weight:700;color:var(--text3);white-space:nowrap;cursor:pointer;border-bottom:2px solid transparent;transition:all .2s;background:none;border-top:none;border-left:none;border-right:none;font-family:inherit}
+.tab:hover,.tab.on{color:var(--blue);border-bottom-color:var(--blue)}
+
+/* 섹션 */
+.sec{padding:64px 6%;border-bottom:1px solid var(--border)}
+.sec.alt{background:var(--bg)}
+.sec-in{max-width:1160px;margin:0 auto}
+.sec-head{display:flex;align-items:center;gap:18px;margin-bottom:10px;flex-wrap:wrap}
+.sec-ico{width:60px;height:60px;border-radius:16px;background:var(--sc-light,var(--blue-light));display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.sec-h2{font-size:clamp(22px,3vw,32px);font-weight:900;letter-spacing:-1px}
+.sec-tagline{font-size:14.5px;color:var(--text3);margin-bottom:34px}
+.sec-tagline .hl-t{color:var(--sc,var(--blue));font-weight:800}
+.pill{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.5px;padding:4px 11px;border-radius:50px;background:var(--sc,var(--blue));color:#fff;vertical-align:middle;margin-left:2px}
+
+/* 단계 카드 */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:18px}
+.step{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px 22px 26px;display:flex;flex-direction:column}
+.sec.alt .step{background:var(--white)}
+.step-no{width:32px;height:32px;border-radius:50%;background:var(--sc,var(--blue));color:#fff;font-size:15px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.step-fig{min-height:106px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.step-h{font-size:16.5px;font-weight:900;letter-spacing:-.4px;margin-bottom:7px;line-height:1.35}
+.step-p{font-size:13.8px;color:var(--text2);line-height:1.65}
+.step-p b{font-weight:700;color:var(--sc,var(--blue))}
+.step-p .r{color:var(--warn);font-weight:700}
+
+/* 핵심 팁 */
+.tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:18px}
+.tip{border:2px solid var(--blue-light);border-radius:var(--radius);padding:26px 24px;background:var(--white);text-align:center}
+.tip-fig{margin-bottom:12px;display:flex;justify-content:center}
+.tip-h{font-size:17px;font-weight:900;color:var(--blue);margin-bottom:8px;letter-spacing:-.4px}
+.tip-p{font-size:14px;color:var(--text2);line-height:1.65}
+.tip-p b{font-weight:700;color:var(--text)}
+
+.sec-rule{height:4px;border-radius:4px;background:var(--sc,var(--blue));width:56px;margin-bottom:16px}
+.subhead{font-size:15px;font-weight:900;color:var(--sc,var(--blue));margin:34px 0 14px;padding-left:12px;border-left:4px solid var(--sc,var(--blue))}
+
+/* 용어 카드 */
+.terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:18px}
+.term{border:2px solid var(--tc);border-radius:var(--radius);background:var(--white);padding:0;overflow:hidden;display:flex;flex-direction:column}
+.term-top{background:var(--tc);padding:14px 20px;display:flex;align-items:center;gap:12px}
+.term-name{font-size:20px;font-weight:900;color:#fff;letter-spacing:-.6px}
+.term-en{font-size:11.5px;font-weight:800;color:#fff;opacity:.8;letter-spacing:.6px}
+.term-body{padding:22px 20px 24px;flex:1;display:flex;flex-direction:column}
+.term-flow{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.term-chip{font-size:13px;font-weight:800;padding:6px 13px;border-radius:50px;background:#F1F4F7;color:var(--text2)}
+.term-arrow{font-size:15px;font-weight:900;color:var(--tc)}
+.term-def{font-size:14.5px;font-weight:700;line-height:1.6;margin-bottom:10px}
+.term-ex{font-size:13.4px;color:var(--text3);line-height:1.65}
+.term-ex b{color:var(--text2);font-weight:700}
+
+/* ADF 금지 원본 경고 */
+.adfw{border:2.5px solid #E4574D;border-radius:var(--radius);background:#FEF6F5;padding:22px 24px;margin-top:22px}
+.adfw-h{display:flex;gap:11px;align-items:center;font-size:18px;font-weight:900;color:#B31E16;margin-bottom:14px;line-height:1.35}
+.adfw-h .x{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:#C0261C;color:#fff;font-size:16px;font-weight:900;display:flex;align-items:center;justify-content:center}
+.adfw-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.adfw-box{background:#fff;border-radius:10px;padding:16px 18px}
+.adfw-box.ok{border:1.5px solid #BFE3C6}
+.adfw-box.no{border:1.5px solid #F3C3BF}
+.adfw-t{font-size:14.5px;font-weight:900;margin-bottom:9px}
+.adfw-box.ok .adfw-t{color:#1B7A2C}
+.adfw-box.no .adfw-t{color:#C0261C}
+.adfw-box ul{margin:0;padding-left:17px}
+.adfw-box li{font-size:13.6px;color:var(--text2);line-height:1.6;margin-bottom:5px}
+.adfw-foot{margin-top:15px;font-size:13.8px;line-height:1.65;color:#8A1C15;font-weight:600}
+.adfw-foot b{font-weight:900;color:#B31E16}
+
+/* 커버 여는 안내 */
+.openbox{margin-bottom:20px}
+.ob{background:#fff;border:2px solid var(--sc,var(--blue));border-radius:var(--radius);padding:18px;display:flex;gap:22px;align-items:center}
+@media(max-width:760px){.ob{flex-direction:column}}
+.ob-fig{flex:0 0 46%;display:flex;justify-content:center}
+.ob-h{font-size:16px;font-weight:900;margin-bottom:6px;line-height:1.35}
+.ob-p{font-size:13.6px;color:var(--text2);line-height:1.62}
+.ob-p b{color:var(--sc,var(--blue));font-weight:700}
+.ob-p .r{color:var(--warn);font-weight:700}
+
+/* 특수 복사 카드 */
+.minis{display:grid;grid-template-columns:repeat(auto-fit,minmax(304px,1fr));gap:18px}
+.mini{border:1px solid var(--border);border-radius:var(--radius);background:#fff;overflow:hidden;display:flex;flex-direction:column}
+.mini-top{background:var(--sc,var(--blue));color:#fff;padding:13px 18px;font-size:16.5px;font-weight:900;display:flex;align-items:center;gap:10px;letter-spacing:-.4px}
+.mini-fig{margin:0 0 16px}
+.mini-fig img{width:100%;border-radius:8px;border:1px solid var(--border);display:block}
+.mini-body{padding:20px 18px 22px;flex:1;display:flex;flex-direction:column}
+.mini ol{margin:0;padding-left:19px}
+.mini li{font-size:13.8px;color:var(--text2);line-height:1.62;margin-bottom:10px}
+.mini li:last-child{margin-bottom:0}
+.mini li b{color:var(--sc,var(--blue));font-weight:700}
+.mini li .r{color:var(--warn);font-weight:700}
+.mini-warn{margin-top:14px;background:#FEF2F2;border:2px solid #E4574D;border-radius:10px;padding:14px 16px}
+.mini-warn-h{font-size:14.5px;font-weight:900;color:#C0261C;line-height:1.45;display:flex;gap:8px;align-items:flex-start;margin-bottom:6px}
+.mini-warn-h .x{flex:0 0 auto;width:20px;height:20px;border-radius:50%;background:#C0261C;color:#fff;font-size:13px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.mini-warn-p{font-size:13.2px;color:#8A1C15;line-height:1.6;font-weight:600;padding-left:28px}
+.mini-warn-p b{font-weight:900;color:#C0261C}
+.mini-note{margin-top:14px;background:#F5F8FA;border-radius:9px;padding:13px 15px;font-size:13px;color:var(--text2);line-height:1.6}
+.mini-note b{color:var(--text);font-weight:700}
+
+/* MS 오피스 서브탭 */
+.otabs{display:flex;gap:8px;margin-bottom:30px;flex-wrap:wrap}
+.otab{padding:10px 22px;font-size:13.5px;font-weight:800;border-radius:50px;border:2px solid var(--border);background:#fff;color:var(--text2);cursor:pointer;font-family:inherit;transition:all .18s}
+.otab:hover{border-color:var(--blue);color:var(--blue)}
+.otab.on{background:var(--blue);border-color:var(--blue);color:#fff}
+
+/* MS 오피스 화면 목업 (실제 인쇄 화면 재현) */
+.steps-office{grid-template-columns:repeat(auto-fit,minmax(288px,1fr))}
+.steps-office .step-fig{min-height:auto;margin-bottom:16px}
+.omock{border:1px solid #D7DDE3;border-radius:8px;overflow:hidden;background:#fff;box-shadow:0 1px 5px rgba(17,24,39,.07);width:100%}
+.omock-bar{height:18px;background:#EEF1F5;display:flex;align-items:center;gap:4px;padding:0 8px;border-bottom:1px solid #E5E7EB}
+.omock-dot{width:5px;height:5px;border-radius:50%;background:#D7DDE3}
+.omock-body{display:flex;height:158px}
+.omock-side{width:58px;flex:0 0 auto;background:var(--oc,#1B8AC4);padding:8px 0;display:flex;flex-direction:column;gap:1px}
+.omock-side div{color:rgba(255,255,255,.68);font-size:8.6px;font-weight:700;padding:5px 0 5px 10px}
+.omock-side div.on{color:#fff;background:rgba(255,255,255,.18);border-left:3px solid #fff;padding-left:7px}
+.omock-fields{width:124px;flex:0 0 auto;background:#F7F8FA;padding:8px 8px;display:flex;flex-direction:column;gap:5px;border-right:1px solid #E5E7EB;overflow:hidden}
+.omock-cap{font-size:7.6px;color:#9AA5B1;font-weight:800;letter-spacing:.3px;margin-top:3px}
+.omock-cap:first-child{margin-top:0}
+.omock-field{background:#fff;border:1px solid #C9D3DB;border-radius:4px;padding:4px 14px 4px 7px;font-size:8.2px;font-weight:700;color:#374151;position:relative;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.omock-field::after{content:'▾';position:absolute;right:5px;top:50%;transform:translateY(-50%);color:#9AA5B1;font-size:6.5px}
+.omock-row.hi .omock-field{border-color:#D93025;background:#FEF2F2;color:#B31E16;box-shadow:0 0 0 2px rgba(217,48,37,.14)}
+.omock-row.hi .omock-cap{color:#D93025}
+.omock-preview{flex:1;background:#EDEFF2;display:flex;align-items:center;justify-content:center;padding:10px;position:relative}
+.omock-page{width:66%;height:88%;background:#fff;border:1px solid #D7DDE3;box-shadow:0 1px 5px rgba(0,0,0,.09);display:flex;align-items:center;justify-content:center}
+.omock-tag{position:absolute;background:#D93025;color:#fff;font-size:8px;font-weight:800;padding:3px 8px;border-radius:5px;white-space:nowrap;box-shadow:0 2px 5px rgba(217,48,37,.3)}
+.omock-cap.hi{color:#D93025}
+.omock-fields .omock-row.hi{margin:0 -3px;padding:2px 3px;background:rgba(217,48,37,.06);border-radius:5px}
+
+/* 준비중 */
+.soon{border:1px dashed #C9D3DB;border-radius:var(--radius);padding:44px 24px;text-align:center;background:var(--white)}
+.soon-h{font-size:16px;font-weight:800;color:var(--text3);margin-bottom:6px}
+.soon-p{font-size:13.5px;color:var(--text3)}
+
+/* FAQ */
+.faq{border-top:1px solid var(--border)}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-q{width:100%;text-align:left;background:none;border:none;font-family:inherit;font-size:15.5px;font-weight:700;color:var(--text);padding:20px 40px 20px 0;cursor:pointer;position:relative;line-height:1.5}
+.faq-q::after{content:'+';position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:22px;font-weight:400;color:var(--blue)}
+.faq-item.open .faq-q::after{content:'−'}
+.faq-a{display:none;font-size:14.2px;color:var(--text2);line-height:1.75;padding:0 0 22px}
+.faq-item.open .faq-a{display:block}
+
+/* FOOTER */
+footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
+.ft-wrap{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:56px}
+.ft-brand img{width:32px;height:32px;object-fit:contain;border-radius:6px;margin-bottom:14px}
+.ft-brand-name{color:white;font-size:18px;font-weight:900;margin-bottom:10px}
+.ft-brand p{font-size:13px;line-height:2}
+.ft-col h4{color:white;font-size:13px;font-weight:700;margin-bottom:14px;letter-spacing:.5px}
+.ft-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.ft-col a{font-size:13px;transition:color .2s}
+.ft-col a:hover{color:white}
+.ft-bottom{max-width:1160px;margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.ft-bottom p{font-size:12px;color:rgba(255,255,255,.25)}
+
+@media(max-width:820px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .nav-links.show{display:flex;position:absolute;top:70px;left:0;right:0;background:#fff;flex-direction:column;padding:10px 6%;border-bottom:1px solid var(--border)}
+  .sec{padding:48px 6%}
+  .ft-wrap{grid-template-columns:1fr}
+  .nav-raccoon{display:none}
+}
+
+/* ===== 사용방법 하위 구조 추가 스타일 ===== */
+.svc-switch{background:#fff;border-bottom:1px solid var(--border);padding:14px 6%}
+.svc-switch-in{max-width:1160px;margin:0 auto;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.svc-switch a{padding:8px 18px;font-size:13.5px;font-weight:800;border-radius:50px;border:2px solid var(--border);background:#fff;color:var(--text2);transition:all .18s}
+.svc-switch a:hover{border-color:var(--blue);color:var(--blue)}
+.svc-switch a.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.svc-switch a.home{border-style:dashed;color:var(--text3)}
+.svc-switch-label{font-size:12.5px;font-weight:800;color:var(--text3);margin-right:4px}
+
+.steps-wide{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.step-figs{margin-bottom:16px;display:grid;gap:10px}
+.step-figs.two{grid-template-columns:1fr 1fr}
+.step-photo{width:100%;height:auto;border-radius:8px;border:1px solid var(--border);display:block}
+.step-dual{grid-column:span 2}
+.open1{background:#EEF7FD;border:1.5px solid #BFDDF0;border-radius:16px;padding:18px 20px;margin:16px 0 8px}
+.open1-h{font-size:17px;font-weight:900;color:var(--text)}
+.open1-n{display:inline-block;background:var(--blue);color:#fff;border-radius:50px;padding:2px 11px;font-size:13px;margin-right:8px;vertical-align:1px}
+.open1-body{display:flex;gap:18px;align-items:flex-start;margin-top:14px}
+.open1-img{width:300px;max-width:42%;flex-shrink:0}
+.open1-txt p{font-size:14.5px;line-height:1.8;color:var(--text2);margin:0 0 8px}
+.open1-txt p b{color:var(--text)}
+.open1-txt .open1-phone{background:#fff;border-radius:12px;padding:10px 14px;margin:10px 0 0}
+.open1-phone a{color:var(--blue);font-weight:800}
+.open2-label{margin:18px 0 8px;font-size:15px;font-weight:900;color:var(--text)}
+.open2-label span{color:var(--blue)}
+@media(max-width:640px){.open1-body{flex-direction:column}.open1-img{width:100%;max-width:100%}}
+.step-note{margin-top:12px;background:#F5F8FA;border-radius:9px;padding:11px 14px;font-size:13px;color:var(--text2);line-height:1.6}
+.step-note b{color:var(--text);font-weight:700}
+.step-note.warn{background:#FEF2F2;color:#8A1C15;font-weight:600}
+.step-note.warn b{color:#B31E16}
+.sec-note{margin:0 0 22px;max-width:720px}
+.pgroup{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:26px;align-items:start;background:#fff;border:1px solid var(--border);border-radius:14px;padding:22px;margin-bottom:20px;max-width:1100px}
+.pfig{margin:0}
+.plist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:16px}
+.plist>li{display:flex;gap:12px;align-items:flex-start}
+.pn{flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:#E5252A;color:#fff;font-weight:900;font-size:15px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.pb{flex:1;min-width:0;font-size:14.2px;color:var(--text2);line-height:1.7}
+.pb b{font-weight:800;color:var(--text)}
+.pwarn{margin-top:8px;background:#FEF2F2;border:1.5px solid #E4574D;border-radius:10px;padding:10px 13px;font-size:13.4px;color:#8A1C15;font-weight:600;line-height:1.65}
+.pwarn b{color:#B31E16;font-weight:900}
+.pwarn ol{margin:6px 0 0;padding-left:20px}
+.pwarn li{margin-bottom:4px}
+.plink{display:inline-block;margin-top:2px;color:var(--blue);font-weight:800;text-decoration:underline}
+@media(max-width:820px){.pgroup{grid-template-columns:1fr;padding:16px}}
+.pg2{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr)}
+.pg2 .pfig{position:sticky;top:130px}
+.pimg{margin:10px 0 4px;max-width:460px}
+.pimg img{display:block;width:100%;height:auto;border:1px solid var(--border);border-radius:8px}
+@media(max-width:820px){.pg2{grid-template-columns:1fr}.pg2 .pfig{position:static}}
+.pg1{grid-template-columns:1fr}
+.order-box{background:#fff;border:2px solid var(--blue);border-radius:14px;padding:18px 20px;margin:0 0 26px;max-width:1000px}
+.order-h{font-size:17px;font-weight:900;color:var(--text);margin-bottom:12px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.order-h span{font-size:12.5px;font-weight:800;background:var(--blue);color:#fff;padding:3px 11px;border-radius:50px}
+.order-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.order-list li{display:flex;gap:11px;align-items:flex-start;background:#F3F9FE;border:1px solid #CFE6F8;border-radius:12px;padding:12px 13px;font-size:13.8px;line-height:1.6;color:var(--text2)}
+.order-list li>div{flex:1;min-width:0}
+.order-list .on{flex:0 0 auto;width:28px;height:28px;border-radius:50%;background:var(--blue);color:#fff;font-weight:900;font-size:15px;display:flex;align-items:center;justify-content:center}
+.order-warn{margin-top:14px;background:#FEF2F2;border:2px solid #E4574D;border-radius:12px;padding:14px 16px;color:#8A1C15;font-size:14px;line-height:1.7}
+.order-warn-h{font-size:16px;font-weight:900;color:#C0261C;margin-bottom:6px}
+.order-warn p{margin:0 0 8px}
+.order-warn b{color:#B31E16;font-weight:900}
+.order-ex{background:#fff;border-radius:8px;padding:9px 12px}
+.order-ok{margin-bottom:0!important;font-weight:700}
+.we-pics{display:flex;flex-direction:column;gap:20px;max-width:940px;margin:0 0 22px}
+.wefig{margin:0;background:#fff;border:1px solid var(--border);border-radius:14px;padding:12px}
+.wefig img{display:block;width:100%;height:auto;border-radius:8px}
+.sub2{margin:12px 0 4px;padding:12px 14px;background:#F8FAFC;border:1px solid var(--border);border-radius:12px}
+.sub2-h{font-weight:900;color:var(--text);font-size:14.5px;margin-bottom:6px}
+.sub2-n{display:inline-block;padding:2px 9px;border-radius:50px;background:var(--blue);color:#fff;font-size:12.5px;margin-right:6px}
+.ablist{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:8px}
+.ablist li{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.65;color:var(--text2)}
+.ablist li>div{flex:1;min-width:0}
+.ab{flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:#E5252A;color:#fff;font-weight:900;font-size:13.5px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.ftype-box{margin-top:14px;background:#E8F4FC;border:2px solid var(--blue);border-radius:12px;padding:14px 14px 16px}
+.ftype-h{font-size:14.5px;font-weight:900;color:var(--text);line-height:1.45}
+.ftype-sub{font-size:12.5px;font-weight:700;color:var(--text2);margin:3px 0 11px}
+.ftype-btns{display:flex;flex-wrap:wrap;gap:8px}
+.ftype-btn{border:0;color:#fff;font-family:inherit;font-weight:800;font-size:13.5px;padding:10px 16px;border-radius:50px;cursor:pointer;box-shadow:0 2px 6px rgba(17,24,39,.18);transition:transform .15s}
+.ftype-btn:hover{transform:translateY(-2px)}
+.ftype-btn.pdf{background:#D93025}.ftype-btn.hwp{background:#0F6CBD}.ftype-btn.office{background:#2B579A}.ftype-btn.img{background:#16A34A}.ftype-btn.web{background:#7C3AED}.ftype-btn.cert{background:#D97706}
+.ftype-btn{border-radius:16px;text-align:center;line-height:1.3}
+.ftype-btn b{display:block;font-weight:900}
+.ftype-btn small{display:block;font-size:11px;font-weight:700;opacity:.95;margin-top:2px}
+.step-no.mfp{font-size:12.5px;letter-spacing:-.5px}
+.goto{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 14px;margin:22px 0 4px;padding:16px 22px;border-radius:14px;background:#E7F7EC;border:2px solid #22B24C;color:#14532D;text-decoration:none;font-size:14.5px;line-height:1.5}
+.goto span{font-weight:700}
+.goto b{font-weight:900;color:#0B3D1E;font-size:16px}
+.goto:hover{background:#d5f0dd}
+.bsub{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:48px 0 20px;padding:15px 22px;border-radius:14px;color:#fff;font-size:23px;font-weight:900;letter-spacing:-.5px;line-height:1.3;box-shadow:0 4px 14px rgba(17,24,39,.14)}
+.bsub:first-of-type{margin-top:26px}
+.bsub-ico{flex:0 0 auto;width:38px;height:38px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:23px;font-weight:900;line-height:1}
+.bsub small{margin-left:auto;font-size:14px;font-weight:800;background:rgba(255,255,255,.24);padding:5px 14px;border-radius:50px;letter-spacing:0;white-space:nowrap}
+.bsub.edge{background:#0F6CBD}.bsub.edge .bsub-ico{color:#0F6CBD;font-family:Georgia,serif}
+.bsub.chrome{background:#D93025}.bsub.chrome .bsub-ico{color:#D93025}
+.bsub.common{background:#22B24C}.bsub.common .bsub-ico{font-size:21px}
+@media(max-width:560px){.bsub{font-size:19px;padding:13px 16px;gap:10px}.bsub small{margin-left:0;font-size:13px}}
+.steps-edge{grid-template-columns:1fr;max-width:1000px}
+.steps-edge .step{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);column-gap:28px;align-items:start}
+.steps-edge .step-no{grid-column:1/-1}
+.steps-edge .step-figs{grid-column:1;margin-bottom:0}
+.steps-edge .est-txt{grid-column:2}
+.steps-edge .step.noimg{grid-template-columns:1fr}
+.steps-edge .step.noimg .est-txt{grid-column:1}
+.est-fig{margin:0}
+.est-two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.est-cap{font-size:12.5px;font-weight:700;color:var(--text2);margin-top:6px;line-height:1.5}
+@media(max-width:719px){
+  .steps-edge .step{grid-template-columns:1fr}
+  .steps-edge .step-figs,.steps-edge .est-txt{grid-column:1}
+  .steps-edge .step-figs{margin-bottom:16px}
+}
+@media(max-width:719px){
+  .step-dual{grid-column:span 1}
+  .step-figs.two{grid-template-columns:1fr}
+}
+
+/* 사용방법 허브: 서비스 선택 카드 */
+.gcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:18px}
+.gcard{border:2px solid var(--tc);border-radius:var(--radius);background:#fff;overflow:hidden;display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s}
+.gcard:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(17,24,39,.1)}
+.gcard-top{background:var(--tc);padding:14px 20px;display:flex;align-items:center;gap:12px}
+.gcard-name{font-size:20px;font-weight:900;color:#fff;letter-spacing:-.6px}
+.gcard-body{padding:20px;flex:1;display:flex;flex-direction:column;gap:14px}
+.gcard-desc{font-size:14px;color:var(--text2);line-height:1.65;flex:1}
+.gcard-go{font-size:13.5px;font-weight:900;color:var(--tc)}
+
+.nav-links li{position:relative}
+@media(max-width:900px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .nav-links.show{display:flex;position:absolute;top:70px;left:0;right:0;background:#fff;flex-direction:column;padding:10px 6%;border-bottom:1px solid var(--border)}
+  .nav-links{max-height:calc(100vh - 70px);overflow-y:auto}
+}
+/* 상단 제목·서비스 선택 고정: 아래 내용만 스크롤 */
+.stick-top{position:sticky;top:70px;margin-top:70px;z-index:90}
+.stick-top .page-header{margin-top:0;position:static}
+.page-header{padding:10px 6% 8px}
+.ph-eyebrow{display:none}
+.ph-h1{font-size:clamp(22px,3vw,30px);letter-spacing:-1px;margin-bottom:0;line-height:1.3}
+.ph-sub{font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.svc-switch{padding:8px 6%}
+.svc-switch a{padding:6px 15px}
+[id]{scroll-margin-top:215px}
+@media(max-width:760px){
+  .page-header{padding:10px 5% 8px}
+  .ph-h1{font-size:19px}
+  .ph-sub{display:none}
+  .svc-switch{padding:7px 5%}
+  .svc-switch-in{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .svc-switch-in::-webkit-scrollbar{display:none}
+  .svc-switch a,.svc-switch-label{flex:0 0 auto;white-space:nowrap}
+  .svc-switch-label{display:none}
+  [id]{scroll-margin-top:165px}
+}
+/* 2단계 메뉴: 서비스 페이지와 같은 밑줄 탭 */
+.svc-switch{background:var(--bg);border-bottom:1px solid var(--border);padding:0 6%}
+.svc-switch-in{max-width:1160px;margin:0 auto;display:flex;flex-wrap:nowrap;gap:0;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.svc-switch-in::-webkit-scrollbar{display:none}
+.svc-switch a,.svc-switch a.home{display:block;flex:0 0 auto;white-space:nowrap;padding:11px 18px;font-size:13px;font-weight:700;color:var(--text3);background:none;border:none;border-bottom:2px solid transparent;border-radius:0;transition:all .2s}
+.svc-switch a:hover,.svc-switch a.on{color:var(--blue);background:none;border-bottom-color:var(--blue)}
+@media(max-width:760px){.svc-switch{padding:0 5%}.svc-switch a{padding:10px 15px}}
+.fax-ico{vertical-align:-2px;margin-right:1px}
+.bill-warn{margin-top:12px;background:#FEF2F2;border:2px solid #D93025;border-radius:10px;padding:11px 13px;font-size:13.4px;line-height:1.65;color:#8A1C15;font-weight:600}
+.bill-warn b{color:#B31E16;font-weight:900}
+.bill-warn .bh{display:block;font-size:14px;font-weight:900;color:#C0261C;margin-bottom:4px}
+/* FAQ 등에서 #이름 으로 들어올 때, 구역 제목이 고정 메뉴 바로 아래에 보이도록 */
+.sec[id]{scroll-margin-top:167px}
+@media(max-width:700px){.sec[id]{scroll-margin-top:122px}}
+
+/* 미니프랜즈 꾸밈 캐릭터 (제목 오른쪽) */
+.ph-inner{position:relative;padding-right:84px}
+.ph-pal{position:absolute;right:0;bottom:-8px;height:70px;width:auto;pointer-events:none;filter:drop-shadow(0 3px 4px rgba(0,0,0,.08))}
+@media(max-width:760px){.ph-inner{padding-right:50px}.ph-pal{height:42px;bottom:-6px}}
+
+/* 미니프랜즈 담당 친구 소개 띠 */
+.fr-band{max-width:1160px;margin:0 auto;padding:14px 6% 0}
+.fr-in{display:flex;align-items:center;gap:16px;background:var(--cl);border:3px dashed var(--c);border-radius:26px;padding:10px 20px 10px 14px;text-decoration:none;color:inherit;transition:transform .2s}
+.fr-in:hover{transform:translateY(-2px)}
+.fr-in img{flex:0 0 auto;height:92px;width:auto;filter:drop-shadow(0 4px 4px rgba(0,0,0,.15))}
+.fr-txt{flex:1;min-width:0;font-size:14.5px;line-height:1.75;color:#374151}
+.fr-txt b{font-family:'Jua','Noto Sans KR',sans-serif;font-weight:400;font-size:20px;color:var(--c);margin-right:6px}
+.fr-txt i{font-style:normal;font-family:'Gamja Flower','Jua',sans-serif;font-size:18px;color:var(--c);opacity:.85;margin-right:8px}
+.fr-txt span.fr-pill{display:inline-block;background:var(--c);color:#fff;font-size:12.5px;font-weight:700;padding:0 10px;border-radius:50px;margin-right:6px;vertical-align:2px}
+.fr-more{flex:0 0 auto;font-weight:700;font-size:13.5px;color:#fff;background:var(--c);padding:7px 14px;border-radius:50px;white-space:nowrap}
+@media(max-width:700px){
+  .fr-band{padding:10px 4% 0}
+  .fr-in{gap:10px;padding:8px 12px 8px 8px;border-radius:20px}
+  .fr-in img{height:68px}
+  .fr-txt{font-size:13px;line-height:1.6}
+  .fr-txt b{font-size:17px}
+  .fr-more{display:none}
+}
+</style>
+<style>
+/* 사용방법 동영상 */
+.gvid{max-width:820px;margin:0 0 34px;background:var(--sc-light,#E8F4FC);border:2px solid var(--sc,var(--blue));border-radius:18px;padding:14px 14px 16px}
+.gvid-h{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-weight:900;font-size:16px;color:var(--text);margin:0 4px 10px}
+.gvid-h .gvid-play{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--sc,var(--blue));color:#fff;font-size:12px}
+.gvid-h small{font-size:12.5px;font-weight:700;color:var(--text3)}
+.gvid video{display:block;width:100%;aspect-ratio:16/9;border-radius:12px;background:#000}
+</style>
+<style id="nav-lang-css">.nav-lang{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:#1B8AC4;border:1.5px solid #1B8AC4;border-radius:50px;padding:7px 13px;margin-right:8px;white-space:nowrap;background:#fff}.nav-lang:hover{background:#E8F4FC}.nav-links a{white-space:nowrap}@media(max-width:1180px){.nav-lang .t{display:none}.nav-lang{padding:6px 9px;font-size:15px}}@media(max-width:480px){.nav-lang{padding:4px 6px;margin-right:6px;font-size:14px}.nav-cta{padding:8px 13px!important;font-size:12.5px!important}}@media(max-width:400px){nav{padding-left:12px!important;padding-right:12px!important}.nav-logo-name{font-size:15px!important}.nav-logo{gap:6px!important}.nav-cta{padding:7px 9px!important;font-size:12px!important}.nav-lang,.lang-sel{margin-right:5px!important}.hamburger{margin-left:4px!important}}</style>
+<style>.lang-sel{display:inline-flex;align-items:center;gap:4px;margin-right:8px;border:1.5px solid #1B8AC4;border-radius:50px;padding:3px 4px 3px 10px;background:#fff;font-size:15px}.lang-sel select{border:none;background:transparent;font:700 13px sans-serif;color:#1B8AC4;padding:4px 2px;cursor:pointer;outline:none}.nav-links a{padding:8px 11px!important}@media(max-width:1280px){.nav-raccoon{display:none!important}}.lang-sel .cur{display:none}@media(max-width:480px){.nav-cta{display:none!important}.lang-sel{position:relative;margin-right:6px;padding:6px 10px;gap:5px}.lang-sel .cur{display:inline;white-space:nowrap;font:700 13px sans-serif;color:#1B8AC4}.lang-sel select{position:absolute;inset:0;width:100%;opacity:0}}.lang-sw{position:fixed;right:10px;bottom:12px;z-index:400}.tr-note{max-width:1160px;margin:0 auto;padding:10px 6% 0;font-size:12.5px;color:#9CA3AF}</style></head>
+<body>
+<!-- NAV -->
+<nav> <a class="nav-logo" href="../index.html"> <img alt="Logo" class="logo-img" src="../logo.jpg"/> <span class="nav-logo-name">PrintShop Mini</span> </a> <ul class="nav-links" id="navLinks">
+<li><a href="../services.html">Services</a></li>
+<li><a class="active" href="guide.html">How to Use</a></li>
+<li><a href="../faq.html">FAQ</a></li>
+<li><a href="../about.html">About</a></li>
+<li><a href="../branches.html">Stores</a></li>
+<li><a href="../community.html">Community</a></li>
+</ul>
+<div class="nav-right"> <label class="lang-sel" title="Language · 语言 · Ngôn ngữ"><span aria-hidden="true">🌐</span><span aria-hidden="true" class="cur">EN ▾</span><select aria-label="Language" onchange="location.href=this.value"><option lang="ko" value="../guide-print.html">한국어</option><option lang="en" selected="" value="../en/guide-print.html">English</option><option lang="zh-Hans" value="../zh/guide-print.html">中文</option><option lang="vi" value="../vi/guide-print.html">Tiếng Việt</option></select></label><a class="nav-cta" href="../branches.html">Find a Store</a> <div class="nav-raccoon" title="PrintShop Mini mascot">
+<img alt="Raccoon mascot" src="../raccoon1.png"/>
+</div>
+</div>
+<button class="hamburger" onclick="toggleMenu()">
+<span></span><span></span><span></span>
+</button>
+</nav>
+<!-- HEADER -->
+<div class="stick-top">
+<div class="page-header">
+<div class="ph-inner">
+<img alt="" aria-hidden="true" class="ph-pal" src="../img/friends/print.webp"/>
+<div class="ph-eyebrow">GUIDE · PRINT</div>
+<h1 class="ph-h1">How to Print</h1>
+<p class="ph-sub">How to open your file on the store PC and print it on paper. Print settings for each program are also here.</p>
+</div>
+</div>
+<div class="svc-switch"><div class="svc-switch-in"> <a href="guide.html">All guides</a> <a href="../guide-video.html">▶ Videos</a> <a class="on" href="guide-print.html">🖨️ Print</a> <a href="../guide-copy.html">📋 Copy</a> <a href="../guide-scan.html">📄 Scan</a> <a href="../guide-fax.html"><svg aria-hidden="true" class="fax-ico" fill="none" height="15" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 48 48" width="15"><path d="M9 36V5h18l8 8v9" stroke="currentColor" stroke-width="4.2"></path><path d="M15 15h10M15 22h6" stroke="currentColor" stroke-width="4.2"></path><g transform="translate(20 21) scale(1.04)"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke-width="7" style="stroke:var(--bg)"></path><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="3.99"></path></g></svg> Fax </a> <a href="../guide-coat.html">✨ Laminate</a> <a href="../guide-bind.html">📚 Bind</a> </div></div>
+</div>
+<div class="fr-band" style="--c:#22B24C;--cl:#E7F7EC">
+<a class="fr-in" href="../about.html#friend-penpurin" title="Meet the Mini Friends">
+<img alt="Peng Print" height="92" src="../img/friends/print.webp" width="92"/>
+<div class="fr-txt"><b>Peng Print</b><i>Peng Print</i><span class="fr-pill">Printing</span><br/>Hello! I'm Peng Print, in charge of printing. Let me show you how the papers come out one by one!</div> <span class="fr-more">See more friends →</span> </a>
+</div>
+<!-- 경고 배너 -->
+<div class="warnbar">
+<div class="warnbar-in">
+<div class="warnbar-ico">!</div>
+<div class="warnbar-tx">We can't refund prints that came out wrong because of wrong print settings. <span>Before printing, always check <b>all pages in preview</b>. It prints exactly what you see on the screen.</span></div>
+</div>
+</div>
+<!-- 탭 -->
+<div class="tabs">
+<div class="tabs-in"><button class="tab on" onclick="jump('store',this)">How to print</button> <button class="tab" onclick="jump('ptips',this)">Tips</button> <button class="tab" onclick="jump('acrobat',this)">PDF</button> <button class="tab" onclick="jump('hancom',this)">Hangul</button> <button class="tab" onclick="jump('office',this)">MS Office</button> <button class="tab" onclick="jump('browser',this)">Chrome · Edge</button> <button class="tab" onclick="jump('alsee',this)">ALSee</button> <button class="tab" onclick="jump('cert',this)">Certificates</button></div>
+</div>
+<div class="sec" id="store" style="--sc:#22B24C;--sc-light:#E7F7EC">
+<div class="sec-in">
+<div class="sec-head">
+<div class="sec-ico">
+<svg fill="none" height="34" viewbox="0 0 48 48" width="34">
+<rect height="9" rx="2" stroke="#1B8AC4" stroke-width="3" width="30" x="9" y="10"></rect>
+<rect height="14" rx="3" stroke="#1B8AC4" stroke-width="3" width="38" x="5" y="19"></rect>
+<rect height="7" rx="2" stroke="#1B8AC4" stroke-width="3" width="30" x="9" y="33"></rect>
+</svg>
+</div>
+<h2 class="sec-h2">How to print <span class="pill">PRINT</span></h2>
+</div>
+<p class="sec-tagline"><b>Open your file on the store PC and print it on paper.</b> First open your file on the PC and send the print job. Then <b>go to the printer machine, find your document with your PIN, and pay. Then it prints.</b><br/>⚠️ <b>After you finish on the PC, go to the printer machine. Find your document with the PIN you typed on the PC, and pay. Only then does it print.</b> Nothing comes out until you pay <b>at the printer machine's card reader</b>.<br/><span style="font-weight:600">※ Even if you already paid a fee on the PC (e.g. for issuing a document), you must <b>pay again for printing at the printer machine's card reader</b>.</span></p>
+<div class="gvid"><div class="gvid-h"><span class="gvid-play">▶</span>Watch the printing video first <small>No sound needed</small></div><video controls="" playsinline="" poster="../videos/guide-print.jpg" preload="none"><source src="../videos/guide-print.mp4" type="video/mp4"/> Your browser can't play this video. </video></div>
+<div class="order-box"><div class="order-h">🔢 Printing order · same for all file types <span>Always in this order!</span></div><ol class="order-list"><li><span class="on">1</span><div><b>🖨️ Choose the printer first.</b><br/>Pick the <b>[흑백출력] (B&amp;W)</b> or <b>[컬러출력] (Color)</b> printer before anything else.</div></li><li><span class="on">2</span><div><b>⚙️ Set the print options.</b><br/>Paper size · one-sided/two-sided · copies · pages, etc.</div></li><li><span class="on">3</span><div><b>👀 Check the preview.</b><br/>Make sure nothing is missing, and that it's in color if you chose color.</div></li><li><span class="on">4</span><div><b>✅ Finally, press the [인쇄] (Print) button.</b><br/>Depending on the program, it's the <b>[인쇄] button</b>, a <b>printer icon</b>, or the <b>[확인] (OK) button</b>.</div></li></ol><div class="order-warn"><div class="order-warn-h">🚫 Don't change the printer after setting the options!</div><p>If you <b>change the printer after setting the options, you must set all the options again.</b> Changing the printer changes all the options.</p><p class="order-ex">❌ <b>This is the most risky case</b><br/>You set the options without choosing a printer → later you <b>change from B&amp;W to Color</b> → the options changed but you don't check → the options are applied strangely and <b>the print comes out wrong.</b></p><p class="order-ok">✅ <b>Always: choose printer → set options → preview → print button.</b> If you changed the printer, check the options again <b>from the start</b>.</p></div></div>
+<div id="guideFiles"></div>
+<div class="steps steps-wide">
+<div class="step">
+<div class="step-no">1</div>
+<div class="step-figs"><img alt="Screen for opening a file on the PC and choosing B&amp;W / Color / Certificate" class="step-photo" loading="lazy" src="../images/print/print-select.png"/></div>
+<div class="step-h">Open the file and choose a printer</div>
+<p class="step-p">Open the file on the PC → <b>[인쇄] (Print)</b> → choose a printer<br/>B&amp;W / Color / Certificate (PIN9999)</p>
+<div class="step-note">💾 Files in email, USB or your phone must be <b>saved to the PC first</b>. Tap your file type below — <b>Step 1 (Open the file)</b> explains it.</div>
+<div class="ftype-box"><div class="ftype-h">📄 Each file type has a different way to set print options.</div><div class="ftype-sub">Print settings — tap your file type</div><div class="ftype-btns"><button class="ftype-btn pdf" onclick="goType('acrobat')" type="button"><b>PDF file</b></button><button class="ftype-btn hwp" onclick="goType('hancom')" type="button"><b>Hangul file</b></button><button class="ftype-btn office" onclick="goType('office','we')" type="button"><b>MS Office</b><small>Word · Excel · PowerPoint</small></button><button class="ftype-btn img" onclick="goType('alsee')" type="button"><b>Image file</b><small>Photo JPG · PNG</small></button><button class="ftype-btn web" onclick="goType('browser')" type="button"><b>Browser printing</b><small>PDFs made in web design tools</small></button><button class="ftype-btn cert" onclick="goType('cert')" type="button"><b>Certificates</b><small>TOEIC · TOEIC Speaking</small></button></div></div>
+</div>
+<div class="step" id="print-step2">
+<div class="step-no">2</div>
+<div class="step-figs"><img alt="PIN entry screen" class="step-photo" loading="lazy" src="../images/print/print-pin.png"/></div>
+<div class="step-h">Type a 4-digit PIN</div>
+<p class="step-p">Type the last 4 digits of your phone number<br/>For the certificate printer, 9999 is entered automatically</p>
+</div>
+<div class="step step-dual">
+<div class="step-no">3</div>
+<div class="step-figs two"><img alt="Choosing the Print menu on the printer machine's main screen" class="step-photo" loading="lazy" src="../images/print/print-machine1.png"/><img alt="Screen for choosing PC as the file location" class="step-photo" loading="lazy" src="../images/print/print-machine2.png"/></div>
+<div class="step-h">On the printer machine: Print menu → PC</div>
+<p class="step-p">Go to the printer machine in the store → choose the [인쇄] (PRINT) menu → choose [PC]<br/>If the screen is off, touch it to turn it on</p>
+</div>
+<div class="step">
+<div class="step-no">4</div>
+<div class="step-figs"><img alt="Screen for typing the 4-digit PIN and choosing your file from the print job list" class="step-photo" loading="lazy" src="../images/print/print-serch.png"/></div>
+<div class="step-h">Type PIN and [확인] (OK) → choose from list → press [시작] (Start)</div>
+<p class="step-p">Type the PIN you set on the PC and press [확인] (OK) → choose your file from the list → press [시작] (Start)</p>
+<div class="step-note">If the paper size says Letter, go back to the PC and change it to A4</div>
+</div>
+<div class="step">
+<div class="step-no">5</div>
+<div class="step-figs"><img alt="Payment info screen (total price, number of pages)" class="step-photo" loading="lazy" src="../images/print/print-price.png?v=2"/></div>
+<div class="step-h">Check the price [과금정보]</div>
+<p class="step-p">Check total price · pages · color or not<br/>If correct, press [확인] (OK)</p><div class="bill-warn"><span class="bh">🧾 You must check the payment info screen [과금정보]!</span><b>Check everything on the payment info screen. If you pay without checking and something is wrong, there is no refund or compensation.</b><br/>Press <b>[확인] (OK) to pay only after checking everything and it is all correct</b>.</div>
+</div>
+<div class="step">
+<div class="step-no">6</div>
+<div class="step-figs"><img alt="Paying with an IC card or Samsung Pay" class="step-photo" loading="lazy" src="../images/print/print-pay.png?v=3"/></div>
+<div class="step-h">Card payment</div>
+<p class="step-p">When the card reader speaks, <b>insert your IC card (credit/debit)</b>,<br/>or hold Samsung Pay to the side with the Wi-Fi mark</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sec alt" id="ptips" style="--sc:#22B24C;--sc-light:#E7F7EC">
+<div class="sec-in">
+<div class="sec-head"><h2 class="sec-h2">Printing tips</h2></div>
+<p class="sec-tagline">Things people often miss when printing.</p>
+<div class="tips">
+<div class="tip"><div class="tip-h">🎨 Check color in the preview!</div><p class="tip-p">If you chose the <b>Color printer [컬러출력]</b>, make sure the <b>preview is also in color</b>. If there are many pages, check <b>every page</b>.</p></div>
+<div class="tip"><div class="tip-h">🖍️ Colors may look different</div><p class="tip-p"><b>Printed colors can be different</b> from the PC screen. Even in the same file, <b>colors can differ from page to page</b>.</p></div>
+<div class="tip"><div class="tip-h">🧾 Check the payment info screen before paying!</div><p class="tip-p">Before you pay, the printer machine shows the <b>payment info screen [과금정보]</b>. If it is <b>different from what you expect, do NOT pay.</b> Check the print options on the PC again.</p></div>
+</div>
+</div>
+</div>
+<div class="sec" id="acrobat">
+<div class="sec-in">
+<div class="sec-head">
+<div class="sec-ico">
+<svg fill="none" height="34" viewbox="0 0 48 48" width="34">
+<path d="M12 5h16l9 9v29H12z" stroke="#1B8AC4" stroke-linejoin="round" stroke-width="3"></path>
+<path d="M28 5v9h9" stroke="#1B8AC4" stroke-linejoin="round" stroke-width="3"></path>
+<text fill="#1B8AC4" font-family="Noto Sans KR" font-size="11" font-weight="900" text-anchor="middle" x="24" y="35">PDF</text>
+</svg>
+</div>
+<h2 class="sec-h2">PDF files open in Adobe Acrobat Reader <span class="pill">PDF</span></h2>
+</div>
+<p class="sec-tagline">This is the PDF program on the store PC (<b>Adobe Acrobat Reader</b>). Open the PDF file and press the <b>printer icon</b> or <b>[파일] (File) → [인쇄] (Print)</b>, or press <b>Ctrl</b> and <b>P</b> together. The print screen below appears.</p>
+<div class="open1">
+<div class="open1-h"><span class="open1-n">Step 1</span>Open the file to print on the PC</div>
+<div class="open1-body">
+<img alt="Double-clicking a PDF file on the desktop to open it" class="step-photo open1-img" loading="lazy" src="../images/print/open-file-pdf.png?v=2"/>
+<div class="open1-txt">
+<p><b>Double-click</b> the file on the PC to open it.</p>
+<p>Files in email or USB: <b>save them to the PC desktop first</b>.</p>
+<p>It doesn't have to be the desktop. Just save it on the PC and <b>remember where you saved it</b>. Go there and double-click the file to open it. The desktop is the easiest place to find.</p>
+<p class="open1-phone">📱 <b>Is your file on your phone?</b> Tap the link below to see how to save it to the PC first.<br/><a href="../faq.html#faq-22">How to save phone files to the PC (in Korean) →</a></p>
+</div>
+</div>
+</div>
+<div class="open2-label"><span>Next</span> · Set print options</div>
+<div class="pgroup"><figure class="pfig"><a href="../images/print/pdf-ui-options.png?v=1" rel="noopener" target="_blank"><img alt="PDF print screen, with numbered close-ups of printer choice, Fit, and the paper source checkbox to uncheck" class="step-photo" loading="lazy" src="../images/print/pdf-ui-options.png?v=1"/></a><figcaption class="est-cap">Check the spots marked ① ② ③ <span style="color:var(--text3);font-weight:600">(tap the picture to enlarge)</span></figcaption></figure><ol class="plist"><li><span class="pn">1</span><div class="pb">In <b>[프린터] (Printer)</b>, choose the <b>[흑백출력] (B&amp;W)</b> or <b>[컬러출력] (Color)</b> printer.</div></li><li><span class="pn">2</span><div class="pb">In <b>Page Sizing [페이지 크기 조정 및 처리]</b>, <b>[맞추기] (Fit)</b> must be selected.</div></li><li><span class="pn">3</span><div class="pb"><div class="pwarn" style="margin-top:0">⚠️ <b>[PDF 페이지 크기에 따라 용지 소스 선택(Z)]</b> (choose paper source by PDF page size) <b>must NOT be checked!</b><br/>If it is checked, the printer machine shows <b>Custom</b> even if you chose A4 · B4 · A3. <b>Always uncheck it</b> before printing.</div></div></li></ol></div>
+<div class="pgroup"><figure class="pfig"><a href="../images/print/pdf-ui-print.png?v=1" rel="noopener" target="_blank"><img alt="PDF print screen, with numbered close-ups of Page Setup, Print in grayscale, preview and the Print button" class="step-photo" loading="lazy" src="../images/print/pdf-ui-print.png?v=1"/></a><figcaption class="est-cap">Check the spots marked ④ ⑤ ⑥ <span style="color:var(--text3);font-weight:600">(tap the picture to enlarge)</span></figcaption></figure><ol class="plist"><li><span class="pn">4</span><div class="pb">Press <b>[페이지 설정...] (Page Setup)</b> at the bottom and choose the <b>paper size</b> you want.</div></li><li><span class="pn">5</span><div class="pb"> Check in the <b>preview</b> that all pages look right.<br/>If you chose <b>Color [컬러출력]</b>, the small preview on the right <b>must be in color</b>. <div class="pwarn"> If it's not in color <ol><li>Check if <b>[회색 명암(흑백)으로 인쇄] (Print in grayscale)</b> at the top is checked. If it is, <b>uncheck it.</b></li><li>If it's still black and white, <b>restart the PC</b> and open the file again.</li><li>If it's still black and white, open the file in <b>Edge or Chrome</b>, choose the <b>Color [컬러출력]</b> printer, check that the preview is in color, then print. <a class="plink" href="#browser" onclick="goType('browser');return false">See the Edge · Chrome way</a></li></ol></div></div></li><li><span class="pn">6</span><div class="pb">When all print options are set, press the <b>[인쇄] (Print)</b> button. The <b>PIN</b> box appears.</div></li></ol></div> <a class="goto" href="#print-step2" onclick="goStep2();return false"><span>That's all for PDF print options! Press [인쇄] (Print) and the PIN box appears.</span><b>Continue from Step 2 (type a 4-digit PIN) of ‘How to print’ above ⬆</b></a> </div>
+</div>
+<div class="sec alt" id="hancom">
+<div class="sec-in">
+<div class="sec-head">
+<div class="sec-ico">
+<svg fill="none" height="34" viewbox="0 0 48 48" width="34">
+<path d="M12 5h16l9 9v29H12z" stroke="#1B8AC4" stroke-linejoin="round" stroke-width="3"></path>
+<path d="M28 5v9h9" stroke="#1B8AC4" stroke-linejoin="round" stroke-width="3"></path>
+<text fill="#1B8AC4" font-family="Noto Sans KR" font-size="11" font-weight="900" text-anchor="middle" x="24" y="35">HWP</text>
+</svg>
+</div>
+<h2 class="sec-h2">Hangul files open in the Hancom Hangul Viewer <span class="pill">Hangul</span></h2>
+</div>
+<p class="sec-tagline">The store PC has a <b>view-only viewer with no editing</b>. If it's different from where the file was made, the screen may look different.</p>
+<div class="open1">
+<div class="open1-h"><span class="open1-n">Step 1</span>Open the file to print on the PC</div>
+<div class="open1-body">
+<img alt="Double-clicking a Hangul file on the desktop to open it" class="step-photo open1-img" loading="lazy" src="../images/print/open-file-hwp.png?v=2"/>
+<div class="open1-txt">
+<p><b>Double-click</b> the file on the PC to open it.</p>
+<p>Files in email or USB: <b>save them to the PC desktop first</b>.</p>
+<p>It doesn't have to be the desktop. Just save it on the PC and <b>remember where you saved it</b>. Go there and double-click the file to open it. The desktop is the easiest place to find.</p>
+<p class="open1-phone">📱 <b>Is your file on your phone?</b> Tap the link below to see how to save it to the PC first.<br/><a href="../faq.html#faq-22">How to save phone files to the PC (in Korean) →</a></p>
+</div>
+</div>
+</div>
+<div class="open2-label"><span>Next</span> · Set print options</div>
+<div class="pgroup pg2"><figure class="pfig"><a href="../images/print/hwp-ui-main.png?v=1" rel="noopener" target="_blank"><img alt="Hangul print screen, with numbers on printer choice, Settings button, copies, page range, print method and the Print button" class="step-photo" loading="lazy" src="../images/print/hwp-ui-main.png?v=1"/></a><figcaption class="est-cap">Check spots 1 to 6 in order <span style="color:var(--text3);font-weight:600">(tap the picture to enlarge)</span></figcaption></figure><ol class="plist"><li><span class="pn">1</span><div class="pb"><b>Choose printer</b>: In the printer list, click the printer you want (<b>[흑백출력] (B&amp;W)</b> or <b>[컬러출력] (Color)</b>).</div></li><li><span class="pn">2</span><div class="pb"> <b>Settings button</b>: Press <b>[설정] (Settings)</b> and the <b>[프린터 속성] (Printer Properties)</b> window opens. It has a <b>[기본] (Basic) tab</b> and a <b>[용지] (Paper) tab</b>. Check <b>2-1</b> and <b>2-2</b> below in order. <div class="sub2"><div class="sub2-h"><span class="sub2-n">2-1</span> [기본] (Basic) tab — orientation · one-sided/two-sided</div><figure class="pimg"><a href="../images/print/hwp-ui-prop1.png?v=1" rel="noopener" target="_blank"><img alt="Basic tab of Printer Properties. A is paper orientation, B is two-sided printing" loading="lazy" src="../images/print/hwp-ui-prop1.png?v=1"/></a></figure><ul class="ablist"><li><span class="ab">A</span><div><b>Orientation</b>: Choose <b>[세로] (Portrait)</b> or <b>[가로] (Landscape)</b>.</div></li><li><span class="ab">B</span><div><b>Two-sided</b>: For one side only choose <b>[사용안함] (Off)</b>. For two sides choose <b>[긴면 묶음] (long edge)</b> or <b>[짧은면 묶음] (short edge)</b>.</div></li></ul></div><div class="sub2"><div class="sub2-h"><span class="sub2-n">2-2</span> [용지] (Paper) tab — paper size</div><figure class="pimg"><a href="../images/print/hwp-ui-prop2.png?v=1" rel="noopener" target="_blank"><img alt="Paper tab of Printer Properties. A is original size, B is output size" loading="lazy" src="../images/print/hwp-ui-prop2.png?v=1"/></a></figure><ul class="ablist"><li><span class="ab">A</span><div><b>Original size [원본 문서 크기]</b>: Choose the paper size you want (<b>A4 · B4 · A3</b>).</div></li><li><span class="ab">B</span><div><b>Output size [출력 문서 크기]</b>: Choose <b>the same size as A</b> here too. Don't leave it as <b>[원본 문서 크기와 동일] (same as original)</b>.</div></li></ul><div class="pwarn" style="background:#EAF4FF;border-color:#1B8AC4;color:#10425F">📌 <b>e.g.)</b> To print on A4, choose <b>A4</b> in both <b>A</b> and <b>B</b>.</div><div class="pwarn">⚠️ For some files, if you don't set <b>[출력 문서 크기] (Output size)</b>, the printer machine shows the <b>Hangul file's size</b>, such as <b>Letter</b> or <b>Custom</b>.</div></div></div></li><li><span class="pn">3</span><div class="pb">Set the <b>number of copies</b>.</div></li><li><span class="pn">4</span><div class="pb">Choose the <b>pages to print</b>. Choose <b>[전체] (All)</b>, or to print only some pages choose <b>[일부분] (Some)</b> and type the page numbers.</div></li><li><span class="pn">5</span><div class="pb"><b>Pages per side</b>: For one page per side choose <b>[기본 인쇄] (Normal)</b>. For several pages on one side choose <b>[모아 찍기] (N-up)</b> and type the number.</div></li><li><span class="pn">6</span><div class="pb"> When all settings are done, press the <b>[인쇄] (Print)</b> button. <div class="pwarn">※ <b>This is a shared PC, so print settings change every time.</b> <b>Check and set all the options you want</b> before printing.</div></div></li></ol></div>
+<div class="step-note" style="max-width:1100px;margin:0 0 18px">💡 The fonts are different from the PC where the file was made, so fonts, line spacing or tables can shift, or <b>symbols (□) not in the original</b> can appear. In Hangul, use <b>[다른 이름으로 저장] (Save As) → PDF</b> and bring that, and it prints just like the original.</div> <a class="goto" href="#print-step2" onclick="goStep2();return false"><span>That's all for Hangul print options! Press [인쇄] (Print) and the PIN box appears.</span><b>Continue from Step 2 (type a 4-digit PIN) of ‘How to print’ above ⬆</b></a> </div>
+</div>
+<div class="sec" id="office">
+<div class="sec-in">
+<div class="sec-head">
+<div class="sec-ico">
+<svg fill="none" height="34" viewbox="0 0 48 48" width="34">
+<rect height="30" rx="4" stroke="#1B8AC4" stroke-width="3" width="34" x="7" y="9"></rect>
+<path d="M7 18h34" stroke="#1B8AC4" stroke-width="3"></path>
+<path d="M18 18v21" stroke="#1B8AC4" stroke-width="3"></path>
+</svg>
+</div>
+<h2 class="sec-h2">Excel · Word · PowerPoint files open in MS Office <span class="pill">MS Office</span></h2>
+</div>
+<p class="sec-tagline">Print settings for Word · Excel · PowerPoint files. Each program looks a bit different, but you always go to <b>[파일] (File) → [인쇄] (Print)</b>.</p>
+<div class="open1">
+<div class="open1-h"><span class="open1-n">Step 1</span>Open the file to print on the PC</div>
+<div class="open1-body">
+<img alt="Double-clicking a Word · Excel · PowerPoint file on the desktop to open it" class="step-photo open1-img" loading="lazy" src="../images/print/open-file-office.png?v=2"/>
+<div class="open1-txt">
+<p><b>Double-click</b> the file on the PC to open it.</p>
+<p>Files in email or USB: <b>save them to the PC desktop first</b>.</p>
+<p>It doesn't have to be the desktop. Just save it on the PC and <b>remember where you saved it</b>. Go there and double-click the file to open it. The desktop is the easiest place to find.</p>
+<p class="open1-phone">📱 <b>Is your file on your phone?</b> Tap the link below to see how to save it to the PC first.<br/><a href="../faq.html#faq-22">How to save phone files to the PC (in Korean) →</a></p>
+</div>
+</div>
+</div>
+<div class="open2-label"><span>Next</span> · Set print options</div>
+<div class="otabs"><button class="otab on" onclick="officeTab('we',this)">Word · Excel</button> <button class="otab" onclick="officeTab('ppt',this)">PowerPoint</button></div>
+<!-- 엑셀 -->
+<div class="opanel" id="office-we">
+<div class="we-pics"><figure class="wefig"><a href="../images/print/wd-ui.png?v=1" rel="noopener" target="_blank"><img alt="Word print screen, with a close-up of the list that opens when you click Printer" loading="lazy" src="../images/print/wd-ui.png?v=1"/></a><figcaption class="est-cap">Word screen — check the numbered spots in order <span style="color:var(--text3);font-weight:600">(tap the picture to enlarge)</span></figcaption></figure><figure class="wefig"><a href="../images/print/xl-ui.png?v=1" rel="noopener" target="_blank"><img alt="Excel print screen, with a close-up of the list that opens when you click Printer" loading="lazy" src="../images/print/xl-ui.png?v=1"/></a><figcaption class="est-cap">Excel screen — same as Word <span style="color:var(--text3);font-weight:600">(tap the picture to enlarge)</span></figcaption></figure></div>
+<div class="pgroup pg1"><ol class="plist"><li><span class="pn">1</span><div class="pb">Open the <b>Excel</b> or <b>Word</b> file and click <b>[인쇄] (Print)</b> in the left menu.<br/>The print options screen is <b>the same in Excel and Word.</b></div></li><li><span class="pn">2</span><div class="pb"> Click the <b>▼</b> at the right end of the <b>[프린터] (Printer)</b> box to open the list, then choose <b>[흑백출력] (B&amp;W)</b> or <b>[컬러출력] (Color)</b>. (Don't click the word 'Printer' itself!) <div class="pwarn" style="margin-top:8px">⚠️ If you chose the <b>Color [컬러출력]</b> printer, check that the <b>preview is also in color</b>. Scroll through the preview and make sure <b>every page you print is in color</b>.</div></div></li><li><span class="pn">3</span><div class="pb"> Choose the <b>paper size</b>. Then check in the <b>preview</b> that everything you want is there. <div class="pwarn">⚠️ Make sure the <b>paper size</b> is not <b>Letter</b>, but <b>the size you want to print (A4 · B4 · A3)</b>.</div></div></li><li><span class="pn">4</span><div class="pb">Choose print options like <b>one-sided / two-sided</b>. Then check in the <b>preview</b> that it looks the way you want.</div></li><li><span class="pn">5</span><div class="pb">Click the <b>[인쇄] (Print) printer-icon</b> button at the top. When the <b>PIN</b> box appears, type <b>any 4 digits</b>. We suggest <b>the last 4 digits of your phone number</b>.<br/>After this, <b>the steps at the printer machine are the same.</b></div></li></ol></div> <a class="goto" href="#print-step2" onclick="goStep2();return false"><span>That's all for Word · Excel print options! Press [인쇄] (Print) and the PIN box appears.</span><b>Continue from Step 2 (type a 4-digit PIN) of ‘How to print’ above ⬆</b></a> </div>
+<!-- 파워포인트 -->
+<div class="opanel" id="office-ppt" style="display:none">
+<div class="pgroup pg2"><figure class="pfig"><a href="../images/print/ppt-ui-main.png?v=1" rel="noopener" target="_blank"><img alt="PowerPoint print screen, with numbers on copies, printer, slides, one-sided, color, printer properties and the Print button" class="step-photo" loading="lazy" src="../images/print/ppt-ui-main.png?v=1"/></a><figcaption class="est-cap">Check spots 1 to 8 in order <span style="color:var(--text3);font-weight:600">(tap the picture to enlarge)</span></figcaption></figure><ol class="plist"><li><span class="pn">1</span><div class="pb">Set the <b>number of copies</b> [복사본].</div></li><li><span class="pn">2</span><div class="pb"> <b>Printer</b>: Click the red <b>▼</b>, then click <b>[더보기] (More)</b>. In the printer list, choose one of <b>[흑백출력] (B&amp;W) · [컬러출력] (Color) · [증명서전용] (Certificate)</b>. <figure class="pimg"><a href="../images/print/ppt-ui-printer.png?v=1" rel="noopener" target="_blank"><img alt="Clicking More in the printer list and choosing B&amp;W, Color or Certificate" loading="lazy" src="../images/print/ppt-ui-printer.png?v=1"/></a></figure></div></li><li><span class="pn">3</span><div class="pb"> <b>Slides to print</b>: Click <b>▼</b> and choose which slides to print. <figure class="pimg"><a href="../images/print/ppt-ui-range.png?v=1" rel="noopener" target="_blank"><img alt="Choosing the slides to print" loading="lazy" src="../images/print/ppt-ui-range.png?v=1"/></a></figure></div></li><li><span class="pn">4</span><div class="pb"> <b>Slides per page</b>: Click <b>▼</b> and choose. Then be sure to check the <b>preview</b>. <figure class="pimg"><a href="../images/print/ppt-ui-shape.png?v=1" rel="noopener" target="_blank"><img alt="Choosing how many slides per page" loading="lazy" src="../images/print/ppt-ui-shape.png?v=1"/></a></figure></div></li><li><span class="pn">5</span><div class="pb"> <b>One-sided / Two-sided</b>: Click <b>▼</b> and choose. For two-sided, check the direction (<b>long edge · short edge</b>) before choosing. <figure class="pimg"><a href="../images/print/ppt-ui-duplex.png?v=1" rel="noopener" target="_blank"><img alt="Choosing one-sided or two-sided printing" loading="lazy" src="../images/print/ppt-ui-duplex.png?v=1"/></a></figure></div></li><li><span class="pn">6</span><div class="pb"><div class="pwarn" style="margin-top:0">⚠️ <b>Color</b>: If you chose the <b>[컬러출력] (Color) · [증명서전용] (Certificate)</b> printer, be sure to set this box to <b>[컬러] (Color)</b>.<br/>If it says <b>[회색조] (Grayscale)</b>, it <b>prints in black and white</b> even with the Color printer, but <b>you pay the color price</b>. Set it to <b>[컬러] (Color)</b> and check that <b>the preview is in color</b>.</div><figure class="pimg"><a href="../images/print/ppt-ui-color.png?v=1" rel="noopener" target="_blank"><img alt="Choosing Color from Color, Grayscale and Black and White" loading="lazy" src="../images/print/ppt-ui-color.png?v=1"/></a></figure></div></li><li><span class="pn">7</span><div class="pb"> <b>To change the paper size</b>: PowerPoint <b>has no paper size box</b> in its settings. Instead, click <b>[프린터 속성] (Printer Properties)</b>. In the window, go to the <b>[용지] (Paper)</b> tab and set <b>[원본 문서 크기] (Original size)</b> and <b>[출력 문서 크기] (Output size)</b> <b>to the same size</b>. <div class="pwarn" style="background:#EAF4FF;border-color:#1B8AC4;color:#10425F">📌 <b>e.g.)</b> To print on A4, set both <b>[원본 문서 크기]</b> and <b>[출력 문서 크기]</b> <b>to A4</b>. For A3, set both to A3.</div><div class="pwarn" style="margin-top:8px">⚠️ If you change only one, the printer machine may show the paper size as <b>Letter</b> or <b>Custom</b>.</div><div class="pwarn" style="background:#F3F4F6;border-color:#9CA3AF;color:#374151">💡 <b>Word · Excel · Hangul</b> let you choose the paper size right in the settings, but <b>only PowerPoint</b> uses Printer Properties.</div></div></li><li><span class="pn">8</span><div class="pb"> When you've chosen all options, press the <b>[인쇄] (Print)</b> button. <div class="pwarn">⚠️ If you <b>change ② the printer</b> after setting everything, the options may change. Then <b>check all options again from the start</b>.</div></div></li></ol></div> <a class="goto" href="#print-step2" onclick="goStep2();return false"><span>That's all for PowerPoint print options! Press [인쇄] (Print) and the PIN box appears.</span><b>Continue from Step 2 (type a 4-digit PIN) of ‘How to print’ above ⬆</b></a> </div>
+</div>
+</div>
+<div class="sec alt" id="browser">
+<div class="sec-in">
+<div class="sec-head">
+<div class="sec-ico">
+<svg fill="none" height="34" viewbox="0 0 48 48" width="34">
+<circle cx="24" cy="24" r="17" stroke="#1B8AC4" stroke-width="3"></circle>
+<ellipse cx="24" cy="24" rx="7.5" ry="17" stroke="#1B8AC4" stroke-width="2.6"></ellipse>
+<path d="M7 24h34M10 15h28M10 33h28" stroke="#1B8AC4" stroke-width="2.6"></path>
+</svg>
+</div>
+<h2 class="sec-h2">When you open the file in Chrome · Edge <span class="pill">Canva · web PDF</span></h2>
+</div>
+<p class="sec-tagline">For PDFs made in Canva · Miricanvas · web design programs · iPad note apps, <span class="hl-t">open them in a browser, check in the preview that all colors show, and then print.</span></p>
+<div class="open1">
+<div class="open1-h"><span class="open1-n">Step 1</span>Open the file in Edge or Chrome</div>
+<div class="open1-body">
+<img alt="Dragging a PDF file from the desktop onto an Edge or Chrome window" class="step-photo open1-img" loading="lazy" src="../images/print/open-file-drag.png?v=1"/>
+<div class="open1-txt">
+<p>PDF files are set to <b>open in Acrobat when you double-click</b>. To open them in a browser (Edge · Chrome), do <b>one of the two</b> below.</p>
+<p>① First <b>open Edge or Chrome</b>, then <b>drag the file onto that window.</b></p>
+<p>② <b>Right-click</b> the file and choose <b>[연결 프로그램] (Open with)</b> → <b>Edge or Chrome</b>.</p>
+<p>Files in email or USB: <b>save them to the PC desktop first</b>. You just need to know where you saved it. The desktop is the easiest place to find.</p>
+<p class="open1-phone">📱 <b>Is your file on your phone?</b> Tap the link below to see how to save it to the PC first.<br/><a href="../faq.html#faq-22">How to save phone files to the PC (in Korean) →</a></p>
+</div>
+</div>
+</div>
+<div class="open2-label"><span>Next</span> · Set print options</div>
+<div class="prestep" style="margin-bottom:6px">
+<div class="prestep-h">🔎 First check which browser opened your file <span>Edge and Chrome have different print screens</span></div>
+<p style="font-size:14px;color:#5C4300;line-height:1.7">If your file is open in <b>Edge</b>, follow the <b>Edge steps</b> below. If it's open in <b>Chrome</b>, follow the <b>Chrome steps</b> (Steps 1–5). After you <b>type the PIN and check the print queue window (Step 5)</b>, scroll down to <b>Printing at the printer machine</b>. <b>It's the same for Edge · Chrome · ALSee.</b></p>
+</div>
+<div class="bsub edge"><span class="bsub-ico">e</span><span class="bsub-t">Printing in Edge</span><small>Steps 1–5</small></div>
+<div class="steps steps-edge">
+<div class="step noimg">
+<div class="step-no">1</div>
+<div class="est-txt">
+<div class="step-h">Press [인쇄] (Print)</div>
+<p class="step-p">With the file open in the browser, press <b>[인쇄] (Print)</b> or the <b>printer icon</b>.</p>
+</div>
+</div>
+<div class="step">
+<div class="step-no">2</div>
+<div class="step-figs"><div class="est-two"><figure class="est-fig"><img alt="Choosing B&amp;W (BlackOnly) from the printer list in Edge" class="step-photo" loading="lazy" src="../images/print/edge-ui-black.png?v=1"/><figcaption class="est-cap">Choose the B&amp;W printer</figcaption></figure><figure class="est-fig"><img alt="Choosing Color (ColorOnly) from the printer list in Edge" class="step-photo" loading="lazy" src="../images/print/edge-ui-colorlist.png?v=1"/><figcaption class="est-cap">Choose the Color printer</figcaption></figure></div><figure class="est-fig"><a href="../images/print/edge-ui-color.png?v=1" rel="noopener" target="_blank"><img alt="Edge print screen, with a magnified close-up of the Color printer and the Color box" class="step-photo" loading="lazy" src="../images/print/edge-ui-color.png?v=1"/></a><figcaption class="est-cap">🔍 The red box is enlarged — choose the <b>Color printer [컬러출력]</b>, choose <b>[색] (Color)</b> in the <b>'색'</b> box, and make sure <b>the preview on the right is in color</b> <span style="color:var(--text3);font-weight:600">(tap the picture to enlarge)</span></figcaption></figure></div>
+<div class="est-txt">
+<div class="step-h">Choose the printer</div>
+<p class="step-p">In the printer box, choose the <b>[흑백출력] (B&amp;W)</b> or <b>[컬러출력] (Color)</b> printer.</p><div class="step-note warn">⚠️ If you chose the <b>Color printer [컬러출력]</b>, choose <b>[색] (Color)</b> in the <b>'색'</b> box, and <b>always check that the preview on the right is in color</b>.</div>
+</div>
+</div>
+<div class="step">
+<div class="step-no">3</div>
+<div class="step-figs"><figure class="est-fig"><a href="../images/print/edge-ui-options.png?v=1" rel="noopener" target="_blank"><img alt="Edge print screen, with a magnified close-up of two-sided, paper size and pages per sheet" class="step-photo" loading="lazy" src="../images/print/edge-ui-options.png?v=1"/></a><figcaption class="est-cap">🔍 The red box is enlarged — check inside the numbered boxes: <b>two-sided/one-sided · paper size · pages per sheet</b> <span style="color:var(--text3);font-weight:600">(tap the picture to enlarge)</span></figcaption></figure></div>
+<div class="est-txt">
+<div class="step-h">Choose and check print options</div>
+<p class="step-p">Press <b>[기타 설정] (More settings)</b> and choose or check options like <b>paper size, two-sided/one-sided, pages per sheet</b>.</p>
+</div>
+</div>
+<div class="step">
+<div class="step-no">4</div>
+<div class="step-figs"><figure class="est-fig"><img alt="Typing 4 digits into the PIN box" class="step-photo" loading="lazy" src="../images/print/pin-dialog.png?v=1"/></figure></div>
+<div class="est-txt">
+<div class="step-h">Press [인쇄] (Print) and type the number</div>
+<p class="step-p">Press the <b>[인쇄] (Print)</b> button at the bottom and the <b>PIN</b> box appears. Type <b>any 4 digits</b>. We suggest <b>the last 4 digits of your phone number</b>.</p><div class="step-note">This number (PIN) is like a temporary password to find your document at the printer machine. Be sure to remember it!</div>
+</div>
+</div>
+<div class="step">
+<div class="step-no">5</div>
+<div class="step-figs"><figure class="est-fig"><img alt="The print queue window still shows a document" class="step-photo" loading="lazy" src="../images/print/queue-wait.png?v=1"/><figcaption class="est-cap">Still in the list → wait until it's gone</figcaption></figure><figure class="est-fig"><img alt="The print queue window is empty" class="step-photo" loading="lazy" src="../images/print/queue-empty.png?v=1"/><figcaption class="est-cap">List is empty → sent to the printer machine</figcaption></figure></div>
+<div class="est-txt">
+<div class="step-h">Check the print queue window</div>
+<p class="step-p">Look at the <b>[흑백출력] (B&amp;W)</b> or <b>[컬러출력] (Color)</b> print queue window.<br/>If the list is <b>empty</b>, your job has been sent to the printer machine.<br/>If something is still in the list, please <b>wait until it's gone</b>.</p>
+</div>
+</div>
+</div> <a class="goto" href="#mfp"><span>That's all you do on the PC!</span><b>Continue with ‘Printing at the printer machine’ below ⬇</b></a> <div class="bsub chrome"><span class="bsub-ico">C</span><span class="bsub-t">Printing in Chrome</span><small>Steps 1–5</small></div>
+<div class="steps steps-edge">
+<div class="step noimg">
+<div class="step-no">1</div>
+<div class="est-txt">
+<div class="step-h">Press [인쇄] (Print)</div>
+<p class="step-p">With the file open in <b>Chrome</b>, press <b>[인쇄] (Print)</b> or the <b>printer icon</b>, or press <b>Ctrl</b> and <b>P</b> together.<br/>The print window opens. <b>The left is the preview</b>, and <b>the right is the print options</b>.</p>
+</div>
+</div>
+<div class="step">
+<div class="step-no">2</div>
+<div class="step-figs"><figure class="est-fig"><a href="../images/print/chrome-ui-printer.png?v=1" rel="noopener" target="_blank"><img alt="Chrome print screen, magnified: clicking Destination shows B&amp;W by default, with See more below" class="step-photo" loading="lazy" src="../images/print/chrome-ui-printer.png?v=1"/></a><figcaption class="est-cap">① Click <b>[대상] (Destination)</b> and <b>B&amp;W [흑백출력]</b> shows by default. If Color isn't there, click <b>[더보기...] (See more)</b> <span style="color:var(--text3);font-weight:600">(tap the picture to enlarge)</span></figcaption></figure><figure class="est-fig"><a href="../images/print/chrome-ui-list.png?v=1" rel="noopener" target="_blank"><img alt="Choosing B&amp;W (BlackOnly) or Color (ColorOnly) in the destination window" class="step-photo" loading="lazy" src="../images/print/chrome-ui-list.png?v=1"/></a><figcaption class="est-cap">② In the full printer list, choose <b>[흑백출력] (B&amp;W)</b> or <b>[컬러출력] (Color)</b> <span style="color:var(--text3);font-weight:600">(tap the picture to enlarge)</span></figcaption></figure><figure class="est-fig"><a href="../images/print/chrome-ui-color.png?v=1" rel="noopener" target="_blank"><img alt="Chrome print screen, magnified: choosing the Color printer and Color in the Color box" class="step-photo" loading="lazy" src="../images/print/chrome-ui-color.png?v=1"/></a><figcaption class="est-cap">③ If you chose <b>Color [컬러출력]</b>, choose <b>[컬러] (Color)</b> in the <b>'컬러'</b> box, and make sure <b>the preview on the left is in color</b> <span style="color:var(--text3);font-weight:600">(tap the picture to enlarge)</span></figcaption></figure></div>
+<div class="est-txt">
+<div class="step-h">Choose the printer [대상] (Destination)</div>
+<p class="step-p">In the settings on the right, <b>[대상] (Destination)</b> is where you choose the printer. Click it and the <b>[흑백출력] (B&amp;W)</b> printer shows by default.<br/>If you don't see <b>[컬러출력] (Color)</b>, click <b>[더보기...] (See more)</b> below. The full printer list appears.<br/>Choose the <b>[흑백출력] (B&amp;W)</b> or <b>[컬러출력] (Color)</b> printer.</p><div class="step-note warn">⚠️ If you chose the <b>Color printer [컬러출력]</b>, choose <b>[컬러] (Color)</b> in the <b>'컬러'</b> box (below Layout). Then <b>always check</b> that the preview on the left is in color and that <b>every page you print is in color</b>.</div>
+</div>
+</div>
+<div class="step">
+<div class="step-no">3</div>
+<div class="step-figs"><figure class="est-fig"><a href="../images/print/chrome-ui-options.png?v=1" rel="noopener" target="_blank"><img alt="Chrome print screen, magnified: paper size, pages per sheet and two-sided options" class="step-photo" loading="lazy" src="../images/print/chrome-ui-options.png?v=1"/></a><figcaption class="est-cap">🔍 Check inside the red numbered boxes (marked ✔): <b>paper size · pages per sheet · two-sided</b> <span style="color:var(--text3);font-weight:600">(tap the picture to enlarge)</span></figcaption></figure></div>
+<div class="est-txt">
+<div class="step-h">Choose and check print options</div>
+<p class="step-p">Click <b>[설정 더보기] (More settings)</b> to see options like <b>paper size, two-sided, pages per sheet</b>. Choose or check them as you want.</p>
+</div>
+</div>
+<div class="step">
+<div class="step-no">4</div>
+<div class="step-figs"><figure class="est-fig"><img alt="Typing 4 digits into the PIN box" class="step-photo" loading="lazy" src="../images/print/pin-dialog.png?v=1"/></figure></div>
+<div class="est-txt">
+<div class="step-h">Press [인쇄] (Print) and type the number</div>
+<p class="step-p">Press the <b>[인쇄] (Print)</b> button at the bottom and the <b>PIN</b> box appears. Type <b>any 4 digits</b>. We suggest <b>the last 4 digits of your phone number</b>.</p><div class="step-note">This number (PIN) is like a temporary password to find your document at the printer machine. Be sure to remember it!</div>
+</div>
+</div>
+<div class="step">
+<div class="step-no">5</div>
+<div class="step-figs"><figure class="est-fig"><img alt="The print queue window still shows a document" class="step-photo" loading="lazy" src="../images/print/chrome-queue-wait.jpg"/><figcaption class="est-cap">Still in the list → wait until it's gone</figcaption></figure><figure class="est-fig"><img alt="The print queue window is empty" class="step-photo" loading="lazy" src="../images/print/chrome-queue-empty.jpg"/><figcaption class="est-cap">List is empty → sent to the printer machine</figcaption></figure></div>
+<div class="est-txt">
+<div class="step-h">Check the print queue window</div>
+<p class="step-p">Look at the <b>[흑백출력] (B&amp;W)</b> or <b>[컬러출력] (Color)</b> print queue window.<br/>If the list is <b>empty</b>, your job has been sent to the printer machine.<br/>If something is still in the list, please <b>wait until it's gone</b>.</p>
+</div>
+</div>
+</div> <a class="goto" href="#mfp"><span>That's all you do on the PC!</span><b>Continue with ‘Printing at the printer machine’ below ⬇</b></a> </div>
+</div>
+<div class="sec" id="alsee">
+<div class="sec-in">
+<div class="sec-head">
+<div class="sec-ico">
+<svg fill="none" height="34" viewbox="0 0 48 48" width="34">
+<rect height="26" rx="4" stroke="#1B8AC4" stroke-width="3" width="34" x="7" y="11"></rect>
+<circle cx="17" cy="20" r="3.4" stroke="#1B8AC4" stroke-width="2.6"></circle>
+<path d="M9 33l10-10 7 7 6-5 8 8" stroke="#1B8AC4" stroke-linejoin="round" stroke-width="3"></path>
+</svg>
+</div>
+<h2 class="sec-h2">Photos and image files open in ALSee <span class="pill">ALSee</span></h2>
+</div>
+<p class="sec-tagline">Use this to print photos or image files. You can also put several photos on one page. Open your photo with the <b>ALSee (알씨)</b> icon on the store PC desktop.</p>
+<div class="open1">
+<div class="open1-h"><span class="open1-n">Step 1</span>Open the file to print on the PC</div>
+<div class="open1-body">
+<img alt="Double-clicking a photo (JPG · PNG) file on the desktop to open it" class="step-photo open1-img" loading="lazy" src="../images/print/open-file-img.png?v=2"/>
+<div class="open1-txt">
+<p><b>Double-click</b> the file on the PC to open it.</p>
+<p>Files in email or USB: <b>save them to the PC desktop first</b>.</p>
+<p>It doesn't have to be the desktop. Just save it on the PC and <b>remember where you saved it</b>. Go there and double-click the file to open it. The desktop is the easiest place to find.</p>
+<p class="open1-phone">📱 <b>Is your file on your phone?</b> Tap the link below to see how to save it to the PC first.<br/><a href="../faq.html#faq-22">How to save phone files to the PC (in Korean) →</a></p>
+</div>
+</div>
+</div>
+<div class="open2-label"><span>Next</span> · Set print options</div>
+<div class="steps">
+<div class="step">
+<div class="step-no">1</div>
+<div class="step-fig"><img alt="Open the file and the Print menu" class="step-photo" loading="lazy" src="../images/print/alsee-1-menu.png?v=1"/></div>
+<div class="step-h">Open the file and the Print menu</div>
+<p class="step-p">Open the photo in ALSee, then choose <b>[메뉴] (Menu) → [인쇄하기] (Print)</b> at the top. You can also press <b>Ctrl</b> and <b>P</b> together.</p>
+</div>
+<div class="step">
+<div class="step-no">2</div>
+<div class="step-fig"><img alt="Choose the printer" class="step-photo" loading="lazy" src="../images/print/alsee-2-printer.png?v=1"/></div>
+<div class="step-h">Choose the printer</div>
+<p class="step-p">Choose <b>[컬러출력] (Color)</b> or <b>[흑백출력] (B&amp;W)</b>. For color photos, always choose <b>[컬러출력] (Color)</b>.</p>
+</div>
+<div class="step">
+<div class="step-no">3</div>
+<div class="step-fig"><img alt="The print window after choosing a printer, with Printer Settings at the bottom left marked" class="step-photo" loading="lazy" src="../images/print/alsee-3-printer-setting.png?v=9"/></div>
+<div class="step-h">Press [프린터 설정] (Printer Settings) in the print window</div>
+<p class="step-p">After you choose a printer, the <b>print window</b> below appears. To change paper size or portrait/landscape, press <b>[프린터 설정] (Printer Settings)</b> at the bottom left.</p>
+</div>
+<div class="step">
+<div class="step-no">4</div>
+<div class="step-fig"><img alt="Print settings window, with paper size A4, portrait and the OK button marked" class="step-photo" loading="lazy" src="../images/print/alsee-3-setup.png?v=2"/></div>
+<div class="step-h">Set paper size · orientation and press [확인] (OK)</div>
+<p class="step-p">Set the <b>paper size (A4 · B4 · A3, etc.)</b> and <b>portrait / landscape</b>, then press <b>[확인] (OK)</b>. You go back to the print window.</p><div class="step-note">💡 The <b>[이름] (Name)</b> box at the top shows the printer you chose (<b>[컬러출력] (Color)</b> or <b>[흑백출력] (B&amp;W)</b>). Don't change it.</div>
+</div>
+<div class="step">
+<div class="step-no">5</div>
+<div class="step-fig"><img alt="Size settings" class="step-photo" loading="lazy" src="../images/print/alsee-4-size.png?v=9"/></div>
+<div class="step-h">Size settings</div>
+<p class="step-p">You're back in the print window. In the <b>[크기설정] (Size)</b> tab, check <b>[용지 크기에 맞춤] (Fit to paper)</b> to fill the paper with the photo. To keep the photo's shape, choose <b>[용지 비율에 맞춤] (Fit to paper ratio)</b>.</p>
+</div>
+<div class="step">
+<div class="step-no">6</div>
+<div class="step-fig"><img alt="Margins · position" class="step-photo" loading="lazy" src="../images/print/alsee-5-margin.png?v=9"/></div>
+<div class="step-h">Margins · position</div>
+<p class="step-p">In the <b>[여백/위치] (Margins/Position)</b> tab, set the top · bottom · left · right margins (mm) and where to place the photo.</p>
+</div>
+<div class="step">
+<div class="step-no">7</div>
+<div class="step-fig"><img alt="Set the number of copies and print" class="step-photo" loading="lazy" src="../images/print/alsee-6-etc.png?v=9"/></div>
+<div class="step-h">Set the number of copies and print</div>
+<p class="step-p">In the <b>[기타] (Other)</b> tab, set <b>how many to print</b>. <b>Check everything in the preview on the left</b>, then press <b>[인쇄] (Print)</b>.</p>
+</div>
+<div class="step">
+<div class="step-no">8</div>
+<div class="step-figs"><figure class="est-fig"><img alt="Typing 4 digits into the PIN box" class="step-photo" loading="lazy" src="../images/print/pin-dialog.png?v=1" style="max-width:420px"/></figure></div>
+<div class="step-h">Press [인쇄] (Print) and type the number</div>
+<p class="step-p">Press <b>[인쇄] (Print)</b> and the <b>PIN</b> box appears. Type <b>any 4 digits</b>. We suggest <b>the last 4 digits of your phone number</b>.</p><div class="step-note">This number (PIN) is like a temporary password to find your document at the printer machine. Be sure to remember it!</div>
+</div>
+<div class="step">
+<div class="step-no">9</div>
+<div class="step-figs"><figure class="est-fig"><img alt="The print queue window still shows a document" class="step-photo" loading="lazy" src="../images/print/queue-wait.png?v=1"/><figcaption class="est-cap">Still in the list → wait until it's gone</figcaption></figure><figure class="est-fig"><img alt="The print queue window is empty" class="step-photo" loading="lazy" src="../images/print/queue-empty.png?v=1"/><figcaption class="est-cap">List is empty → sent to the printer machine</figcaption></figure></div>
+<div class="step-h">Check the print queue window</div>
+<p class="step-p">Look at the <b>[흑백출력] (B&amp;W)</b> or <b>[컬러출력] (Color)</b> print queue window.<br/>If the list is <b>empty</b>, your job has been sent to the printer machine.<br/>If something is still in the list, please <b>wait until it's gone</b>.</p>
+</div>
+</div> <a class="goto" href="#mfp"><span>That's all you do on the PC!</span><b>Continue with ‘Printing at the printer machine’ below ⬇</b></a> </div>
+</div>
+<div class="sec alt" id="cert" style="--sc:#D97706;--sc-light:#FEF3C7">
+<div class="sec-in">
+<div class="sec-head">
+<div class="sec-ico">
+<svg fill="none" height="34" viewbox="0 0 48 48" width="34">
+<path d="M12 5h24v38H12z" stroke="#D97706" stroke-linejoin="round" stroke-width="3"></path>
+<path d="M18 14h12M18 21h12M18 28h7" stroke="#D97706" stroke-linecap="round" stroke-width="3"></path>
+<circle cx="33" cy="34" fill="#fff" r="6" stroke="#D97706" stroke-width="3"></circle>
+</svg>
+</div>
+<h2 class="sec-h2">How to print a TOEIC certificate <span class="pill">TOEIC · TOEIC Speaking</span></h2>
+</div>
+<p class="sec-tagline">For TOEIC · TOEIC Speaking (YBM) certificates, <span class="hl-t">first print on the PC with [증명서전용PIN9999] (certificate printer)</span>. If you choose another printer, <b>the PC freezes!</b></p>
+<div class="prestep" style="margin-bottom:10px">
+<div class="prestep-h">⚠️ Just issuing (paying) on the website does not print it <span>Please read this</span></div>
+<p style="font-size:14px;color:#5C4300;line-height:1.7">A certificate comes out only after you <b>① send it to print on the PC with [증명서전용PIN9999]</b>, then <b>② find it at the printer machine with number 9999</b> and pay.<br/>If you don't send it on the PC and only type 9999 at the printer machine, <b>nothing comes out.</b></p>
+</div>
+<div class="steps steps-edge">
+<div class="step noimg">
+<div class="step-no">1</div>
+<div class="est-txt">
+<div class="step-h">Open the certificate on the website</div>
+<p class="step-p">When you get your score report on the TOEIC website, <b>the certificate opens in a viewer window.</b></p>
+<div class="step-note">Picture guides for university transcripts, graduation certificates and Certpia are <b>coming soon</b>. For those certificates too, <b>choose the [증명서전용PIN9999] printer</b>.</div>
+</div>
+</div>
+<div class="step">
+<div class="step-no">2</div>
+<div class="step-figs"><figure class="est-fig"><a href="../images/print/cert-ui-viewer.png?v=1" rel="noopener" target="_blank"><img alt="Certificate viewer window, with the yellow score report print button at the top right marked 1" class="step-photo" loading="lazy" src="../images/print/cert-ui-viewer.png?v=1"/></a></figure></div>
+<div class="est-txt">
+<div class="step-h">Press [성적표 출력] (Print score report)</div>
+<p class="step-p">Press the yellow <b>[성적표 출력] (Print score report)</b> at the top right of the viewer.<br/><b>[테스트 출력] (Test print)</b> is only for testing. Don't press it.</p>
+</div>
+</div>
+<div class="step">
+<div class="step-no">3</div>
+<div class="step-figs"><figure class="est-fig"><a href="../images/print/cert-ui-printer.png?v=1" rel="noopener" target="_blank"><img alt="Printer selection window, choosing [증명서전용PIN9999] from the list and pressing Print" class="step-photo" loading="lazy" src="../images/print/cert-ui-printer.png?v=1"/></a></figure></div>
+<div class="est-txt">
+<div class="step-h">Printer: only [증명서전용PIN9999]!</div>
+<p class="step-p">In the printer window, choose <b>[증명서전용PIN9999]</b> and press <b>[인쇄] (Print)</b>.</p>
+<div class="step-note warn">⚠️ If you choose <b>[흑백출력] (B&amp;W) · [컬러출력] (Color)</b>, <b>the PC freezes!</b> Then it's hard to get back the certificate fee. <b>Only choose [증명서전용PIN9999].</b></div>
+</div>
+</div>
+<div class="step noimg">
+<div class="step-no">4</div>
+<div class="est-txt">
+<div class="step-h">Done when it says printing is finished!</div>
+<p class="step-p">[증명서전용PIN9999] <b>doesn't show a PIN box.</b> <b>9999</b> is entered automatically, so this is normal.<br/>When it says printing is complete, you're done on the PC.</p>
+</div>
+</div>
+<div class="step noimg">
+<div class="step-no">5</div>
+<div class="est-txt">
+<div class="step-h">Find it at the printer machine with number 9999</div>
+<p class="step-p">At the printer machine, press <b>[인쇄] (Print)</b> → <b>[PC]</b> and type <b>9999</b>.<br/>When the list appears, choose <b>only your certificate</b>, press <b>[시작] (Start)</b>, then pay.</p>
+<div class="step-note warn">⚠️ Other customers may have used 9999 too, so <b>several documents</b> may be in the list. <b>Check the time and name</b> and pay only for yours. <b>Don't press [모두선택] (Select all).</b></div>
+</div>
+</div>
+</div> <a class="goto" href="#mfp"><span>Not sure what to do at the printer machine?</span><b>See ‘Printing at the printer machine’ below ⬇</b></a> </div>
+</div>
+<div class="sec" id="mfp" style="--sc:#22B24C;--sc-light:#E7F7EC">
+<div class="sec-in">
+<div class="sec-head">
+<div class="sec-ico"><svg fill="none" height="34" viewbox="0 0 48 48" width="34"><rect height="20" rx="4" stroke="#22B24C" stroke-width="3" width="36" x="6" y="16"></rect><rect height="10" rx="2" stroke="#22B24C" stroke-width="3" width="24" x="12" y="8"></rect><rect fill="#fff" height="12" rx="2" stroke="#22B24C" stroke-width="3" width="20" x="14" y="30"></rect></svg></div>
+<h2 class="sec-h2">Printing at the printer machine <span class="pill">Same for Edge · Chrome · ALSee</span></h2>
+</div>
+<p class="sec-tagline">Do these steps <b>after you type the PIN on the PC and send the print job</b>. It's the same for Edge, Chrome and ALSee.</p>
+<div class="steps steps-edge">
+<div class="step">
+<div class="step-no mfp">M1</div>
+<div class="step-figs"><div class="est-two"><figure class="est-fig"><img alt="Choosing the Print menu on the printer machine's main screen" class="step-photo" loading="lazy" src="../images/print/print-machine1.png"/></figure><figure class="est-fig"><img alt="Screen for choosing PC as the file location" class="step-photo" loading="lazy" src="../images/print/print-machine2.png"/></figure></div></div>
+<div class="est-txt">
+<div class="step-h">On the printer machine: Print → PC → type the number</div>
+<p class="step-p">Go to the printer machine and press <b>[인쇄] (Print)</b> → <b>[PC]</b>.<br/>In the <b>PIN</b> box, type the <b>4-digit number</b> you used on the PC and touch <b>[OK]</b>.</p>
+</div>
+</div>
+<div class="step">
+<div class="step-no mfp">M2</div>
+<div class="step-figs"><figure class="est-fig"><img alt="Printer machine screen showing the print job list after typing the PIN" class="step-photo" loading="lazy" src="../images/print/print-serch.png"/></figure></div>
+<div class="est-txt">
+<div class="step-h">Check your document list</div>
+<p class="step-p">When the list appears, carefully check what it shows: <b>document name, time, B&amp;W/color, two-sided/one-sided, pages, paper size</b>, etc.<br/>Make sure <b>it is your document</b> and the print options are <b>what you wanted</b>.</p>
+</div>
+</div>
+<div class="step noimg">
+<div class="step-no mfp">M3</div>
+<div class="est-txt">
+<div class="step-h">Touch the list and [시작] (Start)</div>
+<p class="step-p"><b>Touch your document</b> in the list, then touch the <b>[시작] (Start)</b> button.<br/>If there are several, press <b>[모두 인쇄] (Print all)</b> at the top, or <b>touch only the ones you want</b> and press <b>[시작] (Start)</b>.</p>
+</div>
+</div>
+<div class="step">
+<div class="step-no mfp">M4</div>
+<div class="step-figs"><figure class="est-fig"><img alt="Payment info screen (total price, number of pages)" class="step-photo" loading="lazy" src="../images/print/print-price.png?v=2"/></figure></div>
+<div class="est-txt">
+<div class="step-h">Check the price [과금정보]</div>
+<p class="step-p">Finally, the <b>payment info screen [과금정보]</b> appears. Check everything carefully, and if the <b>price</b> is right too, touch <b>[확인] (OK)</b>.</p><div class="step-note warn">⚠️ If the pages or price on the payment info screen are different from what you expect, <b>do NOT pay.</b></div><div class="bill-warn"><span class="bh">🧾 You must check the payment info screen [과금정보]!</span><b>Check everything on the payment info screen. If you pay without checking and something is wrong, there is no refund or compensation.</b><br/>Press <b>[확인] (OK) to pay only after checking everything and it is all correct</b>.</div>
+</div>
+</div>
+<div class="step">
+<div class="step-no mfp">M5</div>
+<div class="step-figs"><figure class="est-fig"><img alt="Paying with an IC card or Samsung Pay" class="step-photo" loading="lazy" src="../images/print/print-pay.png?v=3"/></figure></div>
+<div class="est-txt">
+<div class="step-h">Card payment</div>
+<p class="step-p">When the card reader speaks, <b>insert your IC card (credit/debit)</b>, or <b>hold Samsung Pay to it</b>.</p><div class="step-note"><b>💳 Insert your credit/debit card into the card reader slot, chip side in.</b></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p class="tr-note">This page was translated from Korean. If anything looks wrong, please tell us on Naver TalkTalk. Screens on the machines are in Korean — the Korean button names are shown in [brackets].</p><footer>
+<div class="ft-wrap">
+<div class="ft-brand">
+<img alt="Logo" src="../logo.jpg"/>
+<div class="ft-brand-name">PrintShop Mini</div>
+<p>An unmanned self-service print shop<br/>open 24 hours, 365 days.</p>
+</div>
+<div class="ft-col">
+<h4>How to Use</h4>
+<ul>
+<li><a href="guide-print.html">How to print</a></li>
+<li><a href="../guide-copy.html">How to copy</a></li>
+<li><a href="../guide-scan.html">How to scan</a></li>
+<li><a href="../guide-fax.html">How to send a fax</a></li>
+<li><a href="../guide-coat.html">How to laminate</a></li>
+<li><a href="../guide-bind.html">How to bind</a></li>
+</ul>
+</div>
+<div class="ft-col">
+<h4>Quick links</h4>
+<ul>
+<li><a href="../services.html">Services</a></li>
+<li><a href="../faq.html">FAQ</a></li>
+<li><a href="../branches.html">Find a Store</a></li>
+<li><a href="../community.html">Community</a></li>
+<li><a href="../about.html">About us</a></li>
+</ul>
+</div>
+</div>
+<div class="ft-corp" style="word-break:keep-all;max-width:1160px;margin:0 auto 20px;font-size:13px;line-height:1.9;color:#9CA3AF"><b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1B8AC4)">PrintShop Mini</b> and <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">PrintNow</b> are brands of <span style="white-space:nowrap">Good Learning Partner Co., Ltd.</span></div>
+<div class="ft-bottom">
+<p>© 2025 PrintShop Mini. All rights reserved.</p>
+<p>Privacy Policy · Terms of Use</p>
+</div>
+</footer>
+<script>
+function toggleMenu(){document.getElementById("navLinks").classList.toggle("show");}
+function goStep2(){
+  var el=document.getElementById('print-step2');
+  document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('on')});
+  var first=document.querySelector('.tabs .tab'); if(first) first.classList.add('on');
+  window.scrollTo({top:el.getBoundingClientRect().top+window.pageYOffset-130,behavior:'smooth'});
+}
+function goType(id, office){
+  if(office){
+    var ot=Array.prototype.slice.call(document.querySelectorAll('.otab')).filter(function(b){return (b.getAttribute('onclick')||'').indexOf("'"+office+"'")>-1})[0];
+    if(ot) officeTab(office, ot);
+  }
+  var tabs=document.querySelectorAll('.tabs .tab');
+  tabs.forEach(function(t){t.classList.remove('on'); if((t.getAttribute('onclick')||'').indexOf("'"+id+"'")>-1) t.classList.add('on');});
+  var y=document.getElementById(id).getBoundingClientRect().top+window.pageYOffset-118;
+  window.scrollTo({top:y,behavior:'smooth'});
+}
+function jump(id, el){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
+  el.classList.add('on');
+  const y = document.getElementById(id).getBoundingClientRect().top + window.pageYOffset - 118;
+  window.scrollTo({top:y, behavior:'smooth'});
+}
+function officeTab(name, el){
+  document.querySelectorAll('.otab').forEach(t=>t.classList.remove('on'));
+  el.classList.add('on');
+  document.querySelectorAll('.opanel').forEach(p=>p.style.display='none');
+  document.getElementById('office-'+name).style.display='';
+}
+</script>
+<script>window.GUIDE_SERVICE='print';</script>
+<script src="../service-guides.js?v=2"></script>
+<script>
+/* 2단계 메뉴: 현재 탭이 화면 밖이면 보이는 위치로 이동 */
+(function(){var a=document.querySelector('.svc-switch a.on'),w=a&&a.parentElement;if(w)w.scrollLeft=Math.max(0,a.offsetLeft-(w.clientWidth-a.offsetWidth)/2);})();
+</script>
+
+<script defer="" src="../lightbox.js?v=1"></script>
+</body>
+</html>
