@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<meta content="Hướng dẫn ép plastic của PrintShop Mini — thanh toán, làm nóng máy, cho giấy vào túi ép và đưa vào máy, có ảnh minh họa." name="description"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cách ép plastic - PrintShop Mini</title>
+<link href="https://www.printshopmini.com/vi/guide-coat.html" rel="canonical"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&amp;family=Jua&amp;family=Gamja+Flower&amp;display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#1B8AC4;--blue-hover:#1470A8;--blue-light:#E8F4FC;--blue-mid:#4AAAD6;
+  --text:#111827;--text2:#374151;--text3:#6B7280;--border:#E5E7EB;
+  --bg:#F9FAFB;--white:#FFFFFF;--radius:14px;
+  --print:#22B24C;--copy:#018FFB;--scan:#12BDB0;--fax:#F3732C;--warn:#D93025;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--white);line-height:1.7;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:70px;display:flex;align-items:center;padding:0 6%}
+.nav-logo{display:flex;align-items:center;gap:10px;flex-shrink:0;margin-right:48px}
+.nav-logo img.logo-img{width:36px;height:36px;object-fit:contain;border-radius:8px}
+.nav-logo-name{font-size:17px;font-weight:900;color:var(--blue);letter-spacing:-0.5px}
+.nav-links{display:flex;list-style:none;gap:2px;flex:1}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);padding:8px 16px;border-radius:8px;transition:all .18s}
+.nav-links a:hover,.nav-links a.active{color:var(--blue);background:var(--blue-light)}
+.nav-right{display:flex;align-items:center;gap:0;margin-left:auto}
+.nav-cta{background:var(--blue);color:white;font-size:13px;font-weight:700;padding:9px 22px;border-radius:50px;transition:background .2s;white-space:nowrap}
+.nav-cta:hover{background:var(--blue-hover)}
+.nav-raccoon{width:56px;height:56px;flex-shrink:0;margin-left:6px;position:relative;top:2px}
+.nav-raccoon img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.15));transition:transform .3s}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{width:22px;height:2px;background:var(--text);border-radius:2px;display:block}
+
+/* PAGE HEADER */
+.page-header{margin-top:70px;background:var(--white);border-bottom:1px solid var(--border);padding:52px 6% 44px}
+.ph-inner{max-width:1160px;margin:0 auto}
+.ph-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:var(--blue);letter-spacing:1px;margin-bottom:14px}
+.ph-eyebrow::before{content:'';width:20px;height:2px;background:var(--blue);border-radius:2px}
+.ph-h1{font-size:clamp(28px,4vw,48px);font-weight:900;letter-spacing:-2px;margin-bottom:10px}
+.ph-sub{font-size:15px;color:var(--text3)}
+
+/* 경고 배너 */
+.warnbar{background:#FEF2F2;border-bottom:1px solid #FADCDC;padding:18px 6%}
+.warnbar-in{max-width:1160px;margin:0 auto;display:flex;gap:14px;align-items:flex-start}
+.warnbar-ico{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:var(--warn);color:#fff;font-size:15px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.warnbar-tx{font-size:14.5px;font-weight:700;color:#8A1C15;line-height:1.6}
+.warnbar-tx span{font-weight:500;color:#A3453E;display:block;margin-top:3px;font-size:13.5px}
+
+/* 탭 */
+.tabs{background:var(--bg);border-bottom:1px solid var(--border);padding:0 6%;position:sticky;top:70px;z-index:100}
+.tabs-in{max-width:1160px;margin:0 auto;display:flex;overflow-x:auto}
+.tabs-in::-webkit-scrollbar{display:none}
+.tab{padding:16px 20px;font-size:13.5px;font-weight:700;color:var(--text3);white-space:nowrap;cursor:pointer;border-bottom:2px solid transparent;transition:all .2s;background:none;border-top:none;border-left:none;border-right:none;font-family:inherit}
+.tab:hover,.tab.on{color:var(--blue);border-bottom-color:var(--blue)}
+
+/* 섹션 */
+.sec{padding:64px 6%;border-bottom:1px solid var(--border)}
+.sec.alt{background:var(--bg)}
+.sec-in{max-width:1160px;margin:0 auto}
+.sec-head{display:flex;align-items:center;gap:18px;margin-bottom:10px;flex-wrap:wrap}
+.sec-ico{width:60px;height:60px;border-radius:16px;background:var(--sc-light,var(--blue-light));display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.sec-h2{font-size:clamp(22px,3vw,32px);font-weight:900;letter-spacing:-1px}
+.sec-tagline{font-size:14.5px;color:var(--text3);margin-bottom:34px}
+.pill{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.5px;padding:4px 11px;border-radius:50px;background:var(--sc,var(--blue));color:#fff;vertical-align:middle;margin-left:2px}
+
+/* 단계 카드 */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:18px}
+.step{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px 22px 26px;display:flex;flex-direction:column}
+.sec.alt .step{background:var(--white)}
+.step-no{width:32px;height:32px;border-radius:50%;background:var(--sc,var(--blue));color:#fff;font-size:15px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.step-fig{min-height:106px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.step-h{font-size:16.5px;font-weight:900;letter-spacing:-.4px;margin-bottom:7px;line-height:1.35}
+.step-p{font-size:13.8px;color:var(--text2);line-height:1.65}
+.step-p b{font-weight:700;color:var(--sc,var(--blue))}
+.step-p .r{color:var(--warn);font-weight:700}
+b.lr,.step-p b.lr,.step-note b.lr,.pl-legend b.lr{color:#D92D20;font-weight:900}
+b.lg,.step-p b.lg,.step-note b.lg,.pl-legend b.lg{color:#12A150;font-weight:900}
+
+/* 핵심 팁 */
+.tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:18px}
+.tip{border:2px solid var(--blue-light);border-radius:var(--radius);padding:26px 24px;background:var(--white);text-align:center}
+.tip-fig{margin-bottom:12px;display:flex;justify-content:center}
+.tip-h{font-size:17px;font-weight:900;color:var(--blue);margin-bottom:8px;letter-spacing:-.4px}
+.tip-p{font-size:14px;color:var(--text2);line-height:1.65}
+.tip-p b{font-weight:700;color:var(--text)}
+
+.sec-rule{height:4px;border-radius:4px;background:var(--sc,var(--blue));width:56px;margin-bottom:16px}
+.subhead{font-size:15px;font-weight:900;color:var(--sc,var(--blue));margin:34px 0 14px;padding-left:12px;border-left:4px solid var(--sc,var(--blue))}
+
+/* 용어 카드 */
+.terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:18px}
+.term{border:2px solid var(--tc);border-radius:var(--radius);background:var(--white);padding:0;overflow:hidden;display:flex;flex-direction:column}
+.term-top{background:var(--tc);padding:14px 20px;display:flex;align-items:center;gap:12px}
+.term-name{font-size:20px;font-weight:900;color:#fff;letter-spacing:-.6px}
+.term-en{font-size:11.5px;font-weight:800;color:#fff;opacity:.8;letter-spacing:.6px}
+.term-body{padding:22px 20px 24px;flex:1;display:flex;flex-direction:column}
+.term-flow{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.term-chip{font-size:13px;font-weight:800;padding:6px 13px;border-radius:50px;background:#F1F4F7;color:var(--text2)}
+.term-arrow{font-size:15px;font-weight:900;color:var(--tc)}
+.term-def{font-size:14.5px;font-weight:700;line-height:1.6;margin-bottom:10px}
+.term-ex{font-size:13.4px;color:var(--text3);line-height:1.65}
+.term-ex b{color:var(--text2);font-weight:700}
+
+/* ADF 금지 원본 경고 */
+.adfw{border:2.5px solid #E4574D;border-radius:var(--radius);background:#FEF6F5;padding:22px 24px;margin-top:22px}
+.adfw-h{display:flex;gap:11px;align-items:center;font-size:18px;font-weight:900;color:#B31E16;margin-bottom:14px;line-height:1.35}
+.adfw-h .x{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:#C0261C;color:#fff;font-size:16px;font-weight:900;display:flex;align-items:center;justify-content:center}
+.adfw-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.adfw-box{background:#fff;border-radius:10px;padding:16px 18px}
+.adfw-box.ok{border:1.5px solid #BFE3C6}
+.adfw-box.no{border:1.5px solid #F3C3BF}
+.adfw-t{font-size:14.5px;font-weight:900;margin-bottom:9px}
+.adfw-box.ok .adfw-t{color:#1B7A2C}
+.adfw-box.no .adfw-t{color:#C0261C}
+.adfw-box ul{margin:0;padding-left:17px}
+.adfw-box li{font-size:13.6px;color:var(--text2);line-height:1.6;margin-bottom:5px}
+.adfw-foot{margin-top:15px;font-size:13.8px;line-height:1.65;color:#8A1C15;font-weight:600}
+.adfw-foot b{font-weight:900;color:#B31E16}
+
+/* 커버 여는 안내 */
+.openbox{margin-bottom:20px}
+.ob{background:#fff;border:2px solid var(--sc,var(--blue));border-radius:var(--radius);padding:18px;display:flex;gap:22px;align-items:center}
+@media(max-width:760px){.ob{flex-direction:column}}
+.ob-fig{flex:0 0 46%;display:flex;justify-content:center}
+.ob-h{font-size:16px;font-weight:900;margin-bottom:6px;line-height:1.35}
+.ob-p{font-size:13.6px;color:var(--text2);line-height:1.62}
+.ob-p b{color:var(--sc,var(--blue));font-weight:700}
+.ob-p .r{color:var(--warn);font-weight:700}
+
+/* 특수 복사 카드 */
+.minis{display:grid;grid-template-columns:repeat(auto-fit,minmax(304px,1fr));gap:18px}
+.mini{border:1px solid var(--border);border-radius:var(--radius);background:#fff;overflow:hidden;display:flex;flex-direction:column}
+.mini-top{background:var(--sc,var(--blue));color:#fff;padding:13px 18px;font-size:16.5px;font-weight:900;display:flex;align-items:center;gap:10px;letter-spacing:-.4px}
+.mini-fig{margin:0 0 16px}
+.mini-fig img{width:100%;border-radius:8px;border:1px solid var(--border);display:block}
+.mini-body{padding:20px 18px 22px;flex:1;display:flex;flex-direction:column}
+.mini ol{margin:0;padding-left:19px}
+.mini li{font-size:13.8px;color:var(--text2);line-height:1.62;margin-bottom:10px}
+.mini li:last-child{margin-bottom:0}
+.mini li b{color:var(--sc,var(--blue));font-weight:700}
+.mini li .r{color:var(--warn);font-weight:700}
+.mini-warn{margin-top:14px;background:#FEF2F2;border:2px solid #E4574D;border-radius:10px;padding:14px 16px}
+.mini-warn-h{font-size:14.5px;font-weight:900;color:#C0261C;line-height:1.45;display:flex;gap:8px;align-items:flex-start;margin-bottom:6px}
+.mini-warn-h .x{flex:0 0 auto;width:20px;height:20px;border-radius:50%;background:#C0261C;color:#fff;font-size:13px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.mini-warn-p{font-size:13.2px;color:#8A1C15;line-height:1.6;font-weight:600;padding-left:28px}
+.mini-warn-p b{font-weight:900;color:#C0261C}
+.mini-note{margin-top:14px;background:#F5F8FA;border-radius:9px;padding:13px 15px;font-size:13px;color:var(--text2);line-height:1.6}
+.mini-note b{color:var(--text);font-weight:700}
+
+/* MS 오피스 서브탭 */
+.otabs{display:flex;gap:8px;margin-bottom:30px;flex-wrap:wrap}
+.otab{padding:10px 22px;font-size:13.5px;font-weight:800;border-radius:50px;border:2px solid var(--border);background:#fff;color:var(--text2);cursor:pointer;font-family:inherit;transition:all .18s}
+.otab:hover{border-color:var(--blue);color:var(--blue)}
+.otab.on{background:var(--blue);border-color:var(--blue);color:#fff}
+
+/* MS 오피스 화면 목업 (실제 인쇄 화면 재현) */
+.steps-office{grid-template-columns:repeat(auto-fit,minmax(288px,1fr))}
+.steps-office .step-fig{min-height:auto;margin-bottom:16px}
+.omock{border:1px solid #D7DDE3;border-radius:8px;overflow:hidden;background:#fff;box-shadow:0 1px 5px rgba(17,24,39,.07);width:100%}
+.omock-bar{height:18px;background:#EEF1F5;display:flex;align-items:center;gap:4px;padding:0 8px;border-bottom:1px solid #E5E7EB}
+.omock-dot{width:5px;height:5px;border-radius:50%;background:#D7DDE3}
+.omock-body{display:flex;height:158px}
+.omock-side{width:58px;flex:0 0 auto;background:var(--oc,#1B8AC4);padding:8px 0;display:flex;flex-direction:column;gap:1px}
+.omock-side div{color:rgba(255,255,255,.68);font-size:8.6px;font-weight:700;padding:5px 0 5px 10px}
+.omock-side div.on{color:#fff;background:rgba(255,255,255,.18);border-left:3px solid #fff;padding-left:7px}
+.omock-fields{width:124px;flex:0 0 auto;background:#F7F8FA;padding:8px 8px;display:flex;flex-direction:column;gap:5px;border-right:1px solid #E5E7EB;overflow:hidden}
+.omock-cap{font-size:7.6px;color:#9AA5B1;font-weight:800;letter-spacing:.3px;margin-top:3px}
+.omock-cap:first-child{margin-top:0}
+.omock-field{background:#fff;border:1px solid #C9D3DB;border-radius:4px;padding:4px 14px 4px 7px;font-size:8.2px;font-weight:700;color:#374151;position:relative;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.omock-field::after{content:'▾';position:absolute;right:5px;top:50%;transform:translateY(-50%);color:#9AA5B1;font-size:6.5px}
+.omock-row.hi .omock-field{border-color:#D93025;background:#FEF2F2;color:#B31E16;box-shadow:0 0 0 2px rgba(217,48,37,.14)}
+.omock-row.hi .omock-cap{color:#D93025}
+.omock-preview{flex:1;background:#EDEFF2;display:flex;align-items:center;justify-content:center;padding:10px;position:relative}
+.omock-page{width:66%;height:88%;background:#fff;border:1px solid #D7DDE3;box-shadow:0 1px 5px rgba(0,0,0,.09);display:flex;align-items:center;justify-content:center}
+.omock-tag{position:absolute;background:#D93025;color:#fff;font-size:8px;font-weight:800;padding:3px 8px;border-radius:5px;white-space:nowrap;box-shadow:0 2px 5px rgba(217,48,37,.3)}
+.omock-cap.hi{color:#D93025}
+.omock-fields .omock-row.hi{margin:0 -3px;padding:2px 3px;background:rgba(217,48,37,.06);border-radius:5px}
+
+/* 준비중 */
+.soon{border:1px dashed #C9D3DB;border-radius:var(--radius);padding:44px 24px;text-align:center;background:var(--white)}
+.soon-h{font-size:16px;font-weight:800;color:var(--text3);margin-bottom:6px}
+.soon-p{font-size:13.5px;color:var(--text3)}
+
+/* FAQ */
+.faq{border-top:1px solid var(--border)}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-q{width:100%;text-align:left;background:none;border:none;font-family:inherit;font-size:15.5px;font-weight:700;color:var(--text);padding:20px 40px 20px 0;cursor:pointer;position:relative;line-height:1.5}
+.faq-q::after{content:'+';position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:22px;font-weight:400;color:var(--blue)}
+.faq-item.open .faq-q::after{content:'−'}
+.faq-a{display:none;font-size:14.2px;color:var(--text2);line-height:1.75;padding:0 0 22px}
+.faq-item.open .faq-a{display:block}
+
+/* FOOTER */
+footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
+.ft-wrap{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:56px}
+.ft-brand img{width:32px;height:32px;object-fit:contain;border-radius:6px;margin-bottom:14px}
+.ft-brand-name{color:white;font-size:18px;font-weight:900;margin-bottom:10px}
+.ft-brand p{font-size:13px;line-height:2}
+.ft-col h4{color:white;font-size:13px;font-weight:700;margin-bottom:14px;letter-spacing:.5px}
+.ft-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.ft-col a{font-size:13px;transition:color .2s}
+.ft-col a:hover{color:white}
+.ft-bottom{max-width:1160px;margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.ft-bottom p{font-size:12px;color:rgba(255,255,255,.25)}
+
+@media(max-width:820px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .nav-links.show{display:flex;position:absolute;top:70px;left:0;right:0;background:#fff;flex-direction:column;padding:10px 6%;border-bottom:1px solid var(--border)}
+  .sec{padding:48px 6%}
+  .ft-wrap{grid-template-columns:1fr}
+  .nav-raccoon{display:none}
+}
+
+/* ===== 사용방법 하위 구조 추가 스타일 ===== */
+.svc-switch{background:#fff;border-bottom:1px solid var(--border);padding:14px 6%}
+.svc-switch-in{max-width:1160px;margin:0 auto;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.svc-switch a{padding:8px 18px;font-size:13.5px;font-weight:800;border-radius:50px;border:2px solid var(--border);background:#fff;color:var(--text2);transition:all .18s}
+.svc-switch a:hover{border-color:var(--blue);color:var(--blue)}
+.svc-switch a.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.svc-switch a.home{border-style:dashed;color:var(--text3)}
+.svc-switch-label{font-size:12.5px;font-weight:800;color:var(--text3);margin-right:4px}
+
+.steps-wide{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.step-figs{margin-bottom:16px;display:grid;gap:10px}
+.step-figs.two{grid-template-columns:1fr 1fr}
+.step-photo{width:100%;height:auto;border-radius:8px;border:1px solid var(--border);display:block}
+.step-dual{grid-column:span 2}
+.step-note{margin-top:12px;background:#F5F8FA;border-radius:9px;padding:11px 14px;font-size:13px;color:var(--text2);line-height:1.6}
+.step-note b{color:var(--text);font-weight:700}
+.step-note.warn{background:#FEF2F2;color:#8A1C15;font-weight:600}
+.step-note.warn b{color:#B31E16}
+.sec-note{margin:0 0 22px;max-width:720px}
+@media(max-width:719px){
+  .step-dual{grid-column:span 1}
+  .step-figs.two{grid-template-columns:1fr}
+}
+
+/* 사용방법 허브: 서비스 선택 카드 */
+.gcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:18px}
+.gcard{border:2px solid var(--tc);border-radius:var(--radius);background:#fff;overflow:hidden;display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s}
+.gcard:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(17,24,39,.1)}
+.gcard-top{background:var(--tc);padding:14px 20px;display:flex;align-items:center;gap:12px}
+.gcard-name{font-size:20px;font-weight:900;color:#fff;letter-spacing:-.6px}
+.gcard-body{padding:20px;flex:1;display:flex;flex-direction:column;gap:14px}
+.gcard-desc{font-size:14px;color:var(--text2);line-height:1.65;flex:1}
+.gcard-go{font-size:13.5px;font-weight:900;color:var(--tc)}
+
+.nav-links li{position:relative}
+@media(max-width:900px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .nav-links.show{display:flex;position:absolute;top:70px;left:0;right:0;background:#fff;flex-direction:column;padding:10px 6%;border-bottom:1px solid var(--border)}
+  .nav-links{max-height:calc(100vh - 70px);overflow-y:auto}
+}
+
+/* 코팅기 2종류 안내 / PL-1506 설명서 */
+.machine-pick{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:0 0 34px;max-width:860px}
+.machine-pick-h{grid-column:1/-1;font-size:15px;font-weight:900;color:var(--text);margin-bottom:-2px}
+.machine-pick-note{grid-column:1/-1;background:#EAF7EE;border:2px solid #34A853;border-radius:12px;padding:12px 16px;font-size:14.2px;color:#14532D;line-height:1.7}
+.machine-pick-note b{font-weight:900;color:#0B3D1E}
+.rec-tag{display:inline-block;margin:0 0 6px 8px;padding:2px 9px;border-radius:50px;background:#DDF3E3;border:1px solid #34A853;color:#14532D;font-style:normal;font-size:11.5px;font-weight:800;vertical-align:2px}
+.mp{display:block;border:2px solid var(--sc);border-radius:var(--radius);background:#fff;padding:18px 20px;transition:transform .18s,box-shadow .18s}
+.mp:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(17,24,39,.1)}
+.mp>b{display:block;font-size:16px;font-weight:900;margin-bottom:4px}
+.mp span b{font-weight:800;color:var(--text)}
+.mp span{display:block;font-size:13.5px;color:var(--text2);line-height:1.6}
+.mp em{display:block;margin-top:9px;font-style:normal;font-weight:800;font-size:13px;color:var(--sc)}
+.mp.dark{border-color:#111827}
+.mp.dark em{color:#111827}
+
+.pl-look{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:0 0 18px;max-width:960px}
+.pl-fig{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:14px;margin:0}
+.pl-fig svg{width:100%;height:auto;display:block}
+.pl-fig figcaption{font-size:13px;color:var(--text2);margin-top:8px;font-weight:700;line-height:1.5}
+.pl-legend{list-style:none;margin:0 0 28px;padding:0;max-width:960px;display:grid;gap:8px}
+.pl-legend li{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6}
+.pl-legend li>div{flex:1;min-width:0}
+.pl-legend li span{flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:var(--blue);color:#fff;font-size:12.5px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.pl-legend li.no{background:#FEF2F2;border:2px solid #E4574D;border-radius:10px;padding:10px 14px;color:#8A1C15;font-weight:600}
+.pl-legend li.no span{background:#D93025}
+.pl-legend li.no b{color:#B31E16;font-weight:900}
+
+.prestep{background:#FFF8E6;border:2px solid #F2C94C;border-radius:var(--radius);padding:18px 22px;margin:0 0 30px;max-width:960px}
+.prestep-h{font-size:16px;font-weight:900;color:#5C4300;margin-bottom:8px}
+.prestep-h span{font-size:12.5px;font-weight:700;color:#8A6A00;margin-left:6px}
+.prestep ol{margin:0;padding-left:20px}
+.prestep li{font-size:14.2px;color:#5C4300;line-height:1.7;margin-bottom:3px}
+.prestep li b{color:#3E2D00;font-weight:800}
+.prestep-warn{margin-top:12px;background:#FEF2F2;border:2px solid #E4574D;border-radius:10px;padding:10px 14px;font-size:13.6px;font-weight:600;color:#8A1C15;line-height:1.6}
+.prestep-warn b{color:#B31E16;font-weight:900}
+.step-photo.pl{max-width:300px;margin:0 auto}
+.step-photo.pl.tall{max-width:190px}
+.adfw-box.pic ul{padding-left:0;list-style:none}
+.adfw-box.pic li{display:flex;gap:12px;align-items:center}
+.adfw-box.pic li>div{flex:1;min-width:0}
+.adfw-box.pic li img{flex:0 0 auto;width:104px;height:78px;object-fit:contain;background:#fff;border:1px solid #E5E7EB;border-radius:6px}
+.adfw-box.pic li.wide{flex-direction:column;align-items:flex-start;gap:6px}
+.adfw-box.pic li.wide img{width:100%;max-width:240px;height:auto}
+.adfw-box.pic ol.seq{list-style:none;counter-reset:s;margin:8px 0 0;padding:0}
+.adfw-box.pic ol.seq li{display:block;counter-increment:s;position:relative;padding-left:26px;margin-bottom:5px}
+.adfw-box.pic ol.seq li::before{content:counter(s);position:absolute;left:0;top:1px;width:19px;height:19px;border-radius:50%;background:#1B8AC4;color:#fff;font-size:12px;font-weight:900;display:flex;align-items:center;justify-content:center}
+/* 상단 제목·서비스 선택 고정: 아래 내용만 스크롤 */
+.stick-top{position:sticky;top:70px;margin-top:70px;z-index:90}
+.stick-top .page-header{margin-top:0;position:static}
+.page-header{padding:10px 6% 8px}
+.ph-eyebrow{display:none}
+.ph-h1{font-size:clamp(22px,3vw,30px);letter-spacing:-1px;margin-bottom:0;line-height:1.3}
+.ph-sub{font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.svc-switch{padding:8px 6%}
+.svc-switch a{padding:6px 15px}
+[id]{scroll-margin-top:215px}
+@media(max-width:760px){
+  .page-header{padding:10px 5% 8px}
+  .ph-h1{font-size:19px}
+  .ph-sub{display:none}
+  .svc-switch{padding:7px 5%}
+  .svc-switch-in{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .svc-switch-in::-webkit-scrollbar{display:none}
+  .svc-switch a,.svc-switch-label{flex:0 0 auto;white-space:nowrap}
+  .svc-switch-label{display:none}
+  [id]{scroll-margin-top:165px}
+}
+/* 2단계 메뉴: 서비스 페이지와 같은 밑줄 탭 */
+.svc-switch{background:var(--bg);border-bottom:1px solid var(--border);padding:0 6%}
+.svc-switch-in{max-width:1160px;margin:0 auto;display:flex;flex-wrap:nowrap;gap:0;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.svc-switch-in::-webkit-scrollbar{display:none}
+.svc-switch a,.svc-switch a.home{display:block;flex:0 0 auto;white-space:nowrap;padding:11px 18px;font-size:13px;font-weight:700;color:var(--text3);background:none;border:none;border-bottom:2px solid transparent;border-radius:0;transition:all .2s}
+.svc-switch a:hover,.svc-switch a.on{color:var(--blue);background:none;border-bottom-color:var(--blue)}
+@media(max-width:760px){.svc-switch{padding:0 5%}.svc-switch a{padding:10px 15px}}
+.fax-ico{vertical-align:-2px;margin-right:1px}
+.mp-pic{height:140px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid var(--border);border-radius:10px;margin-bottom:12px;padding:8px;overflow:hidden}
+.mp-pic img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+.fire{margin:0 0 18px;border:3px solid #B71C1C;border-radius:12px;background:#FFF0F0;padding:16px 18px;box-shadow:0 0 0 4px rgba(211,47,47,.15)}
+.fire-h{background:#B71C1C;color:#fff;font-size:17px;font-weight:900;text-align:center;padding:10px 12px;border-radius:8px;margin-bottom:14px;letter-spacing:-.3px}
+.fire-items{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.fire-it{display:flex;align-items:center;gap:12px;background:#fff;border:2px solid #E57373;border-radius:10px;padding:10px 12px}
+.fire-it img{flex:0 0 auto;width:88px;height:72px;object-fit:contain;border-radius:6px;background:#fff}
+.fire-it b{display:block;font-size:16px;font-weight:900;color:#B71C1C}
+.fire-it span{display:block;font-size:13px;color:#7F1D1D;line-height:1.5;margin-top:2px}
+.fire-t{margin-top:14px;font-size:14.5px;line-height:1.75;color:#7F1D1D;font-weight:700}
+.fire-t b{color:#B71C1C;font-weight:900;background:#FFE08A;padding:0 3px;border-radius:3px}
+.adfw-fig{margin:0 0 12px}
+.adfw-fig img{display:block;width:100%;max-width:300px;height:auto;border-radius:8px;border:1px solid #F3C3BF}
+.adfw-fig figcaption{margin-top:6px;font-size:13px;line-height:1.55;color:#7F1D1D}
+.adfw-fig figcaption b{color:#B31E16;font-weight:900}
+.adfw-box.pic li.txt{display:block}
+.step-photo.pl.wide{max-width:460px}
+.adfw-box.pic li.multi{display:block}
+.seq3{display:grid;gap:10px;margin-top:10px}
+.s3{display:flex;align-items:center;gap:12px;background:#F7FAFC;border:1px solid #E5E7EB;border-radius:10px;padding:8px 10px}
+.s3 img{flex:0 0 auto;width:150px;height:auto;border-radius:6px;background:#fff;border:1px solid #E5E7EB}
+.s3 p{margin:0;font-size:13.6px;line-height:1.6;color:var(--text2)}
+.s3 p b{color:var(--text);font-weight:800}
+.warnline{display:block;margin-top:6px;color:#B31E16;font-size:13.4px;font-weight:700}
+.warnline b{color:#B31E16;font-weight:900}
+@media(max-width:560px){.s3{flex-direction:column;align-items:flex-start}.s3 img{width:100%}}
+.dual-tag{display:inline-block;margin:0 0 6px 8px;padding:2px 9px;border-radius:50px;background:#FFF3C4;border:1px solid #F0C95A;color:#6B4A00;font-style:normal;font-size:11.5px;font-weight:800;vertical-align:2px}
+.dual{margin:0 0 20px;border:3px solid #D32F2F;border-radius:12px;background:#FFF5F5;padding:16px 18px;max-width:860px}
+.dual-h{font-size:16.5px;font-weight:900;color:#B71C1C;margin-bottom:10px}
+.dual-h b{background:#FFE08A;padding:0 4px;border-radius:3px}
+.dual-warn{font-size:14.2px;line-height:1.75;color:#7F1D1D;font-weight:600;margin-bottom:12px}
+.dual-warn b{color:#B71C1C;font-weight:900}
+.dual-img{display:block;width:100%;max-width:560px;height:auto;border-radius:10px;border:1px solid #F3C3BF;background:#fff}
+/* FAQ 등에서 #이름 으로 들어올 때, 구역 제목이 고정 메뉴 바로 아래에 보이도록 */
+.sec[id]{scroll-margin-top:167px}
+@media(max-width:700px){.sec[id]{scroll-margin-top:122px}}
+
+/* 미니프랜즈 꾸밈 캐릭터 (제목 오른쪽) */
+.ph-inner{position:relative;padding-right:84px}
+.ph-pal{position:absolute;right:0;bottom:-8px;height:70px;width:auto;pointer-events:none;filter:drop-shadow(0 3px 4px rgba(0,0,0,.08))}
+@media(max-width:760px){.ph-inner{padding-right:50px}.ph-pal{height:42px;bottom:-6px}}
+
+/* 미니프랜즈 담당 친구 소개 띠 */
+.fr-band{max-width:1160px;margin:0 auto;padding:14px 6% 0}
+.fr-in{display:flex;align-items:center;gap:16px;background:var(--cl);border:3px dashed var(--c);border-radius:26px;padding:10px 20px 10px 14px;text-decoration:none;color:inherit;transition:transform .2s}
+.fr-in:hover{transform:translateY(-2px)}
+.fr-in img{flex:0 0 auto;height:92px;width:auto;filter:drop-shadow(0 4px 4px rgba(0,0,0,.15))}
+.fr-txt{flex:1;min-width:0;font-size:14.5px;line-height:1.75;color:#374151}
+.fr-txt b{font-family:'Jua','Noto Sans KR',sans-serif;font-weight:400;font-size:20px;color:var(--c);margin-right:6px}
+.fr-txt i{font-style:normal;font-family:'Gamja Flower','Jua',sans-serif;font-size:18px;color:var(--c);opacity:.85;margin-right:8px}
+.fr-txt span.fr-pill{display:inline-block;background:var(--c);color:#fff;font-size:12.5px;font-weight:700;padding:0 10px;border-radius:50px;margin-right:6px;vertical-align:2px}
+.fr-more{flex:0 0 auto;font-weight:700;font-size:13.5px;color:#fff;background:var(--c);padding:7px 14px;border-radius:50px;white-space:nowrap}
+@media(max-width:700px){
+  .fr-band{padding:10px 4% 0}
+  .fr-in{gap:10px;padding:8px 12px 8px 8px;border-radius:20px}
+  .fr-in img{height:68px}
+  .fr-txt{font-size:13px;line-height:1.6}
+  .fr-txt b{font-size:17px}
+  .fr-more{display:none}
+}
+</style>
+<style>
+/* 사용방법 동영상 */
+.gvid{max-width:820px;margin:0 0 34px;background:var(--sc-light,#E8F4FC);border:2px solid var(--sc,var(--blue));border-radius:18px;padding:14px 14px 16px}
+.gvid-h{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-weight:900;font-size:16px;color:var(--text);margin:0 4px 10px}
+.gvid-h .gvid-play{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--sc,var(--blue));color:#fff;font-size:12px}
+.gvid-h small{font-size:12.5px;font-weight:700;color:var(--text3)}
+.gvid video{display:block;width:100%;aspect-ratio:16/9;border-radius:12px;background:#000}
+</style>
+<style id="nav-lang-css">.nav-lang{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:#1B8AC4;border:1.5px solid #1B8AC4;border-radius:50px;padding:7px 13px;margin-right:8px;white-space:nowrap;background:#fff}.nav-lang:hover{background:#E8F4FC}.nav-links a{white-space:nowrap}@media(max-width:1180px){.nav-lang .t{display:none}.nav-lang{padding:6px 9px;font-size:15px}}@media(max-width:480px){.nav-lang{padding:4px 6px;margin-right:6px;font-size:14px}.nav-cta{padding:8px 13px!important;font-size:12.5px!important}}@media(max-width:400px){nav{padding-left:12px!important;padding-right:12px!important}.nav-logo-name{font-size:15px!important}.nav-logo{gap:6px!important}.nav-cta{padding:7px 9px!important;font-size:12px!important}.nav-lang,.lang-sel{margin-right:5px!important}.hamburger{margin-left:4px!important}}</style>
+<style>.lang-sel{display:inline-flex;align-items:center;gap:4px;margin-right:8px;border:1.5px solid #1B8AC4;border-radius:50px;padding:3px 4px 3px 10px;background:#fff;font-size:15px}.lang-sel select{border:none;background:transparent;font:700 13px sans-serif;color:#1B8AC4;padding:4px 2px;cursor:pointer;outline:none}.nav-links a{padding:8px 11px!important}@media(max-width:1280px){.nav-raccoon{display:none!important}}.lang-sel .cur{display:none}@media(max-width:480px){.nav-cta{display:none!important}.lang-sel{position:relative;margin-right:6px;padding:6px 10px;gap:5px}.lang-sel .cur{display:inline;white-space:nowrap;font:700 13px sans-serif;color:#1B8AC4}.lang-sel select{position:absolute;inset:0;width:100%;opacity:0}}@media(max-width:400px){.lang-sel{padding:5px 6px!important;gap:2px!important;font-size:13px}.lang-sel .cur{font-size:12px}}.lang-sw{position:fixed;right:10px;bottom:12px;z-index:400}.tr-note{max-width:1160px;margin:0 auto;padding:10px 6% 0;font-size:12.5px;color:#9CA3AF}</style></head>
+<body>
+<!-- NAV -->
+<nav> <a class="nav-logo" href="../index.html"> <img alt="Logo" class="logo-img" src="../logo.jpg"/> <span class="nav-logo-name">PrintShop Mini</span> </a> <ul class="nav-links" id="navLinks">
+<li><a href="../services.html">Dịch vụ</a></li>
+<li><a class="active" href="guide.html">Hướng dẫn</a></li>
+<li><a href="../faq.html">FAQ</a></li>
+<li><a href="../about.html">Giới thiệu</a></li>
+<li><a href="../branches.html">Cửa hàng</a></li>
+<li><a href="../community.html">Cộng đồng</a></li>
+</ul>
+<div class="nav-right"> <label class="lang-sel" title="Language · 语言 · Ngôn ngữ"><span aria-hidden="true">🌐</span><span aria-hidden="true" class="cur">VI ▾</span><select aria-label="Language" onchange="location.href=this.value"><option lang="ko" value="../guide-coat.html">한국어</option><option lang="en" value="../en/guide-coat.html">English</option><option lang="zh-Hans" value="../zh/guide-coat.html">中文</option><option lang="vi" selected="" value="../vi/guide-coat.html">Tiếng Việt</option></select></label><a class="nav-cta" href="../branches.html">Tìm cửa hàng</a> <div class="nav-raccoon" title="Linh vật PrintShop Mini">
+<img alt="Linh vật gấu mèo" src="../raccoon1.png"/>
+</div>
+</div>
+<button class="hamburger" onclick="toggleMenu()">
+<span></span><span></span><span></span>
+</button>
+</nav>
+<!-- HEADER -->
+<div class="stick-top">
+<div class="page-header">
+<div class="ph-inner">
+<img alt="" aria-hidden="true" class="ph-pal" src="../img/friends/coat.webp"/>
+<div class="ph-eyebrow">GUIDE · COATING</div>
+<h1 class="ph-h1">Cách ép plastic</h1>
+<p class="ph-sub">Cách cho giấy in vào túi ép plastic để ép. Hãy kiểm tra số túi ép và thanh toán trước.</p>
+</div>
+</div>
+<div class="svc-switch"><div class="svc-switch-in"> <a href="guide.html">Tất cả hướng dẫn</a> <a href="guide-video.html">▶ Video</a> <a href="guide-print.html">🖨️ In</a> <a href="guide-copy.html">📋 Photo</a> <a href="guide-scan.html">📄 Scan</a> <a href="guide-fax.html"><svg aria-hidden="true" class="fax-ico" fill="none" height="15" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 48 48" width="15"><path d="M9 36V5h18l8 8v9" stroke="currentColor" stroke-width="4.2"></path><path d="M15 15h10M15 22h6" stroke="currentColor" stroke-width="4.2"></path><g transform="translate(20 21) scale(1.04)"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke-width="7" style="stroke:var(--bg)"></path><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="3.99"></path></g></svg> Fax </a> <a class="on" href="guide-coat.html">✨ Ép plastic</a> <a href="guide-bind.html">📚 Đóng sách</a> </div></div>
+</div>
+<div class="fr-band" style="--c:#7C3AED;--cl:#EEE6FD">
+<a class="fr-in" href="../about.html#friend-kobuki" title="Làm quen với Mini Friends">
+<img alt="Shelly Coat" height="92" src="../img/friends/coat.webp" width="92"/>
+<div class="fr-txt"><b>Shelly Coat</b><i>Shelly Coat</i><span class="fr-pill">Phụ trách ép plastic</span><br/>Xin chào! Mình là Shelly Coat, phụ trách ép plastic. Mình sẽ chỉ bạn cách bọc và bảo vệ tờ giấy quý của bạn!</div> <span class="fr-more">Xem thêm các bạn →</span> </a>
+</div>
+<div class="sec alt" id="coat" style="--sc:#7C3AED;--sc-light:#F1EAFE">
+<div class="sec-in">
+<div class="sec-head">
+<div class="sec-ico"><svg fill="none" height="34" viewbox="0 0 48 48" width="34"><rect height="34" rx="3" stroke="#7C3AED" stroke-width="3" width="28" x="8" y="8"></rect><path d="M14 18h16M14 26h16M14 34h9" stroke="#7C3AED" stroke-linecap="round" stroke-width="3"></path><path d="M40 4l1.7 4.3L46 10l-4.3 1.7L40 16l-1.7-4.3L34 10l4.3-1.7z" fill="#7C3AED"></path></svg></div>
+<h2 class="sec-h2">Cách ép plastic <span class="pill">COATING</span></h2>
+</div>
+<p class="sec-tagline"><b>Kiểm tra số túi ép và thanh toán trước, rồi bật nguồn, chờ máy làm nóng xong mới đưa túi ép vào.</b> Dùng xong nhớ tắt nguồn.</p>
+<div class="machine-pick">
+<div class="machine-pick-h">🔎 Có cửa hàng có hai loại máy ép. Hãy xem cửa hàng có loại máy nào trước.</div>
+<div class="machine-pick-note">👍 <b>Ở cửa hàng có cả hai loại</b>, <b>hãy dùng máy ép màu đen PL-1506 trước.</b><br/>PL-1506 <b>làm nóng nhanh hơn và ép nhanh hơn.</b></div>
+<a class="mp dark" href="#pl1506"><div class="mp-pic"><img alt="Máy ép màu đen PL-1506 — thân đen viền bạc, nút điều khiển bên phải" loading="lazy" src="../images/coat/pl-1506-machine.svg"/></div> <b>Máy ép màu đen PL-1506 (Paper Friend)</b><i class="rec-tag">👍 Chỉ để ép · hãy dùng máy này trước</i><span>Bấm nút nguồn rồi bấm <b>nút [문서] (Tài liệu)</b> để làm nóng.</span><em>Làm theo &lt;Cách dùng PL-1506&gt; bên dưới ↓</em> </a>
+<a class="mp" href="#safa-steps"><div class="mp-pic"><img alt="Máy ép màu trắng SAFA-BM100 — thân trắng viền xanh đậm, có logo SAFA" loading="lazy" src="../images/coat/safa-100-machine.jpg"/></div> <b>Máy ép màu trắng SAFA-BM100</b><i class="dual-tag">🔀 Máy ép · đóng sách 2 trong 1</i><span>Bấm nút nguồn rồi bấm <b>nút ép 2 lần</b> để làm nóng.</span><em>Làm theo &lt;Cách dùng SAFA-BM100&gt; ở cuối trang ↓</em> </a>
+</div>
+<div id="guideFiles"></div>
+</div>
+</div>
+<div class="sec" id="pl1506" style="--sc:#111827;--sc-light:#EEF0F3">
+<div class="sec-in">
+<div class="sec-head">
+<div class="sec-ico"><svg fill="none" height="34" viewbox="0 0 48 48" width="34"><rect fill="#111827" height="20" rx="4" width="36" x="6" y="16"></rect><rect height="8" rx="2" stroke="#111827" stroke-width="3" width="24" x="12" y="10"></rect><rect fill="#fff" height="10" rx="2" stroke="#111827" stroke-width="3" width="20" x="14" y="30"></rect></svg></div>
+<h2 class="sec-h2">Cách dùng máy ép màu đen (PL-1506) <span class="pill">PL-1506</span></h2>
+</div>
+<p class="sec-tagline"><b>Đây là hướng dẫn dành riêng cho chế độ [문서] (Tài liệu) của máy ép Paper Friend PL-1506.</b> Nếu cửa hàng có máy PL-1506 màu đen, hãy <b>ép theo cách này</b> trước. (Cửa hàng chỉ có máy trắng SAFA-BM100 thì làm theo hướng dẫn SAFA-BM100 ở cuối trang.)</p>
+<div class="gvid"><div class="gvid-h"><span class="gvid-play">▶</span>Xem video máy ép đen PL-1506 trước <small>Không cần bật tiếng</small></div><video controls="" playsinline="" poster="../videos/guide-coat-pl.jpg" preload="none"><source src="../videos/guide-coat-pl.mp4" type="video/mp4"/> Trình duyệt của bạn không phát được video. </video></div>
+<div class="prestep">
+<div class="prestep-h">🧾 Trước khi bắt đầu ép! <span>Giống nhau cho máy trắng SAFA-BM100 · máy đen PL-1506</span></div>
+<ol>
+<li>Trước tiên hãy xem <b>còn bao nhiêu túi ép đang bày</b>.</li>
+<li>Nếu đủ số lượng, hãy <b>chọn số tờ ở máy kiosk Toss và thanh toán bằng thẻ</b>, rồi làm theo các bước bên dưới.</li>
+<li>Nếu túi ép ít hơn số bạn cần, hãy <b>quay lại lần sau, hoặc chỉ dùng số đang có</b>.</li>
+</ol>
+<div class="prestep-warn">⚠️ <b>Tiền thanh toán ở máy kiosk Toss sẽ được hoàn vào tài khoản ngân hàng.</b> Nếu bạn sơ ý thanh toán 2 lần, chúng tôi sẽ hoàn lại số tiền sau khi trừ phí. Đừng thanh toán 2 lần.</div>
+</div>
+<div class="pl-look">
+<figure class="pl-fig"><svg aria-label="Hình vẽ máy ép đen PL-1506 nhìn từ trên. Không dùng nút 사진 (Ảnh) và 무열코팅 (Ép nguội)." role="img" viewbox="0 0 640 300" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="320" cy="262" fill="#000" opacity=".08" rx="270" ry="14"></ellipse>
+<rect fill="#2B3036" height="38" rx="9" width="300" x="190" y="12"></rect>
+<rect fill="#3A4048" height="6" rx="3" width="280" x="200" y="20"></rect>
+<rect fill="#12161B" height="172" rx="28" width="540" x="50" y="44"></rect>
+<rect fill="none" height="156" rx="21" stroke="#D3D9DF" stroke-width="5" width="524" x="58" y="52"></rect>
+<path d="M70 62 L250 62 L150 200 L70 200 Z" fill="#fff" opacity=".05"></path>
+<text fill="#F3F5F7" font-size="22" font-weight="800" letter-spacing=".5" text-anchor="middle" x="218" y="190">Paper Friend <tspan font-size="17" font-weight="700">PL-1506</tspan></text>
+<rect fill="#1E2328" height="134" rx="16" stroke="#353C45" stroke-width="3" width="132" x="438" y="62"></rect>
+<g fill="#E7EBEF" font-size="12" font-weight="800" text-anchor="middle">
+<rect fill="#343B45" height="25" rx="12.5" width="84" x="446" y="70"></rect><text x="488" y="87">역회전</text>
+<rect fill="#3A414C" height="25" rx="12.5" width="84" x="446" y="101"></rect><text x="494" y="118">문서</text><circle cx="459" cy="113.5" fill="#E5483B" r="4.2"></circle>
+<g opacity=".5"><rect fill="#343B45" height="25" rx="12.5" width="84" x="446" y="132"></rect><text x="488" y="149">사진</text>
+<rect fill="#343B45" height="25" rx="12.5" width="84" x="446" y="163"></rect><text x="488" y="180">무열코팅</text></g>
+</g>
+<g stroke="#E5483B" stroke-linecap="round" stroke-width="4">
+<path d="M472 136 L504 153 M504 136 L472 153"></path><path d="M472 167 L504 184 M504 167 L472 184"></path>
+</g>
+<circle cx="546" cy="80" fill="#35C759" r="4"></circle><circle cx="546" cy="96" fill="#E5483B" r="4"></circle>
+<circle cx="548" cy="148" fill="#2A3038" r="14" stroke="#C9CFD6" stroke-width="2.4"></circle>
+<path d="M548 138 v9" stroke="#fff" stroke-linecap="round" stroke-width="2.6"></path><path d="M541 142 a9 9 0 1 0 14 0" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2.6"></path>
+<rect fill="#8E969E" height="7" rx="3.5" width="516" x="62" y="212"></rect>
+<path d="M74 219 H430 L446 282 H90 Z" fill="#2B3036" opacity=".82" stroke="#4A525B" stroke-width="2"></path>
+<path d="M128 232 v26 M200 232 v26 M272 232 v26 M344 232 v26" stroke="#4A525B" stroke-width="2"></path>
+<text fill="#9AA3AD" font-size="12" font-weight="700" text-anchor="middle" x="258" y="272">Khe đưa túi ép</text>
+</svg><figcaption>Màu đen · Paper Friend PL-1506 (nhìn từ trên)</figcaption></figure>
+<figure class="pl-fig"><svg aria-label="Phóng to nút của PL-1506 — 1 nút nguồn, 2 nút 문서 (Tài liệu), 3 đèn READY. Nút 사진 (Ảnh) và 무열코팅 (Ép nguội) có dấu X." role="img" viewbox="0 0 580 340" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#12161B" height="324" rx="30" width="564" x="8" y="8"></rect>
+<rect fill="none" height="308" rx="24" stroke="#D3D9DF" stroke-width="6" width="548" x="16" y="16"></rect>
+<rect fill="#1E2328" height="264" rx="22" stroke="#353C45" stroke-width="3" width="500" x="40" y="38"></rect>
+<g fill="#E7EBEF" font-size="19" font-weight="800" text-anchor="middle">
+<rect fill="#343B45" height="46" rx="23" width="190" x="64" y="54"></rect><text x="159" y="84">역회전</text>
+<rect fill="#3A414C" height="46" rx="23" stroke="#1B8AC4" stroke-width="5" width="190" x="64" y="116"></rect><text x="168" y="146">문서</text><circle cx="96" cy="139" fill="#E5483B" r="7"></circle>
+<g opacity=".5"><rect fill="#343B45" height="46" rx="23" width="190" x="64" y="178"></rect><text x="159" y="208">사진</text>
+<rect fill="#343B45" height="46" rx="23" width="190" x="64" y="240"></rect><text x="159" y="270">무열코팅</text></g>
+</g>
+<g stroke="#E5483B" stroke-linecap="round" stroke-width="7">
+<path d="M110 186 L208 216 M208 186 L110 216"></path><path d="M110 248 L208 278 M208 248 L110 278"></path>
+</g>
+<g fill="#AEB6BF" font-size="12" font-weight="800">
+<circle cx="318" cy="78" fill="#35C759" r="8"></circle><text x="334" y="83">READY</text>
+<circle cx="318" cy="112" fill="#E5483B" r="8"></circle><text x="334" y="117">POWER</text>
+</g>
+<circle cx="420" cy="210" fill="none" r="44" stroke="#1B8AC4" stroke-width="5"></circle>
+<circle cx="420" cy="210" fill="#2A3038" r="34" stroke="#C9CFD6" stroke-width="3.4"></circle>
+<path d="M420 190 v20" stroke="#fff" stroke-linecap="round" stroke-width="5"></path><path d="M405 198 a22 22 0 1 0 30 0" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="5"></path>
+<g fill="#fff" font-size="17" font-weight="900" text-anchor="middle">
+<circle cx="470" cy="164" fill="#1B8AC4" r="15"></circle><text x="470" y="170">1</text>
+<circle cx="36" cy="139" fill="#1B8AC4" r="15"></circle><text x="36" y="145">2</text>
+<circle cx="424" cy="78" fill="#1B8AC4" r="15"></circle><text x="424" y="84">3</text>
+</g>
+</svg><figcaption>Phóng to các nút</figcaption></figure>
+</div>
+<ul class="pl-legend">
+<li><span>1</span><div><b>Nút nguồn</b> — bấm để bật nguồn.</div></li>
+<li><span>2</span><div><b>Nút [문서] (Tài liệu)</b> — bấm để chọn chế độ Tài liệu. Trong chế độ này, <b class="lr">đèn đỏ</b> ở nút sẽ nhấp nháy liên tục.</div></li>
+<li><span>3</span><div><b>Đèn READY</b> — bình thường <b class="lg">đèn xanh</b> nhấp nháy, khi đang làm nóng cũng nhấp nháy. Khoảng 60 giây sau có tiếng "bíp", <b>đèn ngừng nhấp nháy và sáng liên tục là đã nóng xong</b>.</div></li>
+<li class="no"><span>✕</span><div><b>Tuyệt đối đừng bấm nút [사진] (Ảnh) · [무열코팅] (Ép nguội).</b> Chỉ dùng <b>chế độ [문서] (Tài liệu)</b>.</div></li>
+</ul>
+<div class="subhead">Cách dùng máy ép đen PL-1506</div>
+<div class="steps steps-wide">
+<div class="step">
+<div class="step-no">1</div>
+<div class="step-h">Kiểm tra túi ép · thanh toán trước!</div>
+<p class="step-p"><b>Trước tiên hãy xem còn bao nhiêu túi ép đang bày</b>.<br/>Nếu đủ, hãy <b>chọn số tờ ở máy kiosk Toss và thanh toán bằng thẻ</b> rồi mới dùng.<br/>Nếu túi ép ít hơn số bạn cần, hãy <b>quay lại lần sau, hoặc chỉ dùng số đang có</b>.</p>
+<div class="step-note warn">⚠️ Thứ tự là <b>kiểm tra số lượng → thanh toán → ép</b>. Nhất định phải thanh toán trước</div>
+<div class="step-note warn">⚠️ <b>Tiền thanh toán ở máy kiosk Toss sẽ được hoàn vào tài khoản ngân hàng.</b> Nếu bạn sơ ý thanh toán 2 lần, chúng tôi sẽ hoàn lại số tiền sau khi trừ phí. Đừng thanh toán 2 lần.</div>
+</div>
+<div class="step">
+<div class="step-no">2</div>
+<div class="step-figs"><img alt="Bấm nút nguồn — bật nguồn" class="step-photo pl" loading="lazy" src="../images/coat/pl-s2.jpg"/></div>
+<div class="step-h">Bấm nút nguồn</div>
+<p class="step-p">Bấm nút <b>nguồn</b> để bật máy. (bật nguồn)</p>
+<div class="step-note">💡 <b>Trạng thái bình thường</b> — máy ép luôn cắm điện nên <b>đèn POWER <b class="lr">màu đỏ</b></b> nhấp nháy liên tục, <b>đèn READY <b class="lg">màu xanh</b></b> cũng nhấp nháy. Đây là <b>bình thường</b>, không phải máy hỏng.</div>
+</div>
+<div class="step">
+<div class="step-no">3</div>
+<div class="step-figs"><img alt="Bấm nút 문서 (Tài liệu)" class="step-photo pl" loading="lazy" src="../images/coat/pl-s3.jpg"/></div>
+<div class="step-h">Bấm nút [문서] (Tài liệu)</div>
+<p class="step-p">Bấm nút <b>[문서] (Tài liệu)</b> để chọn chế độ Tài liệu.<br/>Khi <b><b class="lr">đèn đỏ</b> ở nút [문서] nhấp nháy</b> và đèn READY <b class="lg">màu xanh</b> <b>cũng nhấp nháy</b> là máy bắt đầu làm nóng.<br/><span class="r">Đừng bấm nút [사진] (Ảnh) · [무열코팅] (Ép nguội). Chỉ dùng chế độ Tài liệu.</span></p>
+</div>
+<div class="step">
+<div class="step-no">4</div>
+<div class="step-figs"><img alt="Khi làm nóng, đèn xanh READY nhấp nháy; khoảng 60 giây sau kêu bíp và ngừng nhấp nháy" class="step-photo pl" loading="lazy" src="../images/coat/pl-s4.jpg"/></div>
+<div class="step-h">Chờ máy làm nóng</div>
+<p class="step-p">Làm nóng mất <b>khoảng 60 giây</b>.<br/>Sau 60 giây sẽ có tiếng <b>"bíp~"</b>, và <b>khi đèn READY <b class="lg">màu xanh</b> ngừng nhấp nháy và sáng liên tục là đã nóng xong</b>.<br/>Lúc đó <b class="lr">đèn đỏ</b> ở nút [문서] <b>vẫn nhấp nháy là bình thường</b>. Khi đèn READY <b class="lg">màu xanh</b> còn nhấp nháy thì đừng đưa túi ép vào.</p>
+</div>
+<div class="step">
+<div class="step-no">5</div>
+<div class="step-figs"><img alt="Cho giấy in vào túi ép và đưa đến trước máy ép" class="step-photo pl tall" loading="lazy" src="../images/coat/pl-s5.jpg"/></div>
+<div class="step-h">Cho giấy in vào</div>
+<p class="step-p"><b>Cho giấy in vào</b> trong túi ép.</p>
+</div>
+<div class="step">
+<div class="step-no">6</div>
+<div class="step-figs"><img alt="Đưa đầu kín của túi ép thẳng vào khe" class="step-photo pl" loading="lazy" src="../images/coat/pl-s6.jpg?v=3"/></div>
+<div class="step-h">Đầu kín vào trước, đưa thẳng</div>
+<p class="step-p">Đưa túi ép vào khe <b>đầu kín trước, giữ thẳng ngang</b>.<br/><span class="r">Đầu kín là <b>cạnh ngắn (phía trên)</b> của túi ép.</span> Không phải cạnh dài (bên hông).</p>
+</div>
+<div class="step">
+<div class="step-no">7</div>
+<div class="step-figs"><img alt="Nhẹ nhàng đẩy túi ép vào đến khi máy tự kéo vào" class="step-photo pl" loading="lazy" src="../images/coat/pl-s7.jpg"/></div>
+<div class="step-h">Đẩy đến khi máy tự kéo vào</div>
+<p class="step-p">Đẩy vào <b>thật phẳng</b> và chậm, <b>cảm biến ở khe sẽ nhận ra túi ép</b> và máy <b>tự động kéo vào.</b></p>
+</div>
+<div class="step">
+<div class="step-no">8</div>
+<div class="step-figs"><img alt="Đưa túi ép vào khe phía trước, túi ép ra ở phía sau" class="step-photo pl wide" loading="lazy" src="../images/coat/pl-s8.jpg?v=2"/></div>
+<div class="step-h">Kiểm tra túi ép ra</div>
+<p class="step-p">Túi ép <b>vào ở khe phía trước và ra ở phía sau.</b> Hãy kiểm tra túi ép <b>ra</b> ở phía sau.<br/><span class="r">⚠️ Tuyệt đối đừng đưa vào phía sau, nơi túi ép đi ra. Chỉ đưa vào khe phía trước.</span></p>
+</div>
+</div>
+<div class="adfw" style="margin-top:34px">
+<div class="adfw-h"><span class="x">!</span>Lưu ý khi ép — những điều không được làm và cần làm, hãy làm đúng</div>
+<div class="fire">
+<div class="fire-h">🔥🚨 Nguy cơ cháy — tuyệt đối không được làm! 🚨🔥</div>
+<div class="fire-items"><div class="fire-it"><img alt="Chỉ cho giấy in vào có nguy cơ cháy" loading="lazy" src="../images/coat/pl-no-print.jpg"/><div><b>🚫 Đừng chỉ cho giấy in vào!</b><span>Không được cho giấy in vào máy ép mà không có túi ép</span></div></div><div class="fire-it"><img alt="Chỉ cho túi ép rỗng vào có nguy cơ cháy" loading="lazy" src="../images/coat/pl-no-empty.jpg"/><div><b>🚫 Đừng cho túi ép rỗng vào!</b><span>Không được cho túi ép rỗng vào máy mà không có giấy in bên trong</span></div></div></div>
+<div class="fire-t">⚠️ Làm một trong hai điều này có thể <b>gây cháy bên trong máy ép</b>. 🧯<br/>Chỉ cho vào <b>túi ép đã có giấy in bên trong</b>. Có <b>nguy cơ cháy và hỏng máy</b>.</div>
+</div>
+<div class="adfw-grid">
+<div class="adfw-box ok pic">
+<div class="adfw-t">Hãy làm thế này</div>
+<ul>
+<li><img alt="Đầu kín vào trước là đúng, làm ngược lại là sai" loading="lazy" src="../images/coat/pl-ok-closed.jpg"/><div>Đưa túi ép vào <b>đầu kín trước</b>. (Bắt buộc)</div></li>
+<li><img alt="Đẩy vào đến khi máy tự kéo vào" loading="lazy" src="../images/coat/pl-s7.jpg"/><div><b>Đừng để túi ép gác hờ ở khe.</b> Cẩn thận không làm nhàu, <b>đẩy từ từ đến khi máy tự kéo vào.</b></div></li>
+<li class="wide multi"><div> Khi ép nhiều tờ, chờ <b>túi ép trước ra hết</b> rồi mới đưa túi tiếp theo vào.<br/><span class="warnline">⚠️ Túi ép <b>vào ở khe phía trước và ra ở phía sau.</b> Đừng đưa vào phía sau, nơi túi ép đi ra.</span> <div class="seq3"><div class="s3"><img alt="Đưa túi ép đầu tiên vào khe phía trước" loading="lazy" src="../images/coat/pl-multi-1.jpg?v=1"/><p>Đưa <b>① túi ép đầu tiên</b> vào <b>khe phía trước</b>.</p></div><div class="s3"><img alt="Chờ túi ép đầu tiên ra hết ở phía sau máy" loading="lazy" src="../images/coat/pl-multi-2.jpg?v=1"/><p>Chờ <b>② đến khi ra hết ở phía sau</b>.</p></div><div class="s3"><img alt="Kiểm tra và lấy túi ép đã ra, rồi đưa túi tiếp theo vào khe phía trước" loading="lazy" src="../images/coat/pl-multi-3.jpg?v=1"/><p><b>③ Kiểm tra đã ra hết</b>, lấy ra để riêng, rồi đưa <b>túi ép tiếp theo</b> vào khe phía trước.</p></div></div></div></li>
+<li><img alt="Bấm nút nguồn để tắt máy sau khi dùng" loading="lazy" src="../images/coat/pl-ok-off.jpg"/><div>Dùng xong, <b>bấm nút nguồn để tắt máy.</b></div></li>
+</ul>
+</div>
+<div class="adfw-box no pic">
+<div class="adfw-t">Đừng làm thế này</div>
+<figure class="adfw-fig"><img alt="Giấy in nhỏ hơn túi ép để lại khoảng trống, túi ép bị nhàu và nhăn bên trong máy" loading="lazy" src="../images/coat/no-small-print.png"/><figcaption>▲ Nếu đưa vào như bên trái (✕), túi ép sẽ ra <b>bị nhàu</b> như bên phải.</figcaption></figure>
+<ul>
+<li class="txt">Đừng cho vào <b>giấy in cắt nhỏ hơn túi ép</b>. Nếu trong túi ép (A4 · A3) có nhiều khoảng trống, chỗ đó không có giấy, hai lớp túi dính vào nhau và ra <b>bị nhàu, nhăn</b>.<br/>Nhất là khi giấy in <b>không chạm đến đầu kín</b>, <b>góc đầu kín có thể bị nhàu và kẹt trong máy</b>, hoặc ra bị nhàu.<br/>👉 Hãy dùng giấy in <b>vừa khổ túi ép và chạm đến đầu kín</b>.</li>
+<li><img alt="Không dùng giấy in mang từ ngoài vào" loading="lazy" src="../images/coat/pl-no-bring-print.jpg"/><div>Không dùng được <b>giấy in mang từ ngoài vào</b>. (Giấy khác với giấy của cửa hàng thì không được)</div></li>
+<li><img alt="Không dùng túi ép mang từ ngoài vào" loading="lazy" src="../images/coat/pl-no-bring-coat.jpg"/><div>Không dùng được <b>túi ép mang từ ngoài vào</b>. (Khác với của cửa hàng thì không được)</div></li>
+<li><img alt="Đừng bấm nút khi máy đang chạy" loading="lazy" src="../images/coat/pl-no-touch.jpg"/><div><b>Đừng bấm nút khi máy ép đang chạy.</b> (Bấm nhầm sẽ gây lỗi)</div></li>
+</ul>
+</div>
+</div>
+<div class="adfw-foot">※ Đây là những lưu ý <b>áp dụng cho mọi máy ép</b>, cả máy trắng SAFA-BM100 và máy đen PL-1506.</div>
+</div>
+</div>
+</div>
+<div class="sec alt" id="safa" style="--sc:#7C3AED;--sc-light:#F1EAFE">
+<div class="sec-in">
+<div class="sec-head">
+<div class="sec-ico"><svg fill="none" height="34" viewbox="0 0 48 48" width="34"><rect height="34" rx="3" stroke="#7C3AED" stroke-width="3" width="28" x="8" y="8"></rect><path d="M14 18h16M14 26h16M14 34h9" stroke="#7C3AED" stroke-linecap="round" stroke-width="3"></path><path d="M40 4l1.7 4.3L46 10l-4.3 1.7L40 16l-1.7-4.3L34 10l4.3-1.7z" fill="#7C3AED"></path></svg></div>
+<h2 class="sec-h2">Cách dùng máy ép màu trắng (SAFA-BM100) <span class="pill">SAFA-BM100</span></h2>
+</div>
+<p class="sec-tagline"><b>Đây là hướng dẫn cho máy ép · đóng sách 2 trong 1 màu trắng SAFA-BM100.</b> Ở cửa hàng có cả hai loại, hãy dùng máy PL-1506 ở trên trước. Cửa hàng chỉ có máy trắng SAFA-BM100 thì <b>ép theo cách này</b>.</p>
+<div class="gvid"><div class="gvid-h"><span class="gvid-play">▶</span>Xem video máy ép trắng SAFA-BM100 trước <small>Không cần bật tiếng</small></div><video controls="" playsinline="" poster="../videos/guide-coat-safa.jpg" preload="none"><source src="../videos/guide-coat-safa.mp4" type="video/mp4"/> Trình duyệt của bạn không phát được video. </video></div>
+<div class="subhead" id="safa-steps">Cách dùng máy ép trắng SAFA-BM100</div>
+<div class="dual">
+<div class="dual-h">🔀 Máy này (SAFA-BM100) là <b>máy ép · đóng sách 2 trong 1</b></div>
+<div class="dual-warn">🚫 <b>Khe dài phía trên chỉ dành cho bìa đóng sách.</b> <b>Tuyệt đối đừng đưa túi ép vào khe phía trên!</b><br/>Túi ép <b>chỉ đưa vào khe phía dưới (phía trước)</b>. Đưa túi ép vào khe trên có thể bị kẹt và làm hỏng máy.</div>
+<img alt="Máy ép · đóng sách SAFA-BM100: khe dài phía trên là khe bìa đóng sách (không đưa túi ép), khe phía dưới phía trước là khe túi ép" class="dual-img" loading="lazy" src="../images/coat/safa-two-slots.jpg?v=1"/>
+</div>
+<div class="prestep">
+<div class="prestep-h">🧾 Trước khi bắt đầu ép! <span>Giống nhau cho máy trắng SAFA-BM100 · máy đen PL-1506</span></div>
+<ol>
+<li>Trước tiên hãy xem <b>còn bao nhiêu túi ép đang bày</b>.</li>
+<li>Nếu đủ số lượng, hãy <b>chọn số tờ ở máy kiosk Toss và thanh toán bằng thẻ</b>, rồi làm theo các bước bên dưới.</li>
+<li>Nếu túi ép ít hơn số bạn cần, hãy <b>quay lại lần sau, hoặc chỉ dùng số đang có</b>.</li>
+</ol>
+<div class="prestep-warn">⚠️ <b>Tiền thanh toán ở máy kiosk Toss sẽ được hoàn vào tài khoản ngân hàng.</b> Nếu bạn sơ ý thanh toán 2 lần, chúng tôi sẽ hoàn lại số tiền sau khi trừ phí. Đừng thanh toán 2 lần.</div>
+</div>
+<div class="steps steps-wide">
+<div class="step">
+<div class="step-no">1</div>
+<div class="step-h">Kiểm tra túi ép · thanh toán trước!</div>
+<p class="step-p"><b>Trước tiên hãy xem còn bao nhiêu túi ép đang bày</b>.<br/>Nếu đủ, hãy <b>chọn số tờ ở máy kiosk Toss bên cạnh máy và thanh toán bằng thẻ</b> rồi mới dùng.<br/>Nếu túi ép ít hơn số bạn cần, hãy <b>quay lại lần sau, hoặc chỉ dùng số đang có</b>.</p>
+<div class="step-note warn">⚠️ Thứ tự là <b>kiểm tra số lượng → thanh toán → ép</b>. Nhất định phải thanh toán trước</div>
+<div class="step-note warn">⚠️ <b>Tiền thanh toán ở máy kiosk Toss sẽ được hoàn vào tài khoản ngân hàng.</b> Nếu bạn sơ ý thanh toán 2 lần, chúng tôi sẽ hoàn lại số tiền sau khi trừ phí. Đừng thanh toán 2 lần.</div>
+</div>
+<div class="step step-dual">
+<div class="step-no">2</div>
+<div class="step-figs two"><img alt="Bấm nút nguồn" class="step-photo" loading="lazy" src="../images/coat/coat-power.png"/><img alt="Bấm nút ép 2 lần" class="step-photo" loading="lazy" src="../images/coat/coat-button.png"/></div>
+<div class="step-h">Bật nguồn · làm nóng</div>
+<p class="step-p">Bấm nút <b>nguồn</b>, rồi bấm nút <b>ép</b> <b>2 lần</b>.<br/>Đèn nhấp nháy, khoảng 3–5 phút sau kêu <b>"bíp"</b> và đèn sáng liên tục là đã nóng xong.</p>
+<div class="step-note warn">⚠️ Nếu đã bấm nút ép <b>từ 3 lần trở lên</b>, hãy <b>bấm nút nguồn để tắt</b>, rồi làm lại từ đầu: <b>bấm nút nguồn, rồi bấm nút ép 2 lần</b>.</div>
+</div>
+<div class="step">
+<div class="step-no">3</div>
+<div class="step-figs"><img alt="Cho giấy in vào trong túi ép" class="step-photo" loading="lazy" src="../images/coat/coat-fill.png"/></div>
+<div class="step-h">Cho giấy in vào túi ép</div>
+<p class="step-p">Cho giấy in <b>ngay ngắn vào trong</b> túi ép.</p>
+</div>
+<div class="step">
+<div class="step-no">4</div>
+<div class="step-figs"><img alt="Đưa đầu kín của túi ép thẳng ngang vào khe" class="step-photo" loading="lazy" src="../images/coat/coat-insert.png"/></div>
+<div class="step-h">Đưa vào máy ép</div>
+<p class="step-p">Đưa túi ép vào khe <b>đầu kín trước</b>.<br/>Giữ <b>thẳng ngang, ngay ngắn, không làm nhàu</b>.</p>
+</div>
+<div class="step">
+<div class="step-no">5</div>
+<div class="step-figs"><img alt="Theo dõi để túi ép không bị vướng khi ra ở phía sau" class="step-photo" loading="lazy" src="../images/coat/coat-watch.png"/></div>
+<div class="step-h">Kiểm tra túi ép đi ra</div>
+<p class="step-p">Theo dõi để túi ép <b>ra ở phía sau</b> trơn tru, không bị vướng.</p>
+</div>
+<div class="step">
+<div class="step-no">6</div>
+<div class="step-h">Tắt nguồn</div>
+<p class="step-p">Dùng xong, <b>nhất định phải tắt nguồn.</b></p>
+<div class="step-note warn">Nếu không tắt nguồn sẽ gây phiền cho người dùng sau.</div>
+</div>
+</div>
+<div class="adfw" style="margin-top:34px">
+<div class="adfw-h"><span class="x">!</span>Lưu ý khi ép — những điều không được làm và cần làm, hãy làm đúng</div>
+<div class="fire">
+<div class="fire-h">🔥🚨 Nguy cơ cháy — tuyệt đối không được làm! 🚨🔥</div>
+<div class="fire-items"><div class="fire-it"><div><b>🚫 Đừng chỉ cho giấy in vào!</b><span>Không được cho giấy in vào máy ép mà không có túi ép</span></div></div><div class="fire-it"><div><b>🚫 Đừng cho túi ép rỗng vào!</b><span>Không được cho túi ép rỗng vào máy mà không có giấy in bên trong</span></div></div></div>
+<div class="fire-t">⚠️ Làm một trong hai điều này có thể <b>gây cháy bên trong máy ép</b>. 🧯<br/>Chỉ cho vào <b>túi ép đã có giấy in bên trong</b>. Có <b>nguy cơ cháy và hỏng máy</b>.</div>
+</div>
+<div class="adfw-grid">
+<div class="adfw-box ok">
+<div class="adfw-t">Hãy làm thế này</div>
+<ul>
+<li>Đưa túi ép vào <b>đầu kín trước</b>. (Bắt buộc)</li>
+<li><b>Đừng để túi ép gác hờ ở khe.</b> Cẩn thận không làm nhàu, <b>đẩy từ từ đến khi máy tự kéo vào.</b></li>
+<li> Khi ép nhiều tờ, chờ <b>túi ép trước ra hết</b> rồi mới đưa túi tiếp theo vào.<span class="warnline">⚠️ Túi ép <b>vào ở khe phía trước và ra ở phía sau.</b> Đừng đưa vào phía sau, nơi túi ép đi ra.</span> <div class="seq3"><div class="s3"><img alt="Đưa túi ép đầu tiên vào khe phía trước của SAFA-BM100" loading="lazy" src="../images/coat/safa-multi-1.jpg?v=2"/><p>Đưa <b>① túi ép đầu tiên</b> vào <b>khe phía trước</b>.</p></div><div class="s3"><img alt="Chờ túi ép đầu tiên ra hết ở phía sau máy" loading="lazy" src="../images/coat/safa-multi-2.jpg?v=2"/><p>Chờ <b>② đến khi ra hết ở phía sau</b>.</p></div><div class="s3"><img alt="Kiểm tra và lấy túi ép đã ra, rồi đưa túi tiếp theo vào khe phía trước" loading="lazy" src="../images/coat/safa-multi-3.jpg?v=2"/><p><b>③ Kiểm tra đã ra hết</b>, lấy ra để riêng, rồi đưa <b>túi ép tiếp theo</b> vào khe phía trước.</p></div></div></li>
+<li>Dùng xong, <b>bấm nút nguồn để tắt máy.</b></li>
+</ul>
+</div>
+<div class="adfw-box no">
+<div class="adfw-t">Đừng làm thế này</div>
+<figure class="adfw-fig"><img alt="Giấy in nhỏ hơn túi ép để lại khoảng trống, túi ép bị nhàu và nhăn bên trong máy" loading="lazy" src="../images/coat/no-small-print.png"/><figcaption>▲ Nếu đưa vào như bên trái (✕), túi ép sẽ ra <b>bị nhàu</b> như bên phải.</figcaption></figure>
+<ul>
+<li>🚫 Đừng đưa túi ép vào <b>khe bìa đóng sách phía trên</b>. (Túi ép <b>chỉ đưa vào khe phía dưới phía trước</b>)</li>
+<li>Đừng cho vào <b>giấy in cắt nhỏ hơn túi ép</b>. Nếu trong túi ép (A4 · A3) có nhiều khoảng trống, chỗ đó không có giấy, hai lớp túi dính vào nhau và ra <b>bị nhàu, nhăn</b>.<br/>Nhất là khi giấy in <b>không chạm đến đầu kín</b>, <b>góc đầu kín có thể bị nhàu và kẹt trong máy</b>, hoặc ra bị nhàu.<br/>👉 Hãy dùng giấy in <b>vừa khổ túi ép và chạm đến đầu kín</b>.</li>
+<li>Không dùng được <b>giấy in mang từ ngoài vào</b>. (Giấy khác với giấy của cửa hàng thì không được)</li>
+<li>Không dùng được <b>túi ép mang từ ngoài vào</b>. (Khác với của cửa hàng thì không được)</li>
+<li><b>Đừng bấm nút khi máy ép đang chạy.</b> (Bấm nhầm sẽ gây lỗi)</li>
+</ul>
+</div>
+</div>
+<div class="adfw-foot">※ Đây là những lưu ý <b>áp dụng cho mọi máy ép</b>, cả máy trắng SAFA-BM100 và máy đen PL-1506.</div>
+</div>
+</div>
+</div>
+<!-- 이미지 확대 보기 -->
+<p class="tr-note">Trang này được dịch từ tiếng Hàn. Nếu có chỗ nào chưa đúng, vui lòng báo cho chúng tôi qua Naver TalkTalk. Màn hình máy là tiếng Hàn — tên nút tiếng Hàn được ghi trong [ngoặc].</p><footer>
+<div class="ft-wrap">
+<div class="ft-brand">
+<img alt="Logo" src="../logo.jpg"/>
+<div class="ft-brand-name">PrintShop Mini</div>
+<p>Cửa hàng in tự phục vụ không người trực,<br/>mở cửa 24 giờ, 365 ngày.</p>
+</div>
+<div class="ft-col">
+<h4>Hướng dẫn sử dụng</h4>
+<ul>
+<li><a href="guide-print.html">Cách in</a></li>
+<li><a href="guide-copy.html">Cách photo</a></li>
+<li><a href="guide-scan.html">Cách scan</a></li>
+<li><a href="guide-fax.html">Cách gửi fax</a></li>
+<li><a href="guide-coat.html">Cách ép plastic</a></li>
+<li><a href="guide-bind.html">Cách đóng sách</a></li>
+</ul>
+</div>
+<div class="ft-col">
+<h4>Liên kết nhanh</h4>
+<ul>
+<li><a href="../services.html">Dịch vụ</a></li>
+<li><a href="../faq.html">Câu hỏi thường gặp</a></li>
+<li><a href="../branches.html">Tìm cửa hàng</a></li>
+<li><a href="../community.html">Cộng đồng</a></li>
+<li><a href="../about.html">Giới thiệu</a></li>
+</ul>
+</div>
+</div>
+<div class="ft-corp" style="word-break:keep-all;max-width:1160px;margin:0 auto 20px;font-size:13px;line-height:1.9;color:#9CA3AF"><b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1B8AC4)">PrintShop Mini</b> · <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">PrintNow</b> là thương hiệu của công ty <span style="white-space:nowrap">Good Learning Partner</span>.</div>
+<div class="ft-bottom">
+<p>© 2025 PrintShop Mini. All rights reserved.</p>
+<p>Chính sách bảo mật · Điều khoản sử dụng</p>
+</div>
+</footer>
+<script>
+function toggleMenu(){document.getElementById("navLinks").classList.toggle("show");}
+</script>
+<script>window.GUIDE_SERVICE='coat';</script>
+<script src="../service-guides.js?v=2"></script>
+<script>
+/* 2단계 메뉴: 현재 탭이 화면 밖이면 보이는 위치로 이동 */
+(function(){var a=document.querySelector('.svc-switch a.on'),w=a&&a.parentElement;if(w)w.scrollLeft=Math.max(0,a.offsetLeft-(w.clientWidth-a.offsetWidth)/2);})();
+</script>
+
+<script defer="" src="../lightbox.js?v=1"></script>
+</body>
+</html>

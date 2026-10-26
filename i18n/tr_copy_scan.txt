@@ -1,0 +1,447 @@
+# 복사(guide-copy.html) + 스캔(guide-scan.html) 번역 — 형식은 tr_guide_print.txt 와 같음
+# 그림 속 복합기 화면 글씨(과금정보·총 가격·250원·확인)와 PC 폴더 이름은 실제 화면과 같게 한국어 그대로 둠
+
+@@3aaf1003ba
+en: PrintShop Mini copy guide — copying steps on the printer machine, and how to copy ID cards, bankbooks, passports and books.
+zh: PrintShop Mini 复印使用方法 — 介绍复合机复印步骤，以及身份证、存折、护照、书本的复印方法。
+vi: Hướng dẫn photo của PrintShop Mini — các bước photo trên máy in đa năng và cách photo thẻ căn cước, sổ ngân hàng, hộ chiếu, sách.
+@@afa7d1e3cf
+en: How to Copy - PrintShop Mini
+zh: 复印使用方法 - PrintShop Mini
+vi: Cách photo - PrintShop Mini
+@@8301a4c653
+en: How to Copy
+zh: 复印使用方法
+vi: Cách photo
+@@85cd4e56ad
+en: How to make one more of the same paper you brought. ID card · bankbook · passport · book copies are covered too.
+zh: 把带来的纸再复印出一样的一张的方法。也介绍身份证 · 存折 · 护照 · 书本的复印。
+vi: Cách làm thêm một bản giống tờ giấy bạn mang đến. Có cả cách photo thẻ căn cước · sổ ngân hàng · hộ chiếu · sách.
+@@c3d466bed9
+en: <a href="guide.html">All guides</a> <a href="guide-video.html">▶ Videos</a> <a href="guide-print.html">🖨️ Print</a> <a class="on" href="guide-copy.html">📋 Copy</a> <a href="guide-scan.html">📄 Scan</a>
+zh: <a href="guide.html">全部使用方法</a> <a href="guide-video.html">▶ 视频</a> <a href="guide-print.html">🖨️ 打印</a> <a class="on" href="guide-copy.html">📋 复印</a> <a href="guide-scan.html">📄 扫描</a>
+vi: <a href="guide.html">Tất cả hướng dẫn</a> <a href="guide-video.html">▶ Video</a> <a href="guide-print.html">🖨️ In</a> <a class="on" href="guide-copy.html">📋 Photo</a> <a href="guide-scan.html">📄 Scan</a>
+@@da85b7050b
+en: Polly Copy
+zh: 鹦鹉小复 (Polly Copy)
+vi: Polly Copy
+@@dc8a15b1d3
+en: <b>Polly Copy</b><i>Polly Copy</i><span class="fr-pill">Copying</span><br/>Hello! I'm Polly Copy, in charge of copying. I'll show you how to copy the original exactly!
+zh: <b>鹦鹉小复</b><i>Polly Copy</i><span class="fr-pill">负责复印</span><br/>你好！我是负责复印的鹦鹉小复。我来告诉你怎么把原件一模一样地复印出来！
+vi: <b>Polly Copy</b><i>Polly Copy</i><span class="fr-pill">Phụ trách photo</span><br/>Xin chào! Mình là Polly Copy, phụ trách photo. Mình sẽ chỉ bạn cách photo giống hệt bản gốc nhé!
+@@91adf7f322
+en: <button class="tab on" onclick="jump('copy',this)">How to copy</button> <button class="tab" onclick="jump('adf',this)">Feeder warning</button> <button class="tab" onclick="jump('glass',this)">Glass copy (ID · bankbook · book)</button>
+zh: <button class="tab on" onclick="jump('copy',this)">复印方法</button> <button class="tab" onclick="jump('adf',this)">ADF 注意</button> <button class="tab" onclick="jump('glass',this)">玻璃板复印（身份证 · 存折 · 书）</button>
+vi: <button class="tab on" onclick="jump('copy',this)">Cách photo</button> <button class="tab" onclick="jump('adf',this)">Lưu ý ADF</button> <button class="tab" onclick="jump('glass',this)">Photo trên mặt kính (thẻ · sổ · sách)</button>
+@@6641509650
+en: How to copy <span class="pill">COPY</span>
+zh: 复印方法 <span class="pill">COPY</span>
+vi: Cách photo <span class="pill">COPY</span>
+@@000664335c
+en: <b>This service makes one more of the same paper you brought.</b> You don't use the PC. Everything is done at the printer machine.
+zh: <b>把带来的纸再复印出一样的一张的服务。</b>不用电脑，直接在复合机上操作。
+vi: <b>Dịch vụ làm thêm một bản giống tờ giấy bạn mang đến.</b> Không dùng máy tính, làm trực tiếp trên máy in đa năng.
+@@8b0f01f074
+en: <span class="gvid-play">▶</span>Watch the copying video first <small>No sound needed</small>
+zh: <span class="gvid-play">▶</span>先看复印方法视频 <small>没有声音也能看懂</small>
+vi: <span class="gvid-play">▶</span>Xem video cách photo trước <small>Không cần bật tiếng</small>
+@@13dcbafb63
+en: 🚨 Put the original in first, then start! <span>Same for copy · scan · fax</span>
+zh: 🚨 先放原件再开始！ <span>复印 · 扫描 · 传真通用</span>
+vi: 🚨 Đặt bản gốc vào trước rồi mới bắt đầu! <span>Giống nhau cho photo · scan · fax</span>
+@@fb1c462353
+en: Always <b>put the original in the ADF (document feeder) first</b>, then start.
+zh: 一定要<b>先把原件放进 ADF（放原件的地方）</b>，再开始操作。
+vi: Luôn <b>đặt bản gốc vào ADF (khay nạp bản gốc) trước</b>, rồi mới bắt đầu.
+@@6467ddebfe
+en: ✅ <b>If it works</b>, the original goes into the machine and then <b>the price screen [과금정보] appears by itself</b>.
+zh: ✅ <b>正常的话</b>，原件被吸进机器后，会<b>自动出现金额确认画面［과금정보］</b>。
+vi: ✅ <b>Nếu bình thường</b>, bản gốc sẽ được kéo vào máy rồi <b>màn hình giá tiền [과금정보] tự hiện ra</b>.
+@@39bb253c59
+en: 🛑 If you started but <b>the original doesn't go into the machine, do NOT pay!</b><br/><b>Cancel the job</b> on the screen and <b>start again from the beginning</b>.
+zh: 🛑 开始后<b>原件没有被吸进机器的话，绝对不要付款！</b><br/>请在屏幕上<b>取消操作</b>，<b>从头重新</b>开始。
+vi: 🛑 Nếu đã bắt đầu mà <b>bản gốc không được kéo vào máy, tuyệt đối đừng thanh toán!</b><br/>Hãy <b>hủy lệnh</b> trên màn hình và <b>làm lại từ đầu</b>.
+@@4917caabd1
+en: ❌ If you pay when the original did not go in, and you get <b>a blank copy · blank scan · blank fax</b>, <b>there is no refund.</b>
+zh: ❌ 原件没进去就付款，结果成了<b>白纸复印 · 白纸扫描 · 白纸传真</b>，<b>也不退款。</b>
+vi: ❌ Nếu bản gốc chưa vào mà đã thanh toán, dù ra <b>bản photo trắng · bản scan trắng · fax trắng</b> thì <b>cũng không hoàn tiền.</b>
+@@1499fde14e
+en: Putting the original in the document feeder (ADF)
+zh: 把原件放进 ADF（放原件的地方）的样子
+vi: Đặt bản gốc vào khay nạp (ADF)
+@@d9010b34f9
+en: Place the original on the printer machine
+zh: 在复合机上放原件
+vi: Đặt bản gốc lên máy in đa năng
+@@b5a854cfff
+en: Put it in <b>with the side to copy facing up</b>.
+zh: <b>要复印的一面朝上</b>放。
+vi: Đặt <b>mặt cần photo hướng lên trên</b>.
+@@dffe59e2ca
+en: The direction depends on the paper size.<br/><span class="dir"><b>A4</b> → the <b>long edge</b> goes in first, to the left</span><br/><span class="dir"><b>B4 · A3</b> → the <b>short edge</b> goes in first, to the left</span>
+zh: 纸张大小不同，放的方向也不同。<br/><span class="dir"><b>A4</b> → <b>长边</b>朝左先进去</span><br/><span class="dir"><b>B4 · A3</b> → <b>短边</b>朝左先进去</span>
+vi: Hướng đặt khác nhau tùy khổ giấy.<br/><span class="dir"><b>A4</b> → <b>cạnh dài</b> vào trước, về phía bên trái</span><br/><span class="dir"><b>B4 · A3</b> → <b>cạnh ngắn</b> vào trước, về phía bên trái</span>
+@@639d4d8d53
+en: <b>Push it all the way</b> to the left. <span class="r">If you only put it in a little, the paper isn't pulled in and you get a blank page.</span>
+zh: <b>一直推到</b>最左边。<span class="r">只放进一点点的话，纸不会被吸进去，会出白纸。</span>
+vi: <b>Đẩy hẳn vào</b> đến tận bên trái. <span class="r">Nếu chỉ đặt hờ, giấy không được kéo vào và sẽ ra trang trắng.</span>
+@@1eb77762ef
+en: Slide the top and bottom <b>paper guides</b> to fit the paper exactly. <span class="r">If they're loose, the paper goes in crooked and the copy comes out crooked.</span>
+zh: 把上下的<b>文件导板</b>贴紧纸张大小。<span class="r">太松的话，纸会歪着进去，复印出来也是歪的。</span>
+vi: Kéo <b>thanh chặn giấy</b> trên · dưới sát vừa khổ giấy. <span class="r">Nếu lỏng, giấy sẽ vào lệch và bản photo cũng bị lệch.</span>
+@@c6e8fbc766
+en: For many pages, <b>stack them neatly</b> and put them in together. (up to 100 sheets)
+zh: 有很多张的话，<b>整理整齐</b>一起放进去。（最多 100 张）
+vi: Nếu nhiều tờ, hãy <b>xếp ngay ngắn</b> rồi đặt vào cùng lúc. (tối đa 100 tờ)
+@@9e09721c52
+en: <span class="r">If the paper goes into the machine and comes back out, it worked. If it doesn't go in, don't pay.</span>
+zh: <span class="r">纸进到机器里又出来，就是成功了。没进去的话不要付款。</span>
+vi: <span class="r">Giấy vào máy rồi ra lại là thành công. Nếu không vào thì đừng thanh toán.</span>
+@@2282ac3dfe
+en: Don't put ID cards · bankbooks · passports · books · wrinkled paper here. Put them on the <b>glass</b>. (Line them up with the white arrow at the top-left corner)
+zh: 身份证 · 存折 · 护照 · 书 · 皱纸不要放这里，请放在<b>玻璃板</b>上。（对准左上角的白色箭头）
+vi: Thẻ căn cước · sổ ngân hàng · hộ chiếu · sách · giấy nhàu thì đừng đặt vào đây, hãy đặt lên <b>mặt kính</b>. (Căn theo mũi tên trắng ở góc trên bên trái)
+@@2c88d9577a
+en: Choose the Copy menu
+zh: 选择复印菜单
+vi: Chọn menu Photo
+@@28998acf2f
+en: <span class="r">Always place the original first</span>, then press <b>[복사] (Copy)</b> on the screen.
+zh: <span class="r">一定要先放好原件</span>，再在复合机屏幕上按<b>［복사］（复印）</b>。
+vi: <span class="r">Luôn đặt bản gốc trước</span>, rồi bấm <b>[복사] (Photo)</b> trên màn hình.
+@@4c074b9d50
+en: Copy settings screen. [기본 복사] (Basic Copy) in the red box at the top left is selected in blue, with copies, color and original size options
+zh: 复合机复印设置画面。左上角红框里的［기본 복사］（基本复印）选成蓝色，可以选份数、颜色、原稿尺寸等
+vi: Màn hình cài đặt photo. Nút [기본 복사] (Photo cơ bản) trong ô đỏ góc trên bên trái đang được chọn màu xanh, có số bản, màu, khổ bản gốc
+@@ba4b052739
+en: Set up · Start
+zh: 设置 · 开始
+vi: Cài đặt · Bắt đầu
+@@3cb646deb6
+en: Choose the options you want — <b>the number (how many sets)</b> · <b>original size</b> (A4 by default; change it if your original is B4 or A3) · color/B&amp;W — then press <b>[시작] (Start)</b>. The original goes into the machine and comes back out.<br/><span class="r">Check that [기본 복사] (Basic Copy) in the red box is selected in blue.</span>
+zh: 选择<b>数字（复印几份）</b> · <b>原稿尺寸</b>（默认 A4，原件是 B4、A3 的话要改）· 彩色/黑白等选项后，按<b>［시작］（开始）</b>。开始后原件会进到复合机里再出来。<br/><span class="r">请确认红框里的［기본 복사］（基本复印）选成了蓝色。</span>
+vi: Chọn các tùy chọn: <b>con số (photo mấy bộ)</b> · <b>khổ bản gốc</b> (mặc định A4, nếu bản gốc là B4, A3 thì đổi) · màu/đen trắng, rồi bấm <b>[시작] (Bắt đầu)</b>. Bản gốc sẽ vào máy rồi ra lại.<br/><span class="r">Kiểm tra nút [기본 복사] (Photo cơ bản) trong ô đỏ đang được chọn màu xanh.</span>
+@@4a84c359f8
+en: <span class="x">!</span>The number means "how many sets", not "how many pages"
+zh: <span class="x">!</span>数字不是“张数”，而是“复印几份”
+vi: <span class="x">!</span>Con số là "số bộ", không phải "số tờ"
+@@a9ca25dba1
+en: The <b>number 1</b> on the screen doesn't mean <b>1 page</b>. It means <b>1 set of all the originals</b> you put in.<br/>e.g.) If you have <b>10 pages</b> and the number is <b>1</b> → <b>1 set = 10 pages</b> come out.<br/>If you change it to <b>2</b> → <b>2 sets = 20 pages</b> come out. (2 of each)<br/><b>❌ Don't change it to 10 just because you have 10 pages!</b> That makes 10 sets (100 pages) and costs a lot. For one set, <b>leave it at 1</b>.
+zh: 屏幕上的<b>数字 1</b> 不是<b>复印 1 张</b>，而是把放进去的<b>全部原件复印 1 份</b>。<br/>例）原件有 <b>10 张</b>，数字是 <b>1</b> 时 → <b>复印 1 份 = 出 10 张</b>。<br/>把数字改成 <b>2</b> → <b>复印 2 份 = 出 20 张</b>。（每张各 2 张）<br/><b>❌ 不要因为原件有 10 张就把数字改成 10！</b>那样会复印 10 份（100 张），费用很高。只复印一份的话，<b>保持 1 不变</b>。
+vi: <b>Số 1</b> trên màn hình không phải <b>photo 1 tờ</b>, mà là photo <b>1 bộ gồm tất cả bản gốc</b> bạn đã đặt vào.<br/>Ví dụ) Bản gốc có <b>10 tờ</b>, con số là <b>1</b> → <b>1 bộ = ra 10 tờ</b>.<br/>Đổi thành <b>2</b> → <b>2 bộ = ra 20 tờ</b>. (mỗi tờ 2 bản)<br/><b>❌ Đừng đổi thành 10 chỉ vì bản gốc có 10 tờ!</b> Sẽ thành 10 bộ (100 tờ) và rất tốn tiền. Muốn photo 1 bộ thì <b>để nguyên số 1</b>.
+@@4fd0459267
+en: <span class="x">!</span>Always check the option settings
+zh: <span class="x">!</span>一定要确认选项设置
+vi: <span class="x">!</span>Nhớ kiểm tra cài đặt tùy chọn
+@@ecff9b422f
+en: <b>We do not compensate for or take responsibility for problems caused by wrong option settings.</b>
+zh: <b>因选项设置错误造成的问题，不赔偿，也不负责。</b>
+vi: <b>Chúng tôi không bồi thường và không chịu trách nhiệm cho lỗi do cài đặt tùy chọn sai.</b>
+@@8fcb53c54b
+en: 과금정보
+zh: 과금정보
+vi: 과금정보
+@@fdc42e2fd0
+en: 총 가격
+zh: 총 가격
+vi: 총 가격
+@@8d873d4946
+en: 250원
+zh: 250원
+vi: 250원
+@@3ce813136c
+en: 확인
+zh: 확인
+vi: 확인
+@@8fab67b827
+en: If it works, the price screen [과금정보] appears by itself. <b>If everything is correct, press [확인] (OK)</b>.
+zh: 正常的话会自动出现金额确认画面［과금정보］。<b>内容全部正确的话，按［확인］（确认）</b>。
+vi: Nếu bình thường, màn hình giá tiền [과금정보] sẽ tự hiện ra. <b>Nếu mọi thứ đúng, bấm [확인] (Xác nhận)</b>.
+@@a1dfa8cb3f
+en: Insert card to pay
+zh: 插卡付款
+vi: Cắm thẻ thanh toán
+@@9e50842925
+en: <span class="r">When the card reader speaks</span>, <b>insert your IC card (credit/debit) at the back</b>, or hold Samsung Pay to the wide front area. Don't insert it early or pull it out in the middle.
+zh: <span class="r">刷卡机发出语音后</span>，<b>IC 卡（信用卡/借记卡）请插在后面</b>，三星支付请贴在前面宽的地方。不要提前插卡，也不要中途拔出。
+vi: <span class="r">Khi máy quẹt thẻ phát tiếng</span>, <b>hãy cắm thẻ IC (tín dụng/ghi nợ) vào phía sau</b>, Samsung Pay thì áp vào phần rộng phía trước. Đừng cắm trước, cũng đừng rút ra giữa chừng.
+@@dddb9b3d5e
+en: When copying is done, take your copies from the output tray, and <b>don't forget your original.</b>
+zh: 复印完成后，从出纸托盘取走复印件，<b>也别忘了带走原件。</b>
+vi: Photo xong, lấy bản photo ở khay ra giấy, và <b>đừng quên lấy bản gốc.</b>
+@@94d75e9055
+en: <span class="x">!</span>Some paper must not go in the document feeder (ADF)
+zh: <span class="x">!</span>有些纸不能放进 ADF（放原件的地方）
+vi: <span class="x">!</span>Có loại giấy không được đặt vào khay nạp (ADF)
+@@6598cfef3d
+en: The document feeder (ADF) on top of the printer machine, with paper on it
+zh: 复合机上方的 ADF（放原件的地方），上面放着纸
+vi: Khay nạp bản gốc (ADF) phía trên máy in đa năng, có giấy đặt trên đó
+@@4dc60e254f
+en: 📌 The <b>blue-outlined part</b> in the photo is the <b>document feeder (ADF)</b>.<br/>This is where you put many single sheets (up to 100) for copy · scan · fax.<br/><span class="gd">📏 The <b>orange parts above and below the original are the 'paper guides'</b>. After putting in the original, <b>slide the top and bottom guides to fit it exactly</b> so it goes in straight.</span>
+zh: 📌 照片中<b>蓝框部分</b>就是 <b>ADF（放原件的地方）</b>。<br/>复印 · 扫描 · 传真时，把单张原件（最多 100 张）放在这里。<br/><span class="gd">📏 挡住原件<b>上下的橙色部分就是“文件导板”</b>。放好原件后，<b>把上下导板贴紧原件大小</b>，让原件端正地进去，不要歪。</span>
+vi: 📌 <b>Phần viền xanh</b> trong ảnh là <b>khay nạp bản gốc (ADF)</b>.<br/>Đây là chỗ đặt nhiều tờ rời (tối đa 100 tờ) khi photo · scan · fax.<br/><span class="gd">📏 <b>Phần màu cam chặn trên · dưới bản gốc là 'thanh chặn giấy'</b>. Đặt bản gốc xong, <b>kéo thanh chặn trên · dưới sát vừa khổ giấy</b> để giấy vào thẳng, không bị lệch.</span>
+@@f8644202b8
+en: OK to put in
+zh: 可以放的
+vi: Được đặt vào
+@@dfb5f558c5
+en: <b>Regular copy paper</b> (A4 · B4 · A3) — <b>same size together</b>, up to <b>100 sheets</b> at once.
+zh: <b>普通复印纸</b>（A4 · B4 · A3）— <b>同样大小的放在一起</b>，一次最多可以放 <b>100 张</b>。
+vi: <b>Giấy photo thường</b> (A4 · B4 · A3) — <b>cùng khổ để chung</b>, mỗi lần tối đa <b>100 tờ</b>.
+@@91bffcd41d
+en: <b>Put same-size sheets together and line them up neatly</b>.
+zh: <b>把同样大小的纸放在一起，整理整齐</b>再放进去。
+vi: <b>Gộp các tờ cùng khổ và xếp ngay ngắn</b> rồi đặt vào.
+@@b5011236a6
+en: <b>Flat</b> paper with no wrinkles
+zh: 没有皱褶、<b>平整</b>的纸
+vi: Giấy <b>phẳng</b>, không nhàu
+@@8a2988b2c0
+en: Do NOT put in
+zh: 不能放的
+vi: Không được đặt vào
+@@c36d63999f
+en: <b>Very thin paper</b> (like tracing paper)
+zh: <b>太薄的纸</b>（像油纸那样的）
+vi: <b>Giấy quá mỏng</b> (như giấy can)
+@@e977a363c6
+en: <b>Very thick paper</b> (certificates, thick cards)
+zh: <b>太厚的纸</b>（奖状、厚卡片）
+vi: <b>Giấy quá dày</b> (giấy khen, thiệp dày)
+@@1ee377f139
+en: <b>Paper with notes stuck on</b> (memo · Post-it)
+zh: <b>贴着便条的纸</b>（便条纸 · 便利贴）
+vi: <b>Giấy có dán ghi chú</b> (giấy nhớ · Post-it)
+@@14116b1a9e
+en: <b>Stapled paper</b>
+zh: <b>订了订书钉的纸</b>
+vi: <b>Giấy có ghim bấm</b>
+@@f1286e967f
+en: <b>Wrinkled or torn</b> paper
+zh: <b>皱了或破了</b>的纸
+vi: Giấy <b>nhàu hoặc rách</b>
+@@b92e10f3e8
+en: <b>A4 · B4 · A3 mixed together</b> (put different sizes in separately)
+zh: <b>A4 · B4 · A3 混在一起</b>放的（大小不同请分开放）
+vi: <b>A4 · B4 · A3 để lẫn</b> với nhau (khác khổ thì đặt riêng)
+@@085f3c25b5
+en: Things that are not single sheets, like <b>ID cards · bankbooks · passports · books</b>
+zh: 像<b>身份证 · 存折 · 护照 · 书</b>这样不是单张纸的东西
+vi: Những thứ không phải tờ rời như <b>thẻ căn cước · sổ ngân hàng · hộ chiếu · sách</b>
+@@c9d0bef000
+en: <b>Don't put</b> the <b>'Do NOT put in'</b> items above <b>in the document feeder.</b> <b>Open the cover and put them on the glass one at a time.</b><br/><span class="glassdir">📌 On the glass, the <b>side to copy · scan · fax must face down toward the glass</b>.</span><br/> <b>If the machine breaks because you put in something we told you not to, you may have to pay for repairs.</b>
+zh: 上面<b>“不能放的”</b>东西，<b>不要放进 ADF。</b>请<b>打开复合机盖子，一张一张放在玻璃板上</b>操作。<br/><span class="glassdir">📌 放在玻璃板上时，<b>要复印 · 扫描 · 传真的一面要朝向玻璃板</b>。</span><br/> <b>放了说明不能放的原件而导致机器故障时，可能需要承担维修费用。</b>
+vi: Những thứ trong mục <b>'Không được đặt vào'</b> ở trên thì <b>đừng đặt vào khay nạp.</b> Hãy <b>mở nắp máy và đặt từng tờ lên mặt kính</b>.<br/><span class="glassdir">📌 Khi đặt lên mặt kính, <b>mặt cần photo · scan · fax phải úp xuống phía mặt kính</b>.</span><br/> <b>Nếu máy hỏng do bạn đặt vào thứ đã được dặn không đặt, bạn có thể phải trả phí sửa chữa.</b>
+@@eb8d226d42
+en: Copying on the glass · ID card / bankbook · passport / book
+zh: 放在玻璃板上复印 · 身份证 / 存折 · 护照 / 书
+vi: Photo trên mặt kính · thẻ căn cước / sổ ngân hàng · hộ chiếu / sách
+@@9c5dd46627
+en: <b>ID cards · bankbooks · passports · books</b> are not single sheets, so don't put them in the document feeder. Open the cover and put them on the <b>glass</b>. Line them up with the <b>white arrow at the top-left corner</b> of the glass, with <b>the printed side facing down</b>.
+zh: <b>身份证 · 存折 · 护照 · 书</b>不是单张纸，不要放进 ADF。请打开复合机盖子，放在<b>玻璃板</b>上。以玻璃板<b>左上角的白色箭头</b>为准，<b>有内容的一面朝向玻璃板</b>。
+vi: <b>Thẻ căn cước · sổ ngân hàng · hộ chiếu · sách</b> không phải tờ rời nên đừng đặt vào khay nạp. Hãy mở nắp máy và đặt lên <b>mặt kính</b>. Căn theo <b>mũi tên trắng ở góc trên bên trái</b> mặt kính, <b>mặt có nội dung úp xuống mặt kính</b>.
+@@f9af3a9370
+en: Opening the top cover of the printer machine
+zh: 打开复合机上盖的样子
+vi: Mở nắp trên của máy in đa năng
+@@b3f5eeefe9
+en: ① Lift the top cover of the printer machine
+zh: ① 把复合机上盖往上打开
+vi: ① Nâng nắp trên của máy in đa năng lên
+@@0f9fe17474
+en: <b>Hold the front right part</b> of the machine and gently <b>lift it up</b> to see the glass. <span class="r">Don't pull it hard.</span>
+zh: <b>用手抓住复合机右前方</b>，小心地<b>往上抬起</b>，就会看到玻璃板。<span class="r">不要硬拉。</span>
+vi: <b>Cầm phần phía trước bên phải</b> của máy và nhẹ nhàng <b>nâng lên</b>, mặt kính sẽ hiện ra. <span class="r">Đừng kéo mạnh.</span>
+@@d0105da293
+en: ID card copy
+zh: 身份证复印
+vi: Photo thẻ căn cước
+@@b0e46764bf
+en: An ID card placed at the top-left corner of the glass
+zh: 身份证对准玻璃板左上角放好的样子
+vi: Thẻ căn cước đặt ở góc trên bên trái mặt kính
+@@8325d8b49a
+en: <b>Open the cover.</b> Hold the right side and gently lift it up.
+zh: <b>打开复合机盖子。</b>抓住右边，小心地往上抬起。
+vi: <b>Mở nắp máy.</b> Cầm phía bên phải và nhẹ nhàng nâng lên.
+@@2da43cbd5d
+en: Line it up with the <b>top-left corner</b> of the glass, <b>photo side down</b>, then close the cover.
+zh: 对准玻璃板<b>左上角</b>，<b>有照片的正面朝向玻璃</b>放好，然后盖上盖子。
+vi: Căn theo <b>góc trên bên trái</b> mặt kính, <b>mặt có ảnh úp xuống kính</b>, rồi đóng nắp.
+@@4854666570
+en: Choose the <b>[복사] (Copy)</b> menu on the screen.
+zh: 在复合机屏幕上选择<b>［복사］（复印）</b>菜单。
+vi: Chọn menu <b>[복사] (Photo)</b> trên màn hình.
+@@897e640050
+en: Press the <b>[신분증복사] (ID Copy)</b> tab, choose <b>color or B&amp;W</b>, then press <b>[시작] (Start)</b>.
+zh: 按<b>［신분증복사］（身份证复印）</b>标签，选择<b>彩色或黑白</b>后，按<b>［시작］（开始）</b>。
+vi: Bấm thẻ <b>[신분증복사] (Photo thẻ)</b>, chọn <b>màu hoặc đen trắng</b>, rồi bấm <b>[시작] (Bắt đầu)</b>.
+@@cc52c8bc66
+en: <b>To copy the back too</b> — <span class="r">flip the card over in the same spot</span>, then choose <b>[예] (Yes)</b> → <b>[시작] (Start)</b> again → pay<br/><b>Front only</b> — choose <b>[아니오] (No)</b>
+zh: <b>背面也要复印的话</b> — 在原来放的位置<span class="r">直接翻过来</span>放背面，选<b>［예］（是）</b>→ 再按<b>［시작］（开始）</b>→ 付款<br/><b>只复印正面的话</b> — 选<b>［아니오］（否）</b>
+vi: <b>Muốn photo cả mặt sau</b> — <span class="r">lật thẻ lại ngay tại chỗ cũ</span>, chọn <b>[예] (Có)</b> → bấm lại <b>[시작] (Bắt đầu)</b> → thanh toán<br/><b>Chỉ mặt trước</b> — chọn <b>[아니오] (Không)</b>
+@@8e747948dd
+en: <span class="x">!</span>Don't use the [신분증복사] (ID Copy) tab for passports or bankbooks!
+zh: <span class="x">!</span>护照 · 存折不要用［신분증복사］（身份证复印）标签！
+vi: <span class="x">!</span>Hộ chiếu · sổ ngân hàng đừng dùng thẻ [신분증복사] (Photo thẻ)!
+@@60b059281a
+en: The [신분증복사] (ID Copy) tab has a <b>passport</b> option, but if you choose it, <b>only part of the passport is copied.</b><br/><br/>Always copy passports with the <b>[기본복사] (Basic Copy)</b> tab. A bankbook is not an ID card either, so use <b>[기본복사] (Basic Copy)</b>.
+zh: ［신분증복사］（身份证复印）标签里虽然有<b>护照</b>这一项，但选了它的话<b>只会复印护照的一部分。</b><br/><br/>护照一定要用<b>［기본복사］（基本复印）</b>标签复印。存折也不是身份证，所以要用<b>［기본복사］（基本复印）</b>。
+vi: Trong thẻ [신분증복사] (Photo thẻ) có mục <b>hộ chiếu</b>, nhưng nếu chọn thì <b>chỉ photo được một phần hộ chiếu.</b><br/><br/>Hộ chiếu nhất định phải photo bằng thẻ <b>[기본복사] (Photo cơ bản)</b>. Sổ ngân hàng cũng không phải thẻ căn cước nên dùng <b>[기본복사] (Photo cơ bản)</b>.
+@@2a8b4abb8a
+en: <b>[신분증복사] (ID Copy)</b> copies the front and back of a <b>card-type ID</b> (like a resident registration card or driver's license) side by side on one page. Use it only for card-type IDs.
+zh: <b>［신분증복사］（身份证复印）</b>是把居民身份证 · 驾照这种<b>卡片式证件</b>的正反面并排复印在一张纸上的功能。请只用于卡片式证件。
+vi: <b>[신분증복사] (Photo thẻ)</b> là chức năng photo mặt trước và mặt sau của <b>giấy tờ dạng thẻ</b> (như thẻ đăng ký cư trú, bằng lái xe) nằm cạnh nhau trên một trang. Chỉ dùng cho giấy tờ dạng thẻ.
+@@7a18b2643e
+en: Bankbook · passport copy / scan
+zh: 存折 · 护照复印 / 扫描
+vi: Photo / scan sổ ngân hàng · hộ chiếu
+@@539eb09941
+en: A bankbook placed at the top-left corner of the glass
+zh: 存折对准玻璃板左上角放好的样子
+vi: Sổ ngân hàng đặt ở góc trên bên trái mặt kính
+@@4b97a071fa
+en: The <b>top-left corner of the glass is the starting point</b>. An <b>A4-size area</b> from there is copied / scanned, so put the page inside that area and close the cover.
+zh: 玻璃板<b>左上角是基准</b>。从基准开始<b>A4 大小</b>的范围会被复印 / 扫描，请把要复印或扫描的一面放在这个范围内，然后盖上盖子。
+vi: <b>Góc trên bên trái mặt kính là điểm chuẩn</b>. Vùng <b>bằng khổ A4</b> tính từ đó sẽ được photo / scan, nên hãy đặt trang cần làm trong vùng đó rồi đóng nắp.
+@@435d329168
+en: Choose the <b>[복사] (Copy)</b> or <b>[스캔] (Scan)</b> menu. For copying, set the options in the <b>[기본복사] (Basic Copy)</b> tab, check them, then press <b>[시작] (Start)</b>.
+zh: 选择<b>［복사］（复印）</b>或<b>［스캔］（扫描）</b>菜单。复印的话在<b>［기본복사］（基本复印）</b>标签中设置并确认后，按<b>［시작］（开始）</b>。
+vi: Chọn menu <b>[복사] (Photo)</b> hoặc <b>[스캔] (Scan)</b>. Nếu photo, cài đặt ở thẻ <b>[기본복사] (Photo cơ bản)</b>, kiểm tra rồi bấm <b>[시작] (Bắt đầu)</b>.
+@@0964207b1b
+en: When <b>"다른 면을 스캔하시겠습니까?" (Scan another page?)</b> appears — if you have more pages, <span class="r">put the next page on the glass first</span>, then press <b>[예] (Yes)</b>. If not, press <b>[아니오] (No)</b>.
+zh: 出现<b>“다른 면을 스캔하시겠습니까?”（要扫描其他页面吗？）</b>窗口时 — 还有要复印或扫描的页面，就<span class="r">先把下一页放到玻璃板上</span>，再按<b>［예］（是）</b>；没有的话按<b>［아니오］（否）</b>。
+vi: Khi hiện <b>"다른 면을 스캔하시겠습니까?" (Scan trang khác?)</b> — nếu còn trang cần làm, <span class="r">đặt trang tiếp theo lên mặt kính trước</span> rồi bấm <b>[예] (Có)</b>; nếu hết thì bấm <b>[아니오] (Không)</b>.
+@@bd6308e14d
+en: On the <b>[과금정보] (payment info)</b> screen, check the price and settings, then pay.
+zh: 在<b>［과금정보］（收费信息）</b>画面确认金额和设置是否正确，然后付款。
+vi: Ở màn hình <b>[과금정보] (thông tin thanh toán)</b>, kiểm tra giá tiền và cài đặt rồi thanh toán.
+@@c912f7b0a2
+en: You can copy or scan several pages one after another. Put the next page down <b>before</b> pressing <b>[예] (Yes)</b>.
+zh: 可以连续复印或扫描多页。按<b>［예］（是）</b>之前，请先把下一页放好。
+vi: Có thể photo hoặc scan nhiều trang liên tiếp. Hãy đặt trang tiếp theo <b>trước khi</b> bấm <b>[예] (Có)</b>.
+@@a9834e7a51
+en: Book copy / scan
+zh: 书本复印 / 扫描
+vi: Photo / scan sách
+@@78881c8c01
+en: A book placed face down at the top-left corner of the glass
+zh: 书本扣放在玻璃板左上角的样子
+vi: Sách úp xuống ở góc trên bên trái mặt kính
+@@0e9a1c1d93
+en: Place the book <b>face down, page to copy · scan toward the glass</b>, <b>right at the top-left corner</b> of the glass, then close the cover.
+zh: 把<b>要复印 · 扫描的一面朝向玻璃</b>扣放，<b>对准玻璃板左上角</b>放好后，盖上盖子。
+vi: Úp sách xuống, <b>trang cần photo · scan hướng về mặt kính</b>, đặt <b>sát góc trên bên trái</b> mặt kính rồi đóng nắp.
+@@77176024be
+en: When <b>"다른 면을 스캔하시겠습니까?" (Scan another page?)</b> appears — open to the next page and <span class="r">put it on the glass first</span>, then press <b>[예] (Yes)</b>. When you're done, press <b>[아니오] (No)</b>.
+zh: 出现<b>“다른 면을 스캔하시겠습니까?”（要扫描其他页面吗？）</b>窗口时 — 翻到下一页，<span class="r">先放到玻璃板上</span>，再按<b>［예］（是）</b>；全部完成的话按<b>［아니오］（否）</b>。
+vi: Khi hiện <b>"다른 면을 스캔하시겠습니까?" (Scan trang khác?)</b> — lật sang trang tiếp, <span class="r">đặt lên mặt kính trước</span> rồi bấm <b>[예] (Có)</b>; xong hết thì bấm <b>[아니오] (Không)</b>.
+@@dd8d0c14cd
+en: With a thick book, the cover doesn't have to close all the way. But <b>don't press hard on the book.</b> The glass can break.
+zh: 厚书的话盖子不用完全盖上。但是<b>不要用力压书。</b>玻璃板可能会碎。
+vi: Sách dày thì không cần đóng kín nắp. Nhưng <b>đừng đè mạnh lên sách.</b> Mặt kính có thể bị vỡ.
+@@84c16941f0
+en: PrintShop Mini scan guide — how to turn paper into a file and get it from the scan folder on the store PC.
+zh: PrintShop Mini 扫描使用方法 — 介绍把纸变成文件，并在店内电脑的扫描文件夹里取文件的方法。
+vi: Hướng dẫn scan của PrintShop Mini — cách biến giấy thành tệp và lấy tệp ở thư mục scan trên máy tính cửa hàng.
+@@46ebc117fe
+en: How to Scan - PrintShop Mini
+zh: 扫描使用方法 - PrintShop Mini
+vi: Cách scan - PrintShop Mini
+@@365924e162
+en: How to Scan
+zh: 扫描使用方法
+vi: Cách scan
+@@33e064efc9
+en: How to turn paper into a file. Get the file from the scan folder on the store PC.
+zh: 把纸变成文件的方法。请在店内电脑的扫描文件夹里取走文件。
+vi: Cách biến giấy thành tệp. Hãy lấy tệp ở thư mục scan trên máy tính cửa hàng.
+@@29e2889925
+en: <a href="guide.html">All guides</a> <a href="guide-video.html">▶ Videos</a> <a href="guide-print.html">🖨️ Print</a> <a href="guide-copy.html">📋 Copy</a> <a class="on" href="guide-scan.html">📄 Scan</a>
+zh: <a href="guide.html">全部使用方法</a> <a href="guide-video.html">▶ 视频</a> <a href="guide-print.html">🖨️ 打印</a> <a href="guide-copy.html">📋 复印</a> <a class="on" href="guide-scan.html">📄 扫描</a>
+vi: <a href="guide.html">Tất cả hướng dẫn</a> <a href="guide-video.html">▶ Video</a> <a href="guide-print.html">🖨️ In</a> <a href="guide-copy.html">📋 Photo</a> <a class="on" href="guide-scan.html">📄 Scan</a>
+@@da9ebb827f
+en: Hoo Scan
+zh: 猫头鹰小扫 (Hoo Scan)
+vi: Hoo Scan
+@@bf36e18612
+en: <b>Hoo Scan</b><i>Hoo Scan</i><span class="fr-pill">Scanning</span><br/>Hello! I'm Hoo Scan, in charge of scanning. Let's turn paper into files carefully together!
+zh: <b>猫头鹰小扫</b><i>Hoo Scan</i><span class="fr-pill">负责扫描</span><br/>你好！我是负责扫描的猫头鹰小扫。一起来把纸仔细地变成文件吧！
+vi: <b>Hoo Scan</b><i>Hoo Scan</i><span class="fr-pill">Phụ trách scan</span><br/>Xin chào! Mình là Hoo Scan, phụ trách scan. Cùng nhau biến giấy thành tệp thật cẩn thận nhé!
+@@032be40320
+en: How to scan <span class="pill">SCAN</span>
+zh: 扫描方法 <span class="pill">SCAN</span>
+vi: Cách scan <span class="pill">SCAN</span>
+@@ba67e6c749
+en: <b>This service turns paper into a file.</b> You keep your paper, and you get the file from the scan folder on the store PC. For bankbooks · passports · books, see <a href="guide-copy.html#glass" style="color:#12BDB0;font-weight:700;text-decoration:underline">the glass guide in How to Copy</a>.
+zh: <b>把纸变成文件的服务。</b>纸会原样还给您，文件请在店内电脑的扫描文件夹里取走。存折 · 护照 · 书的扫描，请参考<a href="guide-copy.html#glass" style="color:#12BDB0;font-weight:700;text-decoration:underline">复印方法中的玻璃板说明</a>。
+vi: <b>Dịch vụ biến giấy thành tệp.</b> Giấy vẫn là của bạn, còn tệp thì lấy ở thư mục scan trên máy tính cửa hàng. Scan sổ ngân hàng · hộ chiếu · sách thì xem <a href="guide-copy.html#glass" style="color:#12BDB0;font-weight:700;text-decoration:underline">hướng dẫn mặt kính trong phần Cách photo</a>.
+@@50d56eb4f4
+en: <span class="gvid-play">▶</span>Watch the scanning video first <small>No sound needed</small>
+zh: <span class="gvid-play">▶</span>先看扫描方法视频 <small>没有声音也能看懂</small>
+vi: <span class="gvid-play">▶</span>Xem video cách scan trước <small>Không cần bật tiếng</small>
+@@03aa863484
+en: Put it in <b>with the side to scan facing up</b>.
+zh: <b>要扫描的一面朝上</b>放。
+vi: Đặt <b>mặt cần scan hướng lên trên</b>.
+@@a5f9eb397c
+en: Scan menu screen for choosing PC as where to save the file, with a red box on the PC icon
+zh: 复合机扫描菜单画面。选择 PC 作为扫描文件保存位置的画面，PC 图标上有红框
+vi: Màn hình menu scan, chọn PC làm nơi lưu tệp, có ô đỏ ở biểu tượng PC
+@@de76b45141
+en: Choose the Scan menu
+zh: 选择扫描菜单
+vi: Chọn menu Scan
+@@db26e19027
+en: <span class="r">Always place the original first</span>, then press <b>[스캔] (Scan)</b> on the screen.<br/>A screen for choosing where to save the file appears. Press <b>[PC]</b>.
+zh: <span class="r">一定要先放好原件</span>，再在复合机屏幕上按<b>［스캔］（扫描）</b>。<br/>会出现选择扫描文件保存位置的画面，请按<b>［PC］</b>。
+vi: <span class="r">Luôn đặt bản gốc trước</span>, rồi bấm <b>[스캔] (Scan)</b> trên màn hình.<br/>Màn hình chọn nơi lưu tệp sẽ hiện ra. Bấm <b>[PC]</b>.
+@@8fca8074fd
+en: Scan options screen, with red boxes on 1 original size, 2 color (color · B&W), 3 file type (PDF · TIFF · JPEG), 4 Start button
+zh: 复合机扫描选项画面。1 原稿尺寸、2 颜色设置（彩色 · 黑白）、3 文件格式（PDF · TIFF · JPEG）、4 开始按钮上有红框
+vi: Màn hình tùy chọn scan, ô đỏ ở 1 khổ bản gốc, 2 màu (màu · đen trắng), 3 loại tệp (PDF · TIFF · JPEG), 4 nút Bắt đầu
+@@6de8330759
+en: Press [PC] and the options screen appears. Set them in the order of the numbers in the picture.<br/>Choose <b>① original size</b> (A4 by default; change it if your original is B4 or A3), <b>② color</b> (color / B&amp;W), <b>③ file type</b> (PDF · TIFF · JPEG), then press <b>④ [시작] (Start)</b>.
+zh: 按［PC］后会出现选项画面。请按图中编号的顺序设置。<br/>选择<b>① 原稿尺寸</b>（默认 A4，原件是 B4、A3 的话要改）<b>② 颜色设置</b>（彩色 / 黑白）<b>③ 文件格式</b>（PDF · TIFF · JPEG）后，按<b>④［시작］（开始）</b>。
+vi: Bấm [PC] sẽ hiện màn hình tùy chọn. Hãy chọn theo thứ tự số trong hình.<br/>Chọn <b>① khổ bản gốc</b> (mặc định A4, nếu bản gốc là B4, A3 thì đổi) <b>② màu</b> (màu / đen trắng) <b>③ loại tệp</b> (PDF · TIFF · JPEG), rồi bấm <b>④ [시작] (Bắt đầu)</b>.
+@@cb47ae30e3
+en: 100원
+zh: 100원
+vi: 100원
+@@f99cad62a6
+en: Check the price screen [과금정보] carefully. If everything is correct, press <b>[확인] (OK)</b>.
+zh: 请仔细确认金额确认画面［과금정보］的内容，全部正确的话按<b>［확인］（确认）</b>。
+vi: Kiểm tra kỹ màn hình giá tiền [과금정보]. Nếu mọi thứ đúng, bấm <b>[확인] (Xác nhận)</b>.
+@@c35f008cf9
+en: The '1번복합기스캔함' (Machine 1 scan folder) icon on the desktop: a teal background with a printer and the number 1
+zh: 桌面上的“1번복합기스캔함”（1 号复合机扫描文件夹）图标。蓝绿色背景上有复合机和数字 1
+vi: Biểu tượng thư mục '1번복합기스캔함' (thư mục scan máy số 1) trên màn hình nền: nền xanh ngọc, có máy in và số 1
+@@06ce5c4939
+en: 1번복합기스캔함
+zh: 1번복합기스캔함
+vi: 1번복합기스캔함
+@@a9099bcccf
+en: The '2번복합기스캔함' (Machine 2 scan folder) icon on the desktop: a teal background with a printer and the number 2
+zh: 桌面上的“2번복합기스캔함”（2 号复合机扫描文件夹）图标。蓝绿色背景上有复合机和数字 2
+vi: Biểu tượng thư mục '2번복합기스캔함' (thư mục scan máy số 2) trên màn hình nền: nền xanh ngọc, có máy in và số 2
+@@fa758d46f4
+en: 2번복합기스캔함
+zh: 2번복합기스캔함
+vi: 2번복합기스캔함
+@@b057be84e4
+en: Pay, then find your file
+zh: 付款后确认文件
+vi: Thanh toán rồi lấy tệp
+@@beb9030a1c
+en: After paying, <b>go to a store PC</b> and open the <b>scan folder with the same number as the printer machine you used</b>.
+zh: 付款后<b>到店内电脑前</b>，打开和您用的<b>复合机编号对应的扫描文件夹</b>，确认文件。
+vi: Sau khi thanh toán, <b>đến máy tính của cửa hàng</b> và mở <b>thư mục scan có cùng số với máy in đa năng bạn đã dùng</b>.
+@@811ab73238
+en: 📁 The folders are on <b>the desktop of every PC in the store</b>.<br/>e.g.) If you scanned on <b>machine 1</b>, open the <b style="white-space:nowrap">'1번복합기스캔함'</b> folder. If you scanned on <b>machine 2</b>, open the <b style="white-space:nowrap">'2번복합기스캔함'</b> folder.
+zh: 📁 <b>店内所有电脑的桌面</b>上都有文件夹。<br/>例）在 <b>1 号复合机</b>扫描的话，看桌面上的 <b style="white-space:nowrap">“1번복합기스캔함”</b> 文件夹；在 <b>2 号复合机</b>扫描的话，看 <b style="white-space:nowrap">“2번복합기스캔함”</b> 文件夹。
+vi: 📁 Thư mục có trên <b>màn hình nền của mọi máy tính trong cửa hàng</b>.<br/>Ví dụ) Scan ở <b>máy số 1</b> thì mở thư mục <b style="white-space:nowrap">'1번복합기스캔함'</b>, scan ở <b>máy số 2</b> thì mở thư mục <b style="white-space:nowrap">'2번복합기스캔함'</b>.
+@@b7eb56e2d1
+en: Scanned files are <b>deleted automatically after 30 minutes</b>. <b>Copy them to a USB or send them by email</b> from the scan folder on the store PC.
+zh: 扫描的文件<b>30 分钟后会自动删除</b>。请从店内电脑的扫描文件夹<b>复制到 U 盘或用邮件发送</b>带走。
+vi: Tệp scan sẽ <b>tự động bị xóa sau 30 phút</b>. Hãy <b>chép vào USB hoặc gửi qua email</b> từ thư mục scan trên máy tính cửa hàng.

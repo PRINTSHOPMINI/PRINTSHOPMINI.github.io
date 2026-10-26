@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8"/>
+<meta content="PrintShop Mini 复印使用方法 — 介绍复合机复印步骤，以及身份证、存折、护照、书本的复印方法。" name="description"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>复印使用方法 - PrintShop Mini</title>
+<link href="https://www.printshopmini.com/zh/guide-copy.html" rel="canonical"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&amp;family=Jua&amp;family=Gamja+Flower&amp;display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#1B8AC4;--blue-hover:#1470A8;--blue-light:#E8F4FC;--blue-mid:#4AAAD6;
+  --text:#111827;--text2:#374151;--text3:#6B7280;--border:#E5E7EB;
+  --bg:#F9FAFB;--white:#FFFFFF;--radius:14px;
+  --print:#22B24C;--copy:#018FFB;--scan:#12BDB0;--fax:#F3732C;--warn:#D93025;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--white);line-height:1.7;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:70px;display:flex;align-items:center;padding:0 6%}
+.nav-logo{display:flex;align-items:center;gap:10px;flex-shrink:0;margin-right:48px}
+.nav-logo img.logo-img{width:36px;height:36px;object-fit:contain;border-radius:8px}
+.nav-logo-name{font-size:17px;font-weight:900;color:var(--blue);letter-spacing:-0.5px}
+.nav-links{display:flex;list-style:none;gap:2px;flex:1}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);padding:8px 16px;border-radius:8px;transition:all .18s}
+.nav-links a:hover,.nav-links a.active{color:var(--blue);background:var(--blue-light)}
+.nav-right{display:flex;align-items:center;gap:0;margin-left:auto}
+.nav-cta{background:var(--blue);color:white;font-size:13px;font-weight:700;padding:9px 22px;border-radius:50px;transition:background .2s;white-space:nowrap}
+.nav-cta:hover{background:var(--blue-hover)}
+.nav-raccoon{width:56px;height:56px;flex-shrink:0;margin-left:6px;position:relative;top:2px}
+.nav-raccoon img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.15));transition:transform .3s}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{width:22px;height:2px;background:var(--text);border-radius:2px;display:block}
+
+/* PAGE HEADER */
+.page-header{margin-top:70px;background:var(--white);border-bottom:1px solid var(--border);padding:52px 6% 44px}
+.ph-inner{max-width:1160px;margin:0 auto}
+.ph-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:var(--blue);letter-spacing:1px;margin-bottom:14px}
+.ph-eyebrow::before{content:'';width:20px;height:2px;background:var(--blue);border-radius:2px}
+.ph-h1{font-size:clamp(28px,4vw,48px);font-weight:900;letter-spacing:-2px;margin-bottom:10px}
+.ph-sub{font-size:15px;color:var(--text3)}
+
+/* 경고 배너 */
+.warnbar{background:#FEF2F2;border-bottom:1px solid #FADCDC;padding:18px 6%}
+.warnbar-in{max-width:1160px;margin:0 auto;display:flex;gap:14px;align-items:flex-start}
+.warnbar-ico{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:var(--warn);color:#fff;font-size:15px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.warnbar-tx{font-size:14.5px;font-weight:700;color:#8A1C15;line-height:1.6}
+.warnbar-tx span{font-weight:500;color:#A3453E;display:block;margin-top:3px;font-size:13.5px}
+
+/* 탭 */
+.tabs{background:var(--bg);border-bottom:1px solid var(--border);padding:0 6%;position:sticky;top:70px;z-index:100}
+.tabs-in{max-width:1160px;margin:0 auto;display:flex;overflow-x:auto}
+.tabs-in::-webkit-scrollbar{display:none}
+.tab{padding:16px 20px;font-size:13.5px;font-weight:700;color:var(--text3);white-space:nowrap;cursor:pointer;border-bottom:2px solid transparent;transition:all .2s;background:none;border-top:none;border-left:none;border-right:none;font-family:inherit}
+.tab:hover,.tab.on{color:var(--blue);border-bottom-color:var(--blue)}
+
+/* 섹션 */
+.sec{padding:64px 6%;border-bottom:1px solid var(--border)}
+.sec.alt{background:var(--bg)}
+.sec-in{max-width:1160px;margin:0 auto}
+.sec-head{display:flex;align-items:center;gap:18px;margin-bottom:10px;flex-wrap:wrap}
+.sec-ico{width:60px;height:60px;border-radius:16px;background:var(--sc-light,var(--blue-light));display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.sec-h2{font-size:clamp(22px,3vw,32px);font-weight:900;letter-spacing:-1px}
+.sec-tagline{font-size:14.5px;color:var(--text3);margin-bottom:34px}
+.pill{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.5px;padding:4px 11px;border-radius:50px;background:var(--sc,var(--blue));color:#fff;vertical-align:middle;margin-left:2px}
+
+/* 단계 카드 */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:18px}
+.step{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px 22px 26px;display:flex;flex-direction:column}
+.sec.alt .step{background:var(--white)}
+.step-no{width:32px;height:32px;border-radius:50%;background:var(--sc,var(--blue));color:#fff;font-size:15px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.step-fig{min-height:106px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.step-h{font-size:16.5px;font-weight:900;letter-spacing:-.4px;margin-bottom:7px;line-height:1.35}
+.step-p{font-size:13.8px;color:var(--text2);line-height:1.65}
+.step-p b{font-weight:700;color:var(--sc,var(--blue))}
+.step-p .r{color:var(--warn);font-weight:700}
+
+/* 핵심 팁 */
+.tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:18px}
+.tip{border:2px solid var(--blue-light);border-radius:var(--radius);padding:26px 24px;background:var(--white);text-align:center}
+.tip-fig{margin-bottom:12px;display:flex;justify-content:center}
+.tip-h{font-size:17px;font-weight:900;color:var(--blue);margin-bottom:8px;letter-spacing:-.4px}
+.tip-p{font-size:14px;color:var(--text2);line-height:1.65}
+.tip-p b{font-weight:700;color:var(--text)}
+
+.sec-rule{height:4px;border-radius:4px;background:var(--sc,var(--blue));width:56px;margin-bottom:16px}
+.subhead{font-size:15px;font-weight:900;color:var(--sc,var(--blue));margin:34px 0 14px;padding-left:12px;border-left:4px solid var(--sc,var(--blue))}
+
+/* 용어 카드 */
+.terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:18px}
+.term{border:2px solid var(--tc);border-radius:var(--radius);background:var(--white);padding:0;overflow:hidden;display:flex;flex-direction:column}
+.term-top{background:var(--tc);padding:14px 20px;display:flex;align-items:center;gap:12px}
+.term-name{font-size:20px;font-weight:900;color:#fff;letter-spacing:-.6px}
+.term-en{font-size:11.5px;font-weight:800;color:#fff;opacity:.8;letter-spacing:.6px}
+.term-body{padding:22px 20px 24px;flex:1;display:flex;flex-direction:column}
+.term-flow{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.term-chip{font-size:13px;font-weight:800;padding:6px 13px;border-radius:50px;background:#F1F4F7;color:var(--text2)}
+.term-arrow{font-size:15px;font-weight:900;color:var(--tc)}
+.term-def{font-size:14.5px;font-weight:700;line-height:1.6;margin-bottom:10px}
+.term-ex{font-size:13.4px;color:var(--text3);line-height:1.65}
+.term-ex b{color:var(--text2);font-weight:700}
+
+/* ADF 금지 원본 경고 */
+.adfw{border:2.5px solid #E4574D;border-radius:var(--radius);background:#FEF6F5;padding:22px 24px;margin-top:22px}
+.adfw-h{display:flex;gap:11px;align-items:center;font-size:18px;font-weight:900;color:#B31E16;margin-bottom:14px;line-height:1.35}
+.adfw-h .x{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:#C0261C;color:#fff;font-size:16px;font-weight:900;display:flex;align-items:center;justify-content:center}
+.adfw-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.adfw-box{background:#fff;border-radius:10px;padding:16px 18px}
+.adfw-box.ok{border:1.5px solid #BFE3C6}
+.adfw-box.no{border:1.5px solid #F3C3BF}
+.adfw-t{font-size:14.5px;font-weight:900;margin-bottom:9px}
+.adfw-box.ok .adfw-t{color:#1B7A2C}
+.adfw-box.no .adfw-t{color:#C0261C}
+.adfw-box ul{margin:0;padding-left:17px}
+.adfw-box li{font-size:13.6px;color:var(--text2);line-height:1.6;margin-bottom:5px}
+.adfw-foot{margin-top:15px;font-size:13.8px;line-height:1.65;color:#8A1C15;font-weight:600}
+.adfw-foot b{font-weight:900;color:#B31E16}
+
+/* 커버 여는 안내 */
+.openbox{margin-bottom:20px}
+.ob{background:#fff;border:2px solid var(--sc,var(--blue));border-radius:var(--radius);padding:18px;display:flex;gap:22px;align-items:center}
+@media(max-width:760px){.ob{flex-direction:column}}
+.ob-fig{flex:0 0 46%;display:flex;justify-content:center}
+.ob-h{font-size:16px;font-weight:900;margin-bottom:6px;line-height:1.35}
+.ob-p{font-size:13.6px;color:var(--text2);line-height:1.62}
+.ob-p b{color:var(--sc,var(--blue));font-weight:700}
+.ob-p .r{color:var(--warn);font-weight:700}
+
+/* 특수 복사 카드 */
+.minis{display:grid;grid-template-columns:repeat(auto-fit,minmax(304px,1fr));gap:18px}
+.mini{border:1px solid var(--border);border-radius:var(--radius);background:#fff;overflow:hidden;display:flex;flex-direction:column}
+.mini-top{background:var(--sc,var(--blue));color:#fff;padding:13px 18px;font-size:16.5px;font-weight:900;display:flex;align-items:center;gap:10px;letter-spacing:-.4px}
+.mini-fig{margin:0 0 16px}
+.mini-fig img{width:100%;border-radius:8px;border:1px solid var(--border);display:block}
+.mini-body{padding:20px 18px 22px;flex:1;display:flex;flex-direction:column}
+.mini ol{margin:0;padding-left:19px}
+.mini li{font-size:13.8px;color:var(--text2);line-height:1.62;margin-bottom:10px}
+.mini li:last-child{margin-bottom:0}
+.mini li b{color:var(--sc,var(--blue));font-weight:700}
+.mini li .r{color:var(--warn);font-weight:700}
+.mini-warn{margin-top:14px;background:#FEF2F2;border:2px solid #E4574D;border-radius:10px;padding:14px 16px}
+.mini-warn-h{font-size:14.5px;font-weight:900;color:#C0261C;line-height:1.45;display:flex;gap:8px;align-items:flex-start;margin-bottom:6px}
+.mini-warn-h .x{flex:0 0 auto;width:20px;height:20px;border-radius:50%;background:#C0261C;color:#fff;font-size:13px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.mini-warn-p{font-size:13.2px;color:#8A1C15;line-height:1.6;font-weight:600;padding-left:28px}
+.mini-warn-p b{font-weight:900;color:#C0261C}
+.mini-note{margin-top:14px;background:#F5F8FA;border-radius:9px;padding:13px 15px;font-size:13px;color:var(--text2);line-height:1.6}
+.mini-note b{color:var(--text);font-weight:700}
+
+/* MS 오피스 서브탭 */
+.otabs{display:flex;gap:8px;margin-bottom:30px;flex-wrap:wrap}
+.otab{padding:10px 22px;font-size:13.5px;font-weight:800;border-radius:50px;border:2px solid var(--border);background:#fff;color:var(--text2);cursor:pointer;font-family:inherit;transition:all .18s}
+.otab:hover{border-color:var(--blue);color:var(--blue)}
+.otab.on{background:var(--blue);border-color:var(--blue);color:#fff}
+
+/* MS 오피스 화면 목업 (실제 인쇄 화면 재현) */
+.steps-office{grid-template-columns:repeat(auto-fit,minmax(288px,1fr))}
+.steps-office .step-fig{min-height:auto;margin-bottom:16px}
+.omock{border:1px solid #D7DDE3;border-radius:8px;overflow:hidden;background:#fff;box-shadow:0 1px 5px rgba(17,24,39,.07);width:100%}
+.omock-bar{height:18px;background:#EEF1F5;display:flex;align-items:center;gap:4px;padding:0 8px;border-bottom:1px solid #E5E7EB}
+.omock-dot{width:5px;height:5px;border-radius:50%;background:#D7DDE3}
+.omock-body{display:flex;height:158px}
+.omock-side{width:58px;flex:0 0 auto;background:var(--oc,#1B8AC4);padding:8px 0;display:flex;flex-direction:column;gap:1px}
+.omock-side div{color:rgba(255,255,255,.68);font-size:8.6px;font-weight:700;padding:5px 0 5px 10px}
+.omock-side div.on{color:#fff;background:rgba(255,255,255,.18);border-left:3px solid #fff;padding-left:7px}
+.omock-fields{width:124px;flex:0 0 auto;background:#F7F8FA;padding:8px 8px;display:flex;flex-direction:column;gap:5px;border-right:1px solid #E5E7EB;overflow:hidden}
+.omock-cap{font-size:7.6px;color:#9AA5B1;font-weight:800;letter-spacing:.3px;margin-top:3px}
+.omock-cap:first-child{margin-top:0}
+.omock-field{background:#fff;border:1px solid #C9D3DB;border-radius:4px;padding:4px 14px 4px 7px;font-size:8.2px;font-weight:700;color:#374151;position:relative;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.omock-field::after{content:'▾';position:absolute;right:5px;top:50%;transform:translateY(-50%);color:#9AA5B1;font-size:6.5px}
+.omock-row.hi .omock-field{border-color:#D93025;background:#FEF2F2;color:#B31E16;box-shadow:0 0 0 2px rgba(217,48,37,.14)}
+.omock-row.hi .omock-cap{color:#D93025}
+.omock-preview{flex:1;background:#EDEFF2;display:flex;align-items:center;justify-content:center;padding:10px;position:relative}
+.omock-page{width:66%;height:88%;background:#fff;border:1px solid #D7DDE3;box-shadow:0 1px 5px rgba(0,0,0,.09);display:flex;align-items:center;justify-content:center}
+.omock-tag{position:absolute;background:#D93025;color:#fff;font-size:8px;font-weight:800;padding:3px 8px;border-radius:5px;white-space:nowrap;box-shadow:0 2px 5px rgba(217,48,37,.3)}
+.omock-cap.hi{color:#D93025}
+.omock-fields .omock-row.hi{margin:0 -3px;padding:2px 3px;background:rgba(217,48,37,.06);border-radius:5px}
+
+/* 준비중 */
+.soon{border:1px dashed #C9D3DB;border-radius:var(--radius);padding:44px 24px;text-align:center;background:var(--white)}
+.soon-h{font-size:16px;font-weight:800;color:var(--text3);margin-bottom:6px}
+.soon-p{font-size:13.5px;color:var(--text3)}
+
+/* FAQ */
+.faq{border-top:1px solid var(--border)}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-q{width:100%;text-align:left;background:none;border:none;font-family:inherit;font-size:15.5px;font-weight:700;color:var(--text);padding:20px 40px 20px 0;cursor:pointer;position:relative;line-height:1.5}
+.faq-q::after{content:'+';position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:22px;font-weight:400;color:var(--blue)}
+.faq-item.open .faq-q::after{content:'−'}
+.faq-a{display:none;font-size:14.2px;color:var(--text2);line-height:1.75;padding:0 0 22px}
+.faq-item.open .faq-a{display:block}
+
+/* FOOTER */
+footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
+.ft-wrap{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:56px}
+.ft-brand img{width:32px;height:32px;object-fit:contain;border-radius:6px;margin-bottom:14px}
+.ft-brand-name{color:white;font-size:18px;font-weight:900;margin-bottom:10px}
+.ft-brand p{font-size:13px;line-height:2}
+.ft-col h4{color:white;font-size:13px;font-weight:700;margin-bottom:14px;letter-spacing:.5px}
+.ft-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.ft-col a{font-size:13px;transition:color .2s}
+.ft-col a:hover{color:white}
+.ft-bottom{max-width:1160px;margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.ft-bottom p{font-size:12px;color:rgba(255,255,255,.25)}
+
+@media(max-width:820px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .nav-links.show{display:flex;position:absolute;top:70px;left:0;right:0;background:#fff;flex-direction:column;padding:10px 6%;border-bottom:1px solid var(--border)}
+  .sec{padding:48px 6%}
+  .ft-wrap{grid-template-columns:1fr}
+  .nav-raccoon{display:none}
+}
+
+/* ===== 사용방법 하위 구조 추가 스타일 ===== */
+.svc-switch{background:#fff;border-bottom:1px solid var(--border);padding:14px 6%}
+.svc-switch-in{max-width:1160px;margin:0 auto;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.svc-switch a{padding:8px 18px;font-size:13.5px;font-weight:800;border-radius:50px;border:2px solid var(--border);background:#fff;color:var(--text2);transition:all .18s}
+.svc-switch a:hover{border-color:var(--blue);color:var(--blue)}
+.svc-switch a.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.svc-switch a.home{border-style:dashed;color:var(--text3)}
+.svc-switch-label{font-size:12.5px;font-weight:800;color:var(--text3);margin-right:4px}
+
+.steps-wide{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.step-figs{margin-bottom:16px;display:grid;gap:10px}
+.step-figs.two{grid-template-columns:1fr 1fr}
+.step-photo{width:100%;height:auto;border-radius:8px;border:1px solid var(--border);display:block}
+.step-dual{grid-column:span 2}
+.step-note{margin-top:12px;background:#F5F8FA;border-radius:9px;padding:11px 14px;font-size:13px;color:var(--text2);line-height:1.6}
+.step-note b{color:var(--text);font-weight:700}
+.step-note.warn{background:#FEF2F2;color:#8A1C15;font-weight:600}
+.step-note.warn b{color:#B31E16}
+.sec-note{margin:0 0 22px;max-width:720px}
+@media(max-width:719px){
+  .step-dual{grid-column:span 1}
+  .step-figs.two{grid-template-columns:1fr}
+}
+
+/* 사용방법 허브: 서비스 선택 카드 */
+.gcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:18px}
+.gcard{border:2px solid var(--tc);border-radius:var(--radius);background:#fff;overflow:hidden;display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s}
+.gcard:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(17,24,39,.1)}
+.gcard-top{background:var(--tc);padding:14px 20px;display:flex;align-items:center;gap:12px}
+.gcard-name{font-size:20px;font-weight:900;color:#fff;letter-spacing:-.6px}
+.gcard-body{padding:20px;flex:1;display:flex;flex-direction:column;gap:14px}
+.gcard-desc{font-size:14px;color:var(--text2);line-height:1.65;flex:1}
+.gcard-go{font-size:13.5px;font-weight:900;color:var(--tc)}
+
+.nav-links li{position:relative}
+@media(max-width:900px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .nav-links.show{display:flex;position:absolute;top:70px;left:0;right:0;background:#fff;flex-direction:column;padding:10px 6%;border-bottom:1px solid var(--border)}
+  .nav-links{max-height:calc(100vh - 70px);overflow-y:auto}
+}
+/* 상단 제목·서비스 선택 고정: 아래 내용만 스크롤 */
+.stick-top{position:sticky;top:70px;margin-top:70px;z-index:90}
+.stick-top .page-header{margin-top:0;position:static}
+.page-header{padding:10px 6% 8px}
+.ph-eyebrow{display:none}
+.ph-h1{font-size:clamp(22px,3vw,30px);letter-spacing:-1px;margin-bottom:0;line-height:1.3}
+.ph-sub{font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.svc-switch{padding:8px 6%}
+.svc-switch a{padding:6px 15px}
+[id]{scroll-margin-top:215px}
+@media(max-width:760px){
+  .page-header{padding:10px 5% 8px}
+  .ph-h1{font-size:19px}
+  .ph-sub{display:none}
+  .svc-switch{padding:7px 5%}
+  .svc-switch-in{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .svc-switch-in::-webkit-scrollbar{display:none}
+  .svc-switch a,.svc-switch-label{flex:0 0 auto;white-space:nowrap}
+  .svc-switch-label{display:none}
+  [id]{scroll-margin-top:165px}
+}
+/* 2단계 메뉴: 서비스 페이지와 같은 밑줄 탭 */
+.svc-switch{background:var(--bg);border-bottom:1px solid var(--border);padding:0 6%}
+.svc-switch-in{max-width:1160px;margin:0 auto;display:flex;flex-wrap:nowrap;gap:0;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.svc-switch-in::-webkit-scrollbar{display:none}
+.svc-switch a,.svc-switch a.home{display:block;flex:0 0 auto;white-space:nowrap;padding:11px 18px;font-size:13px;font-weight:700;color:var(--text3);background:none;border:none;border-bottom:2px solid transparent;border-radius:0;transition:all .2s}
+.svc-switch a:hover,.svc-switch a.on{color:var(--blue);background:none;border-bottom-color:var(--blue)}
+@media(max-width:760px){.svc-switch{padding:0 5%}.svc-switch a{padding:10px 15px}}
+.fax-ico{vertical-align:-2px;margin-right:1px}
+.adf-fig{margin:0 0 18px}
+.adf-fig img{display:block;width:100%;max-width:520px;height:auto;border-radius:10px;border:1px solid #F3C3BF;background:#fff}
+.adf-fig figcaption{margin-top:8px;font-size:13.6px;line-height:1.65;color:var(--text2)}
+.adf-fig figcaption b{color:var(--text);font-weight:900}
+.adf-fig figcaption .gd{display:block;margin-top:8px;padding:9px 12px;background:#FFF4EC;border:1px solid #F8CFB1;border-radius:8px;color:#7A3410}
+.adf-fig figcaption .gd b{color:#B4500F}
+.mini1{margin:6px 0 0;padding-left:20px;font-size:14px;line-height:1.75;color:var(--text2)}
+.mini1>li{margin-bottom:7px}
+.mini1 .dir{display:inline-block;margin-top:3px;padding:3px 10px;background:#EEF6FC;border-radius:8px;color:#16507A;font-size:13.4px}
+.mini1 .r{color:var(--warn);font-weight:700}
+.adfw-box.ok ul,.adfw-box.no ul{list-style:none;padding-left:0}
+.adfw-box.ok li::before{content:'○ ';color:#1B7A2C;font-weight:900}
+.adfw-box.no li::before{content:'✕ ';color:#C0261C;font-weight:900}
+.orig-warn{background:#FEF2F2;border:3px solid #D93025;border-radius:14px;padding:16px 18px;margin:0 0 26px;max-width:1000px}
+.orig-warn-h{font-size:18px;font-weight:900;color:#C0261C;margin-bottom:10px;line-height:1.4}
+.orig-warn-h span{display:inline-block;font-size:12.5px;font-weight:800;background:#C0261C;color:#fff;padding:3px 11px;border-radius:50px;margin-left:6px;vertical-align:middle}
+.orig-warn ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.orig-warn li{display:flex;gap:10px;align-items:flex-start;font-size:14.6px;line-height:1.65;color:#8A1C15;font-weight:600}
+.orig-warn li .n{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:#C0261C;color:#fff;font-weight:900;font-size:14px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.orig-warn li b{color:#B31E16;font-weight:900}
+.orig-warn .okli{background:#ECFDF5;border:2px solid #34A853;border-radius:10px;padding:9px 12px;color:#14532D}
+.orig-warn .okli b{color:#0B3D1E}
+.orig-warn .okli .n{background:#2E8B57}
+.orig-warn .no{background:#fff;border:2px solid #D93025;border-radius:10px;padding:10px 12px;font-weight:800}
+.bill-warn{margin-top:12px;background:#FEF2F2;border:2px solid #D93025;border-radius:10px;padding:11px 13px;font-size:13.4px;line-height:1.65;color:#8A1C15;font-weight:600}
+.bill-warn b{color:#B31E16;font-weight:900}
+.bill-warn .bh{display:block;font-size:14px;font-weight:900;color:#C0261C;margin-bottom:4px}
+.glassdir{display:inline-block;margin:6px 0;padding:6px 10px;background:#FFF8E6;border:1.5px solid #F2C94C;border-radius:8px;color:#5C4300}
+.glassdir b{color:#3E2D00}
+/* FAQ 등에서 #이름 으로 들어올 때, 구역 제목이 고정 메뉴 바로 아래에 보이도록 */
+.sec[id]{scroll-margin-top:167px}
+@media(max-width:700px){.sec[id]{scroll-margin-top:122px}}
+
+/* 미니프랜즈 꾸밈 캐릭터 (제목 오른쪽) */
+.ph-inner{position:relative;padding-right:84px}
+.ph-pal{position:absolute;right:0;bottom:-8px;height:70px;width:auto;pointer-events:none;filter:drop-shadow(0 3px 4px rgba(0,0,0,.08))}
+@media(max-width:760px){.ph-inner{padding-right:50px}.ph-pal{height:42px;bottom:-6px}}
+
+/* 미니프랜즈 담당 친구 소개 띠 */
+.fr-band{max-width:1160px;margin:0 auto;padding:14px 6% 0}
+.fr-in{display:flex;align-items:center;gap:16px;background:var(--cl);border:3px dashed var(--c);border-radius:26px;padding:10px 20px 10px 14px;text-decoration:none;color:inherit;transition:transform .2s}
+.fr-in:hover{transform:translateY(-2px)}
+.fr-in img{flex:0 0 auto;height:92px;width:auto;filter:drop-shadow(0 4px 4px rgba(0,0,0,.15))}
+.fr-txt{flex:1;min-width:0;font-size:14.5px;line-height:1.75;color:#374151}
+.fr-txt b{font-family:'Jua','Noto Sans KR',sans-serif;font-weight:400;font-size:20px;color:var(--c);margin-right:6px}
+.fr-txt i{font-style:normal;font-family:'Gamja Flower','Jua',sans-serif;font-size:18px;color:var(--c);opacity:.85;margin-right:8px}
+.fr-txt span.fr-pill{display:inline-block;background:var(--c);color:#fff;font-size:12.5px;font-weight:700;padding:0 10px;border-radius:50px;margin-right:6px;vertical-align:2px}
+.fr-more{flex:0 0 auto;font-weight:700;font-size:13.5px;color:#fff;background:var(--c);padding:7px 14px;border-radius:50px;white-space:nowrap}
+@media(max-width:700px){
+  .fr-band{padding:10px 4% 0}
+  .fr-in{gap:10px;padding:8px 12px 8px 8px;border-radius:20px}
+  .fr-in img{height:68px}
+  .fr-txt{font-size:13px;line-height:1.6}
+  .fr-txt b{font-size:17px}
+  .fr-more{display:none}
+}
+</style>
+<style>
+/* 사용방법 동영상 */
+.gvid{max-width:820px;margin:0 0 34px;background:var(--sc-light,#E8F4FC);border:2px solid var(--sc,var(--blue));border-radius:18px;padding:14px 14px 16px}
+.gvid-h{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-weight:900;font-size:16px;color:var(--text);margin:0 4px 10px}
+.gvid-h .gvid-play{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--sc,var(--blue));color:#fff;font-size:12px}
+.gvid-h small{font-size:12.5px;font-weight:700;color:var(--text3)}
+.gvid video{display:block;width:100%;aspect-ratio:16/9;border-radius:12px;background:#000}
+</style>
+<style id="nav-lang-css">.nav-lang{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:#1B8AC4;border:1.5px solid #1B8AC4;border-radius:50px;padding:7px 13px;margin-right:8px;white-space:nowrap;background:#fff}.nav-lang:hover{background:#E8F4FC}.nav-links a{white-space:nowrap}@media(max-width:1180px){.nav-lang .t{display:none}.nav-lang{padding:6px 9px;font-size:15px}}@media(max-width:480px){.nav-lang{padding:4px 6px;margin-right:6px;font-size:14px}.nav-cta{padding:8px 13px!important;font-size:12.5px!important}}@media(max-width:400px){nav{padding-left:12px!important;padding-right:12px!important}.nav-logo-name{font-size:15px!important}.nav-logo{gap:6px!important}.nav-cta{padding:7px 9px!important;font-size:12px!important}.nav-lang,.lang-sel{margin-right:5px!important}.hamburger{margin-left:4px!important}}</style>
+<style>.lang-sel{display:inline-flex;align-items:center;gap:4px;margin-right:8px;border:1.5px solid #1B8AC4;border-radius:50px;padding:3px 4px 3px 10px;background:#fff;font-size:15px}.lang-sel select{border:none;background:transparent;font:700 13px sans-serif;color:#1B8AC4;padding:4px 2px;cursor:pointer;outline:none}.nav-links a{padding:8px 11px!important}@media(max-width:1280px){.nav-raccoon{display:none!important}}.lang-sel .cur{display:none}@media(max-width:480px){.nav-cta{display:none!important}.lang-sel{position:relative;margin-right:6px;padding:6px 10px;gap:5px}.lang-sel .cur{display:inline;white-space:nowrap;font:700 13px sans-serif;color:#1B8AC4}.lang-sel select{position:absolute;inset:0;width:100%;opacity:0}}@media(max-width:400px){.lang-sel{padding:5px 6px!important;gap:2px!important;font-size:13px}.lang-sel .cur{font-size:12px}}.lang-sw{position:fixed;right:10px;bottom:12px;z-index:400}.tr-note{max-width:1160px;margin:0 auto;padding:10px 6% 0;font-size:12.5px;color:#9CA3AF}</style></head>
+<body>
+<!-- NAV -->
+<nav> <a class="nav-logo" href="../index.html"> <img alt="标志" class="logo-img" src="../logo.jpg"/> <span class="nav-logo-name">PrintShop Mini</span> </a> <ul class="nav-links" id="navLinks">
+<li><a href="../services.html">服务</a></li>
+<li><a class="active" href="guide.html">使用方法</a></li>
+<li><a href="../faq.html">FAQ</a></li>
+<li><a href="../about.html">介绍</a></li>
+<li><a href="../branches.html">门店</a></li>
+<li><a href="../community.html">社区</a></li>
+</ul>
+<div class="nav-right"> <label class="lang-sel" title="Language · 语言 · Ngôn ngữ"><span aria-hidden="true">🌐</span><span aria-hidden="true" class="cur">ZH ▾</span><select aria-label="Language" onchange="location.href=this.value"><option lang="ko" value="../guide-copy.html">한국어</option><option lang="en" value="../en/guide-copy.html">English</option><option lang="zh-Hans" selected="" value="../zh/guide-copy.html">中文</option><option lang="vi" value="../vi/guide-copy.html">Tiếng Việt</option></select></label><a class="nav-cta" href="../branches.html">查找门店</a> <div class="nav-raccoon" title="PrintShop Mini 吉祥物">
+<img alt="浣熊吉祥物" src="../raccoon1.png"/>
+</div>
+</div>
+<button class="hamburger" onclick="toggleMenu()">
+<span></span><span></span><span></span>
+</button>
+</nav>
+<!-- HEADER -->
+<div class="stick-top">
+<div class="page-header">
+<div class="ph-inner">
+<img alt="" aria-hidden="true" class="ph-pal" src="../img/friends/copy.webp"/>
+<div class="ph-eyebrow">GUIDE · COPY</div>
+<h1 class="ph-h1">复印使用方法</h1>
+<p class="ph-sub">把带来的纸再复印出一样的一张的方法。也介绍身份证 · 存折 · 护照 · 书本的复印。</p>
+</div>
+</div>
+<div class="svc-switch"><div class="svc-switch-in"> <a href="guide.html">全部使用方法</a> <a href="guide-video.html">▶ 视频</a> <a href="guide-print.html">🖨️ 打印</a> <a class="on" href="guide-copy.html">📋 复印</a> <a href="guide-scan.html">📄 扫描</a> <a href="guide-fax.html"><svg aria-hidden="true" class="fax-ico" fill="none" height="15" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 48 48" width="15"><path d="M9 36V5h18l8 8v9" stroke="currentColor" stroke-width="4.2"></path><path d="M15 15h10M15 22h6" stroke="currentColor" stroke-width="4.2"></path><g transform="translate(20 21) scale(1.04)"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke-width="7" style="stroke:var(--bg)"></path><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="3.99"></path></g></svg> 传真 </a> <a href="guide-coat.html">✨ 塑封</a> <a href="guide-bind.html">📚 装订</a> </div></div>
+</div>
+<div class="fr-band" style="--c:#018FFB;--cl:#E1F1FF">
+<a class="fr-in" href="../about.html#friend-ttarabok" title="认识迷你朋友 Mini Friends">
+<img alt="鹦鹉小复 (Polly Copy)" height="92" src="../img/friends/copy.webp" width="92"/>
+<div class="fr-txt"><b>鹦鹉小复</b><i>Polly Copy</i><span class="fr-pill">负责复印</span><br/>你好！我是负责复印的鹦鹉小复。我来告诉你怎么把原件一模一样地复印出来！</div> <span class="fr-more">查看更多朋友 →</span> </a>
+</div>
+<!-- 탭 -->
+<div class="tabs">
+<div class="tabs-in"><button class="tab on" onclick="jump('copy',this)">复印方法</button> <button class="tab" onclick="jump('adf',this)">ADF 注意</button> <button class="tab" onclick="jump('glass',this)">玻璃板复印（身份证 · 存折 · 书）</button></div>
+</div>
+<div class="sec alt" id="copy" style="--sc:#018FFB;--sc-light:#E6F3FE">
+<div class="sec-in">
+<div class="sec-head">
+<div class="sec-ico"><svg fill="none" height="34" viewbox="0 0 48 48" width="34"><rect height="30" rx="3" stroke="#018FFB" stroke-width="3" width="24" x="7" y="7"></rect><rect fill="#fff" height="27" rx="3" stroke="#018FFB" stroke-width="3" width="24" x="17" y="14"></rect></svg></div>
+<h2 class="sec-h2">复印方法 <span class="pill">COPY</span></h2>
+</div>
+<p class="sec-tagline"><b>把带来的纸再复印出一样的一张的服务。</b>不用电脑，直接在复合机上操作。</p>
+<div class="gvid"><div class="gvid-h"><span class="gvid-play">▶</span>先看复印方法视频 <small>没有声音也能看懂</small></div><video controls="" playsinline="" poster="../videos/guide-copy.jpg" preload="none"><source src="../videos/guide-copy.mp4" type="video/mp4"/> 您的浏览器无法播放视频。 </video></div>
+<div class="orig-warn"><div class="orig-warn-h">🚨 先放原件再开始！ <span>复印 · 扫描 · 传真通用</span></div><ol><li><span class="n">1</span><div>一定要<b>先把原件放进 ADF（放原件的地方）</b>，再开始操作。</div></li><li class="okli"><span class="n">2</span><div>✅ <b>正常的话</b>，原件被吸进机器后，会<b>自动出现金额确认画面［과금정보］</b>。</div></li><li class="no"><span class="n">3</span><div>🛑 开始后<b>原件没有被吸进机器的话，绝对不要付款！</b><br/>请在屏幕上<b>取消操作</b>，<b>从头重新</b>开始。</div></li><li><span class="n">4</span><div>❌ 原件没进去就付款，结果成了<b>白纸复印 · 白纸扫描 · 白纸传真</b>，<b>也不退款。</b></div></li></ol></div>
+<div id="guideFiles"></div>
+<div class="steps">
+<div class="step">
+<div class="step-no">1</div>
+<div class="step-fig"><img alt="把原件放进 ADF（放原件的地方）的样子" src="../adf_nb.jpg" style="width:100%;max-width:210px;border-radius:8px;border:1px solid var(--border)"/></div>
+<div class="step-h">在复合机上放原件</div>
+<ol class="mini1"><li><b>要复印的一面朝上</b>放。</li><li>纸张大小不同，放的方向也不同。<br/><span class="dir"><b>A4</b> → <b>长边</b>朝左先进去</span><br/><span class="dir"><b>B4 · A3</b> → <b>短边</b>朝左先进去</span></li><li><b>一直推到</b>最左边。<span class="r">只放进一点点的话，纸不会被吸进去，会出白纸。</span></li><li>把上下的<b>文件导板</b>贴紧纸张大小。<span class="r">太松的话，纸会歪着进去，复印出来也是歪的。</span></li><li>有很多张的话，<b>整理整齐</b>一起放进去。（最多 100 张）</li><li><span class="r">纸进到机器里又出来，就是成功了。没进去的话不要付款。</span></li><li>身份证 · 存折 · 护照 · 书 · 皱纸不要放这里，请放在<b>玻璃板</b>上。（对准左上角的白色箭头）</li></ol>
+</div>
+<div class="step">
+<div class="step-no">2</div>
+<div class="step-fig"><svg fill="none" height="80" viewbox="0 0 120 80" width="120">
+<rect fill="#12213D" height="56" rx="5" width="108" x="6" y="12"></rect>
+<rect fill="#018FFB" height="20" rx="4" stroke="#fff" stroke-width="3" width="20" x="16" y="24"></rect>
+<text fill="#018FFB" font-family="Noto Sans KR" font-size="10" font-weight="900" text-anchor="middle" x="26" y="60">复印</text>
+<rect fill="#22B24C" height="20" opacity="0.35" rx="4" width="20" x="42" y="24"></rect>
+<text fill="#7C8CA6" font-family="Noto Sans KR" font-size="10" font-weight="900" text-anchor="middle" x="52" y="60">打印</text>
+<rect fill="#12BDB0" height="20" opacity="0.35" rx="4" width="20" x="68" y="24"></rect>
+<text fill="#7C8CA6" font-family="Noto Sans KR" font-size="10" font-weight="900" text-anchor="middle" x="78" y="60">扫描</text>
+<rect fill="#F3732C" height="20" opacity="0.35" rx="4" width="16" x="94" y="24"></rect>
+<text fill="#7C8CA6" font-family="Noto Sans KR" font-size="10" font-weight="900" text-anchor="middle" x="102" y="60">传真</text>
+</svg></div>
+<div class="step-h">选择复印菜单</div>
+<p class="step-p"><span class="r">一定要先放好原件</span>，再在复合机屏幕上按<b>［복사］（复印）</b>。</p>
+</div>
+<div class="step">
+<div class="step-no">3</div>
+<div class="step-fig"><a href="../images/copy/copy-settings.png?v=2" rel="noopener" target="_blank"><img alt="复合机复印设置画面。左上角红框里的［기본 복사］（基本复印）选成蓝色，可以选份数、颜色、原稿尺寸等" src="../images/copy/copy-settings.png?v=2" style="width:100%;border-radius:8px;border:1px solid var(--border);display:block"/></a></div>
+<div class="step-h">设置 · 开始</div>
+<p class="step-p">选择<b>数字（复印几份）</b> · <b>原稿尺寸</b>（默认 A4，原件是 B4、A3 的话要改）· 彩色/黑白等选项后，按<b>［시작］（开始）</b>。开始后原件会进到复合机里再出来。<br/><span class="r">请确认红框里的［기본 복사］（基本复印）选成了蓝色。</span></p><div class="mini-warn" style="margin-top:12px"><div class="mini-warn-h"><span class="x">!</span>数字不是“张数”，而是“复印几份”</div><p class="mini-warn-p" style="padding-left:0">屏幕上的<b>数字 1</b> 不是<b>复印 1 张</b>，而是把放进去的<b>全部原件复印 1 份</b>。<br/>例）原件有 <b>10 张</b>，数字是 <b>1</b> 时 → <b>复印 1 份 = 出 10 张</b>。<br/>把数字改成 <b>2</b> → <b>复印 2 份 = 出 20 张</b>。（每张各 2 张）<br/><b>❌ 不要因为原件有 10 张就把数字改成 10！</b>那样会复印 10 份（100 张），费用很高。只复印一份的话，<b>保持 1 不变</b>。</p></div><div class="mini-warn" style="margin-top:10px"><div class="mini-warn-h"><span class="x">!</span>一定要确认选项设置</div><p class="mini-warn-p" style="padding-left:0"><b>因选项设置错误造成的问题，不赔偿，也不负责。</b></p></div>
+</div>
+<div class="step">
+<div class="step-no">4</div>
+<div class="step-fig"><svg fill="none" height="80" viewbox="0 0 120 80" width="120">
+<rect fill="#fff" height="56" rx="4" stroke="#111827" stroke-width="3" width="92" x="14" y="12"></rect>
+<rect fill="#EEF1F5" height="13" rx="4" width="92" x="14" y="12"></rect>
+<text fill="#374151" font-family="Noto Sans KR" font-size="9" font-weight="900" x="24" y="22">과금정보</text>
+<text fill="#374151" font-family="Noto Sans KR" font-size="11" font-weight="900" x="24" y="42">총 가격</text>
+<text fill="#111827" font-family="Noto Sans KR" font-size="12" font-weight="900" text-anchor="end" x="96" y="42">250원</text>
+<rect fill="#DCE8FA" height="13" rx="2" stroke="#7E93AE" stroke-width="2.4" width="38" x="62" y="50"></rect>
+<text font-family="Noto Sans KR" font-size="9" font-weight="900" text-anchor="middle" x="81" y="60">확인</text>
+</svg></div>
+<div class="step-h">确认金额［과금정보］</div>
+<p class="step-p">正常的话会自动出现金额确认画面［과금정보］。<b>内容全部正确的话，按［확인］（确认）</b>。</p><div class="bill-warn"><span class="bh">🧾 必须确认收费信息窗口［과금정보］！</span><b>请确认收费信息窗口的全部内容。没确认就付款而出了问题的，不退款、不赔偿。</b><br/>请<b>全部确认、正确无误后再按［확인］（确认）</b>付款。</div>
+</div>
+<div class="step">
+<div class="step-no">5</div>
+<div class="step-fig"><svg fill="none" height="80" viewbox="0 0 120 80" width="120">
+<rect fill="#fff" height="50" rx="7" stroke="#111827" stroke-width="3" width="46" x="38" y="18"></rect>
+<rect fill="#E9EDF3" height="15" rx="2" stroke="#111827" stroke-width="2.4" width="28" x="47" y="27"></rect>
+<circle cx="61" cy="56" fill="none" r="8" stroke="#111827" stroke-width="2.6"></circle>
+<rect fill="#FFD64A" height="12" rx="2" stroke="#111827" stroke-width="3" width="26" x="48" y="6"></rect>
+</svg></div>
+<div class="step-h">插卡付款</div>
+<p class="step-p"><span class="r">刷卡机发出语音后</span>，<b>IC 卡（信用卡/借记卡）请插在后面</b>，三星支付请贴在前面宽的地方。不要提前插卡，也不要中途拔出。</p>
+</div>
+</div>
+<div class="step-note sec-note">复印完成后，从出纸托盘取走复印件，<b>也别忘了带走原件。</b></div>
+<div class="adfw" id="adf">
+<div class="adfw-h"><span class="x">!</span>有些纸不能放进 ADF（放原件的地方）</div>
+<figure class="adf-fig">
+<img alt="复合机上方的 ADF（放原件的地方），上面放着纸" loading="lazy" src="../images/common/adf-feeder.jpg"/>
+<figcaption>📌 照片中<b>蓝框部分</b>就是 <b>ADF（放原件的地方）</b>。<br/>复印 · 扫描 · 传真时，把单张原件（最多 100 张）放在这里。<br/><span class="gd">📏 挡住原件<b>上下的橙色部分就是“文件导板”</b>。放好原件后，<b>把上下导板贴紧原件大小</b>，让原件端正地进去，不要歪。</span></figcaption>
+</figure>
+<div class="adfw-grid">
+<div class="adfw-box ok">
+<div class="adfw-t">可以放的</div>
+<ul>
+<li><b>普通复印纸</b>（A4 · B4 · A3）— <b>同样大小的放在一起</b>，一次最多可以放 <b>100 张</b>。</li><li><b>把同样大小的纸放在一起，整理整齐</b>再放进去。</li>
+<li>没有皱褶、<b>平整</b>的纸</li>
+</ul>
+</div>
+<div class="adfw-box no">
+<div class="adfw-t">不能放的</div>
+<ul>
+<li><b>太薄的纸</b>（像油纸那样的）</li>
+<li><b>太厚的纸</b>（奖状、厚卡片）</li>
+<li><b>贴着便条的纸</b>（便条纸 · 便利贴）</li>
+<li><b>订了订书钉的纸</b></li>
+<li><b>皱了或破了</b>的纸</li><li><b>A4 · B4 · A3 混在一起</b>放的（大小不同请分开放）</li>
+<li>像<b>身份证 · 存折 · 护照 · 书</b>这样不是单张纸的东西</li>
+</ul>
+</div>
+</div>
+<div class="adfw-foot">上面<b>“不能放的”</b>东西，<b>不要放进 ADF。</b>请<b>打开复合机盖子，一张一张放在玻璃板上</b>操作。<br/><span class="glassdir">📌 放在玻璃板上时，<b>要复印 · 扫描 · 传真的一面要朝向玻璃板</b>。</span><br/> <b>放了说明不能放的原件而导致机器故障时，可能需要承担维修费用。</b></div>
+</div>
+<div class="subhead" id="glass">放在玻璃板上复印 · 身份证 / 存折 · 护照 / 书</div>
+<p class="sec-tagline" style="margin-bottom:22px"><b>身份证 · 存折 · 护照 · 书</b>不是单张纸，不要放进 ADF。请打开复合机盖子，放在<b>玻璃板</b>上。以玻璃板<b>左上角的白色箭头</b>为准，<b>有内容的一面朝向玻璃板</b>。</p>
+<div class="openbox">
+<div class="ob">
+<div class="ob-fig">
+<img alt="打开复合机上盖的样子" src="../cover_nb.jpg" style="width:100%;border-radius:8px;border:1px solid var(--border)"/>
+</div>
+<div>
+<div class="ob-h">① 把复合机上盖往上打开</div>
+<p class="ob-p"><b>用手抓住复合机右前方</b>，小心地<b>往上抬起</b>，就会看到玻璃板。<span class="r">不要硬拉。</span></p>
+</div>
+</div>
+</div>
+<div class="minis">
+<div class="mini" id="idcard">
+<div class="mini-top">
+<svg fill="none" height="22" viewbox="0 0 48 48" width="22"><rect height="24" rx="3" stroke="#fff" stroke-width="3" width="36" x="6" y="12"></rect><circle cx="17" cy="22" r="4" stroke="#fff" stroke-width="2.6"></circle><path d="M27 20h10M27 27h10M11 31h12" stroke="#fff" stroke-linecap="round" stroke-width="2.6"></path></svg> 身份证复印 </div>
+<div class="mini-body">
+<div class="mini-fig"><img alt="身份证对准玻璃板左上角放好的样子" src="../id_nb.jpg"/></div>
+<ol>
+<li><b>打开复合机盖子。</b>抓住右边，小心地往上抬起。</li>
+<li>对准玻璃板<b>左上角</b>，<b>有照片的正面朝向玻璃</b>放好，然后盖上盖子。</li>
+<li>在复合机屏幕上选择<b>［복사］（复印）</b>菜单。</li>
+<li>按<b>［신분증복사］（身份证复印）</b>标签，选择<b>彩色或黑白</b>后，按<b>［시작］（开始）</b>。</li>
+<li><b>背面也要复印的话</b> — 在原来放的位置<span class="r">直接翻过来</span>放背面，选<b>［예］（是）</b>→ 再按<b>［시작］（开始）</b>→ 付款<br/><b>只复印正面的话</b> — 选<b>［아니오］（否）</b></li>
+</ol>
+<div class="mini-warn">
+<div class="mini-warn-h"><span class="x">!</span>护照 · 存折不要用［신분증복사］（身份证复印）标签！</div>
+<div class="mini-warn-p">［신분증복사］（身份证复印）标签里虽然有<b>护照</b>这一项，但选了它的话<b>只会复印护照的一部分。</b><br/><br/>护照一定要用<b>［기본복사］（基本复印）</b>标签复印。存折也不是身份证，所以要用<b>［기본복사］（基本复印）</b>。</div>
+</div>
+<div class="mini-note"><b>［신분증복사］（身份证复印）</b>是把居民身份证 · 驾照这种<b>卡片式证件</b>的正反面并排复印在一张纸上的功能。请只用于卡片式证件。</div>
+</div>
+</div>
+<div class="mini" id="passbook">
+<div class="mini-top">
+<svg fill="none" height="22" viewbox="0 0 48 48" width="22"><rect height="34" rx="3" stroke="#fff" stroke-width="3" width="30" x="9" y="7"></rect><path d="M17 7v34" stroke="#fff" stroke-width="2.6"></path><path d="M25 17h9M25 24h9" stroke="#fff" stroke-linecap="round" stroke-width="2.6"></path></svg> 存折 · 护照复印 / 扫描 </div>
+<div class="mini-body">
+<div class="mini-fig"><img alt="存折对准玻璃板左上角放好的样子" src="../glass_nb.jpg"/></div>
+<ol>
+<li><b>打开复合机盖子。</b>抓住右边，小心地往上抬起。</li>
+<li>玻璃板<b>左上角是基准</b>。从基准开始<b>A4 大小</b>的范围会被复印 / 扫描，请把要复印或扫描的一面放在这个范围内，然后盖上盖子。</li>
+<li>选择<b>［복사］（复印）</b>或<b>［스캔］（扫描）</b>菜单。复印的话在<b>［기본복사］（基本复印）</b>标签中设置并确认后，按<b>［시작］（开始）</b>。</li>
+<li>出现<b>“다른 면을 스캔하시겠습니까?”（要扫描其他页面吗？）</b>窗口时 — 还有要复印或扫描的页面，就<span class="r">先把下一页放到玻璃板上</span>，再按<b>［예］（是）</b>；没有的话按<b>［아니오］（否）</b>。</li>
+<li>在<b>［과금정보］（收费信息）</b>画面确认金额和设置是否正确，然后付款。</li>
+</ol>
+<div class="mini-warn">
+<div class="mini-warn-h"><span class="x">!</span>护照 · 存折不要用［신분증복사］（身份证复印）标签！</div>
+<div class="mini-warn-p">［신분증복사］（身份证复印）标签里虽然有<b>护照</b>这一项，但选了它的话<b>只会复印护照的一部分。</b><br/><br/>护照一定要用<b>［기본복사］（基本复印）</b>标签复印。存折也不是身份证，所以要用<b>［기본복사］（基本复印）</b>。</div>
+</div>
+<div class="mini-note">可以连续复印或扫描多页。按<b>［예］（是）</b>之前，请先把下一页放好。</div>
+</div>
+</div>
+<div class="mini" id="book">
+<div class="mini-top">
+<svg fill="none" height="22" viewbox="0 0 48 48" width="22"><path d="M24 12c-4-4-10-5-16-4v27c6-1 12 0 16 4 4-4 10-5 16-4V8c-6-1-12 0-16 4z" stroke="#fff" stroke-linejoin="round" stroke-width="3"></path><path d="M24 12v27" stroke="#fff" stroke-width="2.6"></path></svg> 书本复印 / 扫描 </div>
+<div class="mini-body">
+<div class="mini-fig"><img alt="书本扣放在玻璃板左上角的样子" src="../book_nb.jpg"/></div>
+<ol>
+<li><b>打开复合机盖子。</b>抓住右边，小心地往上抬起。</li>
+<li>把<b>要复印 · 扫描的一面朝向玻璃</b>扣放，<b>对准玻璃板左上角</b>放好后，盖上盖子。</li>
+<li>选择<b>［복사］（复印）</b>或<b>［스캔］（扫描）</b>菜单。复印的话在<b>［기본복사］（基本复印）</b>标签中设置并确认后，按<b>［시작］（开始）</b>。</li>
+<li>出现<b>“다른 면을 스캔하시겠습니까?”（要扫描其他页面吗？）</b>窗口时 — 翻到下一页，<span class="r">先放到玻璃板上</span>，再按<b>［예］（是）</b>；全部完成的话按<b>［아니오］（否）</b>。</li>
+<li>在<b>［과금정보］（收费信息）</b>画面确认金额和设置是否正确，然后付款。</li>
+</ol>
+<div class="mini-note">厚书的话盖子不用完全盖上。但是<b>不要用力压书。</b>玻璃板可能会碎。</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p class="tr-note">本页由韩语翻译而来。如有不准确之处，请通过 Naver TalkTalk 告诉我们。机器屏幕为韩语，韩语按钮名称写在［括号］里。</p><footer>
+<div class="ft-wrap">
+<div class="ft-brand">
+<img alt="标志" src="../logo.jpg"/>
+<div class="ft-brand-name">PrintShop Mini</div>
+<p>24 小时 365 天营业的<br/>无人自助打印店。</p>
+</div>
+<div class="ft-col">
+<h4>使用方法</h4>
+<ul>
+<li><a href="guide-print.html">打印方法</a></li>
+<li><a href="guide-copy.html">复印方法</a></li>
+<li><a href="guide-scan.html">扫描方法</a></li>
+<li><a href="guide-fax.html">发传真方法</a></li>
+<li><a href="guide-coat.html">塑封方法</a></li>
+<li><a href="guide-bind.html">装订方法</a></li>
+</ul>
+</div>
+<div class="ft-col">
+<h4>快捷链接</h4>
+<ul>
+<li><a href="../services.html">服务介绍</a></li>
+<li><a href="../faq.html">常见问题</a></li>
+<li><a href="../branches.html">查找门店</a></li>
+<li><a href="../community.html">社区</a></li>
+<li><a href="../about.html">品牌介绍</a></li>
+</ul>
+</div>
+</div>
+<div class="ft-corp" style="word-break:keep-all;max-width:1160px;margin:0 auto 20px;font-size:13px;line-height:1.9;color:#9CA3AF"><b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1B8AC4)">PrintShop Mini</b> · <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">PrintNow</b> 是 <span style="white-space:nowrap">(株)Good Learning Partner</span> 公司的品牌。</div>
+<div class="ft-bottom">
+<p>© 2025 PrintShop Mini. All rights reserved.</p>
+<p>隐私政策 · 使用条款</p>
+</div>
+</footer>
+<script>
+function toggleMenu(){document.getElementById("navLinks").classList.toggle("show");}
+function jump(id, el){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
+  el.classList.add('on');
+  const y = document.getElementById(id).getBoundingClientRect().top + window.pageYOffset - 118;
+  window.scrollTo({top:y, behavior:'smooth'});
+}
+</script>
+<script>window.GUIDE_SERVICE='copy';</script>
+<script src="../service-guides.js?v=2"></script>
+<script>
+/* 2단계 메뉴: 현재 탭이 화면 밖이면 보이는 위치로 이동 */
+(function(){var a=document.querySelector('.svc-switch a.on'),w=a&&a.parentElement;if(w)w.scrollLeft=Math.max(0,a.offsetLeft-(w.clientWidth-a.offsetWidth)/2);})();
+</script>
+
+<script defer="" src="../lightbox.js?v=1"></script>
+</body>
+</html>

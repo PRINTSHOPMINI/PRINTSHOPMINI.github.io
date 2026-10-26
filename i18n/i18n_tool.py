@@ -11,7 +11,7 @@ from bs4 import BeautifulSoup, NavigableString, Comment
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 I18N = os.path.join(ROOT, 'i18n')
-PAGES = ['guide.html', 'guide-print.html']          # 번역할 페이지 (차례로 늘려 감)
+PAGES = ['guide.html', 'guide-print.html', 'guide-copy.html', 'guide-scan.html', 'guide-fax.html', 'guide-coat.html', 'guide-bind.html', 'guide-video.html']          # 번역할 페이지 (차례로 늘려 감)
 LANGS = {'en': ('English', 'en'), 'zh': ('中文', 'zh-Hans'), 'vi': ('Tiếng Việt', 'vi')}
 HANGUL = re.compile('[가-힣]')
 BLOCK = {'div', 'p', 'li', 'ul', 'ol', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'table', 'thead', 'tbody', 'tr', 'td', 'th',
@@ -155,6 +155,7 @@ SW_CSS = ('<style>.lang-sel{display:inline-flex;align-items:center;gap:4px;margi
           '.lang-sel .cur{display:none}@media(max-width:480px){.nav-cta{display:none!important}'
           '.lang-sel{position:relative;margin-right:6px;padding:6px 10px;gap:5px}.lang-sel .cur{display:inline;white-space:nowrap;font:700 13px sans-serif;color:#1B8AC4}'
           '.lang-sel select{position:absolute;inset:0;width:100%;opacity:0}}'
+          '@media(max-width:400px){.lang-sel{padding:5px 6px!important;gap:2px!important;font-size:13px}.lang-sel .cur{font-size:12px}}'
           '.lang-sw{position:fixed;right:10px;bottom:12px;z-index:400}'
           '.tr-note{max-width:1160px;margin:0 auto;padding:10px 6% 0;font-size:12.5px;color:#9CA3AF}</style>')
 NOTE = {'en': 'This page was translated from Korean. If anything looks wrong, please tell us on Naver TalkTalk. Screens on the machines are in Korean — the Korean button names are shown in [brackets].',

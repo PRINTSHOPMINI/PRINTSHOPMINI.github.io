@@ -15,77 +15,143 @@
   "ko": "<a class=\"nav-logo\" href=\"index.html\"> <img alt=\"로고\" class=\"logo-img\" src=\"logo.jpg\"/> <span class=\"nav-logo-name\">프린트샵미니</span> </a>",
   "pages": [
    "guide.html",
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html"
   ]
  },
  "0d69c1799d": {
   "ko": "로고",
   "pages": [
    "guide.html",
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html"
   ]
  },
  "746bce6b91": {
   "ko": "<a href=\"services.html\">서비스</a>",
   "pages": [
    "guide.html",
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html"
   ]
  },
  "5974784a0b": {
   "ko": "<a class=\"active\" href=\"guide.html\">사용방법</a>",
   "pages": [
    "guide.html",
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html"
   ]
  },
  "85e056471e": {
   "ko": "<a href=\"about.html\">소개</a>",
   "pages": [
    "guide.html",
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html"
   ]
  },
  "e1eaf72438": {
   "ko": "<a href=\"branches.html\">지점찾기</a>",
   "pages": [
    "guide.html",
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html"
   ]
  },
  "2cc04eb419": {
   "ko": "<a href=\"community.html\">커뮤니티</a>",
   "pages": [
    "guide.html",
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html"
   ]
  },
  "b7b43e0773": {
   "ko": "<a class=\"nav-cta\" href=\"branches.html\">지점 찾기</a>",
   "pages": [
    "guide.html",
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html"
   ]
  },
  "72ec26f778": {
   "ko": "프린트샵미니 마스코트",
   "pages": [
    "guide.html",
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html"
   ]
  },
  "ca29d61d1c": {
   "ko": "라쿤 마스코트",
   "pages": [
    "guide.html",
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html"
   ]
  },
  "7c87dc1ff0": {
   "ko": "사용방법",
   "pages": [
    "guide.html",
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html"
   ]
  },
  "ea1b26aeef": {
@@ -104,14 +170,24 @@
   "ko": "<a href=\"guide-coat.html\">✨ 코팅</a> <a href=\"guide-bind.html\">📚 제본</a>",
   "pages": [
    "guide.html",
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-video.html"
   ]
  },
  "679c3cb214": {
   "ko": "팩스",
   "pages": [
    "guide.html",
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html"
   ]
  },
  "70a295987f": {
@@ -130,13 +206,21 @@
   "ko": "<b style=\"display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1B8AC4)\">프린트샵미니</b> · <b style=\"display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28\">프린트나우</b>는 <span style=\"white-space:nowrap\">(주)굿러닝파트너</span> 법인의 브랜드예요.",
   "pages": [
    "guide.html",
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html"
   ]
  },
  "1d79be91bd": {
   "ko": "인쇄",
   "pages": [
-   "guide.html"
+   "guide.html",
+   "guide-copy.html",
+   "guide-fax.html"
   ]
  },
  "3eea460a33": {
@@ -154,7 +238,9 @@
  "6acf7ad6e7": {
   "ko": "복사",
   "pages": [
-   "guide.html"
+   "guide.html",
+   "guide-copy.html",
+   "guide-fax.html"
   ]
  },
  "a69251bbbe": {
@@ -166,7 +252,9 @@
  "9061542696": {
   "ko": "스캔",
   "pages": [
-   "guide.html"
+   "guide.html",
+   "guide-copy.html",
+   "guide-fax.html"
   ]
  },
  "feb206c04b": {
@@ -340,124 +428,217 @@
  "987e14b600": {
   "ko": "<a class=\"faq-go\" href=\"faq.html\">자주 묻는 질문(FAQ) 보기 →</a>",
   "pages": [
-   "guide.html"
+   "guide.html",
+   "guide-video.html"
   ]
  },
  "e21ff7cf1c": {
   "ko": "더 궁금한 점이 있으신가요?",
   "pages": [
-   "guide.html"
+   "guide.html",
+   "guide-video.html"
   ]
  },
  "ace26430f9": {
   "ko": "자주 묻는 질문을 한곳에 모았습니다. 원하는 답이 없으면 이메일로 문의해 주세요.",
   "pages": [
-   "guide.html"
+   "guide.html",
+   "guide-video.html"
   ]
  },
  "62bc150866": {
   "ko": "프린트샵미니",
   "pages": [
    "guide.html",
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html"
   ]
  },
  "08279ea9f2": {
   "ko": "24시간 365일 운영되는<br/>무인 셀프 프린트 전문점입니다.",
   "pages": [
    "guide.html",
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html"
   ]
  },
  "0af74d46ed": {
   "ko": "<a href=\"guide-print.html\">인쇄하는 방법</a>",
   "pages": [
    "guide.html",
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html"
   ]
  },
  "8664f30a98": {
   "ko": "<a href=\"guide-copy.html\">복사하는 방법</a>",
   "pages": [
    "guide.html",
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html"
   ]
  },
  "c501e3f577": {
   "ko": "<a href=\"guide-scan.html\">스캔하는 방법</a>",
   "pages": [
    "guide.html",
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html"
   ]
  },
  "7dc1b06173": {
   "ko": "<a href=\"guide-fax.html\">팩스 보내는 방법</a>",
   "pages": [
    "guide.html",
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html"
   ]
  },
  "a33001cc7b": {
   "ko": "<a href=\"guide-coat.html\">코팅하는 방법</a>",
   "pages": [
    "guide.html",
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html"
   ]
  },
  "ef1b133ef0": {
   "ko": "<a href=\"guide-bind.html\">제본하는 방법</a>",
   "pages": [
    "guide.html",
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html"
   ]
  },
  "ed8523f6aa": {
   "ko": "바로가기",
   "pages": [
    "guide.html",
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html"
   ]
  },
  "b3ff9534a1": {
   "ko": "<a href=\"services.html\">서비스 안내</a>",
   "pages": [
    "guide.html",
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html"
   ]
  },
  "b365991d07": {
   "ko": "<a href=\"faq.html\">자주 묻는 질문</a>",
   "pages": [
    "guide.html",
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html"
   ]
  },
  "d6d20a394c": {
   "ko": "<a href=\"branches.html\">지점 찾기</a>",
   "pages": [
    "guide.html",
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html"
   ]
  },
  "5ade7fd923": {
   "ko": "<a href=\"about.html\">브랜드 소개</a>",
   "pages": [
    "guide.html",
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html"
   ]
  },
  "c6722e45cb": {
   "ko": "© 2025 프린트샵미니. All rights reserved.",
   "pages": [
    "guide.html",
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html"
   ]
  },
  "43a7d82cbf": {
   "ko": "개인정보처리방침 · 이용약관",
   "pages": [
    "guide.html",
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html"
   ]
  },
  "83973dda29": {
@@ -493,13 +674,23 @@
  "5d993ae141": {
   "ko": "미니프랜즈 소개 보기",
   "pages": [
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html"
   ]
  },
  "138b288b8c": {
   "ko": "<span class=\"fr-more\">친구들 더 보기 →</span>",
   "pages": [
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html"
   ]
  },
  "7f48ea9f52": {
@@ -547,7 +738,13 @@
  "6611ecf89b": {
   "ko": "영상을 재생할 수 없는 브라우저예요.",
   "pages": [
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html"
   ]
  },
  "a92bb4567a": {
@@ -721,7 +918,10 @@
  "ea05213db4": {
   "ko": "금액 확인 (과금정보)",
   "pages": [
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
   ]
  },
  "1a79ccc30d": {
@@ -733,7 +933,10 @@
  "6f8f55009a": {
   "ko": "<span class=\"bh\">🧾 과금정보창 확인 필수!</span><b>과금정보창의 내용을 모두 확인하세요. 내용을 확인하지 않고 결제하여 문제가 발생하면 환불 · 보상하지 않습니다.</b><br/>과금정보창의 내용을 <b>모두 확인하고 맞을 때만 [확인]</b>을 눌러 결제해 주세요.",
   "pages": [
-   "guide-print.html"
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
   ]
  },
  "1667291acc": {
@@ -1958,6 +2161,2123 @@
   "ko": "<b>💳 신용·체크카드는 IC칩이 있는 쪽을 카드 단말기 투입구에 꽂으세요.</b>",
   "pages": [
    "guide-print.html"
+  ]
+ },
+ "3aaf1003ba": {
+  "ko": "프린트샵미니 복사 사용방법 — 복합기 복사 순서와 신분증·통장·여권·책 복사 방법을 안내합니다.",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "afa7d1e3cf": {
+  "ko": "복사 사용방법 - 프린트샵미니",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "8301a4c653": {
+  "ko": "복사 사용방법",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "85cd4e56ad": {
+  "ko": "가지고 오신 종이를 똑같이 한 장 더 만드는 방법입니다. 신분증 · 통장 · 여권 · 책 복사도 안내합니다.",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "c3d466bed9": {
+  "ko": "<a href=\"guide.html\">사용방법 전체</a> <a href=\"guide-video.html\">▶ 동영상</a> <a href=\"guide-print.html\">🖨️ 인쇄</a> <a class=\"on\" href=\"guide-copy.html\">📋 복사</a> <a href=\"guide-scan.html\">📄 스캔</a>",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "da85b7050b": {
+  "ko": "따라복 (Polly Copy)",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "dc8a15b1d3": {
+  "ko": "<b>따라복</b><i>Polly Copy</i><span class=\"fr-pill\">복사 담당</span><br/>안녕하세요! 저는 복사를 담당하는 따라복이에요. 원본을 똑같이 따라 하는 방법, 제가 알려 드릴게요!",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "91adf7f322": {
+  "ko": "<button class=\"tab on\" onclick=\"jump('copy',this)\">복사하는 방법</button> <button class=\"tab\" onclick=\"jump('adf',this)\">ADF 주의</button> <button class=\"tab\" onclick=\"jump('glass',this)\">유리판 복사 (신분증 · 통장 · 책)</button>",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "6641509650": {
+  "ko": "복사하는 방법 <span class=\"pill\">COPY</span>",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "000664335c": {
+  "ko": "<b>가지고 오신 종이를 똑같이 한 장 더 만드는 서비스입니다.</b> PC는 쓰지 않고 복합기에서 바로 진행합니다.",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "8b0f01f074": {
+  "ko": "<span class=\"gvid-play\">▶</span>복사하는 방법 영상으로 먼저 보기 <small>소리 없이 봐도 돼요</small>",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "13dcbafb63": {
+  "ko": "🚨 원본을 먼저 넣고 시작하세요! <span>복사 · 스캔 · 팩스 공통</span>",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "fb1c462353": {
+  "ko": "반드시 <b>원본을 ADF(원본 넣는 곳)에 먼저 넣은 뒤</b> 작업을 시작하세요.",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "6467ddebfe": {
+  "ko": "✅ <b>정상으로 진행되면</b>, 원본이 기계 안으로 들어간 뒤 <b>자동으로 금액 확인 화면(과금정보)</b>이 나와요.",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "39bb253c59": {
+  "ko": "🛑 작업을 시작했는데 <b>원본이 기계 안으로 들어가지 않으면, 절대 결제하지 마세요!</b><br/>화면에서 <b>작업을 취소</b>하고, <b>처음부터 다시</b> 하세요.",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "4917caabd1": {
+  "ko": "❌ 원본이 들어가지 않았는데 결제하여 <b>백지 복사 · 백지 스캔 · 백지 팩스 전송</b>이 되어도 <b>환불되지 않습니다.</b>",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "1499fde14e": {
+  "ko": "원본 넣는 곳(ADF)에 원본 넣는 모습",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "d9010b34f9": {
+  "ko": "복합기에 원본 놓기",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "b5a854cfff": {
+  "ko": "<b>복사할 내용이 위로 보이게</b> 올리세요.",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "dffe59e2ca": {
+  "ko": "종이 크기에 따라 넣는 방향이 달라요.<br/><span class=\"dir\"><b>A4</b> → <b>긴 쪽 끝</b>이 왼쪽으로 먼저 들어가게</span><br/><span class=\"dir\"><b>B4 · A3</b> → <b>짧은 쪽 끝</b>이 왼쪽으로 먼저 들어가게</span>",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "639d4d8d53": {
+  "ko": "왼쪽 끝까지 <b>쭉 밀어 넣으세요.</b> <span class=\"r\">살짝만 넣으면 종이가 빨려 들어가지 않아 백지가 나와요.</span>",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html"
+  ]
+ },
+ "1eb77762ef": {
+  "ko": "위 · 아래 <b>문서 가드</b>를 종이 크기에 딱 맞게 붙이세요. <span class=\"r\">헐거우면 종이가 삐뚤게 들어가 결과가 삐뚤어져요.</span>",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html"
+  ]
+ },
+ "c6e8fbc766": {
+  "ko": "여러 장이면 <b>가지런히 모아서</b> 한꺼번에 넣으세요. (최대 100장)",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html"
+  ]
+ },
+ "9e09721c52": {
+  "ko": "<span class=\"r\">종이가 기계 안으로 들어갔다 다시 나오면 잘 된 거예요. 안 들어가면 결제하지 마세요.</span>",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "2282ac3dfe": {
+  "ko": "신분증 · 통장 · 여권 · 책 · 구겨진 종이는 여기에 넣지 말고 <b>유리판</b>에 올리세요. (왼쪽 위 모서리의 하얀 화살표에 맞추세요)",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "2c88d9577a": {
+  "ko": "복사 메뉴 선택",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "28998acf2f": {
+  "ko": "<span class=\"r\">반드시 원본을 먼저 놓은 뒤</span> 복합기 화면에서 <b>[복사]</b>를 누릅니다.",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "4c074b9d50": {
+  "ko": "복합기 복사 설정 화면. 왼쪽 위 빨간 상자 안의 [기본 복사]가 파란색으로 선택되어 있고, 매수, 색상 설정, 원본 크기 등을 고르는 화면",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "ba4b052739": {
+  "ko": "설정하기 · 시작",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html"
+  ]
+ },
+ "3cb646deb6": {
+  "ko": "<b>숫자(몇 부 복사할지)</b> · <b>원본 크기</b>(기본 A4, 원본이 B4, A3이면 변경) · 컬러/흑백 등 원하는 옵션을 선택한 뒤 <b>[시작]</b> 누르기. 시작되면 원본이 복합기 안으로 들어갔다 나옵니다.<br/><span class=\"r\">빨간 상자 안의 [기본 복사]가 파란색으로 선택되어 있는지 확인하세요.</span>",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "4a84c359f8": {
+  "ko": "<span class=\"x\">!</span>숫자는 '장수'가 아니라 '몇 부 복사할지'예요",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "a9ca25dba1": {
+  "ko": "화면의 <b>숫자 1</b>은 <b>1장 복사</b>가 아니라, 내가 올려 둔 <b>원본 전체를 1부</b> 복사한다는 뜻이에요.<br/>예) 원본이 <b>10장</b>이면, 숫자가 <b>1</b>일 때 → <b>1부 복사 = 10장</b>이 나와요.<br/>숫자를 <b>2</b>로 바꾸면 → <b>2부 복사 = 20장</b>이 나와요. (같은 것이 2장씩)<br/><b>❌ 원본이 10장이라고 숫자를 10으로 바꾸지 마세요!</b> 10부 복사(100장)가 돼서 비용이 크게 나와요. 한 부만 복사하려면 <b>1 그대로</b> 두세요.",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "4fd0459267": {
+  "ko": "<span class=\"x\">!</span>옵션 설정은 꼭 확인하세요",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "ecff9b422f": {
+  "ko": "<b>옵션 설정을 잘못해서 생긴 문제는 보상하지 않으며, 책임지지 않습니다.</b>",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "8fcb53c54b": {
+  "ko": "과금정보",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "fdc42e2fd0": {
+  "ko": "총 가격",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "8d873d4946": {
+  "ko": "250원",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "3ce813136c": {
+  "ko": "확인",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "8fab67b827": {
+  "ko": "잘 되면 금액 확인 화면(과금정보)이 자동으로 나옵니다. <b>내용이 모두 맞으면 [확인]</b> 누르기.",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "a1dfa8cb3f": {
+  "ko": "카드 투입 결제",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "9e50842925": {
+  "ko": "<span class=\"r\">카드 찍는 기계에서 음성이 나오면</span> <b>IC카드(신용·체크)는 뒤에 꽂고</b>, 삼성페이는 앞면 넓은 곳에 대 주세요. 미리 꽂거나 중간에 빼지 마세요.",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "dddb9b3d5e": {
+  "ko": "복사가 끝나면 출력 트레이에서 복사본을 받으시고, <b>원본도 잊지 말고 챙겨가세요.</b>",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "94d75e9055": {
+  "ko": "<span class=\"x\">!</span>원본 넣는 곳(ADF)에 넣으면 안 되는 종이가 있습니다",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "6598cfef3d": {
+  "ko": "복합기 위쪽 원본 넣는 곳(ADF) — 종이가 올려진 원본 넣는 곳",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "4dc60e254f": {
+  "ko": "📌 사진의 <b>파란 테두리 부분</b>이 <b>원본 넣는 곳(ADF)</b>입니다.<br/>복사 · 스캔 · 팩스 할 때 낱장 원본을 여러 장(최대 100장) 올려놓는 곳이에요.<br/><span class=\"gd\">📏 원본의 <b>위 · 아래를 막고 있는 주황색 부분이 '문서 가드'</b>입니다. 원본을 올린 뒤 <b>위 · 아래 문서 가드를 원본 크기에 딱 맞게 붙여서</b>, 원본이 삐뚤어지게 들어가지 않도록 반듯하게 맞춰 주세요.</span>",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "f8644202b8": {
+  "ko": "넣어도 되는 것",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "dfb5f558c5": {
+  "ko": "<b>보통 복사용지</b> (A4 · B4 · A3) — <b>같은 사이즈끼리 모아서</b> 한꺼번에 최대 <b>100장</b>까지 넣어도 돼요.",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "91bffcd41d": {
+  "ko": "<b>같은 사이즈끼리 합쳐서 가지런히 정리</b>해서 넣으세요.",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "b5011236a6": {
+  "ko": "구김 없이 <b>평평한</b> 종이",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "8a2988b2c0": {
+  "ko": "넣으면 안 되는 것",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "c36d63999f": {
+  "ko": "<b>너무 얇은 종이</b> (기름종이 같은 것)",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "e977a363c6": {
+  "ko": "<b>너무 두꺼운 종이</b> (상장, 두꺼운 카드)",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "1ee377f139": {
+  "ko": "<b>메모 붙은 종이</b> (메모지 · 포스트잇)",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "14116b1a9e": {
+  "ko": "<b>스테이플러 찍은 종이</b>",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "f1286e967f": {
+  "ko": "<b>구겨지거나 찢어진</b> 종이",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "b92e10f3e8": {
+  "ko": "<b>A4 · B4 · A3를 섞어서</b> 넣은 것 (사이즈가 다르면 따로 나눠서 넣으세요)",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "085f3c25b5": {
+  "ko": "<b>신분증 · 통장 · 여권 · 책</b> 처럼 낱장 종이가 아닌 것",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "c9d0bef000": {
+  "ko": "위 <b>'넣으면 안 되는 것'</b>들은 <b>원본 넣는 곳에 넣지 마세요.</b> <b>복합기 덮개를 열고 유리판에 한 장씩 올려</b> 작업해 주세요.<br/><span class=\"glassdir\">📌 유리판에 올릴 때는 <b>복사 · 스캔 · 팩스 작업할 내용이 유리판 쪽으로 향하게</b> 두셔야 합니다.</span><br/> <b>넣지 말라고 안내된 원본을 넣어 장비가 고장 난 경우, 수리 비용을 부담하셔야 할 수 있습니다.</b>",
+  "pages": [
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "eb8d226d42": {
+  "ko": "유리판에 놓고 복사하기 · 신분증 / 통장 · 여권 / 책",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "9c5dd46627": {
+  "ko": "낱장 종이가 아닌 <b>신분증 · 통장 · 여권 · 책</b>은 원본 넣는 곳에 넣지 마세요. 복합기 덮개를 열고 <b>유리판</b>에 올려 주세요. 유리판 <b>왼쪽 윗 모서리의 하얀색 화살표</b>가 기준이며, <b>내용이 있는 면은 유리판 쪽</b>으로 향하게 놓습니다.",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "f9af3a9370": {
+  "ko": "복합기 상단 커버 여는 모습",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "b3f5eeefe9": {
+  "ko": "① 복합기 상단 커버를 위로 여세요",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "0f9fe17474": {
+  "ko": "복합기 <b>오른쪽 앞부분을 손으로 잡고</b> 조심히 <b>위로 들어 올리면</b> 유리판이 나옵니다. <span class=\"r\">억지로 당기지 마세요.</span>",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "d0105da293": {
+  "ko": "신분증 복사",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "b0e46764bf": {
+  "ko": "신분증을 유리판 왼쪽 윗 모서리에 맞춰 놓은 모습",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "8325d8b49a": {
+  "ko": "<b>복합기 덮개를 엽니다.</b> 오른쪽 부분을 잡고 조심히 위로 들어 올리세요.",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "2da43cbd5d": {
+  "ko": "유리판 <b>왼쪽 상단 모서리에 맞춰</b>, <b>사진이 있는 앞면을 유리쪽으로</b> 향하게 놓고 덮개를 닫습니다.",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "4854666570": {
+  "ko": "복합기 화면에서 <b>[복사]</b> 메뉴를 선택합니다.",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "897e640050": {
+  "ko": "<b>[신분증복사]</b> 탭을 누르고 <b>컬러 또는 흑백</b>을 고른 뒤 <b>[시작]</b> 누르기.",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "cc52c8bc66": {
+  "ko": "<b>뒷면도 복사하려면</b> — 신분증을 처음 놨던 자리에서 <span class=\"r\">그대로 뒤집어</span> 뒷면을 대고 <b>[예]</b> 선택 → 다시 <b>[시작]</b> → 결제<br/><b>앞면만 하려면</b> — <b>[아니오]</b> 선택",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "8e747948dd": {
+  "ko": "<span class=\"x\">!</span>여권 · 통장은 [신분증복사] 탭을 쓰지 마세요!",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "60b059281a": {
+  "ko": "[신분증복사] 탭 안에 <b>여권</b>이라는 항목이 있지만, 이것을 선택하면 <b>여권의 일부분만 복사됩니다.</b><br/><br/>여권은 반드시 <b>[기본복사]</b> 탭으로 복사하세요. 통장도 신분증이 아니므로 <b>[기본복사]</b>로 하셔야 합니다.",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "2a8b4abb8a": {
+  "ko": "<b>[신분증복사]</b>는 주민등록증 · 운전면허증처럼 <b>카드 형태의 신분증</b>을 앞면과 뒷면 한 장에 나란히 복사해 주는 기능입니다. 카드형 신분증에만 사용하세요.",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "7a18b2643e": {
+  "ko": "통장 · 여권 복사 / 스캔",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "539eb09941": {
+  "ko": "통장을 유리판 왼쪽 윗 모서리에 맞춰 놓은 모습",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "4b97a071fa": {
+  "ko": "유리판 <b>왼쪽 상단 모서리가 기준</b>입니다. 그 기준부터 <b>A4 크기만큼</b>이 복사 / 스캔되는 범위이니, 복사 또는 스캔할 면을 그 범위 안에 놓고 덮개를 닫습니다.",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "435d329168": {
+  "ko": "<b>[복사]</b> 또는 <b>[스캔]</b> 메뉴를 선택합니다. 복사는 <b>[기본복사]</b> 탭에서 설정을 정하고 확인한 뒤 <b>[시작]</b> 누르기.",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "0964207b1b": {
+  "ko": "<b>\"다른 면을 스캔하시겠습니까?\"</b> 창이 나오면 — 더 복사 또는 스캔할 면이 있으면 유리판에 <span class=\"r\">다음 면을 먼저 올린 뒤</span> <b>[예]</b>, 없으면 <b>[아니오]</b>.",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "bd6308e14d": {
+  "ko": "<b>[과금정보]</b> 화면에서 금액과 고른 설정이 맞는지 확인하고 결제합니다.",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "c912f7b0a2": {
+  "ko": "여러 면을 이어서 복사 또는 스캔할 수 있습니다. <b>[예]</b>를 누르기 전에 다음 면을 먼저 올려놓으세요.",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "a9834e7a51": {
+  "ko": "책 복사 / 스캔",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "78881c8c01": {
+  "ko": "책을 유리판 왼쪽 윗 모서리에 맞춰 엎어 놓은 모습",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "0e9a1c1d93": {
+  "ko": "<b>복사 · 스캔할 면을 유리쪽으로</b> 향하게 엎어 놓고, 유리판 <b>왼쪽 윗 모서리에 딱 맞춰</b> 놓은 뒤 덮개를 닫습니다.",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "77176024be": {
+  "ko": "<b>\"다른 면을 스캔하시겠습니까?\"</b> 창이 나오면 — 다음 쪽을 펼쳐 유리판에 <span class=\"r\">먼저 올린 뒤</span> <b>[예]</b>, 다 끝났으면 <b>[아니오]</b>.",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "dd8d0c14cd": {
+  "ko": "두꺼운 책은 덮개가 완전히 닫히지 않아도 됩니다. 다만 <b>책을 세게 누르지 마세요.</b> 유리판이 깨질 수 있습니다.",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "84c16941f0": {
+  "ko": "프린트샵미니 스캔 사용방법 — 종이를 파일로 만들어 매장 PC의 스캔 파일 보관함에서 받는 방법을 안내합니다.",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "46ebc117fe": {
+  "ko": "스캔 사용방법 - 프린트샵미니",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "365924e162": {
+  "ko": "스캔 사용방법",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "33e064efc9": {
+  "ko": "종이를 파일로 만드는 방법입니다. 파일은 매장 PC의 스캔 파일 보관함에서 가져가세요.",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "29e2889925": {
+  "ko": "<a href=\"guide.html\">사용방법 전체</a> <a href=\"guide-video.html\">▶ 동영상</a> <a href=\"guide-print.html\">🖨️ 인쇄</a> <a href=\"guide-copy.html\">📋 복사</a> <a class=\"on\" href=\"guide-scan.html\">📄 스캔</a>",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "da9ebb827f": {
+  "ko": "부스캔 (Hoo Scan)",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "bf36e18612": {
+  "ko": "<b>부스캔</b><i>Hoo Scan</i><span class=\"fr-pill\">스캔 담당</span><br/>안녕하세요! 저는 스캔을 담당하는 부스캔이에요. 종이를 파일로 꼼꼼하게 바꾸는 방법, 같이 해 봐요!",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "032be40320": {
+  "ko": "스캔하는 방법 <span class=\"pill\">SCAN</span>",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "ba67e6c749": {
+  "ko": "<b>종이를 파일로 만드는 서비스입니다.</b> 종이는 그대로 돌려받고, 파일은 매장 PC의 스캔 파일 보관함에서 가져가세요. 통장 · 여권 · 책 스캔은 <a href=\"guide-copy.html#glass\" style=\"color:#12BDB0;font-weight:700;text-decoration:underline\">복사하는 방법의 유리판 안내</a>를 참고하세요.",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "50d56eb4f4": {
+  "ko": "<span class=\"gvid-play\">▶</span>스캔하는 방법 영상으로 먼저 보기 <small>소리 없이 봐도 돼요</small>",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "03aa863484": {
+  "ko": "<b>스캔할 내용이 위로 보이게</b> 올리세요.",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "a5f9eb397c": {
+  "ko": "복합기 스캔 메뉴 화면. 스캔한 파일을 저장할 곳으로 PC를 고르는 화면. PC 아이콘에 빨간 상자",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "de76b45141": {
+  "ko": "스캔 메뉴 선택",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "db26e19027": {
+  "ko": "<span class=\"r\">반드시 원본을 먼저 놓은 뒤</span> 복합기 화면에서 <b>[스캔]</b>을 누릅니다.<br/>스캔한 파일을 저장할 곳을 고르는 화면이 나와요. <b>[PC]</b>를 누르세요.",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "8fca8074fd": {
+  "ko": "복합기 스캔 옵션 화면. 1번 원본 크기, 2번 색상 설정(컬러·흑백), 3번 파일 형식(PDF·TIFF·JPEG), 4번 시작 버튼에 빨간 상자",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "6de8330759": {
+  "ko": "[PC]를 누르면 옵션 화면이 나와요. 그림의 번호 순서대로 정하세요.<br/><b>① 원본 크기</b>(기본 A4, 원본이 B4, A3이면 변경) <b>② 색상 설정</b>(컬러 / 흑백) <b>③ 파일 형식</b>(PDF · TIFF · JPEG)을 고른 뒤, <b>④ [시작]</b>을 누르세요.",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "cb47ae30e3": {
+  "ko": "100원",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "f99cad62a6": {
+  "ko": "금액 확인 화면(과금정보)의 내용을 꼼꼼히 확인하고, 모두 맞으면 <b>[확인]</b> 누르기.",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "c35f008cf9": {
+  "ko": "바탕화면의 1번복합기스캔함 폴더 아이콘. 파란 청록색 바탕에 복합기와 숫자 1",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "06ce5c4939": {
+  "ko": "1번복합기스캔함",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "a9099bcccf": {
+  "ko": "바탕화면의 2번복합기스캔함 폴더 아이콘. 파란 청록색 바탕에 복합기와 숫자 2",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "fa758d46f4": {
+  "ko": "2번복합기스캔함",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "b057be84e4": {
+  "ko": "결제 후 파일 확인",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "beb9030a1c": {
+  "ko": "결제 후 <b>매장 PC로 이동</b>해서, 이용한 <b>복합기 번호에 해당하는 스캔 파일 보관함 폴더</b>를 열어 파일을 확인하세요.",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "811ab73238": {
+  "ko": "📁 <b>매장 안 모든 PC 바탕화면</b>에 폴더가 있어요.<br/>예) <b>1번 복합기</b>에서 스캔했다면 바탕화면의 <b style=\"white-space:nowrap\">'1번복합기스캔함'</b> 폴더, <b>2번 복합기</b>에서 스캔했다면 <b style=\"white-space:nowrap\">'2번복합기스캔함'</b> 폴더를 확인하세요.",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "b7eb56e2d1": {
+  "ko": "스캔한 파일은 <b>30분 후 자동 삭제</b>됩니다. 매장 PC의 스캔 파일 보관함에서 <b>USB로 복사하거나 이메일로 전송</b>해 가져가세요.",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "69b1a9e8e4": {
+  "ko": "프린트샵미니 팩스 사용방법 — 종이 내용을 상대방 팩스 번호로 보내는 방법을 안내합니다.",
+  "pages": [
+   "guide-fax.html"
+  ]
+ },
+ "b62b17b8fc": {
+  "ko": "팩스 사용방법 - 프린트샵미니",
+  "pages": [
+   "guide-fax.html"
+  ]
+ },
+ "9ced167e44": {
+  "ko": "팩스 사용방법",
+  "pages": [
+   "guide-fax.html"
+  ]
+ },
+ "7b3d928a1a": {
+  "ko": "종이 내용을 상대방 팩스 번호로 보내는 방법입니다. 받는 곳의 팩스 번호를 미리 알아 오세요.",
+  "pages": [
+   "guide-fax.html"
+  ]
+ },
+ "b3ef106643": {
+  "ko": "<a href=\"guide.html\">사용방법 전체</a> <a href=\"guide-video.html\">▶ 동영상</a> <a href=\"guide-print.html\">🖨️ 인쇄</a> <a href=\"guide-copy.html\">📋 복사</a> <a href=\"guide-scan.html\">📄 스캔</a>",
+  "pages": [
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html"
+  ]
+ },
+ "14d170344e": {
+  "ko": "팩둘이 (Coo Fax)",
+  "pages": [
+   "guide-fax.html"
+  ]
+ },
+ "36f07603e6": {
+  "ko": "<b>팩둘이</b><i>Coo Fax</i><span class=\"fr-pill\">팩스 담당</span><br/>안녕하세요! 저는 팩스를 담당하는 팩둘이예요. 서류를 슝~ 날려 보내는 방법을 알려 드릴게요! (저는 보내는 일만 해요)",
+  "pages": [
+   "guide-fax.html"
+  ]
+ },
+ "0183e7fa7f": {
+  "ko": "팩스 보내는 방법 <span class=\"pill\">FAX</span>",
+  "pages": [
+   "guide-fax.html"
+  ]
+ },
+ "db0addb757": {
+  "ko": "<b>종이 내용을 상대방 팩스 번호로 보내는 서비스입니다.</b> 받는 곳의 팩스 번호를 미리 알아 오셔야 합니다.",
+  "pages": [
+   "guide-fax.html"
+  ]
+ },
+ "ed4f5b0939": {
+  "ko": "<span class=\"gvid-play\">▶</span>팩스 보내는 방법 영상으로 먼저 보기 <small>소리 없이 봐도 돼요</small>",
+  "pages": [
+   "guide-fax.html"
+  ]
+ },
+ "6d6f1c71af": {
+  "ko": "📤 <b>보내기만 가능</b>합니다. 📵 받기는 안 됩니다. 외국으로 보내는 팩스도 안 됩니다.",
+  "pages": [
+   "guide-fax.html"
+  ]
+ },
+ "82b938837f": {
+  "ko": "<b>팩스 보낼 내용이 위로 보이게</b> 올리세요.",
+  "pages": [
+   "guide-fax.html"
+  ]
+ },
+ "1da4ffbe3e": {
+  "ko": "왼쪽 끝까지 <b>쭉 밀어 넣으세요.</b> <span class=\"r\">살짝만 넣으면 종이가 빨려 들어가지 않아 상대방이 백지만 받을 수 있어요.</span>",
+  "pages": [
+   "guide-fax.html"
+  ]
+ },
+ "8e7f6aa4a9": {
+  "ko": "위 · 아래 <b>문서 가드</b>를 종이 크기에 딱 맞게 붙이세요. <span class=\"r\">헐거우면 종이가 삐뚤게 들어가 상대방에게 삐뚤어진 채로 보내져요.</span>",
+  "pages": [
+   "guide-fax.html"
+  ]
+ },
+ "6988ddbef4": {
+  "ko": "여러 장이면 <b>가지런히 모아서</b> 한꺼번에 넣으세요. (<span class=\"r\">최대 30장</span>)",
+  "pages": [
+   "guide-fax.html"
+  ]
+ },
+ "8c18f5eca6": {
+  "ko": "팩스 메뉴 선택",
+  "pages": [
+   "guide-fax.html"
+  ]
+ },
+ "d224ca8408": {
+  "ko": "<span class=\"r\">반드시 원본을 먼저 놓은 뒤</span> 복합기 화면에서 <b>[팩스]</b>를 누릅니다.<br/>[팩스]를 터치하면 <b>바로 옵션 화면</b>이 나와요.",
+  "pages": [
+   "guide-fax.html"
+  ]
+ },
+ "68c69eb046": {
+  "ko": "복합기 팩스 옵션 화면. 1번 받는 곳 팩스 번호 입력, 2번 원본 크기, 3번 양면, 4번 시작 버튼에 빨간 상자",
+  "pages": [
+   "guide-fax.html"
+  ]
+ },
+ "9c26fa9b29": {
+  "ko": "번호 · 옵션 선택 · 시작",
+  "pages": [
+   "guide-fax.html"
+  ]
+ },
+ "05b3ce5bc0": {
+  "ko": "<b>① 받는 곳 팩스 번호</b>를 <b>숫자만</b> 입력합니다. <b>② 원본 크기</b>(기본 A4, 원본이 B4, A3이면 변경), <b>③ 양면/단면</b> 등 옵션을 선택한 뒤 <b>④ [시작]</b>을 누르세요.",
+  "pages": [
+   "guide-fax.html"
+  ]
+ },
+ "54c84cd0bf": {
+  "ko": "<span class=\"x\">!</span>지역번호가 있으면 꼭 같이 입력하세요",
+  "pages": [
+   "guide-fax.html"
+  ]
+ },
+ "344754cf84": {
+  "ko": "받는 곳 팩스 번호에 <b>지역번호가 있으면 반드시 지역번호까지 포함해서 모두 입력</b>하세요.<br/>예) <b>031-888-9999</b> → <b>0318889999</b> 처럼 지역번호부터 <b>숫자만</b> 빠짐없이 눌러요.",
+  "pages": [
+   "guide-fax.html"
+  ]
+ },
+ "2f32fcea70": {
+  "ko": "500원",
+  "pages": [
+   "guide-fax.html"
+  ]
+ },
+ "2399f3f169": {
+  "ko": "받는 번호와 장 수가 맞는지 꼼꼼히 확인하고, 모두 맞으면 <b>[확인]</b> 누르기.",
+  "pages": [
+   "guide-fax.html"
+  ]
+ },
+ "3cf2c3c6dc": {
+  "ko": "팩스 전송결과 확인 QR코드",
+  "pages": [
+   "guide-fax.html"
+  ]
+ },
+ "197324b979": {
+  "ko": "① 핸드폰으로<br/>QR코드 스캔",
+  "pages": [
+   "guide-fax.html"
+  ]
+ },
+ "0a35024cb6": {
+  "ko": "매장 PC 바탕화면의 팩스확인 아이콘. 주황색 바탕에 팩스기와 체크 표시",
+  "pages": [
+   "guide-fax.html"
+  ]
+ },
+ "bf1d48885e": {
+  "ko": "② PC 바탕화면<br/>[팩스확인] 아이콘 클릭",
+  "pages": [
+   "guide-fax.html"
+  ]
+ },
+ "765fc6801d": {
+  "ko": "결제 · 전송결과 확인",
+  "pages": [
+   "guide-fax.html"
+  ]
+ },
+ "ce1b3dc218": {
+  "ko": "결제 후 <b>두 가지 방법 중 편한 것</b>으로 전송 결과를 확인하세요.<br/><b>① 핸드폰으로 위 QR코드를 스캔</b>하거나, <b>② 매장 PC 바탕화면의 [팩스확인] 아이콘을 클릭</b>하면 됩니다. <span class=\"r\">인터넷 팩스라서 통신 상태와 원본 수량에 따라 오래 걸릴 수 있습니다.</span>",
+  "pages": [
+   "guide-fax.html"
+  ]
+ },
+ "ef90985b9e": {
+  "ko": "👍 <b>수량이 많은 경우 30장씩 나눠서 보내세요.</b>",
+  "pages": [
+   "guide-fax.html"
+  ]
+ },
+ "b6c1cf6f8e": {
+  "ko": "프린트샵미니 코팅 사용방법 — 결제, 예열, 코팅지 넣는 방법과 투입 방법을 사진으로 안내합니다.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "5f5e2b05d8": {
+  "ko": "코팅 사용방법 - 프린트샵미니",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "99fd9c5487": {
+  "ko": "코팅 사용방법",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "6d5f8fd88f": {
+  "ko": "인쇄물을 코팅지에 넣어 코팅하는 방법입니다. 코팅지 수량을 확인하고 결제를 먼저 해 주세요.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "c4ea4755d4": {
+  "ko": "<a class=\"on\" href=\"guide-coat.html\">✨ 코팅</a> <a href=\"guide-bind.html\">📚 제본</a>",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "c12e10bf31": {
+  "ko": "코북이 (Shelly Coat)",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "b15337a217": {
+  "ko": "<b>코북이</b><i>Shelly Coat</i><span class=\"fr-pill\">코팅 담당</span><br/>안녕하세요! 저는 코팅을 담당하는 코북이예요. 소중한 종이를 꼭 감싸서 지키는 방법을 알려 드릴게요!",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "d19d225dee": {
+  "ko": "코팅하는 방법 <span class=\"pill\">COATING</span>",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "ac2f866232": {
+  "ko": "<b>코팅지 수량을 확인하고 결제를 먼저 한 뒤, 전원을 켜서 예열(데우기)이 끝나면 코팅지를 넣는 서비스입니다.</b> 사용 후에는 반드시 전원을 꺼 주세요.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "c362a7b8f4": {
+  "ko": "🔎 코팅기가 두 종류인 매장이 있어요. 매장에 있는 코팅기를 먼저 확인하세요.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "00f8d83602": {
+  "ko": "👍 <b>두 종류의 코팅기가 모두 있는 매장</b>에서는 <b>검정색 PL-1506 코팅 전용기를 먼저 이용해 주세요.</b><br/>PL-1506은 <b>예열(기계 데우기) 속도와 코팅 속도가 더 빨라요.</b>",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "99bf0f2cd2": {
+  "ko": "<b>검정색 PL-1506 코팅기 (페이퍼프랜드)</b><i class=\"rec-tag\">👍 코팅 전용 · 먼저 이용해 주세요</i><span>전원 버튼을 누른 뒤 <b>[문서] 버튼</b>을 눌러 예열하는 코팅기입니다.</span><em>아래 &lt;PL-1506 사용방법&gt;을 따라 주세요 ↓</em>",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "dcaef26ff9": {
+  "ko": "검정색 PL-1506 코팅기 — 검정색 몸체에 은색 테두리, 오른쪽에 조작 버튼",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "eba75e3ada": {
+  "ko": "<b>흰색 SAFA-BM100 코팅기</b><i class=\"dual-tag\">🔀 코팅 · 제본 겸용기</i><span>전원 버튼을 누른 뒤 <b>코팅 버튼을 2번</b> 눌러 예열하는 코팅기입니다.</span><em>맨 아래 &lt;SAFA-BM100 사용방법&gt;을 따라 주세요 ↓</em>",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "6b9ef41737": {
+  "ko": "흰색 SAFA-BM100 코팅기 — 흰색 몸체에 남색 테두리, SAFA 로고",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "2b47596260": {
+  "ko": "검정색 코팅기(PL-1506) 사용방법 <span class=\"pill\">PL-1506</span>",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "88fd1483c3": {
+  "ko": "<b>페이퍼프랜드 PL-1506 코팅기 [문서 모드] 전용 설명서입니다.</b> 매장에 검정색 PL-1506 코팅기가 있다면 <b>이 방법대로</b> 먼저 코팅해 주세요. (흰색 SAFA-BM100만 있는 매장은 맨 아래 SAFA-BM100 방법을 따라 주세요.)",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "5fa1b0fafb": {
+  "ko": "<span class=\"gvid-play\">▶</span>검정색 PL-1506 코팅기 영상으로 먼저 보기 <small>소리 없이 봐도 돼요</small>",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "91c45c27f6": {
+  "ko": "🧾 코팅 시작 전에 먼저! <span>흰색 SAFA-BM100 · 검정색 PL-1506 공통</span>",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "3088e1274f": {
+  "ko": "<b>진열되어 있는 코팅지의 수량</b>을 먼저 확인하세요.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "71f97280c1": {
+  "ko": "필요한 수량만큼 있으면 토스 키오스크에서 <b>몇 장인지 고르고 카드로 결제</b>한 뒤, 아래 방법대로 이용해 주세요.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "94b04b9faa": {
+  "ko": "필요한 수량보다 진열된 코팅지가 적으면 <b>다음에 이용하시거나, 있는 만큼만</b> 이용해 주세요.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "66821a2886": {
+  "ko": "⚠️ <b>토스 키오스크에서 결제한 금액은 은행 계좌로 환불</b>해 드려요. 손님 부주의로 중복 결제한 건은 수수료를 뺀 금액을 보내 드려요. 중복 결제는 하지 마세요.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "975836c9d6": {
+  "ko": "검정색 PL-1506 코팅기를 위에서 본 일러스트. 사진, 무열코팅 버튼은 사용하지 않습니다.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "d87a9d8b62": {
+  "ko": "역회전",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "1c73f88a48": {
+  "ko": "문서",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "48a75a3a50": {
+  "ko": "사진",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "24158d2b1b": {
+  "ko": "무열코팅",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "b6aeb64247": {
+  "ko": "코팅지 넣는 곳",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "5a2f1b2a35": {
+  "ko": "검정색 · Paper Friend PL-1506 (위에서 본 모습)",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "476d1bd1ec": {
+  "ko": "PL-1506 조작 버튼 확대 일러스트 — 1 전원 버튼, 2 문서 버튼, 3 READY 표시등. 사진·무열코팅 버튼에는 X 표시가 있습니다.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "d6a5f301b4": {
+  "ko": "조작 버튼 확대",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "1f31d264f7": {
+  "ko": "<b>전원 버튼</b> — 눌러서 전원을 켭니다.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "07a13576c2": {
+  "ko": "<b>[문서] 버튼</b> — 눌러서 문서 모드로 설정합니다. 문서 모드 동안 버튼에 <b class=\"lr\">빨간불</b>이 계속 깜빡입니다.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "f6c5ed891d": {
+  "ko": "<b>READY 표시등</b> — 평소 <b class=\"lg\">초록불</b>이 깜빡이고, 예열 중에도 깜빡입니다. 약 60초 뒤 \"삑\" 소리와 함께 <b>깜빡임이 멈추고 켜진 채로 있으면 예열 완료</b>입니다.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "8c0cc3780f": {
+  "ko": "<b>[사진] · [무열코팅] 버튼은 절대 누르지 마세요.</b> 반드시 <b>[문서] 모드만</b> 이용하세요.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "03001e29e3": {
+  "ko": "검정색 PL-1506 코팅기 사용방법",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "67d28f0352": {
+  "ko": "코팅지 확인 · 결제 먼저!",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "583e42529a": {
+  "ko": "<b>진열되어 있는 코팅지의 수량을 먼저 확인</b>하세요.<br/>필요한 수량만큼 있으면 토스 키오스크에서 <b>몇 장인지 고르고 카드로 결제</b>한 뒤 이용해 주세요.<br/>필요한 수량보다 진열된 코팅지가 적으면 <b>다음에 이용하시거나, 있는 만큼만</b> 이용해 주세요.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "9105801aaa": {
+  "ko": "⚠️ <b>수량 확인 → 결제 → 코팅</b> 순서입니다. 반드시 결제를 먼저 하세요",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "dba01e58e4": {
+  "ko": "전원 버튼을 누르는 모습 — 전원 ON",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "75e43bbe87": {
+  "ko": "전원 버튼 누르기",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "b07a28df53": {
+  "ko": "<b>전원</b> 버튼을 눌러 전원을 켭니다. (전원 ON)",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "56b0e73469": {
+  "ko": "💡 <b>평소(기본) 상태</b> — 코팅기는 전원 코드가 항상 연결되어 있어서 <b>POWER 부분 <b class=\"lr\">빨간불</b></b>이 계속 깜빡이고, <b>READY 부분 <b class=\"lg\">초록불</b></b>도 깜빡이고 있습니다. 이 상태가 <b>정상(기본)</b>이니 고장이 아닙니다.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "3f5c377788": {
+  "ko": "문서 버튼을 누르는 모습",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "a43f6be246": {
+  "ko": "[문서] 버튼 누르기",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "2e524b2418": {
+  "ko": "<b>[문서]</b> 버튼을 눌러 문서 모드로 설정합니다.<br/>[문서] 버튼 쪽에 <b><b class=\"lr\">빨간불</b>이 깜빡이고</b>, READY <b class=\"lg\">초록불</b>도 <b>함께 깜빡이면</b> 예열이 시작된 것입니다.<br/><span class=\"r\">[사진] · [무열코팅] 버튼은 누르지 마세요. 반드시 문서 모드만 이용합니다.</span>",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "b9f96086a7": {
+  "ko": "예열 중에는 READY 초록불이 깜빡이고, 약 60초 뒤 삑 소리와 함께 깜빡임이 멈춤",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "5ea10ad2bf": {
+  "ko": "예열(데우기) 기다리기",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "6436a17fd2": {
+  "ko": "예열에는 <b>약 60초</b>가 걸립니다.<br/>60초가 지나 <b>\"삑~\" 소리</b>가 나면서 <b>READY <b class=\"lg\">초록불</b>이 깜빡임을 멈추고 켜진 채로 있으면 예열 완료</b>입니다.<br/>이때 [문서] 버튼 쪽 <b class=\"lr\">빨간불</b>은 <b>계속 깜빡이는 것이 정상</b>입니다. READY <b class=\"lg\">초록불</b>이 깜빡이는 동안에는 코팅지를 넣지 마세요.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "4dca4e9c7e": {
+  "ko": "코팅지 안에 인쇄물을 넣고 코팅기 앞에 대는 모습",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "ba20662d30": {
+  "ko": "인쇄물 넣기",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "547a0cd953": {
+  "ko": "코팅지 안에 <b>인쇄물을 넣습니다.</b>",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "add885ea06": {
+  "ko": "코팅지의 막힌 부분부터 반듯하게 넣기구에 넣는 모습",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "3d7ff6dba9": {
+  "ko": "막힌 부분부터 반듯하게 넣기",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "c0a5c86e1c": {
+  "ko": "코팅지의 <b>막힌 부분부터 수평으로</b> 투입구에 넣습니다.<br/><span class=\"r\">막힌 부분은 코팅지의 <b>짧은 쪽(위쪽) 끝</b>입니다.</span> 긴 쪽(옆면)이 아닙니다.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "c8001ba298": {
+  "ko": "코팅지를 자동으로 빨려 들어갈 때까지 조심히 밀어 넣는 모습",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "192f3f8775": {
+  "ko": "자동으로 들어갈 때까지 밀어 넣기",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "adf4011d79": {
+  "ko": "<b>평평하게</b> 천천히 밀어 넣으면 <b>입구 센서가 코팅지를 알아보고</b>, 코팅기가 <b>자동으로 빨아들입니다.</b>",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "0cc49a83a0": {
+  "ko": "코팅지를 앞쪽 투입구에 넣으면 뒤쪽으로 코팅지가 나오는 모습",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "6936d8a34a": {
+  "ko": "배출 확인",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "815c353d00": {
+  "ko": "코팅지는 <b>앞쪽 투입구로 넣으면 뒤쪽으로 나옵니다.</b> 뒤쪽으로 코팅지가 <b>배출되는 것</b>을 확인하세요.<br/><span class=\"r\">⚠️ 코팅지가 나오는 뒤쪽에는 절대 넣지 마세요. 반드시 앞쪽 투입구로만 넣습니다.</span>",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "bf79f560da": {
+  "ko": "<span class=\"x\">!</span>코팅 주의사항 — 하지 말아야 할 것과 해야 할 것, 꼭 지켜 주세요",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "4250bb186c": {
+  "ko": "🔥🚨 화재 위험 — 절대 하지 마세요! 🚨🔥",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "ca325842c3": {
+  "ko": "인쇄물만 넣으면 화재 위험",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "5671841fde": {
+  "ko": "<b>🚫 인쇄물만 넣지 마세요!</b><span>코팅지 없이 인쇄물만 코팅기에 넣으면 안 됩니다</span>",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "7f13821617": {
+  "ko": "빈 코팅지만 넣으면 화재 위험",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "afd629b35d": {
+  "ko": "<b>🚫 빈 코팅지만 넣지 마세요!</b><span>인쇄물 없이 빈 코팅지만 코팅기에 넣으면 안 됩니다</span>",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "69fd956e07": {
+  "ko": "⚠️ 이 두 가지를 하면 <b>코팅기 내부에서 불이 나 화재가 발생</b>할 수 있습니다. 🧯<br/>반드시 <b>인쇄물을 코팅지 안에 넣은 것만</b> 코팅기에 넣으세요. <b>화재와 기기 손상의 위험</b>이 있습니다.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "288f958010": {
+  "ko": "이렇게 하세요",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "566a4b0a77": {
+  "ko": "막힌 부분부터 넣는 것이 맞고 반대로 넣으면 안 됨",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "dbdbfb581d": {
+  "ko": "코팅지의 <b>막힌 부분부터</b> 넣으세요. (필수)",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "84ab8ca5e3": {
+  "ko": "자동으로 빨려 들어갈 때까지 밀어 넣는 모습",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "6f943c06c8": {
+  "ko": "<b>코팅기 투입구에 걸쳐 놓지 말고</b>, 구겨지지 않게 조심해서 <b>자동으로 빨려 들어갈 때까지 천천히 밀어 넣으세요.</b>",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "1dd5289a8e": {
+  "ko": "여러 장을 코팅할 때는 <b>먼저 넣은 코팅지가 나온 뒤</b> 다음 코팅지를 넣으세요.<br/><span class=\"warnline\">⚠️ 코팅지는 <b>앞쪽 투입구로 넣으면 뒤쪽으로 나옵니다.</b> 코팅지가 나오는 뒤쪽에는 넣지 마세요.</span>",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "39d8ca4243": {
+  "ko": "먼저 넣는 코팅지를 코팅기 앞쪽 투입구에 넣는 모습",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "dc86881bf0": {
+  "ko": "<b>① 먼저 넣는 코팅지</b>를 <b>앞쪽 투입구</b>에 넣습니다.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "f70550cfea": {
+  "ko": "먼저 넣은 코팅지가 코팅기 뒤쪽으로 완전히 나올 때까지 기다리는 모습",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "c8cc24f0ae": {
+  "ko": "<b>② 뒤쪽으로 완전히 다 나올 때까지</b> 기다립니다.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "06c854687c": {
+  "ko": "나온 코팅지를 확인하고 꺼낸 뒤 다음 코팅지를 앞쪽 투입구에 넣는 모습",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "f034390172": {
+  "ko": "<b>③ 다 나온 것을 확인</b>하고 꺼내 놓은 뒤, <b>다음 코팅지</b>를 앞쪽 투입구에 넣습니다.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "0a5c14fe7f": {
+  "ko": "사용 후 전원 버튼을 눌러 끄는 모습",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "43c9e65ee6": {
+  "ko": "사용이 끝나면 <b>전원 버튼을 눌러 전원을 끄세요.</b>",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "02bccc1b49": {
+  "ko": "이렇게 하지 마세요",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "0bf8c6a362": {
+  "ko": "코팅지보다 작은 인쇄물을 넣어 빈 공간이 생기면 코팅지가 코팅기 안에서 구겨지고 주름지는 모습",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "41d8c62a25": {
+  "ko": "▲ 왼쪽처럼 넣으면(✕) 오른쪽처럼 <b>구겨져서</b> 나옵니다.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "a2b0d67d61": {
+  "ko": "<b>코팅지보다 작게 자른 인쇄물</b>을 넣지 마세요. 코팅지(A4 · A3) 안에 빈 공간이 많으면 그 부분은 인쇄물 없이 코팅지끼리만 붙어 나와 <b>구겨지고 주름</b>이 집니다.<br/>특히 인쇄물이 코팅지의 <b>막힌 부분까지 닿아 있지 않으면</b>, 먼저 들어가는 막힌 부분의 <b>모서리가 코팅기 안에서 구겨져 걸리거나</b> 구겨진 채 나올 수 있습니다.<br/>👉 인쇄물은 <b>코팅지 크기에 맞게, 막힌 부분까지 닿도록</b> 넣어 주세요.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "d17f35fc95": {
+  "ko": "가져온 인쇄물은 사용 불가",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "ae6130c1a5": {
+  "ko": "<b>가져온 인쇄물</b>은 사용할 수 없습니다. (매장 종이와 다른 종이는 안 돼요)",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "1b02b495a8": {
+  "ko": "가져온 코팅지는 사용 불가",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "88d9535841": {
+  "ko": "<b>가져온 코팅지</b>는 사용할 수 없습니다. (매장 종이와 다른 종이는 안 돼요)",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "4cf82ef35f": {
+  "ko": "작동 중 버튼을 누르면 안 됨",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "43d2e99a00": {
+  "ko": "<b>코팅기가 움직일 때는 버튼을 누르지 마세요.</b> (잘못 누르면 안 돼요)",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "ffe44228ca": {
+  "ko": "※ 흰색 SAFA-BM100 · 검정색 PL-1506 <b>모든 코팅기에 똑같이 적용</b>되는 주의사항입니다.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "7cdba01453": {
+  "ko": "흰색 코팅기(SAFA-BM100) 사용방법 <span class=\"pill\">SAFA-BM100</span>",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "1d82a059c3": {
+  "ko": "<b>흰색 SAFA-BM100 코팅 · 제본 겸용기 설명서입니다.</b> 두 종류의 코팅기가 모두 있는 매장에서는 위쪽 PL-1506을 먼저 이용해 주세요. 흰색 SAFA-BM100만 있는 매장은 <b>이 방법대로</b> 코팅해 주세요.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "ec8e509181": {
+  "ko": "<span class=\"gvid-play\">▶</span>흰색 SAFA-BM100 코팅기 영상으로 먼저 보기 <small>소리 없이 봐도 돼요</small>",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "f2b8aee9d1": {
+  "ko": "흰색 SAFA-BM100 코팅기 사용방법",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "1a11eeaf97": {
+  "ko": "🔀 이 기계(SAFA-BM100)는 <b>코팅 · 제본 겸용 기계</b>입니다",
+  "pages": [
+   "guide-coat.html",
+   "guide-bind.html"
+  ]
+ },
+ "330a439ccc": {
+  "ko": "🚫 <b>위쪽 긴 투입구는 「제본표지」 전용</b>입니다. <b>코팅지는 절대 위쪽 투입구에 넣지 마세요!</b><br/>코팅지는 <b>아래(앞쪽) 투입구</b>에만 넣습니다. 코팅지를 위쪽 투입구에 넣으면 코팅지가 걸려 기계가 고장 날 수 있습니다.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "280ffc8cdf": {
+  "ko": "SAFA-BM100 코팅·제본 겸용기: 위쪽 긴 투입구는 제본표지 투입구(코팅지 넣지 않기), 아래 앞쪽 투입구가 코팅지 투입구",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "5ca2de39c5": {
+  "ko": "<b>진열되어 있는 코팅지의 수량을 먼저 확인</b>하세요.<br/>필요한 수량만큼 있으면 기계 옆 토스 키오스크에서 <b>몇 장인지 고르고 카드로 결제</b>한 뒤 이용해 주세요.<br/>필요한 수량보다 진열된 코팅지가 적으면 <b>다음에 이용하시거나, 있는 만큼만</b> 이용해 주세요.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "85d91590ae": {
+  "ko": "전원 버튼을 누르는 모습",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "97274acd77": {
+  "ko": "코팅 버튼을 2번 누르는 모습",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "5bdb7683bd": {
+  "ko": "전원 켜기 · 예열",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "637fe3fa8f": {
+  "ko": "<b>전원</b> 버튼을 누르고 <b>코팅</b> 버튼을 <b>2번</b> 누르세요.<br/>불이 깜빡이다가 3~5분 후 <b>\"삐\"</b> 소리와 함께 불이 켜지면 예열 완료입니다.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "46f60f3826": {
+  "ko": "⚠️ 코팅 버튼을 <b>3번 이상</b> 눌렀을 땐 <b>전원 버튼을 눌러 끈 후</b>, 다시 처음부터 <b>전원 버튼을 누르고 코팅 버튼을 2번</b> 누르세요.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "8d996c8457": {
+  "ko": "코팅지 안에 인쇄물을 넣는 모습",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "d9a126269e": {
+  "ko": "코팅지에 인쇄물 넣기",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "c655887f72": {
+  "ko": "코팅지(코팅 파우치) <b>안에 인쇄물을 가지런히</b> 넣으세요.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "f2c7dafb81": {
+  "ko": "코팅지의 막힌 부분부터 투입구에 수평으로 넣는 모습",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "d97ce38717": {
+  "ko": "코팅기에 넣기",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "030a3eb1d4": {
+  "ko": "코팅지의 <b>막힌 부분부터</b> 투입구에 넣으세요.<br/><b>수평으로 반듯하게, 구겨지지 않게</b> 넣어 주세요.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "12acac77d5": {
+  "ko": "코팅지가 뒷면으로 나올 때 걸리지 않는지 지켜보는 모습",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "219bb5aca1": {
+  "ko": "나오는 코팅지 확인",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "10916e5f72": {
+  "ko": "코팅지가 <b>뒷부분으로 나올 때</b> 주변에 걸리지 않고 잘 나오는지 지켜봐 주세요.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "db183c0ca7": {
+  "ko": "전원 OFF",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "6f6f5dec11": {
+  "ko": "사용이 끝나면 <b>반드시 전원을 끄세요.</b>",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "0fb1bb6653": {
+  "ko": "전원을 끄지 않으면 다음 이용자에게 피해가 발생합니다.",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "559ef6c96f": {
+  "ko": "여러 장을 코팅할 때는 <b>먼저 넣은 코팅지가 나온 뒤</b> 다음 코팅지를 넣으세요.<span class=\"warnline\">⚠️ 코팅지는 <b>앞쪽 투입구로 넣으면 뒤쪽으로 나옵니다.</b> 코팅지가 나오는 뒤쪽에는 넣지 마세요.</span>",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "c79fe2c849": {
+  "ko": "먼저 넣는 코팅지를 SAFA-BM100 앞쪽 투입구에 넣는 모습",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "d1480cbb78": {
+  "ko": "🚫 <b>위쪽 제본표지 투입구</b>에 코팅지를 넣지 마세요. (코팅지는 <b>아래 앞쪽 투입구</b>로만)",
+  "pages": [
+   "guide-coat.html"
+  ]
+ },
+ "6ff99c403e": {
+  "ko": "프린트샵미니 제본 사용방법 — 열제본기 예열, 표지에 넣는 방법, 투입과 10분 이상 냉각까지 안내합니다.",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "b88fb27269": {
+  "ko": "제본 사용방법 - 프린트샵미니",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "630cf56eaf": {
+  "ko": "제본 사용방법",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "abe00781eb": {
+  "ko": "인쇄물을 열제본표지에 넣어 책처럼 묶는 방법입니다. 표지 수량을 확인하고 결제를 먼저 해 주세요. 10분 이상 식히는 것도 꼭 지켜 주세요.",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "8b303eabf0": {
+  "ko": "<a href=\"guide-coat.html\">✨ 코팅</a> <a class=\"on\" href=\"guide-bind.html\">📚 제본</a>",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "9f2a364ca4": {
+  "ko": "차곡이 (Stacky)",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "e69d9876cf": {
+  "ko": "<b>차곡이</b><i>Stacky</i><span class=\"fr-pill\">제본 담당</span><br/>안녕하세요! 저는 제본을 담당하는 차곡이예요. 종이를 차곡차곡 엮어 책으로 만드는 방법을 알려 드릴게요!",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "2bde84b7e1": {
+  "ko": "제본하는 방법 <span class=\"pill\">BINDING</span>",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "17a2b8b182": {
+  "ko": "<b>인쇄물을 열제본표지에 넣고 본드(풀)를 열로 녹여 붙여서 책처럼 만드는 서비스입니다.</b> 열제본표지 고르고 결제 → 예열(데우기) → 기계에 넣기 → 타이머 → 10분 이상 식히기 순서로 해요. 논문 · 보고서 · 계약서 등에 활용하세요.",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "6584dc71af": {
+  "ko": "<span class=\"gvid-play\">▶</span>제본하는 방법 영상으로 먼저 보기 <small>소리 없이 봐도 돼요</small>",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "311010a7f3": {
+  "ko": "📖 열제본은 이런 방법이에요",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "bd2a88ee8e": {
+  "ko": "<b>본드로 붙이는 방법</b>이에요. 구멍을 뚫거나 스프링 · 끈으로 묶지 않아요.<br/>표지 안쪽 <b>본드(풀)에 종이 끝이 닿게</b> 넣고, 열제본기의 <b>열로 본드를 녹여</b> 종이를 붙여요.",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "f4908af05c": {
+  "ko": "표지마다 <b>넣을 수 있는 종이 수</b>가 정해져 있어요. <b>표지에 적힌 매(장) 수까지만</b> 넣을 수 있어요. <span style=\"font-weight:600\">(매장에 따라 '매' 또는 '장'으로 적혀 있어요. 뜻은 같아요.)</span><br/><b>20 · 40 · 60 · 80 · 100 · 120 · 150 · 180 · 200매(장)</b> 표지가 있어요.",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "2c0dff762d": {
+  "ko": "값은 <b>두께와 상관없이 표지 1개에 1,500원</b>이에요.",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "0e66d5646b": {
+  "ko": "<b>너무 적은 장 수는 제본할 수 없어요.</b><br/>예) <b>5장 · 10장</b>은 2mm 표지에도 안 돼요. 본드가 붙은 옆면의 <b>빈 공간이 너무 커서</b> 붙지 않아요.",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "7387b8a082": {
+  "ko": "<b>장 수가 딱 맞는 표지가 없으면?</b><br/>인쇄물 장 수에 <b>가까운 두께의 표지 2개</b>를 꺼내 <b>각각 넣어 보고</b>, <b>빈 공간이 더 적게 남는 표지</b>를 쓰세요.<br/><b>예)</b> 110장이면 <b>10mm 표지와 12mm 표지</b>에 모두 넣어 보세요.",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "a52d3f6132": {
+  "ko": "제본표지는 <b>위쪽 긴 투입구</b>에 넣습니다. 아래(앞쪽) 투입구는 <b>코팅지 전용</b>이에요. 코팅지는 코팅 사용방법에서 안내합니다.",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "cf13037fe9": {
+  "ko": "SAFA-BM100 코팅·제본 겸용기: 위쪽 긴 투입구가 제본표지 투입구, 아래 앞쪽 투입구는 코팅지 투입구",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "5fab9592f2": {
+  "ko": "🧾 제본 시작 전에 먼저!",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "d1f6ed7b6f": {
+  "ko": "<b>내 인쇄물 장 수에 맞는 열제본표지</b>를 먼저 고르세요.<span class=\"eg\"><b>예)</b> 인쇄물이 20장이면 <b>20매(장) 표지(2mm)</b>를 쓰세요.<br/>진열 케이스에 표지가 <b>20매(장) · 40매(장) · 60매(장) · 80매(장) · 100매(장) · 120매(장) · 150매(장) · 180매(장) · 200매(장)</b>로 붙어 있어요. <span style=\"font-weight:600\">(매장에 따라 '매' 또는 '장'으로 적혀 있어요. 뜻은 같아요.)</span></span><span class=\"eg\"><b>🤔 장 수가 딱 맞는 표지가 없으면?</b><br/>인쇄물 장 수에 <b>가까운 두께의 표지 2개</b>를 꺼내 <b>각각 넣어 보고</b>, <b>빈 공간이 더 적게 남는 표지</b>를 쓰세요.<br/><b>예)</b> 110장이면 <b>10mm 표지와 12mm 표지</b>에 모두 넣어 보세요.</span>",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "10717367a0": {
+  "ko": "고른 열제본표지가 <b>필요한 개수만큼 있는지 확인</b>한 뒤, 토스 키오스크에서 결제해 주세요.",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "6ae8c1fbea": {
+  "ko": "⚠️ <b>토스 키오스크에서 결제한 금액은 은행 계좌로 환불</b>해 드려요. 손님 부주의로 중복 결제한 건은 수수료를 뺀 금액을 보내 드려요. 반드시 필요한 개수만큼 있는지 확인한 뒤 결제해 주세요.",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "67fe7523a6": {
+  "ko": "열제본표지 선택 · 결제 먼저!",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "c75f2be4d2": {
+  "ko": "<b>내 인쇄물 장 수에 맞는 열제본표지를 먼저 고르세요.</b><span class=\"eg\"><b>예)</b> 인쇄물이 20장이면 <b>20매(장) 표지(2mm)</b>를 쓰세요.<br/>진열 케이스에 표지가 <b>20매(장) · 40매(장) · 60매(장) · 80매(장) · 100매(장) · 120매(장) · 150매(장) · 180매(장) · 200매(장)</b>로 붙어 있어요. <span style=\"font-weight:600\">(매장에 따라 '매' 또는 '장'으로 적혀 있어요. 뜻은 같아요.)</span></span><span class=\"eg\"><b>🤔 장 수가 딱 맞는 표지가 없으면?</b><br/>인쇄물 장 수에 <b>가까운 두께의 표지 2개</b>를 꺼내 <b>각각 넣어 보고</b>, <b>빈 공간이 더 적게 남는 표지</b>를 쓰세요.<br/><b>예)</b> 110장이면 <b>10mm 표지와 12mm 표지</b>에 모두 넣어 보세요.</span>고른 열제본표지가 <b>필요한 개수만큼 있는지 확인</b>한 뒤 <b>토스 키오스크에서 결제</b>해 주세요.",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "f2b6d4b4e0": {
+  "ko": "전원 버튼을 누른 후 온열 버튼을 누르는 모습",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "e19cc30a9d": {
+  "ko": "전원 켜기 · 예열(데우기)",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "a06f5da219": {
+  "ko": "<b>전원</b> 버튼을 누른 후 <b>온열</b> 버튼을 한 번 누르세요.<br/>불이 깜빡이다가 3분 후 알람과 함께 불이 멈추면 예열 완료입니다.",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "c8a9115daf": {
+  "ko": "기계 뒷면의 제본 용지 냉각 트레이를 손으로 당겨 투입구를 여는 모습",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "5d4e22f328": {
+  "ko": "입구 열기",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "1a40bfa5b5": {
+  "ko": "기계 <b>뒷면의 식히는 판(냉각 트레이)</b>을 당겨서 입구를 열어 주세요.",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "f9b4cec9c9": {
+  "ko": "열제본표지 단면 구조 — PET 투명 비닐커버, 종이커버, 표지규격(제본 본드 부분)",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "f70d7f84bd": {
+  "ko": "열제본표지 앞면 비닐커버 · 뒷면 종이커버",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "c3abe297b4": {
+  "ko": "열제본표지에 인쇄물 넣기",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "0a33a7b916": {
+  "ko": "열제본 전용 표지 안에 인쇄물을 넣으세요. 이때 <b>안쪽 본드(제본선)에 가지런히 잘 닿도록 각을 맞춰</b> 주세요.<br/>표지는 앞면이 <b>투명한 비닐커버</b>, 뒷면이 <b>종이커버</b>입니다.",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "e54ea07fdf": {
+  "ko": "SAFA-BM100 제본기 투입구에 제본표지를 세워서 넣는 모습",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "26e668df39": {
+  "ko": "기계에 넣기",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "421b70af00": {
+  "ko": "표지의 <b>막힌 부분부터</b> 투입구에 넣으세요.<br/>더 이상 안 들어갈 때까지 <b>깊숙이</b> 밀어 넣어 주세요.",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "6ed2a8c969": {
+  "ko": "🚨 <b>열제본표지 뒷면은 종이입니다.</b> 투입구에 <span class=\"hl\">모서리 등이 걸려 찢어지거나 손상되지 않게</span> 조심히 넣어 주세요.<br/><span class=\"hl\">특히 120매(장)~200매(장)처럼 두꺼운 표지일수록</span> 넣을 때 표지가 손상되지 않게 더 조심해 주세요.<span class=\"refund\">⚠️ 취급 부주의로 표지가 찢어진 경우 환불·교환이 어렵습니다.</span>",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "42b2f3949b": {
+  "ko": "타이머 작동",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "f8f687dcff": {
+  "ko": "<b>타이머</b> 버튼을 누르세요.<br/>불이 다시 깜빡이다가 <b>1분 뒤 알람 소리</b>와 함께 불이 멈추면 꺼내세요.",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "4b63d357a4": {
+  "ko": "🚨 꺼낼 때도 <b>5단계와 같이</b> 열제본표지 <b>뒷면 종이</b>가 <span class=\"hl\">투입구에 걸려 찢어지거나 손상되지 않게</span> 조심히 빼 주세요.<br/><span class=\"hl\">막 넣고 막 빼면 표지 뒷면 종이가 찢어질 수 있습니다.</span><span class=\"refund\">⚠️ 취급 부주의로 표지가 찢어진 경우 환불·교환이 어렵습니다.</span>",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "c3aba006b2": {
+  "ko": "제본기 냉각 트레이에 제본한 인쇄물을 세워 식히는 모습",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "04b7d2eb58": {
+  "ko": "▲ 이 <b>식히는 판(냉각 트레이)</b>에 <b>막힌 부분이 아래</b>로 가게 세워 두고 식혀 주세요.",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "bdf4f55f2c": {
+  "ko": "10분 이상 식힌 뒤 끝",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "d3991abf21": {
+  "ko": "꺼낸 직후에는 <b>절대 열지 마세요.</b><br/><b>제본기 식히는 판(냉각 트레이)에 넣거나</b> 평평한 곳에 놓고 <b>10분 이상</b> 식힌 뒤 펼치세요.<br/><b>두꺼울수록 10분보다 더 오래</b> 두어, <b>옆면이 더 이상 뜨겁지 않고</b> 열제본표지 안의 <b>풀(본드)이 완전히 식어 굳을 때까지</b> 기다려 주세요.",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "7129c5a14c": {
+  "ko": "📌 <b>식히는 판(냉각 트레이)에는 <span class=\"hl\">막힌 부분(본드 쪽)이 아래</span></b>로 가게 세워서 넣으세요.<br/><b>거꾸로 넣지 마세요.</b>",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "9c85e20504": {
+  "ko": "🚨 <b>꼭 식히세요!</b> <span class=\"hl\">풀(본드)이 굳기 전에 열면 인쇄물이 다 떨어집니다.</span>",
+  "pages": [
+   "guide-bind.html"
+  ]
+ },
+ "debcfc9c8b": {
+  "ko": "프린트샵미니 사용방법 동영상 — 인쇄·복사·스캔·팩스·코팅·제본 이용 순서를 그림 영상으로 안내합니다.",
+  "pages": [
+   "guide-video.html"
+  ]
+ },
+ "002879e1cd": {
+  "ko": "사용방법 동영상 - 프린트샵미니",
+  "pages": [
+   "guide-video.html"
+  ]
+ },
+ "44badd129f": {
+  "ko": "사용방법 동영상",
+  "pages": [
+   "guide-video.html"
+  ]
+ },
+ "818d51de6e": {
+  "ko": "인쇄 · 복사 · 스캔 · 팩스 · 코팅 · 제본 이용 순서를 그림 영상으로 쉽게 보여 드려요. 소리 없이 봐도 자막으로 알 수 있어요.",
+  "pages": [
+   "guide-video.html"
+  ]
+ },
+ "94dbc69e52": {
+  "ko": "<a href=\"guide.html\">사용방법 전체</a> <a class=\"on\" href=\"guide-video.html\">▶ 동영상</a> <a href=\"guide-print.html\">🖨️ 인쇄</a> <a href=\"guide-copy.html\">📋 복사</a> <a href=\"guide-scan.html\">📄 스캔</a>",
+  "pages": [
+   "guide-video.html"
+  ]
+ },
+ "84314ee771": {
+  "ko": "영상으로 보는 사용방법",
+  "pages": [
+   "guide-video.html"
+  ]
+ },
+ "c2f3deba3d": {
+  "ko": "보고 싶은 서비스의 영상을 눌러 보세요. 매장에서는 <b>소리 없이 봐도</b> 화면 아래 자막으로 순서를 알 수 있어요.",
+  "pages": [
+   "guide-video.html"
+  ]
+ },
+ "5867fe7559": {
+  "ko": "<a class=\"vcard-go\" href=\"guide-print.html\">🖼️ 그림으로 보는 사용방법 →</a>",
+  "pages": [
+   "guide-video.html"
+  ]
+ },
+ "2e9be8383e": {
+  "ko": "<span class=\"vlen\">1분 17초</span>",
+  "pages": [
+   "guide-video.html"
+  ]
+ },
+ "68de07ba49": {
+  "ko": "인쇄하는 방법",
+  "pages": [
+   "guide-video.html"
+  ]
+ },
+ "52bc8f5760": {
+  "ko": "<a class=\"vcard-go\" href=\"guide-copy.html\">🖼️ 그림으로 보는 사용방법 →</a>",
+  "pages": [
+   "guide-video.html"
+  ]
+ },
+ "14bd75e061": {
+  "ko": "<span class=\"vlen\">1분 43초</span>",
+  "pages": [
+   "guide-video.html"
+  ]
+ },
+ "ac31ab86f6": {
+  "ko": "복사하는 방법",
+  "pages": [
+   "guide-video.html"
+  ]
+ },
+ "580866e3b6": {
+  "ko": "<a class=\"vcard-go\" href=\"guide-scan.html\">🖼️ 그림으로 보는 사용방법 →</a>",
+  "pages": [
+   "guide-video.html"
+  ]
+ },
+ "4df544603c": {
+  "ko": "<span class=\"vlen\">1분 55초</span>",
+  "pages": [
+   "guide-video.html"
+  ]
+ },
+ "0e03da8a83": {
+  "ko": "스캔하는 방법",
+  "pages": [
+   "guide-video.html"
+  ]
+ },
+ "43fbfe82e6": {
+  "ko": "<a class=\"vcard-go\" href=\"guide-fax.html\">🖼️ 그림으로 보는 사용방법 →</a>",
+  "pages": [
+   "guide-video.html"
+  ]
+ },
+ "a10a869511": {
+  "ko": "<span class=\"vlen\">1분 49초</span>",
+  "pages": [
+   "guide-video.html"
+  ]
+ },
+ "51203a9bf2": {
+  "ko": "팩스 보내는 방법",
+  "pages": [
+   "guide-video.html"
+  ]
+ },
+ "1a4817de43": {
+  "ko": "<a class=\"vcard-go\" href=\"guide-coat.html#pl1506\">🖼️ 그림으로 보는 사용방법 →</a>",
+  "pages": [
+   "guide-video.html"
+  ]
+ },
+ "fdf8773a8c": {
+  "ko": "<span class=\"vlen\">1분 35초</span>",
+  "pages": [
+   "guide-video.html"
+  ]
+ },
+ "29d23549cf": {
+  "ko": "코팅하는 방법 · 검정색 PL-1506",
+  "pages": [
+   "guide-video.html"
+  ]
+ },
+ "68ee36223d": {
+  "ko": "<a class=\"vcard-go\" href=\"guide-coat.html#safa\">🖼️ 그림으로 보는 사용방법 →</a>",
+  "pages": [
+   "guide-video.html"
+  ]
+ },
+ "f88d9a7f33": {
+  "ko": "<span class=\"vlen\">1분 37초</span>",
+  "pages": [
+   "guide-video.html"
+  ]
+ },
+ "3ce999b24d": {
+  "ko": "코팅하는 방법 · 흰색 SAFA-BM100",
+  "pages": [
+   "guide-video.html"
+  ]
+ },
+ "285f32a617": {
+  "ko": "<a class=\"vcard-go\" href=\"guide-bind.html\">🖼️ 그림으로 보는 사용방법 →</a>",
+  "pages": [
+   "guide-video.html"
+  ]
+ },
+ "acbdae6350": {
+  "ko": "<span class=\"vlen\">2분 9초</span>",
+  "pages": [
+   "guide-video.html"
+  ]
+ },
+ "7f5cff6efe": {
+  "ko": "제본하는 방법",
+  "pages": [
+   "guide-video.html"
+  ]
+ },
+ "a2460ab6e3": {
+  "ko": "<a class=\"vcard-go\" href=\"faq.html#faq-24\">🖼️ 그림으로 보는 사용방법 →</a>",
+  "pages": [
+   "guide-video.html"
+  ]
+ },
+ "3344e8a8e5": {
+  "ko": "<span class=\"vlen\">1분 41초</span>",
+  "pages": [
+   "guide-video.html"
+  ]
+ },
+ "b096909980": {
+  "ko": "카드가 없을 때 · 토스 키오스크 선불충전",
+  "pages": [
+   "guide-video.html"
   ]
  }
 }

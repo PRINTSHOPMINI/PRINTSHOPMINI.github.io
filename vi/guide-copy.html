@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<meta content="Hướng dẫn photo của PrintShop Mini — các bước photo trên máy in đa năng và cách photo thẻ căn cước, sổ ngân hàng, hộ chiếu, sách." name="description"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cách photo - PrintShop Mini</title>
+<link href="https://www.printshopmini.com/vi/guide-copy.html" rel="canonical"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&amp;family=Jua&amp;family=Gamja+Flower&amp;display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#1B8AC4;--blue-hover:#1470A8;--blue-light:#E8F4FC;--blue-mid:#4AAAD6;
+  --text:#111827;--text2:#374151;--text3:#6B7280;--border:#E5E7EB;
+  --bg:#F9FAFB;--white:#FFFFFF;--radius:14px;
+  --print:#22B24C;--copy:#018FFB;--scan:#12BDB0;--fax:#F3732C;--warn:#D93025;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--white);line-height:1.7;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:70px;display:flex;align-items:center;padding:0 6%}
+.nav-logo{display:flex;align-items:center;gap:10px;flex-shrink:0;margin-right:48px}
+.nav-logo img.logo-img{width:36px;height:36px;object-fit:contain;border-radius:8px}
+.nav-logo-name{font-size:17px;font-weight:900;color:var(--blue);letter-spacing:-0.5px}
+.nav-links{display:flex;list-style:none;gap:2px;flex:1}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);padding:8px 16px;border-radius:8px;transition:all .18s}
+.nav-links a:hover,.nav-links a.active{color:var(--blue);background:var(--blue-light)}
+.nav-right{display:flex;align-items:center;gap:0;margin-left:auto}
+.nav-cta{background:var(--blue);color:white;font-size:13px;font-weight:700;padding:9px 22px;border-radius:50px;transition:background .2s;white-space:nowrap}
+.nav-cta:hover{background:var(--blue-hover)}
+.nav-raccoon{width:56px;height:56px;flex-shrink:0;margin-left:6px;position:relative;top:2px}
+.nav-raccoon img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.15));transition:transform .3s}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{width:22px;height:2px;background:var(--text);border-radius:2px;display:block}
+
+/* PAGE HEADER */
+.page-header{margin-top:70px;background:var(--white);border-bottom:1px solid var(--border);padding:52px 6% 44px}
+.ph-inner{max-width:1160px;margin:0 auto}
+.ph-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:var(--blue);letter-spacing:1px;margin-bottom:14px}
+.ph-eyebrow::before{content:'';width:20px;height:2px;background:var(--blue);border-radius:2px}
+.ph-h1{font-size:clamp(28px,4vw,48px);font-weight:900;letter-spacing:-2px;margin-bottom:10px}
+.ph-sub{font-size:15px;color:var(--text3)}
+
+/* 경고 배너 */
+.warnbar{background:#FEF2F2;border-bottom:1px solid #FADCDC;padding:18px 6%}
+.warnbar-in{max-width:1160px;margin:0 auto;display:flex;gap:14px;align-items:flex-start}
+.warnbar-ico{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:var(--warn);color:#fff;font-size:15px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.warnbar-tx{font-size:14.5px;font-weight:700;color:#8A1C15;line-height:1.6}
+.warnbar-tx span{font-weight:500;color:#A3453E;display:block;margin-top:3px;font-size:13.5px}
+
+/* 탭 */
+.tabs{background:var(--bg);border-bottom:1px solid var(--border);padding:0 6%;position:sticky;top:70px;z-index:100}
+.tabs-in{max-width:1160px;margin:0 auto;display:flex;overflow-x:auto}
+.tabs-in::-webkit-scrollbar{display:none}
+.tab{padding:16px 20px;font-size:13.5px;font-weight:700;color:var(--text3);white-space:nowrap;cursor:pointer;border-bottom:2px solid transparent;transition:all .2s;background:none;border-top:none;border-left:none;border-right:none;font-family:inherit}
+.tab:hover,.tab.on{color:var(--blue);border-bottom-color:var(--blue)}
+
+/* 섹션 */
+.sec{padding:64px 6%;border-bottom:1px solid var(--border)}
+.sec.alt{background:var(--bg)}
+.sec-in{max-width:1160px;margin:0 auto}
+.sec-head{display:flex;align-items:center;gap:18px;margin-bottom:10px;flex-wrap:wrap}
+.sec-ico{width:60px;height:60px;border-radius:16px;background:var(--sc-light,var(--blue-light));display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.sec-h2{font-size:clamp(22px,3vw,32px);font-weight:900;letter-spacing:-1px}
+.sec-tagline{font-size:14.5px;color:var(--text3);margin-bottom:34px}
+.pill{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.5px;padding:4px 11px;border-radius:50px;background:var(--sc,var(--blue));color:#fff;vertical-align:middle;margin-left:2px}
+
+/* 단계 카드 */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:18px}
+.step{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px 22px 26px;display:flex;flex-direction:column}
+.sec.alt .step{background:var(--white)}
+.step-no{width:32px;height:32px;border-radius:50%;background:var(--sc,var(--blue));color:#fff;font-size:15px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.step-fig{min-height:106px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.step-h{font-size:16.5px;font-weight:900;letter-spacing:-.4px;margin-bottom:7px;line-height:1.35}
+.step-p{font-size:13.8px;color:var(--text2);line-height:1.65}
+.step-p b{font-weight:700;color:var(--sc,var(--blue))}
+.step-p .r{color:var(--warn);font-weight:700}
+
+/* 핵심 팁 */
+.tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:18px}
+.tip{border:2px solid var(--blue-light);border-radius:var(--radius);padding:26px 24px;background:var(--white);text-align:center}
+.tip-fig{margin-bottom:12px;display:flex;justify-content:center}
+.tip-h{font-size:17px;font-weight:900;color:var(--blue);margin-bottom:8px;letter-spacing:-.4px}
+.tip-p{font-size:14px;color:var(--text2);line-height:1.65}
+.tip-p b{font-weight:700;color:var(--text)}
+
+.sec-rule{height:4px;border-radius:4px;background:var(--sc,var(--blue));width:56px;margin-bottom:16px}
+.subhead{font-size:15px;font-weight:900;color:var(--sc,var(--blue));margin:34px 0 14px;padding-left:12px;border-left:4px solid var(--sc,var(--blue))}
+
+/* 용어 카드 */
+.terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:18px}
+.term{border:2px solid var(--tc);border-radius:var(--radius);background:var(--white);padding:0;overflow:hidden;display:flex;flex-direction:column}
+.term-top{background:var(--tc);padding:14px 20px;display:flex;align-items:center;gap:12px}
+.term-name{font-size:20px;font-weight:900;color:#fff;letter-spacing:-.6px}
+.term-en{font-size:11.5px;font-weight:800;color:#fff;opacity:.8;letter-spacing:.6px}
+.term-body{padding:22px 20px 24px;flex:1;display:flex;flex-direction:column}
+.term-flow{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.term-chip{font-size:13px;font-weight:800;padding:6px 13px;border-radius:50px;background:#F1F4F7;color:var(--text2)}
+.term-arrow{font-size:15px;font-weight:900;color:var(--tc)}
+.term-def{font-size:14.5px;font-weight:700;line-height:1.6;margin-bottom:10px}
+.term-ex{font-size:13.4px;color:var(--text3);line-height:1.65}
+.term-ex b{color:var(--text2);font-weight:700}
+
+/* ADF 금지 원본 경고 */
+.adfw{border:2.5px solid #E4574D;border-radius:var(--radius);background:#FEF6F5;padding:22px 24px;margin-top:22px}
+.adfw-h{display:flex;gap:11px;align-items:center;font-size:18px;font-weight:900;color:#B31E16;margin-bottom:14px;line-height:1.35}
+.adfw-h .x{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:#C0261C;color:#fff;font-size:16px;font-weight:900;display:flex;align-items:center;justify-content:center}
+.adfw-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.adfw-box{background:#fff;border-radius:10px;padding:16px 18px}
+.adfw-box.ok{border:1.5px solid #BFE3C6}
+.adfw-box.no{border:1.5px solid #F3C3BF}
+.adfw-t{font-size:14.5px;font-weight:900;margin-bottom:9px}
+.adfw-box.ok .adfw-t{color:#1B7A2C}
+.adfw-box.no .adfw-t{color:#C0261C}
+.adfw-box ul{margin:0;padding-left:17px}
+.adfw-box li{font-size:13.6px;color:var(--text2);line-height:1.6;margin-bottom:5px}
+.adfw-foot{margin-top:15px;font-size:13.8px;line-height:1.65;color:#8A1C15;font-weight:600}
+.adfw-foot b{font-weight:900;color:#B31E16}
+
+/* 커버 여는 안내 */
+.openbox{margin-bottom:20px}
+.ob{background:#fff;border:2px solid var(--sc,var(--blue));border-radius:var(--radius);padding:18px;display:flex;gap:22px;align-items:center}
+@media(max-width:760px){.ob{flex-direction:column}}
+.ob-fig{flex:0 0 46%;display:flex;justify-content:center}
+.ob-h{font-size:16px;font-weight:900;margin-bottom:6px;line-height:1.35}
+.ob-p{font-size:13.6px;color:var(--text2);line-height:1.62}
+.ob-p b{color:var(--sc,var(--blue));font-weight:700}
+.ob-p .r{color:var(--warn);font-weight:700}
+
+/* 특수 복사 카드 */
+.minis{display:grid;grid-template-columns:repeat(auto-fit,minmax(304px,1fr));gap:18px}
+.mini{border:1px solid var(--border);border-radius:var(--radius);background:#fff;overflow:hidden;display:flex;flex-direction:column}
+.mini-top{background:var(--sc,var(--blue));color:#fff;padding:13px 18px;font-size:16.5px;font-weight:900;display:flex;align-items:center;gap:10px;letter-spacing:-.4px}
+.mini-fig{margin:0 0 16px}
+.mini-fig img{width:100%;border-radius:8px;border:1px solid var(--border);display:block}
+.mini-body{padding:20px 18px 22px;flex:1;display:flex;flex-direction:column}
+.mini ol{margin:0;padding-left:19px}
+.mini li{font-size:13.8px;color:var(--text2);line-height:1.62;margin-bottom:10px}
+.mini li:last-child{margin-bottom:0}
+.mini li b{color:var(--sc,var(--blue));font-weight:700}
+.mini li .r{color:var(--warn);font-weight:700}
+.mini-warn{margin-top:14px;background:#FEF2F2;border:2px solid #E4574D;border-radius:10px;padding:14px 16px}
+.mini-warn-h{font-size:14.5px;font-weight:900;color:#C0261C;line-height:1.45;display:flex;gap:8px;align-items:flex-start;margin-bottom:6px}
+.mini-warn-h .x{flex:0 0 auto;width:20px;height:20px;border-radius:50%;background:#C0261C;color:#fff;font-size:13px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.mini-warn-p{font-size:13.2px;color:#8A1C15;line-height:1.6;font-weight:600;padding-left:28px}
+.mini-warn-p b{font-weight:900;color:#C0261C}
+.mini-note{margin-top:14px;background:#F5F8FA;border-radius:9px;padding:13px 15px;font-size:13px;color:var(--text2);line-height:1.6}
+.mini-note b{color:var(--text);font-weight:700}
+
+/* MS 오피스 서브탭 */
+.otabs{display:flex;gap:8px;margin-bottom:30px;flex-wrap:wrap}
+.otab{padding:10px 22px;font-size:13.5px;font-weight:800;border-radius:50px;border:2px solid var(--border);background:#fff;color:var(--text2);cursor:pointer;font-family:inherit;transition:all .18s}
+.otab:hover{border-color:var(--blue);color:var(--blue)}
+.otab.on{background:var(--blue);border-color:var(--blue);color:#fff}
+
+/* MS 오피스 화면 목업 (실제 인쇄 화면 재현) */
+.steps-office{grid-template-columns:repeat(auto-fit,minmax(288px,1fr))}
+.steps-office .step-fig{min-height:auto;margin-bottom:16px}
+.omock{border:1px solid #D7DDE3;border-radius:8px;overflow:hidden;background:#fff;box-shadow:0 1px 5px rgba(17,24,39,.07);width:100%}
+.omock-bar{height:18px;background:#EEF1F5;display:flex;align-items:center;gap:4px;padding:0 8px;border-bottom:1px solid #E5E7EB}
+.omock-dot{width:5px;height:5px;border-radius:50%;background:#D7DDE3}
+.omock-body{display:flex;height:158px}
+.omock-side{width:58px;flex:0 0 auto;background:var(--oc,#1B8AC4);padding:8px 0;display:flex;flex-direction:column;gap:1px}
+.omock-side div{color:rgba(255,255,255,.68);font-size:8.6px;font-weight:700;padding:5px 0 5px 10px}
+.omock-side div.on{color:#fff;background:rgba(255,255,255,.18);border-left:3px solid #fff;padding-left:7px}
+.omock-fields{width:124px;flex:0 0 auto;background:#F7F8FA;padding:8px 8px;display:flex;flex-direction:column;gap:5px;border-right:1px solid #E5E7EB;overflow:hidden}
+.omock-cap{font-size:7.6px;color:#9AA5B1;font-weight:800;letter-spacing:.3px;margin-top:3px}
+.omock-cap:first-child{margin-top:0}
+.omock-field{background:#fff;border:1px solid #C9D3DB;border-radius:4px;padding:4px 14px 4px 7px;font-size:8.2px;font-weight:700;color:#374151;position:relative;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.omock-field::after{content:'▾';position:absolute;right:5px;top:50%;transform:translateY(-50%);color:#9AA5B1;font-size:6.5px}
+.omock-row.hi .omock-field{border-color:#D93025;background:#FEF2F2;color:#B31E16;box-shadow:0 0 0 2px rgba(217,48,37,.14)}
+.omock-row.hi .omock-cap{color:#D93025}
+.omock-preview{flex:1;background:#EDEFF2;display:flex;align-items:center;justify-content:center;padding:10px;position:relative}
+.omock-page{width:66%;height:88%;background:#fff;border:1px solid #D7DDE3;box-shadow:0 1px 5px rgba(0,0,0,.09);display:flex;align-items:center;justify-content:center}
+.omock-tag{position:absolute;background:#D93025;color:#fff;font-size:8px;font-weight:800;padding:3px 8px;border-radius:5px;white-space:nowrap;box-shadow:0 2px 5px rgba(217,48,37,.3)}
+.omock-cap.hi{color:#D93025}
+.omock-fields .omock-row.hi{margin:0 -3px;padding:2px 3px;background:rgba(217,48,37,.06);border-radius:5px}
+
+/* 준비중 */
+.soon{border:1px dashed #C9D3DB;border-radius:var(--radius);padding:44px 24px;text-align:center;background:var(--white)}
+.soon-h{font-size:16px;font-weight:800;color:var(--text3);margin-bottom:6px}
+.soon-p{font-size:13.5px;color:var(--text3)}
+
+/* FAQ */
+.faq{border-top:1px solid var(--border)}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-q{width:100%;text-align:left;background:none;border:none;font-family:inherit;font-size:15.5px;font-weight:700;color:var(--text);padding:20px 40px 20px 0;cursor:pointer;position:relative;line-height:1.5}
+.faq-q::after{content:'+';position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:22px;font-weight:400;color:var(--blue)}
+.faq-item.open .faq-q::after{content:'−'}
+.faq-a{display:none;font-size:14.2px;color:var(--text2);line-height:1.75;padding:0 0 22px}
+.faq-item.open .faq-a{display:block}
+
+/* FOOTER */
+footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
+.ft-wrap{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:56px}
+.ft-brand img{width:32px;height:32px;object-fit:contain;border-radius:6px;margin-bottom:14px}
+.ft-brand-name{color:white;font-size:18px;font-weight:900;margin-bottom:10px}
+.ft-brand p{font-size:13px;line-height:2}
+.ft-col h4{color:white;font-size:13px;font-weight:700;margin-bottom:14px;letter-spacing:.5px}
+.ft-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.ft-col a{font-size:13px;transition:color .2s}
+.ft-col a:hover{color:white}
+.ft-bottom{max-width:1160px;margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.ft-bottom p{font-size:12px;color:rgba(255,255,255,.25)}
+
+@media(max-width:820px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .nav-links.show{display:flex;position:absolute;top:70px;left:0;right:0;background:#fff;flex-direction:column;padding:10px 6%;border-bottom:1px solid var(--border)}
+  .sec{padding:48px 6%}
+  .ft-wrap{grid-template-columns:1fr}
+  .nav-raccoon{display:none}
+}
+
+/* ===== 사용방법 하위 구조 추가 스타일 ===== */
+.svc-switch{background:#fff;border-bottom:1px solid var(--border);padding:14px 6%}
+.svc-switch-in{max-width:1160px;margin:0 auto;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.svc-switch a{padding:8px 18px;font-size:13.5px;font-weight:800;border-radius:50px;border:2px solid var(--border);background:#fff;color:var(--text2);transition:all .18s}
+.svc-switch a:hover{border-color:var(--blue);color:var(--blue)}
+.svc-switch a.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.svc-switch a.home{border-style:dashed;color:var(--text3)}
+.svc-switch-label{font-size:12.5px;font-weight:800;color:var(--text3);margin-right:4px}
+
+.steps-wide{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.step-figs{margin-bottom:16px;display:grid;gap:10px}
+.step-figs.two{grid-template-columns:1fr 1fr}
+.step-photo{width:100%;height:auto;border-radius:8px;border:1px solid var(--border);display:block}
+.step-dual{grid-column:span 2}
+.step-note{margin-top:12px;background:#F5F8FA;border-radius:9px;padding:11px 14px;font-size:13px;color:var(--text2);line-height:1.6}
+.step-note b{color:var(--text);font-weight:700}
+.step-note.warn{background:#FEF2F2;color:#8A1C15;font-weight:600}
+.step-note.warn b{color:#B31E16}
+.sec-note{margin:0 0 22px;max-width:720px}
+@media(max-width:719px){
+  .step-dual{grid-column:span 1}
+  .step-figs.two{grid-template-columns:1fr}
+}
+
+/* 사용방법 허브: 서비스 선택 카드 */
+.gcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:18px}
+.gcard{border:2px solid var(--tc);border-radius:var(--radius);background:#fff;overflow:hidden;display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s}
+.gcard:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(17,24,39,.1)}
+.gcard-top{background:var(--tc);padding:14px 20px;display:flex;align-items:center;gap:12px}
+.gcard-name{font-size:20px;font-weight:900;color:#fff;letter-spacing:-.6px}
+.gcard-body{padding:20px;flex:1;display:flex;flex-direction:column;gap:14px}
+.gcard-desc{font-size:14px;color:var(--text2);line-height:1.65;flex:1}
+.gcard-go{font-size:13.5px;font-weight:900;color:var(--tc)}
+
+.nav-links li{position:relative}
+@media(max-width:900px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .nav-links.show{display:flex;position:absolute;top:70px;left:0;right:0;background:#fff;flex-direction:column;padding:10px 6%;border-bottom:1px solid var(--border)}
+  .nav-links{max-height:calc(100vh - 70px);overflow-y:auto}
+}
+/* 상단 제목·서비스 선택 고정: 아래 내용만 스크롤 */
+.stick-top{position:sticky;top:70px;margin-top:70px;z-index:90}
+.stick-top .page-header{margin-top:0;position:static}
+.page-header{padding:10px 6% 8px}
+.ph-eyebrow{display:none}
+.ph-h1{font-size:clamp(22px,3vw,30px);letter-spacing:-1px;margin-bottom:0;line-height:1.3}
+.ph-sub{font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.svc-switch{padding:8px 6%}
+.svc-switch a{padding:6px 15px}
+[id]{scroll-margin-top:215px}
+@media(max-width:760px){
+  .page-header{padding:10px 5% 8px}
+  .ph-h1{font-size:19px}
+  .ph-sub{display:none}
+  .svc-switch{padding:7px 5%}
+  .svc-switch-in{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .svc-switch-in::-webkit-scrollbar{display:none}
+  .svc-switch a,.svc-switch-label{flex:0 0 auto;white-space:nowrap}
+  .svc-switch-label{display:none}
+  [id]{scroll-margin-top:165px}
+}
+/* 2단계 메뉴: 서비스 페이지와 같은 밑줄 탭 */
+.svc-switch{background:var(--bg);border-bottom:1px solid var(--border);padding:0 6%}
+.svc-switch-in{max-width:1160px;margin:0 auto;display:flex;flex-wrap:nowrap;gap:0;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.svc-switch-in::-webkit-scrollbar{display:none}
+.svc-switch a,.svc-switch a.home{display:block;flex:0 0 auto;white-space:nowrap;padding:11px 18px;font-size:13px;font-weight:700;color:var(--text3);background:none;border:none;border-bottom:2px solid transparent;border-radius:0;transition:all .2s}
+.svc-switch a:hover,.svc-switch a.on{color:var(--blue);background:none;border-bottom-color:var(--blue)}
+@media(max-width:760px){.svc-switch{padding:0 5%}.svc-switch a{padding:10px 15px}}
+.fax-ico{vertical-align:-2px;margin-right:1px}
+.adf-fig{margin:0 0 18px}
+.adf-fig img{display:block;width:100%;max-width:520px;height:auto;border-radius:10px;border:1px solid #F3C3BF;background:#fff}
+.adf-fig figcaption{margin-top:8px;font-size:13.6px;line-height:1.65;color:var(--text2)}
+.adf-fig figcaption b{color:var(--text);font-weight:900}
+.adf-fig figcaption .gd{display:block;margin-top:8px;padding:9px 12px;background:#FFF4EC;border:1px solid #F8CFB1;border-radius:8px;color:#7A3410}
+.adf-fig figcaption .gd b{color:#B4500F}
+.mini1{margin:6px 0 0;padding-left:20px;font-size:14px;line-height:1.75;color:var(--text2)}
+.mini1>li{margin-bottom:7px}
+.mini1 .dir{display:inline-block;margin-top:3px;padding:3px 10px;background:#EEF6FC;border-radius:8px;color:#16507A;font-size:13.4px}
+.mini1 .r{color:var(--warn);font-weight:700}
+.adfw-box.ok ul,.adfw-box.no ul{list-style:none;padding-left:0}
+.adfw-box.ok li::before{content:'○ ';color:#1B7A2C;font-weight:900}
+.adfw-box.no li::before{content:'✕ ';color:#C0261C;font-weight:900}
+.orig-warn{background:#FEF2F2;border:3px solid #D93025;border-radius:14px;padding:16px 18px;margin:0 0 26px;max-width:1000px}
+.orig-warn-h{font-size:18px;font-weight:900;color:#C0261C;margin-bottom:10px;line-height:1.4}
+.orig-warn-h span{display:inline-block;font-size:12.5px;font-weight:800;background:#C0261C;color:#fff;padding:3px 11px;border-radius:50px;margin-left:6px;vertical-align:middle}
+.orig-warn ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.orig-warn li{display:flex;gap:10px;align-items:flex-start;font-size:14.6px;line-height:1.65;color:#8A1C15;font-weight:600}
+.orig-warn li .n{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:#C0261C;color:#fff;font-weight:900;font-size:14px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.orig-warn li b{color:#B31E16;font-weight:900}
+.orig-warn .okli{background:#ECFDF5;border:2px solid #34A853;border-radius:10px;padding:9px 12px;color:#14532D}
+.orig-warn .okli b{color:#0B3D1E}
+.orig-warn .okli .n{background:#2E8B57}
+.orig-warn .no{background:#fff;border:2px solid #D93025;border-radius:10px;padding:10px 12px;font-weight:800}
+.bill-warn{margin-top:12px;background:#FEF2F2;border:2px solid #D93025;border-radius:10px;padding:11px 13px;font-size:13.4px;line-height:1.65;color:#8A1C15;font-weight:600}
+.bill-warn b{color:#B31E16;font-weight:900}
+.bill-warn .bh{display:block;font-size:14px;font-weight:900;color:#C0261C;margin-bottom:4px}
+.glassdir{display:inline-block;margin:6px 0;padding:6px 10px;background:#FFF8E6;border:1.5px solid #F2C94C;border-radius:8px;color:#5C4300}
+.glassdir b{color:#3E2D00}
+/* FAQ 등에서 #이름 으로 들어올 때, 구역 제목이 고정 메뉴 바로 아래에 보이도록 */
+.sec[id]{scroll-margin-top:167px}
+@media(max-width:700px){.sec[id]{scroll-margin-top:122px}}
+
+/* 미니프랜즈 꾸밈 캐릭터 (제목 오른쪽) */
+.ph-inner{position:relative;padding-right:84px}
+.ph-pal{position:absolute;right:0;bottom:-8px;height:70px;width:auto;pointer-events:none;filter:drop-shadow(0 3px 4px rgba(0,0,0,.08))}
+@media(max-width:760px){.ph-inner{padding-right:50px}.ph-pal{height:42px;bottom:-6px}}
+
+/* 미니프랜즈 담당 친구 소개 띠 */
+.fr-band{max-width:1160px;margin:0 auto;padding:14px 6% 0}
+.fr-in{display:flex;align-items:center;gap:16px;background:var(--cl);border:3px dashed var(--c);border-radius:26px;padding:10px 20px 10px 14px;text-decoration:none;color:inherit;transition:transform .2s}
+.fr-in:hover{transform:translateY(-2px)}
+.fr-in img{flex:0 0 auto;height:92px;width:auto;filter:drop-shadow(0 4px 4px rgba(0,0,0,.15))}
+.fr-txt{flex:1;min-width:0;font-size:14.5px;line-height:1.75;color:#374151}
+.fr-txt b{font-family:'Jua','Noto Sans KR',sans-serif;font-weight:400;font-size:20px;color:var(--c);margin-right:6px}
+.fr-txt i{font-style:normal;font-family:'Gamja Flower','Jua',sans-serif;font-size:18px;color:var(--c);opacity:.85;margin-right:8px}
+.fr-txt span.fr-pill{display:inline-block;background:var(--c);color:#fff;font-size:12.5px;font-weight:700;padding:0 10px;border-radius:50px;margin-right:6px;vertical-align:2px}
+.fr-more{flex:0 0 auto;font-weight:700;font-size:13.5px;color:#fff;background:var(--c);padding:7px 14px;border-radius:50px;white-space:nowrap}
+@media(max-width:700px){
+  .fr-band{padding:10px 4% 0}
+  .fr-in{gap:10px;padding:8px 12px 8px 8px;border-radius:20px}
+  .fr-in img{height:68px}
+  .fr-txt{font-size:13px;line-height:1.6}
+  .fr-txt b{font-size:17px}
+  .fr-more{display:none}
+}
+</style>
+<style>
+/* 사용방법 동영상 */
+.gvid{max-width:820px;margin:0 0 34px;background:var(--sc-light,#E8F4FC);border:2px solid var(--sc,var(--blue));border-radius:18px;padding:14px 14px 16px}
+.gvid-h{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-weight:900;font-size:16px;color:var(--text);margin:0 4px 10px}
+.gvid-h .gvid-play{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--sc,var(--blue));color:#fff;font-size:12px}
+.gvid-h small{font-size:12.5px;font-weight:700;color:var(--text3)}
+.gvid video{display:block;width:100%;aspect-ratio:16/9;border-radius:12px;background:#000}
+</style>
+<style id="nav-lang-css">.nav-lang{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:#1B8AC4;border:1.5px solid #1B8AC4;border-radius:50px;padding:7px 13px;margin-right:8px;white-space:nowrap;background:#fff}.nav-lang:hover{background:#E8F4FC}.nav-links a{white-space:nowrap}@media(max-width:1180px){.nav-lang .t{display:none}.nav-lang{padding:6px 9px;font-size:15px}}@media(max-width:480px){.nav-lang{padding:4px 6px;margin-right:6px;font-size:14px}.nav-cta{padding:8px 13px!important;font-size:12.5px!important}}@media(max-width:400px){nav{padding-left:12px!important;padding-right:12px!important}.nav-logo-name{font-size:15px!important}.nav-logo{gap:6px!important}.nav-cta{padding:7px 9px!important;font-size:12px!important}.nav-lang,.lang-sel{margin-right:5px!important}.hamburger{margin-left:4px!important}}</style>
+<style>.lang-sel{display:inline-flex;align-items:center;gap:4px;margin-right:8px;border:1.5px solid #1B8AC4;border-radius:50px;padding:3px 4px 3px 10px;background:#fff;font-size:15px}.lang-sel select{border:none;background:transparent;font:700 13px sans-serif;color:#1B8AC4;padding:4px 2px;cursor:pointer;outline:none}.nav-links a{padding:8px 11px!important}@media(max-width:1280px){.nav-raccoon{display:none!important}}.lang-sel .cur{display:none}@media(max-width:480px){.nav-cta{display:none!important}.lang-sel{position:relative;margin-right:6px;padding:6px 10px;gap:5px}.lang-sel .cur{display:inline;white-space:nowrap;font:700 13px sans-serif;color:#1B8AC4}.lang-sel select{position:absolute;inset:0;width:100%;opacity:0}}@media(max-width:400px){.lang-sel{padding:5px 6px!important;gap:2px!important;font-size:13px}.lang-sel .cur{font-size:12px}}.lang-sw{position:fixed;right:10px;bottom:12px;z-index:400}.tr-note{max-width:1160px;margin:0 auto;padding:10px 6% 0;font-size:12.5px;color:#9CA3AF}</style></head>
+<body>
+<!-- NAV -->
+<nav> <a class="nav-logo" href="../index.html"> <img alt="Logo" class="logo-img" src="../logo.jpg"/> <span class="nav-logo-name">PrintShop Mini</span> </a> <ul class="nav-links" id="navLinks">
+<li><a href="../services.html">Dịch vụ</a></li>
+<li><a class="active" href="guide.html">Hướng dẫn</a></li>
+<li><a href="../faq.html">FAQ</a></li>
+<li><a href="../about.html">Giới thiệu</a></li>
+<li><a href="../branches.html">Cửa hàng</a></li>
+<li><a href="../community.html">Cộng đồng</a></li>
+</ul>
+<div class="nav-right"> <label class="lang-sel" title="Language · 语言 · Ngôn ngữ"><span aria-hidden="true">🌐</span><span aria-hidden="true" class="cur">VI ▾</span><select aria-label="Language" onchange="location.href=this.value"><option lang="ko" value="../guide-copy.html">한국어</option><option lang="en" value="../en/guide-copy.html">English</option><option lang="zh-Hans" value="../zh/guide-copy.html">中文</option><option lang="vi" selected="" value="../vi/guide-copy.html">Tiếng Việt</option></select></label><a class="nav-cta" href="../branches.html">Tìm cửa hàng</a> <div class="nav-raccoon" title="Linh vật PrintShop Mini">
+<img alt="Linh vật gấu mèo" src="../raccoon1.png"/>
+</div>
+</div>
+<button class="hamburger" onclick="toggleMenu()">
+<span></span><span></span><span></span>
+</button>
+</nav>
+<!-- HEADER -->
+<div class="stick-top">
+<div class="page-header">
+<div class="ph-inner">
+<img alt="" aria-hidden="true" class="ph-pal" src="../img/friends/copy.webp"/>
+<div class="ph-eyebrow">GUIDE · COPY</div>
+<h1 class="ph-h1">Cách photo</h1>
+<p class="ph-sub">Cách làm thêm một bản giống tờ giấy bạn mang đến. Có cả cách photo thẻ căn cước · sổ ngân hàng · hộ chiếu · sách.</p>
+</div>
+</div>
+<div class="svc-switch"><div class="svc-switch-in"> <a href="guide.html">Tất cả hướng dẫn</a> <a href="guide-video.html">▶ Video</a> <a href="guide-print.html">🖨️ In</a> <a class="on" href="guide-copy.html">📋 Photo</a> <a href="guide-scan.html">📄 Scan</a> <a href="guide-fax.html"><svg aria-hidden="true" class="fax-ico" fill="none" height="15" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 48 48" width="15"><path d="M9 36V5h18l8 8v9" stroke="currentColor" stroke-width="4.2"></path><path d="M15 15h10M15 22h6" stroke="currentColor" stroke-width="4.2"></path><g transform="translate(20 21) scale(1.04)"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke-width="7" style="stroke:var(--bg)"></path><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="3.99"></path></g></svg> Fax </a> <a href="guide-coat.html">✨ Ép plastic</a> <a href="guide-bind.html">📚 Đóng sách</a> </div></div>
+</div>
+<div class="fr-band" style="--c:#018FFB;--cl:#E1F1FF">
+<a class="fr-in" href="../about.html#friend-ttarabok" title="Làm quen với Mini Friends">
+<img alt="Polly Copy" height="92" src="../img/friends/copy.webp" width="92"/>
+<div class="fr-txt"><b>Polly Copy</b><i>Polly Copy</i><span class="fr-pill">Phụ trách photo</span><br/>Xin chào! Mình là Polly Copy, phụ trách photo. Mình sẽ chỉ bạn cách photo giống hệt bản gốc nhé!</div> <span class="fr-more">Xem thêm các bạn →</span> </a>
+</div>
+<!-- 탭 -->
+<div class="tabs">
+<div class="tabs-in"><button class="tab on" onclick="jump('copy',this)">Cách photo</button> <button class="tab" onclick="jump('adf',this)">Lưu ý ADF</button> <button class="tab" onclick="jump('glass',this)">Photo trên mặt kính (thẻ · sổ · sách)</button></div>
+</div>
+<div class="sec alt" id="copy" style="--sc:#018FFB;--sc-light:#E6F3FE">
+<div class="sec-in">
+<div class="sec-head">
+<div class="sec-ico"><svg fill="none" height="34" viewbox="0 0 48 48" width="34"><rect height="30" rx="3" stroke="#018FFB" stroke-width="3" width="24" x="7" y="7"></rect><rect fill="#fff" height="27" rx="3" stroke="#018FFB" stroke-width="3" width="24" x="17" y="14"></rect></svg></div>
+<h2 class="sec-h2">Cách photo <span class="pill">COPY</span></h2>
+</div>
+<p class="sec-tagline"><b>Dịch vụ làm thêm một bản giống tờ giấy bạn mang đến.</b> Không dùng máy tính, làm trực tiếp trên máy in đa năng.</p>
+<div class="gvid"><div class="gvid-h"><span class="gvid-play">▶</span>Xem video cách photo trước <small>Không cần bật tiếng</small></div><video controls="" playsinline="" poster="../videos/guide-copy.jpg" preload="none"><source src="../videos/guide-copy.mp4" type="video/mp4"/> Trình duyệt của bạn không phát được video. </video></div>
+<div class="orig-warn"><div class="orig-warn-h">🚨 Đặt bản gốc vào trước rồi mới bắt đầu! <span>Giống nhau cho photo · scan · fax</span></div><ol><li><span class="n">1</span><div>Luôn <b>đặt bản gốc vào ADF (khay nạp bản gốc) trước</b>, rồi mới bắt đầu.</div></li><li class="okli"><span class="n">2</span><div>✅ <b>Nếu bình thường</b>, bản gốc sẽ được kéo vào máy rồi <b>màn hình giá tiền [과금정보] tự hiện ra</b>.</div></li><li class="no"><span class="n">3</span><div>🛑 Nếu đã bắt đầu mà <b>bản gốc không được kéo vào máy, tuyệt đối đừng thanh toán!</b><br/>Hãy <b>hủy lệnh</b> trên màn hình và <b>làm lại từ đầu</b>.</div></li><li><span class="n">4</span><div>❌ Nếu bản gốc chưa vào mà đã thanh toán, dù ra <b>bản photo trắng · bản scan trắng · fax trắng</b> thì <b>cũng không hoàn tiền.</b></div></li></ol></div>
+<div id="guideFiles"></div>
+<div class="steps">
+<div class="step">
+<div class="step-no">1</div>
+<div class="step-fig"><img alt="Đặt bản gốc vào khay nạp (ADF)" src="../adf_nb.jpg" style="width:100%;max-width:210px;border-radius:8px;border:1px solid var(--border)"/></div>
+<div class="step-h">Đặt bản gốc lên máy in đa năng</div>
+<ol class="mini1"><li>Đặt <b>mặt cần photo hướng lên trên</b>.</li><li>Hướng đặt khác nhau tùy khổ giấy.<br/><span class="dir"><b>A4</b> → <b>cạnh dài</b> vào trước, về phía bên trái</span><br/><span class="dir"><b>B4 · A3</b> → <b>cạnh ngắn</b> vào trước, về phía bên trái</span></li><li><b>Đẩy hẳn vào</b> đến tận bên trái. <span class="r">Nếu chỉ đặt hờ, giấy không được kéo vào và sẽ ra trang trắng.</span></li><li>Kéo <b>thanh chặn giấy</b> trên · dưới sát vừa khổ giấy. <span class="r">Nếu lỏng, giấy sẽ vào lệch và bản photo cũng bị lệch.</span></li><li>Nếu nhiều tờ, hãy <b>xếp ngay ngắn</b> rồi đặt vào cùng lúc. (tối đa 100 tờ)</li><li><span class="r">Giấy vào máy rồi ra lại là thành công. Nếu không vào thì đừng thanh toán.</span></li><li>Thẻ căn cước · sổ ngân hàng · hộ chiếu · sách · giấy nhàu thì đừng đặt vào đây, hãy đặt lên <b>mặt kính</b>. (Căn theo mũi tên trắng ở góc trên bên trái)</li></ol>
+</div>
+<div class="step">
+<div class="step-no">2</div>
+<div class="step-fig"><svg fill="none" height="80" viewbox="0 0 120 80" width="120">
+<rect fill="#12213D" height="56" rx="5" width="108" x="6" y="12"></rect>
+<rect fill="#018FFB" height="20" rx="4" stroke="#fff" stroke-width="3" width="20" x="16" y="24"></rect>
+<text fill="#018FFB" font-family="Noto Sans KR" font-size="10" font-weight="900" text-anchor="middle" x="26" y="60">Photo</text>
+<rect fill="#22B24C" height="20" opacity="0.35" rx="4" width="20" x="42" y="24"></rect>
+<text fill="#7C8CA6" font-family="Noto Sans KR" font-size="10" font-weight="900" text-anchor="middle" x="52" y="60">In</text>
+<rect fill="#12BDB0" height="20" opacity="0.35" rx="4" width="20" x="68" y="24"></rect>
+<text fill="#7C8CA6" font-family="Noto Sans KR" font-size="10" font-weight="900" text-anchor="middle" x="78" y="60">Scan</text>
+<rect fill="#F3732C" height="20" opacity="0.35" rx="4" width="16" x="94" y="24"></rect>
+<text fill="#7C8CA6" font-family="Noto Sans KR" font-size="10" font-weight="900" text-anchor="middle" x="102" y="60">Fax</text>
+</svg></div>
+<div class="step-h">Chọn menu Photo</div>
+<p class="step-p"><span class="r">Luôn đặt bản gốc trước</span>, rồi bấm <b>[복사] (Photo)</b> trên màn hình.</p>
+</div>
+<div class="step">
+<div class="step-no">3</div>
+<div class="step-fig"><a href="../images/copy/copy-settings.png?v=2" rel="noopener" target="_blank"><img alt="Màn hình cài đặt photo. Nút [기본 복사] (Photo cơ bản) trong ô đỏ góc trên bên trái đang được chọn màu xanh, có số bản, màu, khổ bản gốc" src="../images/copy/copy-settings.png?v=2" style="width:100%;border-radius:8px;border:1px solid var(--border);display:block"/></a></div>
+<div class="step-h">Cài đặt · Bắt đầu</div>
+<p class="step-p">Chọn các tùy chọn: <b>con số (photo mấy bộ)</b> · <b>khổ bản gốc</b> (mặc định A4, nếu bản gốc là B4, A3 thì đổi) · màu/đen trắng, rồi bấm <b>[시작] (Bắt đầu)</b>. Bản gốc sẽ vào máy rồi ra lại.<br/><span class="r">Kiểm tra nút [기본 복사] (Photo cơ bản) trong ô đỏ đang được chọn màu xanh.</span></p><div class="mini-warn" style="margin-top:12px"><div class="mini-warn-h"><span class="x">!</span>Con số là "số bộ", không phải "số tờ"</div><p class="mini-warn-p" style="padding-left:0"><b>Số 1</b> trên màn hình không phải <b>photo 1 tờ</b>, mà là photo <b>1 bộ gồm tất cả bản gốc</b> bạn đã đặt vào.<br/>Ví dụ) Bản gốc có <b>10 tờ</b>, con số là <b>1</b> → <b>1 bộ = ra 10 tờ</b>.<br/>Đổi thành <b>2</b> → <b>2 bộ = ra 20 tờ</b>. (mỗi tờ 2 bản)<br/><b>❌ Đừng đổi thành 10 chỉ vì bản gốc có 10 tờ!</b> Sẽ thành 10 bộ (100 tờ) và rất tốn tiền. Muốn photo 1 bộ thì <b>để nguyên số 1</b>.</p></div><div class="mini-warn" style="margin-top:10px"><div class="mini-warn-h"><span class="x">!</span>Nhớ kiểm tra cài đặt tùy chọn</div><p class="mini-warn-p" style="padding-left:0"><b>Chúng tôi không bồi thường và không chịu trách nhiệm cho lỗi do cài đặt tùy chọn sai.</b></p></div>
+</div>
+<div class="step">
+<div class="step-no">4</div>
+<div class="step-fig"><svg fill="none" height="80" viewbox="0 0 120 80" width="120">
+<rect fill="#fff" height="56" rx="4" stroke="#111827" stroke-width="3" width="92" x="14" y="12"></rect>
+<rect fill="#EEF1F5" height="13" rx="4" width="92" x="14" y="12"></rect>
+<text fill="#374151" font-family="Noto Sans KR" font-size="9" font-weight="900" x="24" y="22">과금정보</text>
+<text fill="#374151" font-family="Noto Sans KR" font-size="11" font-weight="900" x="24" y="42">총 가격</text>
+<text fill="#111827" font-family="Noto Sans KR" font-size="12" font-weight="900" text-anchor="end" x="96" y="42">250원</text>
+<rect fill="#DCE8FA" height="13" rx="2" stroke="#7E93AE" stroke-width="2.4" width="38" x="62" y="50"></rect>
+<text font-family="Noto Sans KR" font-size="9" font-weight="900" text-anchor="middle" x="81" y="60">확인</text>
+</svg></div>
+<div class="step-h">Kiểm tra số tiền [과금정보]</div>
+<p class="step-p">Nếu bình thường, màn hình giá tiền [과금정보] sẽ tự hiện ra. <b>Nếu mọi thứ đúng, bấm [확인] (Xác nhận)</b>.</p><div class="bill-warn"><span class="bh">🧾 Bắt buộc kiểm tra màn hình thông tin thanh toán [과금정보]!</span><b>Hãy kiểm tra hết nội dung trên màn hình thanh toán. Nếu thanh toán mà không kiểm tra và có vấn đề, chúng tôi không hoàn tiền hay bồi thường.</b><br/>Chỉ bấm <b>[확인] (Xác nhận) để thanh toán khi đã kiểm tra hết và thấy đúng</b>.</div>
+</div>
+<div class="step">
+<div class="step-no">5</div>
+<div class="step-fig"><svg fill="none" height="80" viewbox="0 0 120 80" width="120">
+<rect fill="#fff" height="50" rx="7" stroke="#111827" stroke-width="3" width="46" x="38" y="18"></rect>
+<rect fill="#E9EDF3" height="15" rx="2" stroke="#111827" stroke-width="2.4" width="28" x="47" y="27"></rect>
+<circle cx="61" cy="56" fill="none" r="8" stroke="#111827" stroke-width="2.6"></circle>
+<rect fill="#FFD64A" height="12" rx="2" stroke="#111827" stroke-width="3" width="26" x="48" y="6"></rect>
+</svg></div>
+<div class="step-h">Cắm thẻ thanh toán</div>
+<p class="step-p"><span class="r">Khi máy quẹt thẻ phát tiếng</span>, <b>hãy cắm thẻ IC (tín dụng/ghi nợ) vào phía sau</b>, Samsung Pay thì áp vào phần rộng phía trước. Đừng cắm trước, cũng đừng rút ra giữa chừng.</p>
+</div>
+</div>
+<div class="step-note sec-note">Photo xong, lấy bản photo ở khay ra giấy, và <b>đừng quên lấy bản gốc.</b></div>
+<div class="adfw" id="adf">
+<div class="adfw-h"><span class="x">!</span>Có loại giấy không được đặt vào khay nạp (ADF)</div>
+<figure class="adf-fig">
+<img alt="Khay nạp bản gốc (ADF) phía trên máy in đa năng, có giấy đặt trên đó" loading="lazy" src="../images/common/adf-feeder.jpg"/>
+<figcaption>📌 <b>Phần viền xanh</b> trong ảnh là <b>khay nạp bản gốc (ADF)</b>.<br/>Đây là chỗ đặt nhiều tờ rời (tối đa 100 tờ) khi photo · scan · fax.<br/><span class="gd">📏 <b>Phần màu cam chặn trên · dưới bản gốc là 'thanh chặn giấy'</b>. Đặt bản gốc xong, <b>kéo thanh chặn trên · dưới sát vừa khổ giấy</b> để giấy vào thẳng, không bị lệch.</span></figcaption>
+</figure>
+<div class="adfw-grid">
+<div class="adfw-box ok">
+<div class="adfw-t">Được đặt vào</div>
+<ul>
+<li><b>Giấy photo thường</b> (A4 · B4 · A3) — <b>cùng khổ để chung</b>, mỗi lần tối đa <b>100 tờ</b>.</li><li><b>Gộp các tờ cùng khổ và xếp ngay ngắn</b> rồi đặt vào.</li>
+<li>Giấy <b>phẳng</b>, không nhàu</li>
+</ul>
+</div>
+<div class="adfw-box no">
+<div class="adfw-t">Không được đặt vào</div>
+<ul>
+<li><b>Giấy quá mỏng</b> (như giấy can)</li>
+<li><b>Giấy quá dày</b> (giấy khen, thiệp dày)</li>
+<li><b>Giấy có dán ghi chú</b> (giấy nhớ · Post-it)</li>
+<li><b>Giấy có ghim bấm</b></li>
+<li>Giấy <b>nhàu hoặc rách</b></li><li><b>A4 · B4 · A3 để lẫn</b> với nhau (khác khổ thì đặt riêng)</li>
+<li>Những thứ không phải tờ rời như <b>thẻ căn cước · sổ ngân hàng · hộ chiếu · sách</b></li>
+</ul>
+</div>
+</div>
+<div class="adfw-foot">Những thứ trong mục <b>'Không được đặt vào'</b> ở trên thì <b>đừng đặt vào khay nạp.</b> Hãy <b>mở nắp máy và đặt từng tờ lên mặt kính</b>.<br/><span class="glassdir">📌 Khi đặt lên mặt kính, <b>mặt cần photo · scan · fax phải úp xuống phía mặt kính</b>.</span><br/> <b>Nếu máy hỏng do bạn đặt vào thứ đã được dặn không đặt, bạn có thể phải trả phí sửa chữa.</b></div>
+</div>
+<div class="subhead" id="glass">Photo trên mặt kính · thẻ căn cước / sổ ngân hàng · hộ chiếu / sách</div>
+<p class="sec-tagline" style="margin-bottom:22px"><b>Thẻ căn cước · sổ ngân hàng · hộ chiếu · sách</b> không phải tờ rời nên đừng đặt vào khay nạp. Hãy mở nắp máy và đặt lên <b>mặt kính</b>. Căn theo <b>mũi tên trắng ở góc trên bên trái</b> mặt kính, <b>mặt có nội dung úp xuống mặt kính</b>.</p>
+<div class="openbox">
+<div class="ob">
+<div class="ob-fig">
+<img alt="Mở nắp trên của máy in đa năng" src="../cover_nb.jpg" style="width:100%;border-radius:8px;border:1px solid var(--border)"/>
+</div>
+<div>
+<div class="ob-h">① Nâng nắp trên của máy in đa năng lên</div>
+<p class="ob-p"><b>Cầm phần phía trước bên phải</b> của máy và nhẹ nhàng <b>nâng lên</b>, mặt kính sẽ hiện ra. <span class="r">Đừng kéo mạnh.</span></p>
+</div>
+</div>
+</div>
+<div class="minis">
+<div class="mini" id="idcard">
+<div class="mini-top">
+<svg fill="none" height="22" viewbox="0 0 48 48" width="22"><rect height="24" rx="3" stroke="#fff" stroke-width="3" width="36" x="6" y="12"></rect><circle cx="17" cy="22" r="4" stroke="#fff" stroke-width="2.6"></circle><path d="M27 20h10M27 27h10M11 31h12" stroke="#fff" stroke-linecap="round" stroke-width="2.6"></path></svg> Photo thẻ căn cước </div>
+<div class="mini-body">
+<div class="mini-fig"><img alt="Thẻ căn cước đặt ở góc trên bên trái mặt kính" src="../id_nb.jpg"/></div>
+<ol>
+<li><b>Mở nắp máy.</b> Cầm phía bên phải và nhẹ nhàng nâng lên.</li>
+<li>Căn theo <b>góc trên bên trái</b> mặt kính, <b>mặt có ảnh úp xuống kính</b>, rồi đóng nắp.</li>
+<li>Chọn menu <b>[복사] (Photo)</b> trên màn hình.</li>
+<li>Bấm thẻ <b>[신분증복사] (Photo thẻ)</b>, chọn <b>màu hoặc đen trắng</b>, rồi bấm <b>[시작] (Bắt đầu)</b>.</li>
+<li><b>Muốn photo cả mặt sau</b> — <span class="r">lật thẻ lại ngay tại chỗ cũ</span>, chọn <b>[예] (Có)</b> → bấm lại <b>[시작] (Bắt đầu)</b> → thanh toán<br/><b>Chỉ mặt trước</b> — chọn <b>[아니오] (Không)</b></li>
+</ol>
+<div class="mini-warn">
+<div class="mini-warn-h"><span class="x">!</span>Hộ chiếu · sổ ngân hàng đừng dùng thẻ [신분증복사] (Photo thẻ)!</div>
+<div class="mini-warn-p">Trong thẻ [신분증복사] (Photo thẻ) có mục <b>hộ chiếu</b>, nhưng nếu chọn thì <b>chỉ photo được một phần hộ chiếu.</b><br/><br/>Hộ chiếu nhất định phải photo bằng thẻ <b>[기본복사] (Photo cơ bản)</b>. Sổ ngân hàng cũng không phải thẻ căn cước nên dùng <b>[기본복사] (Photo cơ bản)</b>.</div>
+</div>
+<div class="mini-note"><b>[신분증복사] (Photo thẻ)</b> là chức năng photo mặt trước và mặt sau của <b>giấy tờ dạng thẻ</b> (như thẻ đăng ký cư trú, bằng lái xe) nằm cạnh nhau trên một trang. Chỉ dùng cho giấy tờ dạng thẻ.</div>
+</div>
+</div>
+<div class="mini" id="passbook">
+<div class="mini-top">
+<svg fill="none" height="22" viewbox="0 0 48 48" width="22"><rect height="34" rx="3" stroke="#fff" stroke-width="3" width="30" x="9" y="7"></rect><path d="M17 7v34" stroke="#fff" stroke-width="2.6"></path><path d="M25 17h9M25 24h9" stroke="#fff" stroke-linecap="round" stroke-width="2.6"></path></svg> Photo / scan sổ ngân hàng · hộ chiếu </div>
+<div class="mini-body">
+<div class="mini-fig"><img alt="Sổ ngân hàng đặt ở góc trên bên trái mặt kính" src="../glass_nb.jpg"/></div>
+<ol>
+<li><b>Mở nắp máy.</b> Cầm phía bên phải và nhẹ nhàng nâng lên.</li>
+<li><b>Góc trên bên trái mặt kính là điểm chuẩn</b>. Vùng <b>bằng khổ A4</b> tính từ đó sẽ được photo / scan, nên hãy đặt trang cần làm trong vùng đó rồi đóng nắp.</li>
+<li>Chọn menu <b>[복사] (Photo)</b> hoặc <b>[스캔] (Scan)</b>. Nếu photo, cài đặt ở thẻ <b>[기본복사] (Photo cơ bản)</b>, kiểm tra rồi bấm <b>[시작] (Bắt đầu)</b>.</li>
+<li>Khi hiện <b>"다른 면을 스캔하시겠습니까?" (Scan trang khác?)</b> — nếu còn trang cần làm, <span class="r">đặt trang tiếp theo lên mặt kính trước</span> rồi bấm <b>[예] (Có)</b>; nếu hết thì bấm <b>[아니오] (Không)</b>.</li>
+<li>Ở màn hình <b>[과금정보] (thông tin thanh toán)</b>, kiểm tra giá tiền và cài đặt rồi thanh toán.</li>
+</ol>
+<div class="mini-warn">
+<div class="mini-warn-h"><span class="x">!</span>Hộ chiếu · sổ ngân hàng đừng dùng thẻ [신분증복사] (Photo thẻ)!</div>
+<div class="mini-warn-p">Trong thẻ [신분증복사] (Photo thẻ) có mục <b>hộ chiếu</b>, nhưng nếu chọn thì <b>chỉ photo được một phần hộ chiếu.</b><br/><br/>Hộ chiếu nhất định phải photo bằng thẻ <b>[기본복사] (Photo cơ bản)</b>. Sổ ngân hàng cũng không phải thẻ căn cước nên dùng <b>[기본복사] (Photo cơ bản)</b>.</div>
+</div>
+<div class="mini-note">Có thể photo hoặc scan nhiều trang liên tiếp. Hãy đặt trang tiếp theo <b>trước khi</b> bấm <b>[예] (Có)</b>.</div>
+</div>
+</div>
+<div class="mini" id="book">
+<div class="mini-top">
+<svg fill="none" height="22" viewbox="0 0 48 48" width="22"><path d="M24 12c-4-4-10-5-16-4v27c6-1 12 0 16 4 4-4 10-5 16-4V8c-6-1-12 0-16 4z" stroke="#fff" stroke-linejoin="round" stroke-width="3"></path><path d="M24 12v27" stroke="#fff" stroke-width="2.6"></path></svg> Photo / scan sách </div>
+<div class="mini-body">
+<div class="mini-fig"><img alt="Sách úp xuống ở góc trên bên trái mặt kính" src="../book_nb.jpg"/></div>
+<ol>
+<li><b>Mở nắp máy.</b> Cầm phía bên phải và nhẹ nhàng nâng lên.</li>
+<li>Úp sách xuống, <b>trang cần photo · scan hướng về mặt kính</b>, đặt <b>sát góc trên bên trái</b> mặt kính rồi đóng nắp.</li>
+<li>Chọn menu <b>[복사] (Photo)</b> hoặc <b>[스캔] (Scan)</b>. Nếu photo, cài đặt ở thẻ <b>[기본복사] (Photo cơ bản)</b>, kiểm tra rồi bấm <b>[시작] (Bắt đầu)</b>.</li>
+<li>Khi hiện <b>"다른 면을 스캔하시겠습니까?" (Scan trang khác?)</b> — lật sang trang tiếp, <span class="r">đặt lên mặt kính trước</span> rồi bấm <b>[예] (Có)</b>; xong hết thì bấm <b>[아니오] (Không)</b>.</li>
+<li>Ở màn hình <b>[과금정보] (thông tin thanh toán)</b>, kiểm tra giá tiền và cài đặt rồi thanh toán.</li>
+</ol>
+<div class="mini-note">Sách dày thì không cần đóng kín nắp. Nhưng <b>đừng đè mạnh lên sách.</b> Mặt kính có thể bị vỡ.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p class="tr-note">Trang này được dịch từ tiếng Hàn. Nếu có chỗ nào chưa đúng, vui lòng báo cho chúng tôi qua Naver TalkTalk. Màn hình máy là tiếng Hàn — tên nút tiếng Hàn được ghi trong [ngoặc].</p><footer>
+<div class="ft-wrap">
+<div class="ft-brand">
+<img alt="Logo" src="../logo.jpg"/>
+<div class="ft-brand-name">PrintShop Mini</div>
+<p>Cửa hàng in tự phục vụ không người trực,<br/>mở cửa 24 giờ, 365 ngày.</p>
+</div>
+<div class="ft-col">
+<h4>Hướng dẫn sử dụng</h4>
+<ul>
+<li><a href="guide-print.html">Cách in</a></li>
+<li><a href="guide-copy.html">Cách photo</a></li>
+<li><a href="guide-scan.html">Cách scan</a></li>
+<li><a href="guide-fax.html">Cách gửi fax</a></li>
+<li><a href="guide-coat.html">Cách ép plastic</a></li>
+<li><a href="guide-bind.html">Cách đóng sách</a></li>
+</ul>
+</div>
+<div class="ft-col">
+<h4>Liên kết nhanh</h4>
+<ul>
+<li><a href="../services.html">Dịch vụ</a></li>
+<li><a href="../faq.html">Câu hỏi thường gặp</a></li>
+<li><a href="../branches.html">Tìm cửa hàng</a></li>
+<li><a href="../community.html">Cộng đồng</a></li>
+<li><a href="../about.html">Giới thiệu</a></li>
+</ul>
+</div>
+</div>
+<div class="ft-corp" style="word-break:keep-all;max-width:1160px;margin:0 auto 20px;font-size:13px;line-height:1.9;color:#9CA3AF"><b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1B8AC4)">PrintShop Mini</b> · <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">PrintNow</b> là thương hiệu của công ty <span style="white-space:nowrap">Good Learning Partner</span>.</div>
+<div class="ft-bottom">
+<p>© 2025 PrintShop Mini. All rights reserved.</p>
+<p>Chính sách bảo mật · Điều khoản sử dụng</p>
+</div>
+</footer>
+<script>
+function toggleMenu(){document.getElementById("navLinks").classList.toggle("show");}
+function jump(id, el){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
+  el.classList.add('on');
+  const y = document.getElementById(id).getBoundingClientRect().top + window.pageYOffset - 118;
+  window.scrollTo({top:y, behavior:'smooth'});
+}
+</script>
+<script>window.GUIDE_SERVICE='copy';</script>
+<script src="../service-guides.js?v=2"></script>
+<script>
+/* 2단계 메뉴: 현재 탭이 화면 밖이면 보이는 위치로 이동 */
+(function(){var a=document.querySelector('.svc-switch a.on'),w=a&&a.parentElement;if(w)w.scrollLeft=Math.max(0,a.offsetLeft-(w.clientWidth-a.offsetWidth)/2);})();
+</script>
+
+<script defer="" src="../lightbox.js?v=1"></script>
+</body>
+</html>

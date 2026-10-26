@@ -1,0 +1,127 @@
+# 사용방법 동영상(guide-video.html) 번역 — 형식은 tr_guide_print.txt 와 같음
+# 영상 자체는 아직 한국어 자막 (외국어 영상은 다음 단계)
+
+@@debcfc9c8b
+en: PrintShop Mini how-to videos — picture videos showing the steps for printing, copying, scanning, fax, laminating and binding.
+zh: PrintShop Mini 使用方法视频 — 用图片视频介绍打印、复印、扫描、传真、塑封、装订的使用步骤。
+vi: Video hướng dẫn PrintShop Mini — video hình vẽ chỉ các bước in, photo, scan, fax, ép plastic và đóng sách.
+@@002879e1cd
+en: How-to Videos - PrintShop Mini
+zh: 使用方法视频 - PrintShop Mini
+vi: Video hướng dẫn - PrintShop Mini
+@@44badd129f
+en: How-to Videos
+zh: 使用方法视频
+vi: Video hướng dẫn
+@@818d51de6e
+en: Picture videos that show the steps for printing · copying · scanning · fax · laminating · binding. The videos are in Korean for now — follow the pictures, and see the picture guide for each step in your language.
+zh: 用图片视频简单展示打印 · 复印 · 扫描 · 传真 · 塑封 · 装订的使用步骤。视频目前是韩语字幕 — 请看图片操作，各步骤的中文说明请看图文使用方法。
+vi: Video hình vẽ chỉ các bước in · photo · scan · fax · ép plastic · đóng sách. Hiện video có phụ đề tiếng Hàn — hãy làm theo hình, và xem hướng dẫn bằng hình để đọc từng bước bằng tiếng Việt.
+@@94dbc69e52
+en: <a href="guide.html">All guides</a> <a class="on" href="guide-video.html">▶ Videos</a> <a href="guide-print.html">🖨️ Print</a> <a href="guide-copy.html">📋 Copy</a> <a href="guide-scan.html">📄 Scan</a>
+zh: <a href="guide.html">全部使用方法</a> <a class="on" href="guide-video.html">▶ 视频</a> <a href="guide-print.html">🖨️ 打印</a> <a href="guide-copy.html">📋 复印</a> <a href="guide-scan.html">📄 扫描</a>
+vi: <a href="guide.html">Tất cả hướng dẫn</a> <a class="on" href="guide-video.html">▶ Video</a> <a href="guide-print.html">🖨️ In</a> <a href="guide-copy.html">📋 Photo</a> <a href="guide-scan.html">📄 Scan</a>
+@@84314ee771
+en: How to use, in videos
+zh: 用视频看使用方法
+vi: Xem hướng dẫn bằng video
+@@c2f3deba3d
+en: Tap the video for the service you want. The videos have Korean captions — <b>no sound needed</b>, just follow the pictures. Press <b>🖼️ Picture guide</b> under each video for the steps in English.
+zh: 请点您想看的服务视频。视频是韩语字幕 — <b>不用开声音</b>，跟着图片做就行。按每个视频下面的<b>🖼️ 图文使用方法</b>，可以看中文步骤说明。
+vi: Bấm vào video của dịch vụ bạn muốn xem. Video có phụ đề tiếng Hàn — <b>không cần bật tiếng</b>, chỉ cần làm theo hình. Bấm <b>🖼️ Hướng dẫn bằng hình</b> dưới mỗi video để đọc các bước bằng tiếng Việt.
+@@5867fe7559
+en: <a class="vcard-go" href="guide-print.html">🖼️ Picture guide →</a>
+zh: <a class="vcard-go" href="guide-print.html">🖼️ 图文使用方法 →</a>
+vi: <a class="vcard-go" href="guide-print.html">🖼️ Hướng dẫn bằng hình →</a>
+@@2e9be8383e
+en: <span class="vlen">1:17</span>
+zh: <span class="vlen">1分17秒</span>
+vi: <span class="vlen">1:17</span>
+@@68de07ba49
+en: How to print
+zh: 打印方法
+vi: Cách in
+@@52bc8f5760
+en: <a class="vcard-go" href="guide-copy.html">🖼️ Picture guide →</a>
+zh: <a class="vcard-go" href="guide-copy.html">🖼️ 图文使用方法 →</a>
+vi: <a class="vcard-go" href="guide-copy.html">🖼️ Hướng dẫn bằng hình →</a>
+@@14bd75e061
+en: <span class="vlen">1:43</span>
+zh: <span class="vlen">1分43秒</span>
+vi: <span class="vlen">1:43</span>
+@@ac31ab86f6
+en: How to copy
+zh: 复印方法
+vi: Cách photo
+@@580866e3b6
+en: <a class="vcard-go" href="guide-scan.html">🖼️ Picture guide →</a>
+zh: <a class="vcard-go" href="guide-scan.html">🖼️ 图文使用方法 →</a>
+vi: <a class="vcard-go" href="guide-scan.html">🖼️ Hướng dẫn bằng hình →</a>
+@@4df544603c
+en: <span class="vlen">1:55</span>
+zh: <span class="vlen">1分55秒</span>
+vi: <span class="vlen">1:55</span>
+@@0e03da8a83
+en: How to scan
+zh: 扫描方法
+vi: Cách scan
+@@43fbfe82e6
+en: <a class="vcard-go" href="guide-fax.html">🖼️ Picture guide →</a>
+zh: <a class="vcard-go" href="guide-fax.html">🖼️ 图文使用方法 →</a>
+vi: <a class="vcard-go" href="guide-fax.html">🖼️ Hướng dẫn bằng hình →</a>
+@@a10a869511
+en: <span class="vlen">1:49</span>
+zh: <span class="vlen">1分49秒</span>
+vi: <span class="vlen">1:49</span>
+@@51203a9bf2
+en: How to send a fax
+zh: 发传真方法
+vi: Cách gửi fax
+@@1a4817de43
+en: <a class="vcard-go" href="guide-coat.html#pl1506">🖼️ Picture guide →</a>
+zh: <a class="vcard-go" href="guide-coat.html#pl1506">🖼️ 图文使用方法 →</a>
+vi: <a class="vcard-go" href="guide-coat.html#pl1506">🖼️ Hướng dẫn bằng hình →</a>
+@@fdf8773a8c
+en: <span class="vlen">1:35</span>
+zh: <span class="vlen">1分35秒</span>
+vi: <span class="vlen">1:35</span>
+@@29d23549cf
+en: How to laminate · black PL-1506
+zh: 塑封方法 · 黑色 PL-1506
+vi: Cách ép plastic · máy đen PL-1506
+@@68ee36223d
+en: <a class="vcard-go" href="guide-coat.html#safa">🖼️ Picture guide →</a>
+zh: <a class="vcard-go" href="guide-coat.html#safa">🖼️ 图文使用方法 →</a>
+vi: <a class="vcard-go" href="guide-coat.html#safa">🖼️ Hướng dẫn bằng hình →</a>
+@@f88d9a7f33
+en: <span class="vlen">1:37</span>
+zh: <span class="vlen">1分37秒</span>
+vi: <span class="vlen">1:37</span>
+@@3ce999b24d
+en: How to laminate · white SAFA-BM100
+zh: 塑封方法 · 白色 SAFA-BM100
+vi: Cách ép plastic · máy trắng SAFA-BM100
+@@285f32a617
+en: <a class="vcard-go" href="guide-bind.html">🖼️ Picture guide →</a>
+zh: <a class="vcard-go" href="guide-bind.html">🖼️ 图文使用方法 →</a>
+vi: <a class="vcard-go" href="guide-bind.html">🖼️ Hướng dẫn bằng hình →</a>
+@@acbdae6350
+en: <span class="vlen">2:09</span>
+zh: <span class="vlen">2分9秒</span>
+vi: <span class="vlen">2:09</span>
+@@7f5cff6efe
+en: How to bind
+zh: 装订方法
+vi: Cách đóng sách
+@@a2460ab6e3
+en: <a class="vcard-go" href="faq.html#faq-24">🖼️ Picture guide (Korean) →</a>
+zh: <a class="vcard-go" href="faq.html#faq-24">🖼️ 图文使用方法（韩语）→</a>
+vi: <a class="vcard-go" href="faq.html#faq-24">🖼️ Hướng dẫn bằng hình (tiếng Hàn) →</a>
+@@3344e8a8e5
+en: <span class="vlen">1:41</span>
+zh: <span class="vlen">1分41秒</span>
+vi: <span class="vlen">1:41</span>
+@@b096909980
+en: No card? · Toss kiosk prepaid top-up
+zh: 没有卡的时候 · Toss 自助机预付充值
+vi: Không có thẻ? · Nạp tiền trả trước ở kiosk Toss

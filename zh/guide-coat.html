@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8"/>
+<meta content="PrintShop Mini 塑封使用方法 — 用照片介绍付款、预热、放进塑封膜和送入机器的方法。" name="description"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>塑封使用方法 - PrintShop Mini</title>
+<link href="https://www.printshopmini.com/zh/guide-coat.html" rel="canonical"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&amp;family=Jua&amp;family=Gamja+Flower&amp;display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#1B8AC4;--blue-hover:#1470A8;--blue-light:#E8F4FC;--blue-mid:#4AAAD6;
+  --text:#111827;--text2:#374151;--text3:#6B7280;--border:#E5E7EB;
+  --bg:#F9FAFB;--white:#FFFFFF;--radius:14px;
+  --print:#22B24C;--copy:#018FFB;--scan:#12BDB0;--fax:#F3732C;--warn:#D93025;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--white);line-height:1.7;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:70px;display:flex;align-items:center;padding:0 6%}
+.nav-logo{display:flex;align-items:center;gap:10px;flex-shrink:0;margin-right:48px}
+.nav-logo img.logo-img{width:36px;height:36px;object-fit:contain;border-radius:8px}
+.nav-logo-name{font-size:17px;font-weight:900;color:var(--blue);letter-spacing:-0.5px}
+.nav-links{display:flex;list-style:none;gap:2px;flex:1}
+.nav-links a{font-size:14px;font-weight:500;color:var(--text2);padding:8px 16px;border-radius:8px;transition:all .18s}
+.nav-links a:hover,.nav-links a.active{color:var(--blue);background:var(--blue-light)}
+.nav-right{display:flex;align-items:center;gap:0;margin-left:auto}
+.nav-cta{background:var(--blue);color:white;font-size:13px;font-weight:700;padding:9px 22px;border-radius:50px;transition:background .2s;white-space:nowrap}
+.nav-cta:hover{background:var(--blue-hover)}
+.nav-raccoon{width:56px;height:56px;flex-shrink:0;margin-left:6px;position:relative;top:2px}
+.nav-raccoon img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.15));transition:transform .3s}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{width:22px;height:2px;background:var(--text);border-radius:2px;display:block}
+
+/* PAGE HEADER */
+.page-header{margin-top:70px;background:var(--white);border-bottom:1px solid var(--border);padding:52px 6% 44px}
+.ph-inner{max-width:1160px;margin:0 auto}
+.ph-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:var(--blue);letter-spacing:1px;margin-bottom:14px}
+.ph-eyebrow::before{content:'';width:20px;height:2px;background:var(--blue);border-radius:2px}
+.ph-h1{font-size:clamp(28px,4vw,48px);font-weight:900;letter-spacing:-2px;margin-bottom:10px}
+.ph-sub{font-size:15px;color:var(--text3)}
+
+/* 경고 배너 */
+.warnbar{background:#FEF2F2;border-bottom:1px solid #FADCDC;padding:18px 6%}
+.warnbar-in{max-width:1160px;margin:0 auto;display:flex;gap:14px;align-items:flex-start}
+.warnbar-ico{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:var(--warn);color:#fff;font-size:15px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.warnbar-tx{font-size:14.5px;font-weight:700;color:#8A1C15;line-height:1.6}
+.warnbar-tx span{font-weight:500;color:#A3453E;display:block;margin-top:3px;font-size:13.5px}
+
+/* 탭 */
+.tabs{background:var(--bg);border-bottom:1px solid var(--border);padding:0 6%;position:sticky;top:70px;z-index:100}
+.tabs-in{max-width:1160px;margin:0 auto;display:flex;overflow-x:auto}
+.tabs-in::-webkit-scrollbar{display:none}
+.tab{padding:16px 20px;font-size:13.5px;font-weight:700;color:var(--text3);white-space:nowrap;cursor:pointer;border-bottom:2px solid transparent;transition:all .2s;background:none;border-top:none;border-left:none;border-right:none;font-family:inherit}
+.tab:hover,.tab.on{color:var(--blue);border-bottom-color:var(--blue)}
+
+/* 섹션 */
+.sec{padding:64px 6%;border-bottom:1px solid var(--border)}
+.sec.alt{background:var(--bg)}
+.sec-in{max-width:1160px;margin:0 auto}
+.sec-head{display:flex;align-items:center;gap:18px;margin-bottom:10px;flex-wrap:wrap}
+.sec-ico{width:60px;height:60px;border-radius:16px;background:var(--sc-light,var(--blue-light));display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.sec-h2{font-size:clamp(22px,3vw,32px);font-weight:900;letter-spacing:-1px}
+.sec-tagline{font-size:14.5px;color:var(--text3);margin-bottom:34px}
+.pill{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.5px;padding:4px 11px;border-radius:50px;background:var(--sc,var(--blue));color:#fff;vertical-align:middle;margin-left:2px}
+
+/* 단계 카드 */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:18px}
+.step{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px 22px 26px;display:flex;flex-direction:column}
+.sec.alt .step{background:var(--white)}
+.step-no{width:32px;height:32px;border-radius:50%;background:var(--sc,var(--blue));color:#fff;font-size:15px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.step-fig{min-height:106px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.step-h{font-size:16.5px;font-weight:900;letter-spacing:-.4px;margin-bottom:7px;line-height:1.35}
+.step-p{font-size:13.8px;color:var(--text2);line-height:1.65}
+.step-p b{font-weight:700;color:var(--sc,var(--blue))}
+.step-p .r{color:var(--warn);font-weight:700}
+b.lr,.step-p b.lr,.step-note b.lr,.pl-legend b.lr{color:#D92D20;font-weight:900}
+b.lg,.step-p b.lg,.step-note b.lg,.pl-legend b.lg{color:#12A150;font-weight:900}
+
+/* 핵심 팁 */
+.tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:18px}
+.tip{border:2px solid var(--blue-light);border-radius:var(--radius);padding:26px 24px;background:var(--white);text-align:center}
+.tip-fig{margin-bottom:12px;display:flex;justify-content:center}
+.tip-h{font-size:17px;font-weight:900;color:var(--blue);margin-bottom:8px;letter-spacing:-.4px}
+.tip-p{font-size:14px;color:var(--text2);line-height:1.65}
+.tip-p b{font-weight:700;color:var(--text)}
+
+.sec-rule{height:4px;border-radius:4px;background:var(--sc,var(--blue));width:56px;margin-bottom:16px}
+.subhead{font-size:15px;font-weight:900;color:var(--sc,var(--blue));margin:34px 0 14px;padding-left:12px;border-left:4px solid var(--sc,var(--blue))}
+
+/* 용어 카드 */
+.terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:18px}
+.term{border:2px solid var(--tc);border-radius:var(--radius);background:var(--white);padding:0;overflow:hidden;display:flex;flex-direction:column}
+.term-top{background:var(--tc);padding:14px 20px;display:flex;align-items:center;gap:12px}
+.term-name{font-size:20px;font-weight:900;color:#fff;letter-spacing:-.6px}
+.term-en{font-size:11.5px;font-weight:800;color:#fff;opacity:.8;letter-spacing:.6px}
+.term-body{padding:22px 20px 24px;flex:1;display:flex;flex-direction:column}
+.term-flow{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.term-chip{font-size:13px;font-weight:800;padding:6px 13px;border-radius:50px;background:#F1F4F7;color:var(--text2)}
+.term-arrow{font-size:15px;font-weight:900;color:var(--tc)}
+.term-def{font-size:14.5px;font-weight:700;line-height:1.6;margin-bottom:10px}
+.term-ex{font-size:13.4px;color:var(--text3);line-height:1.65}
+.term-ex b{color:var(--text2);font-weight:700}
+
+/* ADF 금지 원본 경고 */
+.adfw{border:2.5px solid #E4574D;border-radius:var(--radius);background:#FEF6F5;padding:22px 24px;margin-top:22px}
+.adfw-h{display:flex;gap:11px;align-items:center;font-size:18px;font-weight:900;color:#B31E16;margin-bottom:14px;line-height:1.35}
+.adfw-h .x{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:#C0261C;color:#fff;font-size:16px;font-weight:900;display:flex;align-items:center;justify-content:center}
+.adfw-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.adfw-box{background:#fff;border-radius:10px;padding:16px 18px}
+.adfw-box.ok{border:1.5px solid #BFE3C6}
+.adfw-box.no{border:1.5px solid #F3C3BF}
+.adfw-t{font-size:14.5px;font-weight:900;margin-bottom:9px}
+.adfw-box.ok .adfw-t{color:#1B7A2C}
+.adfw-box.no .adfw-t{color:#C0261C}
+.adfw-box ul{margin:0;padding-left:17px}
+.adfw-box li{font-size:13.6px;color:var(--text2);line-height:1.6;margin-bottom:5px}
+.adfw-foot{margin-top:15px;font-size:13.8px;line-height:1.65;color:#8A1C15;font-weight:600}
+.adfw-foot b{font-weight:900;color:#B31E16}
+
+/* 커버 여는 안내 */
+.openbox{margin-bottom:20px}
+.ob{background:#fff;border:2px solid var(--sc,var(--blue));border-radius:var(--radius);padding:18px;display:flex;gap:22px;align-items:center}
+@media(max-width:760px){.ob{flex-direction:column}}
+.ob-fig{flex:0 0 46%;display:flex;justify-content:center}
+.ob-h{font-size:16px;font-weight:900;margin-bottom:6px;line-height:1.35}
+.ob-p{font-size:13.6px;color:var(--text2);line-height:1.62}
+.ob-p b{color:var(--sc,var(--blue));font-weight:700}
+.ob-p .r{color:var(--warn);font-weight:700}
+
+/* 특수 복사 카드 */
+.minis{display:grid;grid-template-columns:repeat(auto-fit,minmax(304px,1fr));gap:18px}
+.mini{border:1px solid var(--border);border-radius:var(--radius);background:#fff;overflow:hidden;display:flex;flex-direction:column}
+.mini-top{background:var(--sc,var(--blue));color:#fff;padding:13px 18px;font-size:16.5px;font-weight:900;display:flex;align-items:center;gap:10px;letter-spacing:-.4px}
+.mini-fig{margin:0 0 16px}
+.mini-fig img{width:100%;border-radius:8px;border:1px solid var(--border);display:block}
+.mini-body{padding:20px 18px 22px;flex:1;display:flex;flex-direction:column}
+.mini ol{margin:0;padding-left:19px}
+.mini li{font-size:13.8px;color:var(--text2);line-height:1.62;margin-bottom:10px}
+.mini li:last-child{margin-bottom:0}
+.mini li b{color:var(--sc,var(--blue));font-weight:700}
+.mini li .r{color:var(--warn);font-weight:700}
+.mini-warn{margin-top:14px;background:#FEF2F2;border:2px solid #E4574D;border-radius:10px;padding:14px 16px}
+.mini-warn-h{font-size:14.5px;font-weight:900;color:#C0261C;line-height:1.45;display:flex;gap:8px;align-items:flex-start;margin-bottom:6px}
+.mini-warn-h .x{flex:0 0 auto;width:20px;height:20px;border-radius:50%;background:#C0261C;color:#fff;font-size:13px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.mini-warn-p{font-size:13.2px;color:#8A1C15;line-height:1.6;font-weight:600;padding-left:28px}
+.mini-warn-p b{font-weight:900;color:#C0261C}
+.mini-note{margin-top:14px;background:#F5F8FA;border-radius:9px;padding:13px 15px;font-size:13px;color:var(--text2);line-height:1.6}
+.mini-note b{color:var(--text);font-weight:700}
+
+/* MS 오피스 서브탭 */
+.otabs{display:flex;gap:8px;margin-bottom:30px;flex-wrap:wrap}
+.otab{padding:10px 22px;font-size:13.5px;font-weight:800;border-radius:50px;border:2px solid var(--border);background:#fff;color:var(--text2);cursor:pointer;font-family:inherit;transition:all .18s}
+.otab:hover{border-color:var(--blue);color:var(--blue)}
+.otab.on{background:var(--blue);border-color:var(--blue);color:#fff}
+
+/* MS 오피스 화면 목업 (실제 인쇄 화면 재현) */
+.steps-office{grid-template-columns:repeat(auto-fit,minmax(288px,1fr))}
+.steps-office .step-fig{min-height:auto;margin-bottom:16px}
+.omock{border:1px solid #D7DDE3;border-radius:8px;overflow:hidden;background:#fff;box-shadow:0 1px 5px rgba(17,24,39,.07);width:100%}
+.omock-bar{height:18px;background:#EEF1F5;display:flex;align-items:center;gap:4px;padding:0 8px;border-bottom:1px solid #E5E7EB}
+.omock-dot{width:5px;height:5px;border-radius:50%;background:#D7DDE3}
+.omock-body{display:flex;height:158px}
+.omock-side{width:58px;flex:0 0 auto;background:var(--oc,#1B8AC4);padding:8px 0;display:flex;flex-direction:column;gap:1px}
+.omock-side div{color:rgba(255,255,255,.68);font-size:8.6px;font-weight:700;padding:5px 0 5px 10px}
+.omock-side div.on{color:#fff;background:rgba(255,255,255,.18);border-left:3px solid #fff;padding-left:7px}
+.omock-fields{width:124px;flex:0 0 auto;background:#F7F8FA;padding:8px 8px;display:flex;flex-direction:column;gap:5px;border-right:1px solid #E5E7EB;overflow:hidden}
+.omock-cap{font-size:7.6px;color:#9AA5B1;font-weight:800;letter-spacing:.3px;margin-top:3px}
+.omock-cap:first-child{margin-top:0}
+.omock-field{background:#fff;border:1px solid #C9D3DB;border-radius:4px;padding:4px 14px 4px 7px;font-size:8.2px;font-weight:700;color:#374151;position:relative;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.omock-field::after{content:'▾';position:absolute;right:5px;top:50%;transform:translateY(-50%);color:#9AA5B1;font-size:6.5px}
+.omock-row.hi .omock-field{border-color:#D93025;background:#FEF2F2;color:#B31E16;box-shadow:0 0 0 2px rgba(217,48,37,.14)}
+.omock-row.hi .omock-cap{color:#D93025}
+.omock-preview{flex:1;background:#EDEFF2;display:flex;align-items:center;justify-content:center;padding:10px;position:relative}
+.omock-page{width:66%;height:88%;background:#fff;border:1px solid #D7DDE3;box-shadow:0 1px 5px rgba(0,0,0,.09);display:flex;align-items:center;justify-content:center}
+.omock-tag{position:absolute;background:#D93025;color:#fff;font-size:8px;font-weight:800;padding:3px 8px;border-radius:5px;white-space:nowrap;box-shadow:0 2px 5px rgba(217,48,37,.3)}
+.omock-cap.hi{color:#D93025}
+.omock-fields .omock-row.hi{margin:0 -3px;padding:2px 3px;background:rgba(217,48,37,.06);border-radius:5px}
+
+/* 준비중 */
+.soon{border:1px dashed #C9D3DB;border-radius:var(--radius);padding:44px 24px;text-align:center;background:var(--white)}
+.soon-h{font-size:16px;font-weight:800;color:var(--text3);margin-bottom:6px}
+.soon-p{font-size:13.5px;color:var(--text3)}
+
+/* FAQ */
+.faq{border-top:1px solid var(--border)}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-q{width:100%;text-align:left;background:none;border:none;font-family:inherit;font-size:15.5px;font-weight:700;color:var(--text);padding:20px 40px 20px 0;cursor:pointer;position:relative;line-height:1.5}
+.faq-q::after{content:'+';position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:22px;font-weight:400;color:var(--blue)}
+.faq-item.open .faq-q::after{content:'−'}
+.faq-a{display:none;font-size:14.2px;color:var(--text2);line-height:1.75;padding:0 0 22px}
+.faq-item.open .faq-a{display:block}
+
+/* FOOTER */
+footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
+.ft-wrap{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:56px}
+.ft-brand img{width:32px;height:32px;object-fit:contain;border-radius:6px;margin-bottom:14px}
+.ft-brand-name{color:white;font-size:18px;font-weight:900;margin-bottom:10px}
+.ft-brand p{font-size:13px;line-height:2}
+.ft-col h4{color:white;font-size:13px;font-weight:700;margin-bottom:14px;letter-spacing:.5px}
+.ft-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.ft-col a{font-size:13px;transition:color .2s}
+.ft-col a:hover{color:white}
+.ft-bottom{max-width:1160px;margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.ft-bottom p{font-size:12px;color:rgba(255,255,255,.25)}
+
+@media(max-width:820px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .nav-links.show{display:flex;position:absolute;top:70px;left:0;right:0;background:#fff;flex-direction:column;padding:10px 6%;border-bottom:1px solid var(--border)}
+  .sec{padding:48px 6%}
+  .ft-wrap{grid-template-columns:1fr}
+  .nav-raccoon{display:none}
+}
+
+/* ===== 사용방법 하위 구조 추가 스타일 ===== */
+.svc-switch{background:#fff;border-bottom:1px solid var(--border);padding:14px 6%}
+.svc-switch-in{max-width:1160px;margin:0 auto;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.svc-switch a{padding:8px 18px;font-size:13.5px;font-weight:800;border-radius:50px;border:2px solid var(--border);background:#fff;color:var(--text2);transition:all .18s}
+.svc-switch a:hover{border-color:var(--blue);color:var(--blue)}
+.svc-switch a.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.svc-switch a.home{border-style:dashed;color:var(--text3)}
+.svc-switch-label{font-size:12.5px;font-weight:800;color:var(--text3);margin-right:4px}
+
+.steps-wide{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.step-figs{margin-bottom:16px;display:grid;gap:10px}
+.step-figs.two{grid-template-columns:1fr 1fr}
+.step-photo{width:100%;height:auto;border-radius:8px;border:1px solid var(--border);display:block}
+.step-dual{grid-column:span 2}
+.step-note{margin-top:12px;background:#F5F8FA;border-radius:9px;padding:11px 14px;font-size:13px;color:var(--text2);line-height:1.6}
+.step-note b{color:var(--text);font-weight:700}
+.step-note.warn{background:#FEF2F2;color:#8A1C15;font-weight:600}
+.step-note.warn b{color:#B31E16}
+.sec-note{margin:0 0 22px;max-width:720px}
+@media(max-width:719px){
+  .step-dual{grid-column:span 1}
+  .step-figs.two{grid-template-columns:1fr}
+}
+
+/* 사용방법 허브: 서비스 선택 카드 */
+.gcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:18px}
+.gcard{border:2px solid var(--tc);border-radius:var(--radius);background:#fff;overflow:hidden;display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s}
+.gcard:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(17,24,39,.1)}
+.gcard-top{background:var(--tc);padding:14px 20px;display:flex;align-items:center;gap:12px}
+.gcard-name{font-size:20px;font-weight:900;color:#fff;letter-spacing:-.6px}
+.gcard-body{padding:20px;flex:1;display:flex;flex-direction:column;gap:14px}
+.gcard-desc{font-size:14px;color:var(--text2);line-height:1.65;flex:1}
+.gcard-go{font-size:13.5px;font-weight:900;color:var(--tc)}
+
+.nav-links li{position:relative}
+@media(max-width:900px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .nav-links.show{display:flex;position:absolute;top:70px;left:0;right:0;background:#fff;flex-direction:column;padding:10px 6%;border-bottom:1px solid var(--border)}
+  .nav-links{max-height:calc(100vh - 70px);overflow-y:auto}
+}
+
+/* 코팅기 2종류 안내 / PL-1506 설명서 */
+.machine-pick{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:0 0 34px;max-width:860px}
+.machine-pick-h{grid-column:1/-1;font-size:15px;font-weight:900;color:var(--text);margin-bottom:-2px}
+.machine-pick-note{grid-column:1/-1;background:#EAF7EE;border:2px solid #34A853;border-radius:12px;padding:12px 16px;font-size:14.2px;color:#14532D;line-height:1.7}
+.machine-pick-note b{font-weight:900;color:#0B3D1E}
+.rec-tag{display:inline-block;margin:0 0 6px 8px;padding:2px 9px;border-radius:50px;background:#DDF3E3;border:1px solid #34A853;color:#14532D;font-style:normal;font-size:11.5px;font-weight:800;vertical-align:2px}
+.mp{display:block;border:2px solid var(--sc);border-radius:var(--radius);background:#fff;padding:18px 20px;transition:transform .18s,box-shadow .18s}
+.mp:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(17,24,39,.1)}
+.mp>b{display:block;font-size:16px;font-weight:900;margin-bottom:4px}
+.mp span b{font-weight:800;color:var(--text)}
+.mp span{display:block;font-size:13.5px;color:var(--text2);line-height:1.6}
+.mp em{display:block;margin-top:9px;font-style:normal;font-weight:800;font-size:13px;color:var(--sc)}
+.mp.dark{border-color:#111827}
+.mp.dark em{color:#111827}
+
+.pl-look{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:0 0 18px;max-width:960px}
+.pl-fig{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:14px;margin:0}
+.pl-fig svg{width:100%;height:auto;display:block}
+.pl-fig figcaption{font-size:13px;color:var(--text2);margin-top:8px;font-weight:700;line-height:1.5}
+.pl-legend{list-style:none;margin:0 0 28px;padding:0;max-width:960px;display:grid;gap:8px}
+.pl-legend li{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--text2);line-height:1.6}
+.pl-legend li>div{flex:1;min-width:0}
+.pl-legend li span{flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:var(--blue);color:#fff;font-size:12.5px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.pl-legend li.no{background:#FEF2F2;border:2px solid #E4574D;border-radius:10px;padding:10px 14px;color:#8A1C15;font-weight:600}
+.pl-legend li.no span{background:#D93025}
+.pl-legend li.no b{color:#B31E16;font-weight:900}
+
+.prestep{background:#FFF8E6;border:2px solid #F2C94C;border-radius:var(--radius);padding:18px 22px;margin:0 0 30px;max-width:960px}
+.prestep-h{font-size:16px;font-weight:900;color:#5C4300;margin-bottom:8px}
+.prestep-h span{font-size:12.5px;font-weight:700;color:#8A6A00;margin-left:6px}
+.prestep ol{margin:0;padding-left:20px}
+.prestep li{font-size:14.2px;color:#5C4300;line-height:1.7;margin-bottom:3px}
+.prestep li b{color:#3E2D00;font-weight:800}
+.prestep-warn{margin-top:12px;background:#FEF2F2;border:2px solid #E4574D;border-radius:10px;padding:10px 14px;font-size:13.6px;font-weight:600;color:#8A1C15;line-height:1.6}
+.prestep-warn b{color:#B31E16;font-weight:900}
+.step-photo.pl{max-width:300px;margin:0 auto}
+.step-photo.pl.tall{max-width:190px}
+.adfw-box.pic ul{padding-left:0;list-style:none}
+.adfw-box.pic li{display:flex;gap:12px;align-items:center}
+.adfw-box.pic li>div{flex:1;min-width:0}
+.adfw-box.pic li img{flex:0 0 auto;width:104px;height:78px;object-fit:contain;background:#fff;border:1px solid #E5E7EB;border-radius:6px}
+.adfw-box.pic li.wide{flex-direction:column;align-items:flex-start;gap:6px}
+.adfw-box.pic li.wide img{width:100%;max-width:240px;height:auto}
+.adfw-box.pic ol.seq{list-style:none;counter-reset:s;margin:8px 0 0;padding:0}
+.adfw-box.pic ol.seq li{display:block;counter-increment:s;position:relative;padding-left:26px;margin-bottom:5px}
+.adfw-box.pic ol.seq li::before{content:counter(s);position:absolute;left:0;top:1px;width:19px;height:19px;border-radius:50%;background:#1B8AC4;color:#fff;font-size:12px;font-weight:900;display:flex;align-items:center;justify-content:center}
+/* 상단 제목·서비스 선택 고정: 아래 내용만 스크롤 */
+.stick-top{position:sticky;top:70px;margin-top:70px;z-index:90}
+.stick-top .page-header{margin-top:0;position:static}
+.page-header{padding:10px 6% 8px}
+.ph-eyebrow{display:none}
+.ph-h1{font-size:clamp(22px,3vw,30px);letter-spacing:-1px;margin-bottom:0;line-height:1.3}
+.ph-sub{font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.svc-switch{padding:8px 6%}
+.svc-switch a{padding:6px 15px}
+[id]{scroll-margin-top:215px}
+@media(max-width:760px){
+  .page-header{padding:10px 5% 8px}
+  .ph-h1{font-size:19px}
+  .ph-sub{display:none}
+  .svc-switch{padding:7px 5%}
+  .svc-switch-in{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .svc-switch-in::-webkit-scrollbar{display:none}
+  .svc-switch a,.svc-switch-label{flex:0 0 auto;white-space:nowrap}
+  .svc-switch-label{display:none}
+  [id]{scroll-margin-top:165px}
+}
+/* 2단계 메뉴: 서비스 페이지와 같은 밑줄 탭 */
+.svc-switch{background:var(--bg);border-bottom:1px solid var(--border);padding:0 6%}
+.svc-switch-in{max-width:1160px;margin:0 auto;display:flex;flex-wrap:nowrap;gap:0;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.svc-switch-in::-webkit-scrollbar{display:none}
+.svc-switch a,.svc-switch a.home{display:block;flex:0 0 auto;white-space:nowrap;padding:11px 18px;font-size:13px;font-weight:700;color:var(--text3);background:none;border:none;border-bottom:2px solid transparent;border-radius:0;transition:all .2s}
+.svc-switch a:hover,.svc-switch a.on{color:var(--blue);background:none;border-bottom-color:var(--blue)}
+@media(max-width:760px){.svc-switch{padding:0 5%}.svc-switch a{padding:10px 15px}}
+.fax-ico{vertical-align:-2px;margin-right:1px}
+.mp-pic{height:140px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid var(--border);border-radius:10px;margin-bottom:12px;padding:8px;overflow:hidden}
+.mp-pic img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+.fire{margin:0 0 18px;border:3px solid #B71C1C;border-radius:12px;background:#FFF0F0;padding:16px 18px;box-shadow:0 0 0 4px rgba(211,47,47,.15)}
+.fire-h{background:#B71C1C;color:#fff;font-size:17px;font-weight:900;text-align:center;padding:10px 12px;border-radius:8px;margin-bottom:14px;letter-spacing:-.3px}
+.fire-items{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.fire-it{display:flex;align-items:center;gap:12px;background:#fff;border:2px solid #E57373;border-radius:10px;padding:10px 12px}
+.fire-it img{flex:0 0 auto;width:88px;height:72px;object-fit:contain;border-radius:6px;background:#fff}
+.fire-it b{display:block;font-size:16px;font-weight:900;color:#B71C1C}
+.fire-it span{display:block;font-size:13px;color:#7F1D1D;line-height:1.5;margin-top:2px}
+.fire-t{margin-top:14px;font-size:14.5px;line-height:1.75;color:#7F1D1D;font-weight:700}
+.fire-t b{color:#B71C1C;font-weight:900;background:#FFE08A;padding:0 3px;border-radius:3px}
+.adfw-fig{margin:0 0 12px}
+.adfw-fig img{display:block;width:100%;max-width:300px;height:auto;border-radius:8px;border:1px solid #F3C3BF}
+.adfw-fig figcaption{margin-top:6px;font-size:13px;line-height:1.55;color:#7F1D1D}
+.adfw-fig figcaption b{color:#B31E16;font-weight:900}
+.adfw-box.pic li.txt{display:block}
+.step-photo.pl.wide{max-width:460px}
+.adfw-box.pic li.multi{display:block}
+.seq3{display:grid;gap:10px;margin-top:10px}
+.s3{display:flex;align-items:center;gap:12px;background:#F7FAFC;border:1px solid #E5E7EB;border-radius:10px;padding:8px 10px}
+.s3 img{flex:0 0 auto;width:150px;height:auto;border-radius:6px;background:#fff;border:1px solid #E5E7EB}
+.s3 p{margin:0;font-size:13.6px;line-height:1.6;color:var(--text2)}
+.s3 p b{color:var(--text);font-weight:800}
+.warnline{display:block;margin-top:6px;color:#B31E16;font-size:13.4px;font-weight:700}
+.warnline b{color:#B31E16;font-weight:900}
+@media(max-width:560px){.s3{flex-direction:column;align-items:flex-start}.s3 img{width:100%}}
+.dual-tag{display:inline-block;margin:0 0 6px 8px;padding:2px 9px;border-radius:50px;background:#FFF3C4;border:1px solid #F0C95A;color:#6B4A00;font-style:normal;font-size:11.5px;font-weight:800;vertical-align:2px}
+.dual{margin:0 0 20px;border:3px solid #D32F2F;border-radius:12px;background:#FFF5F5;padding:16px 18px;max-width:860px}
+.dual-h{font-size:16.5px;font-weight:900;color:#B71C1C;margin-bottom:10px}
+.dual-h b{background:#FFE08A;padding:0 4px;border-radius:3px}
+.dual-warn{font-size:14.2px;line-height:1.75;color:#7F1D1D;font-weight:600;margin-bottom:12px}
+.dual-warn b{color:#B71C1C;font-weight:900}
+.dual-img{display:block;width:100%;max-width:560px;height:auto;border-radius:10px;border:1px solid #F3C3BF;background:#fff}
+/* FAQ 등에서 #이름 으로 들어올 때, 구역 제목이 고정 메뉴 바로 아래에 보이도록 */
+.sec[id]{scroll-margin-top:167px}
+@media(max-width:700px){.sec[id]{scroll-margin-top:122px}}
+
+/* 미니프랜즈 꾸밈 캐릭터 (제목 오른쪽) */
+.ph-inner{position:relative;padding-right:84px}
+.ph-pal{position:absolute;right:0;bottom:-8px;height:70px;width:auto;pointer-events:none;filter:drop-shadow(0 3px 4px rgba(0,0,0,.08))}
+@media(max-width:760px){.ph-inner{padding-right:50px}.ph-pal{height:42px;bottom:-6px}}
+
+/* 미니프랜즈 담당 친구 소개 띠 */
+.fr-band{max-width:1160px;margin:0 auto;padding:14px 6% 0}
+.fr-in{display:flex;align-items:center;gap:16px;background:var(--cl);border:3px dashed var(--c);border-radius:26px;padding:10px 20px 10px 14px;text-decoration:none;color:inherit;transition:transform .2s}
+.fr-in:hover{transform:translateY(-2px)}
+.fr-in img{flex:0 0 auto;height:92px;width:auto;filter:drop-shadow(0 4px 4px rgba(0,0,0,.15))}
+.fr-txt{flex:1;min-width:0;font-size:14.5px;line-height:1.75;color:#374151}
+.fr-txt b{font-family:'Jua','Noto Sans KR',sans-serif;font-weight:400;font-size:20px;color:var(--c);margin-right:6px}
+.fr-txt i{font-style:normal;font-family:'Gamja Flower','Jua',sans-serif;font-size:18px;color:var(--c);opacity:.85;margin-right:8px}
+.fr-txt span.fr-pill{display:inline-block;background:var(--c);color:#fff;font-size:12.5px;font-weight:700;padding:0 10px;border-radius:50px;margin-right:6px;vertical-align:2px}
+.fr-more{flex:0 0 auto;font-weight:700;font-size:13.5px;color:#fff;background:var(--c);padding:7px 14px;border-radius:50px;white-space:nowrap}
+@media(max-width:700px){
+  .fr-band{padding:10px 4% 0}
+  .fr-in{gap:10px;padding:8px 12px 8px 8px;border-radius:20px}
+  .fr-in img{height:68px}
+  .fr-txt{font-size:13px;line-height:1.6}
+  .fr-txt b{font-size:17px}
+  .fr-more{display:none}
+}
+</style>
+<style>
+/* 사용방법 동영상 */
+.gvid{max-width:820px;margin:0 0 34px;background:var(--sc-light,#E8F4FC);border:2px solid var(--sc,var(--blue));border-radius:18px;padding:14px 14px 16px}
+.gvid-h{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-weight:900;font-size:16px;color:var(--text);margin:0 4px 10px}
+.gvid-h .gvid-play{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--sc,var(--blue));color:#fff;font-size:12px}
+.gvid-h small{font-size:12.5px;font-weight:700;color:var(--text3)}
+.gvid video{display:block;width:100%;aspect-ratio:16/9;border-radius:12px;background:#000}
+</style>
+<style id="nav-lang-css">.nav-lang{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:#1B8AC4;border:1.5px solid #1B8AC4;border-radius:50px;padding:7px 13px;margin-right:8px;white-space:nowrap;background:#fff}.nav-lang:hover{background:#E8F4FC}.nav-links a{white-space:nowrap}@media(max-width:1180px){.nav-lang .t{display:none}.nav-lang{padding:6px 9px;font-size:15px}}@media(max-width:480px){.nav-lang{padding:4px 6px;margin-right:6px;font-size:14px}.nav-cta{padding:8px 13px!important;font-size:12.5px!important}}@media(max-width:400px){nav{padding-left:12px!important;padding-right:12px!important}.nav-logo-name{font-size:15px!important}.nav-logo{gap:6px!important}.nav-cta{padding:7px 9px!important;font-size:12px!important}.nav-lang,.lang-sel{margin-right:5px!important}.hamburger{margin-left:4px!important}}</style>
+<style>.lang-sel{display:inline-flex;align-items:center;gap:4px;margin-right:8px;border:1.5px solid #1B8AC4;border-radius:50px;padding:3px 4px 3px 10px;background:#fff;font-size:15px}.lang-sel select{border:none;background:transparent;font:700 13px sans-serif;color:#1B8AC4;padding:4px 2px;cursor:pointer;outline:none}.nav-links a{padding:8px 11px!important}@media(max-width:1280px){.nav-raccoon{display:none!important}}.lang-sel .cur{display:none}@media(max-width:480px){.nav-cta{display:none!important}.lang-sel{position:relative;margin-right:6px;padding:6px 10px;gap:5px}.lang-sel .cur{display:inline;white-space:nowrap;font:700 13px sans-serif;color:#1B8AC4}.lang-sel select{position:absolute;inset:0;width:100%;opacity:0}}@media(max-width:400px){.lang-sel{padding:5px 6px!important;gap:2px!important;font-size:13px}.lang-sel .cur{font-size:12px}}.lang-sw{position:fixed;right:10px;bottom:12px;z-index:400}.tr-note{max-width:1160px;margin:0 auto;padding:10px 6% 0;font-size:12.5px;color:#9CA3AF}</style></head>
+<body>
+<!-- NAV -->
+<nav> <a class="nav-logo" href="../index.html"> <img alt="标志" class="logo-img" src="../logo.jpg"/> <span class="nav-logo-name">PrintShop Mini</span> </a> <ul class="nav-links" id="navLinks">
+<li><a href="../services.html">服务</a></li>
+<li><a class="active" href="guide.html">使用方法</a></li>
+<li><a href="../faq.html">FAQ</a></li>
+<li><a href="../about.html">介绍</a></li>
+<li><a href="../branches.html">门店</a></li>
+<li><a href="../community.html">社区</a></li>
+</ul>
+<div class="nav-right"> <label class="lang-sel" title="Language · 语言 · Ngôn ngữ"><span aria-hidden="true">🌐</span><span aria-hidden="true" class="cur">ZH ▾</span><select aria-label="Language" onchange="location.href=this.value"><option lang="ko" value="../guide-coat.html">한국어</option><option lang="en" value="../en/guide-coat.html">English</option><option lang="zh-Hans" selected="" value="../zh/guide-coat.html">中文</option><option lang="vi" value="../vi/guide-coat.html">Tiếng Việt</option></select></label><a class="nav-cta" href="../branches.html">查找门店</a> <div class="nav-raccoon" title="PrintShop Mini 吉祥物">
+<img alt="浣熊吉祥物" src="../raccoon1.png"/>
+</div>
+</div>
+<button class="hamburger" onclick="toggleMenu()">
+<span></span><span></span><span></span>
+</button>
+</nav>
+<!-- HEADER -->
+<div class="stick-top">
+<div class="page-header">
+<div class="ph-inner">
+<img alt="" aria-hidden="true" class="ph-pal" src="../img/friends/coat.webp"/>
+<div class="ph-eyebrow">GUIDE · COATING</div>
+<h1 class="ph-h1">塑封使用方法</h1>
+<p class="ph-sub">把打印好的纸放进塑封膜里塑封的方法。请先确认塑封膜数量并付款。</p>
+</div>
+</div>
+<div class="svc-switch"><div class="svc-switch-in"> <a href="guide.html">全部使用方法</a> <a href="guide-video.html">▶ 视频</a> <a href="guide-print.html">🖨️ 打印</a> <a href="guide-copy.html">📋 复印</a> <a href="guide-scan.html">📄 扫描</a> <a href="guide-fax.html"><svg aria-hidden="true" class="fax-ico" fill="none" height="15" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 48 48" width="15"><path d="M9 36V5h18l8 8v9" stroke="currentColor" stroke-width="4.2"></path><path d="M15 15h10M15 22h6" stroke="currentColor" stroke-width="4.2"></path><g transform="translate(20 21) scale(1.04)"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke-width="7" style="stroke:var(--bg)"></path><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="3.99"></path></g></svg> 传真 </a> <a class="on" href="guide-coat.html">✨ 塑封</a> <a href="guide-bind.html">📚 装订</a> </div></div>
+</div>
+<div class="fr-band" style="--c:#7C3AED;--cl:#EEE6FD">
+<a class="fr-in" href="../about.html#friend-kobuki" title="认识迷你朋友 Mini Friends">
+<img alt="乌龟小封 (Shelly Coat)" height="92" src="../img/friends/coat.webp" width="92"/>
+<div class="fr-txt"><b>乌龟小封</b><i>Shelly Coat</i><span class="fr-pill">负责塑封</span><br/>你好！我是负责塑封的乌龟小封。我来告诉你怎么把珍贵的纸好好包起来保护它！</div> <span class="fr-more">查看更多朋友 →</span> </a>
+</div>
+<div class="sec alt" id="coat" style="--sc:#7C3AED;--sc-light:#F1EAFE">
+<div class="sec-in">
+<div class="sec-head">
+<div class="sec-ico"><svg fill="none" height="34" viewbox="0 0 48 48" width="34"><rect height="34" rx="3" stroke="#7C3AED" stroke-width="3" width="28" x="8" y="8"></rect><path d="M14 18h16M14 26h16M14 34h9" stroke="#7C3AED" stroke-linecap="round" stroke-width="3"></path><path d="M40 4l1.7 4.3L46 10l-4.3 1.7L40 16l-1.7-4.3L34 10l4.3-1.7z" fill="#7C3AED"></path></svg></div>
+<h2 class="sec-h2">塑封方法 <span class="pill">COATING</span></h2>
+</div>
+<p class="sec-tagline"><b>先确认塑封膜数量并付款，然后开电源，等预热（加热）完成后再放入塑封膜。</b>用完后一定要关掉电源。</p>
+<div class="machine-pick">
+<div class="machine-pick-h">🔎 有的门店有两种塑封机。请先确认店里的塑封机。</div>
+<div class="machine-pick-note">👍 <b>两种塑封机都有的门店</b>，<b>请先用黑色 PL-1506 塑封专用机。</b><br/>PL-1506 <b>预热（加热机器）和塑封速度都更快。</b></div>
+<a class="mp dark" href="#pl1506"><div class="mp-pic"><img alt="黑色 PL-1506 塑封机 — 黑色机身、银色边框，右边是操作按钮" loading="lazy" src="../images/coat/pl-1506-machine.svg"/></div> <b>黑色 PL-1506 塑封机（Paper Friend）</b><i class="rec-tag">👍 塑封专用 · 请先使用</i><span>按电源按钮后，再按<b>［문서］（文件）按钮</b>预热的塑封机。</span><em>请按照下面的&lt;PL-1506 使用方法&gt;操作 ↓</em> </a>
+<a class="mp" href="#safa-steps"><div class="mp-pic"><img alt="白色 SAFA-BM100 塑封机 — 白色机身、深蓝色边框，有 SAFA 标志" loading="lazy" src="../images/coat/safa-100-machine.jpg"/></div> <b>白色 SAFA-BM100 塑封机</b><i class="dual-tag">🔀 塑封 · 装订两用机</i><span>按电源按钮后，再按<b>塑封按钮 2 次</b>预热的塑封机。</span><em>请按照最下面的&lt;SAFA-BM100 使用方法&gt;操作 ↓</em> </a>
+</div>
+<div id="guideFiles"></div>
+</div>
+</div>
+<div class="sec" id="pl1506" style="--sc:#111827;--sc-light:#EEF0F3">
+<div class="sec-in">
+<div class="sec-head">
+<div class="sec-ico"><svg fill="none" height="34" viewbox="0 0 48 48" width="34"><rect fill="#111827" height="20" rx="4" width="36" x="6" y="16"></rect><rect height="8" rx="2" stroke="#111827" stroke-width="3" width="24" x="12" y="10"></rect><rect fill="#fff" height="10" rx="2" stroke="#111827" stroke-width="3" width="20" x="14" y="30"></rect></svg></div>
+<h2 class="sec-h2">黑色塑封机（PL-1506）使用方法 <span class="pill">PL-1506</span></h2>
+</div>
+<p class="sec-tagline"><b>这是 Paper Friend PL-1506 塑封机［문서］（文件）模式专用说明。</b>店里有黑色 PL-1506 塑封机的话，请先<b>按这个方法</b>塑封。（只有白色 SAFA-BM100 的门店，请按最下面的 SAFA-BM100 方法操作。）</p>
+<div class="gvid"><div class="gvid-h"><span class="gvid-play">▶</span>先看黑色 PL-1506 塑封机视频 <small>没有声音也能看懂</small></div><video controls="" playsinline="" poster="../videos/guide-coat-pl.jpg" preload="none"><source src="../videos/guide-coat-pl.mp4" type="video/mp4"/> 您的浏览器无法播放视频。 </video></div>
+<div class="prestep">
+<div class="prestep-h">🧾 开始塑封前请先看！ <span>白色 SAFA-BM100 · 黑色 PL-1506 通用</span></div>
+<ol>
+<li>请先确认<b>陈列的塑封膜数量</b>。</li>
+<li>数量够的话，在 Toss 自助机上<b>选好张数并刷卡付款</b>，然后按下面的方法使用。</li>
+<li>如果陈列的塑封膜比需要的少，请<b>下次再用，或者只用现有的数量</b>。</li>
+</ol>
+<div class="prestep-warn">⚠️ <b>在 Toss 自助机付的钱，退款会打到银行账户。</b>因顾客自己不小心重复付款的，会扣除手续费后退回。请不要重复付款。</div>
+</div>
+<div class="pl-look">
+<figure class="pl-fig"><svg aria-label="从上方看黑色 PL-1506 塑封机的插图。不使用 사진（照片）、무열코팅（冷裱）按钮。" role="img" viewbox="0 0 640 300" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="320" cy="262" fill="#000" opacity=".08" rx="270" ry="14"></ellipse>
+<rect fill="#2B3036" height="38" rx="9" width="300" x="190" y="12"></rect>
+<rect fill="#3A4048" height="6" rx="3" width="280" x="200" y="20"></rect>
+<rect fill="#12161B" height="172" rx="28" width="540" x="50" y="44"></rect>
+<rect fill="none" height="156" rx="21" stroke="#D3D9DF" stroke-width="5" width="524" x="58" y="52"></rect>
+<path d="M70 62 L250 62 L150 200 L70 200 Z" fill="#fff" opacity=".05"></path>
+<text fill="#F3F5F7" font-size="22" font-weight="800" letter-spacing=".5" text-anchor="middle" x="218" y="190">Paper Friend <tspan font-size="17" font-weight="700">PL-1506</tspan></text>
+<rect fill="#1E2328" height="134" rx="16" stroke="#353C45" stroke-width="3" width="132" x="438" y="62"></rect>
+<g fill="#E7EBEF" font-size="12" font-weight="800" text-anchor="middle">
+<rect fill="#343B45" height="25" rx="12.5" width="84" x="446" y="70"></rect><text x="488" y="87">역회전</text>
+<rect fill="#3A414C" height="25" rx="12.5" width="84" x="446" y="101"></rect><text x="494" y="118">문서</text><circle cx="459" cy="113.5" fill="#E5483B" r="4.2"></circle>
+<g opacity=".5"><rect fill="#343B45" height="25" rx="12.5" width="84" x="446" y="132"></rect><text x="488" y="149">사진</text>
+<rect fill="#343B45" height="25" rx="12.5" width="84" x="446" y="163"></rect><text x="488" y="180">무열코팅</text></g>
+</g>
+<g stroke="#E5483B" stroke-linecap="round" stroke-width="4">
+<path d="M472 136 L504 153 M504 136 L472 153"></path><path d="M472 167 L504 184 M504 167 L472 184"></path>
+</g>
+<circle cx="546" cy="80" fill="#35C759" r="4"></circle><circle cx="546" cy="96" fill="#E5483B" r="4"></circle>
+<circle cx="548" cy="148" fill="#2A3038" r="14" stroke="#C9CFD6" stroke-width="2.4"></circle>
+<path d="M548 138 v9" stroke="#fff" stroke-linecap="round" stroke-width="2.6"></path><path d="M541 142 a9 9 0 1 0 14 0" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2.6"></path>
+<rect fill="#8E969E" height="7" rx="3.5" width="516" x="62" y="212"></rect>
+<path d="M74 219 H430 L446 282 H90 Z" fill="#2B3036" opacity=".82" stroke="#4A525B" stroke-width="2"></path>
+<path d="M128 232 v26 M200 232 v26 M272 232 v26 M344 232 v26" stroke="#4A525B" stroke-width="2"></path>
+<text fill="#9AA3AD" font-size="12" font-weight="700" text-anchor="middle" x="258" y="272">塑封膜入口</text>
+</svg><figcaption>黑色 · Paper Friend PL-1506（从上方看）</figcaption></figure>
+<figure class="pl-fig"><svg aria-label="PL-1506 操作按钮放大图 — 1 电源按钮、2 문서（文件）按钮、3 READY 指示灯。사진（照片）、무열코팅（冷裱）按钮上有 X。" role="img" viewbox="0 0 580 340" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#12161B" height="324" rx="30" width="564" x="8" y="8"></rect>
+<rect fill="none" height="308" rx="24" stroke="#D3D9DF" stroke-width="6" width="548" x="16" y="16"></rect>
+<rect fill="#1E2328" height="264" rx="22" stroke="#353C45" stroke-width="3" width="500" x="40" y="38"></rect>
+<g fill="#E7EBEF" font-size="19" font-weight="800" text-anchor="middle">
+<rect fill="#343B45" height="46" rx="23" width="190" x="64" y="54"></rect><text x="159" y="84">역회전</text>
+<rect fill="#3A414C" height="46" rx="23" stroke="#1B8AC4" stroke-width="5" width="190" x="64" y="116"></rect><text x="168" y="146">문서</text><circle cx="96" cy="139" fill="#E5483B" r="7"></circle>
+<g opacity=".5"><rect fill="#343B45" height="46" rx="23" width="190" x="64" y="178"></rect><text x="159" y="208">사진</text>
+<rect fill="#343B45" height="46" rx="23" width="190" x="64" y="240"></rect><text x="159" y="270">무열코팅</text></g>
+</g>
+<g stroke="#E5483B" stroke-linecap="round" stroke-width="7">
+<path d="M110 186 L208 216 M208 186 L110 216"></path><path d="M110 248 L208 278 M208 248 L110 278"></path>
+</g>
+<g fill="#AEB6BF" font-size="12" font-weight="800">
+<circle cx="318" cy="78" fill="#35C759" r="8"></circle><text x="334" y="83">READY</text>
+<circle cx="318" cy="112" fill="#E5483B" r="8"></circle><text x="334" y="117">POWER</text>
+</g>
+<circle cx="420" cy="210" fill="none" r="44" stroke="#1B8AC4" stroke-width="5"></circle>
+<circle cx="420" cy="210" fill="#2A3038" r="34" stroke="#C9CFD6" stroke-width="3.4"></circle>
+<path d="M420 190 v20" stroke="#fff" stroke-linecap="round" stroke-width="5"></path><path d="M405 198 a22 22 0 1 0 30 0" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="5"></path>
+<g fill="#fff" font-size="17" font-weight="900" text-anchor="middle">
+<circle cx="470" cy="164" fill="#1B8AC4" r="15"></circle><text x="470" y="170">1</text>
+<circle cx="36" cy="139" fill="#1B8AC4" r="15"></circle><text x="36" y="145">2</text>
+<circle cx="424" cy="78" fill="#1B8AC4" r="15"></circle><text x="424" y="84">3</text>
+</g>
+</svg><figcaption>操作按钮放大</figcaption></figure>
+</div>
+<ul class="pl-legend">
+<li><span>1</span><div><b>电源按钮</b> — 按一下打开电源。</div></li>
+<li><span>2</span><div><b>［문서］（文件）按钮</b> — 按一下设为文件模式。文件模式期间，按钮的<b class="lr">红灯</b>会一直闪烁。</div></li>
+<li><span>3</span><div><b>READY 指示灯</b> — 平时<b class="lg">绿灯</b>闪烁，预热时也闪烁。大约 60 秒后“哔”一声，<b>停止闪烁并一直亮着，就是预热完成</b>。</div></li>
+<li class="no"><span>✕</span><div><b>绝对不要按［사진］（照片）·［무열코팅］（冷裱）按钮。</b>一定<b>只用［문서］（文件）模式</b>。</div></li>
+</ul>
+<div class="subhead">黑色 PL-1506 塑封机使用方法</div>
+<div class="steps steps-wide">
+<div class="step">
+<div class="step-no">1</div>
+<div class="step-h">先确认塑封膜 · 付款！</div>
+<p class="step-p"><b>请先确认陈列的塑封膜数量</b>。<br/>数量够的话，在 Toss 自助机上<b>选好张数并刷卡付款</b>后再使用。<br/>如果陈列的塑封膜比需要的少，请<b>下次再用，或者只用现有的数量</b>。</p>
+<div class="step-note warn">⚠️ 顺序是<b>确认数量 → 付款 → 塑封</b>。一定要先付款</div>
+<div class="step-note warn">⚠️ <b>在 Toss 自助机付的钱，退款会打到银行账户。</b>因顾客自己不小心重复付款的，会扣除手续费后退回。请不要重复付款。</div>
+</div>
+<div class="step">
+<div class="step-no">2</div>
+<div class="step-figs"><img alt="按电源按钮的样子 — 电源 ON" class="step-photo pl" loading="lazy" src="../images/coat/pl-s2.jpg"/></div>
+<div class="step-h">按电源按钮</div>
+<p class="step-p">按<b>电源</b>按钮打开电源。（电源 ON）</p>
+<div class="step-note">💡 <b>平时（默认）状态</b> — 塑封机的电源线一直插着，所以 <b>POWER 部分的<b class="lr">红灯</b></b>一直闪烁，<b>READY 部分的<b class="lg">绿灯</b></b>也在闪烁。这是<b>正常（默认）</b>状态，不是故障。</div>
+</div>
+<div class="step">
+<div class="step-no">3</div>
+<div class="step-figs"><img alt="按 문서（文件）按钮的样子" class="step-photo pl" loading="lazy" src="../images/coat/pl-s3.jpg"/></div>
+<div class="step-h">按［문서］（文件）按钮</div>
+<p class="step-p">按<b>［문서］（文件）</b>按钮设为文件模式。<br/>［문서］按钮那边的<b><b class="lr">红灯</b>闪烁</b>，READY <b class="lg">绿灯</b>也<b>一起闪烁</b>，就是开始预热了。<br/><span class="r">不要按［사진］（照片）·［무열코팅］（冷裱）按钮。一定只用文件模式。</span></p>
+</div>
+<div class="step">
+<div class="step-no">4</div>
+<div class="step-figs"><img alt="预热时 READY 绿灯闪烁，大约 60 秒后哔一声停止闪烁" class="step-photo pl" loading="lazy" src="../images/coat/pl-s4.jpg"/></div>
+<div class="step-h">等待预热（加热）</div>
+<p class="step-p">预热需要<b>大约 60 秒</b>。<br/>60 秒后会<b>“哔~”一声</b>，<b>READY <b class="lg">绿灯</b>停止闪烁并一直亮着，就是预热完成</b>。<br/>这时［문서］按钮那边的<b class="lr">红灯</b><b>继续闪烁是正常的</b>。READY <b class="lg">绿灯</b>闪烁时，不要放入塑封膜。</p>
+</div>
+<div class="step">
+<div class="step-no">5</div>
+<div class="step-figs"><img alt="把打印好的纸放进塑封膜，放在塑封机前面的样子" class="step-photo pl tall" loading="lazy" src="../images/coat/pl-s5.jpg"/></div>
+<div class="step-h">放入打印好的纸</div>
+<p class="step-p">把<b>打印好的纸放进</b>塑封膜里。</p>
+</div>
+<div class="step">
+<div class="step-no">6</div>
+<div class="step-figs"><img alt="把塑封膜封口的一端端正地放入入口的样子" class="step-photo pl" loading="lazy" src="../images/coat/pl-s6.jpg?v=3"/></div>
+<div class="step-h">封口端先放，放端正</div>
+<p class="step-p">把塑封膜<b>封口的一端先水平</b>放入入口。<br/><span class="r">封口的一端是塑封膜<b>短边（上方）的一端</b>。</span>不是长边（侧面）。</p>
+</div>
+<div class="step">
+<div class="step-no">7</div>
+<div class="step-figs"><img alt="小心地把塑封膜推进去，直到自动被吸进去的样子" class="step-photo pl" loading="lazy" src="../images/coat/pl-s7.jpg"/></div>
+<div class="step-h">推到自动被吸进去为止</div>
+<p class="step-p"><b>平平地</b>慢慢推进去，<b>入口的感应器会识别塑封膜</b>，塑封机就会<b>自动吸进去。</b></p>
+</div>
+<div class="step">
+<div class="step-no">8</div>
+<div class="step-figs"><img alt="把塑封膜放进前面的入口，从后面出来的样子" class="step-photo pl wide" loading="lazy" src="../images/coat/pl-s8.jpg?v=2"/></div>
+<div class="step-h">确认出膜</div>
+<p class="step-p">塑封膜<b>从前面入口放进去，会从后面出来。</b>请确认塑封膜从后面<b>出来</b>。<br/><span class="r">⚠️ 绝对不要往出膜的后面放东西。一定只从前面入口放。</span></p>
+</div>
+</div>
+<div class="adfw" style="margin-top:34px">
+<div class="adfw-h"><span class="x">!</span>塑封注意事项 — 不能做的和要做的，请一定遵守</div>
+<div class="fire">
+<div class="fire-h">🔥🚨 有火灾危险 — 绝对不要这样做！🚨🔥</div>
+<div class="fire-items"><div class="fire-it"><img alt="只放打印纸有火灾危险" loading="lazy" src="../images/coat/pl-no-print.jpg"/><div><b>🚫 不要只放打印纸！</b><span>没有塑封膜，只把打印纸放进塑封机是不行的</span></div></div><div class="fire-it"><img alt="只放空塑封膜有火灾危险" loading="lazy" src="../images/coat/pl-no-empty.jpg"/><div><b>🚫 不要只放空塑封膜！</b><span>里面没有打印纸，只把空塑封膜放进塑封机是不行的</span></div></div></div>
+<div class="fire-t">⚠️ 这样做的话，<b>塑封机内部可能会起火，引发火灾</b>。🧯<br/>一定<b>只放已经装好打印纸的塑封膜</b>。有<b>火灾和损坏机器的危险</b>。</div>
+</div>
+<div class="adfw-grid">
+<div class="adfw-box ok pic">
+<div class="adfw-t">请这样做</div>
+<ul>
+<li><img alt="封口端先放是对的，反着放不行" loading="lazy" src="../images/coat/pl-ok-closed.jpg"/><div>塑封膜要<b>封口端先放</b>。（必须）</div></li>
+<li><img alt="推到自动被吸进去为止的样子" loading="lazy" src="../images/coat/pl-s7.jpg"/><div><b>不要搭在塑封机入口上不管</b>，小心不要弄皱，<b>慢慢推进去直到自动被吸进去。</b></div></li>
+<li class="wide multi"><div> 塑封多张时，<b>等先放的塑封膜出来后</b>，再放下一张。<br/><span class="warnline">⚠️ 塑封膜<b>从前面入口放进去，会从后面出来。</b>不要往出膜的后面放。</span> <div class="seq3"><div class="s3"><img alt="把先放的塑封膜放进塑封机前面入口的样子" loading="lazy" src="../images/coat/pl-multi-1.jpg?v=1"/><p>把<b>① 先放的塑封膜</b>放进<b>前面入口</b>。</p></div><div class="s3"><img alt="等先放的塑封膜从塑封机后面完全出来的样子" loading="lazy" src="../images/coat/pl-multi-2.jpg?v=1"/><p>等<b>② 从后面完全出来</b>。</p></div><div class="s3"><img alt="确认出来的塑封膜并取出后，把下一张塑封膜放进前面入口的样子" loading="lazy" src="../images/coat/pl-multi-3.jpg?v=1"/><p><b>③ 确认完全出来</b>并取出放好后，再把<b>下一张塑封膜</b>放进前面入口。</p></div></div></div></li>
+<li><img alt="用完后按电源按钮关机的样子" loading="lazy" src="../images/coat/pl-ok-off.jpg"/><div>用完后<b>按电源按钮关掉电源。</b></div></li>
+</ul>
+</div>
+<div class="adfw-box no pic">
+<div class="adfw-t">不要这样做</div>
+<figure class="adfw-fig"><img alt="放入比塑封膜小的打印纸会留出空白，塑封膜在塑封机里被弄皱、起褶的样子" loading="lazy" src="../images/coat/no-small-print.png"/><figcaption>▲ 像左边那样放（✕）的话，出来会像右边那样<b>皱掉</b>。</figcaption></figure>
+<ul>
+<li class="txt">不要放<b>剪得比塑封膜小的打印纸</b>。塑封膜（A4 · A3）里空白太多的话，那部分没有纸，只有塑封膜自己粘在一起，会<b>起皱、起褶</b>。<br/>特别是打印纸<b>没有碰到塑封膜封口端</b>的话，先进去的封口端<b>角会在塑封机里皱起来卡住</b>，或者皱着出来。<br/>👉 请放<b>和塑封膜大小相符、碰到封口端</b>的打印纸。</li>
+<li><img alt="不能用自己带来的打印纸" loading="lazy" src="../images/coat/pl-no-bring-print.jpg"/><div><b>自己带来的打印纸</b>不能用。（和店里不同的纸不行）</div></li>
+<li><img alt="不能用自己带来的塑封膜" loading="lazy" src="../images/coat/pl-no-bring-coat.jpg"/><div><b>自己带来的塑封膜</b>不能用。（和店里不同的不行）</div></li>
+<li><img alt="运转时不能按按钮" loading="lazy" src="../images/coat/pl-no-touch.jpg"/><div><b>塑封机运转时不要按按钮。</b>（按错就麻烦了）</div></li>
+</ul>
+</div>
+</div>
+<div class="adfw-foot">※ 这是白色 SAFA-BM100 · 黑色 PL-1506 <b>所有塑封机都一样适用</b>的注意事项。</div>
+</div>
+</div>
+</div>
+<div class="sec alt" id="safa" style="--sc:#7C3AED;--sc-light:#F1EAFE">
+<div class="sec-in">
+<div class="sec-head">
+<div class="sec-ico"><svg fill="none" height="34" viewbox="0 0 48 48" width="34"><rect height="34" rx="3" stroke="#7C3AED" stroke-width="3" width="28" x="8" y="8"></rect><path d="M14 18h16M14 26h16M14 34h9" stroke="#7C3AED" stroke-linecap="round" stroke-width="3"></path><path d="M40 4l1.7 4.3L46 10l-4.3 1.7L40 16l-1.7-4.3L34 10l4.3-1.7z" fill="#7C3AED"></path></svg></div>
+<h2 class="sec-h2">白色塑封机（SAFA-BM100）使用方法 <span class="pill">SAFA-BM100</span></h2>
+</div>
+<p class="sec-tagline"><b>这是白色 SAFA-BM100 塑封 · 装订两用机的说明。</b>两种塑封机都有的门店，请先用上面的 PL-1506。只有白色 SAFA-BM100 的门店，请<b>按这个方法</b>塑封。</p>
+<div class="gvid"><div class="gvid-h"><span class="gvid-play">▶</span>先看白色 SAFA-BM100 塑封机视频 <small>没有声音也能看懂</small></div><video controls="" playsinline="" poster="../videos/guide-coat-safa.jpg" preload="none"><source src="../videos/guide-coat-safa.mp4" type="video/mp4"/> 您的浏览器无法播放视频。 </video></div>
+<div class="subhead" id="safa-steps">白色 SAFA-BM100 塑封机使用方法</div>
+<div class="dual">
+<div class="dual-h">🔀 这台机器（SAFA-BM100）是<b>塑封 · 装订两用机</b></div>
+<div class="dual-warn">🚫 <b>上方的长入口是“装订封面”专用。</b><b>绝对不要把塑封膜放进上方入口！</b><br/>塑封膜<b>只能放进下方（前面）入口</b>。把塑封膜放进上方入口，塑封膜会卡住，机器可能坏掉。</div>
+<img alt="SAFA-BM100 塑封 · 装订两用机：上方长入口是装订封面入口（不放塑封膜），下方前面入口是塑封膜入口" class="dual-img" loading="lazy" src="../images/coat/safa-two-slots.jpg?v=1"/>
+</div>
+<div class="prestep">
+<div class="prestep-h">🧾 开始塑封前请先看！ <span>白色 SAFA-BM100 · 黑色 PL-1506 通用</span></div>
+<ol>
+<li>请先确认<b>陈列的塑封膜数量</b>。</li>
+<li>数量够的话，在 Toss 自助机上<b>选好张数并刷卡付款</b>，然后按下面的方法使用。</li>
+<li>如果陈列的塑封膜比需要的少，请<b>下次再用，或者只用现有的数量</b>。</li>
+</ol>
+<div class="prestep-warn">⚠️ <b>在 Toss 自助机付的钱，退款会打到银行账户。</b>因顾客自己不小心重复付款的，会扣除手续费后退回。请不要重复付款。</div>
+</div>
+<div class="steps steps-wide">
+<div class="step">
+<div class="step-no">1</div>
+<div class="step-h">先确认塑封膜 · 付款！</div>
+<p class="step-p"><b>请先确认陈列的塑封膜数量</b>。<br/>数量够的话，在机器旁边的 Toss 自助机上<b>选好张数并刷卡付款</b>后再使用。<br/>如果陈列的塑封膜比需要的少，请<b>下次再用，或者只用现有的数量</b>。</p>
+<div class="step-note warn">⚠️ 顺序是<b>确认数量 → 付款 → 塑封</b>。一定要先付款</div>
+<div class="step-note warn">⚠️ <b>在 Toss 自助机付的钱，退款会打到银行账户。</b>因顾客自己不小心重复付款的，会扣除手续费后退回。请不要重复付款。</div>
+</div>
+<div class="step step-dual">
+<div class="step-no">2</div>
+<div class="step-figs two"><img alt="按电源按钮的样子" class="step-photo" loading="lazy" src="../images/coat/coat-power.png"/><img alt="按塑封按钮 2 次的样子" class="step-photo" loading="lazy" src="../images/coat/coat-button.png"/></div>
+<div class="step-h">开电源 · 预热</div>
+<p class="step-p">按<b>电源</b>按钮，再按<b>塑封</b>按钮 <b>2 次</b>。<br/>灯会闪烁，3~5 分钟后<b>“哔”</b>一声，灯一直亮着，就是预热完成。</p>
+<div class="step-note warn">⚠️ 塑封按钮按了 <b>3 次以上</b>的话，请<b>按电源按钮关机后</b>，从头再<b>按电源按钮，再按塑封按钮 2 次</b>。</div>
+</div>
+<div class="step">
+<div class="step-no">3</div>
+<div class="step-figs"><img alt="把打印好的纸放进塑封膜的样子" class="step-photo" loading="lazy" src="../images/coat/coat-fill.png"/></div>
+<div class="step-h">把打印纸放进塑封膜</div>
+<p class="step-p">把打印纸<b>整齐地放进</b>塑封膜里。</p>
+</div>
+<div class="step">
+<div class="step-no">4</div>
+<div class="step-figs"><img alt="把塑封膜封口端水平放入入口的样子" class="step-photo" loading="lazy" src="../images/coat/coat-insert.png"/></div>
+<div class="step-h">放进塑封机</div>
+<p class="step-p">把塑封膜<b>封口端先</b>放进入口。<br/>请<b>水平端正、不要弄皱</b>地放进去。</p>
+</div>
+<div class="step">
+<div class="step-no">5</div>
+<div class="step-figs"><img alt="看着塑封膜从后面出来时有没有卡住的样子" class="step-photo" loading="lazy" src="../images/coat/coat-watch.png"/></div>
+<div class="step-h">确认出来的塑封膜</div>
+<p class="step-p">请看着塑封膜<b>从后面出来时</b>有没有卡住，是否顺利出来。</p>
+</div>
+<div class="step">
+<div class="step-no">6</div>
+<div class="step-h">关电源</div>
+<p class="step-p">用完后<b>一定要关掉电源。</b></p>
+<div class="step-note warn">不关电源的话，会给下一位顾客带来麻烦。</div>
+</div>
+</div>
+<div class="adfw" style="margin-top:34px">
+<div class="adfw-h"><span class="x">!</span>塑封注意事项 — 不能做的和要做的，请一定遵守</div>
+<div class="fire">
+<div class="fire-h">🔥🚨 有火灾危险 — 绝对不要这样做！🚨🔥</div>
+<div class="fire-items"><div class="fire-it"><div><b>🚫 不要只放打印纸！</b><span>没有塑封膜，只把打印纸放进塑封机是不行的</span></div></div><div class="fire-it"><div><b>🚫 不要只放空塑封膜！</b><span>里面没有打印纸，只把空塑封膜放进塑封机是不行的</span></div></div></div>
+<div class="fire-t">⚠️ 这样做的话，<b>塑封机内部可能会起火，引发火灾</b>。🧯<br/>一定<b>只放已经装好打印纸的塑封膜</b>。有<b>火灾和损坏机器的危险</b>。</div>
+</div>
+<div class="adfw-grid">
+<div class="adfw-box ok">
+<div class="adfw-t">请这样做</div>
+<ul>
+<li>塑封膜要<b>封口端先放</b>。（必须）</li>
+<li><b>不要搭在塑封机入口上不管</b>，小心不要弄皱，<b>慢慢推进去直到自动被吸进去。</b></li>
+<li> 塑封多张时，<b>等先放的塑封膜出来后</b>，再放下一张。<span class="warnline">⚠️ 塑封膜<b>从前面入口放进去，会从后面出来。</b>不要往出膜的后面放。</span> <div class="seq3"><div class="s3"><img alt="把先放的塑封膜放进 SAFA-BM100 前面入口的样子" loading="lazy" src="../images/coat/safa-multi-1.jpg?v=2"/><p>把<b>① 先放的塑封膜</b>放进<b>前面入口</b>。</p></div><div class="s3"><img alt="等先放的塑封膜从塑封机后面完全出来的样子" loading="lazy" src="../images/coat/safa-multi-2.jpg?v=2"/><p>等<b>② 从后面完全出来</b>。</p></div><div class="s3"><img alt="确认出来的塑封膜并取出后，把下一张塑封膜放进前面入口的样子" loading="lazy" src="../images/coat/safa-multi-3.jpg?v=2"/><p><b>③ 确认完全出来</b>并取出放好后，再把<b>下一张塑封膜</b>放进前面入口。</p></div></div></li>
+<li>用完后<b>按电源按钮关掉电源。</b></li>
+</ul>
+</div>
+<div class="adfw-box no">
+<div class="adfw-t">不要这样做</div>
+<figure class="adfw-fig"><img alt="放入比塑封膜小的打印纸会留出空白，塑封膜在塑封机里被弄皱、起褶的样子" loading="lazy" src="../images/coat/no-small-print.png"/><figcaption>▲ 像左边那样放（✕）的话，出来会像右边那样<b>皱掉</b>。</figcaption></figure>
+<ul>
+<li>🚫 不要把塑封膜放进<b>上方装订封面入口</b>。（塑封膜<b>只能放下方前面入口</b>）</li>
+<li>不要放<b>剪得比塑封膜小的打印纸</b>。塑封膜（A4 · A3）里空白太多的话，那部分没有纸，只有塑封膜自己粘在一起，会<b>起皱、起褶</b>。<br/>特别是打印纸<b>没有碰到塑封膜封口端</b>的话，先进去的封口端<b>角会在塑封机里皱起来卡住</b>，或者皱着出来。<br/>👉 请放<b>和塑封膜大小相符、碰到封口端</b>的打印纸。</li>
+<li><b>自己带来的打印纸</b>不能用。（和店里不同的纸不行）</li>
+<li><b>自己带来的塑封膜</b>不能用。（和店里不同的不行）</li>
+<li><b>塑封机运转时不要按按钮。</b>（按错就麻烦了）</li>
+</ul>
+</div>
+</div>
+<div class="adfw-foot">※ 这是白色 SAFA-BM100 · 黑色 PL-1506 <b>所有塑封机都一样适用</b>的注意事项。</div>
+</div>
+</div>
+</div>
+<!-- 이미지 확대 보기 -->
+<p class="tr-note">本页由韩语翻译而来。如有不准确之处，请通过 Naver TalkTalk 告诉我们。机器屏幕为韩语，韩语按钮名称写在［括号］里。</p><footer>
+<div class="ft-wrap">
+<div class="ft-brand">
+<img alt="标志" src="../logo.jpg"/>
+<div class="ft-brand-name">PrintShop Mini</div>
+<p>24 小时 365 天营业的<br/>无人自助打印店。</p>
+</div>
+<div class="ft-col">
+<h4>使用方法</h4>
+<ul>
+<li><a href="guide-print.html">打印方法</a></li>
+<li><a href="guide-copy.html">复印方法</a></li>
+<li><a href="guide-scan.html">扫描方法</a></li>
+<li><a href="guide-fax.html">发传真方法</a></li>
+<li><a href="guide-coat.html">塑封方法</a></li>
+<li><a href="guide-bind.html">装订方法</a></li>
+</ul>
+</div>
+<div class="ft-col">
+<h4>快捷链接</h4>
+<ul>
+<li><a href="../services.html">服务介绍</a></li>
+<li><a href="../faq.html">常见问题</a></li>
+<li><a href="../branches.html">查找门店</a></li>
+<li><a href="../community.html">社区</a></li>
+<li><a href="../about.html">品牌介绍</a></li>
+</ul>
+</div>
+</div>
+<div class="ft-corp" style="word-break:keep-all;max-width:1160px;margin:0 auto 20px;font-size:13px;line-height:1.9;color:#9CA3AF"><b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1B8AC4)">PrintShop Mini</b> · <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">PrintNow</b> 是 <span style="white-space:nowrap">(株)Good Learning Partner</span> 公司的品牌。</div>
+<div class="ft-bottom">
+<p>© 2025 PrintShop Mini. All rights reserved.</p>
+<p>隐私政策 · 使用条款</p>
+</div>
+</footer>
+<script>
+function toggleMenu(){document.getElementById("navLinks").classList.toggle("show");}
+</script>
+<script>window.GUIDE_SERVICE='coat';</script>
+<script src="../service-guides.js?v=2"></script>
+<script>
+/* 2단계 메뉴: 현재 탭이 화면 밖이면 보이는 위치로 이동 */
+(function(){var a=document.querySelector('.svc-switch a.on'),w=a&&a.parentElement;if(w)w.scrollLeft=Math.max(0,a.offsetLeft-(w.clientWidth-a.offsetWidth)/2);})();
+</script>
+
+<script defer="" src="../lightbox.js?v=1"></script>
+</body>
+</html>

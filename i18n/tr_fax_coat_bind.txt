@@ -1,0 +1,803 @@
+# 팩스(guide-fax.html) + 코팅(guide-coat.html) + 제본(guide-bind.html) 번역 — 형식은 tr_guide_print.txt 와 같음
+# 코팅기 그림 속 버튼 글씨(역회전·문서·사진·무열코팅)와 복합기 화면 금액은 실물과 같게 한국어 그대로 둠
+
+@@69b1a9e8e4
+en: PrintShop Mini fax guide — how to send what is on paper to someone's fax number.
+zh: PrintShop Mini 传真使用方法 — 介绍把纸上的内容发送到对方传真号码的方法。
+vi: Hướng dẫn fax của PrintShop Mini — cách gửi nội dung trên giấy đến số fax của người nhận.
+@@b62b17b8fc
+en: How to Send a Fax - PrintShop Mini
+zh: 传真使用方法 - PrintShop Mini
+vi: Cách gửi fax - PrintShop Mini
+@@9ced167e44
+en: How to Send a Fax
+zh: 传真使用方法
+vi: Cách gửi fax
+@@7b3d928a1a
+en: How to send what is on paper to someone's fax number. Find out the receiver's fax number before you come.
+zh: 把纸上的内容发送到对方传真号码的方法。请事先问好对方的传真号码。
+vi: Cách gửi nội dung trên giấy đến số fax của người nhận. Hãy biết trước số fax của nơi nhận.
+@@b3ef106643
+en: <a href="guide.html">All guides</a> <a href="guide-video.html">▶ Videos</a> <a href="guide-print.html">🖨️ Print</a> <a href="guide-copy.html">📋 Copy</a> <a href="guide-scan.html">📄 Scan</a>
+zh: <a href="guide.html">全部使用方法</a> <a href="guide-video.html">▶ 视频</a> <a href="guide-print.html">🖨️ 打印</a> <a href="guide-copy.html">📋 复印</a> <a href="guide-scan.html">📄 扫描</a>
+vi: <a href="guide.html">Tất cả hướng dẫn</a> <a href="guide-video.html">▶ Video</a> <a href="guide-print.html">🖨️ In</a> <a href="guide-copy.html">📋 Photo</a> <a href="guide-scan.html">📄 Scan</a>
+@@14d170344e
+en: Coo Fax
+zh: 鸽子小传 (Coo Fax)
+vi: Coo Fax
+@@36f07603e6
+en: <b>Coo Fax</b><i>Coo Fax</i><span class="fr-pill">Faxing</span><br/>Hello! I'm Coo Fax, in charge of faxing. I'll show you how to send your papers flying! (I only send, I don't receive)
+zh: <b>鸽子小传</b><i>Coo Fax</i><span class="fr-pill">负责传真</span><br/>你好！我是负责传真的鸽子小传。我来告诉你怎么把文件“嗖”地发出去！（我只负责发送）
+vi: <b>Coo Fax</b><i>Coo Fax</i><span class="fr-pill">Phụ trách fax</span><br/>Xin chào! Mình là Coo Fax, phụ trách fax. Mình sẽ chỉ bạn cách gửi giấy tờ bay vèo đi! (Mình chỉ gửi thôi, không nhận)
+@@0183e7fa7f
+en: How to send a fax <span class="pill">FAX</span>
+zh: 发传真方法 <span class="pill">FAX</span>
+vi: Cách gửi fax <span class="pill">FAX</span>
+@@db0addb757
+en: <b>This service sends what is on paper to someone's fax number.</b> You must know the receiver's fax number before you come.
+zh: <b>把纸上的内容发送到对方传真号码的服务。</b>必须事先知道对方的传真号码。
+vi: <b>Dịch vụ gửi nội dung trên giấy đến số fax của người nhận.</b> Bạn phải biết trước số fax của nơi nhận.
+@@ed4f5b0939
+en: <span class="gvid-play">▶</span>Watch the fax video first <small>No sound needed</small>
+zh: <span class="gvid-play">▶</span>先看发传真方法视频 <small>没有声音也能看懂</small>
+vi: <span class="gvid-play">▶</span>Xem video cách gửi fax trước <small>Không cần bật tiếng</small>
+@@6d6f1c71af
+en: 📤 <b>Sending only.</b> 📵 You cannot receive faxes. You also cannot send faxes to other countries.
+zh: 📤 <b>只能发送。</b>📵 不能接收。也不能发往国外。
+vi: 📤 <b>Chỉ gửi được.</b> 📵 Không nhận được fax. Cũng không gửi được fax ra nước ngoài.
+@@82b938837f
+en: Put it in <b>with the side to fax facing up</b>.
+zh: <b>要发传真的一面朝上</b>放。
+vi: Đặt <b>mặt cần fax hướng lên trên</b>.
+@@1da4ffbe3e
+en: <b>Push it all the way</b> to the left. <span class="r">If you only put it in a little, the paper isn't pulled in and the receiver may get only a blank page.</span>
+zh: <b>一直推到</b>最左边。<span class="r">只放进一点点的话，纸不会被吸进去，对方可能只收到白纸。</span>
+vi: <b>Đẩy hẳn vào</b> đến tận bên trái. <span class="r">Nếu chỉ đặt hờ, giấy không được kéo vào và người nhận có thể chỉ nhận được trang trắng.</span>
+@@8e7f6aa4a9
+en: Slide the top and bottom <b>paper guides</b> to fit the paper exactly. <span class="r">If they're loose, the paper goes in crooked and the receiver gets it crooked.</span>
+zh: 把上下的<b>文件导板</b>贴紧纸张大小。<span class="r">太松的话，纸会歪着进去，发给对方的也是歪的。</span>
+vi: Kéo <b>thanh chặn giấy</b> trên · dưới sát vừa khổ giấy. <span class="r">Nếu lỏng, giấy vào lệch và người nhận sẽ nhận bản bị lệch.</span>
+@@6988ddbef4
+en: For many pages, <b>stack them neatly</b> and put them in together. (<span class="r">up to 30 sheets</span>)
+zh: 有很多张的话，<b>整理整齐</b>一起放进去。（<span class="r">最多 30 张</span>）
+vi: Nếu nhiều tờ, hãy <b>xếp ngay ngắn</b> rồi đặt vào cùng lúc. (<span class="r">tối đa 30 tờ</span>)
+@@8c18f5eca6
+en: Choose the Fax menu
+zh: 选择传真菜单
+vi: Chọn menu Fax
+@@d224ca8408
+en: <span class="r">Always place the original first</span>, then press <b>[팩스] (Fax)</b> on the screen.<br/>When you touch [팩스] (Fax), <b>the options screen appears right away</b>.
+zh: <span class="r">一定要先放好原件</span>，再在复合机屏幕上按<b>［팩스］（传真）</b>。<br/>点［팩스］（传真）后，<b>马上会出现选项画面</b>。
+vi: <span class="r">Luôn đặt bản gốc trước</span>, rồi bấm <b>[팩스] (Fax)</b> trên màn hình.<br/>Chạm [팩스] (Fax) thì <b>màn hình tùy chọn hiện ra ngay</b>.
+@@68c69eb046
+en: Fax options screen, with red boxes on 1 receiver's fax number, 2 original size, 3 two-sided, 4 Start button
+zh: 复合机传真选项画面。1 输入对方传真号码、2 原稿尺寸、3 双面、4 开始按钮上有红框
+vi: Màn hình tùy chọn fax, ô đỏ ở 1 nhập số fax nơi nhận, 2 khổ bản gốc, 3 hai mặt, 4 nút Bắt đầu
+@@9c26fa9b29
+en: Number · options · Start
+zh: 号码 · 选项 · 开始
+vi: Số fax · tùy chọn · Bắt đầu
+@@05b3ce5bc0
+en: Type <b>① the receiver's fax number</b> using <b>numbers only</b>. Choose options like <b>② original size</b> (A4 by default; change it if your original is B4 or A3) and <b>③ two-sided/one-sided</b>, then press <b>④ [시작] (Start)</b>.
+zh: <b>① 对方传真号码</b>只输入<b>数字</b>。选择<b>② 原稿尺寸</b>（默认 A4，原件是 B4、A3 的话要改）、<b>③ 双面/单面</b>等选项后，按<b>④［시작］（开始）</b>。
+vi: Nhập <b>① số fax nơi nhận</b>, <b>chỉ nhập số</b>. Chọn các tùy chọn như <b>② khổ bản gốc</b> (mặc định A4, nếu bản gốc là B4, A3 thì đổi), <b>③ 2 mặt/1 mặt</b>, rồi bấm <b>④ [시작] (Bắt đầu)</b>.
+@@54c84cd0bf
+en: <span class="x">!</span>If there is an area code, always type it too
+zh: <span class="x">!</span>有区号的话一定要一起输入
+vi: <span class="x">!</span>Nếu có mã vùng, nhớ nhập cả mã vùng
+@@344754cf84
+en: If the receiver's fax number <b>has an area code, always type the whole number including the area code</b>.<br/>e.g.) <b>031-888-9999</b> → type <b>0318889999</b>, <b>numbers only</b>, starting from the area code.
+zh: 对方传真号码<b>有区号的话，一定要连区号一起全部输入</b>。<br/>例）<b>031-888-9999</b> → 像 <b>0318889999</b> 这样，从区号开始<b>只输入数字</b>，一个都不能漏。
+vi: Nếu số fax nơi nhận <b>có mã vùng, nhất định phải nhập đầy đủ cả mã vùng</b>.<br/>Ví dụ) <b>031-888-9999</b> → nhập <b>0318889999</b>, <b>chỉ nhập số</b>, bắt đầu từ mã vùng.
+@@2f32fcea70
+en: 500원
+zh: 500원
+vi: 500원
+@@2399f3f169
+en: Carefully check the receiver's number and the number of pages. If everything is correct, press <b>[확인] (OK)</b>.
+zh: 请仔细确认接收号码和张数是否正确，全部正确的话按<b>［확인］（确认）</b>。
+vi: Kiểm tra kỹ số nhận và số tờ. Nếu mọi thứ đúng, bấm <b>[확인] (Xác nhận)</b>.
+@@3cf2c3c6dc
+en: QR code for checking the fax result
+zh: 确认传真发送结果的二维码
+vi: Mã QR để kiểm tra kết quả gửi fax
+@@197324b979
+en: ① Scan the QR code<br/>with your phone
+zh: ① 用手机<br/>扫描二维码
+vi: ① Quét mã QR<br/>bằng điện thoại
+@@0a35024cb6
+en: The [팩스확인] (Fax check) icon on the store PC desktop: an orange background with a fax machine and a check mark
+zh: 店内电脑桌面上的［팩스확인］（传真确认）图标。橙色背景上有传真机和对勾
+vi: Biểu tượng [팩스확인] (Kiểm tra fax) trên màn hình nền máy tính cửa hàng: nền cam, có máy fax và dấu tích
+@@bf1d48885e
+en: ② Click the [팩스확인] (Fax check)<br/>icon on the PC desktop
+zh: ② 点击电脑桌面的<br/>［팩스확인］（传真确认）图标
+vi: ② Bấm biểu tượng [팩스확인] (Kiểm tra fax)<br/>trên màn hình nền máy tính
+@@765fc6801d
+en: Pay · check the result
+zh: 付款 · 确认发送结果
+vi: Thanh toán · kiểm tra kết quả
+@@ce1b3dc218
+en: After paying, check the result <b>in whichever of the two ways is easier</b>.<br/><b>① Scan the QR code above with your phone</b>, or <b>② click the [팩스확인] (Fax check) icon on the store PC desktop</b>. <span class="r">It's an internet fax, so it may take a while depending on the connection and the number of pages.</span>
+zh: 付款后，请用<b>两种方法中方便的一种</b>确认发送结果。<br/><b>① 用手机扫描上面的二维码</b>，或者<b>② 点击店内电脑桌面上的［팩스확인］（传真确认）图标</b>。<span class="r">因为是网络传真，根据网络状况和原件数量，可能需要较长时间。</span>
+vi: Sau khi thanh toán, kiểm tra kết quả bằng <b>một trong hai cách tiện hơn</b>.<br/><b>① Quét mã QR ở trên bằng điện thoại</b>, hoặc <b>② bấm biểu tượng [팩스확인] (Kiểm tra fax) trên màn hình nền máy tính cửa hàng</b>. <span class="r">Đây là fax qua internet nên có thể mất thời gian tùy kết nối và số tờ.</span>
+@@ef90985b9e
+en: 👍 <b>If you have many pages, send them 30 at a time.</b>
+zh: 👍 <b>数量多的话，请每 30 张分开发送。</b>
+vi: 👍 <b>Nếu nhiều tờ, hãy chia ra mỗi lần 30 tờ.</b>
+@@b6c1cf6f8e
+en: PrintShop Mini laminating guide — paying, warming up, putting your print in the pouch and feeding it, with photos.
+zh: PrintShop Mini 塑封使用方法 — 用照片介绍付款、预热、放进塑封膜和送入机器的方法。
+vi: Hướng dẫn ép plastic của PrintShop Mini — thanh toán, làm nóng máy, cho giấy vào túi ép và đưa vào máy, có ảnh minh họa.
+@@5f5e2b05d8
+en: How to Laminate - PrintShop Mini
+zh: 塑封使用方法 - PrintShop Mini
+vi: Cách ép plastic - PrintShop Mini
+@@99fd9c5487
+en: How to Laminate
+zh: 塑封使用方法
+vi: Cách ép plastic
+@@6d5f8fd88f
+en: How to put your print in a laminating pouch and laminate it. Check how many pouches you need and pay first.
+zh: 把打印好的纸放进塑封膜里塑封的方法。请先确认塑封膜数量并付款。
+vi: Cách cho giấy in vào túi ép plastic để ép. Hãy kiểm tra số túi ép và thanh toán trước.
+@@c4ea4755d4
+en: <a class="on" href="guide-coat.html">✨ Laminate</a> <a href="guide-bind.html">📚 Bind</a>
+zh: <a class="on" href="guide-coat.html">✨ 塑封</a> <a href="guide-bind.html">📚 装订</a>
+vi: <a class="on" href="guide-coat.html">✨ Ép plastic</a> <a href="guide-bind.html">📚 Đóng sách</a>
+@@c12e10bf31
+en: Shelly Coat
+zh: 乌龟小封 (Shelly Coat)
+vi: Shelly Coat
+@@b15337a217
+en: <b>Shelly Coat</b><i>Shelly Coat</i><span class="fr-pill">Laminating</span><br/>Hello! I'm Shelly Coat, in charge of laminating. I'll show you how to wrap and protect your precious papers!
+zh: <b>乌龟小封</b><i>Shelly Coat</i><span class="fr-pill">负责塑封</span><br/>你好！我是负责塑封的乌龟小封。我来告诉你怎么把珍贵的纸好好包起来保护它！
+vi: <b>Shelly Coat</b><i>Shelly Coat</i><span class="fr-pill">Phụ trách ép plastic</span><br/>Xin chào! Mình là Shelly Coat, phụ trách ép plastic. Mình sẽ chỉ bạn cách bọc và bảo vệ tờ giấy quý của bạn!
+@@d19d225dee
+en: How to laminate <span class="pill">COATING</span>
+zh: 塑封方法 <span class="pill">COATING</span>
+vi: Cách ép plastic <span class="pill">COATING</span>
+@@ac2f866232
+en: <b>Check how many pouches you need and pay first. Then turn on the power, wait for it to warm up, and feed in the pouch.</b> Always turn the power off when you're done.
+zh: <b>先确认塑封膜数量并付款，然后开电源，等预热（加热）完成后再放入塑封膜。</b>用完后一定要关掉电源。
+vi: <b>Kiểm tra số túi ép và thanh toán trước, rồi bật nguồn, chờ máy làm nóng xong mới đưa túi ép vào.</b> Dùng xong nhớ tắt nguồn.
+@@c362a7b8f4
+en: 🔎 Some stores have two kinds of laminators. Check which one your store has first.
+zh: 🔎 有的门店有两种塑封机。请先确认店里的塑封机。
+vi: 🔎 Có cửa hàng có hai loại máy ép. Hãy xem cửa hàng có loại máy nào trước.
+@@00f8d83602
+en: 👍 <b>In stores that have both</b>, <b>please use the black PL-1506 laminator first.</b><br/>The PL-1506 <b>warms up faster and laminates faster.</b>
+zh: 👍 <b>两种塑封机都有的门店</b>，<b>请先用黑色 PL-1506 塑封专用机。</b><br/>PL-1506 <b>预热（加热机器）和塑封速度都更快。</b>
+vi: 👍 <b>Ở cửa hàng có cả hai loại</b>, <b>hãy dùng máy ép màu đen PL-1506 trước.</b><br/>PL-1506 <b>làm nóng nhanh hơn và ép nhanh hơn.</b>
+@@99bf0f2cd2
+en: <b>Black PL-1506 laminator (Paper Friend)</b><i class="rec-tag">👍 Laminating only · please use this first</i><span>Press the power button, then the <b>[문서] (Document) button</b> to warm it up.</span><em>Follow &lt;How to use the PL-1506&gt; below ↓</em>
+zh: <b>黑色 PL-1506 塑封机（Paper Friend）</b><i class="rec-tag">👍 塑封专用 · 请先使用</i><span>按电源按钮后，再按<b>［문서］（文件）按钮</b>预热的塑封机。</span><em>请按照下面的&lt;PL-1506 使用方法&gt;操作 ↓</em>
+vi: <b>Máy ép màu đen PL-1506 (Paper Friend)</b><i class="rec-tag">👍 Chỉ để ép · hãy dùng máy này trước</i><span>Bấm nút nguồn rồi bấm <b>nút [문서] (Tài liệu)</b> để làm nóng.</span><em>Làm theo &lt;Cách dùng PL-1506&gt; bên dưới ↓</em>
+@@dcaef26ff9
+en: Black PL-1506 laminator — black body with a silver edge, control buttons on the right
+zh: 黑色 PL-1506 塑封机 — 黑色机身、银色边框，右边是操作按钮
+vi: Máy ép màu đen PL-1506 — thân đen viền bạc, nút điều khiển bên phải
+@@eba75e3ada
+en: <b>White SAFA-BM100 laminator</b><i class="dual-tag">🔀 Laminating · binding in one</i><span>Press the power button, then the <b>laminating button twice</b> to warm it up.</span><em>Follow &lt;How to use the SAFA-BM100&gt; at the very bottom ↓</em>
+zh: <b>白色 SAFA-BM100 塑封机</b><i class="dual-tag">🔀 塑封 · 装订两用机</i><span>按电源按钮后，再按<b>塑封按钮 2 次</b>预热的塑封机。</span><em>请按照最下面的&lt;SAFA-BM100 使用方法&gt;操作 ↓</em>
+vi: <b>Máy ép màu trắng SAFA-BM100</b><i class="dual-tag">🔀 Máy ép · đóng sách 2 trong 1</i><span>Bấm nút nguồn rồi bấm <b>nút ép 2 lần</b> để làm nóng.</span><em>Làm theo &lt;Cách dùng SAFA-BM100&gt; ở cuối trang ↓</em>
+@@6b9ef41737
+en: White SAFA-BM100 laminator — white body with a navy edge and the SAFA logo
+zh: 白色 SAFA-BM100 塑封机 — 白色机身、深蓝色边框，有 SAFA 标志
+vi: Máy ép màu trắng SAFA-BM100 — thân trắng viền xanh đậm, có logo SAFA
+@@2b47596260
+en: How to use the black laminator (PL-1506) <span class="pill">PL-1506</span>
+zh: 黑色塑封机（PL-1506）使用方法 <span class="pill">PL-1506</span>
+vi: Cách dùng máy ép màu đen (PL-1506) <span class="pill">PL-1506</span>
+@@88fd1483c3
+en: <b>This guide is for the Paper Friend PL-1506 laminator in [문서] (Document) mode.</b> If your store has the black PL-1506, <b>laminate this way</b> first. (Stores with only the white SAFA-BM100: follow the SAFA-BM100 guide at the very bottom.)
+zh: <b>这是 Paper Friend PL-1506 塑封机［문서］（文件）模式专用说明。</b>店里有黑色 PL-1506 塑封机的话，请先<b>按这个方法</b>塑封。（只有白色 SAFA-BM100 的门店，请按最下面的 SAFA-BM100 方法操作。）
+vi: <b>Đây là hướng dẫn dành riêng cho chế độ [문서] (Tài liệu) của máy ép Paper Friend PL-1506.</b> Nếu cửa hàng có máy PL-1506 màu đen, hãy <b>ép theo cách này</b> trước. (Cửa hàng chỉ có máy trắng SAFA-BM100 thì làm theo hướng dẫn SAFA-BM100 ở cuối trang.)
+@@5fa1b0fafb
+en: <span class="gvid-play">▶</span>Watch the black PL-1506 video first <small>No sound needed</small>
+zh: <span class="gvid-play">▶</span>先看黑色 PL-1506 塑封机视频 <small>没有声音也能看懂</small>
+vi: <span class="gvid-play">▶</span>Xem video máy ép đen PL-1506 trước <small>Không cần bật tiếng</small>
+@@91c45c27f6
+en: 🧾 Before you start laminating! <span>Same for white SAFA-BM100 · black PL-1506</span>
+zh: 🧾 开始塑封前请先看！ <span>白色 SAFA-BM100 · 黑色 PL-1506 通用</span>
+vi: 🧾 Trước khi bắt đầu ép! <span>Giống nhau cho máy trắng SAFA-BM100 · máy đen PL-1506</span>
+@@3088e1274f
+en: First check <b>how many laminating pouches are on display</b>.
+zh: 请先确认<b>陈列的塑封膜数量</b>。
+vi: Trước tiên hãy xem <b>còn bao nhiêu túi ép đang bày</b>.
+@@71f97280c1
+en: If there are enough, <b>choose how many at the Toss kiosk and pay by card</b>, then follow the steps below.
+zh: 数量够的话，在 Toss 自助机上<b>选好张数并刷卡付款</b>，然后按下面的方法使用。
+vi: Nếu đủ số lượng, hãy <b>chọn số tờ ở máy kiosk Toss và thanh toán bằng thẻ</b>, rồi làm theo các bước bên dưới.
+@@94b04b9faa
+en: If there are fewer pouches than you need, <b>come back another time, or use only what's there</b>.
+zh: 如果陈列的塑封膜比需要的少，请<b>下次再用，或者只用现有的数量</b>。
+vi: Nếu túi ép ít hơn số bạn cần, hãy <b>quay lại lần sau, hoặc chỉ dùng số đang có</b>.
+@@66821a2886
+en: ⚠️ <b>Refunds for Toss kiosk payments are sent to a bank account.</b> If you pay twice by your own mistake, we send back the amount minus the fee. Please don't pay twice.
+zh: ⚠️ <b>在 Toss 自助机付的钱，退款会打到银行账户。</b>因顾客自己不小心重复付款的，会扣除手续费后退回。请不要重复付款。
+vi: ⚠️ <b>Tiền thanh toán ở máy kiosk Toss sẽ được hoàn vào tài khoản ngân hàng.</b> Nếu bạn sơ ý thanh toán 2 lần, chúng tôi sẽ hoàn lại số tiền sau khi trừ phí. Đừng thanh toán 2 lần.
+@@975836c9d6
+en: Top-down drawing of the black PL-1506 laminator. The 사진 (Photo) and 무열코팅 (Cold) buttons are not used.
+zh: 从上方看黑色 PL-1506 塑封机的插图。不使用 사진（照片）、무열코팅（冷裱）按钮。
+vi: Hình vẽ máy ép đen PL-1506 nhìn từ trên. Không dùng nút 사진 (Ảnh) và 무열코팅 (Ép nguội).
+@@d87a9d8b62
+en: 역회전
+zh: 역회전
+vi: 역회전
+@@1c73f88a48
+en: 문서
+zh: 문서
+vi: 문서
+@@48a75a3a50
+en: 사진
+zh: 사진
+vi: 사진
+@@24158d2b1b
+en: 무열코팅
+zh: 무열코팅
+vi: 무열코팅
+@@b6aeb64247
+en: Pouch slot
+zh: 塑封膜入口
+vi: Khe đưa túi ép
+@@5a2f1b2a35
+en: Black · Paper Friend PL-1506 (top view)
+zh: 黑色 · Paper Friend PL-1506（从上方看）
+vi: Màu đen · Paper Friend PL-1506 (nhìn từ trên)
+@@476d1bd1ec
+en: Close-up of PL-1506 buttons — 1 power button, 2 문서 (Document) button, 3 READY light. The 사진 (Photo) and 무열코팅 (Cold) buttons are marked with X.
+zh: PL-1506 操作按钮放大图 — 1 电源按钮、2 문서（文件）按钮、3 READY 指示灯。사진（照片）、무열코팅（冷裱）按钮上有 X。
+vi: Phóng to nút của PL-1506 — 1 nút nguồn, 2 nút 문서 (Tài liệu), 3 đèn READY. Nút 사진 (Ảnh) và 무열코팅 (Ép nguội) có dấu X.
+@@d6a5f301b4
+en: Buttons close up
+zh: 操作按钮放大
+vi: Phóng to các nút
+@@1f31d264f7
+en: <b>Power button</b> — press it to turn the power on.
+zh: <b>电源按钮</b> — 按一下打开电源。
+vi: <b>Nút nguồn</b> — bấm để bật nguồn.
+@@07a13576c2
+en: <b>[문서] (Document) button</b> — press it to set Document mode. While in Document mode, the button's <b class="lr">red light</b> keeps blinking.
+zh: <b>［문서］（文件）按钮</b> — 按一下设为文件模式。文件模式期间，按钮的<b class="lr">红灯</b>会一直闪烁。
+vi: <b>Nút [문서] (Tài liệu)</b> — bấm để chọn chế độ Tài liệu. Trong chế độ này, <b class="lr">đèn đỏ</b> ở nút sẽ nhấp nháy liên tục.
+@@f6c5ed891d
+en: <b>READY light</b> — the <b class="lg">green light</b> normally blinks, and also blinks while warming up. After about 60 seconds there is a "beep", and <b>when it stops blinking and stays on, warm-up is done</b>.
+zh: <b>READY 指示灯</b> — 平时<b class="lg">绿灯</b>闪烁，预热时也闪烁。大约 60 秒后“哔”一声，<b>停止闪烁并一直亮着，就是预热完成</b>。
+vi: <b>Đèn READY</b> — bình thường <b class="lg">đèn xanh</b> nhấp nháy, khi đang làm nóng cũng nhấp nháy. Khoảng 60 giây sau có tiếng "bíp", <b>đèn ngừng nhấp nháy và sáng liên tục là đã nóng xong</b>.
+@@8c0cc3780f
+en: <b>Never press the [사진] (Photo) · [무열코팅] (Cold) buttons.</b> Use <b>[문서] (Document) mode only</b>.
+zh: <b>绝对不要按［사진］（照片）·［무열코팅］（冷裱）按钮。</b>一定<b>只用［문서］（文件）模式</b>。
+vi: <b>Tuyệt đối đừng bấm nút [사진] (Ảnh) · [무열코팅] (Ép nguội).</b> Chỉ dùng <b>chế độ [문서] (Tài liệu)</b>.
+@@03001e29e3
+en: How to use the black PL-1506 laminator
+zh: 黑色 PL-1506 塑封机使用方法
+vi: Cách dùng máy ép đen PL-1506
+@@67d28f0352
+en: Check the pouches · pay first!
+zh: 先确认塑封膜 · 付款！
+vi: Kiểm tra túi ép · thanh toán trước!
+@@583e42529a
+en: <b>First check how many laminating pouches are on display</b>.<br/>If there are enough, <b>choose how many at the Toss kiosk and pay by card</b> before using it.<br/>If there are fewer pouches than you need, <b>come back another time, or use only what's there</b>.
+zh: <b>请先确认陈列的塑封膜数量</b>。<br/>数量够的话，在 Toss 自助机上<b>选好张数并刷卡付款</b>后再使用。<br/>如果陈列的塑封膜比需要的少，请<b>下次再用，或者只用现有的数量</b>。
+vi: <b>Trước tiên hãy xem còn bao nhiêu túi ép đang bày</b>.<br/>Nếu đủ, hãy <b>chọn số tờ ở máy kiosk Toss và thanh toán bằng thẻ</b> rồi mới dùng.<br/>Nếu túi ép ít hơn số bạn cần, hãy <b>quay lại lần sau, hoặc chỉ dùng số đang có</b>.
+@@9105801aaa
+en: ⚠️ The order is <b>check how many → pay → laminate</b>. Always pay first
+zh: ⚠️ 顺序是<b>确认数量 → 付款 → 塑封</b>。一定要先付款
+vi: ⚠️ Thứ tự là <b>kiểm tra số lượng → thanh toán → ép</b>. Nhất định phải thanh toán trước
+@@dba01e58e4
+en: Pressing the power button — power ON
+zh: 按电源按钮的样子 — 电源 ON
+vi: Bấm nút nguồn — bật nguồn
+@@75e43bbe87
+en: Press the power button
+zh: 按电源按钮
+vi: Bấm nút nguồn
+@@b07a28df53
+en: Press the <b>power</b> button to turn it on. (power ON)
+zh: 按<b>电源</b>按钮打开电源。（电源 ON）
+vi: Bấm nút <b>nguồn</b> để bật máy. (bật nguồn)
+@@56b0e73469
+en: 💡 <b>Normal (default) state</b> — the laminator is always plugged in, so the <b>POWER <b class="lr">red light</b></b> keeps blinking and the <b>READY <b class="lg">green light</b></b> also blinks. This is <b>normal</b>, not a breakdown.
+zh: 💡 <b>平时（默认）状态</b> — 塑封机的电源线一直插着，所以 <b>POWER 部分的<b class="lr">红灯</b></b>一直闪烁，<b>READY 部分的<b class="lg">绿灯</b></b>也在闪烁。这是<b>正常（默认）</b>状态，不是故障。
+vi: 💡 <b>Trạng thái bình thường</b> — máy ép luôn cắm điện nên <b>đèn POWER <b class="lr">màu đỏ</b></b> nhấp nháy liên tục, <b>đèn READY <b class="lg">màu xanh</b></b> cũng nhấp nháy. Đây là <b>bình thường</b>, không phải máy hỏng.
+@@3f5c377788
+en: Pressing the 문서 (Document) button
+zh: 按 문서（文件）按钮的样子
+vi: Bấm nút 문서 (Tài liệu)
+@@a43f6be246
+en: Press the [문서] (Document) button
+zh: 按［문서］（文件）按钮
+vi: Bấm nút [문서] (Tài liệu)
+@@2e524b2418
+en: Press the <b>[문서] (Document)</b> button to set Document mode.<br/>When the [문서] button's <b><b class="lr">red light</b> blinks</b> and the READY <b class="lg">green light</b> <b>also blinks</b>, warm-up has started.<br/><span class="r">Don't press the [사진] (Photo) · [무열코팅] (Cold) buttons. Use Document mode only.</span>
+zh: 按<b>［문서］（文件）</b>按钮设为文件模式。<br/>［문서］按钮那边的<b><b class="lr">红灯</b>闪烁</b>，READY <b class="lg">绿灯</b>也<b>一起闪烁</b>，就是开始预热了。<br/><span class="r">不要按［사진］（照片）·［무열코팅］（冷裱）按钮。一定只用文件模式。</span>
+vi: Bấm nút <b>[문서] (Tài liệu)</b> để chọn chế độ Tài liệu.<br/>Khi <b><b class="lr">đèn đỏ</b> ở nút [문서] nhấp nháy</b> và đèn READY <b class="lg">màu xanh</b> <b>cũng nhấp nháy</b> là máy bắt đầu làm nóng.<br/><span class="r">Đừng bấm nút [사진] (Ảnh) · [무열코팅] (Ép nguội). Chỉ dùng chế độ Tài liệu.</span>
+@@b9f96086a7
+en: While warming up, the READY green light blinks; after about 60 seconds it beeps and stops blinking
+zh: 预热时 READY 绿灯闪烁，大约 60 秒后哔一声停止闪烁
+vi: Khi làm nóng, đèn xanh READY nhấp nháy; khoảng 60 giây sau kêu bíp và ngừng nhấp nháy
+@@5ea10ad2bf
+en: Wait for it to warm up
+zh: 等待预热（加热）
+vi: Chờ máy làm nóng
+@@6436a17fd2
+en: Warming up takes <b>about 60 seconds</b>.<br/>After 60 seconds, you hear a <b>"beep"</b>, and <b>when the READY <b class="lg">green light</b> stops blinking and stays on, warm-up is done</b>.<br/>The <b class="lr">red light</b> by the [문서] button <b>keeps blinking — that's normal</b>. Don't put a pouch in while the READY <b class="lg">green light</b> is blinking.
+zh: 预热需要<b>大约 60 秒</b>。<br/>60 秒后会<b>“哔~”一声</b>，<b>READY <b class="lg">绿灯</b>停止闪烁并一直亮着，就是预热完成</b>。<br/>这时［문서］按钮那边的<b class="lr">红灯</b><b>继续闪烁是正常的</b>。READY <b class="lg">绿灯</b>闪烁时，不要放入塑封膜。
+vi: Làm nóng mất <b>khoảng 60 giây</b>.<br/>Sau 60 giây sẽ có tiếng <b>"bíp~"</b>, và <b>khi đèn READY <b class="lg">màu xanh</b> ngừng nhấp nháy và sáng liên tục là đã nóng xong</b>.<br/>Lúc đó <b class="lr">đèn đỏ</b> ở nút [문서] <b>vẫn nhấp nháy là bình thường</b>. Khi đèn READY <b class="lg">màu xanh</b> còn nhấp nháy thì đừng đưa túi ép vào.
+@@4dca4e9c7e
+en: Putting the print in the pouch and holding it to the front of the laminator
+zh: 把打印好的纸放进塑封膜，放在塑封机前面的样子
+vi: Cho giấy in vào túi ép và đưa đến trước máy ép
+@@ba20662d30
+en: Put in your print
+zh: 放入打印好的纸
+vi: Cho giấy in vào
+@@547a0cd953
+en: <b>Put your print</b> inside the pouch.
+zh: 把<b>打印好的纸放进</b>塑封膜里。
+vi: <b>Cho giấy in vào</b> trong túi ép.
+@@add885ea06
+en: Feeding the sealed end of the pouch straight into the slot
+zh: 把塑封膜封口的一端端正地放入入口的样子
+vi: Đưa đầu kín của túi ép thẳng vào khe
+@@3d7ff6dba9
+en: Sealed end first, straight in
+zh: 封口端先放，放端正
+vi: Đầu kín vào trước, đưa thẳng
+@@c0a5c86e1c
+en: Feed the pouch in <b>sealed end first, keeping it level</b>.<br/><span class="r">The sealed end is the <b>short (top) edge</b> of the pouch.</span> Not the long side.
+zh: 把塑封膜<b>封口的一端先水平</b>放入入口。<br/><span class="r">封口的一端是塑封膜<b>短边（上方）的一端</b>。</span>不是长边（侧面）。
+vi: Đưa túi ép vào khe <b>đầu kín trước, giữ thẳng ngang</b>.<br/><span class="r">Đầu kín là <b>cạnh ngắn (phía trên)</b> của túi ép.</span> Không phải cạnh dài (bên hông).
+@@c8001ba298
+en: Gently pushing the pouch in until it is pulled in automatically
+zh: 小心地把塑封膜推进去，直到自动被吸进去的样子
+vi: Nhẹ nhàng đẩy túi ép vào đến khi máy tự kéo vào
+@@192f3f8775
+en: Push until it's pulled in by itself
+zh: 推到自动被吸进去为止
+vi: Đẩy đến khi máy tự kéo vào
+@@adf4011d79
+en: Push it in slowly and <b>flat</b>. <b>The sensor at the slot detects the pouch</b>, and the laminator <b>pulls it in automatically.</b>
+zh: <b>平平地</b>慢慢推进去，<b>入口的感应器会识别塑封膜</b>，塑封机就会<b>自动吸进去。</b>
+vi: Đẩy vào <b>thật phẳng</b> và chậm, <b>cảm biến ở khe sẽ nhận ra túi ép</b> và máy <b>tự động kéo vào.</b>
+@@0cc49a83a0
+en: Put the pouch in the front slot and it comes out the back
+zh: 把塑封膜放进前面的入口，从后面出来的样子
+vi: Đưa túi ép vào khe phía trước, túi ép ra ở phía sau
+@@6936d8a34a
+en: Check it comes out
+zh: 确认出膜
+vi: Kiểm tra túi ép ra
+@@815c353d00
+en: The pouch <b>goes in the front slot and comes out the back.</b> Check that it <b>comes out</b> the back.<br/><span class="r">⚠️ Never put anything in the back where pouches come out. Only use the front slot.</span>
+zh: 塑封膜<b>从前面入口放进去，会从后面出来。</b>请确认塑封膜从后面<b>出来</b>。<br/><span class="r">⚠️ 绝对不要往出膜的后面放东西。一定只从前面入口放。</span>
+vi: Túi ép <b>vào ở khe phía trước và ra ở phía sau.</b> Hãy kiểm tra túi ép <b>ra</b> ở phía sau.<br/><span class="r">⚠️ Tuyệt đối đừng đưa vào phía sau, nơi túi ép đi ra. Chỉ đưa vào khe phía trước.</span>
+@@bf79f560da
+en: <span class="x">!</span>Laminating safety — things not to do and things to do. Please follow them
+zh: <span class="x">!</span>塑封注意事项 — 不能做的和要做的，请一定遵守
+vi: <span class="x">!</span>Lưu ý khi ép — những điều không được làm và cần làm, hãy làm đúng
+@@4250bb186c
+en: 🔥🚨 Fire risk — NEVER do this! 🚨🔥
+zh: 🔥🚨 有火灾危险 — 绝对不要这样做！🚨🔥
+vi: 🔥🚨 Nguy cơ cháy — tuyệt đối không được làm! 🚨🔥
+@@ca325842c3
+en: A print alone can cause a fire
+zh: 只放打印纸有火灾危险
+vi: Chỉ cho giấy in vào có nguy cơ cháy
+@@5671841fde
+en: <b>🚫 Don't put in a print alone!</b><span>Never put a print in the laminator without a pouch</span>
+zh: <b>🚫 不要只放打印纸！</b><span>没有塑封膜，只把打印纸放进塑封机是不行的</span>
+vi: <b>🚫 Đừng chỉ cho giấy in vào!</b><span>Không được cho giấy in vào máy ép mà không có túi ép</span>
+@@7f13821617
+en: An empty pouch alone can cause a fire
+zh: 只放空塑封膜有火灾危险
+vi: Chỉ cho túi ép rỗng vào có nguy cơ cháy
+@@afd629b35d
+en: <b>🚫 Don't put in an empty pouch!</b><span>Never put an empty pouch in the laminator without a print inside</span>
+zh: <b>🚫 不要只放空塑封膜！</b><span>里面没有打印纸，只把空塑封膜放进塑封机是不行的</span>
+vi: <b>🚫 Đừng cho túi ép rỗng vào!</b><span>Không được cho túi ép rỗng vào máy mà không có giấy in bên trong</span>
+@@69fd956e07
+en: ⚠️ Doing either of these can <b>start a fire inside the laminator</b>. 🧯<br/>Only put in <b>a pouch with your print inside</b>. There is a <b>risk of fire and damage to the machine</b>.
+zh: ⚠️ 这样做的话，<b>塑封机内部可能会起火，引发火灾</b>。🧯<br/>一定<b>只放已经装好打印纸的塑封膜</b>。有<b>火灾和损坏机器的危险</b>。
+vi: ⚠️ Làm một trong hai điều này có thể <b>gây cháy bên trong máy ép</b>. 🧯<br/>Chỉ cho vào <b>túi ép đã có giấy in bên trong</b>. Có <b>nguy cơ cháy và hỏng máy</b>.
+@@288f958010
+en: Do this
+zh: 请这样做
+vi: Hãy làm thế này
+@@566a4b0a77
+en: Sealed end first is correct; the other way is wrong
+zh: 封口端先放是对的，反着放不行
+vi: Đầu kín vào trước là đúng, làm ngược lại là sai
+@@dbdbfb581d
+en: Feed the pouch <b>sealed end first</b>. (Must)
+zh: 塑封膜要<b>封口端先放</b>。（必须）
+vi: Đưa túi ép vào <b>đầu kín trước</b>. (Bắt buộc)
+@@84ab8ca5e3
+en: Pushing it in until it is pulled in automatically
+zh: 推到自动被吸进去为止的样子
+vi: Đẩy vào đến khi máy tự kéo vào
+@@6f943c06c8
+en: <b>Don't leave it resting in the slot.</b> Carefully, without wrinkling it, <b>push it in slowly until it's pulled in automatically.</b>
+zh: <b>不要搭在塑封机入口上不管</b>，小心不要弄皱，<b>慢慢推进去直到自动被吸进去。</b>
+vi: <b>Đừng để túi ép gác hờ ở khe.</b> Cẩn thận không làm nhàu, <b>đẩy từ từ đến khi máy tự kéo vào.</b>
+@@1dd5289a8e
+en: For several sheets, wait until <b>the first pouch comes out</b> before putting in the next one.<br/><span class="warnline">⚠️ Pouches <b>go in the front slot and come out the back.</b> Don't put anything in the back where they come out.</span>
+zh: 塑封多张时，<b>等先放的塑封膜出来后</b>，再放下一张。<br/><span class="warnline">⚠️ 塑封膜<b>从前面入口放进去，会从后面出来。</b>不要往出膜的后面放。</span>
+vi: Khi ép nhiều tờ, chờ <b>túi ép trước ra hết</b> rồi mới đưa túi tiếp theo vào.<br/><span class="warnline">⚠️ Túi ép <b>vào ở khe phía trước và ra ở phía sau.</b> Đừng đưa vào phía sau, nơi túi ép đi ra.</span>
+@@39d8ca4243
+en: Putting the first pouch in the front slot
+zh: 把先放的塑封膜放进塑封机前面入口的样子
+vi: Đưa túi ép đầu tiên vào khe phía trước
+@@dc86881bf0
+en: Put <b>① the first pouch</b> in the <b>front slot</b>.
+zh: 把<b>① 先放的塑封膜</b>放进<b>前面入口</b>。
+vi: Đưa <b>① túi ép đầu tiên</b> vào <b>khe phía trước</b>.
+@@f70550cfea
+en: Waiting until the first pouch comes all the way out the back
+zh: 等先放的塑封膜从塑封机后面完全出来的样子
+vi: Chờ túi ép đầu tiên ra hết ở phía sau máy
+@@c8cc24f0ae
+en: Wait <b>② until it comes all the way out the back</b>.
+zh: 等<b>② 从后面完全出来</b>。
+vi: Chờ <b>② đến khi ra hết ở phía sau</b>.
+@@06c854687c
+en: Checking and taking out the finished pouch, then putting the next pouch in the front slot
+zh: 确认出来的塑封膜并取出后，把下一张塑封膜放进前面入口的样子
+vi: Kiểm tra và lấy túi ép đã ra, rồi đưa túi tiếp theo vào khe phía trước
+@@f034390172
+en: <b>③ Check that it's all the way out</b>, take it out, then put <b>the next pouch</b> in the front slot.
+zh: <b>③ 确认完全出来</b>并取出放好后，再把<b>下一张塑封膜</b>放进前面入口。
+vi: <b>③ Kiểm tra đã ra hết</b>, lấy ra để riêng, rồi đưa <b>túi ép tiếp theo</b> vào khe phía trước.
+@@0a5c14fe7f
+en: Pressing the power button to turn it off after use
+zh: 用完后按电源按钮关机的样子
+vi: Bấm nút nguồn để tắt máy sau khi dùng
+@@43c9e65ee6
+en: When you're done, <b>press the power button to turn it off.</b>
+zh: 用完后<b>按电源按钮关掉电源。</b>
+vi: Dùng xong, <b>bấm nút nguồn để tắt máy.</b>
+@@02bccc1b49
+en: Don't do this
+zh: 不要这样做
+vi: Đừng làm thế này
+@@0bf8c6a362
+en: A print smaller than the pouch leaves empty space, and the pouch gets crumpled and wrinkled inside the laminator
+zh: 放入比塑封膜小的打印纸会留出空白，塑封膜在塑封机里被弄皱、起褶的样子
+vi: Giấy in nhỏ hơn túi ép để lại khoảng trống, túi ép bị nhàu và nhăn bên trong máy
+@@41d8c62a25
+en: ▲ If you put it in like the left (✕), it comes out <b>crumpled</b> like the right.
+zh: ▲ 像左边那样放（✕）的话，出来会像右边那样<b>皱掉</b>。
+vi: ▲ Nếu đưa vào như bên trái (✕), túi ép sẽ ra <b>bị nhàu</b> như bên phải.
+@@a2b0d67d61
+en: Don't put in <b>a print cut smaller than the pouch</b>. If there is a lot of empty space in the pouch (A4 · A3), those parts stick together with no paper inside and come out <b>crumpled and wrinkled</b>.<br/>Especially if the print <b>doesn't reach the sealed end</b>, the <b>corner of the sealed end can crumple and get stuck inside the laminator</b>, or come out crumpled.<br/>👉 Use a print <b>that fits the pouch size and reaches the sealed end</b>.
+zh: 不要放<b>剪得比塑封膜小的打印纸</b>。塑封膜（A4 · A3）里空白太多的话，那部分没有纸，只有塑封膜自己粘在一起，会<b>起皱、起褶</b>。<br/>特别是打印纸<b>没有碰到塑封膜封口端</b>的话，先进去的封口端<b>角会在塑封机里皱起来卡住</b>，或者皱着出来。<br/>👉 请放<b>和塑封膜大小相符、碰到封口端</b>的打印纸。
+vi: Đừng cho vào <b>giấy in cắt nhỏ hơn túi ép</b>. Nếu trong túi ép (A4 · A3) có nhiều khoảng trống, chỗ đó không có giấy, hai lớp túi dính vào nhau và ra <b>bị nhàu, nhăn</b>.<br/>Nhất là khi giấy in <b>không chạm đến đầu kín</b>, <b>góc đầu kín có thể bị nhàu và kẹt trong máy</b>, hoặc ra bị nhàu.<br/>👉 Hãy dùng giấy in <b>vừa khổ túi ép và chạm đến đầu kín</b>.
+@@d17f35fc95
+en: Prints you brought can't be used
+zh: 不能用自己带来的打印纸
+vi: Không dùng giấy in mang từ ngoài vào
+@@ae6130c1a5
+en: <b>Prints you brought from outside</b> can't be used. (Only paper from our store)
+zh: <b>自己带来的打印纸</b>不能用。（和店里不同的纸不行）
+vi: Không dùng được <b>giấy in mang từ ngoài vào</b>. (Giấy khác với giấy của cửa hàng thì không được)
+@@1b02b495a8
+en: Pouches you brought can't be used
+zh: 不能用自己带来的塑封膜
+vi: Không dùng túi ép mang từ ngoài vào
+@@88d9535841
+en: <b>Laminating pouches you brought</b> can't be used. (Only pouches from our store)
+zh: <b>自己带来的塑封膜</b>不能用。（和店里不同的不行）
+vi: Không dùng được <b>túi ép mang từ ngoài vào</b>. (Khác với của cửa hàng thì không được)
+@@4cf82ef35f
+en: Don't press buttons while it's running
+zh: 运转时不能按按钮
+vi: Đừng bấm nút khi máy đang chạy
+@@43d2e99a00
+en: <b>Don't press any buttons while the laminator is running.</b> (Pressing the wrong one causes problems)
+zh: <b>塑封机运转时不要按按钮。</b>（按错就麻烦了）
+vi: <b>Đừng bấm nút khi máy ép đang chạy.</b> (Bấm nhầm sẽ gây lỗi)
+@@ffe44228ca
+en: ※ These warnings <b>apply to all laminators</b>, both the white SAFA-BM100 and the black PL-1506.
+zh: ※ 这是白色 SAFA-BM100 · 黑色 PL-1506 <b>所有塑封机都一样适用</b>的注意事项。
+vi: ※ Đây là những lưu ý <b>áp dụng cho mọi máy ép</b>, cả máy trắng SAFA-BM100 và máy đen PL-1506.
+@@7cdba01453
+en: How to use the white laminator (SAFA-BM100) <span class="pill">SAFA-BM100</span>
+zh: 白色塑封机（SAFA-BM100）使用方法 <span class="pill">SAFA-BM100</span>
+vi: Cách dùng máy ép màu trắng (SAFA-BM100) <span class="pill">SAFA-BM100</span>
+@@1d82a059c3
+en: <b>This guide is for the white SAFA-BM100 laminating · binding machine.</b> In stores that have both kinds, please use the PL-1506 above first. Stores with only the white SAFA-BM100: <b>laminate this way</b>.
+zh: <b>这是白色 SAFA-BM100 塑封 · 装订两用机的说明。</b>两种塑封机都有的门店，请先用上面的 PL-1506。只有白色 SAFA-BM100 的门店，请<b>按这个方法</b>塑封。
+vi: <b>Đây là hướng dẫn cho máy ép · đóng sách 2 trong 1 màu trắng SAFA-BM100.</b> Ở cửa hàng có cả hai loại, hãy dùng máy PL-1506 ở trên trước. Cửa hàng chỉ có máy trắng SAFA-BM100 thì <b>ép theo cách này</b>.
+@@ec8e509181
+en: <span class="gvid-play">▶</span>Watch the white SAFA-BM100 video first <small>No sound needed</small>
+zh: <span class="gvid-play">▶</span>先看白色 SAFA-BM100 塑封机视频 <small>没有声音也能看懂</small>
+vi: <span class="gvid-play">▶</span>Xem video máy ép trắng SAFA-BM100 trước <small>Không cần bật tiếng</small>
+@@f2b8aee9d1
+en: How to use the white SAFA-BM100 laminator
+zh: 白色 SAFA-BM100 塑封机使用方法
+vi: Cách dùng máy ép trắng SAFA-BM100
+@@1a11eeaf97
+en: 🔀 This machine (SAFA-BM100) is <b>a laminating · binding machine in one</b>
+zh: 🔀 这台机器（SAFA-BM100）是<b>塑封 · 装订两用机</b>
+vi: 🔀 Máy này (SAFA-BM100) là <b>máy ép · đóng sách 2 trong 1</b>
+@@330a439ccc
+en: 🚫 <b>The long slot on top is only for binding covers.</b> <b>Never put a laminating pouch in the top slot!</b><br/>Laminating pouches go <b>only in the lower (front) slot</b>. A pouch in the top slot can get stuck and break the machine.
+zh: 🚫 <b>上方的长入口是“装订封面”专用。</b><b>绝对不要把塑封膜放进上方入口！</b><br/>塑封膜<b>只能放进下方（前面）入口</b>。把塑封膜放进上方入口，塑封膜会卡住，机器可能坏掉。
+vi: 🚫 <b>Khe dài phía trên chỉ dành cho bìa đóng sách.</b> <b>Tuyệt đối đừng đưa túi ép vào khe phía trên!</b><br/>Túi ép <b>chỉ đưa vào khe phía dưới (phía trước)</b>. Đưa túi ép vào khe trên có thể bị kẹt và làm hỏng máy.
+@@280ffc8cdf
+en: SAFA-BM100 laminating · binding machine: the long top slot is for binding covers (no pouches); the lower front slot is for laminating pouches
+zh: SAFA-BM100 塑封 · 装订两用机：上方长入口是装订封面入口（不放塑封膜），下方前面入口是塑封膜入口
+vi: Máy ép · đóng sách SAFA-BM100: khe dài phía trên là khe bìa đóng sách (không đưa túi ép), khe phía dưới phía trước là khe túi ép
+@@5ca2de39c5
+en: <b>First check how many laminating pouches are on display</b>.<br/>If there are enough, <b>choose how many at the Toss kiosk next to the machine and pay by card</b> before using it.<br/>If there are fewer pouches than you need, <b>come back another time, or use only what's there</b>.
+zh: <b>请先确认陈列的塑封膜数量</b>。<br/>数量够的话，在机器旁边的 Toss 自助机上<b>选好张数并刷卡付款</b>后再使用。<br/>如果陈列的塑封膜比需要的少，请<b>下次再用，或者只用现有的数量</b>。
+vi: <b>Trước tiên hãy xem còn bao nhiêu túi ép đang bày</b>.<br/>Nếu đủ, hãy <b>chọn số tờ ở máy kiosk Toss bên cạnh máy và thanh toán bằng thẻ</b> rồi mới dùng.<br/>Nếu túi ép ít hơn số bạn cần, hãy <b>quay lại lần sau, hoặc chỉ dùng số đang có</b>.
+@@85d91590ae
+en: Pressing the power button
+zh: 按电源按钮的样子
+vi: Bấm nút nguồn
+@@97274acd77
+en: Pressing the laminating button twice
+zh: 按塑封按钮 2 次的样子
+vi: Bấm nút ép 2 lần
+@@5bdb7683bd
+en: Power on · warm up
+zh: 开电源 · 预热
+vi: Bật nguồn · làm nóng
+@@637fe3fa8f
+en: Press the <b>power</b> button, then press the <b>laminating</b> button <b>twice</b>.<br/>The light blinks, and after 3–5 minutes it <b>beeps</b> and the light stays on. Warm-up is done.
+zh: 按<b>电源</b>按钮，再按<b>塑封</b>按钮 <b>2 次</b>。<br/>灯会闪烁，3~5 分钟后<b>“哔”</b>一声，灯一直亮着，就是预热完成。
+vi: Bấm nút <b>nguồn</b>, rồi bấm nút <b>ép</b> <b>2 lần</b>.<br/>Đèn nhấp nháy, khoảng 3–5 phút sau kêu <b>"bíp"</b> và đèn sáng liên tục là đã nóng xong.
+@@46f60f3826
+en: ⚠️ If you pressed the laminating button <b>3 or more times</b>, <b>press the power button to turn it off</b>, then start again: <b>press power, then the laminating button twice</b>.
+zh: ⚠️ 塑封按钮按了 <b>3 次以上</b>的话，请<b>按电源按钮关机后</b>，从头再<b>按电源按钮，再按塑封按钮 2 次</b>。
+vi: ⚠️ Nếu đã bấm nút ép <b>từ 3 lần trở lên</b>, hãy <b>bấm nút nguồn để tắt</b>, rồi làm lại từ đầu: <b>bấm nút nguồn, rồi bấm nút ép 2 lần</b>.
+@@8d996c8457
+en: Putting the print inside the pouch
+zh: 把打印好的纸放进塑封膜的样子
+vi: Cho giấy in vào trong túi ép
+@@d9a126269e
+en: Put your print in the pouch
+zh: 把打印纸放进塑封膜
+vi: Cho giấy in vào túi ép
+@@c655887f72
+en: Put your print <b>neatly inside</b> the laminating pouch.
+zh: 把打印纸<b>整齐地放进</b>塑封膜里。
+vi: Cho giấy in <b>ngay ngắn vào trong</b> túi ép.
+@@f2c7dafb81
+en: Feeding the sealed end of the pouch level into the slot
+zh: 把塑封膜封口端水平放入入口的样子
+vi: Đưa đầu kín của túi ép thẳng ngang vào khe
+@@d97ce38717
+en: Feed it into the laminator
+zh: 放进塑封机
+vi: Đưa vào máy ép
+@@030a3eb1d4
+en: Feed the pouch into the slot <b>sealed end first</b>.<br/>Keep it <b>level and straight, without wrinkling</b>.
+zh: 把塑封膜<b>封口端先</b>放进入口。<br/>请<b>水平端正、不要弄皱</b>地放进去。
+vi: Đưa túi ép vào khe <b>đầu kín trước</b>.<br/>Giữ <b>thẳng ngang, ngay ngắn, không làm nhàu</b>.
+@@12acac77d5
+en: Watching that the pouch doesn't get caught as it comes out the back
+zh: 看着塑封膜从后面出来时有没有卡住的样子
+vi: Theo dõi để túi ép không bị vướng khi ra ở phía sau
+@@219bb5aca1
+en: Watch it come out
+zh: 确认出来的塑封膜
+vi: Kiểm tra túi ép đi ra
+@@10916e5f72
+en: Watch that the pouch <b>comes out the back</b> smoothly without getting caught.
+zh: 请看着塑封膜<b>从后面出来时</b>有没有卡住，是否顺利出来。
+vi: Theo dõi để túi ép <b>ra ở phía sau</b> trơn tru, không bị vướng.
+@@db183c0ca7
+en: Power OFF
+zh: 关电源
+vi: Tắt nguồn
+@@6f6f5dec11
+en: When you're done, <b>always turn the power off.</b>
+zh: 用完后<b>一定要关掉电源。</b>
+vi: Dùng xong, <b>nhất định phải tắt nguồn.</b>
+@@0fb1bb6653
+en: If you don't turn it off, it causes problems for the next customer.
+zh: 不关电源的话，会给下一位顾客带来麻烦。
+vi: Nếu không tắt nguồn sẽ gây phiền cho người dùng sau.
+@@559ef6c96f
+en: For several sheets, wait until <b>the first pouch comes out</b> before putting in the next one.<span class="warnline">⚠️ Pouches <b>go in the front slot and come out the back.</b> Don't put anything in the back where they come out.</span>
+zh: 塑封多张时，<b>等先放的塑封膜出来后</b>，再放下一张。<span class="warnline">⚠️ 塑封膜<b>从前面入口放进去，会从后面出来。</b>不要往出膜的后面放。</span>
+vi: Khi ép nhiều tờ, chờ <b>túi ép trước ra hết</b> rồi mới đưa túi tiếp theo vào.<span class="warnline">⚠️ Túi ép <b>vào ở khe phía trước và ra ở phía sau.</b> Đừng đưa vào phía sau, nơi túi ép đi ra.</span>
+@@c79fe2c849
+en: Putting the first pouch in the front slot of the SAFA-BM100
+zh: 把先放的塑封膜放进 SAFA-BM100 前面入口的样子
+vi: Đưa túi ép đầu tiên vào khe phía trước của SAFA-BM100
+@@d1480cbb78
+en: 🚫 Don't put a pouch in the <b>top binding-cover slot</b>. (Pouches go <b>only in the lower front slot</b>)
+zh: 🚫 不要把塑封膜放进<b>上方装订封面入口</b>。（塑封膜<b>只能放下方前面入口</b>）
+vi: 🚫 Đừng đưa túi ép vào <b>khe bìa đóng sách phía trên</b>. (Túi ép <b>chỉ đưa vào khe phía dưới phía trước</b>)
+@@6ff99c403e
+en: PrintShop Mini binding guide — warming up the heat binder, putting pages in the cover, feeding it, and cooling for 10+ minutes.
+zh: PrintShop Mini 装订使用方法 — 介绍热熔装订机预热、把纸放进封面、送入机器和冷却 10 分钟以上。
+vi: Hướng dẫn đóng sách của PrintShop Mini — làm nóng máy đóng sách nhiệt, cho giấy vào bìa, đưa vào máy và để nguội từ 10 phút trở lên.
+@@b88fb27269
+en: How to Bind - PrintShop Mini
+zh: 装订使用方法 - PrintShop Mini
+vi: Cách đóng sách - PrintShop Mini
+@@630cf56eaf
+en: How to Bind
+zh: 装订使用方法
+vi: Cách đóng sách
+@@abe00781eb
+en: How to bind your prints like a book with a heat-binding cover. Check how many covers you need and pay first. Always let it cool for 10+ minutes.
+zh: 把打印好的纸放进热熔装订封面，装订成书的方法。请先确认封面数量并付款。也请一定冷却 10 分钟以上。
+vi: Cách đóng giấy in thành cuốn như sách bằng bìa đóng nhiệt. Hãy kiểm tra số bìa và thanh toán trước. Nhất định phải để nguội từ 10 phút trở lên.
+@@8b303eabf0
+en: <a href="guide-coat.html">✨ Laminate</a> <a class="on" href="guide-bind.html">📚 Bind</a>
+zh: <a href="guide-coat.html">✨ 塑封</a> <a class="on" href="guide-bind.html">📚 装订</a>
+vi: <a href="guide-coat.html">✨ Ép plastic</a> <a class="on" href="guide-bind.html">📚 Đóng sách</a>
+@@9f2a364ca4
+en: Stacky
+zh: 小叠 (Stacky)
+vi: Stacky
+@@e69d9876cf
+en: <b>Stacky</b><i>Stacky</i><span class="fr-pill">Binding</span><br/>Hello! I'm Stacky, in charge of binding. I'll show you how to stack papers neatly and make them into a book!
+zh: <b>小叠</b><i>Stacky</i><span class="fr-pill">负责装订</span><br/>你好！我是负责装订的小叠。我来告诉你怎么把纸整整齐齐地装订成书！
+vi: <b>Stacky</b><i>Stacky</i><span class="fr-pill">Phụ trách đóng sách</span><br/>Xin chào! Mình là Stacky, phụ trách đóng sách. Mình sẽ chỉ bạn cách xếp giấy gọn gàng và đóng thành sách!
+@@2bde84b7e1
+en: How to bind <span class="pill">BINDING</span>
+zh: 装订方法 <span class="pill">BINDING</span>
+vi: Cách đóng sách <span class="pill">BINDING</span>
+@@17a2b8b182
+en: <b>This service puts your prints in a heat-binding cover and melts the glue with heat to make them into a book.</b> The order is: choose a cover and pay → warm up → put it in the machine → timer → cool for 10+ minutes. Great for theses · reports · contracts.
+zh: <b>把打印好的纸放进热熔装订封面，用热把胶（胶水）熔化粘住，做成书的服务。</b>顺序是：选热熔装订封面并付款 → 预热（加热）→ 放进机器 → 定时 → 冷却 10 分钟以上。可用于论文 · 报告 · 合同等。
+vi: <b>Dịch vụ cho giấy in vào bìa đóng nhiệt, dùng nhiệt làm chảy keo để dán thành cuốn như sách.</b> Thứ tự: chọn bìa và thanh toán → làm nóng → đưa vào máy → hẹn giờ → để nguội từ 10 phút trở lên. Dùng cho luận văn · báo cáo · hợp đồng.
+@@6584dc71af
+en: <span class="gvid-play">▶</span>Watch the binding video first <small>No sound needed</small>
+zh: <span class="gvid-play">▶</span>先看装订方法视频 <small>没有声音也能看懂</small>
+vi: <span class="gvid-play">▶</span>Xem video cách đóng sách trước <small>Không cần bật tiếng</small>
+@@311010a7f3
+en: 📖 What is heat binding?
+zh: 📖 热熔装订是这样的方法
+vi: 📖 Đóng sách nhiệt là gì?
+@@bd2a88ee8e
+en: It <b>uses glue</b>. No hole punching, no springs or strings.<br/>Put the pages in so <b>their edges touch the glue</b> inside the cover, and the binder's <b>heat melts the glue</b> to stick them.
+zh: 是<b>用胶粘的方法</b>。不打孔，也不用弹簧 · 绳子装订。<br/>把纸放进去，让<b>纸的边碰到</b>封面里面的<b>胶（胶水）</b>，再用热熔装订机的<b>热把胶熔化</b>粘住纸。
+vi: Đây là cách <b>dán bằng keo</b>. Không đục lỗ, không dùng lò xo hay dây.<br/>Cho giấy vào sao cho <b>mép giấy chạm vào keo</b> bên trong bìa, rồi <b>nhiệt của máy làm chảy keo</b> để dán giấy lại.
+@@f4908af05c
+en: Each cover has a set <b>number of sheets it can hold</b>. You can put in <b>only up to the number written on the cover</b>. <span style="font-weight:600">(Depending on the store, it's written as '매' or '장'. Both mean "sheets".)</span><br/>There are <b>20 · 40 · 60 · 80 · 100 · 120 · 150 · 180 · 200-sheet</b> covers.
+zh: 每种封面<b>能放的纸张数</b>是固定的。<b>只能放到封面上写的张数（매/장）</b>。<span style="font-weight:600">（根据门店不同，写作“매”或“장”，意思一样，都是“张”。）</span><br/>有 <b>20 · 40 · 60 · 80 · 100 · 120 · 150 · 180 · 200 张</b>的封面。
+vi: Mỗi bìa có <b>số tờ tối đa</b> riêng. Chỉ được cho vào <b>đến đúng số tờ ghi trên bìa</b>. <span style="font-weight:600">(Tùy cửa hàng, ghi là '매' hoặc '장'. Cả hai đều nghĩa là "tờ".)</span><br/>Có các bìa <b>20 · 40 · 60 · 80 · 100 · 120 · 150 · 180 · 200 tờ</b>.
+@@2c0dff762d
+en: The price is <b>1,500 won per cover, no matter how thick</b>.
+zh: 价格<b>不管厚度，每个封面 1,500 韩元</b>。
+vi: Giá là <b>1.500 won một bìa, dù dày hay mỏng</b>.
+@@0e66d5646b
+en: <b>Too few sheets can't be bound.</b><br/>e.g.) <b>5 or 10 sheets</b> won't work even with a 2mm cover. The <b>empty space</b> at the glued edge is <b>too big</b>, so it won't stick.
+zh: <b>张数太少的话不能装订。</b><br/>例）<b>5 张 · 10 张</b>用 2mm 封面也不行。粘胶的侧面<b>空隙太大</b>，粘不住。
+vi: <b>Quá ít tờ thì không đóng được.</b><br/>Ví dụ) <b>5 tờ · 10 tờ</b> dù dùng bìa 2mm cũng không được. <b>Khoảng trống</b> ở cạnh có keo <b>quá lớn</b> nên không dính.
+@@7387b8a082
+en: <b>No cover that exactly fits your number of sheets?</b><br/>Take <b>2 covers close in thickness</b> to your number of sheets, <b>try your pages in each</b>, and use <b>the one that leaves less empty space</b>.<br/><b>e.g.)</b> For 110 sheets, try both the <b>10mm and 12mm covers</b>.
+zh: <b>没有张数正好合适的封面？</b><br/>拿出<b>两个厚度和您的张数接近的封面</b>，<b>分别放进去试试</b>，用<b>剩下空隙更少的封面</b>。<br/><b>例）</b>110 张的话，<b>10mm 封面和 12mm 封面</b>都放进去试试。
+vi: <b>Không có bìa vừa đúng số tờ?</b><br/>Lấy <b>2 bìa có độ dày gần</b> với số tờ của bạn, <b>thử cho giấy vào từng bìa</b>, rồi dùng <b>bìa còn ít khoảng trống hơn</b>.<br/><b>Ví dụ)</b> 110 tờ thì thử cả <b>bìa 10mm và bìa 12mm</b>.
+@@a52d3f6132
+en: Binding covers go in the <b>long slot on top</b>. The lower (front) slot is <b>for laminating pouches only</b>. Pouches are explained in the laminating guide.
+zh: 装订封面放进<b>上方的长入口</b>。下方（前面）入口是<b>塑封膜专用</b>。塑封膜在塑封使用方法中说明。
+vi: Bìa đóng sách đưa vào <b>khe dài phía trên</b>. Khe phía dưới (phía trước) <b>chỉ dành cho túi ép</b>. Túi ép được hướng dẫn trong phần Cách ép plastic.
+@@cf13037fe9
+en: SAFA-BM100 laminating · binding machine: the long top slot is for binding covers; the lower front slot is for laminating pouches
+zh: SAFA-BM100 塑封 · 装订两用机：上方长入口是装订封面入口，下方前面入口是塑封膜入口
+vi: Máy ép · đóng sách SAFA-BM100: khe dài phía trên là khe bìa đóng sách, khe phía dưới phía trước là khe túi ép
+@@5fab9592f2
+en: 🧾 Before you start binding!
+zh: 🧾 开始装订前请先看！
+vi: 🧾 Trước khi bắt đầu đóng sách!
+@@d1f6ed7b6f
+en: First choose <b>a heat-binding cover that fits your number of sheets</b>.<span class="eg"><b>e.g.)</b> For 20 sheets, use the <b>20-sheet cover (2mm)</b>.<br/>In the display case, covers are labeled <b>20 · 40 · 60 · 80 · 100 · 120 · 150 · 180 · 200 sheets (매/장)</b>. <span style="font-weight:600">(Depending on the store, it's written as '매' or '장'. Both mean "sheets".)</span></span><span class="eg"><b>🤔 No cover that exactly fits your number of sheets?</b><br/>Take <b>2 covers close in thickness</b> to your number of sheets, <b>try your pages in each</b>, and use <b>the one that leaves less empty space</b>.<br/><b>e.g.)</b> For 110 sheets, try both the <b>10mm and 12mm covers</b>.</span>
+zh: 请先选好<b>和您的张数相符的热熔装订封面</b>。<span class="eg"><b>例）</b>打印纸有 20 张的话，用 <b>20 张封面（2mm）</b>。<br/>陈列柜里的封面贴着 <b>20 张 · 40 张 · 60 张 · 80 张 · 100 张 · 120 张 · 150 张 · 180 张 · 200 张（매/장）</b>的标签。<span style="font-weight:600">（根据门店不同，写作“매”或“장”，意思一样，都是“张”。）</span></span><span class="eg"><b>🤔 没有张数正好合适的封面？</b><br/>拿出<b>两个厚度和您的张数接近的封面</b>，<b>分别放进去试试</b>，用<b>剩下空隙更少的封面</b>。<br/><b>例）</b>110 张的话，<b>10mm 封面和 12mm 封面</b>都放进去试试。</span>
+vi: Trước tiên hãy chọn <b>bìa đóng nhiệt vừa với số tờ của bạn</b>.<span class="eg"><b>Ví dụ)</b> 20 tờ thì dùng <b>bìa 20 tờ (2mm)</b>.<br/>Trong tủ trưng bày, bìa được dán nhãn <b>20 · 40 · 60 · 80 · 100 · 120 · 150 · 180 · 200 tờ (매/장)</b>. <span style="font-weight:600">(Tùy cửa hàng, ghi là '매' hoặc '장'. Cả hai đều nghĩa là "tờ".)</span></span><span class="eg"><b>🤔 Không có bìa vừa đúng số tờ?</b><br/>Lấy <b>2 bìa có độ dày gần</b> với số tờ của bạn, <b>thử cho giấy vào từng bìa</b>, rồi dùng <b>bìa còn ít khoảng trống hơn</b>.<br/><b>Ví dụ)</b> 110 tờ thì thử cả <b>bìa 10mm và bìa 12mm</b>.</span>
+@@10717367a0
+en: <b>Check that there are enough</b> of the cover you chose, then pay at the Toss kiosk.
+zh: <b>确认选好的热熔装订封面数量够</b>之后，再在 Toss 自助机付款。
+vi: <b>Kiểm tra bìa đã chọn có đủ số lượng</b>, rồi thanh toán ở máy kiosk Toss.
+@@6ae8c1fbea
+en: ⚠️ <b>Refunds for Toss kiosk payments are sent to a bank account.</b> If you pay twice by your own mistake, we send back the amount minus the fee. Always check there are enough covers before you pay.
+zh: ⚠️ <b>在 Toss 自助机付的钱，退款会打到银行账户。</b>因顾客自己不小心重复付款的，会扣除手续费后退回。请一定确认封面数量够了再付款。
+vi: ⚠️ <b>Tiền thanh toán ở máy kiosk Toss sẽ được hoàn vào tài khoản ngân hàng.</b> Nếu bạn sơ ý thanh toán 2 lần, chúng tôi sẽ hoàn lại số tiền sau khi trừ phí. Nhớ kiểm tra đủ số bìa rồi mới thanh toán.
+@@67fe7523a6
+en: Choose a cover · pay first!
+zh: 先选热熔装订封面 · 付款！
+vi: Chọn bìa · thanh toán trước!
+@@c75f2be4d2
+en: <b>First choose a heat-binding cover that fits your number of sheets.</b><span class="eg"><b>e.g.)</b> For 20 sheets, use the <b>20-sheet cover (2mm)</b>.<br/>In the display case, covers are labeled <b>20 · 40 · 60 · 80 · 100 · 120 · 150 · 180 · 200 sheets (매/장)</b>. <span style="font-weight:600">(Depending on the store, it's written as '매' or '장'. Both mean "sheets".)</span></span><span class="eg"><b>🤔 No cover that exactly fits your number of sheets?</b><br/>Take <b>2 covers close in thickness</b> to your number of sheets, <b>try your pages in each</b>, and use <b>the one that leaves less empty space</b>.<br/><b>e.g.)</b> For 110 sheets, try both the <b>10mm and 12mm covers</b>.</span><b>Check that there are enough</b> of the cover you chose, then <b>pay at the Toss kiosk</b>.
+zh: <b>请先选好和您的张数相符的热熔装订封面。</b><span class="eg"><b>例）</b>打印纸有 20 张的话，用 <b>20 张封面（2mm）</b>。<br/>陈列柜里的封面贴着 <b>20 张 · 40 张 · 60 张 · 80 张 · 100 张 · 120 张 · 150 张 · 180 张 · 200 张（매/장）</b>的标签。<span style="font-weight:600">（根据门店不同，写作“매”或“장”，意思一样，都是“张”。）</span></span><span class="eg"><b>🤔 没有张数正好合适的封面？</b><br/>拿出<b>两个厚度和您的张数接近的封面</b>，<b>分别放进去试试</b>，用<b>剩下空隙更少的封面</b>。<br/><b>例）</b>110 张的话，<b>10mm 封面和 12mm 封面</b>都放进去试试。</span><b>确认选好的热熔装订封面数量够</b>之后，再<b>在 Toss 自助机付款</b>。
+vi: <b>Trước tiên hãy chọn bìa đóng nhiệt vừa với số tờ của bạn.</b><span class="eg"><b>Ví dụ)</b> 20 tờ thì dùng <b>bìa 20 tờ (2mm)</b>.<br/>Trong tủ trưng bày, bìa được dán nhãn <b>20 · 40 · 60 · 80 · 100 · 120 · 150 · 180 · 200 tờ (매/장)</b>. <span style="font-weight:600">(Tùy cửa hàng, ghi là '매' hoặc '장'. Cả hai đều nghĩa là "tờ".)</span></span><span class="eg"><b>🤔 Không có bìa vừa đúng số tờ?</b><br/>Lấy <b>2 bìa có độ dày gần</b> với số tờ của bạn, <b>thử cho giấy vào từng bìa</b>, rồi dùng <b>bìa còn ít khoảng trống hơn</b>.<br/><b>Ví dụ)</b> 110 tờ thì thử cả <b>bìa 10mm và bìa 12mm</b>.</span><b>Kiểm tra bìa đã chọn có đủ số lượng</b>, rồi <b>thanh toán ở máy kiosk Toss</b>.
+@@f2b6d4b4e0
+en: Pressing the power button, then the heat button
+zh: 按电源按钮后再按加热按钮的样子
+vi: Bấm nút nguồn rồi bấm nút nhiệt
+@@e19cc30a9d
+en: Power on · warm up
+zh: 开电源 · 预热（加热）
+vi: Bật nguồn · làm nóng
+@@a06f5da219
+en: Press the <b>power</b> button, then press the <b>heat [온열]</b> button once.<br/>The light blinks, and after 3 minutes an alarm sounds and the light stops blinking. Warm-up is done.
+zh: 按<b>电源</b>按钮后，再按一次<b>加热［온열］</b>按钮。<br/>灯会闪烁，3 分钟后响起提示音，灯停止闪烁，就是预热完成。
+vi: Bấm nút <b>nguồn</b>, rồi bấm nút <b>nhiệt [온열]</b> một lần.<br/>Đèn nhấp nháy, 3 phút sau có tiếng chuông và đèn ngừng nhấp nháy là đã nóng xong.
+@@c8a9115daf
+en: Pulling the cooling tray at the back of the machine to open the slot
+zh: 用手拉开机器背面的装订冷却托盘，打开入口的样子
+vi: Kéo khay làm nguội ở mặt sau máy để mở khe
+@@5d4e22f328
+en: Open the slot
+zh: 打开入口
+vi: Mở khe
+@@1a40bfa5b5
+en: Pull the <b>cooling tray at the back</b> of the machine to open the slot.
+zh: 拉开机器<b>背面的冷却板（冷却托盘）</b>，打开入口。
+vi: Kéo <b>khay làm nguội ở mặt sau</b> máy để mở khe.
+@@f9b4cec9c9
+en: Cross-section of a heat-binding cover — clear PET plastic cover, paper cover, cover size (glue part)
+zh: 热熔装订封面的截面结构 — PET 透明塑料封面、纸封面、封面规格（装订胶的部分）
+vi: Mặt cắt bìa đóng nhiệt — bìa nhựa PET trong suốt, bìa giấy, kích thước bìa (phần keo)
+@@f70d7f84bd
+en: Heat-binding cover: clear plastic front · paper back
+zh: 热熔装订封面：正面塑料封面 · 背面纸封面
+vi: Bìa đóng nhiệt: mặt trước nhựa trong · mặt sau giấy
+@@c3abe297b4
+en: Put your prints in the cover
+zh: 把打印纸放进热熔装订封面
+vi: Cho giấy in vào bìa
+@@0a33a7b916
+en: Put your prints inside the heat-binding cover. <b>Line them up so the edges touch the glue (binding line) inside evenly</b>.<br/>The cover has a <b>clear plastic front</b> and a <b>paper back</b>.
+zh: 把打印纸放进热熔装订专用封面里。这时要<b>对齐，让纸整齐地碰到里面的胶（装订线）</b>。<br/>封面正面是<b>透明塑料封面</b>，背面是<b>纸封面</b>。
+vi: Cho giấy in vào trong bìa đóng nhiệt. <b>Xếp cho mép giấy chạm đều vào keo (đường đóng) bên trong</b>.<br/>Bìa có <b>mặt trước bằng nhựa trong</b> và <b>mặt sau bằng giấy</b>.
+@@e54ea07fdf
+en: Standing the binding cover up and putting it into the SAFA-BM100 binding slot
+zh: 把装订封面竖着放进 SAFA-BM100 装订机入口的样子
+vi: Dựng đứng bìa và đưa vào khe đóng sách của SAFA-BM100
+@@26e668df39
+en: Put it in the machine
+zh: 放进机器
+vi: Đưa vào máy
+@@421b70af00
+en: Put the cover in the slot <b>closed (glued) end first</b>.<br/>Push it in <b>all the way</b> until it won't go any further.
+zh: 把封面<b>封住的一端先</b>放进入口。<br/>请<b>深深地</b>推进去，直到推不动为止。
+vi: Đưa bìa vào khe <b>phần gáy (có keo) trước</b>.<br/>Đẩy <b>vào sâu</b> đến khi không vào được nữa.
+@@6ed2a8c969
+en: 🚨 <b>The back of the cover is paper.</b> Put it in carefully so <span class="hl">the corners don't catch on the slot and tear or get damaged</span>.<br/><span class="hl">Be even more careful with thick covers like 120–200 sheets</span> so the cover isn't damaged.<span class="refund">⚠️ If the cover tears because of careless handling, we can't refund or exchange it.</span>
+zh: 🚨 <b>热熔装订封面的背面是纸。</b>请小心放进去，<span class="hl">不要让角等卡在入口上撕破或损坏</span>。<br/><span class="hl">特别是 120~200 张这样越厚的封面</span>，放进去时越要小心，不要损坏封面。<span class="refund">⚠️ 因使用不当导致封面撕破的，很难退款 · 换货。</span>
+vi: 🚨 <b>Mặt sau bìa là giấy.</b> Hãy đưa vào cẩn thận để <span class="hl">góc bìa không vướng vào khe rồi bị rách hay hỏng</span>.<br/><span class="hl">Nhất là bìa dày như 120–200 tờ</span>, càng phải cẩn thận để không làm hỏng bìa.<span class="refund">⚠️ Nếu bìa bị rách do sơ ý, rất khó hoàn tiền · đổi.</span>
+@@42b2f3949b
+en: Start the timer
+zh: 启动定时
+vi: Bật hẹn giờ
+@@f8f687dcff
+en: Press the <b>timer [타이머]</b> button.<br/>The light blinks again, and <b>after 1 minute an alarm sounds</b> and the light stops blinking. Then take it out.
+zh: 按<b>定时［타이머］</b>按钮。<br/>灯会再次闪烁，<b>1 分钟后响起提示音</b>，灯停止闪烁后就取出来。
+vi: Bấm nút <b>hẹn giờ [타이머]</b>.<br/>Đèn lại nhấp nháy, <b>1 phút sau có tiếng chuông</b> và đèn ngừng nhấp nháy thì lấy ra.
+@@4b63d357a4
+en: 🚨 When taking it out too, <b>just like step 5</b>, pull it out carefully so <b>the paper back</b> of the cover <span class="hl">doesn't catch on the slot and tear or get damaged</span>.<br/><span class="hl">If you push it in and pull it out roughly, the paper back can tear.</span><span class="refund">⚠️ If the cover tears because of careless handling, we can't refund or exchange it.</span>
+zh: 🚨 取出时也要<b>和第 5 步一样</b>，小心地拿出来，不要让热熔装订封面<b>背面的纸</b><span class="hl">卡在入口上撕破或损坏</span>。<br/><span class="hl">随便放、随便拿的话，封面背面的纸可能会撕破。</span><span class="refund">⚠️ 因使用不当导致封面撕破的，很难退款 · 换货。</span>
+vi: 🚨 Khi lấy ra cũng <b>giống bước 5</b>, hãy rút ra cẩn thận để <b>mặt giấy phía sau</b> của bìa <span class="hl">không vướng vào khe rồi bị rách hay hỏng</span>.<br/><span class="hl">Nếu đưa vào và rút ra mạnh tay, mặt giấy phía sau có thể bị rách.</span><span class="refund">⚠️ Nếu bìa bị rách do sơ ý, rất khó hoàn tiền · đổi.</span>
+@@c3aba006b2
+en: Standing the bound book in the binder's cooling tray to cool
+zh: 把装订好的书竖着放在装订机冷却托盘里冷却的样子
+vi: Dựng cuốn sách đã đóng vào khay làm nguội của máy để làm nguội
+@@04b7d2eb58
+en: ▲ Stand it in this <b>cooling tray</b> with <b>the closed (glued) end down</b> and let it cool.
+zh: ▲ 在这个<b>冷却板（冷却托盘）</b>里，把<b>封住的一端朝下</b>竖着放好冷却。
+vi: ▲ Dựng sách trong <b>khay làm nguội</b> này với <b>phần gáy (có keo) hướng xuống dưới</b> và để nguội.
+@@bdf4f55f2c
+en: Cool for 10+ minutes, then done
+zh: 冷却 10 分钟以上就完成
+vi: Để nguội từ 10 phút trở lên là xong
+@@d3991abf21
+en: <b>Never open it</b> right after taking it out.<br/><b>Put it in the cooling tray</b> or on a flat surface and let it cool <b>for 10+ minutes</b> before opening.<br/><b>The thicker it is, the longer than 10 minutes</b> — wait until <b>the side is no longer hot</b> and the <b>glue inside the cover has fully cooled and hardened</b>.
+zh: 刚取出来时<b>绝对不要打开。</b><br/>请<b>放进装订机的冷却板（冷却托盘）</b>或放在平的地方，冷却 <b>10 分钟以上</b>再打开。<br/><b>越厚就要放得比 10 分钟更久</b>，等到<b>侧面不再烫</b>，热熔装订封面里的<b>胶（胶水）完全冷却变硬</b>为止。
+vi: <b>Tuyệt đối đừng mở</b> ngay sau khi lấy ra.<br/><b>Đặt vào khay làm nguội</b> hoặc chỗ phẳng, để nguội <b>từ 10 phút trở lên</b> rồi mới mở.<br/><b>Càng dày thì càng để lâu hơn 10 phút</b>, chờ đến khi <b>gáy sách không còn nóng</b> và <b>keo bên trong bìa đã nguội và cứng hẳn</b>.
+@@7129c5a14c
+en: 📌 <b>In the cooling tray, stand it with <span class="hl">the closed end (glue side) down</span></b>.<br/><b>Don't put it in upside down.</b>
+zh: 📌 <b>在冷却板（冷却托盘）里，要把<span class="hl">封住的一端（胶的那边）朝下</span></b>竖着放。<br/><b>不要放反。</b>
+vi: 📌 <b>Trong khay làm nguội, dựng sách với <span class="hl">phần gáy (phía có keo) hướng xuống</span></b>.<br/><b>Đừng đặt ngược.</b>
+@@9c85e20504
+en: 🚨 <b>Always let it cool!</b> <span class="hl">If you open it before the glue hardens, all the pages will fall out.</span>
+zh: 🚨 <b>一定要冷却！</b><span class="hl">胶（胶水）还没变硬就打开的话，打印纸会全部掉下来。</span>
+vi: 🚨 <b>Nhất định phải để nguội!</b> <span class="hl">Nếu mở trước khi keo cứng, giấy sẽ rơi ra hết.</span>
