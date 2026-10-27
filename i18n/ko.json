@@ -6303,5 +6303,35 @@
   "pages": [
    "guide-print.html"
   ]
+ },
+ "35f031a4cc": {
+  "ko": "토스 키오스크 선불충전 안내 영상",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "771d3cd255": {
+  "ko": "<span class=\"pm-tag\">💳 카드 없어도 OK</span>",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "b64897fdab": {
+  "ko": "<a href=\"faq.html#faq-24\">결제 방법 자세히 보기 →</a>",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "c28103fd66": {
+  "ko": "충전카드 안 사도 돼요.<br/>쓸 만큼만 내세요.",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "cfb7303909": {
+  "ko": "토스 키오스크 <b>[선불충전]</b>으로 <b>지금 쓸 금액만</b> 결제해요. 흑백 A4 1장 70원부터. 남는 돈 <span class=\"zero\">0원</span>!",
+  "pages": [
+   "index.html"
+  ]
  }
 }

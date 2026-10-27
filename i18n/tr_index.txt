@@ -370,3 +370,25 @@ vi: Xem tất cả thông báo →
 en: Couldn't load notices.
 zh: 无法加载公告。
 vi: Không tải được thông báo.
+
+# 메인 '카드 없어도 OK' 칸 (토스 선불충전 홍보 영상, 2026-10-27)
+@@35f031a4cc
+en: Toss kiosk prepaid top-up video
+zh: Toss 自助机预付充值介绍视频
+vi: Video nạp tiền trả trước ở kiosk Toss
+@@771d3cd255
+en: <span class="pm-tag">💳 No card? No problem</span>
+zh: <span class="pm-tag">💳 没有卡也可以</span>
+vi: <span class="pm-tag">💳 Không có thẻ cũng được</span>
+@@b64897fdab
+en: <a href="faq.html#faq-24">See how to pay →</a>
+zh: <a href="faq.html#faq-24">查看付款方法 →</a>
+vi: <a href="faq.html#faq-24">Xem cách thanh toán →</a>
+@@c28103fd66
+en: No need to buy a top-up card.<br/>Pay only what you use.
+zh: 不用买充值卡。<br/>用多少，付多少。
+vi: Không cần mua thẻ nạp tiền.<br/>Dùng bao nhiêu, trả bấy nhiêu.
+@@cfb7303909
+en: At the Toss kiosk, use <b>[선불충전] (Prepaid top-up)</b> to pay <b>only the amount you need now</b>. From 70 won for 1 black-and-white A4 page. Money left over: <span class="zero">0 won</span>!
+zh: 在 Toss 自助机用<b>［선불충전］（预付充值）</b>只付<b>现在要用的金额</b>。黑白 A4 一张 70 韩元起。剩下的钱：<span class="zero">0 韩元</span>！
+vi: Ở kiosk Toss, dùng <b>[선불충전] (Nạp tiền trả trước)</b> để chỉ trả <b>đúng số tiền cần dùng bây giờ</b>. Từ 70 won cho 1 trang A4 đen trắng. Tiền thừa: <span class="zero">0 won</span>!
