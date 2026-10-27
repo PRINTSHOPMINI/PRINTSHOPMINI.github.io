@@ -1602,3 +1602,47 @@ Hãy thử như sau.
 3. 👆 Bấm nút nhẹ nhàng bằng một ngón tay.
 
 ❌ Đừng cầm hoặc tựa vào màn hình!
+
+@@74
+#q en: The card terminal says to reboot ('재부팅'). I can't pay.
+#a en
+💳 Turning the card terminal next to the printer machine off and on again (reboot) fixes it in most cases.
+[[warn:⛔ Only turn the card terminal switch off and on! Never turn off or touch the printer machine's power!]]
+1. 👉 Look at the right side of the card terminal. There is an empty space about one finger wide.
+[[img:images/faq/card-reader-top.png]]
+2. ☝️ Put a finger into that space and you'll feel a switch. It's the card terminal's power switch.
+[[img:images/faq/card-reader-side.png]]
+3. 🔄 Slide the switch to turn it off, then slide it back to turn it on.
+4. ⏳ Wait until the card terminal screen turns back on.
+5. 🖨️ Start the payment again from the beginning on the printer machine.
+6. 🔊 Check that you hear the voice '카드를 대 주세요' (Please tap your card), then tap your card to pay.
+
+If it still doesn't work, tell us the store name and printer machine number on Naver TalkTalk.
+#q zh: 刷卡机上显示要“重启”（재부팅），无法付款。
+#a zh
+💳 把复合机旁边的刷卡机关掉再打开（重启），大多数情况都能解决。
+[[warn:⛔ 只关掉再打开刷卡机的开关！绝对不要关闭或碰复合机的电源！]]
+1. 👉 看刷卡机的右侧面。那里有一个能伸进一根手指的空隙。
+[[img:images/faq/card-reader-top.png]]
+2. ☝️ 把手指伸进那个空隙，就能摸到一个开关。这是刷卡机的电源开关。
+[[img:images/faq/card-reader-side.png]]
+3. 🔄 把开关推到一边关掉，再推回来打开。
+4. ⏳ 等刷卡机的屏幕重新亮起来。
+5. 🖨️ 在复合机上从头重新进行付款。
+6. 🔊 确认听到「카드를 대 주세요」（请刷卡）的语音后，再刷卡付款。
+
+还是不行的话，请通过 Naver TalkTalk 告诉我们店名和复合机编号。
+#q vi: Máy quẹt thẻ báo cần khởi động lại ('재부팅'). Tôi không thanh toán được.
+#a vi
+💳 Tắt rồi bật lại (khởi động lại) máy quẹt thẻ gắn bên cạnh máy in đa năng thì hầu hết sẽ được khắc phục.
+[[warn:⛔ Chỉ tắt rồi bật lại công tắc của máy quẹt thẻ! Tuyệt đối không tắt hay chạm vào nguồn điện của máy in đa năng!]]
+1. 👉 Hãy nhìn mặt bên phải của máy quẹt thẻ. Có một khoảng trống vừa một ngón tay.
+[[img:images/faq/card-reader-top.png]]
+2. ☝️ Đưa ngón tay vào khoảng trống đó sẽ chạm thấy một công tắc. Đó là công tắc nguồn của máy quẹt thẻ.
+[[img:images/faq/card-reader-side.png]]
+3. 🔄 Gạt công tắc sang một bên để tắt, rồi gạt lại để bật.
+4. ⏳ Chờ đến khi màn hình máy quẹt thẻ sáng lại.
+5. 🖨️ Thanh toán lại từ đầu trên máy in đa năng.
+6. 🔊 Kiểm tra đã nghe tiếng '카드를 대 주세요' (Vui lòng chạm thẻ), rồi chạm thẻ để thanh toán.
+
+Nếu vẫn không được, hãy báo tên cửa hàng và số máy in đa năng qua Naver TalkTalk.

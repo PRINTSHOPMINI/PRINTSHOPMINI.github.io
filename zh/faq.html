@@ -70,6 +70,7 @@ mark{background:#FFE08A;color:inherit;border-radius:3px;padding:0 2px}
 .faq-q:hover .q-icon{background:var(--blue);color:#fff}
 .faq-a{display:none;padding:16px 24px 20px;font-size:14px;color:var(--text2);line-height:1.9;background:var(--bg);border-top:1px solid var(--border)}
 .faq-item.open .faq-a{display:block}
+.faq-warn{display:block;margin:12px 0 14px;padding:14px 16px;background:#FEF2F2;border:3px solid #E3182D;border-radius:12px;color:#B3121F;font-size:17px;font-weight:900;line-height:1.5}
 .faq-img{display:block;max-width:100%;width:420px;height:auto;margin:10px 0 14px;border:1px solid var(--border);border-radius:10px;background:#fff}
 .faq-vid{display:block;width:100%;max-width:640px;aspect-ratio:16/9;margin:10px 0 14px;border-radius:12px;background:#000}
 .faq-golink{display:inline-block;margin:6px 8px 6px 0;padding:9px 14px;border-radius:12px;background:var(--blue-light);color:var(--blue);font-weight:700;font-size:14px;line-height:1.4;text-decoration:none;border:1px solid #cfe6f6}
@@ -165,7 +166,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 }
 </style>
 <style id="nav-lang-css">.nav-lang{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:#1B8AC4;border:1.5px solid #1B8AC4;border-radius:50px;padding:7px 13px;margin-right:8px;white-space:nowrap;background:#fff}.nav-lang:hover{background:#E8F4FC}.nav-links a{white-space:nowrap}@media(max-width:1180px){.nav-lang .t{display:none}.nav-lang{padding:6px 9px;font-size:15px}}@media(max-width:480px){.nav-lang{padding:4px 6px;margin-right:6px;font-size:14px}.nav-cta{padding:8px 13px!important;font-size:12.5px!important}}@media(max-width:400px){nav{padding-left:12px!important;padding-right:12px!important}.nav-logo-name{font-size:15px!important}.nav-logo{gap:6px!important}.nav-cta{padding:7px 9px!important;font-size:12px!important}.nav-lang,.lang-sel{margin-right:5px!important}.hamburger{margin-left:4px!important}}</style>
-<style>.lang-sel{display:inline-flex;align-items:center;gap:4px;margin-right:8px;border:1.5px solid #1B8AC4;border-radius:50px;padding:3px 4px 3px 10px;background:#fff;font-size:15px}.lang-sel select{border:none;background:transparent;font:700 13px sans-serif;color:#1B8AC4;padding:4px 2px;cursor:pointer;outline:none}.nav-links a{padding:8px 11px!important}@media(max-width:1280px){.nav-raccoon{display:none!important}}.lang-sel .cur{display:none}@media(max-width:480px){.nav-cta{display:none!important}.lang-sel{position:relative;margin-right:6px;padding:6px 10px;gap:5px}.lang-sel .cur{display:inline;white-space:nowrap;font:700 13px sans-serif;color:#1B8AC4}.lang-sel select{position:absolute;inset:0;width:100%;opacity:0}}@media(max-width:400px){.lang-sel{padding:5px 6px!important;gap:2px!important;font-size:13px}.lang-sel .cur{font-size:12px}}.lang-sw{position:fixed;right:10px;bottom:12px;z-index:400}.tr-note{max-width:1160px;margin:0 auto;padding:10px 6% 0;font-size:12.5px;color:#9CA3AF}</style><script src="../i18n/faq/faq_zh.js?v=0c3c8cbe"></script></head>
+<style>.lang-sel{display:inline-flex;align-items:center;gap:4px;margin-right:8px;border:1.5px solid #1B8AC4;border-radius:50px;padding:3px 4px 3px 10px;background:#fff;font-size:15px}.lang-sel select{border:none;background:transparent;font:700 13px sans-serif;color:#1B8AC4;padding:4px 2px;cursor:pointer;outline:none}.nav-links a{padding:8px 11px!important}@media(max-width:1280px){.nav-raccoon{display:none!important}}.lang-sel .cur{display:none}@media(max-width:480px){.nav-cta{display:none!important}.lang-sel{position:relative;margin-right:6px;padding:6px 10px;gap:5px}.lang-sel .cur{display:inline;white-space:nowrap;font:700 13px sans-serif;color:#1B8AC4}.lang-sel select{position:absolute;inset:0;width:100%;opacity:0}}@media(max-width:400px){.lang-sel{padding:5px 6px!important;gap:2px!important;font-size:13px}.lang-sel .cur{font-size:12px}}.lang-sw{position:fixed;right:10px;bottom:12px;z-index:400}.tr-note{max-width:1160px;margin:0 auto;padding:10px 6% 0;font-size:12.5px;color:#9CA3AF}</style><script src="../i18n/faq/faq_zh.js?v=2b0bf539"></script></head>
 <body>
 <!-- NAV -->
 <nav>
@@ -240,8 +241,11 @@ function hl(text,terms){
 function renderAnswer(text,terms){
   // [[img:이미지]] 큰 그림, [[ico:이미지]] 글 속 작은 그림, [[btn:이미지|https://주소|설명]] 누르면 사이트로 가는 그림 버튼
   // [[vid:videos/이름.mp4]] 사용방법 동영상 (누를 때만 불러옴, 미리보기 그림은 같은 이름의 .jpg)
-  var re=/(\[\[vid:videos\/[A-Za-z0-9_\-]+\.mp4\]\]|\[\[(?:img|ico|sm):images\/[A-Za-z0-9_\-\/\.]+\]\]|\[\[btn:images\/[A-Za-z0-9_\-\/\.]+\|https:\/\/[A-Za-z0-9.\-]+\/[A-Za-z0-9_\-\/\.?=&%#]*\|[^\]|]+\]\]|\[\[go:[A-Za-z0-9_\-]+\.html(?:#[A-Za-z0-9_\-]+)?\|[^\]|]+\]\])/;
+  // [[warn:문구]] 크게 보이는 빨간 경고 상자
+  var re=/(\[\[warn:[^\]]+\]\]|\[\[vid:videos\/[A-Za-z0-9_\-]+\.mp4\]\]|\[\[(?:img|ico|sm):images\/[A-Za-z0-9_\-\/\.]+\]\]|\[\[btn:images\/[A-Za-z0-9_\-\/\.]+\|https:\/\/[A-Za-z0-9.\-]+\/[A-Za-z0-9_\-\/\.?=&%#]*\|[^\]|]+\]\]|\[\[go:[A-Za-z0-9_\-]+\.html(?:#[A-Za-z0-9_\-]+)?\|[^\]|]+\]\])/;
   return String(text||'').split(re).map(function(part){
+    var w=/^\[\[warn:([^\]]+)\]\]$/.exec(part);
+    if(w) return '<span class="faq-warn">'+hl(w[1],terms)+'</span>';
     var m=/^\[\[(img|ico|sm):(images\/[A-Za-z0-9_\-\/\.]+)\]\]$/.exec(part);
     if(m&&m[1]==='img') return '<img class="faq-img" src="'+ROOT+m[2]+'" alt="'+T('설명 그림')+'" loading="lazy">';
     if(m&&m[1]==='sm') return '<img class="faq-img faq-img-sm" src="'+ROOT+m[2]+'" alt="'+T('설명 그림')+'" loading="lazy">';

@@ -101,7 +101,7 @@ def build():
                 print('★', l, i, '질문 또는 답 빠짐'); continue
             ko = faqs[i]
             # [[...]] 표시(그림·링크 주소)가 한국어와 같은지 확인
-            marks = lambda s: [re.sub(r'\|[^|\]]*\]\]$', ']]', x) for x in re.findall(r'\[\[[^\]]+\]\]', s)]
+            marks = lambda s: [re.sub(r'^\[\[warn:.*', '[[warn]]', re.sub(r'\|[^|\]]*\]\]$', ']]', x)) for x in re.findall(r'\[\[[^\]]+\]\]', s)]   # [[warn:글]]·[[go:..|글]] 의 글은 번역됨
             if marks(t['a']) != marks(ko['answer'] or ''):
                 print('★', l, i, '[[표시]] 다름', marks(t['a']), marks(ko['answer'] or ''))
             items[i] = {'h': fhash((ko['question'] or '') + '\n' + (ko['answer'] or '')), 'q': t['q'], 'a': t['a']}
