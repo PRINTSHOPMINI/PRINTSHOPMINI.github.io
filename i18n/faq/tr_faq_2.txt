@@ -686,11 +686,14 @@ Một tệp phải có từ 2 trang trở lên mới in 2 mặt được.
 #q en: Several files show up in the printer machine's list. Which one should I choose?
 #a en
 👀 Choose and pay only for your own documents.
+- Touch a document in the list and it turns blue. You can choose several.
+- When you're done, press [시작] (Start). Only the ones you chose are paid for and printed together.
 - Before paying, match the time and file name to make sure the documents in the list are yours.
 - Documents printed because you paid without checking can't be refunded.
 - If you used the certificate printer ([증명서전용PIN9999]), look up 9999 and find your document.
 
-⚠️ Be careful with [모두선택] (Select all)!
+⚠️ Be careful with [모두인쇄] (Print all) at the top right!
+If you press it, every file in the list is paid for and printed at once. Press it only when everything in the list is yours.
 If you pay for someone else's file along with yours without noticing, there is no refund.
 
 📖 Tap here for the picture guide.
@@ -698,11 +701,14 @@ If you pay for someone else's file along with yours without noticing, there is n
 #q zh: 复合机列表里出现了好几个文件。该选哪个？
 #a zh
 👀 只选自己的文件付款。
+- 点一下列表里的文件，就会变成蓝色。可以选好几个。
+- 选好后按［시작］（开始）。只有选中的会一起付款并打印。
 - 付款前，请核对时间和文件名，确认列表里的文件是不是自己的。
 - 没确认就付款打印出来的文件，不属于退款对象。
 - 用了证书专用打印机（［증명서전용PIN9999］）的话，用 9999 查询后找自己的文件。
 
-⚠️ 小心［모두선택］（全选）！
+⚠️ 小心右上角的［모두인쇄］（全部打印）！
+按了的话，列表里的文件会全部一起付款并打印。只有列表全是自己的文件时才按。
 不知道里面混着别人的文件，一起付了款的，也不予退款。
 
 📖 点这里查看详细的图片说明。
@@ -710,11 +716,14 @@ If you pay for someone else's file along with yours without noticing, there is n
 #q vi: Danh sách trên máy in đa năng hiện nhiều tệp. Tôi nên chọn cái nào?
 #a vi
 👀 Chỉ chọn và thanh toán tài liệu của bạn.
+- Chạm vào tài liệu trong danh sách, nó sẽ chuyển sang màu xanh. Có thể chọn nhiều cái.
+- Chọn xong, bấm [시작] (Bắt đầu). Chỉ những cái đã chọn được thanh toán và in cùng lúc.
 - Trước khi thanh toán, hãy đối chiếu thời gian và tên tệp để chắc chắn tài liệu trong danh sách là của bạn.
 - Tài liệu in ra do thanh toán mà không kiểm tra thì không được hoàn tiền.
 - Nếu đã dùng máy in chứng chỉ ([증명서전용PIN9999]), hãy tìm bằng 9999 rồi chọn tài liệu của bạn.
 
-⚠️ Cẩn thận với [모두선택] (Chọn tất cả)!
+⚠️ Cẩn thận với [모두인쇄] (In tất cả) ở góc trên bên phải!
+Nếu bấm, mọi tệp trong danh sách sẽ được thanh toán và in cùng lúc. Chỉ bấm khi tất cả trong danh sách đều là của bạn.
 Nếu không biết có tệp của người khác lẫn vào mà thanh toán luôn, cũng không được hoàn tiền.
 
 📖 Bấm vào đây để xem hướng dẫn bằng hình.

@@ -1262,7 +1262,7 @@ vi: M3
 en: Touch the list and [시작] (Start)
 zh: 点列表后按［시작］（开始）
 vi: Chạm vào danh sách rồi bấm [시작] (Bắt đầu)
-@@3dafd06efe
+@@3dafd06efe-old
 en: <b>Touch your document</b> in the list, then touch the <b>[시작] (Start)</b> button.<br/>If there are several, press <b>[모두 인쇄] (Print all)</b> at the top, or <b>touch only the ones you want</b> and press <b>[시작] (Start)</b>.
 zh: <b>点一下自己的文件</b>，再点<b>［시작］（开始）</b>按钮。<br/>有好几个的话，按上方的<b>［모두 인쇄］（全部打印）</b>，或者<b>只点要打印的几个</b>后按<b>［시작］（开始）</b>。
 vi: <b>Chạm vào tài liệu của bạn</b> trong danh sách, rồi chạm nút <b>[시작] (Bắt đầu)</b>.<br/>Nếu có nhiều tài liệu, bấm <b>[모두 인쇄] (In tất cả)</b> ở phía trên, hoặc <b>chỉ chạm những cái cần in</b> rồi bấm <b>[시작] (Bắt đầu)</b>.

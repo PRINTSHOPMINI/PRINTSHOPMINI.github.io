@@ -111,3 +111,13 @@ vi: <span class="x">!</span>Tuyệt đối không photo hộ chiếu bằng [신
 en: The [신분증복사] (ID copy) tab has a <b>Passport</b> button, but if you press it, <b>only part of the passport gets copied.</b><br/><br/>❌ Don't copy passports with <b>[신분증복사]</b>.<br/>✅ Always copy passports with <b>[기본복사]</b> (Basic copy). Bankbooks also use <b>[기본복사]</b>.
 zh: ［신분증복사］（身份证复印）里有<b>护照</b>按钮，但按了它<b>只会复印护照的一部分。</b><br/><br/>❌ 护照不要用<b>［신분증복사］</b>。<br/>✅ 护照一定要用<b>［기본복사］</b>（基本复印）。存折也用<b>［기본복사］</b>。
 vi: Trong [신분증복사] (Photo thẻ) có nút <b>Hộ chiếu</b>, nhưng nếu bấm thì <b>chỉ một phần hộ chiếu được photo.</b><br/><br/>❌ Đừng photo hộ chiếu bằng <b>[신분증복사]</b>.<br/>✅ Hộ chiếu phải photo bằng <b>[기본복사]</b> (Photo cơ bản). Sổ ngân hàng cũng dùng <b>[기본복사]</b>.
+
+# 2026-10-27 사용자 확인: 목록 터치 → 파란색, 여러 개 골라 [시작] → 한꺼번에 결제·인쇄 / 오른쪽 위 [모두인쇄] = 목록 전부
+@@ecd3821465
+en: ⚠️ Other customers may have used 9999 too, so <b>several documents</b> may be in the list. <b>Check the time and name</b> and pay only for yours. <b>Don't press [모두인쇄] (Print all).</b> Everything in the list would be paid for.
+zh: ⚠️ 其他顾客也可能用了 9999，所以列表里可能有<b>好几个文件</b>。<b>请一定确认时间和名字</b>，只为自己的付款。<b>不要按［모두인쇄］（全部打印）。</b>列表里的会全部被付款。
+vi: ⚠️ Khách khác cũng có thể đã dùng 9999 nên danh sách có thể có <b>nhiều tài liệu</b>. <b>Hãy kiểm tra thời gian và tên</b>, chỉ thanh toán cho tài liệu của bạn. <b>Đừng bấm [모두인쇄] (In tất cả).</b> Cả danh sách sẽ bị thanh toán.
+@@78bdb7528d
+en: <b>Touch your document</b> in the list and it turns <b>blue</b>. Then touch <b>[시작] (Start)</b>.<br/>If there are several, <b>touch only the ones to print</b> so they turn blue, then press <b>[시작]</b>. Only the ones you chose are <b>paid for and printed together</b>.<br/>Press <b>[모두인쇄] (Print all)</b> at the top right <b>only when everything in the list is yours</b>. The whole list is paid for and printed at once.
+zh: <b>点一下自己的文件</b>，就会变成<b>蓝色</b>。然后点<b>［시작］（开始）</b>。<br/>有好几个的话，<b>只点要打印的</b>，变成蓝色后按<b>［시작］</b>。只有选中的会<b>一起付款并打印</b>。<br/><b>只有列表全是自己的文件时</b>，才按右上角的<b>［모두인쇄］（全部打印）</b>。整个列表会一起付款并打印。
+vi: <b>Chạm vào tài liệu của bạn</b> trong danh sách, nó sẽ chuyển <b>màu xanh</b>. Rồi chạm <b>[시작] (Bắt đầu)</b>.<br/>Nếu có nhiều tài liệu, <b>chỉ chạm những cái cần in</b> cho chuyển màu xanh, rồi bấm <b>[시작]</b>. Chỉ những cái đã chọn được <b>thanh toán và in cùng lúc</b>.<br/><b>Chỉ khi tất cả trong danh sách đều là của bạn</b>, mới bấm <b>[모두인쇄] (In tất cả)</b> ở góc trên bên phải. Cả danh sách sẽ được thanh toán và in cùng lúc.

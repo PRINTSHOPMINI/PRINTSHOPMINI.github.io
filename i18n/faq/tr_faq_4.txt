@@ -266,7 +266,7 @@ Nếu thanh toán bằng Apple Pay, hãy xem trong ứng dụng thẻ Hyundai nh
 
 📌 You didn't check before paying
 - You paid without looking at the payment info screen (B&W/color, two-sided/one-sided, paper size, pages, price)
-- You paid without checking it was your document, or paid for other people's files too with [모두선택] (Select all)
+- You paid without checking it was your document, or paid for other people's files too with [모두인쇄] (Print all)
 
 📌 You didn't read the guide or check the preview
 - It went wrong because you worked without reading the guide
@@ -347,7 +347,7 @@ Nếu thanh toán bằng Apple Pay, hãy xem trong ứng dụng thẻ Hyundai nh
 
 📌 付款前没确认的
 - 没看收费信息窗口（黑白/彩色、双面/单面、纸张大小、页数、金额）就付款的
-- 没确认是不是自己的文件就付款的，用［모두선택］（全选）把别人的文件也一起付款的
+- 没确认是不是自己的文件就付款的，用［모두인쇄］（全部打印）把别人的文件也一起付款的
 
 📌 没看使用方法或预览的
 - 没看说明的使用方法就操作，结果出错的
@@ -428,7 +428,7 @@ Nếu thanh toán bằng Apple Pay, hãy xem trong ứng dụng thẻ Hyundai nh
 
 📌 Không kiểm tra trước khi thanh toán
 - Thanh toán mà không xem màn hình thông tin thanh toán (đen trắng/màu, 2 mặt/1 mặt, khổ giấy, số trang, số tiền)
-- Thanh toán mà không kiểm tra có phải tài liệu của mình, hoặc dùng [모두선택] (Chọn tất cả) thanh toán luôn cả tệp của người khác
+- Thanh toán mà không kiểm tra có phải tài liệu của mình, hoặc dùng [모두인쇄] (In tất cả) thanh toán luôn cả tệp của người khác
 
 📌 Không xem hướng dẫn hoặc bản xem trước
 - Làm mà không xem hướng dẫn nên bị sai
