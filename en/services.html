@@ -69,7 +69,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .svc-guide-link{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;background:var(--blue-light);border-radius:12px;padding:16px 22px;margin-bottom:28px;font-size:14px;color:var(--text2);font-weight:500}
 .svc-guide-link a{font-weight:900;color:var(--blue);white-space:nowrap}
 .svc-guide-link a:hover{text-decoration:underline}
-.svc-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px}
+.svc-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:24px}.svc-list>*,.price-grid>*{min-width:0}
 .svc-item{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:32px 28px;display:flex;flex-direction:column;scroll-margin-top:140px;transition:border-color .2s,box-shadow .2s}
 .svc-item:hover{border-color:var(--blue);box-shadow:0 8px 32px rgba(27,138,196,.1)}
 .svc-item .svc-badge{margin-bottom:16px}
@@ -98,12 +98,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .price-r{display:flex;justify-content:space-between;align-items:center;font-size:13px;padding:6px 0;border-bottom:1px dashed var(--border)}
 .price-r:last-child{border-bottom:none}
 .price-r-label{color:var(--text2)}
-.price-r-val{font-weight:700;color:var(--blue)}
+.price-r-val{font-weight:700;color:var(--blue);margin-left:auto;text-align:right}.price-r{gap:8px;flex-wrap:wrap}
 
 /* FOOTER */
 footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 .ft-inner{max-width:1160px;margin:0 auto}
 .ft-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+@media(max-width:600px){.ft-grid{grid-template-columns:1fr 1fr;gap:24px}.ft-grid>.ft-col:first-child{grid-column:1/-1}}
 .ft-brand-name{font-size:17px;font-weight:900;color:white;margin-bottom:12px}
 .ft-col p{font-size:13px;line-height:1.9}
 .ft-col h4{font-size:14px;font-weight:700;color:white;margin-bottom:14px}

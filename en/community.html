@@ -60,7 +60,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 
 /* SEARCH */
 .search-bar{display:flex;gap:8px;margin-bottom:24px}
-.search-input{flex:1;border:1.5px solid var(--border);border-radius:10px;padding:10px 16px;font-size:14px;font-family:'Noto Sans KR',sans-serif;outline:none;transition:border-color .2s}
+.search-input{flex:1;min-width:0;border:1.5px solid var(--border);border-radius:10px;padding:10px 16px;font-size:14px;font-family:'Noto Sans KR',sans-serif;outline:none;transition:border-color .2s}
 .search-input:focus{border-color:var(--blue)}
 .search-btn{background:var(--blue);color:white;border:none;border-radius:10px;padding:10px 20px;font-size:14px;font-weight:700;cursor:pointer;font-family:'Noto Sans KR',sans-serif;transition:background .2s}
 .search-btn:hover{background:var(--blue-hover)}
@@ -179,6 +179,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 .ft-inner{max-width:1160px;margin:0 auto}
 .ft-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+@media(max-width:600px){.ft-grid{grid-template-columns:1fr 1fr;gap:24px}.ft-grid>.ft-col:first-child{grid-column:1/-1}}
 .ft-brand-name{font-size:17px;font-weight:900;color:white;margin-bottom:12px}
 .ft-col p{font-size:13px;line-height:1.9}
 .ft-col h4{font-size:14px;font-weight:700;color:white;margin-bottom:14px}
