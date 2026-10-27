@@ -238,7 +238,7 @@ Nếu thanh toán bằng Apple Pay, hãy xem trong ứng dụng thẻ Hyundai nh
 #a en
 📝 Please know this first
 - For a refund you must file a [환불접수] (Refund request). Without filing, there is no refund.
-- ⏰ You must file within 7 days of the problem. After 7 days, we can't process the refund.
+- ⏰ You must file within 5 days of the problem (Saturdays, Sundays and holidays count). We only check and process requests filed within 5 days. After 5 days, we can't process the refund.
 - Filing doesn't mean an instant refund. A manager checks it, processes only eligible cases, and tells you the result separately at the contact you gave.
 - Leave the problem print in the store when you file. If you don't leave it, there is no refund.
 [[btn:images/faq/btn-refund2.png|https://fax.printnuri.com/refund|Go to refund request]]
@@ -260,7 +260,7 @@ Nếu thanh toán bằng Apple Pay, hãy xem trong ứng dụng thẻ Hyundai nh
 ❌ Not refunded
 
 📌 You didn't file
-- You didn't file, or 7 days have passed
+- You didn't file, or 5 days have passed
 - You didn't leave the print
 - You left the store without contacting us
 
@@ -319,7 +319,7 @@ Nếu thanh toán bằng Apple Pay, hãy xem trong ứng dụng thẻ Hyundai nh
 #a zh
 📝 请先了解
 - 退款必须申请［환불접수］（退款申请）。不申请的话不予退款。
-- ⏰ 必须在出问题当天起 7 天内申请。超过 7 天无法退款。
+- ⏰ 必须在出问题当天起 5 天内（含周六、周日和公休日）申请。只有 5 天内申请的才会确认后处理。超过 5 天无法退款。
 - 申请了也不是马上退款。管理员确认后只处理退款对象，结果另外通过申请时的联系方式通知您。
 - 有问题的打印件请留在店里再申请。不留下的话不予退款。
 [[btn:images/faq/btn-refund2.png|https://fax.printnuri.com/refund|去申请退款]]
@@ -341,7 +341,7 @@ Nếu thanh toán bằng Apple Pay, hãy xem trong ứng dụng thẻ Hyundai nh
 ❌ 不能退款的情况
 
 📌 没有申请的
-- 没有申请或超过 7 天的
+- 没有申请或超过 5 天的
 - 没留下打印件的
 - 不联系就离开门店的
 
@@ -400,7 +400,7 @@ Nếu thanh toán bằng Apple Pay, hãy xem trong ứng dụng thẻ Hyundai nh
 #a vi
 📝 Hãy biết trước điều này
 - Muốn hoàn tiền phải đăng ký [환불접수] (Đăng ký hoàn tiền). Không đăng ký thì không được hoàn tiền.
-- ⏰ Phải đăng ký trong vòng 7 ngày kể từ ngày xảy ra sự cố. Quá 7 ngày sẽ không được hoàn tiền.
+- ⏰ Phải đăng ký trong vòng 5 ngày kể từ ngày xảy ra sự cố (tính cả thứ Bảy, Chủ nhật và ngày lễ). Chỉ những đăng ký trong 5 ngày mới được kiểm tra và xử lý. Quá 5 ngày sẽ không được hoàn tiền.
 - Đăng ký không có nghĩa là được hoàn tiền ngay. Quản lý kiểm tra, chỉ xử lý trường hợp đủ điều kiện, và báo kết quả riêng qua số liên lạc đã đăng ký.
 - Hãy để lại bản in bị lỗi ở cửa hàng khi đăng ký. Không để lại thì không được hoàn tiền.
 [[btn:images/faq/btn-refund2.png|https://fax.printnuri.com/refund|Đi đăng ký hoàn tiền]]
@@ -422,7 +422,7 @@ Nếu thanh toán bằng Apple Pay, hãy xem trong ứng dụng thẻ Hyundai nh
 ❌ Trường hợp không được hoàn tiền
 
 📌 Không đăng ký
-- Không đăng ký hoặc đã quá 7 ngày
+- Không đăng ký hoặc đã quá 5 ngày
 - Không để lại bản in
 - Rời cửa hàng mà không liên hệ
 
@@ -734,7 +734,7 @@ Hãy giúp giữ cửa hàng sạch sẽ và an toàn. 🙏
 #a en
 📝 For a refund you must file a 'refund request'!
 Without filing, there is no refund.
-⏰ You must file a refund within 7 days of the problem. If you don't file in time, we can't process the refund.
+⏰ You must file a refund within 5 days of the problem (Saturdays, Sundays and holidays count). We only check and process requests filed within 5 days. After that, we can't process the refund.
 👇 Tap the picture below to open the refund request site.
 [[btn:images/faq/btn-refund2.png|https://fax.printnuri.com/refund|Go to refund request]]
 💻 There is also a [환불신청] (Refund request) icon on the store PC desktop. You can file there too.
@@ -771,7 +771,7 @@ If you pay without checking and it prints, there is no refund.
 #a zh
 📝 退款一定要申请“退款申请”！
 不申请的话不予退款。
-⏰ 必须在出问题当天起 7 天内申请退款。不在期限内申请的，无法退款。
+⏰ 必须在出问题当天起 5 天内（含周六、周日和公休日）申请退款。只有 5 天内申请的才会确认后处理。超过期限的，无法退款。
 👇 点下面的图片会打开退款申请网站。
 [[btn:images/faq/btn-refund2.png|https://fax.printnuri.com/refund|去申请退款]]
 💻 店内电脑桌面上也有［환불신청］（申请退款）图标，也可以在那里申请。
@@ -808,7 +808,7 @@ If you pay without checking and it prints, there is no refund.
 #a vi
 📝 Muốn hoàn tiền nhất định phải 'đăng ký hoàn tiền'!
 Không đăng ký thì không được hoàn tiền.
-⏰ Phải đăng ký hoàn tiền trong vòng 7 ngày kể từ ngày xảy ra sự cố. Nếu không đăng ký đúng hạn, sẽ không được hoàn tiền.
+⏰ Phải đăng ký hoàn tiền trong vòng 5 ngày kể từ ngày xảy ra sự cố (tính cả thứ Bảy, Chủ nhật và ngày lễ). Chỉ những đăng ký trong 5 ngày mới được kiểm tra và xử lý. Quá hạn sẽ không được hoàn tiền.
 👇 Bấm vào hình dưới đây sẽ mở trang đăng ký hoàn tiền.
 [[btn:images/faq/btn-refund2.png|https://fax.printnuri.com/refund|Đi đăng ký hoàn tiền]]
 💻 Trên màn hình nền máy tính cửa hàng cũng có biểu tượng [환불신청] (Đăng ký hoàn tiền). Có thể đăng ký ở đó.
@@ -846,7 +846,7 @@ Nếu thanh toán mà không kiểm tra rồi in ra thì không được hoàn t
 #q en: When and how are refunds processed?
 #a en
 📝 Refunds are processed after you file a refund request and a manager checks it.
-⏰ You must file a refund within 7 days of the problem. If you don't file in time, we can't process the refund.
+⏰ You must file a refund within 5 days of the problem (Saturdays, Sundays and holidays count). We only check and process requests filed within 5 days. After that, we can't process the refund.
 
 1. File it with the [환불신청] (Refund request) icon on the store PC desktop or on the refund request site.
 2. Write the last digits of your card, the amount, the time and the problem.
@@ -866,7 +866,7 @@ Nếu thanh toán mà không kiểm tra rồi in ra thì không được hoàn t
 #q zh: 退款什么时候、怎么处理？
 #a zh
 📝 退款是在您申请退款后，由管理员确认后处理。
-⏰ 必须在出问题当天起 7 天内申请退款。不在期限内申请的，无法退款。
+⏰ 必须在出问题当天起 5 天内（含周六、周日和公休日）申请退款。只有 5 天内申请的才会确认后处理。超过期限的，无法退款。
 
 1. 在店内电脑桌面上的［환불신청］（申请退款）图标或退款申请网站上申请。
 2. 填写卡号后几位、金额、时间、问题内容。
@@ -886,7 +886,7 @@ Nếu thanh toán mà không kiểm tra rồi in ra thì không được hoàn t
 #q vi: Hoàn tiền được xử lý khi nào và như thế nào?
 #a vi
 📝 Hoàn tiền được xử lý sau khi bạn đăng ký hoàn tiền và quản lý kiểm tra.
-⏰ Phải đăng ký hoàn tiền trong vòng 7 ngày kể từ ngày xảy ra sự cố. Nếu không đăng ký đúng hạn, sẽ không được hoàn tiền.
+⏰ Phải đăng ký hoàn tiền trong vòng 5 ngày kể từ ngày xảy ra sự cố (tính cả thứ Bảy, Chủ nhật và ngày lễ). Chỉ những đăng ký trong 5 ngày mới được kiểm tra và xử lý. Quá hạn sẽ không được hoàn tiền.
 
 1. Đăng ký bằng biểu tượng [환불신청] (Đăng ký hoàn tiền) trên màn hình nền máy tính cửa hàng hoặc trên trang đăng ký hoàn tiền.
 2. Ghi các số cuối của thẻ, số tiền, thời gian và sự cố.
@@ -1037,7 +1037,7 @@ This happens when the original is put in the wrong way.
 - A manager checks it and tells you separately at the contact you gave whether you'll get a refund.
 - If the customer put the original in wrong, we can't refund. (Because the original has already become data and was sent to the fax server)
 
-⏰ You must file a refund within 7 days of the problem. If you don't file in time, we can't process the refund.
+⏰ You must file a refund within 5 days of the problem (Saturdays, Sundays and holidays count). We only check and process requests filed within 5 days. After that, we can't process the refund.
 
 👇 File a refund with the picture below.
 [[btn:images/faq/btn-refund2.png|https://fax.printnuri.com/refund|Go to refund request]]
@@ -1079,7 +1079,7 @@ This happens when the original is put in the wrong way.
 - 管理员确认后，会通过申请时的联系方式另外通知是否退款。
 - 顾客把原件放错的，无法退款。（因为原件已经变成数据，发送到传真服务器了）
 
-⏰ 必须在出问题当天起 7 天内申请退款。不在期限内申请的，无法退款。
+⏰ 必须在出问题当天起 5 天内（含周六、周日和公休日）申请退款。只有 5 天内申请的才会确认后处理。超过期限的，无法退款。
 
 👇 退款请点下面的图片申请。
 [[btn:images/faq/btn-refund2.png|https://fax.printnuri.com/refund|去申请退款]]
@@ -1121,7 +1121,7 @@ Có thể thất bại do sự cố kết nối tạm thời.
 - Quản lý kiểm tra rồi báo riêng có được hoàn tiền hay không qua số liên lạc đã đăng ký.
 - Nếu khách đặt sai bản gốc, chúng tôi không thể hoàn tiền. (Vì bản gốc đã thành dữ liệu và đã gửi xong đến máy chủ fax)
 
-⏰ Phải đăng ký hoàn tiền trong vòng 7 ngày kể từ ngày xảy ra sự cố. Nếu không đăng ký đúng hạn, sẽ không được hoàn tiền.
+⏰ Phải đăng ký hoàn tiền trong vòng 5 ngày kể từ ngày xảy ra sự cố (tính cả thứ Bảy, Chủ nhật và ngày lễ). Chỉ những đăng ký trong 5 ngày mới được kiểm tra và xử lý. Quá hạn sẽ không được hoàn tiền.
 
 👇 Hãy đăng ký hoàn tiền bằng hình bên dưới.
 [[btn:images/faq/btn-refund2.png|https://fax.printnuri.com/refund|Đi đăng ký hoàn tiền]]
@@ -1271,7 +1271,7 @@ This happens because the PDF file has a page with a different size.
 1. File a refund with the [환불신청] (Refund request) icon on the PC desktop.
 2. For the payment amount, write what you actually paid.
 3. For the refund amount, calculate and write the price of the parts that didn't print.
-⏰ You must file within 7 days of the problem. If you didn't file, or filed after 7 days, there is no refund.
+⏰ You must file within 5 days of the problem (Saturdays, Sundays and holidays count). We only check and process requests filed within 5 days. If you didn't file, or filed after 5 days, there is no refund.
 ℹ️ Filing doesn't mean an instant refund. A manager checks it, processes only eligible cases, and tells you the result at the contact you gave.
 
 📖 Tap here for the PDF print settings pictures.
@@ -1300,7 +1300,7 @@ This happens because the PDF file has a page with a different size.
 1. 用电脑桌面上的［환불신청］（申请退款）图标申请退款。
 2. 付款金额填写实际付款的金额。
 3. 退款金额计算没打印出来部分的金额后填写。
-⏰ 必须在出问题当天起 7 天内申请。没有申请或超过 7 天申请的，不予退款。
+⏰ 必须在出问题当天起 5 天内（含周六、周日和公休日）申请。只有 5 天内申请的才会确认后处理。没有申请或超过 5 天申请的，不予退款。
 ℹ️ 申请了也不是马上退款。管理员确认后只处理符合条件的，结果会通过申请时填写的联系方式通知您。
 
 📖 PDF 打印设置的图片请点这里。
@@ -1329,7 +1329,7 @@ This happens because the PDF file has a page with a different size.
 1. Đăng ký hoàn tiền bằng biểu tượng [환불신청] (Đăng ký hoàn tiền) trên màn hình nền máy tính.
 2. Ở số tiền thanh toán, ghi số tiền đã thực sự thanh toán.
 3. Ở số tiền hoàn, tính và ghi số tiền của phần không in ra.
-⏰ Phải đăng ký trong vòng 7 ngày kể từ ngày xảy ra sự cố. Nếu không đăng ký hoặc đăng ký sau 7 ngày, sẽ không được hoàn tiền.
+⏰ Phải đăng ký trong vòng 5 ngày kể từ ngày xảy ra sự cố (tính cả thứ Bảy, Chủ nhật và ngày lễ). Chỉ những đăng ký trong 5 ngày mới được kiểm tra và xử lý. Nếu không đăng ký hoặc đăng ký sau 5 ngày, sẽ không được hoàn tiền.
 ℹ️ Đăng ký không có nghĩa là được hoàn tiền ngay. Quản lý kiểm tra, chỉ xử lý trường hợp đủ điều kiện, và báo kết quả qua số liên lạc đã đăng ký.
 
 📖 Bấm vào đây để xem hình cài đặt in PDF.

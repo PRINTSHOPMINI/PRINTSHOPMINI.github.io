@@ -13,7 +13,7 @@
 We'll contact you after checking.
 
 🙋 If you contacted us but got no answer, file a refund with the [환불신청] (Refund request) icon on the PC desktop and come back another day.
-⏰ You must file a refund within 7 days of the problem. If you don't file in time, we can't process the refund.
+⏰ You must file a refund within 5 days of the problem (Saturdays, Sundays and holidays count). We only check and process requests filed within 5 days. After that, we can't process the refund.
 
 ⚠️ Even if nothing prints after you pay, NEVER pay again!
 Big files can take more than 10 minutes to print. If your first print comes out while you are paying again, there is no refund. Always contact us first.
@@ -31,7 +31,7 @@ Big files can take more than 10 minutes to print. If your first print comes out 
 确认后会联系您。
 
 🙋 联系了却没有得到回复的话，请用电脑桌面上的［환불신청］（申请退款）图标申请退款，改天再来使用。
-⏰ 必须在出问题当天起 7 天内申请退款。不在期限内申请的，无法退款。
+⏰ 必须在出问题当天起 5 天内（含周六、周日和公休日）申请退款。只有 5 天内申请的才会确认后处理。超过期限的，无法退款。
 
 ⚠️ 付款后即使没有打印出来，也绝对不要再付一次款！
 文件大的话，可能要 10 分钟以上才打印出来。再次付款期间，先付款的打印件出来了的话，不予退款。请一定先联系我们。
@@ -49,7 +49,7 @@ Big files can take more than 10 minutes to print. If your first print comes out 
 Chúng tôi sẽ liên hệ sau khi kiểm tra.
 
 🙋 Nếu đã liên hệ mà chưa có trả lời, hãy đăng ký hoàn tiền bằng biểu tượng [환불신청] (Đăng ký hoàn tiền) trên màn hình nền máy tính và quay lại vào ngày khác.
-⏰ Phải đăng ký hoàn tiền trong vòng 7 ngày kể từ ngày xảy ra sự cố. Nếu không đăng ký đúng hạn, sẽ không được hoàn tiền.
+⏰ Phải đăng ký hoàn tiền trong vòng 5 ngày kể từ ngày xảy ra sự cố (tính cả thứ Bảy, Chủ nhật và ngày lễ). Chỉ những đăng ký trong 5 ngày mới được kiểm tra và xử lý. Quá hạn sẽ không được hoàn tiền.
 
 ⚠️ Dù thanh toán xong mà không in ra, tuyệt đối đừng thanh toán lại!
 Tệp lớn có thể mất hơn 10 phút mới in ra. Nếu trong lúc bạn thanh toán lại mà bản in trước đó in ra, sẽ không được hoàn tiền. Nhất định phải liên hệ trước.
@@ -78,7 +78,7 @@ A manager will contact you after checking.
 ⏰ Your print may come out after 10 minutes. Even if you're busy, please wait in the store for 10 minutes.
 
 📝 To file a refund: the [환불신청] (Refund request) icon on the store PC desktop
-⏰ You must file a refund within 7 days of the problem. If you don't file in time, we can't process the refund.
+⏰ You must file a refund within 5 days of the problem (Saturdays, Sundays and holidays count). We only check and process requests filed within 5 days. After that, we can't process the refund.
 
 👀 How to tell if it's printing
 - If there is a printer icon at the top of the machine screen, it's getting ready to print.
@@ -109,7 +109,7 @@ A manager will contact you after checking.
 ⏰ 过了 10 分钟后也可能打印出来。即使很忙，也请在店里等满 10 分钟。
 
 📝 申请退款：店内电脑桌面上的［환불신청］（申请退款）图标
-⏰ 必须在出问题当天起 7 天内申请退款。不在期限内申请的，无法退款。
+⏰ 必须在出问题当天起 5 天内（含周六、周日和公休日）申请退款。只有 5 天内申请的才会确认后处理。超过期限的，无法退款。
 
 👀 确认是否正在打印的方法
 - 复合机屏幕上方有打印机图标的话，是在准备打印。
@@ -140,7 +140,7 @@ Quản lý sẽ liên hệ sau khi kiểm tra.
 ⏰ Bản in có thể ra sau 10 phút. Dù bận, hãy chờ trong cửa hàng đủ 10 phút.
 
 📝 Đăng ký hoàn tiền: biểu tượng [환불신청] (Đăng ký hoàn tiền) trên màn hình nền máy tính cửa hàng
-⏰ Phải đăng ký hoàn tiền trong vòng 7 ngày kể từ ngày xảy ra sự cố. Nếu không đăng ký đúng hạn, sẽ không được hoàn tiền.
+⏰ Phải đăng ký hoàn tiền trong vòng 5 ngày kể từ ngày xảy ra sự cố (tính cả thứ Bảy, Chủ nhật và ngày lễ). Chỉ những đăng ký trong 5 ngày mới được kiểm tra và xử lý. Quá hạn sẽ không được hoàn tiền.
 
 👀 Cách biết máy có đang in không
 - Nếu phía trên màn hình máy có biểu tượng máy in, máy đang chuẩn bị in.
@@ -207,7 +207,7 @@ The toner hasn't set yet and can get on your hands. There are no tissues in the 
 3. For B4 or A3: first send the details on Naver TalkTalk, and wait for the manager's answer about whether there is a fix.
    If the manager answers that there is no fix, we're sorry, but please file a refund and come back the next day.
 
-⏰ You must file a refund within 7 days of the problem. If you don't file in time, we can't process the refund.
+⏰ You must file a refund within 5 days of the problem (Saturdays, Sundays and holidays count). We only check and process requests filed within 5 days. After that, we can't process the refund.
 #q zh: 打印或复印时卡纸了。
 #a zh
 ⛔ 不要把卡住的纸拉出来！
@@ -218,7 +218,7 @@ The toner hasn't set yet and can get on your hands. There are no tissues in the 
 3. B4、A3 的话：请先通过 Naver TalkTalk 发送情况，等待管理员回复是否有解决办法。
    如果管理员回复没有解决办法，很抱歉，请申请退款，第二天再来使用。
 
-⏰ 必须在出问题当天起 7 天内申请退款。不在期限内申请的，无法退款。
+⏰ 必须在出问题当天起 5 天内（含周六、周日和公休日）申请退款。只有 5 天内申请的才会确认后处理。超过期限的，无法退款。
 #q vi: Bị kẹt giấy khi đang in hoặc photo.
 #a vi
 ⛔ Đừng kéo tờ giấy bị kẹt ra!
@@ -229,7 +229,7 @@ Mực chưa khô nên có thể dính vào tay. Cửa hàng không có khăn gi�
 3. Nếu là B4, A3: trước tiên hãy gửi nội dung qua Naver TalkTalk và chờ quản lý trả lời có cách xử lý không.
    Nếu quản lý trả lời không có cách xử lý, rất xin lỗi, hãy đăng ký hoàn tiền và quay lại vào hôm sau.
 
-⏰ Phải đăng ký hoàn tiền trong vòng 7 ngày kể từ ngày xảy ra sự cố. Nếu không đăng ký đúng hạn, sẽ không được hoàn tiền.
+⏰ Phải đăng ký hoàn tiền trong vòng 5 ngày kể từ ngày xảy ra sự cố (tính cả thứ Bảy, Chủ nhật và ngày lễ). Chỉ những đăng ký trong 5 ngày mới được kiểm tra và xử lý. Quá hạn sẽ không được hoàn tiền.
 
 @@17
 #q en: I chose the Color printer, but it came out in black and white.
@@ -250,7 +250,7 @@ Mực chưa khô nên có thể dính vào tay. Cửa hàng không có khăn gi�
 💸 If you chose the Color printer and it came out black and white
 - We partly cancel the payment: the total minus the black-and-white price.
 - File a refund, and send a photo of the black-and-white print on Naver TalkTalk.
-- You must file a refund within 7 days of the problem. If you don't file in time, we can't process the refund.
+- You must file a refund within 5 days of the problem (Saturdays, Sundays and holidays count). We only check and process requests filed within 5 days. After that, we can't process the refund.
 - We won't process it if the file was edited or you send a different file.
 - If you don't agree to this and ask for a full refund, there is no refund.
 - If you chose the B&W printer and paid, black and white is expected, so there is no refund.
@@ -275,7 +275,7 @@ Mực chưa khô nên có thể dính vào tay. Cửa hàng không có khăn gi�
 💸 选了彩色打印机却打印成黑白的情况
 - 从总付款金额中减去黑白金额，部分取消剩下的部分。
 - 请申请退款，并通过 Naver TalkTalk 发送打印成黑白的打印件照片。
-- 必须在出问题当天起 7 天内申请退款。不在期限内申请的，无法退款。
+- 必须在出问题当天起 5 天内（含周六、周日和公休日）申请退款。只有 5 天内申请的才会确认后处理。超过期限的，无法退款。
 - 修改过文件或发送其他文件的，不予处理。
 - 不同意这个方法而要求全额退款的，不予退款。
 - 选了黑白打印机付款的，黑白是理所当然的，不予退款。
@@ -300,7 +300,7 @@ Mực chưa khô nên có thể dính vào tay. Cửa hàng không có khăn gi�
 💸 Trường hợp đã chọn máy in màu mà in ra đen trắng
 - Chúng tôi hủy một phần thanh toán: tổng tiền trừ đi giá đen trắng.
 - Hãy đăng ký hoàn tiền và gửi ảnh bản in đen trắng qua Naver TalkTalk.
-- Phải đăng ký hoàn tiền trong vòng 7 ngày kể từ ngày xảy ra sự cố. Nếu không đăng ký đúng hạn, sẽ không được hoàn tiền.
+- Phải đăng ký hoàn tiền trong vòng 5 ngày kể từ ngày xảy ra sự cố (tính cả thứ Bảy, Chủ nhật và ngày lễ). Chỉ những đăng ký trong 5 ngày mới được kiểm tra và xử lý. Quá hạn sẽ không được hoàn tiền.
 - Nếu tệp đã bị sửa hoặc gửi tệp khác, chúng tôi không xử lý.
 - Nếu không đồng ý cách này mà yêu cầu hoàn toàn bộ tiền, sẽ không được hoàn tiền.
 - Nếu đã chọn máy in đen trắng và thanh toán, in đen trắng là đúng nên không được hoàn tiền.
@@ -323,7 +323,7 @@ Only these 4 line/color/shape problems are refunded. (For blank prints, paper ja
 Leave the print in the store and file it with the [환불신청] (Refund request) icon on the PC desktop.
 ⚠️ If you don't leave the print, there is no refund.
 ⚠️ If you don't file a refund by pressing the [환불신청] (Refund request) icon and filling it in, we can't process a refund.
-⏰ You must file a refund within 7 days of the problem. If you don't file in time, we can't process the refund.
+⏰ You must file a refund within 5 days of the problem (Saturdays, Sundays and holidays count). We only check and process requests filed within 5 days. After that, we can't process the refund.
 
 ❌ Not refunded
 1. It's different from the colors on the PC screen. (darker, duller, light blue looks navy, etc.)
@@ -359,7 +359,7 @@ Leave the print in the store and file it with the [환불신청] (Refund request
 把打印件留在店里，用电脑桌面上的［환불신청］（申请退款）图标申请。
 ⚠️ 不留下打印件的话，不予退款。
 ⚠️ 不点［환불신청］（申请退款）图标填写内容申请退款的话，无法办理退款。
-⏰ 必须在出问题当天起 7 天内申请退款。不在期限内申请的，无法退款。
+⏰ 必须在出问题当天起 5 天内（含周六、周日和公休日）申请退款。只有 5 天内申请的才会确认后处理。超过期限的，无法退款。
 
 ❌ 不能退款的情况
 1. 和电脑屏幕的颜色不一样。（暗、发灰、亮蓝色像藏青色等）
@@ -395,7 +395,7 @@ Chỉ 4 trường hợp lỗi sọc·màu·hình dạng dưới đây được h
 Để lại bản in ở cửa hàng và đăng ký bằng biểu tượng [환불신청] (Đăng ký hoàn tiền) trên màn hình nền máy tính.
 ⚠️ Nếu không để lại bản in, sẽ không được hoàn tiền.
 ⚠️ Nếu không bấm biểu tượng [환불신청] (Đăng ký hoàn tiền) và điền nội dung để đăng ký, sẽ không xử lý hoàn tiền được.
-⏰ Phải đăng ký hoàn tiền trong vòng 7 ngày kể từ ngày xảy ra sự cố. Nếu không đăng ký đúng hạn, sẽ không được hoàn tiền.
+⏰ Phải đăng ký hoàn tiền trong vòng 5 ngày kể từ ngày xảy ra sự cố (tính cả thứ Bảy, Chủ nhật và ngày lễ). Chỉ những đăng ký trong 5 ngày mới được kiểm tra và xử lý. Quá hạn sẽ không được hoàn tiền.
 
 ❌ Không được hoàn tiền
 1. Màu khác với màn hình máy tính. (tối hơn, xỉn, xanh nhạt trông như xanh đậm, v.v.)
@@ -509,7 +509,7 @@ Chỉ hoàn tiền 3 trường hợp: bị sọc · lem màu · một màu in ra
 3. Press the [환불신청] (Refund request) icon on the store PC desktop and file a refund.
 4. A manager checks it, processes it if it's eligible, and tells you the result at the phone number you wrote in the refund request.
 
-⏰ You must file a refund within 7 days of the problem. If you didn't file, or filed after 7 days, there is no refund.
+⏰ You must file a refund within 5 days of the problem (Saturdays, Sundays and holidays count). We only check and process requests filed within 5 days. If you didn't file, or filed after 5 days, there is no refund.
 ℹ️ Filing doesn't mean an instant refund. A manager checks it and processes only eligible cases.
 
 📖 To see how to open it in Chrome/Edge and check the preview, tap here.
@@ -545,7 +545,7 @@ Chỉ hoàn tiền 3 trường hợp: bị sọc · lem màu · một màu in ra
 3. 点店内电脑桌面上的［환불신청］（申请退款）图标申请退款。
 4. 管理员确认后，属于退款对象的会处理，结果会通过申请时填写的手机号码通知您。
 
-⏰ 必须在出问题当天起 7 天内申请退款。没有申请或超过 7 天申请的，不予退款。
+⏰ 必须在出问题当天起 5 天内（含周六、周日和公休日）申请退款。只有 5 天内申请的才会确认后处理。没有申请或超过 5 天申请的，不予退款。
 ℹ️ 申请了也不是马上退款。管理员确认后只处理符合条件的。
 
 📖 想知道怎么用 Chrome·Edge 打开并确认预览，请点这里。
@@ -581,7 +581,7 @@ Chỉ hoàn tiền 3 trường hợp: bị sọc · lem màu · một màu in ra
 3. Bấm biểu tượng [환불신청] (Đăng ký hoàn tiền) trên màn hình nền máy tính cửa hàng để đăng ký hoàn tiền.
 4. Quản lý kiểm tra, nếu đủ điều kiện sẽ xử lý, và báo kết quả qua số điện thoại bạn ghi khi đăng ký.
 
-⏰ Phải đăng ký hoàn tiền trong vòng 7 ngày kể từ ngày xảy ra sự cố. Nếu không đăng ký hoặc đăng ký sau 7 ngày, sẽ không được hoàn tiền.
+⏰ Phải đăng ký hoàn tiền trong vòng 5 ngày kể từ ngày xảy ra sự cố (tính cả thứ Bảy, Chủ nhật và ngày lễ). Chỉ những đăng ký trong 5 ngày mới được kiểm tra và xử lý. Nếu không đăng ký hoặc đăng ký sau 5 ngày, sẽ không được hoàn tiền.
 ℹ️ Đăng ký không có nghĩa là được hoàn tiền ngay. Quản lý kiểm tra rồi chỉ xử lý trường hợp đủ điều kiện.
 
 📖 Muốn biết cách mở bằng Chrome·Edge và kiểm tra bản xem trước, hãy bấm vào đây.
@@ -608,7 +608,7 @@ There are two places to put originals, and each one needs a different direction.
 ✅ If you put it in correctly and it still came out blank, the machine may have a problem. Please file a refund.
 A manager checks it, processes only the eligible cases, and tells you the result at the contact you gave.
 Filing doesn't mean an instant refund.
-⏰ You must file within 7 days of the problem.
+⏰ You must file within 5 days of the problem (Saturdays, Sundays and holidays count). We only check and process requests filed within 5 days.
 
 👇 File a refund with the picture below.
 [[btn:images/faq/btn-refund2.png|https://fax.printnuri.com/refund|Go to refund request]]
@@ -637,7 +637,7 @@ Filing doesn't mean an instant refund.
 ✅ 按上面的方法放了还是出白纸的话，可能是机器的问题。请申请退款。
 管理员确认后只处理确认属于退款对象的，并通过申请时的联系方式通知结果。
 申请退款不等于马上退款。
-⏰ 必须在出问题当天起 7 天内申请。
+⏰ 必须在出问题当天起 5 天内（含周六、周日和公休日）申请。只有 5 天内申请的才会确认后处理。
 
 👇 退款请点下面的图片申请。
 [[btn:images/faq/btn-refund2.png|https://fax.printnuri.com/refund|去申请退款]]
@@ -666,7 +666,7 @@ Có hai chỗ đặt bản gốc, mỗi chỗ có hướng đặt khác nhau.
 ✅ Nếu đã đặt đúng như trên mà vẫn ra giấy trắng, có thể máy có vấn đề. Hãy đăng ký hoàn tiền.
 Quản lý kiểm tra, chỉ xử lý trường hợp được xác nhận đủ điều kiện, và báo kết quả qua số liên lạc đã đăng ký.
 Đăng ký hoàn tiền không có nghĩa là được hoàn tiền ngay.
-⏰ Phải đăng ký trong vòng 7 ngày kể từ ngày xảy ra sự cố.
+⏰ Phải đăng ký trong vòng 5 ngày kể từ ngày xảy ra sự cố (tính cả thứ Bảy, Chủ nhật và ngày lễ). Chỉ những đăng ký trong 5 ngày mới được kiểm tra và xử lý.
 
 👇 Hãy đăng ký hoàn tiền bằng hình bên dưới.
 [[btn:images/faq/btn-refund2.png|https://fax.printnuri.com/refund|Đi đăng ký hoàn tiền]]
@@ -920,7 +920,7 @@ It's usually one of these reasons. These cases are not refunded.
 Warm up (about 3 minutes, beep) → put the pages neatly in the cover → push it all the way in → press the timer (about 1 minute) → when the light stops, take it out carefully → cool for 10+ minutes → open
 
 🤔 If you don't agree, please file a refund. A manager checks it and tells you separately whether it will be refunded.
-⏰ You must file a refund within 7 days of the problem. If you don't file in time, we can't process the refund.
+⏰ You must file a refund within 5 days of the problem (Saturdays, Sundays and holidays count). We only check and process requests filed within 5 days. After that, we can't process the refund.
 💡 If binding failed because the machine broke, only the binding covers you paid for are refunded.
 
 📖 Tap here for the picture guide.
@@ -936,7 +936,7 @@ Warm up (about 3 minutes, beep) → put the pages neatly in the cover → push i
 预热（约 3 分钟，哔一声）→ 把打印纸整齐地放进封面 → 深深地放进去 → 按定时（约 1 分钟）→ 灯停了就小心取出 → 冷却 10 分钟以上 → 打开
 
 🤔 不同意的话请申请退款。管理员确认后会另外通知是否退款。
-⏰ 必须在出问题当天起 7 天内申请退款。不在期限内申请的，无法退款。
+⏰ 必须在出问题当天起 5 天内（含周六、周日和公休日）申请退款。只有 5 天内申请的才会确认后处理。超过期限的，无法退款。
 💡 因机器故障没能装订的，只退已付款的热熔装订封面。
 
 📖 点这里查看详细的图片说明。
@@ -952,7 +952,7 @@ Thường là do một trong những lý do sau. Những trường hợp này kh
 Làm nóng (khoảng 3 phút, tiếng bíp) → cho giấy ngay ngắn vào bìa → đẩy vào sâu hết → bấm hẹn giờ (khoảng 1 phút) → khi đèn ngừng thì lấy ra cẩn thận → để nguội từ 10 phút trở lên → mở ra
 
 🤔 Nếu không đồng ý, hãy đăng ký hoàn tiền. Quản lý sẽ kiểm tra và báo riêng có hoàn tiền hay không.
-⏰ Phải đăng ký hoàn tiền trong vòng 7 ngày kể từ ngày xảy ra sự cố. Nếu không đăng ký đúng hạn, sẽ không được hoàn tiền.
+⏰ Phải đăng ký hoàn tiền trong vòng 5 ngày kể từ ngày xảy ra sự cố (tính cả thứ Bảy, Chủ nhật và ngày lễ). Chỉ những đăng ký trong 5 ngày mới được kiểm tra và xử lý. Quá hạn sẽ không được hoàn tiền.
 💡 Nếu không đóng được vì máy hỏng, chỉ hoàn tiền bìa đóng nhiệt đã thanh toán.
 
 📖 Bấm vào đây để xem hướng dẫn bằng hình.
