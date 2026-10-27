@@ -29,10 +29,10 @@ vi: Polly Copy
 en: <b>Polly Copy</b><i>Polly Copy</i><span class="fr-pill">Copying</span><br/>Hello! I'm Polly Copy, in charge of copying. I'll show you how to copy the original exactly!
 zh: <b>鹦鹉小复</b><i>Polly Copy</i><span class="fr-pill">负责复印</span><br/>你好！我是负责复印的鹦鹉小复。我来告诉你怎么把原件一模一样地复印出来！
 vi: <b>Polly Copy</b><i>Polly Copy</i><span class="fr-pill">Phụ trách photo</span><br/>Xin chào! Mình là Polly Copy, phụ trách photo. Mình sẽ chỉ bạn cách photo giống hệt bản gốc nhé!
-@@91adf7f322
-en: <button class="tab on" onclick="jump('copy',this)">How to copy</button> <button class="tab" onclick="jump('adf',this)">Feeder warning</button> <button class="tab" onclick="jump('glass',this)">Glass copy (ID · bankbook · book)</button>
-zh: <button class="tab on" onclick="jump('copy',this)">复印方法</button> <button class="tab" onclick="jump('adf',this)">ADF 注意</button> <button class="tab" onclick="jump('glass',this)">玻璃板复印（身份证 · 存折 · 书）</button>
-vi: <button class="tab on" onclick="jump('copy',this)">Cách photo</button> <button class="tab" onclick="jump('adf',this)">Lưu ý ADF</button> <button class="tab" onclick="jump('glass',this)">Photo trên mặt kính (thẻ · sổ · sách)</button>
+@@47db50ffc8
+en: <button class="tab on" onclick="jump('copy',this)">How to copy</button> <button class="tab" onclick="jump('adf',this)">Feeder warning</button> <button class="tab" onclick="jump('glass',this)">Glass copy (ID · bankbook · book)</button> <button class="tab" onclick="jump('ctips',this)">Copy tips</button>
+zh: <button class="tab on" onclick="jump('copy',this)">复印方法</button> <button class="tab" onclick="jump('adf',this)">ADF 注意</button> <button class="tab" onclick="jump('glass',this)">玻璃板复印（身份证 · 存折 · 书）</button> <button class="tab" onclick="jump('ctips',this)">复印小技巧</button>
+vi: <button class="tab on" onclick="jump('copy',this)">Cách photo</button> <button class="tab" onclick="jump('adf',this)">Lưu ý ADF</button> <button class="tab" onclick="jump('glass',this)">Photo trên mặt kính (thẻ · sổ · sách)</button> <button class="tab" onclick="jump('ctips',this)">Mẹo photo</button>
 @@6641509650
 en: How to copy <span class="pill">COPY</span>
 zh: 复印方法 <span class="pill">COPY</span>

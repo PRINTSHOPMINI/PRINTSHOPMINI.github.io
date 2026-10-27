@@ -152,6 +152,9 @@ Quản lý sẽ liên hệ sau khi kiểm tra.
 @@2
 #q en: I sent my file, but I can't see it on the printer machine.
 #a en
+If you typed your PIN at the printer machine and see '검색된 인쇄 작업이 없습니다' (No print jobs found), read below.
+[[img:images/faq/print-nojob.png]]
+
 Look at the [흑백출력] (B&W) / [컬러출력] (Color) print queue window on the PC.
 👀 If something is still in the list, it's still on its way to the printer machine.
 ⚠️ If it stays stuck in the list, you can't find it on the printer machine.
@@ -164,6 +167,9 @@ Try this.
 🗑️ Files are deleted automatically 30 minutes after you send them.
 #q zh: 文件发送了，复合机上却看不到文件。
 #a zh
+在复合机上输入 PIN 号码后，如果出现「검색된 인쇄 작업이 없습니다」（没有找到打印任务），请看下面。
+[[img:images/faq/print-nojob.png]]
+
 请看电脑上的［흑백출력］（黑白）/［컬러출력］（彩色）打印任务列表窗口。
 👀 列表还在的话，文件还在发往复合机的路上。
 ⚠️ 列表一直卡着的话，在复合机上就找不到。
@@ -176,6 +182,9 @@ Try this.
 🗑️ 发送 30 分钟后文件会自动删除。
 #q vi: Tôi đã gửi tệp nhưng không thấy tệp trên máy in đa năng.
 #a vi
+Nếu bạn đã nhập mã PIN ở máy in đa năng mà thấy '검색된 인쇄 작업이 없습니다' (Không tìm thấy lệnh in), hãy xem bên dưới.
+[[img:images/faq/print-nojob.png]]
+
 Hãy xem cửa sổ danh sách lệnh in [흑백출력] (đen trắng) / [컬러출력] (màu) trên máy tính.
 👀 Nếu danh sách vẫn còn, tệp vẫn đang trên đường đến máy in đa năng.
 ⚠️ Nếu danh sách bị kẹt mãi, sẽ không tìm thấy ở máy in đa năng.

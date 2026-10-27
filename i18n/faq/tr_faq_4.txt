@@ -1564,3 +1564,41 @@ Tất cả cửa hàng PrintShop Mini hiện nay đều do công ty trực tiế
 @@pin en: refund=70
 @@pin zh: 退款=70
 @@pin vi: hoàn=70
+
+@@73
+#q en: An Error window appears on the printer machine screen and it doesn't respond well.
+#a en
+This window appears if you hold the edge of the screen with your hand, or if something is placed on the screen.
+[[img:images/faq/touch-error.png]]
+⚠️ When this happens, the screen doesn't respond well.
+
+Try this.
+1. ✋ Take your hand off the edge of the screen.
+2. 📦 Remove anything placed on the screen (phone · wallet · paper).
+3. 👆 Tap buttons lightly with one finger.
+
+❌ Don't hold or lean on the screen!
+#q zh: 复合机屏幕上出现 Error 窗口，按不太动。
+#a zh
+用手抓着屏幕边框，或屏幕上放了东西，就会出现这个窗口。
+[[img:images/faq/touch-error.png]]
+⚠️ 这时屏幕不太好按。
+
+请这样试试。
+1. ✋ 把手从屏幕边框上拿开。
+2. 📦 拿走放在屏幕上的东西（手机 · 钱包 · 纸）。
+3. 👆 用一根手指轻轻按按钮。
+
+❌ 不要抓着或靠在屏幕上！
+#q vi: Màn hình máy in đa năng hiện cửa sổ Error và khó bấm.
+#a vi
+Cửa sổ này hiện ra khi bạn cầm vào viền màn hình, hoặc có đồ vật đặt trên màn hình.
+[[img:images/faq/touch-error.png]]
+⚠️ Lúc này màn hình khó bấm.
+
+Hãy thử như sau.
+1. ✋ Bỏ tay ra khỏi viền màn hình.
+2. 📦 Lấy đi đồ vật đặt trên màn hình (điện thoại · ví · giấy).
+3. 👆 Bấm nút nhẹ nhàng bằng một ngón tay.
+
+❌ Đừng cầm hoặc tựa vào màn hình!

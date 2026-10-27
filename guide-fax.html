@@ -349,6 +349,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 .gvid-h small{font-size:12.5px;font-weight:700;color:var(--text3)}
 .gvid video{display:block;width:100%;aspect-ratio:16/9;border-radius:12px;background:#000}
 </style>
+<style id="mlang-css">.mlang{margin:16px 0;border:2px solid #1B8AC4;border-radius:12px;background:#F2F8FD;padding:16px 18px}.mlang-h{font-size:16px;font-weight:900;color:#12507A;margin-bottom:10px}.mlang ol{margin:0;padding-left:22px;font-size:14px;line-height:1.65;color:#1F2937}.mlang li{margin-bottom:10px}.mlang img{display:block;width:100%;max-width:420px;margin-top:6px;border-radius:8px;border:1px solid #CBD5E1}.mlang .back{color:#B31E16;font-weight:900}.tipfig{display:block;width:100%;max-width:520px;margin:0 auto 18px;border-radius:10px;border:1px solid var(--border)}</style>
 <style id="nav-lang-css">.nav-lang{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:#1B8AC4;border:1.5px solid #1B8AC4;border-radius:50px;padding:7px 13px;margin-right:8px;white-space:nowrap;background:#fff}.nav-lang:hover{background:#E8F4FC}.nav-links a{white-space:nowrap}@media(max-width:1180px){.nav-lang .t{display:none}.nav-lang{padding:6px 9px;font-size:15px}}@media(max-width:480px){.nav-lang{padding:4px 6px;margin-right:6px;font-size:14px}.nav-cta{padding:8px 13px!important;font-size:12.5px!important}}@media(max-width:400px){nav{padding-left:12px!important;padding-right:12px!important}.nav-logo-name{font-size:15px!important}.nav-logo{gap:6px!important}.nav-cta{padding:7px 9px!important;font-size:12px!important}.nav-lang,.lang-sel{margin-right:5px!important}.hamburger{margin-left:4px!important}}</style>
 </head>
 <body>
@@ -418,6 +419,14 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
     </div>
     <p class="sec-tagline"><b>종이 내용을 상대방 팩스 번호로 보내는 서비스입니다.</b> 받는 곳의 팩스 번호를 미리 알아 오셔야 합니다.</p>
     <div class="gvid"><div class="gvid-h"><span class="gvid-play">▶</span>팩스 보내는 방법 영상으로 먼저 보기 <small>소리 없이 봐도 돼요</small></div><video controls preload="none" playsinline poster="videos/guide-fax.jpg"><source src="videos/guide-fax.mp4" type="video/mp4">영상을 재생할 수 없는 브라우저예요.</video></div>
+    <div class="mlang" hidden data-i18n-only>
+      <div class="mlang-h">🌐 복합기 화면을 내 언어로 바꿀 수 있어요</div>
+      <ol>
+        <li>복합기 첫 화면 <b>오른쪽 위 [한국어]</b>를 누르세요.<img src="images/common/mfp-lang-1.png" alt="복합기 첫 화면 오른쪽 위의 [한국어] 버튼" loading="lazy"></li>
+        <li>목록에서 <b>내 언어</b>를 고르세요. 화면이 그 언어로 바뀌어요.<img src="images/common/mfp-lang-2.png" alt="복합기 언어 목록 화면" loading="lazy"></li>
+        <li><span class="back">다 쓰고 나면 다시 [한국어]로 바꿔 주세요.</span> 저절로 돌아오지 않을 때가 있어요.</li>
+      </ol>
+    </div>
     <div class="orig-warn"><div class="orig-warn-h">🚨 원본을 먼저 넣고 시작하세요! <span>복사 · 스캔 · 팩스 공통</span></div><ol><li><span class="n">1</span><div>반드시 <b>원본을 ADF(원본 넣는 곳)에 먼저 넣은 뒤</b> 작업을 시작하세요.</div></li><li class="okli"><span class="n">2</span><div>✅ <b>정상으로 진행되면</b>, 원본이 기계 안으로 들어간 뒤 <b>자동으로 금액 확인 화면(과금정보)</b>이 나와요.</div></li><li class="no"><span class="n">3</span><div>🛑 작업을 시작했는데 <b>원본이 기계 안으로 들어가지 않으면, 절대 결제하지 마세요!</b><br>화면에서 <b>작업을 취소</b>하고, <b>처음부터 다시</b> 하세요.</div></li><li><span class="n">4</span><div>❌ 원본이 들어가지 않았는데 결제하여 <b>백지 복사 · 백지 스캔 · 백지 팩스 전송</b>이 되어도 <b>환불되지 않습니다.</b></div></li></ol></div>
     <div id="guideFiles"></div>
     <div class="step-note warn sec-note">📤 <b>보내기만 가능</b>합니다. 📵 받기는 안 됩니다. 외국으로 보내는 팩스도 안 됩니다.</div>

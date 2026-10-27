@@ -193,6 +193,8 @@ def build(lang):
                 node[kind[1:]] = t
         if soup.html:
             soup.html['lang'] = hl
+        for el in soup.find_all(attrs={'data-i18n-only': True}):   # 외국어 페이지에서만 보이는 안내 (복합기 언어 바꾸기 등)
+            del el['hidden']
         for s in soup.find_all('script', src=re.compile(r'quickmenu\.js')):   # 퀵메뉴 그림은 한국어 글씨라 외국어 페이지에선 뺌
             s.decompose()
         for tag, attr in URL_ATTRS:

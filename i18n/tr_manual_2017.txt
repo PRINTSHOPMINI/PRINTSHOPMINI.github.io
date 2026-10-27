@@ -1,0 +1,91 @@
+# 2026-10-27 복합기 설명서(2017)로 보탠 내용 — 🌐 복합기 언어 바꾸기(외국어 페이지에만 보임) · 복사 꿀팁 · 스캔 꿀팁
+# 복합기 언어 목록: English · 简体中文 있음, 베트남어 없음 → 베트남어판은 English 고르기
+
+@@71be5d6490
+en: 🌐 You can change the printer machine screen to English
+zh: 🌐 复合机屏幕可以换成中文
+vi: 🌐 Có thể đổi màn hình máy in đa năng sang tiếng Anh
+@@e018611e96
+en: On the printer machine's first screen, tap <b>[한국어] at the top right</b>.<img alt="The [한국어] button at the top right of the printer machine's first screen" loading="lazy" src="images/common/mfp-lang-1.png"/>
+zh: 在复合机首页，按<b>右上角的［한국어］</b>。<img alt="复合机首页右上角的［한국어］按钮" loading="lazy" src="images/common/mfp-lang-1.png"/>
+vi: Ở màn hình đầu tiên của máy in đa năng, chạm <b>[한국어] ở góc trên bên phải</b>.<img alt="Nút [한국어] ở góc trên bên phải màn hình đầu tiên của máy in đa năng" loading="lazy" src="images/common/mfp-lang-1.png"/>
+@@70d0221838
+en: The [한국어] button at the top right of the printer machine's first screen
+zh: 复合机首页右上角的［한국어］按钮
+vi: Nút [한국어] ở góc trên bên phải màn hình đầu tiên của máy in đa năng
+@@b29c0b4ae5
+en: Choose <b>English</b> from the list. The screen changes to English.<img alt="Language list on the printer machine" loading="lazy" src="images/common/mfp-lang-2.png"/>
+zh: 在列表中选择<b>简体中文</b>。屏幕会变成中文。<img alt="复合机的语言列表" loading="lazy" src="images/common/mfp-lang-2.png"/>
+vi: Chọn <b>English</b> trong danh sách (máy không có tiếng Việt). Màn hình sẽ chuyển sang tiếng Anh.<img alt="Danh sách ngôn ngữ trên máy in đa năng" loading="lazy" src="images/common/mfp-lang-2.png"/>
+@@aee8305e2a
+en: Language list on the printer machine
+zh: 复合机的语言列表
+vi: Danh sách ngôn ngữ trên máy in đa năng
+@@996201a324
+en: <span class="back">When you're done, please switch back to [한국어].</span> Sometimes it doesn't switch back by itself.
+zh: <span class="back">用完后请换回［한국어］。</span>有时不会自动换回来。
+vi: <span class="back">Dùng xong, vui lòng chuyển lại [한국어].</span> Đôi khi máy không tự chuyển lại.
+@@1bf9d20db3
+en: Copy tips
+zh: 复印小技巧
+vi: Mẹo photo
+@@2b0daaed3d
+en: On the copy screen you can change the size and how dark it is.
+zh: 在复印画面可以调整大小和深浅。
+vi: Trên màn hình photo, bạn có thể đổi kích thước và độ đậm nhạt.
+@@72375ed8dd
+en: Copy screen. Inside the red boxes are [축소/확대] (Reduce/Enlarge) and [농도조절] (Density)
+zh: 复印画面。红框里是［축소/확대］（缩小/放大）和［농도조절］（浓度调节）
+vi: Màn hình photo. Trong khung đỏ là [축소/확대] (Thu nhỏ/Phóng to) và [농도조절] (Độ đậm)
+@@c59801fe92
+en: 🔍 Bigger · smaller copies
+zh: 🔍 放大 · 缩小复印
+vi: 🔍 Photo to hơn · nhỏ hơn
+@@eb68d4da93
+en: Choose in <b>[축소/확대]</b> (Reduce/Enlarge).<br/>A4 → A3 bigger: <b>141%</b><br/>A4 → B4 bigger: <b>122%</b><br/>A4 → B5 smaller: <b>86%</b><br/>A4 → A5 smaller: <b>70%</b>
+zh: 在<b>［축소/확대］</b>（缩小/放大）里选择。<br/>A4 → A3 放大：<b>141%</b><br/>A4 → B4 放大：<b>122%</b><br/>A4 → B5 缩小：<b>86%</b><br/>A4 → A5 缩小：<b>70%</b>
+vi: Chọn ở <b>[축소/확대]</b> (Thu nhỏ/Phóng to).<br/>A4 → A3 to hơn: <b>141%</b><br/>A4 → B4 to hơn: <b>122%</b><br/>A4 → B5 nhỏ hơn: <b>86%</b><br/>A4 → A5 nhỏ hơn: <b>70%</b>
+@@89460fc8e6
+en: 🌗 If it's too light or too dark
+zh: 🌗 太浅或太深的话
+vi: 🌗 Nếu quá nhạt hoặc quá đậm
+@@ca7c8d497f
+en: Move the <b>[농도조절]</b> (Density) bar.<br/>Slide right for <b>darker</b>, slide left for <b>lighter</b>.
+zh: 拖动<b>［농도조절］</b>（浓度调节）滑条。<br/>往右拖<b>更深</b>，往左拖<b>更浅</b>。
+vi: Kéo thanh <b>[농도조절]</b> (Độ đậm).<br/>Kéo sang phải để <b>đậm hơn</b>, sang trái để <b>nhạt hơn</b>.
+@@854eb8e89a
+en: 🧾 Check once more before paying
+zh: 🧾 付款前再确认一次
+vi: 🧾 Kiểm tra lại trước khi thanh toán
+@@c691de8bd5
+en: On the price check screen ([과금정보]), make sure the <b>paper size and number of copies</b> are right. <b>If they're different, don't pay.</b>
+zh: 在金额确认画面（［과금정보］）一定要确认<b>纸张大小和份数</b>是否正确。<b>不一样的话不要付款。</b>
+vi: Ở màn hình xác nhận số tiền ([과금정보]), hãy kiểm tra <b>khổ giấy và số bản</b> có đúng không. <b>Nếu khác, đừng thanh toán.</b>
+@@49a00dea03
+en: Scan tips
+zh: 扫描小技巧
+vi: Mẹo scan
+@@3ab1d9146b
+en: On the right side of the scan screen, you set the file name and how sharp it is.
+zh: 在扫描画面右边设置文件名和清晰度。
+vi: Ở bên phải màn hình scan, bạn đặt tên tệp và độ nét.
+@@c5524acda1
+en: Scan settings screen. Inside the red boxes are [파일 이름] (File name), [날짜 및 시간 추가] (Add date and time) and [해상도] (Resolution)
+zh: 扫描设置画面。红框里是［파일 이름］（文件名）、［날짜 및 시간 추가］（添加日期和时间）和［해상도］（分辨率）
+vi: Màn hình cài đặt scan. Trong khung đỏ là [파일 이름] (Tên tệp), [날짜 및 시간 추가] (Thêm ngày giờ) và [해상도] (Độ phân giải)
+@@064885ea18
+en: 📄 Don't uncheck [날짜 및 시간 추가] (Add date and time)!
+zh: 📄 不要取消勾选［날짜 및 시간 추가］（添加日期和时间）！
+vi: 📄 Đừng bỏ chọn [날짜 및 시간 추가] (Thêm ngày giờ)!
+@@3444d6754d
+en: If you uncheck it, the file names become the same, and <b>the file you scanned first is erased and replaced by the new one.</b> Leave it checked so the date · time is added after the name, and it's safe.
+zh: 取消勾选的话文件名会一样，<b>先扫描的文件会被删掉，换成新文件。</b>保持勾选，名字后面会加上日期 · 时间，很安全。
+vi: Nếu bỏ chọn, tên tệp sẽ giống nhau và <b>tệp scan trước sẽ bị xóa, thay bằng tệp mới.</b> Cứ để nguyên thì sau tên sẽ có thêm ngày · giờ, rất an toàn.
+@@e88091bb3e
+en: 🔎 If the text is small or it's a photo
+zh: 🔎 字很小或是照片的话
+vi: 🔎 Nếu chữ nhỏ hoặc là ảnh
+@@983215abfd
+en: In <b>[해상도]</b> (Resolution), choose a <b>bigger dpi number</b>. It gets sharper.<br/>But the file gets bigger, so it may be hard to send by email.
+zh: 在<b>［해상도］</b>（分辨率）里选择<b>数字大的 dpi</b>，会更清晰。<br/>但文件会变大，可能不好用邮件发送。
+vi: Ở <b>[해상도]</b> (Độ phân giải), chọn <b>số dpi lớn hơn</b>. Sẽ nét hơn.<br/>Nhưng tệp sẽ lớn hơn nên có thể khó gửi qua email.

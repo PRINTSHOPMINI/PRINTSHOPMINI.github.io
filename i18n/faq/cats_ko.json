@@ -1,2 +1,125 @@
-[{"key":"faq_cat_map","value":{"2": "broken", "3": "use", "4": "broken", "5": "use", "6": "mini", "8": "use", "9": "use", "10": "pc", "11": "use", "12": "mini", "13": "use", "14": "use", "15": "broken", "16": "broken", "17": "broken", "18": "broken", "19": "pc", "20": "pc", "21": "pc", "22": "use", "23": "pc", "24": "use", "26": "buy", "27": "buy", "28": "store", "29": "cmv3cynpb", "30": "cmv3djben", "31": "mini", "32": "mini", "35": "mini", "36": "use", "37": "use", "38": "use", "39": "use", "40": "use", "41": "use", "42": "use", "43": "use", "44": "use", "45": "use", "46": "use", "47": "broken", "48": "broken", "49": "broken", "50": "broken", "51": "broken", "52": "broken", "53": "broken", "54": "mini", "55": "store", "57": "pc", "58": "pc", "59": "pc", "60": "buy", "61": "store", "62": "store", "63": "store", "66": "broken", "67": "use", "68": "broken", "69": "broken", "70": "mini", "71": "mini", "72": "store"}}, 
- {"key":"faq_categories","value":[{"id": "mini", "desc": "주차 · 영수증 · 환불 · 팩스확인 · 분실물확인 (프린트샵미니 전용 사이트 사용방법)", "icon": "🧰", "name": "미니전용프로그램"}, {"id": "broken", "desc": "기계가 이상하거나, 출력이 잘못 나왔을 때", "icon": "🔧", "name": "고장"}, {"id": "use", "desc": "어떻게 쓰는지 궁금할 때", "icon": "📖", "name": "사용방법"}, {"id": "buy", "desc": "L홀더 · 서류봉투 · 쫄대파일", "icon": "🛍️", "name": "상품구매"}, {"id": "store", "desc": "운영시간 · 연휴 · 반려동물 · 전화문의 · 와이파이 · 창업", "icon": "🏪", "name": "매장운영"}, {"id": "pc", "desc": "PC에서 쓰는 프로그램이 이상할 때", "icon": "💻", "name": "PC프로그램"}, {"id": "cmv3cynpb", "desc": "신분증,카드,기타물품", "icon": "🔍", "name": "분실물"}, {"id": "cmv3djben", "desc": "CCTV열람 ,영상보관,영상전송", "icon": "📹", "name": "CCTV열람"}]}]
+[
+ {
+  "key": "faq_cat_map",
+  "value": {
+   "2": "broken",
+   "3": "use",
+   "4": "broken",
+   "5": "use",
+   "6": "mini",
+   "8": "use",
+   "9": "use",
+   "10": "pc",
+   "11": "use",
+   "12": "mini",
+   "13": "use",
+   "14": "use",
+   "15": "broken",
+   "16": "broken",
+   "17": "broken",
+   "18": "broken",
+   "19": "pc",
+   "20": "pc",
+   "21": "pc",
+   "22": "use",
+   "23": "pc",
+   "24": "use",
+   "26": "buy",
+   "27": "buy",
+   "28": "store",
+   "29": "cmv3cynpb",
+   "30": "cmv3djben",
+   "31": "mini",
+   "32": "mini",
+   "35": "mini",
+   "36": "use",
+   "37": "use",
+   "38": "use",
+   "39": "use",
+   "40": "use",
+   "41": "use",
+   "42": "use",
+   "43": "use",
+   "44": "use",
+   "45": "use",
+   "46": "use",
+   "47": "broken",
+   "48": "broken",
+   "49": "broken",
+   "50": "broken",
+   "51": "broken",
+   "52": "broken",
+   "53": "broken",
+   "54": "mini",
+   "55": "store",
+   "57": "pc",
+   "58": "pc",
+   "59": "pc",
+   "60": "buy",
+   "61": "store",
+   "62": "store",
+   "63": "store",
+   "66": "broken",
+   "67": "use",
+   "68": "broken",
+   "69": "broken",
+   "70": "mini",
+   "71": "mini",
+   "72": "store",
+   "73": "broken"
+  }
+ },
+ {
+  "key": "faq_categories",
+  "value": [
+   {
+    "id": "mini",
+    "desc": "주차 · 영수증 · 환불 · 팩스확인 · 분실물확인 (프린트샵미니 전용 사이트 사용방법)",
+    "icon": "🧰",
+    "name": "미니전용프로그램"
+   },
+   {
+    "id": "broken",
+    "desc": "기계가 이상하거나, 출력이 잘못 나왔을 때",
+    "icon": "🔧",
+    "name": "고장"
+   },
+   {
+    "id": "use",
+    "desc": "어떻게 쓰는지 궁금할 때",
+    "icon": "📖",
+    "name": "사용방법"
+   },
+   {
+    "id": "buy",
+    "desc": "L홀더 · 서류봉투 · 쫄대파일",
+    "icon": "🛍️",
+    "name": "상품구매"
+   },
+   {
+    "id": "store",
+    "desc": "운영시간 · 연휴 · 반려동물 · 전화문의 · 와이파이 · 창업",
+    "icon": "🏪",
+    "name": "매장운영"
+   },
+   {
+    "id": "pc",
+    "desc": "PC에서 쓰는 프로그램이 이상할 때",
+    "icon": "💻",
+    "name": "PC프로그램"
+   },
+   {
+    "id": "cmv3cynpb",
+    "desc": "신분증,카드,기타물품",
+    "icon": "🔍",
+    "name": "분실물"
+   },
+   {
+    "id": "cmv3djben",
+    "desc": "CCTV열람 ,영상보관,영상전송",
+    "icon": "📹",
+    "name": "CCTV열람"
+   }
+  ]
+ }
+]

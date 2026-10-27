@@ -2276,12 +2276,6 @@
    "guide-copy.html"
   ]
  },
- "91adf7f322": {
-  "ko": "<button class=\"tab on\" onclick=\"jump('copy',this)\">복사하는 방법</button> <button class=\"tab\" onclick=\"jump('adf',this)\">ADF 주의</button> <button class=\"tab\" onclick=\"jump('glass',this)\">유리판 복사 (신분증 · 통장 · 책)</button>",
-  "pages": [
-   "guide-copy.html"
-  ]
- },
  "6641509650": {
   "ko": "복사하는 방법 <span class=\"pill\">COPY</span>",
   "pages": [
@@ -6152,6 +6146,162 @@
   "ko": "게시글이 등록되었습니다!",
   "pages": [
    "community.html"
+  ]
+ },
+ "71be5d6490": {
+  "ko": "🌐 복합기 화면을 내 언어로 바꿀 수 있어요",
+  "pages": [
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "e018611e96": {
+  "ko": "복합기 첫 화면 <b>오른쪽 위 [한국어]</b>를 누르세요.<img alt=\"복합기 첫 화면 오른쪽 위의 [한국어] 버튼\" loading=\"lazy\" src=\"images/common/mfp-lang-1.png\"/>",
+  "pages": [
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "70d0221838": {
+  "ko": "복합기 첫 화면 오른쪽 위의 [한국어] 버튼",
+  "pages": [
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "b29c0b4ae5": {
+  "ko": "목록에서 <b>내 언어</b>를 고르세요. 화면이 그 언어로 바뀌어요.<img alt=\"복합기 언어 목록 화면\" loading=\"lazy\" src=\"images/common/mfp-lang-2.png\"/>",
+  "pages": [
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "aee8305e2a": {
+  "ko": "복합기 언어 목록 화면",
+  "pages": [
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "996201a324": {
+  "ko": "<span class=\"back\">다 쓰고 나면 다시 [한국어]로 바꿔 주세요.</span> 저절로 돌아오지 않을 때가 있어요.",
+  "pages": [
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html"
+  ]
+ },
+ "47db50ffc8": {
+  "ko": "<button class=\"tab on\" onclick=\"jump('copy',this)\">복사하는 방법</button> <button class=\"tab\" onclick=\"jump('adf',this)\">ADF 주의</button> <button class=\"tab\" onclick=\"jump('glass',this)\">유리판 복사 (신분증 · 통장 · 책)</button> <button class=\"tab\" onclick=\"jump('ctips',this)\">복사 꿀팁</button>",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "1bf9d20db3": {
+  "ko": "복사 꿀팁",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "2b0daaed3d": {
+  "ko": "복사 화면에서 크기와 진하기를 바꿀 수 있어요.",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "72375ed8dd": {
+  "ko": "복사 화면. 빨간 상자 안에 [축소/확대]와 [농도조절]이 있는 모습",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "c59801fe92": {
+  "ko": "🔍 크게 · 작게 복사",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "eb68d4da93": {
+  "ko": "<b>[축소/확대]</b>에서 고르세요.<br/>A4 → A3 크게: <b>141%</b><br/>A4 → B4 크게: <b>122%</b><br/>A4 → B5 작게: <b>86%</b><br/>A4 → A5 작게: <b>70%</b>",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "89460fc8e6": {
+  "ko": "🌗 너무 연하거나 진하면",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "ca7c8d497f": {
+  "ko": "<b>[농도조절]</b> 막대를 움직이세요.<br/>오른쪽으로 밀면 <b>진하게</b>, 왼쪽으로 밀면 <b>연하게</b> 나와요.",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "854eb8e89a": {
+  "ko": "🧾 결제 전에 한 번 더",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "c691de8bd5": {
+  "ko": "금액 확인 화면(과금정보)에서 <b>종이 크기와 매수</b>가 맞는지 꼭 보세요. <b>다르면 결제하지 마세요.</b>",
+  "pages": [
+   "guide-copy.html"
+  ]
+ },
+ "49a00dea03": {
+  "ko": "스캔 꿀팁",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "3ab1d9146b": {
+  "ko": "스캔 화면 오른쪽에서 파일 이름과 선명도를 정해요.",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "c5524acda1": {
+  "ko": "스캔 설정 화면. 빨간 상자 안에 [파일 이름]과 [날짜 및 시간 추가], [해상도]가 있는 모습",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "064885ea18": {
+  "ko": "📄 [날짜 및 시간 추가] 체크를 빼지 마세요!",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "3444d6754d": {
+  "ko": "체크를 빼면 파일 이름이 같아져서 <b>먼저 스캔한 파일이 지워지고 새 파일로 바뀌어요.</b> 그대로 두면 이름 뒤에 날짜 · 시간이 붙어서 안전해요.",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "e88091bb3e": {
+  "ko": "🔎 글씨가 작거나 사진이면",
+  "pages": [
+   "guide-scan.html"
+  ]
+ },
+ "983215abfd": {
+  "ko": "<b>[해상도]</b>에서 <b>숫자가 큰 dpi</b>를 고르세요. 더 선명해져요.<br/>대신 파일이 커져서 이메일로 보내기 어려울 수 있어요.",
+  "pages": [
+   "guide-scan.html"
   ]
  }
 }
