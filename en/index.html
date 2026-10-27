@@ -135,16 +135,22 @@ a.hf:hover{transform:translateY(-6px)}
 .htile .tx{min-width:0}
 .htile b{display:block;font-size:17px;font-weight:900;line-height:1.3}
 .htile small{display:block;font-size:12px;color:var(--text3);line-height:1.4;white-space:nowrap}
-.hero-promo{display:flex;align-items:center;gap:20px;max-width:600px;margin-bottom:18px;background:#fff;border:1.5px solid #3182F6;border-radius:18px;padding:16px 18px;box-shadow:0 8px 22px rgba(49,130,246,.12)}
-.hero-promo video{flex:0 0 auto;width:180px;aspect-ratio:9/16;border-radius:14px;background:#FBF8EE;display:block}
+/* 메인 홍보 자리(배너): 내용은 관리자 > 📢 메인 홍보(inventory_config 의 home_promo)에서 바꿔요 */
+.hero-promo{display:flex;align-items:center;gap:20px;max-width:600px;margin-bottom:18px;background:#fff;border:1.5px solid var(--blue);border-radius:18px;padding:16px 18px;box-shadow:0 8px 22px rgba(27,138,196,.12)}
+.hero-promo[hidden]{display:none}
+html:not([lang="ko"]) .hero-promo{display:none}
+.hero-promo .pm-media{position:relative;flex:0 0 auto;width:180px;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#FBF8EE}
+.hero-promo .pm-media video,.hero-promo .pm-media img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-promo .pm-sound{position:absolute;right:8px;bottom:8px;border:none;border-radius:50px;background:rgba(20,28,50,.72);color:#fff;font-size:12px;font-weight:700;padding:5px 10px;cursor:pointer;font-family:inherit}
 .hero-promo .pm-tx{min-width:0;word-break:keep-all}
-.hero-promo .pm-tag{display:inline-block;background:#3182F6;color:#fff;font-size:13px;font-weight:800;border-radius:8px;padding:2px 10px;margin-bottom:10px}
+.hero-promo .pm-head{font-size:12.5px;font-weight:800;color:var(--blue);letter-spacing:.2px;margin-bottom:8px}
+.hero-promo .pm-tag{display:inline-block;background:var(--blue);color:#fff;font-size:13px;font-weight:800;border-radius:8px;padding:2px 10px;margin-bottom:10px}
+.hero-promo .pm-tag:empty{display:none}
 .hero-promo h3{font-size:21px;font-weight:900;line-height:1.35;margin-bottom:8px;color:var(--text)}
-.hero-promo p{font-size:14.5px;color:var(--text3);line-height:1.75;margin-bottom:10px}
-.hero-promo p b{color:var(--text)}
-.hero-promo .zero{color:#E31B2F;font-weight:900}
-.hero-promo a{font-size:14px;font-weight:700;color:#3182F6}
-.hero-promo a:hover{text-decoration:underline}
+.hero-promo p{font-size:14.5px;color:var(--text3);line-height:1.75;margin-bottom:12px;white-space:pre-line}
+.hero-promo p:empty{display:none}
+.hero-promo .pm-btn{display:inline-block;background:var(--blue);color:#fff;font-size:14px;font-weight:700;border-radius:50px;padding:9px 20px}
+.hero-promo .pm-btn:hover{background:var(--blue-hover)}
 .hero-branch{margin-bottom:52px}
 .hero-branch a{font-size:14.5px;font-weight:700;color:var(--blue)}
 .hero-branch a:hover{text-decoration:underline}
@@ -376,7 +382,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
   .htile b{font-size:16px}
   .htile small{white-space:normal;font-size:11.5px}
   .hero-promo{gap:14px;padding:12px}
-  .hero-promo video{width:42%;max-width:170px}
+  .hero-promo .pm-media{width:42%;max-width:170px}
   .hero-promo h3{font-size:17px}
   .hero-promo p{font-size:13px;line-height:1.65}
   .hero-promo .pm-tag{font-size:12px;margin-bottom:6px}
@@ -419,7 +425,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 }
 @media(max-width:440px){
   .hero-promo{flex-direction:column-reverse;align-items:stretch;padding:16px}
-  .hero-promo video{width:64%;max-width:230px;margin:0 auto}
+  .hero-promo .pm-media{width:64%;max-width:230px;margin:0 auto}
   .hero-promo h3{font-size:18px}
   .hero-promo p{font-size:14px}
 }
@@ -451,10 +457,12 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 <h1 class="hero-h1"><span class="blue">On your own</span>, easily,<br/> print any time</h1>
 <p class="hero-desc">A 24-hour print shop you use by yourself, with no staff.<br/> When you need it, find the PrintShop Mini nearest you.</p>
 <div class="hero-tiles"><a class="htile" href="guide-print.html"><span class="ic">🖨️</span><span class="tx"><b>Print</b><small>Your file on paper</small></span></a> <a class="htile" href="guide-copy.html"><span class="ic">📋</span><span class="tx"><b>Copy</b><small>Same as the original</small></span></a> <a class="htile" href="guide-scan.html"><span class="ic">📄</span><span class="tx"><b>Scan</b><small>Paper into a file</small></span></a> <a class="htile" href="guide-fax.html"><span class="ic">📠</span><span class="tx"><b>Fax</b><small>Send · check</small></span></a> <a class="htile" href="guide-coat.html"><span class="ic">✨</span><span class="tx"><b>Laminate</b><small>Shiny protection</small></span></a> <a class="htile" href="guide-bind.html"><span class="ic">📚</span><span class="tx"><b>Bind</b><small>Like a book</small></span></a></div>
-<div class="hero-promo">
-<video aria-label="Toss kiosk prepaid top-up video" autoplay="" loop="" muted="" playsinline="" poster="../videos/promo-prepaid.jpg" preload="metadata"><source src="../videos/promo-prepaid.mp4" type="video/mp4"/></video>
-<div class="pm-tx"> <span class="pm-tag">💳 No card? No problem</span> <h3>No need to buy a top-up card.<br/>Pay only what you use.</h3>
-<p>At the Toss kiosk, use <b>[선불충전] (Prepaid top-up)</b> to pay <b>only the amount you need now</b>. From 70 won for 1 black-and-white A4 page. Money left over: <span class="zero">0 won</span>!</p> <a href="faq.html#faq-24">See how to pay →</a> </div>
+<!-- 메인 홍보 자리: 아래는 기본값(토스 선불충전). 관리자 > 📢 메인 홍보에 저장된 내용이 있으면 그걸로 바뀌어요 -->
+<div class="hero-promo" id="homePromo">
+<div class="pm-media"><video aria-label="Promotion video" autoplay="" loop="" muted="" playsinline="" poster="../videos/promo-prepaid.jpg" preload="metadata" src="videos/promo-prepaid.mp4"></video> <button class="pm-sound" type="button">🔇 Sound on</button> </div>
+<div class="pm-tx">
+<div class="pm-head">📢 PrintShop Mini news</div> <span class="pm-tag">💳 No card? No problem</span> <h3>No need to buy a top-up card.<br/>Pay only what you use.</h3>
+<p>At the Toss kiosk, use [선불충전] (Prepaid top-up) to pay only the amount you need now. From 70 won for 1 black-and-white A4 page. Money left over: 0 won!</p> <a class="pm-btn" href="faq.html#faq-24">See how to pay →</a> </div>
 </div>
 <p class="hero-branch"><a href="#branches">📍 Find a store near you →</a></p>
 <p class="brand-note" style="word-break:keep-all;font-size:13.5px;line-height:1.9;color:#6B7280;margin:14px 0 30px;text-align:center"><b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1B8AC4)">PrintShop Mini</b> and <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">PrintNow</b> are brands of <span style="white-space:nowrap">Good Learning Partner Co., Ltd.</span></p>
@@ -636,6 +644,34 @@ var SB_HDR={'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY};
 var branchesCache=[];
 var branchPhones={};
 function escHtml(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+
+/* 메인 홍보 자리: inventory_config 의 home_promo({items:[{on,start,end,tag,title,desc,btn,link,video,poster}]})에서
+   켜져 있고 기간 안인 것 중 맨 위 1개를 보여 줘요. 저장값이 없으면 HTML 기본값, 보여 줄 게 없으면 자리를 숨겨요. */
+function promoSound(){
+  var box=document.getElementById('homePromo');if(!box)return;
+  var v=box.querySelector('video'),b=box.querySelector('.pm-sound');
+  if(!v){if(b)b.remove();return;}
+  b.onclick=function(){v.muted=!v.muted;if(!v.muted)v.play();b.textContent=v.muted?'🔇 소리 켜기':'🔊 소리 끄기';};
+}
+async function loadHomePromo(){
+  var box=document.getElementById('homePromo');if(!box||window.I18N_LANG)return;
+  promoSound();
+  var cfg;
+  try{var r=await fetch(SB_URL+'/rest/v1/inventory_config?key=eq.home_promo',{headers:SB_HDR});var j=await r.json();cfg=j[0]&&j[0].value;}catch(e){return;}
+  if(!cfg||!Array.isArray(cfg.items))return;
+  var today=new Date(Date.now()+9*3600e3).toISOString().slice(0,10);   // 한국 날짜
+  var it=cfg.items.filter(function(x){return x&&x.on&&(!x.start||x.start<=today)&&(!x.end||today<=x.end)&&(x.video||x.poster)&&x.title;})[0];
+  if(!it){box.hidden=true;return;}
+  var media=it.video
+    ?'<video autoplay muted loop playsinline preload="metadata"'+(it.poster?' poster="'+escHtml(it.poster)+'"':'')+' src="'+escHtml(it.video)+'" aria-label="홍보 영상"></video><button class="pm-sound" type="button">🔇 소리 켜기</button>'
+    :'<img src="'+escHtml(it.poster)+'" alt="'+escHtml(it.title)+'">';
+  var link=it.link||'',ext=/^https?:\/\//i.test(link);
+  box.innerHTML='<div class="pm-media">'+media+'</div><div class="pm-tx"><div class="pm-head">📢 지금 프린트샵미니 소식</div>'
+    +'<span class="pm-tag">'+escHtml(it.tag||'')+'</span><h3>'+escHtml(it.title).replace(/\n/g,'<br>')+'</h3><p>'+escHtml(it.desc||'')+'</p>'
+    +(link?'<a class="pm-btn" href="'+escHtml(link)+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+escHtml(it.btn||'자세히 보기')+' →</a>':'')+'</div>';
+  promoSound();
+}
+loadHomePromo();
 
 /* 지점 목록·지역 버튼·지점 수는 모두 지점 DB(branches)에서 자동 반영 */
 async function loadBranches(){

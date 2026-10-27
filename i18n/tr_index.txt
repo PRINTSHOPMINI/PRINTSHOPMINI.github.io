@@ -392,3 +392,24 @@ vi: Không cần mua thẻ nạp tiền.<br/>Dùng bao nhiêu, trả bấy nhiê
 en: At the Toss kiosk, use <b>[선불충전] (Prepaid top-up)</b> to pay <b>only the amount you need now</b>. From 70 won for 1 black-and-white A4 page. Money left over: <span class="zero">0 won</span>!
 zh: 在 Toss 自助机用<b>［선불충전］（预付充值）</b>只付<b>现在要用的金额</b>。黑白 A4 一张 70 韩元起。剩下的钱：<span class="zero">0 韩元</span>！
 vi: Ở kiosk Toss, dùng <b>[선불충전] (Nạp tiền trả trước)</b> để chỉ trả <b>đúng số tiền cần dùng bây giờ</b>. Từ 70 won cho 1 trang A4 đen trắng. Tiền thừa: <span class="zero">0 won</span>!
+# 메인 홍보 자리(범용 배너, 2026-10-27) — 외국어 메인에서는 칸이 숨겨지지만 번역은 넣어 둠
+@@2140061523
+en: <button class="pm-sound" type="button">🔇 Sound on</button>
+zh: <button class="pm-sound" type="button">🔇 打开声音</button>
+vi: <button class="pm-sound" type="button">🔇 Bật âm thanh</button>
+@@84ef59a49f
+en: Promotion video
+zh: 宣传视频
+vi: Video quảng bá
+@@efebbfeb2a
+en: <a class="pm-btn" href="faq.html#faq-24">See how to pay →</a>
+zh: <a class="pm-btn" href="faq.html#faq-24">查看付款方法 →</a>
+vi: <a class="pm-btn" href="faq.html#faq-24">Xem cách thanh toán →</a>
+@@7b25d01122
+en: 📢 PrintShop Mini news
+zh: 📢 PrintShop Mini 最新消息
+vi: 📢 Tin mới PrintShop Mini
+@@7d15f6cc7c
+en: At the Toss kiosk, use [선불충전] (Prepaid top-up) to pay only the amount you need now. From 70 won for 1 black-and-white A4 page. Money left over: 0 won!
+zh: 在 Toss 自助机用［선불충전］（预付充值）只付现在要用的金额。黑白 A4 一张 70 韩元起。剩下的钱：0 韩元！
+vi: Ở kiosk Toss, dùng [선불충전] (Nạp tiền trả trước) để chỉ trả đúng số tiền cần dùng bây giờ. Từ 70 won cho 1 trang A4 đen trắng. Tiền thừa: 0 won!

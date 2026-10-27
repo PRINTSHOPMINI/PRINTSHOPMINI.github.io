@@ -6304,20 +6304,8 @@
    "guide-print.html"
   ]
  },
- "35f031a4cc": {
-  "ko": "토스 키오스크 선불충전 안내 영상",
-  "pages": [
-   "index.html"
-  ]
- },
  "771d3cd255": {
   "ko": "<span class=\"pm-tag\">💳 카드 없어도 OK</span>",
-  "pages": [
-   "index.html"
-  ]
- },
- "b64897fdab": {
-  "ko": "<a href=\"faq.html#faq-24\">결제 방법 자세히 보기 →</a>",
   "pages": [
    "index.html"
   ]
@@ -6328,8 +6316,32 @@
    "index.html"
   ]
  },
- "cfb7303909": {
-  "ko": "토스 키오스크 <b>[선불충전]</b>으로 <b>지금 쓸 금액만</b> 결제해요. 흑백 A4 1장 70원부터. 남는 돈 <span class=\"zero\">0원</span>!",
+ "2140061523": {
+  "ko": "<button class=\"pm-sound\" type=\"button\">🔇 소리 켜기</button>",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "84ef59a49f": {
+  "ko": "홍보 영상",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "efebbfeb2a": {
+  "ko": "<a class=\"pm-btn\" href=\"faq.html#faq-24\">결제 방법 자세히 보기 →</a>",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "7b25d01122": {
+  "ko": "📢 지금 프린트샵미니 소식",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "7d15f6cc7c": {
+  "ko": "토스 키오스크 [선불충전]으로 지금 쓸 금액만 결제해요. 흑백 A4 1장 70원부터. 남는 돈 0원!",
   "pages": [
    "index.html"
   ]

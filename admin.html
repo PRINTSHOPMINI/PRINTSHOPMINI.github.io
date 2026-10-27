@@ -127,6 +127,19 @@ input::-ms-reveal,input::-ms-clear{display:none}   /* 브라우저(엣지)가 �
 .inline-add .form-row{margin-bottom:0;flex:1;min-width:140px}
 
 /* FAQ 카테고리·순서 */
+.promo-card{border:1.5px solid var(--border);border-radius:12px;padding:16px;margin-bottom:14px;background:var(--bg)}
+.promo-card.live{border-color:var(--green);background:var(--green-light)}
+.promo-top{display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.promo-top b{font-size:14px}
+.promo-badge{font-size:12px;font-weight:700;border-radius:50px;padding:3px 10px;background:#E5E7EB;color:var(--text2)}
+.promo-card.live .promo-badge{background:var(--green);color:#fff}
+.promo-top .sp{flex:1}
+.promo-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+.promo-grid .full{grid-column:1/-1}
+.promo-grid textarea{min-height:64px}
+.promo-on{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:700;cursor:pointer}
+.promo-on input{width:18px;height:18px}
+@media(max-width:600px){.promo-grid{grid-template-columns:1fr}}
 .faq-hint{font-size:12.5px;color:var(--text3);margin:0 0 12px;line-height:1.6}
 .faq-hint b{color:var(--blue)}
 .faq-cat-row{display:flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid var(--border);border-radius:10px;margin-bottom:8px;background:var(--bg);flex-wrap:wrap}
@@ -200,6 +213,7 @@ input::-ms-reveal,input::-ms-clear{display:none}   /* 브라우저(엣지)가 �
     <button class="tab-btn" onclick="switchTab('branch',this)">📍 지점</button>
     <button class="tab-btn" onclick="switchTab('price',this)">💰 요금표</button>
     <button class="tab-btn" onclick="switchTab('faq',this)">❓ FAQ</button>
+    <button class="tab-btn" onclick="switchTab('promo',this)">📢 메인 홍보</button>
     <button class="tab-btn" onclick="switchTab('guide',this)">📎 이용안내</button>
   </div>
 
@@ -475,6 +489,23 @@ input::-ms-reveal,input::-ms-clear{display:none}   /* 브라우저(엣지)가 �
   </div>
   </div><!-- /tabGuide -->
 
+  <!-- 메인 홍보 탭 -->
+  <div class="tab-panel" id="tabPromo">
+  <div class="add-box">
+    <div class="add-box-title">📢 메인 홍보 자리 (첫 화면 영상·그림 배너)</div>
+    <p class="faq-hint">홈페이지 첫 화면의 '📢 지금 프린트샵미니 소식' 칸에 나올 홍보를 정해요.<br>
+      <b>켜져 있고 기간 안에 있는 것 중 맨 위 1개</b>만 나와요. 순서는 ▲▼로 바꿔요. 나올 게 없으면 칸이 숨겨져요.<br>
+      영상 파일은 홈페이지 <b>videos</b> 폴더에 올린 뒤 이름을 적어요 (예: videos/promo-prepaid.mp4). 영상이 없으면 그림만 적어도 돼요.<br>
+      외국어(영·중·베) 메인에는 이 칸이 나오지 않아요.</p>
+    <div class="status-bar" id="promoStatus"></div>
+    <div id="promoList"><div class="list-empty">불러오는 중...</div></div>
+    <div class="form-actions" style="justify-content:space-between;margin-top:16px">
+      <button class="btn-cancel" type="button" onclick="addPromo()">➕ 새 홍보 추가</button>
+      <button class="btn-primary" type="button" id="promoSaveBtn" onclick="savePromo()">💾 저장 (홈페이지에 바로 반영)</button>
+    </div>
+  </div>
+  </div><!-- /tabPromo -->
+
 </div>
 
 <!-- 지점 수정 모달 -->
@@ -744,6 +775,7 @@ async function doLogin(){
     loadLabels();
     loadPriceItems();
     loadFaqs();
+    loadPromo();
   }else{
     document.getElementById('loginErr').style.display='block';
     document.getElementById('pwInput').value='';
@@ -852,6 +884,75 @@ async function deleteNotice(id,title){
   }catch(e){
     showToast('삭제에 실패했습니다.');
   }
+}
+
+/* ===== 메인 홍보 자리 ===== */
+/* inventory_config 의 home_promo = {items:[{on,start,end,tag,title,desc,btn,link,video,poster}]}
+   홈페이지(index.html)는 켜져 있고 기간 안인 것 중 맨 위 1개를 보여 줘요 */
+var PROMO=[];
+var PROMO_DEFAULT={on:true,start:'',end:'',tag:'💳 카드 없어도 OK',title:'충전카드 안 사도 돼요.\n쓸 만큼만 내세요.',
+  desc:'토스 키오스크 [선불충전]으로 지금 쓸 금액만 결제해요. 흑백 A4 1장 70원부터. 남는 돈 0원!',
+  btn:'결제 방법 자세히 보기',link:'faq.html#faq-24',video:'videos/promo-prepaid.mp4',poster:'videos/promo-prepaid.jpg'};
+var PROMO_FIELDS=[['tag','작은 꼬리표 (선택)','예: 🎉 신규 오픈',0],['btn','버튼 글자','예: 자세히 보기 · 지점 찾기 · 길찾기',0],
+  ['title','제목 (Enter로 줄바꿈)','예: 수원 ○○점 새로 열었어요!',2],['desc','설명 (선택)','짧게 한두 줄',2],
+  ['link','버튼 링크','예: faq.html#faq-24 · branches.html · https://naver.me/...',1],
+  ['video','영상 파일 (선택)','예: videos/promo-prepaid.mp4',0],['poster','그림 파일 (영상 미리보기 또는 그림만)','예: videos/promo-prepaid.jpg',0]];
+function promoToday(){return new Date(Date.now()+9*3600e3).toISOString().slice(0,10);}
+function promoLiveIndex(){
+  var t=promoToday();
+  for(var i=0;i<PROMO.length;i++){var x=PROMO[i];
+    if(x.on&&(!x.start||x.start<=t)&&(!x.end||t<=x.end)&&(x.video||x.poster)&&x.title)return i;}
+  return -1;
+}
+async function loadPromo(){
+  var st=document.getElementById('promoStatus');
+  try{
+    var r=await fetch(SB_URL+'/rest/v1/inventory_config?key=eq.home_promo',{headers:SB_HDR});
+    var j=await r.json();
+    if(j[0]&&j[0].value&&Array.isArray(j[0].value.items)){PROMO=j[0].value.items;}
+    else{PROMO=[Object.assign({},PROMO_DEFAULT)];showStatus(st,'ok','아직 저장한 적이 없어서 지금 홈페이지에 나오는 기본 홍보(토스 선불충전)를 보여 드려요.');}
+  }catch(e){showStatus(st,'err','불러오지 못했어요. 새로고침해 주세요.');return;}
+  renderPromo();
+}
+function renderPromo(){
+  var live=promoLiveIndex(),t=promoToday();
+  var el=document.getElementById('promoList');
+  if(!PROMO.length){el.innerHTML='<div class="list-empty">홍보가 없어요. 저장하면 홈페이지 칸이 숨겨져요.</div>';return;}
+  el.innerHTML=PROMO.map(function(x,i){
+    var badge=i===live?'✅ 지금 메인에 나와요':!x.on?'꺼짐':(x.start&&t<x.start)?'⏳ 시작 전':(x.end&&x.end<t)?'⌛ 기간 끝남':(!x.title||!(x.video||x.poster))?'⚠️ 제목·영상/그림 필요':'대기 (위에 있는 것이 먼저 나와요)';
+    var f=PROMO_FIELDS.map(function(d){
+      var v=escHtml(x[d[0]]||''),cls=d[3]?' full':'';
+      var inp=d[3]===2?'<textarea oninput="setPromo('+i+',\''+d[0]+'\',this.value)" placeholder="'+d[2]+'">'+v+'</textarea>'
+        :'<input type="text" value="'+v+'" oninput="setPromo('+i+',\''+d[0]+'\',this.value)" placeholder="'+d[2]+'">';
+      return '<div class="form-row'+cls+'"><label>'+d[1]+'</label>'+inp+'</div>';
+    }).join('');
+    return '<div class="promo-card'+(i===live?' live':'')+'"><div class="promo-top"><b>'+(i+1)+'번</b><span class="promo-badge">'+badge+'</span><span class="sp"></span>'
+      +'<label class="promo-on"><input type="checkbox"'+(x.on?' checked':'')+' onchange="setPromo('+i+',\'on\',this.checked,1)"> 켜기</label>'
+      +'<button class="btn-mv" type="button" onclick="movePromo('+i+',-1)"'+(i?'':' disabled')+'>▲</button>'
+      +'<button class="btn-mv" type="button" onclick="movePromo('+i+',1)"'+(i<PROMO.length-1?'':' disabled')+'>▼</button>'
+      +'<button class="btn-del" type="button" onclick="delPromo('+i+')">삭제</button></div>'
+      +'<div class="promo-grid"><div class="form-row"><label>시작일 (비우면 바로)</label><input type="date" value="'+escHtml(x.start||'')+'" onchange="setPromo('+i+',\'start\',this.value,1)"></div>'
+      +'<div class="form-row"><label>종료일 (비우면 계속)</label><input type="date" value="'+escHtml(x.end||'')+'" onchange="setPromo('+i+',\'end\',this.value,1)"></div>'
+      +f+'</div></div>';
+  }).join('');
+}
+function setPromo(i,k,v,re){PROMO[i][k]=v;if(re)renderPromo();}
+function movePromo(i,d){var j=i+d;if(j<0||j>=PROMO.length)return;var a=PROMO[i];PROMO[i]=PROMO[j];PROMO[j]=a;renderPromo();}
+function delPromo(i){if(!confirm((i+1)+'번 홍보를 지울까요? (저장을 눌러야 홈페이지에 반영돼요)'))return;PROMO.splice(i,1);renderPromo();}
+function addPromo(){PROMO.push({on:false,start:'',end:'',tag:'',title:'',desc:'',btn:'자세히 보기',link:'',video:'',poster:''});renderPromo();}
+async function savePromo(){
+  var st=document.getElementById('promoStatus'),b=document.getElementById('promoSaveBtn');
+  PROMO.forEach(function(x){['tag','title','desc','btn','link','video','poster'].forEach(function(k){x[k]=String(x[k]||'').trim();});});
+  b.disabled=true;
+  try{
+    var h=Object.assign({},SB_HDR,{'Prefer':'resolution=merge-duplicates,return=minimal'});
+    var r=await fetch(SB_URL+'/rest/v1/inventory_config?on_conflict=key',{method:'POST',headers:h,body:JSON.stringify({key:'home_promo',value:{items:PROMO}})});
+    if(!r.ok)throw new Error('save');
+    var live=promoLiveIndex();
+    showStatus(st,'ok',live<0?'저장했어요. 지금 나올 홍보가 없어서 홈페이지 칸은 숨겨져요.':'저장했어요. 홈페이지에는 '+(live+1)+'번이 나와요.');
+    renderPromo();
+  }catch(e){showStatus(st,'err','저장하지 못했어요. 다시 눌러 주세요.');}
+  b.disabled=false;
 }
 
 function showStatus(el,type,msg){
