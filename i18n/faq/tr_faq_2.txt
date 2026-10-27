@@ -377,11 +377,12 @@ Có hai loại máy ép. Hãy xem cửa hàng có loại nào trước.
 🆔 ID cards are copied on the glass.
 ⛔ Don't put them in the document feeder (ADF) on top of the printer machine.
 
-1. Put the ID card at the top-left corner of the glass, at the white arrow.
+1. Put the ID card about 5mm away from the top-left corner of the glass (the white arrow). If it touches the corner, the edges get cut off.
 2. Put it with the ID content facing the glass. (content down)
 3. On the machine screen, choose the [신분증복사] (ID Copy) option inside [복사] (Copy).
 
 ⚠️ Only an ID-card-sized area is copied. If the position is even a little off, it comes out cut off.
+❌ Never copy a passport with [신분증복사] (ID copy)! Only part of the passport gets copied. Always use [기본복사] (Basic copy) for passports.
 📌 There is a [신분증 복사 방법] (How to copy ID) notice on the wall next to the printer machine. Please follow it.
 
 📖 Tap here for the picture guide.
@@ -391,11 +392,12 @@ Có hai loại máy ép. Hãy xem cửa hàng có loại nào trước.
 🆔 身份证放在玻璃板上复印。
 ⛔ 不要放进复合机上方放原件的地方（ADF）。
 
-1. 把身份证对准玻璃板左上角的白色箭头位置放好。
+1. 把身份证放在离玻璃板左上角（白色箭头）约 5mm 的地方。紧贴角落的话，边缘会被切掉。
 2. 身份证的内容朝向玻璃板放。（内容朝下）
 3. 在复合机屏幕上选择［복사］（复印）里的［신분증복사］（身份证复印）选项。
 
 ⚠️ 只复印身份证大小的范围。放的位置稍有偏差就会被切掉。
+❌ 护照绝对不要用［신분증복사］（身份证复印）！只会复印护照的一部分。护照一定要用［기본복사］（基本复印）。
 📌 复合机旁边的墙上贴着［신분증 복사 방법］（身份证复印方法）的说明。请照着做。
 
 📖 点这里查看详细的图片说明。
@@ -405,11 +407,12 @@ Có hai loại máy ép. Hãy xem cửa hàng có loại nào trước.
 🆔 Thẻ căn cước được photo trên mặt kính.
 ⛔ Đừng cho vào khay nạp bản gốc (ADF) phía trên máy in đa năng.
 
-1. Đặt thẻ ở góc trên bên trái mặt kính, đúng chỗ mũi tên trắng.
+1. Đặt thẻ cách góc trên bên trái mặt kính (mũi tên trắng) khoảng 5mm. Nếu sát góc, mép thẻ sẽ bị cắt mất.
 2. Đặt mặt có thông tin của thẻ úp xuống mặt kính. (nội dung hướng xuống)
 3. Trên màn hình máy, chọn tùy chọn [신분증복사] (Photo thẻ) trong [복사] (Photo).
 
 ⚠️ Chỉ photo vùng bằng kích thước thẻ. Đặt lệch một chút là sẽ bị cắt mất.
+❌ Tuyệt đối không photo hộ chiếu bằng [신분증복사] (Photo thẻ)! Chỉ một phần hộ chiếu được photo. Hộ chiếu phải dùng [기본복사] (Photo cơ bản).
 📌 Trên tường cạnh máy in đa năng có dán hướng dẫn [신분증 복사 방법] (Cách photo thẻ). Hãy làm theo.
 
 📖 Bấm vào đây để xem hướng dẫn bằng hình.
@@ -429,7 +432,7 @@ Có hai loại máy ép. Hãy xem cửa hàng có loại nào trước.
 📘 Put these originals on the glass, one at a time.
 - Books, ID cards, bankbooks, passports
 - Wrinkled paper, paper with notes stuck on, stapled paper
-- On the glass, line it up with the white arrow at the top-left corner.
+- On the glass, line it up with the white arrow at the top-left corner. (Only ID cards go about 5mm away from the corner.)
 - Put it with the content facing the glass. (Opposite of the ADF!)
 
 ⚠️ Leave the original orientation option at [세로] (Portrait) and don't change it. If you change it, the content gets cut off.
@@ -450,7 +453,7 @@ Có hai loại máy ép. Hãy xem cửa hàng có loại nào trước.
 📘 下面这些原件请一张一张放在玻璃板上。
 - 书、身份证、存折、护照
 - 皱了的纸、贴着便条的纸、有订书钉的纸
-- 在玻璃板上对准左上角的白色箭头放。
+- 在玻璃板上对准左上角的白色箭头放。（只有身份证要离角落约 5mm。）
 - 内容朝向玻璃板放。（和 ADF 相反！）
 
 ⚠️ 原稿方向选项请保持［세로］（纵向），不要改。改了内容会被切掉。
@@ -471,7 +474,7 @@ Có hai loại máy ép. Hãy xem cửa hàng có loại nào trước.
 📘 Những bản gốc dưới đây đặt từng tờ lên mặt kính.
 - Sách, thẻ căn cước, sổ ngân hàng, hộ chiếu
 - Giấy nhàu, giấy có dán ghi chú, giấy có ghim bấm
-- Trên mặt kính, căn theo mũi tên trắng ở góc trên bên trái.
+- Trên mặt kính, căn theo mũi tên trắng ở góc trên bên trái. (Riêng thẻ căn cước thì cách góc khoảng 5mm.)
 - Đặt mặt có nội dung úp xuống mặt kính. (Ngược với ADF!)
 
 ⚠️ Để tùy chọn hướng bản gốc là [세로] (Dọc) và đừng đổi. Nếu đổi, nội dung sẽ bị cắt.

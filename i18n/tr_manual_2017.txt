@@ -89,3 +89,25 @@ vi: 🔎 Nếu chữ nhỏ hoặc là ảnh
 en: In <b>[해상도]</b> (Resolution), choose a <b>bigger dpi number</b>. It gets sharper.<br/>But the file gets bigger, so it may be hard to send by email.
 zh: 在<b>［해상도］</b>（分辨率）里选择<b>数字大的 dpi</b>，会更清晰。<br/>但文件会变大，可能不好用邮件发送。
 vi: Ở <b>[해상도]</b> (Độ phân giải), chọn <b>số dpi lớn hơn</b>. Sẽ nét hơn.<br/>Nhưng tệp sẽ lớn hơn nên có thể khó gửi qua email.
+
+# 2026-10-27 사용자 확정: 신분증만 모서리에서 5mm 띄우기, 여권은 절대 [신분증복사] 말고 [기본복사]
+@@fb91048792
+en: Don't put ID cards · bankbooks · passports · books · crumpled paper here — put them on the <b>glass</b>. (Line them up with the white arrow at the top-left corner. <b>Only ID cards</b> go <b>about 5mm away</b> from the corner)
+zh: 身份证 · 存折 · 护照 · 书 · 皱纸不要放这里，请放在<b>玻璃板</b>上。（对准左上角的白色箭头。<b>只有身份证</b>要离角落<b>约 5mm</b>）
+vi: Đừng đặt thẻ căn cước · sổ ngân hàng · hộ chiếu · sách · giấy nhàu vào đây, hãy đặt lên <b>mặt kính</b>. (Căn theo mũi tên trắng ở góc trên bên trái. <b>Riêng thẻ căn cước</b> thì đặt <b>cách góc khoảng 5mm</b>)
+@@b22fe2d6a1
+en: <b>ID cards · bankbooks · passports · books</b> are not loose sheets, so don't put them in the document feeder. Open the printer machine cover and put them on the <b>glass</b>. The <b>white arrow at the top-left corner</b> of the glass is the guide, and the <b>side with the content faces the glass</b>. <b>Only ID cards</b> go <b>about 5mm away</b> from the corner.
+zh: <b>身份证 · 存折 · 护照 · 书</b>不是单张纸，不要放进原稿入口。打开复合机盖子，放在<b>玻璃板</b>上。以玻璃板<b>左上角的白色箭头</b>为准，<b>有内容的一面朝向玻璃板</b>。<b>只有身份证</b>要离角落<b>约 5mm</b>。
+vi: <b>Thẻ căn cước · sổ ngân hàng · hộ chiếu · sách</b> không phải giấy rời, nên đừng đặt vào khay nạp bản gốc. Mở nắp máy in đa năng và đặt lên <b>mặt kính</b>. Lấy <b>mũi tên trắng ở góc trên bên trái</b> làm chuẩn, <b>mặt có nội dung úp xuống mặt kính</b>. <b>Riêng thẻ căn cước</b> thì đặt <b>cách góc khoảng 5mm</b>.
+@@29caeb5882
+en: Put it <b>about 5mm away from the top-left corner</b> of the glass, with the <b>front side with the photo facing the glass</b>, then close the cover. <span class="r">If it touches the corner, the edges get cut off.</span>
+zh: 放在离玻璃板<b>左上角约 5mm</b> 的地方，<b>有照片的正面朝向玻璃</b>，然后盖上盖子。<span class="r">紧贴角落的话，边缘会被切掉。</span>
+vi: Đặt <b>cách góc trên bên trái mặt kính khoảng 5mm</b>, <b>mặt trước có ảnh úp xuống mặt kính</b>, rồi đóng nắp. <span class="r">Nếu sát góc, mép thẻ sẽ bị cắt mất.</span>
+@@69d254ab31
+en: <span class="x">!</span>Never copy a passport with [신분증복사] (ID copy)! Always use [기본복사] (Basic copy).
+zh: <span class="x">!</span>护照绝对不要用［신분증복사］（身份证复印）！一定要用［기본복사］（基本复印）。
+vi: <span class="x">!</span>Tuyệt đối không photo hộ chiếu bằng [신분증복사] (Photo thẻ)! Phải dùng [기본복사] (Photo cơ bản).
+@@6043ea853d
+en: The [신분증복사] (ID copy) tab has a <b>Passport</b> button, but if you press it, <b>only part of the passport gets copied.</b><br/><br/>❌ Don't copy passports with <b>[신분증복사]</b>.<br/>✅ Always copy passports with <b>[기본복사]</b> (Basic copy). Bankbooks also use <b>[기본복사]</b>.
+zh: ［신분증복사］（身份证复印）里有<b>护照</b>按钮，但按了它<b>只会复印护照的一部分。</b><br/><br/>❌ 护照不要用<b>［신분증복사］</b>。<br/>✅ 护照一定要用<b>［기본복사］</b>（基本复印）。存折也用<b>［기본복사］</b>。
+vi: Trong [신분증복사] (Photo thẻ) có nút <b>Hộ chiếu</b>, nhưng nếu bấm thì <b>chỉ một phần hộ chiếu được photo.</b><br/><br/>❌ Đừng photo hộ chiếu bằng <b>[신분증복사]</b>.<br/>✅ Hộ chiếu phải photo bằng <b>[기본복사]</b> (Photo cơ bản). Sổ ngân hàng cũng dùng <b>[기본복사]</b>.
