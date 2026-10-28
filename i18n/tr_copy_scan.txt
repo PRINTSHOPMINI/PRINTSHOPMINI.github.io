@@ -54,9 +54,9 @@ en: Always <b>put the original in the ADF (document feeder) first</b>, then star
 zh: 一定要<b>先把原件放进 ADF（放原件的地方）</b>，再开始操作。
 vi: Luôn <b>đặt bản gốc vào ADF (khay nạp bản gốc) trước</b>, rồi mới bắt đầu.
 @@6467ddebfe
-en: ✅ <b>If it works</b>, the original goes into the machine and then <b>the price screen [과금정보] appears by itself</b>.
-zh: ✅ <b>正常的话</b>，原件被吸进机器后，会<b>自动出现金额确认画面［과금정보］</b>。
-vi: ✅ <b>Nếu bình thường</b>, bản gốc sẽ được kéo vào máy rồi <b>màn hình giá tiền [과금정보] tự hiện ra</b>.
+en: ✅ <b>If it works</b>, the original goes into the machine and then <b>the [Billing Information] screen appears by itself</b>.
+zh: ✅ <b>正常的话</b>，原件被吸进机器后，会<b>自动出现金额确认画面［开票信息］</b>。
+vi: ✅ <b>Nếu bình thường</b>, bản gốc sẽ được kéo vào máy rồi <b>màn hình giá tiền [Billing Information] tự hiện ra</b>.
 @@39bb253c59
 en: 🛑 If you started but <b>the original doesn't go into the machine, do NOT pay!</b><br/><b>Cancel the job</b> on the screen and <b>start again from the beginning</b>.
 zh: 🛑 开始后<b>原件没有被吸进机器的话，绝对不要付款！</b><br/>请在屏幕上<b>取消操作</b>，<b>从头重新</b>开始。
@@ -394,25 +394,25 @@ en: Choose the Scan menu
 zh: 选择扫描菜单
 vi: Chọn menu Scan
 @@db26e19027
-en: <span class="r">Always place the original first</span>, then press <b>[스캔] (Scan)</b> on the screen.<br/>A screen for choosing where to save the file appears. Press <b>[PC]</b>.
-zh: <span class="r">一定要先放好原件</span>，再在复合机屏幕上按<b>［스캔］（扫描）</b>。<br/>会出现选择扫描文件保存位置的画面，请按<b>［PC］</b>。
-vi: <span class="r">Luôn đặt bản gốc trước</span>, rồi bấm <b>[스캔] (Scan)</b> trên màn hình.<br/>Màn hình chọn nơi lưu tệp sẽ hiện ra. Bấm <b>[PC]</b>.
+en: <span class="r">Always place the original first</span>, then press <b>[Scan]</b> on the screen.<br/>A screen for choosing where to save the file appears. Press <b>[PC]</b>.
+zh: <span class="r">一定要先放好原件</span>，再在复合机屏幕上按<b>［扫描］</b>。<br/>会出现选择扫描文件保存位置的画面，请按<b>［PC］</b>。
+vi: <span class="r">Luôn đặt bản gốc trước</span>, rồi bấm <b>[Scan] (Quét)</b> trên màn hình.<br/>Màn hình chọn nơi lưu tệp sẽ hiện ra. Bấm <b>[PC]</b>.
 @@8fca8074fd
 en: Scan options screen, with red boxes on 1 original size, 2 color (color · B&W), 3 file type (PDF · TIFF · JPEG), 4 Start button
 zh: 复合机扫描选项画面。1 原稿尺寸、2 颜色设置（彩色 · 黑白）、3 文件格式（PDF · TIFF · JPEG）、4 开始按钮上有红框
 vi: Màn hình tùy chọn scan, ô đỏ ở 1 khổ bản gốc, 2 màu (màu · đen trắng), 3 loại tệp (PDF · TIFF · JPEG), 4 nút Bắt đầu
 @@6de8330759
-en: Press [PC] and the options screen appears. Set them in the order of the numbers in the picture.<br/>Choose <b>① original size</b> (A4 by default; change it if your original is B4 or A3), <b>② color</b> (color / B&amp;W), <b>③ file type</b> (PDF · TIFF · JPEG), then press <b>④ [시작] (Start)</b>.
-zh: 按［PC］后会出现选项画面。请按图中编号的顺序设置。<br/>选择<b>① 原稿尺寸</b>（默认 A4，原件是 B4、A3 的话要改）<b>② 颜色设置</b>（彩色 / 黑白）<b>③ 文件格式</b>（PDF · TIFF · JPEG）后，按<b>④［시작］（开始）</b>。
-vi: Bấm [PC] sẽ hiện màn hình tùy chọn. Hãy chọn theo thứ tự số trong hình.<br/>Chọn <b>① khổ bản gốc</b> (mặc định A4, nếu bản gốc là B4, A3 thì đổi) <b>② màu</b> (màu / đen trắng) <b>③ loại tệp</b> (PDF · TIFF · JPEG), rồi bấm <b>④ [시작] (Bắt đầu)</b>.
+en: Press [PC] and the options screen appears. Set them in the order of the numbers in the picture.<br/>Choose <b>① original size</b> (A4 by default; change it if your original is B4 or A3), <b>② color</b> (color / B&amp;W), <b>③ file type</b> (PDF · TIFF · JPEG), then press <b>④ [Start]</b>.
+zh: 按［PC］后会出现选项画面。请按图中编号的顺序设置。<br/>选择<b>① 原稿尺寸</b>（默认 A4，原件是 B4、A3 的话要改）<b>② 颜色设置</b>（彩色 / 黑白）<b>③ 文件格式</b>（PDF · TIFF · JPEG）后，按<b>④［开始］</b>。
+vi: Bấm [PC] sẽ hiện màn hình tùy chọn. Hãy chọn theo thứ tự số trong hình.<br/>Chọn <b>① khổ bản gốc</b> (mặc định A4, nếu bản gốc là B4, A3 thì đổi) <b>② màu</b> (màu / đen trắng) <b>③ loại tệp</b> (PDF · TIFF · JPEG), rồi bấm <b>④ [Start] (Bắt đầu)</b>.
 @@cb47ae30e3
 en: 100원
 zh: 100원
 vi: 100원
 @@f99cad62a6
-en: Check the price screen [과금정보] carefully. If everything is correct, press <b>[확인] (OK)</b>.
-zh: 请仔细确认金额确认画面［과금정보］的内容，全部正确的话按<b>［확인］（确认）</b>。
-vi: Kiểm tra kỹ màn hình giá tiền [과금정보]. Nếu mọi thứ đúng, bấm <b>[확인] (Xác nhận)</b>.
+en: Check the [Billing Information] screen carefully. If everything is correct, press <b>[OK]</b>.
+zh: 请仔细确认金额确认画面［开票信息］的内容，全部正确的话按<b>［确定］</b>。
+vi: Kiểm tra kỹ màn hình giá tiền [Billing Information]. Nếu mọi thứ đúng, bấm <b>[OK] (Xác nhận)</b>.
 @@c35f008cf9
 en: The '1번복합기스캔함' (Machine 1 scan folder) icon on the desktop: a teal background with a printer and the number 1
 zh: 桌面上的“1번복합기스캔함”（1 号复合机扫描文件夹）图标。蓝绿色背景上有复合机和数字 1

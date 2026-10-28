@@ -66,9 +66,9 @@ en: Choose the Fax menu
 zh: 选择传真菜单
 vi: Chọn menu Fax
 @@d224ca8408
-en: <span class="r">Always place the original first</span>, then press <b>[팩스] (Fax)</b> on the screen.<br/>When you touch [팩스] (Fax), <b>the options screen appears right away</b>.
-zh: <span class="r">一定要先放好原件</span>，再在复合机屏幕上按<b>［팩스］（传真）</b>。<br/>点［팩스］（传真）后，<b>马上会出现选项画面</b>。
-vi: <span class="r">Luôn đặt bản gốc trước</span>, rồi bấm <b>[팩스] (Fax)</b> trên màn hình.<br/>Chạm [팩스] (Fax) thì <b>màn hình tùy chọn hiện ra ngay</b>.
+en: <span class="r">Always place the original first</span>, then press <b>[Fax]</b> on the screen.<br/>When you touch [Fax], <b>the options screen appears right away</b>.
+zh: <span class="r">一定要先放好原件</span>，再在复合机屏幕上按<b>［传真］</b>。<br/>点［传真］后，<b>马上会出现选项画面</b>。
+vi: <span class="r">Luôn đặt bản gốc trước</span>, rồi bấm <b>[Fax] (Fax)</b> trên màn hình.<br/>Chạm [Fax] (Fax) thì <b>màn hình tùy chọn hiện ra ngay</b>.
 @@68c69eb046
 en: Fax options screen, with red boxes on 1 receiver's fax number, 2 original size, 3 two-sided, 4 Start button
 zh: 复合机传真选项画面。1 输入对方传真号码、2 原稿尺寸、3 双面、4 开始按钮上有红框
@@ -78,9 +78,9 @@ en: Number · options · Start
 zh: 号码 · 选项 · 开始
 vi: Số fax · tùy chọn · Bắt đầu
 @@05b3ce5bc0
-en: Type <b>① the receiver's fax number</b> using <b>numbers only</b>. Choose options like <b>② original size</b> (A4 by default; change it if your original is B4 or A3) and <b>③ two-sided/one-sided</b>, then press <b>④ [시작] (Start)</b>.
-zh: <b>① 对方传真号码</b>只输入<b>数字</b>。选择<b>② 原稿尺寸</b>（默认 A4，原件是 B4、A3 的话要改）、<b>③ 双面/单面</b>等选项后，按<b>④［시작］（开始）</b>。
-vi: Nhập <b>① số fax nơi nhận</b>, <b>chỉ nhập số</b>. Chọn các tùy chọn như <b>② khổ bản gốc</b> (mặc định A4, nếu bản gốc là B4, A3 thì đổi), <b>③ 2 mặt/1 mặt</b>, rồi bấm <b>④ [시작] (Bắt đầu)</b>.
+en: Type <b>① the receiver's fax number</b> using <b>numbers only</b>. Choose options like <b>② original size</b> (A4 by default; change it if your original is B4 or A3) and <b>③ two-sided/one-sided</b>, then press <b>④ [Start]</b>.
+zh: <b>① 对方传真号码</b>只输入<b>数字</b>。选择<b>② 原稿尺寸</b>（默认 A4，原件是 B4、A3 的话要改）、<b>③ 双面/单面</b>等选项后，按<b>④［开始］</b>。
+vi: Nhập <b>① số fax nơi nhận</b>, <b>chỉ nhập số</b>. Chọn các tùy chọn như <b>② khổ bản gốc</b> (mặc định A4, nếu bản gốc là B4, A3 thì đổi), <b>③ 2 mặt/1 mặt</b>, rồi bấm <b>④ [Start] (Bắt đầu)</b>.
 @@54c84cd0bf
 en: <span class="x">!</span>If there is an area code, always type it too
 zh: <span class="x">!</span>有区号的话一定要一起输入
@@ -94,9 +94,9 @@ en: 500원
 zh: 500원
 vi: 500원
 @@2399f3f169
-en: Carefully check the receiver's number and the number of pages. If everything is correct, press <b>[확인] (OK)</b>.
-zh: 请仔细确认接收号码和张数是否正确，全部正确的话按<b>［확인］（确认）</b>。
-vi: Kiểm tra kỹ số nhận và số tờ. Nếu mọi thứ đúng, bấm <b>[확인] (Xác nhận)</b>.
+en: Carefully check the receiver's number and the number of pages. If everything is correct, press <b>[OK]</b>.
+zh: 请仔细确认接收号码和张数是否正确，全部正确的话按<b>［确定］</b>。
+vi: Kiểm tra kỹ số nhận và số tờ. Nếu mọi thứ đúng, bấm <b>[OK] (Xác nhận)</b>.
 @@3cf2c3c6dc
 en: QR code for checking the fax result
 zh: 确认传真发送结果的二维码

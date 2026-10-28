@@ -70,13 +70,13 @@ en: On the right side of the scan screen, you set the file name and how sharp it
 zh: 在扫描画面右边设置文件名和清晰度。
 vi: Ở bên phải màn hình scan, bạn đặt tên tệp và độ nét.
 @@c5524acda1
-en: Scan settings screen. Inside the red boxes are [파일 이름] (File name), [날짜 및 시간 추가] (Add date and time) and [해상도] (Resolution)
-zh: 扫描设置画面。红框里是［파일 이름］（文件名）、［날짜 및 시간 추가］（添加日期和时间）和［해상도］（分辨率）
-vi: Màn hình cài đặt scan. Trong khung đỏ là [파일 이름] (Tên tệp), [날짜 및 시간 추가] (Thêm ngày giờ) và [해상도] (Độ phân giải)
+en: Scan settings screen. Inside the red boxes are [File Name], [Add Date & Time] and [Resolution]
+zh: 扫描设置画面。红框里是［文件名］、［添加日期和时间］和［分辨率］
+vi: Màn hình cài đặt scan. Trong khung đỏ là [File Name] (Tên tệp), [Add Date & Time] (Thêm ngày giờ) và [Resolution] (Độ phân giải)
 @@064885ea18
-en: 📄 Don't uncheck [날짜 및 시간 추가] (Add date and time)!
-zh: 📄 不要取消勾选［날짜 및 시간 추가］（添加日期和时间）！
-vi: 📄 Đừng bỏ chọn [날짜 및 시간 추가] (Thêm ngày giờ)!
+en: 📄 Don't uncheck [Add Date & Time]!
+zh: 📄 不要取消勾选［添加日期和时间］！
+vi: 📄 Đừng bỏ chọn [Add Date & Time] (Thêm ngày giờ)!
 @@3444d6754d
 en: If you uncheck it, the file names become the same, and <b>the file you scanned first is erased and replaced by the new one.</b> Leave it checked so the date · time is added after the name, and it's safe.
 zh: 取消勾选的话文件名会一样，<b>先扫描的文件会被删掉，换成新文件。</b>保持勾选，名字后面会加上日期 · 时间，很安全。
@@ -86,9 +86,9 @@ en: 🔎 If the text is small or it's a photo
 zh: 🔎 字很小或是照片的话
 vi: 🔎 Nếu chữ nhỏ hoặc là ảnh
 @@983215abfd
-en: In <b>[해상도]</b> (Resolution), choose a <b>bigger dpi number</b>. It gets sharper.<br/>But the file gets bigger, so it may be hard to send by email.
-zh: 在<b>［해상도］</b>（分辨率）里选择<b>数字大的 dpi</b>，会更清晰。<br/>但文件会变大，可能不好用邮件发送。
-vi: Ở <b>[해상도]</b> (Độ phân giải), chọn <b>số dpi lớn hơn</b>. Sẽ nét hơn.<br/>Nhưng tệp sẽ lớn hơn nên có thể khó gửi qua email.
+en: In <b>[Resolution]</b> (Resolution), choose a <b>bigger dpi number</b>. It gets sharper.<br/>But the file gets bigger, so it may be hard to send by email.
+zh: 在<b>［分辨率］</b>（分辨率）里选择<b>数字大的 dpi</b>，会更清晰。<br/>但文件会变大，可能不好用邮件发送。
+vi: Ở <b>[Resolution]</b> (Độ phân giải), chọn <b>số dpi lớn hơn</b>. Sẽ nét hơn.<br/>Nhưng tệp sẽ lớn hơn nên có thể khó gửi qua email.
 
 # 2026-10-27 사용자 확정: 신분증만 모서리에서 5mm 띄우기, 여권은 절대 [신분증복사] 말고 [기본복사]
 @@fb91048792
