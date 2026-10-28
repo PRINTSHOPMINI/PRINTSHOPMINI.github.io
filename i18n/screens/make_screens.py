@@ -15,6 +15,8 @@ FONTS = {'en': (r'C:\Windows\Fonts\segoeui.ttf', r'C:\Windows\Fonts\segoeuib.ttf
 # (지울 칸, {언어: 글자}, 글자 크기, 정렬, 굵게, 글자색(None=원래 글자에서 뽑기))
 LANG_BTN = {'en': 'English', 'zh': '简体中文'}
 START = {'en': 'Start', 'zh': '开始'}
+# 흐릿한(작게 찍힌) 그림은 번짐 없이 칸 바탕색으로 칠해서 지우기
+FLAT_FILL = {'images/copy/copy-settings.png', 'images/copy/copy-zoom-density.png'}
 SCREENS = {
  'images/print/print-machine1.png': [
     ((180, 480, 300, 530), {'en': 'Copy', 'zh': '复印'}, 36, 'c', 0, (255, 255, 255)),
@@ -102,6 +104,54 @@ SCREENS = {
     ((480, 330, 660, 388), {'en': 'Mono', 'zh': '单色'}, 32, 'c', 0, None),
     ((38, 452, 200, 497), {'en': 'File Format', 'zh': '文件格式'}, 32, 'l', 0, None),
     ((38, 722, 140, 770), {'en': 'Resolution', 'zh': '分辨率'}, 30, 'l', 0, None)],
+ 'images/copy/copy-settings.png': [
+    ((118, 40, 180, 82), {'en': 'Copy', 'zh': '复印'}, 30, 'l', 0, (255, 255, 255)),
+    ((995, 42, 1078, 80), LANG_BTN, 22, 'l', 0, None),
+    ((30, 112, 400, 145), {'en': 'Load original documents and select copy options.', 'zh': '加载原始文档并选择复印选项。'}, 19, 'l', 0, None),
+    ((40, 168, 235, 200), {'en': 'Basic Copy', 'zh': '基本复印'}, 22, 'c', 0, (255, 255, 255)),
+    ((285, 165, 470, 205), {'en': 'ID Copy', 'zh': 'ID 复印'}, 22, 'c', 0, None),
+    ((30, 342, 140, 376), {'en': 'Color Mode', 'zh': '彩色模式'}, 20, 'l', 0, None),
+    ((95, 386, 235, 426), {'en': 'Color', 'zh': '彩色'}, 22, 'c', 0, (255, 255, 255)),
+    ((292, 386, 445, 426), {'en': 'Mono', 'zh': '单色'}, 22, 'c', 0, None),
+    ((30, 462, 130, 497), {'en': 'Original Size', 'zh': '原始大小'}, 20, 'l', 0, None),
+    ((505, 188, 645, 220), {'en': 'Original Orientation', 'zh': '原稿方向'}, 19, 'l', 0, None),
+    ((512, 224, 703, 268), {'en': 'Upright Images', 'zh': '直立图像'}, 19, 'c', 0, (255, 255, 255)),
+    ((718, 224, 911, 268), {'en': 'Sideways Images', 'zh': '侧向图像'}, 19, 'c', 0, None),
+    ((505, 308, 605, 340), {'en': 'N-Up', 'zh': 'N 页缩印'}, 20, 'l', 0, None),
+    ((512, 344, 703, 388), {'en': '1-Up', 'zh': '1 页缩印'}, 20, 'c', 0, (255, 255, 255)),
+    ((718, 344, 911, 388), {'en': '2-Up', 'zh': '2 页缩印'}, 20, 'c', 0, None),
+    ((510, 406, 705, 450), {'en': '4-Up', 'zh': '4 页缩印'}, 20, 'c', 0, None),
+    ((505, 488, 560, 520), {'en': 'Duplex', 'zh': '双面'}, 20, 'l', 0, None),
+    ((560, 521, 620, 543), {'en': 'Original', 'zh': '原始图像'}, 14, 'c', 0, None),
+    ((788, 521, 848, 543), {'en': 'Output', 'zh': '输出'}, 14, 'c', 0, None),
+    ((512, 548, 703, 592), {'en': '1 Sided', 'zh': '单面'}, 20, 'c', 0, (255, 255, 255)),
+    ((722, 548, 913, 592), {'en': '1 Sided', 'zh': '单面'}, 20, 'c', 0, (255, 255, 255)),
+    ((512, 610, 703, 654), {'en': '2 Sided, Book', 'zh': '双面，书本'}, 18, 'c', 0, None),
+    ((722, 610, 913, 654), {'en': '2 Sided, Book', 'zh': '双面，书本'}, 18, 'c', 0, None),
+    ((512, 672, 703, 716), {'en': '2 Sided, Calendar', 'zh': '双面，日历'}, 16, 'c', 0, None),
+    ((722, 672, 913, 716), {'en': '2 Sided, Calendar', 'zh': '双面，日历'}, 16, 'c', 0, None),
+    ((975, 108, 1155, 148), {'en': 'Price per page', 'zh': '每页价格'}, 22, 'c', 0, (255, 255, 255)),
+    ((1020, 476, 1105, 507), {'en': 'Reset', 'zh': '重置'}, 20, 'c', 0, (255, 255, 255)),
+    ((1030, 562, 1095, 597), START, 20, 'c', 0, (255, 255, 255))],
+ 'images/copy/copy-zoom-density.png': [
+    ((125, 20, 210, 70), {'en': 'Copy', 'zh': '复印'}, 34, 'l', 0, (255, 255, 255)),
+    ((30, 100, 485, 142), {'en': 'Load original documents and select copy options.', 'zh': '加载原始文档并选择复印选项。'}, 24, 'l', 0, None),
+    ((700, 155, 760, 182), {'en': 'Original', 'zh': '原始图像'}, 17, 'c', 0, None),
+    ((962, 155, 1025, 182), {'en': 'Output', 'zh': '输出'}, 17, 'c', 0, None),
+    ((612, 186, 850, 240), {'en': '1 Sided', 'zh': '单面'}, 26, 'c', 0, (255, 255, 255)),
+    ((874, 186, 1112, 240), {'en': '1 Sided', 'zh': '单面'}, 26, 'c', 0, (255, 255, 255)),
+    ((612, 256, 850, 310), {'en': '2 Sided, Book', 'zh': '双面，书本'}, 25, 'c', 0, None),
+    ((874, 256, 1112, 310), {'en': '2 Sided, Book', 'zh': '双面，书本'}, 25, 'c', 0, None),
+    ((612, 326, 850, 380), {'en': '2 Sided, Calendar', 'zh': '双面，日历'}, 23, 'c', 0, None),
+    ((874, 326, 1112, 380), {'en': '2 Sided, Calendar', 'zh': '双面，日历'}, 23, 'c', 0, None),
+    ((30, 276, 150, 307), {'en': 'Color Mode', 'zh': '彩色模式'}, 25, 'l', 0, None),
+    ((95, 316, 278, 362), {'en': 'Mono', 'zh': '单色'}, 26, 'c', 0, (255, 255, 255)),
+    ((30, 398, 150, 432), {'en': 'Original Size', 'zh': '原始大小'}, 25, 'l', 0, None),
+    ((30, 666, 175, 702), {'en': 'ID Copy', 'zh': 'ID 复印'}, 25, 'l', 0, None),
+    ((293, 702, 536, 754), {'en': 'Passport', 'zh': '护照'}, 25, 'c', 0, None),
+    ((608, 418, 722, 452), {'en': 'Reduce/Enlarge', 'zh': '缩小/放大'}, 24, 'l', 0, None),
+    ((745, 464, 854, 504), {'en': 'Original', 'zh': '原始图像'}, 22, 'r', 0, (255, 255, 255)),
+    ((608, 684, 722, 720), {'en': 'Darkness', 'zh': '浓度'}, 24, 'l', 0, None)],
  'video/manual_2017/m18_스캔중.png': [
     ((532, 255, 632, 288), {'en': '1 Sided→1 Sided', 'zh': '单面→单面'}, 17, 'l', 0, None),
     ((532, 290, 585, 320), {'en': 'Mono', 'zh': '单色'}, 17, 'l', 0, None),
@@ -140,6 +190,7 @@ def make(src, items, lang):
     flats = []
     for rect, tr, size, al, bold, color in items:
         m, bg, col, flat = text_mask(rgb, rect)
+        flat = flat or src in FLAT_FILL
         (flats.append((m, bg)) if flat else None)
         mask |= m if not flat else 0
         cols.append(color or col)

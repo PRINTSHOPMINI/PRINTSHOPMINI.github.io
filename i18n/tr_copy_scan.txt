@@ -106,21 +106,21 @@ en: Choose the Copy menu
 zh: 选择复印菜单
 vi: Chọn menu Photo
 @@28998acf2f
-en: <span class="r">Always place the original first</span>, then press <b>[복사] (Copy)</b> on the screen.
-zh: <span class="r">一定要先放好原件</span>，再在复合机屏幕上按<b>［복사］（复印）</b>。
-vi: <span class="r">Luôn đặt bản gốc trước</span>, rồi bấm <b>[복사] (Photo)</b> trên màn hình.
+en: <span class="r">Always place the original first</span>, then press <b>[Copy]</b> on the screen.
+zh: <span class="r">一定要先放好原件</span>，再在复合机屏幕上按<b>［复印］</b>。
+vi: <span class="r">Luôn đặt bản gốc trước</span>, rồi bấm <b>[Copy] (Photo)</b> trên màn hình.
 @@4c074b9d50
-en: Copy settings screen. [기본 복사] (Basic Copy) in the red box at the top left is selected in blue, with copies, color and original size options
-zh: 复合机复印设置画面。左上角红框里的［기본 복사］（基本复印）选成蓝色，可以选份数、颜色、原稿尺寸等
-vi: Màn hình cài đặt photo. Nút [기본 복사] (Photo cơ bản) trong ô đỏ góc trên bên trái đang được chọn màu xanh, có số bản, màu, khổ bản gốc
+en: Copy settings screen. [Basic Copy] in the red box at the top left is selected in blue, with copies, color and original size options
+zh: 复合机复印设置画面。左上角红框里的［基本复印］选成蓝色，可以选份数、颜色、原稿尺寸等
+vi: Màn hình cài đặt photo. Nút [Basic Copy] (Photo cơ bản) trong ô đỏ góc trên bên trái đang được chọn màu xanh, có số bản, màu, khổ bản gốc
 @@ba4b052739
 en: Set up · Start
 zh: 设置 · 开始
 vi: Cài đặt · Bắt đầu
 @@3cb646deb6
-en: Choose the options you want — <b>the number (how many sets)</b> · <b>original size</b> (A4 by default; change it if your original is B4 or A3) · color/B&amp;W — then press <b>[시작] (Start)</b>. The original goes into the machine and comes back out.<br/><span class="r">Check that [기본 복사] (Basic Copy) in the red box is selected in blue.</span>
-zh: 选择<b>数字（复印几份）</b> · <b>原稿尺寸</b>（默认 A4，原件是 B4、A3 的话要改）· 彩色/黑白等选项后，按<b>［시작］（开始）</b>。开始后原件会进到复合机里再出来。<br/><span class="r">请确认红框里的［기본 복사］（基本复印）选成了蓝色。</span>
-vi: Chọn các tùy chọn: <b>con số (photo mấy bộ)</b> · <b>khổ bản gốc</b> (mặc định A4, nếu bản gốc là B4, A3 thì đổi) · màu/đen trắng, rồi bấm <b>[시작] (Bắt đầu)</b>. Bản gốc sẽ vào máy rồi ra lại.<br/><span class="r">Kiểm tra nút [기본 복사] (Photo cơ bản) trong ô đỏ đang được chọn màu xanh.</span>
+en: Choose the options you want — <b>the number (how many sets)</b> · <b>original size</b> (A4 by default; change it if your original is B4 or A3) · color/B&amp;W — then press <b>[Start]</b>. The original goes into the machine and comes back out.<br/><span class="r">Check that [Basic Copy] in the red box is selected in blue.</span>
+zh: 选择<b>数字（复印几份）</b> · <b>原稿尺寸</b>（默认 A4，原件是 B4、A3 的话要改）· 彩色/黑白等选项后，按<b>［开始］</b>。开始后原件会进到复合机里再出来。<br/><span class="r">请确认红框里的［基本复印］选成了蓝色。</span>
+vi: Chọn các tùy chọn: <b>con số (photo mấy bộ)</b> · <b>khổ bản gốc</b> (mặc định A4, nếu bản gốc là B4, A3 thì đổi) · màu/đen trắng, rồi bấm <b>[Start] (Bắt đầu)</b>. Bản gốc sẽ vào máy rồi ra lại.<br/><span class="r">Kiểm tra nút [Basic Copy] (Photo cơ bản) trong ô đỏ đang được chọn màu xanh.</span>
 @@4a84c359f8
 en: <span class="x">!</span>The number means "how many sets", not "how many pages"
 zh: <span class="x">!</span>数字不是“张数”，而是“复印几份”
@@ -138,9 +138,9 @@ en: <b>We do not compensate for or take responsibility for problems caused by wr
 zh: <b>因选项设置错误造成的问题，不赔偿，也不负责。</b>
 vi: <b>Chúng tôi không bồi thường và không chịu trách nhiệm cho lỗi do cài đặt tùy chọn sai.</b>
 @@8fcb53c54b
-en: 과금정보
-zh: 과금정보
-vi: 과금정보
+en: Billing Information
+zh: 开票信息
+vi: Billing Information
 @@fdc42e2fd0
 en: 총 가격
 zh: 총 가격
@@ -154,9 +154,9 @@ en: 확인
 zh: 확인
 vi: 확인
 @@8fab67b827
-en: If it works, the price screen [과금정보] appears by itself. <b>If everything is correct, press [확인] (OK)</b>.
-zh: 正常的话会自动出现金额确认画面［과금정보］。<b>内容全部正确的话，按［확인］（确认）</b>。
-vi: Nếu bình thường, màn hình giá tiền [과금정보] sẽ tự hiện ra. <b>Nếu mọi thứ đúng, bấm [확인] (Xác nhận)</b>.
+en: If it works, the price screen [Billing Information] appears by itself. <b>If everything is correct, press [OK]</b>.
+zh: 正常的话会自动出现金额确认画面［开票信息］。<b>内容全部正确的话，按［确定］</b>。
+vi: Nếu bình thường, màn hình giá tiền [Billing Information] sẽ tự hiện ra. <b>Nếu mọi thứ đúng, bấm [OK] (Xác nhận)</b>.
 @@a1dfa8cb3f
 en: Insert card to pay
 zh: 插卡付款
@@ -270,29 +270,29 @@ en: Line it up with the <b>top-left corner</b> of the glass, <b>photo side down<
 zh: 对准玻璃板<b>左上角</b>，<b>有照片的正面朝向玻璃</b>放好，然后盖上盖子。
 vi: Căn theo <b>góc trên bên trái</b> mặt kính, <b>mặt có ảnh úp xuống kính</b>, rồi đóng nắp.
 @@4854666570
-en: Choose the <b>[복사] (Copy)</b> menu on the screen.
-zh: 在复合机屏幕上选择<b>［복사］（复印）</b>菜单。
-vi: Chọn menu <b>[복사] (Photo)</b> trên màn hình.
+en: Choose the <b>[Copy]</b> menu on the screen.
+zh: 在复合机屏幕上选择<b>［复印］</b>菜单。
+vi: Chọn menu <b>[Copy] (Photo)</b> trên màn hình.
 @@897e640050
-en: Press the <b>[신분증복사] (ID Copy)</b> tab, choose <b>color or B&amp;W</b>, then press <b>[시작] (Start)</b>.
-zh: 按<b>［신분증복사］（身份证复印）</b>标签，选择<b>彩色或黑白</b>后，按<b>［시작］（开始）</b>。
-vi: Bấm thẻ <b>[신분증복사] (Photo thẻ)</b>, chọn <b>màu hoặc đen trắng</b>, rồi bấm <b>[시작] (Bắt đầu)</b>.
+en: Press the <b>[ID Copy]</b> tab, choose <b>color or B&amp;W</b>, then press <b>[Start]</b>.
+zh: 按<b>［ID 复印］</b>标签，选择<b>彩色或黑白</b>后，按<b>［开始］</b>。
+vi: Bấm thẻ <b>[ID Copy] (Photo thẻ)</b>, chọn <b>màu hoặc đen trắng</b>, rồi bấm <b>[Start] (Bắt đầu)</b>.
 @@cc52c8bc66
-en: <b>To copy the back too</b> — <span class="r">flip the card over in the same spot</span>, then choose <b>[예] (Yes)</b> → <b>[시작] (Start)</b> again → pay<br/><b>Front only</b> — choose <b>[아니오] (No)</b>
-zh: <b>背面也要复印的话</b> — 在原来放的位置<span class="r">直接翻过来</span>放背面，选<b>［예］（是）</b>→ 再按<b>［시작］（开始）</b>→ 付款<br/><b>只复印正面的话</b> — 选<b>［아니오］（否）</b>
-vi: <b>Muốn photo cả mặt sau</b> — <span class="r">lật thẻ lại ngay tại chỗ cũ</span>, chọn <b>[예] (Có)</b> → bấm lại <b>[시작] (Bắt đầu)</b> → thanh toán<br/><b>Chỉ mặt trước</b> — chọn <b>[아니오] (Không)</b>
+en: <b>To copy the back too</b> — <span class="r">flip the card over in the same spot</span>, then choose <b>[예] (Yes)</b> → <b>[Start]</b> again → pay<br/><b>Front only</b> — choose <b>[아니오] (No)</b>
+zh: <b>背面也要复印的话</b> — 在原来放的位置<span class="r">直接翻过来</span>放背面，选<b>［예］（是）</b>→ 再按<b>［开始］</b>→ 付款<br/><b>只复印正面的话</b> — 选<b>［아니오］（否）</b>
+vi: <b>Muốn photo cả mặt sau</b> — <span class="r">lật thẻ lại ngay tại chỗ cũ</span>, chọn <b>[예] (Có)</b> → bấm lại <b>[Start] (Bắt đầu)</b> → thanh toán<br/><b>Chỉ mặt trước</b> — chọn <b>[아니오] (Không)</b>
 @@8e747948dd
-en: <span class="x">!</span>Don't use the [신분증복사] (ID Copy) tab for passports or bankbooks!
-zh: <span class="x">!</span>护照 · 存折不要用［신분증복사］（身份证复印）标签！
-vi: <span class="x">!</span>Hộ chiếu · sổ ngân hàng đừng dùng thẻ [신분증복사] (Photo thẻ)!
+en: <span class="x">!</span>Don't use the [ID Copy] tab for passports or bankbooks!
+zh: <span class="x">!</span>护照 · 存折不要用［ID 复印］标签！
+vi: <span class="x">!</span>Hộ chiếu · sổ ngân hàng đừng dùng thẻ [ID Copy] (Photo thẻ)!
 @@60b059281a
-en: The [신분증복사] (ID Copy) tab has a <b>passport</b> option, but if you choose it, <b>only part of the passport is copied.</b><br/><br/>Always copy passports with the <b>[기본복사] (Basic Copy)</b> tab. A bankbook is not an ID card either, so use <b>[기본복사] (Basic Copy)</b>.
-zh: ［신분증복사］（身份证复印）标签里虽然有<b>护照</b>这一项，但选了它的话<b>只会复印护照的一部分。</b><br/><br/>护照一定要用<b>［기본복사］（基本复印）</b>标签复印。存折也不是身份证，所以要用<b>［기본복사］（基本复印）</b>。
-vi: Trong thẻ [신분증복사] (Photo thẻ) có mục <b>hộ chiếu</b>, nhưng nếu chọn thì <b>chỉ photo được một phần hộ chiếu.</b><br/><br/>Hộ chiếu nhất định phải photo bằng thẻ <b>[기본복사] (Photo cơ bản)</b>. Sổ ngân hàng cũng không phải thẻ căn cước nên dùng <b>[기본복사] (Photo cơ bản)</b>.
+en: The [ID Copy] tab has a <b>passport</b> option, but if you choose it, <b>only part of the passport is copied.</b><br/><br/>Always copy passports with the <b>[Basic Copy]</b> tab. A bankbook is not an ID card either, so use <b>[Basic Copy]</b>.
+zh: ［ID 复印］标签里虽然有<b>护照</b>这一项，但选了它的话<b>只会复印护照的一部分。</b><br/><br/>护照一定要用<b>［基本复印］</b>标签复印。存折也不是身份证，所以要用<b>［基本复印］</b>。
+vi: Trong thẻ [ID Copy] (Photo thẻ) có mục <b>hộ chiếu</b>, nhưng nếu chọn thì <b>chỉ photo được một phần hộ chiếu.</b><br/><br/>Hộ chiếu nhất định phải photo bằng thẻ <b>[Basic Copy] (Photo cơ bản)</b>. Sổ ngân hàng cũng không phải thẻ căn cước nên dùng <b>[Basic Copy] (Photo cơ bản)</b>.
 @@2a8b4abb8a
-en: <b>[신분증복사] (ID Copy)</b> copies the front and back of a <b>card-type ID</b> (like a resident registration card or driver's license) side by side on one page. Use it only for card-type IDs.
-zh: <b>［신분증복사］（身份证复印）</b>是把居民身份证 · 驾照这种<b>卡片式证件</b>的正反面并排复印在一张纸上的功能。请只用于卡片式证件。
-vi: <b>[신분증복사] (Photo thẻ)</b> là chức năng photo mặt trước và mặt sau của <b>giấy tờ dạng thẻ</b> (như thẻ đăng ký cư trú, bằng lái xe) nằm cạnh nhau trên một trang. Chỉ dùng cho giấy tờ dạng thẻ.
+en: <b>[ID Copy]</b> copies the front and back of a <b>card-type ID</b> (like a resident registration card or driver's license) side by side on one page. Use it only for card-type IDs.
+zh: <b>［ID 复印］</b>是把居民身份证 · 驾照这种<b>卡片式证件</b>的正反面并排复印在一张纸上的功能。请只用于卡片式证件。
+vi: <b>[ID Copy] (Photo thẻ)</b> là chức năng photo mặt trước và mặt sau của <b>giấy tờ dạng thẻ</b> (như thẻ đăng ký cư trú, bằng lái xe) nằm cạnh nhau trên một trang. Chỉ dùng cho giấy tờ dạng thẻ.
 @@7a18b2643e
 en: Bankbook · passport copy / scan
 zh: 存折 · 护照复印 / 扫描
@@ -306,17 +306,17 @@ en: The <b>top-left corner of the glass is the starting point</b>. An <b>A4-size
 zh: 玻璃板<b>左上角是基准</b>。从基准开始<b>A4 大小</b>的范围会被复印 / 扫描，请把要复印或扫描的一面放在这个范围内，然后盖上盖子。
 vi: <b>Góc trên bên trái mặt kính là điểm chuẩn</b>. Vùng <b>bằng khổ A4</b> tính từ đó sẽ được photo / scan, nên hãy đặt trang cần làm trong vùng đó rồi đóng nắp.
 @@435d329168
-en: Choose the <b>[복사] (Copy)</b> or <b>[스캔] (Scan)</b> menu. For copying, set the options in the <b>[기본복사] (Basic Copy)</b> tab, check them, then press <b>[시작] (Start)</b>.
-zh: 选择<b>［복사］（复印）</b>或<b>［스캔］（扫描）</b>菜单。复印的话在<b>［기본복사］（基本复印）</b>标签中设置并确认后，按<b>［시작］（开始）</b>。
-vi: Chọn menu <b>[복사] (Photo)</b> hoặc <b>[스캔] (Scan)</b>. Nếu photo, cài đặt ở thẻ <b>[기본복사] (Photo cơ bản)</b>, kiểm tra rồi bấm <b>[시작] (Bắt đầu)</b>.
+en: Choose the <b>[Copy]</b> or <b>[Scan]</b> menu. For copying, set the options in the <b>[Basic Copy]</b> tab, check them, then press <b>[Start]</b>.
+zh: 选择<b>［复印］</b>或<b>［扫描］</b>菜单。复印的话在<b>［基本复印］</b>标签中设置并确认后，按<b>［开始］</b>。
+vi: Chọn menu <b>[Copy] (Photo)</b> hoặc <b>[Scan] (Scan)</b>. Nếu photo, cài đặt ở thẻ <b>[Basic Copy] (Photo cơ bản)</b>, kiểm tra rồi bấm <b>[Start] (Bắt đầu)</b>.
 @@0964207b1b
 en: When <b>"다른 면을 스캔하시겠습니까?" (Scan another page?)</b> appears — if you have more pages, <span class="r">put the next page on the glass first</span>, then press <b>[예] (Yes)</b>. If not, press <b>[아니오] (No)</b>.
 zh: 出现<b>“다른 면을 스캔하시겠습니까?”（要扫描其他页面吗？）</b>窗口时 — 还有要复印或扫描的页面，就<span class="r">先把下一页放到玻璃板上</span>，再按<b>［예］（是）</b>；没有的话按<b>［아니오］（否）</b>。
 vi: Khi hiện <b>"다른 면을 스캔하시겠습니까?" (Scan trang khác?)</b> — nếu còn trang cần làm, <span class="r">đặt trang tiếp theo lên mặt kính trước</span> rồi bấm <b>[예] (Có)</b>; nếu hết thì bấm <b>[아니오] (Không)</b>.
 @@bd6308e14d
-en: On the <b>[과금정보] (payment info)</b> screen, check the price and settings, then pay.
-zh: 在<b>［과금정보］（收费信息）</b>画面确认金额和设置是否正确，然后付款。
-vi: Ở màn hình <b>[과금정보] (thông tin thanh toán)</b>, kiểm tra giá tiền và cài đặt rồi thanh toán.
+en: On the <b>[Billing Information]</b> screen, check the price and settings, then pay.
+zh: 在<b>［开票信息］</b>画面确认金额和设置是否正确，然后付款。
+vi: Ở màn hình <b>[Billing Information] (thông tin thanh toán)</b>, kiểm tra giá tiền và cài đặt rồi thanh toán.
 @@c912f7b0a2
 en: You can copy or scan several pages one after another. Put the next page down <b>before</b> pressing <b>[예] (Yes)</b>.
 zh: 可以连续复印或扫描多页。按<b>［예］（是）</b>之前，请先把下一页放好。
