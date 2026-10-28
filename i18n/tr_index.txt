@@ -413,3 +413,7 @@ vi: 📢 Tin mới PrintShop Mini
 en: At the Toss kiosk, use [선불충전] (Prepaid top-up) to pay only the amount you need now. From 70 won for 1 black-and-white A4 page. Money left over: 0 won!
 zh: 在 Toss 自助机用［선불충전］（预付充值）只付现在要用的金额。黑白 A4 一张 70 韩元起。剩下的钱：0 韩元！
 vi: Ở kiosk Toss, dùng [선불충전] (Nạp tiền trả trước) để chỉ trả đúng số tiền cần dùng bây giờ. Từ 70 won cho 1 trang A4 đen trắng. Tiền thừa: 0 won!
+@@21ae704eda
+en: Sound on
+zh: 打开声音
+vi: Bật âm thanh
