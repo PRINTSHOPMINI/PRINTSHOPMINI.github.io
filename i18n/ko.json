@@ -6316,12 +6316,6 @@
    "index.html"
   ]
  },
- "2140061523": {
-  "ko": "<button class=\"pm-sound\" type=\"button\">🔇 소리 켜기</button>",
-  "pages": [
-   "index.html"
-  ]
- },
  "84ef59a49f": {
   "ko": "홍보 영상",
   "pages": [
@@ -6342,6 +6336,12 @@
  },
  "7d15f6cc7c": {
   "ko": "토스 키오스크 [선불충전]으로 지금 쓸 금액만 결제해요. 흑백 A4 1장 70원부터. 남는 돈 0원!",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "21ae704eda": {
+  "ko": "소리 켜기",
   "pages": [
    "index.html"
   ]

@@ -439,9 +439,9 @@ en: On the printer machine: Print menu → PC
 zh: 在复合机上：打印菜单 → PC
 vi: Trên máy in đa năng: menu In → PC
 @@f43ee4c322
-en: Go to the printer machine in the store → choose the [인쇄] (PRINT) menu → choose [PC]<br/>If the screen is off, touch it to turn it on
-zh: 到店内的复合机前 → 选择［인쇄］（PRINT 打印）菜单 → 选择［PC］<br/>如果屏幕是黑的，请点一下屏幕
-vi: Đến máy in đa năng trong cửa hàng → chọn menu [인쇄] (PRINT) → chọn [PC]<br/>Nếu màn hình tắt, hãy chạm vào màn hình để bật
+en: Go to the printer machine in the store → choose the [Print] menu → choose [PC]<br/>If the screen is off, touch it to turn it on
+zh: 到店内的复合机前 → 选择［打印］菜单 → 选择［PC］<br/>如果屏幕是黑的，请点一下屏幕
+vi: Đến máy in đa năng trong cửa hàng → chọn menu [Print] (In) → chọn [PC]<br/>Nếu màn hình tắt, hãy chạm vào màn hình để bật
 @@66183bc08a
 en: Screen for typing the 4-digit PIN and choosing your file from the print job list
 zh: 输入 4 位个人识别码后，在打印任务列表中选择文件的画面
