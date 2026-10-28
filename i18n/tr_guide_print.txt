@@ -447,13 +447,13 @@ en: Screen for typing the 4-digit PIN and choosing your file from the print job 
 zh: 输入 4 位个人识别码后，在打印任务列表中选择文件的画面
 vi: Màn hình nhập mã PIN 4 số và chọn tệp trong danh sách lệnh in
 @@1613705999
-en: Type PIN and [확인] (OK) → choose from list → press [시작] (Start)
-zh: 输入个人识别码并按［확인］（确认）→ 选择列表 → 按［시작］（开始）
-vi: Nhập mã PIN và bấm [확인] (Xác nhận) → chọn trong danh sách → bấm [시작] (Bắt đầu)
+en: Type PIN and [OK] → choose from list → press [Start]
+zh: 输入个人识别码并按［确定］→ 选择列表 → 按［开始］
+vi: Nhập mã PIN và bấm [OK] → chọn trong danh sách → bấm [Start] (Bắt đầu)
 @@5df972a2fa
-en: Type the PIN you set on the PC and press [확인] (OK) → choose your file from the list → press [시작] (Start)
-zh: 输入在电脑上设定的个人识别码，按［확인］（确认）→ 在列表中选择文件 → 按［시작］（开始）
-vi: Nhập mã PIN đã đặt trên máy tính và bấm [확인] (Xác nhận) → chọn tệp trong danh sách → bấm [시작] (Bắt đầu)
+en: Type the PIN you set on the PC and press [OK] → choose your file from the list → press [Start]
+zh: 输入在电脑上设定的个人识别码，按［确定］→ 在列表中选择文件 → 按［开始］
+vi: Nhập mã PIN đã đặt trên máy tính và bấm [OK] → chọn tệp trong danh sách → bấm [Start] (Bắt đầu)
 @@c26ecb9e79
 en: If the paper size says Letter, go back to the PC and change it to A4
 zh: 如果纸张大小显示 Letter，请回到电脑改成 A4
@@ -463,17 +463,17 @@ en: Payment info screen (total price, number of pages)
 zh: 收费信息（总价、页数）确认画面
 vi: Màn hình thông tin thanh toán (tổng tiền, số trang)
 @@ea05213db4
-en: Check the price [과금정보]
-zh: 确认金额［과금정보］
-vi: Kiểm tra số tiền [과금정보]
+en: Check the price [Billing Information]
+zh: 确认金额［开票信息］
+vi: Kiểm tra số tiền [Billing Information] (Thông tin thanh toán)
 @@1a79ccc30d
-en: Check total price · pages · color or not<br/>If correct, press [확인] (OK)
-zh: 确认总价 · 页数 · 是否彩色<br/>正确的话请按［확인］（确认）
-vi: Kiểm tra tổng tiền · số trang · màu hay không<br/>Nếu đúng, bấm [확인] (Xác nhận)
+en: Check total price · pages · color or not<br/>If correct, press [OK]
+zh: 确认总价 · 页数 · 是否彩色<br/>正确的话请按［确定］
+vi: Kiểm tra tổng tiền · số trang · màu hay không<br/>Nếu đúng, bấm [OK]
 @@6f8f55009a
-en: <span class="bh">🧾 You must check the payment info screen [과금정보]!</span><b>Check everything on the payment info screen. If you pay without checking and something is wrong, there is no refund or compensation.</b><br/>Press <b>[확인] (OK) to pay only after checking everything and it is all correct</b>.
-zh: <span class="bh">🧾 必须确认收费信息窗口［과금정보］！</span><b>请确认收费信息窗口的全部内容。没确认就付款而出了问题的，不退款、不赔偿。</b><br/>请<b>全部确认、正确无误后再按［확인］（确认）</b>付款。
-vi: <span class="bh">🧾 Bắt buộc kiểm tra màn hình thông tin thanh toán [과금정보]!</span><b>Hãy kiểm tra hết nội dung trên màn hình thanh toán. Nếu thanh toán mà không kiểm tra và có vấn đề, chúng tôi không hoàn tiền hay bồi thường.</b><br/>Chỉ bấm <b>[확인] (Xác nhận) để thanh toán khi đã kiểm tra hết và thấy đúng</b>.
+en: <span class="bh">🧾 You must check the [Billing Information] screen!</span><b>Check everything on the payment info screen. If you pay without checking and something is wrong, there is no refund or compensation.</b><br/>Press <b>[OK] to pay only after checking everything and it is all correct</b>.
+zh: <span class="bh">🧾 必须确认收费信息窗口［开票信息］！</span><b>请确认收费信息窗口的全部内容。没确认就付款而出了问题的，不退款、不赔偿。</b><br/>请<b>全部确认、正确无误后再按［确定］</b>付款。
+vi: <span class="bh">🧾 Bắt buộc kiểm tra màn hình [Billing Information] (thông tin thanh toán)!</span><b>Hãy kiểm tra hết nội dung trên màn hình thanh toán. Nếu thanh toán mà không kiểm tra và có vấn đề, chúng tôi không hoàn tiền hay bồi thường.</b><br/>Chỉ bấm <b>[OK] để thanh toán khi đã kiểm tra hết và thấy đúng</b>.
 @@1667291acc
 en: Paying with an IC card or Samsung Pay
 zh: 用 IC 卡或三星支付付款的样子
@@ -515,9 +515,9 @@ en: 🧾 Check the payment info screen before paying!
 zh: 🧾 付款前确认收费信息窗口！
 vi: 🧾 Kiểm tra màn hình thanh toán trước khi trả tiền!
 @@dd39f660b9
-en: Before you pay, the printer machine shows the <b>payment info screen [과금정보]</b>. If it is <b>different from what you expect, do NOT pay.</b> Check the print options on the PC again.
-zh: 在复合机付款前会出现<b>“收费信息窗口［과금정보］”</b>。如果和您知道的<b>不一样，绝对不要付款。</b>请回到电脑重新检查打印选项。
-vi: Trước khi trả tiền, máy in đa năng sẽ hiện <b>màn hình thông tin thanh toán [과금정보]</b>. Nếu <b>khác với điều bạn biết, tuyệt đối đừng thanh toán.</b> Hãy kiểm tra lại tùy chọn in trên máy tính.
+en: Before you pay, the printer machine shows the <b>[Billing Information] screen</b>. If it is <b>different from what you expect, do NOT pay.</b> Check the print options on the PC again.
+zh: 在复合机付款前会出现<b>“收费信息窗口［开票信息］”</b>。如果和您知道的<b>不一样，绝对不要付款。</b>请回到电脑重新检查打印选项。
+vi: Trước khi trả tiền, máy in đa năng sẽ hiện <b>màn hình [Billing Information] (thông tin thanh toán)</b>. Nếu <b>khác với điều bạn biết, tuyệt đối đừng thanh toán.</b> Hãy kiểm tra lại tùy chọn in trên máy tính.
 @@1b031abd09
 en: <a class="goto" href="#print-step2" onclick="goStep2();return false"><span>That's all for PDF print options! Press [인쇄] (Print) and the PIN box appears.</span><b>Continue from Step 2 (type a 4-digit PIN) of ‘How to print’ above ⬆</b></a>
 zh: <a class="goto" href="#print-step2" onclick="goStep2();return false"><span>PDF 打印选项到这里就完成了！按［인쇄］（打印）会出现个人识别码输入窗口。</span><b>请从上面“打印方法”第 2 步（输入 4 位个人识别码）继续 ⬆</b></a>
@@ -1211,9 +1211,9 @@ en: Find it at the printer machine with number 9999
 zh: 在复合机上用号码 9999 查找
 vi: Tìm ở máy in đa năng bằng số 9999
 @@bf39fe1803
-en: At the printer machine, press <b>[인쇄] (Print)</b> → <b>[PC]</b> and type <b>9999</b>.<br/>When the list appears, choose <b>only your certificate</b>, press <b>[시작] (Start)</b>, then pay.
-zh: 在复合机上按<b>［인쇄］（打印）</b>→<b>［PC］</b>，输入号码 <b>9999</b>。<br/>出现列表后，<b>只选自己的证书</b>，按<b>［시작］（开始）</b>后付款。
-vi: Ở máy in đa năng, bấm <b>[인쇄] (In)</b> → <b>[PC]</b> và nhập số <b>9999</b>.<br/>Khi danh sách hiện ra, <b>chỉ chọn chứng chỉ của bạn</b>, bấm <b>[시작] (Bắt đầu)</b> rồi thanh toán.
+en: At the printer machine, press <b>[Print]</b> → <b>[PC]</b> and type <b>9999</b>.<br/>When the list appears, choose <b>only your certificate</b>, press <b>[Start]</b>, then pay.
+zh: 在复合机上按<b>［打印］</b>→<b>［PC］</b>，输入号码 <b>9999</b>。<br/>出现列表后，<b>只选自己的证书</b>，按<b>［开始］</b>后付款。
+vi: Ở máy in đa năng, bấm <b>[Print] (In)</b> → <b>[PC]</b> và nhập số <b>9999</b>.<br/>Khi danh sách hiện ra, <b>chỉ chọn chứng chỉ của bạn</b>, bấm <b>[Start] (Bắt đầu)</b> rồi thanh toán.
 @@bec10b3d7a
 en: ⚠️ Other customers may have used 9999 too, so <b>several documents</b> may be in the list. <b>Check the time and name</b> and pay only for yours. <b>Don't press [모두선택] (Select all).</b>
 zh: ⚠️ 其他顾客也可能用了 9999，所以列表里可能有<b>好几个文件</b>。<b>请一定确认时间和名字</b>，只为自己的付款。<b>不要按［모두선택］（全选）。</b>
@@ -1235,9 +1235,9 @@ en: On the printer machine: Print → PC → type the number
 zh: 在复合机上：打印 → PC → 输入号码
 vi: Trên máy in đa năng: In → PC → nhập số
 @@4073c80670
-en: Go to the printer machine and press <b>[인쇄] (Print)</b> → <b>[PC]</b>.<br/>In the <b>PIN</b> box, type the <b>4-digit number</b> you used on the PC and touch <b>[OK]</b>.
-zh: 到复合机前，按<b>［인쇄］（打印）</b>→<b>［PC］</b>。<br/>在 <b>PIN 号码</b>输入栏里输入在电脑上填的 <b>4 位号码</b>，点<b>［OK］</b>。
-vi: Đến máy in đa năng và bấm <b>[인쇄] (In)</b> → <b>[PC]</b>.<br/>Ở ô <b>mã PIN</b>, nhập <b>4 số</b> đã nhập trên máy tính rồi chạm <b>[OK]</b>.
+en: Go to the printer machine and press <b>[Print]</b> → <b>[PC]</b>.<br/>In the <b>PIN</b> box, type the <b>4-digit number</b> you used on the PC and touch <b>[OK]</b>.
+zh: 到复合机前，按<b>［打印］</b>→<b>［PC］</b>。<br/>在 <b>PIN 号码</b>输入栏里输入在电脑上填的 <b>4 位号码</b>，点<b>［OK］</b>。
+vi: Đến máy in đa năng và bấm <b>[Print] (In)</b> → <b>[PC]</b>.<br/>Ở ô <b>mã PIN</b>, nhập <b>4 số</b> đã nhập trên máy tính rồi chạm <b>[OK]</b>.
 @@1bb66d1416
 en: M2
 zh: 复2
@@ -1259,9 +1259,9 @@ en: M3
 zh: 复3
 vi: M3
 @@912e236685
-en: Touch the list and [시작] (Start)
-zh: 点列表后按［시작］（开始）
-vi: Chạm vào danh sách rồi bấm [시작] (Bắt đầu)
+en: Touch the list and [Start]
+zh: 点列表后按［开始］
+vi: Chạm vào danh sách rồi bấm [Start] (Bắt đầu)
 @@3dafd06efe-old
 en: <b>Touch your document</b> in the list, then touch the <b>[시작] (Start)</b> button.<br/>If there are several, press <b>[모두 인쇄] (Print all)</b> at the top, or <b>touch only the ones you want</b> and press <b>[시작] (Start)</b>.
 zh: <b>点一下自己的文件</b>，再点<b>［시작］（开始）</b>按钮。<br/>有好几个的话，按上方的<b>［모두 인쇄］（全部打印）</b>，或者<b>只点要打印的几个</b>后按<b>［시작］（开始）</b>。
@@ -1271,9 +1271,9 @@ en: M4
 zh: 复4
 vi: M4
 @@e16eb5fb3d
-en: Finally, the <b>payment info screen [과금정보]</b> appears. Check everything carefully, and if the <b>price</b> is right too, touch <b>[확인] (OK)</b>.
-zh: 最后会出现<b>收费信息窗口［과금정보］</b>。请仔细确认全部内容，<b>价格</b>也正确的话，点<b>［확인］（确认）</b>。
-vi: Cuối cùng, <b>màn hình thông tin thanh toán [과금정보]</b> sẽ hiện ra. Kiểm tra kỹ mọi thứ, nếu <b>giá tiền</b> cũng đúng thì chạm <b>[확인] (Xác nhận)</b>.
+en: Finally, the <b>[Billing Information] screen</b> appears. Check everything carefully, and if the <b>price</b> is right too, touch <b>[OK]</b>.
+zh: 最后会出现<b>收费信息窗口［开票信息］</b>。请仔细确认全部内容，<b>价格</b>也正确的话，点<b>［确定］</b>。
+vi: Cuối cùng, <b>màn hình [Billing Information] (thông tin thanh toán)</b> sẽ hiện ra. Kiểm tra kỹ mọi thứ, nếu <b>giá tiền</b> cũng đúng thì chạm <b>[OK]</b>.
 @@abdd5e40e0
 en: ⚠️ If the pages or price on the payment info screen are different from what you expect, <b>do NOT pay.</b>
 zh: ⚠️ 如果收费信息窗口的页数或金额和您知道的不一样，<b>请不要付款。</b>

@@ -211,6 +211,13 @@ def build(lang):
                 m = re.match(r'^(\.\./videos/[\w\-]+)(\.mp4|\.jpg)$', u)
                 if m and os.path.exists(os.path.join(ROOT, m.group(1)[3:] + '_' + lang + m.group(2))):
                     el[attr] = m.group(1) + '_' + lang + m.group(2)
+        scr = 'en' if lang == 'vi' else lang     # 복합기 화면 그림: 그 언어판(images/이름_en.png 등, i18n/screens/make_screens.py)이 있으면 그걸로 — 베트남어는 기계에 없어서 영어 화면
+        for el in soup.find_all('img'):
+            m = re.match(r'^(\.\./images/[\w\-/]+)\.png(\?.*)?$', el.get('src') or '')
+            if m and os.path.exists(os.path.join(ROOT, m.group(1)[3:] + '_' + scr + '.png')):
+                el['src'] = m.group(1) + '_' + scr + '.png'
+                if el.parent and el.parent.name == 'a' and (el.parent.get('href') or '').startswith(m.group(1) + '.png'):
+                    el.parent['href'] = el['src']
         for el in soup.find_all(style=True):     # style 안의 url(...)
             el['style'] = re.sub(r"url\((['\"]?)(?!https?:|data:|/)([^)'\"]+)\1\)", lambda m: "url(%s../%s%s)" % (m.group(1), m.group(2), m.group(1)), el['style'])
         canon = soup.find('link', rel='canonical')
