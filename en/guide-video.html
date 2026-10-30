@@ -411,6 +411,12 @@ function toggleMenu(){document.getElementById("navLinks").classList.toggle("show
 /* 2단계 메뉴: 현재 탭이 화면 밖이면 보이는 위치로 이동 */
 (function(){var a=document.querySelector('.svc-switch a.on'),w=a&&a.parentElement;if(w)w.scrollLeft=Math.max(0,a.offsetLeft-(w.clientWidth-a.offsetWidth)/2);})();
 </script>
+<script>
+/* 영상 길이는 영상 파일에서 읽어서 표시 (영상을 다시 만들어도 숫자를 고칠 필요 없음) */
+(function(){var L=window.I18N_LANG||'ko';document.querySelectorAll('.vcard').forEach(function(c){var v=c.querySelector('video'),s=c.querySelector('.vlen');if(!v||!s)return;
+v.addEventListener('loadedmetadata',function(){var t=Math.round(v.duration);if(!t)return;var m=Math.floor(t/60),x=t%60;
+s.textContent=L==='ko'?(m?m+'분 ':'')+x+'초':L==='zh'?(m?m+'分':'')+x+'秒':m+':'+(x<10?'0':'')+x;});v.preload='metadata';});})();
+</script>
 
 </body>
 </html>
