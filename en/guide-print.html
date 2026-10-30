@@ -299,6 +299,16 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 .ftype-btn{border-radius:16px;text-align:center;line-height:1.3}
 .ftype-btn b{display:block;font-weight:900}
 .ftype-btn small{display:block;font-size:11px;font-weight:700;opacity:.95;margin-top:2px}
+.ftype-box .ftype-btns{display:grid;grid-template-columns:repeat(auto-fill,minmax(108px,1fr))}
+.ftype-box .ftype-btn{padding:10px 6px;min-width:0;word-break:keep-all}
+.ftype-pre{background:#fff;border:2px solid #16A34A;border-radius:10px;padding:9px 12px;font-size:14px;font-weight:700;color:var(--text);line-height:1.55;margin-bottom:10px}
+.ftype-pre b{color:#15803D}
+.ftype-btn .fwin{display:flex;align-items:center;justify-content:center;gap:3px;width:58px;height:40px;margin:0 auto 6px;background:#fff;border-radius:6px;border-top:7px solid rgba(255,255,255,.55);box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+.ftype-btn .fwin i{font-style:normal;font-weight:900;font-size:13px;line-height:1;color:#fff;background:#D93025;border-radius:4px;padding:4px 4px}
+.ftype-btn.hwp .fwin i{background:#0F6CBD}.ftype-btn.office .fwin i{background:#2B579A;padding:4px 3px}.ftype-btn.office .fwin i.x{background:#1D7044}.ftype-btn.office .fwin i.p{background:#C43E1C}
+.ftype-btn.img .fwin i,.ftype-btn.web .fwin i,.ftype-btn.cert .fwin i{background:none;font-size:20px;padding:0}
+.ftype-no{margin-top:12px;background:#FEF2F2;border:2px solid #DC2626;border-radius:10px;padding:9px 12px;font-size:13.5px;font-weight:700;color:var(--text);line-height:1.6}
+.ftype-no b{color:#B91C1C}
 .step-no.mfp{font-size:12.5px;letter-spacing:-.5px}
 .goto{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 14px;margin:22px 0 4px;padding:16px 22px;border-radius:14px;background:#E7F7EC;border:2px solid #22B24C;color:#14532D;text-decoration:none;font-size:14.5px;line-height:1.5}
 .goto span{font-weight:700}
@@ -496,8 +506,14 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 <div class="step-figs"><img alt="Screen for opening a file on the PC and choosing B&amp;W / Color / Certificate" class="step-photo" loading="lazy" src="../images/print/print-select.png"/></div>
 <div class="step-h">Open the file and choose a printer</div>
 <p class="step-p">Open the file on the PC → <b>[인쇄] (Print)</b> → choose a printer<br/>B&amp;W / Color / Certificate (PIN9999)</p>
-<div class="step-note">💾 Files in email, USB or your phone must be <b>saved to the PC first</b>. Tap your file type below — <b>Step 1 (Open the file)</b> explains it.</div>
-<div class="ftype-box"><div class="ftype-h">📄 Each file type has a different way to set print options.</div><div class="ftype-sub">Print settings — tap your file type</div><div class="ftype-btns"><button class="ftype-btn pdf" onclick="goType('acrobat')" type="button"><b>PDF file</b></button><button class="ftype-btn hwp" onclick="goType('hancom')" type="button"><b>Hangul file</b></button><button class="ftype-btn office" onclick="goType('office','we')" type="button"><b>MS Office</b><small>Word · Excel · PowerPoint</small></button><button class="ftype-btn img" onclick="goType('alsee')" type="button"><b>Image file</b><small>Photo JPG · PNG</small></button><button class="ftype-btn web" onclick="goType('browser')" type="button"><b>Browser printing</b><small>PDFs made in web design tools</small></button><button class="ftype-btn cert" onclick="goType('cert')" type="button"><b>Certificates</b><small>TOEIC · TOEIC Speaking</small></button></div></div>
+<div class="step-note">💾 Files in your email, USB or phone must be <b>downloaded (saved) to the PC first</b>. Tap the window shape below to see <b>Step 1 (opening the file)</b> in detail.</div>
+<div class="ftype-box">
+<div class="ftype-pre">✅ <b>Check first!</b> Did you <b>download (save)</b> the file to the PC, go to where you saved it (the <b>Downloads folder</b> · desktop), and <b>double-click</b> that file to open it?</div>
+<div class="ftype-h">Then <b>you don't need to know the file type.</b> The PC opens it by itself in one of the windows below.</div>
+<div class="ftype-sub">Tap the <b>window shape</b> that opened — it takes you to how to print from that window</div>
+<div class="ftype-btns"><button class="ftype-btn pdf" onclick="goType('acrobat')" type="button"><span aria-hidden="true" class="fwin"><i>PDF</i></span><b>Red PDF window</b><small>Adobe Acrobat</small></button><button class="ftype-btn hwp" onclick="goType('hancom')" type="button"><span aria-hidden="true" class="fwin"><i>한</i></span><b>Blue Hangul window</b><small>Hancom Hangul (HWP)</small></button><button class="ftype-btn office" onclick="goType('office','we')" type="button"><span aria-hidden="true" class="fwin"><i>W</i><i class="x">X</i><i class="p">P</i></span><b>Word · Excel · PowerPoint window</b><small>MS Office</small></button><button class="ftype-btn img" onclick="goType('alsee')" type="button"><span aria-hidden="true" class="fwin"><i>🏞️</i></span><b>Window with just a photo</b><small>ALSee (photos · pictures)</small></button><button class="ftype-btn web" onclick="goType('browser')" type="button"><span aria-hidden="true" class="fwin"><i>🌐</i></span><b>Internet window</b><small>Chrome · Edge</small></button><button class="ftype-btn cert" onclick="goType('cert')" type="button"><span aria-hidden="true" class="fwin"><i>📜</i></span><b>Certificates</b><small>TOEIC · TOEIC Speaking</small></button></div>
+<div class="ftype-no">❌ <b>If you tap the file right inside email or KakaoTalk</b>, it opens in a small <b>preview window</b>. <b>Don't print from this window.</b> The text can break, get cut off, or come out wrong.<br/>If the window doesn't look like the ones above, <b>you didn't open the downloaded file.</b> Go to the Downloads folder and <b>double-click the file you received again</b>.</div>
+</div>
 </div>
 <div class="step" id="print-step2">
 <div class="step-no">2</div>

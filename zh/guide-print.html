@@ -299,6 +299,16 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 .ftype-btn{border-radius:16px;text-align:center;line-height:1.3}
 .ftype-btn b{display:block;font-weight:900}
 .ftype-btn small{display:block;font-size:11px;font-weight:700;opacity:.95;margin-top:2px}
+.ftype-box .ftype-btns{display:grid;grid-template-columns:repeat(auto-fill,minmax(108px,1fr))}
+.ftype-box .ftype-btn{padding:10px 6px;min-width:0;word-break:keep-all}
+.ftype-pre{background:#fff;border:2px solid #16A34A;border-radius:10px;padding:9px 12px;font-size:14px;font-weight:700;color:var(--text);line-height:1.55;margin-bottom:10px}
+.ftype-pre b{color:#15803D}
+.ftype-btn .fwin{display:flex;align-items:center;justify-content:center;gap:3px;width:58px;height:40px;margin:0 auto 6px;background:#fff;border-radius:6px;border-top:7px solid rgba(255,255,255,.55);box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+.ftype-btn .fwin i{font-style:normal;font-weight:900;font-size:13px;line-height:1;color:#fff;background:#D93025;border-radius:4px;padding:4px 4px}
+.ftype-btn.hwp .fwin i{background:#0F6CBD}.ftype-btn.office .fwin i{background:#2B579A;padding:4px 3px}.ftype-btn.office .fwin i.x{background:#1D7044}.ftype-btn.office .fwin i.p{background:#C43E1C}
+.ftype-btn.img .fwin i,.ftype-btn.web .fwin i,.ftype-btn.cert .fwin i{background:none;font-size:20px;padding:0}
+.ftype-no{margin-top:12px;background:#FEF2F2;border:2px solid #DC2626;border-radius:10px;padding:9px 12px;font-size:13.5px;font-weight:700;color:var(--text);line-height:1.6}
+.ftype-no b{color:#B91C1C}
 .step-no.mfp{font-size:12.5px;letter-spacing:-.5px}
 .goto{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 14px;margin:22px 0 4px;padding:16px 22px;border-radius:14px;background:#E7F7EC;border:2px solid #22B24C;color:#14532D;text-decoration:none;font-size:14.5px;line-height:1.5}
 .goto span{font-weight:700}
@@ -496,8 +506,14 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 <div class="step-figs"><img alt="在电脑上打开文件并选择黑白/彩色/证书专用的画面" class="step-photo" loading="lazy" src="../images/print/print-select.png"/></div>
 <div class="step-h">打开文件，选择打印机</div>
 <p class="step-p">在电脑上打开文件 → <b>［인쇄］（打印）</b> → 选择打印机<br/>黑白 / 彩色 / 证书专用（PIN9999）</p>
-<div class="step-note">💾 邮箱、U 盘、手机里的文件，要<b>先保存到电脑</b>。点下面您的文件格式，最前面的<b>第 1 步（打开文件）</b>有详细说明。</div>
-<div class="ftype-box"><div class="ftype-h">📄 每种文件格式的打印选项设置方法都不一样。</div><div class="ftype-sub">打印设置方法 — 请点您的文件格式</div><div class="ftype-btns"><button class="ftype-btn pdf" onclick="goType('acrobat')" type="button"><b>PDF 文件</b></button><button class="ftype-btn hwp" onclick="goType('hancom')" type="button"><b>韩文文件</b></button><button class="ftype-btn office" onclick="goType('office','we')" type="button"><b>MS Office</b><small>Word · Excel · PowerPoint</small></button><button class="ftype-btn img" onclick="goType('alsee')" type="button"><b>图片文件</b><small>照片 JPG · PNG</small></button><button class="ftype-btn web" onclick="goType('browser')" type="button"><b>浏览器打印</b><small>网页设计工具做的 PDF</small></button><button class="ftype-btn cert" onclick="goType('cert')" type="button"><b>证书</b><small>TOEIC · TOEIC Speaking</small></button></div></div>
+<div class="step-note">💾 邮箱、U 盘、手机里的文件，要<b>先下载（保存）到电脑上</b>。点下面打开的窗口样子，最前面的<b>第 1 步（打开文件）</b>有详细说明。</div>
+<div class="ftype-box">
+<div class="ftype-pre">✅ <b>先确认！</b>是不是先把文件<b>下载（保存）</b>到电脑上，再到保存的地方（<b>下载文件夹</b> · 桌面）<b>双击</b>那个文件打开的？</div>
+<div class="ftype-h">那样的话，<b>不用知道是什么文件。</b>电脑会自动用下面的某个窗口打开。</div>
+<div class="ftype-sub">点一下打开的<b>窗口样子</b> — 就会跳到在那个窗口里打印的方法</div>
+<div class="ftype-btns"><button class="ftype-btn pdf" onclick="goType('acrobat')" type="button"><span aria-hidden="true" class="fwin"><i>PDF</i></span><b>红色 PDF 窗口</b><small>Adobe Acrobat</small></button><button class="ftype-btn hwp" onclick="goType('hancom')" type="button"><span aria-hidden="true" class="fwin"><i>한</i></span><b>蓝色韩文窗口</b><small>韩文（HWP）</small></button><button class="ftype-btn office" onclick="goType('office','we')" type="button"><span aria-hidden="true" class="fwin"><i>W</i><i class="x">X</i><i class="p">P</i></span><b>Word · Excel · PowerPoint 窗口</b><small>MS Office</small></button><button class="ftype-btn img" onclick="goType('alsee')" type="button"><span aria-hidden="true" class="fwin"><i>🏞️</i></span><b>只显示照片的窗口</b><small>ALSee（照片 · 图片）</small></button><button class="ftype-btn web" onclick="goType('browser')" type="button"><span aria-hidden="true" class="fwin"><i>🌐</i></span><b>网页窗口</b><small>Chrome · Edge</small></button><button class="ftype-btn cert" onclick="goType('cert')" type="button"><span aria-hidden="true" class="fwin"><i>📜</i></span><b>证明书</b><small>TOEIC · TOEIC 口语</small></button></div>
+<div class="ftype-no">❌ <b>在邮箱 · 카톡（KakaoTalk）画面里直接点文件打开的话</b>，会用小小的<b>预览窗口</b>打开。<b>不要在这个窗口里打印。</b>字会乱、被切掉，或者印出来很奇怪。<br/>打开的窗口和上面的样子不一样的话，<b>就不是用下载的文件打开的。</b>请到下载文件夹，把收到的文件<b>再双击</b>一次。</div>
+</div>
 </div>
 <div class="step" id="print-step2">
 <div class="step-no">2</div>

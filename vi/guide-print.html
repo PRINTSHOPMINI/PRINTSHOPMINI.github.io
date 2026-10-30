@@ -299,6 +299,16 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 .ftype-btn{border-radius:16px;text-align:center;line-height:1.3}
 .ftype-btn b{display:block;font-weight:900}
 .ftype-btn small{display:block;font-size:11px;font-weight:700;opacity:.95;margin-top:2px}
+.ftype-box .ftype-btns{display:grid;grid-template-columns:repeat(auto-fill,minmax(108px,1fr))}
+.ftype-box .ftype-btn{padding:10px 6px;min-width:0;word-break:keep-all}
+.ftype-pre{background:#fff;border:2px solid #16A34A;border-radius:10px;padding:9px 12px;font-size:14px;font-weight:700;color:var(--text);line-height:1.55;margin-bottom:10px}
+.ftype-pre b{color:#15803D}
+.ftype-btn .fwin{display:flex;align-items:center;justify-content:center;gap:3px;width:58px;height:40px;margin:0 auto 6px;background:#fff;border-radius:6px;border-top:7px solid rgba(255,255,255,.55);box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+.ftype-btn .fwin i{font-style:normal;font-weight:900;font-size:13px;line-height:1;color:#fff;background:#D93025;border-radius:4px;padding:4px 4px}
+.ftype-btn.hwp .fwin i{background:#0F6CBD}.ftype-btn.office .fwin i{background:#2B579A;padding:4px 3px}.ftype-btn.office .fwin i.x{background:#1D7044}.ftype-btn.office .fwin i.p{background:#C43E1C}
+.ftype-btn.img .fwin i,.ftype-btn.web .fwin i,.ftype-btn.cert .fwin i{background:none;font-size:20px;padding:0}
+.ftype-no{margin-top:12px;background:#FEF2F2;border:2px solid #DC2626;border-radius:10px;padding:9px 12px;font-size:13.5px;font-weight:700;color:var(--text);line-height:1.6}
+.ftype-no b{color:#B91C1C}
 .step-no.mfp{font-size:12.5px;letter-spacing:-.5px}
 .goto{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 14px;margin:22px 0 4px;padding:16px 22px;border-radius:14px;background:#E7F7EC;border:2px solid #22B24C;color:#14532D;text-decoration:none;font-size:14.5px;line-height:1.5}
 .goto span{font-weight:700}
@@ -496,8 +506,14 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 <div class="step-figs"><img alt="Màn hình mở tệp trên máy tính và chọn đen trắng / màu / chứng chỉ" class="step-photo" loading="lazy" src="../images/print/print-select.png"/></div>
 <div class="step-h">Mở tệp và chọn máy in</div>
 <p class="step-p">Mở tệp trên máy tính → <b>[인쇄] (In)</b> → chọn máy in<br/>Đen trắng / Màu / Chứng chỉ (PIN9999)</p>
-<div class="step-note">💾 Tệp trong email, USB hoặc điện thoại phải <b>lưu vào máy tính trước</b>. Bấm loại tệp của bạn bên dưới — <b>Bước 1 (Mở tệp)</b> có hướng dẫn chi tiết.</div>
-<div class="ftype-box"><div class="ftype-h">📄 Mỗi loại tệp có cách cài tùy chọn in khác nhau.</div><div class="ftype-sub">Cách cài đặt in — hãy bấm loại tệp của bạn</div><div class="ftype-btns"><button class="ftype-btn pdf" onclick="goType('acrobat')" type="button"><b>Tệp PDF</b></button><button class="ftype-btn hwp" onclick="goType('hancom')" type="button"><b>Tệp Hangul</b></button><button class="ftype-btn office" onclick="goType('office','we')" type="button"><b>MS Office</b><small>Word · Excel · PowerPoint</small></button><button class="ftype-btn img" onclick="goType('alsee')" type="button"><b>Tệp hình ảnh</b><small>Ảnh JPG · PNG</small></button><button class="ftype-btn web" onclick="goType('browser')" type="button"><b>In từ trình duyệt</b><small>PDF làm bằng công cụ thiết kế web</small></button><button class="ftype-btn cert" onclick="goType('cert')" type="button"><b>Chứng chỉ</b><small>TOEIC · TOEIC Speaking</small></button></div></div>
+<div class="step-note">💾 Tệp trong email, USB hay điện thoại phải <b>tải về (lưu) vào máy tính trước</b>. Bấm vào hình cửa sổ bên dưới để xem <b>Bước 1 (mở tệp)</b> chi tiết.</div>
+<div class="ftype-box">
+<div class="ftype-pre">✅ <b>Kiểm tra trước!</b> Bạn đã <b>tải về (lưu)</b> tệp vào máy tính, rồi vào nơi đã lưu (<b>thư mục Downloads</b> · màn hình nền) và <b>bấm đúp</b> vào tệp đó để mở chưa?</div>
+<div class="ftype-h">Nếu vậy thì <b>không cần biết đó là loại tệp gì.</b> Máy tính sẽ tự mở bằng một trong các cửa sổ dưới đây.</div>
+<div class="ftype-sub">Bấm vào <b>hình cửa sổ</b> đã mở — sẽ chuyển đến cách in từ cửa sổ đó</div>
+<div class="ftype-btns"><button class="ftype-btn pdf" onclick="goType('acrobat')" type="button"><span aria-hidden="true" class="fwin"><i>PDF</i></span><b>Cửa sổ PDF đỏ</b><small>Adobe Acrobat</small></button><button class="ftype-btn hwp" onclick="goType('hancom')" type="button"><span aria-hidden="true" class="fwin"><i>한</i></span><b>Cửa sổ Hangul xanh</b><small>Hancom Hangul (HWP)</small></button><button class="ftype-btn office" onclick="goType('office','we')" type="button"><span aria-hidden="true" class="fwin"><i>W</i><i class="x">X</i><i class="p">P</i></span><b>Cửa sổ Word · Excel · PowerPoint</b><small>MS Office</small></button><button class="ftype-btn img" onclick="goType('alsee')" type="button"><span aria-hidden="true" class="fwin"><i>🏞️</i></span><b>Cửa sổ chỉ có ảnh</b><small>ALSee (ảnh · hình)</small></button><button class="ftype-btn web" onclick="goType('browser')" type="button"><span aria-hidden="true" class="fwin"><i>🌐</i></span><b>Cửa sổ Internet</b><small>Chrome · Edge</small></button><button class="ftype-btn cert" onclick="goType('cert')" type="button"><span aria-hidden="true" class="fwin"><i>📜</i></span><b>Chứng chỉ</b><small>TOEIC · TOEIC Speaking</small></button></div>
+<div class="ftype-no">❌ <b>Nếu bấm mở tệp ngay trong email hay KakaoTalk</b>, tệp sẽ mở bằng một <b>cửa sổ xem trước</b> nhỏ. <b>Đừng in từ cửa sổ này.</b> Chữ có thể bị lỗi, bị cắt, hoặc in ra sai.<br/>Nếu cửa sổ đã mở không giống các hình trên, <b>thì bạn chưa mở bằng tệp đã tải về.</b> Hãy vào thư mục Downloads và <b>bấm đúp lại</b> vào tệp đã nhận.</div>
+</div>
 </div>
 <div class="step" id="print-step2">
 <div class="step-no">2</div>
