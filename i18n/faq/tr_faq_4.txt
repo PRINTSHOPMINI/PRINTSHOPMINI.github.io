@@ -275,6 +275,7 @@ Nếu thanh toán bằng Apple Pay, hãy xem trong ứng dụng thẻ Hyundai nh
 - You printed a USB file without saving it to the PC, and it came out blank
 - You didn't save a compressed file to the PC, unzip it, and open the unzipped file by double-clicking before printing
 - You didn't save a file from email · cloud · web drive to the PC and open the saved file by double-clicking before printing
+- You opened a file from email · KakaoTalk in the small preview window without downloading it, and the text came out broken, cut off or wrong
 
 📌 You put it in or typed it wrong
 - The original was put in wrong, so it came out blank or cut off (copy · scan · fax)
@@ -356,6 +357,7 @@ Nếu thanh toán bằng Apple Pay, hãy xem trong ứng dụng thẻ Hyundai nh
 - U 盘文件没保存到电脑就打印，打印成白纸的
 - 压缩文件没有保存到电脑、解压后双击打开解压出的文件再打印的
 - 邮箱·云盘·网盘里的文件没有保存到电脑后双击打开保存的文件再打印的
+- 没有下载邮箱·카톡（KakaoTalk）里的文件，直接用小小的预览窗口打开打印，结果字乱了、被切掉或印得很奇怪的
 
 📌 自己放错或写错的
 - 原件放错而打印成白纸或被切掉的（复印·扫描·传真）
@@ -437,6 +439,7 @@ Nếu thanh toán bằng Apple Pay, hãy xem trong ứng dụng thẻ Hyundai nh
 - In tệp USB mà không lưu vào máy tính nên ra giấy trắng
 - Không lưu tệp nén vào máy tính, giải nén, rồi bấm đúp mở tệp đã giải nén để in
 - Không lưu tệp từ email · đám mây · ổ web vào máy tính rồi bấm đúp mở tệp đã lưu để in
+- Không tải tệp từ email · KakaoTalk về mà mở bằng cửa sổ xem trước nhỏ để in, nên chữ bị lỗi, bị cắt hoặc in ra sai
 
 📌 Tự đặt sai hoặc ghi sai
 - Đặt sai bản gốc nên ra giấy trắng hoặc bị cắt (photo · scan · fax)
