@@ -693,8 +693,8 @@
    "community.html"
   ]
  },
- "43a7d82cbf": {
-  "ko": "개인정보처리방침 · 이용약관",
+ "691ca4bf48": {
+  "ko": "<a style=\"color:inherit;text-decoration:underline\" href=\"privacy.html\">개인정보처리방침</a> · 이용약관",
   "pages": [
    "guide.html",
    "guide-print.html",
