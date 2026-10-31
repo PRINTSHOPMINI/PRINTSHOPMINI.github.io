@@ -141,6 +141,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .mini li:last-child{margin-bottom:0}
 .mini li b{color:var(--sc,var(--blue));font-weight:700}
 .mini li .r{color:var(--warn);font-weight:700}
+.idfig{display:block;width:100%;margin:10px 0 4px;border-radius:8px;border:1px solid var(--border)}
 .mini-warn{margin-top:14px;background:#FEF2F2;border:2px solid #E4574D;border-radius:10px;padding:14px 16px}
 .mini-warn-h{font-size:14.5px;font-weight:900;color:#C0261C;line-height:1.45;display:flex;gap:8px;align-items:flex-start;margin-bottom:6px}
 .mini-warn-h .x{flex:0 0 auto;width:20px;height:20px;border-radius:50%;background:#C0261C;color:#fff;font-size:13px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-top:1px}
@@ -558,8 +559,8 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
             <li><b>복합기 덮개를 엽니다.</b> 오른쪽 부분을 잡고 조심히 위로 들어 올리세요.</li>
             <li>유리판 <b>왼쪽 상단 모서리에서 5mm 살짝 띄워서</b>, <b>사진이 있는 앞면을 유리쪽으로</b> 향하게 놓고 덮개를 닫습니다. <span class="r">모서리에 딱 붙이면 가장자리가 잘려요.</span></li>
             <li>복합기 화면에서 <b>[복사]</b> 메뉴를 선택합니다.</li>
-            <li><b>[신분증복사]</b> 탭을 누르고 <b>컬러 또는 흑백</b>을 고른 뒤 <b>[시작]</b> 누르기.</li>
-            <li><b>뒷면도 복사하려면</b> — 신분증을 처음 놨던 자리에서 <span class="r">그대로 뒤집어</span> 뒷면을 대고 <b>[예]</b> 선택 → 다시 <b>[시작]</b> → 결제<br><b>앞면만 하려면</b> — <b>[아니오]</b> 선택</li>
+            <li><b>[신분증복사]</b> 탭을 누르고 <b>컬러 또는 흑백</b>을 고른 뒤 <b>[시작]</b> 누르기.<br>원본 크기는 <b>[ID]</b> 그대로 두세요. <span class="r">[여권] 버튼은 누르지 마세요!</span><img class="idfig zoomable" src="images/copy/copy-id.png?v=1" alt="복합기 신분증 복사 화면. 1번 신분증 복사 탭, 2번 컬러 또는 흑백, 3번 시작 버튼에 표시가 있고 여권 버튼에는 빨간 엑스 표시가 있는 모습" loading="lazy"></li>
+            <li>앞면을 스캔하면 <b>"다른 페이지를 스캔하시겠습니까?"</b> 창이 나옵니다.<br><b>앞면만 복사</b> — <b>[아니오]</b> 선택 → 결제<br><b>뒷면도 복사</b> — 신분증을 처음 놨던 자리에서 <span class="r">그대로 뒤집어</span> 놓고 <b>[예]</b> 선택 → 다시 <b>[시작]</b> → 결제<img class="idfig zoomable" src="images/copy/copy-id-more.png?v=1" alt="다른 페이지를 스캔하시겠습니까 창. 아니오는 앞면만 복사, 예는 뒷면도 복사" loading="lazy"></li>
           </ol>
           <div class="mini-warn">
             <div class="mini-warn-h"><span class="x">!</span>여권은 절대 [신분증복사]로 하지 마세요! 꼭 [기본복사](일반 복사)로 하세요.</div>
@@ -580,7 +581,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
             <li><b>복합기 덮개를 엽니다.</b> 오른쪽 부분을 잡고 조심히 위로 들어 올리세요.</li>
             <li>유리판 <b>왼쪽 상단 모서리가 기준</b>입니다. 그 기준부터 <b>A4 크기만큼</b>이 복사 / 스캔되는 범위이니, 복사 또는 스캔할 면을 그 범위 안에 놓고 덮개를 닫습니다.</li>
             <li><b>[복사]</b> 또는 <b>[스캔]</b> 메뉴를 선택합니다. 복사는 <b>[기본복사]</b> 탭에서 설정을 정하고 확인한 뒤 <b>[시작]</b> 누르기.</li>
-            <li><b>"다른 면을 스캔하시겠습니까?"</b> 창이 나오면 — 더 복사 또는 스캔할 면이 있으면 유리판에 <span class="r">다음 면을 먼저 올린 뒤</span> <b>[예]</b>, 없으면 <b>[아니오]</b>.</li>
+            <li><b>"다른 페이지를 스캔하시겠습니까?"</b> 창이 나오면 — 더 복사 또는 스캔할 면이 있으면 유리판에 <span class="r">다음 면을 먼저 올린 뒤</span> <b>[예]</b>, 없으면 <b>[아니오]</b>.</li>
             <li><b>[과금정보]</b> 화면에서 금액과 고른 설정이 맞는지 확인하고 결제합니다.</li>
           </ol>
           <div class="mini-warn">
@@ -602,7 +603,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
             <li><b>복합기 덮개를 엽니다.</b> 오른쪽 부분을 잡고 조심히 위로 들어 올리세요.</li>
             <li><b>복사 · 스캔할 면을 유리쪽으로</b> 향하게 엎어 놓고, 유리판 <b>왼쪽 윗 모서리에 딱 맞춰</b> 놓은 뒤 덮개를 닫습니다.</li>
             <li><b>[복사]</b> 또는 <b>[스캔]</b> 메뉴를 선택합니다. 복사는 <b>[기본복사]</b> 탭에서 설정을 정하고 확인한 뒤 <b>[시작]</b> 누르기.</li>
-            <li><b>"다른 면을 스캔하시겠습니까?"</b> 창이 나오면 — 다음 쪽을 펼쳐 유리판에 <span class="r">먼저 올린 뒤</span> <b>[예]</b>, 다 끝났으면 <b>[아니오]</b>.</li>
+            <li><b>"다른 페이지를 스캔하시겠습니까?"</b> 창이 나오면 — 다음 쪽을 펼쳐 유리판에 <span class="r">먼저 올린 뒤</span> <b>[예]</b>, 다 끝났으면 <b>[아니오]</b>.</li>
             <li><b>[과금정보]</b> 화면에서 금액과 고른 설정이 맞는지 확인하고 결제합니다.</li>
           </ol>
           <div class="mini-note">두꺼운 책은 덮개가 완전히 닫히지 않아도 됩니다. 다만 <b>책을 세게 누르지 마세요.</b> 유리판이 깨질 수 있습니다.</div>

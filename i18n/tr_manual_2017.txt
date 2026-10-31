@@ -109,7 +109,7 @@ zh: <span class="x">!</span>护照绝对不要用［ID 复印］！一定要用�
 vi: <span class="x">!</span>Tuyệt đối không photo hộ chiếu bằng [ID Copy] (Photo thẻ)! Phải dùng [Basic Copy] (Photo cơ bản).
 @@6043ea853d
 en: The [ID Copy] tab has a <b>Passport</b> button, but if you press it, <b>only part of the passport gets copied.</b><br/><br/>❌ Don't copy passports with <b>[ID Copy]</b>.<br/>✅ Always copy passports with <b>[Basic Copy]</b> (Basic copy). Bankbooks also use <b>[Basic Copy]</b>.
-zh: ［ID 复印］里有<b>护照</b>按钮，但按了它<b>只会复印护照的一部分。</b><br/><br/>❌ 护照不要用<b>［ID 复印］</b>。<br/>✅ 护照一定要用<b>［基本复印］</b>（基本复印）。存折也用<b>［基本复印］</b>。
+zh: ［ID 复印］里有<b>护照</b>按钮，但按了它<b>只会复印护照的一部分。</b><br/><br/>❌ 护照不要用<b>［ID 复印］</b>。<br/>✅ 护照一定要用<b>［基本复印］</b>。存折也用<b>［基本复印］</b>。
 vi: Trong [ID Copy] (Photo thẻ) có nút <b>Hộ chiếu</b>, nhưng nếu bấm thì <b>chỉ một phần hộ chiếu được photo.</b><br/><br/>❌ Đừng photo hộ chiếu bằng <b>[ID Copy]</b>.<br/>✅ Hộ chiếu phải photo bằng <b>[Basic Copy]</b> (Photo cơ bản). Sổ ngân hàng cũng dùng <b>[Basic Copy]</b>.
 
 # 2026-10-27 사용자 확인: 목록 터치 → 파란색, 여러 개 골라 [시작] → 한꺼번에 결제·인쇄 / 오른쪽 위 [모두인쇄] = 목록 전부

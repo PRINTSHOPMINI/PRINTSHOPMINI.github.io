@@ -142,6 +142,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .mini li:last-child{margin-bottom:0}
 .mini li b{color:var(--sc,var(--blue));font-weight:700}
 .mini li .r{color:var(--warn);font-weight:700}
+.idfig{display:block;width:100%;margin:10px 0 4px;border-radius:8px;border:1px solid var(--border)}
 .mini-warn{margin-top:14px;background:#FEF2F2;border:2px solid #E4574D;border-radius:10px;padding:14px 16px}
 .mini-warn-h{font-size:14.5px;font-weight:900;color:#C0261C;line-height:1.45;display:flex;gap:8px;align-items:flex-start;margin-bottom:6px}
 .mini-warn-h .x{flex:0 0 auto;width:20px;height:20px;border-radius:50%;background:#C0261C;color:#fff;font-size:13px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-top:1px}
@@ -517,8 +518,8 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 <li><b>Mở nắp máy.</b> Cầm phía bên phải và nhẹ nhàng nâng lên.</li>
 <li>Đặt <b>cách góc trên bên trái mặt kính khoảng 5mm</b>, <b>mặt trước có ảnh úp xuống mặt kính</b>, rồi đóng nắp. <span class="r">Nếu sát góc, mép thẻ sẽ bị cắt mất.</span></li>
 <li>Chọn menu <b>[Copy] (Photo)</b> trên màn hình.</li>
-<li>Bấm thẻ <b>[ID Copy] (Photo thẻ)</b>, chọn <b>màu hoặc đen trắng</b>, rồi bấm <b>[Start] (Bắt đầu)</b>.</li>
-<li><b>Muốn photo cả mặt sau</b> — <span class="r">lật thẻ lại ngay tại chỗ cũ</span>, chọn <b>[예] (Có)</b> → bấm lại <b>[Start] (Bắt đầu)</b> → thanh toán<br/><b>Chỉ mặt trước</b> — chọn <b>[아니오] (Không)</b></li>
+<li>Bấm thẻ <b>[ID Copy] (Photo thẻ)</b>, chọn <b>[Color] (màu) hoặc [Mono] (đen trắng)</b>, rồi bấm <b>[Start] (Bắt đầu)</b>.<br/>Original Size giữ nguyên <b>[ID]</b>. <span class="r">Đừng bấm nút [Passport] (Hộ chiếu)!</span><img alt="Màn hình ID Copy: số 1 là thẻ ID Copy, số 2 là Color hoặc Mono, số 3 là nút Start, nút Passport có dấu X đỏ" class="idfig zoomable" loading="lazy" src="../images/copy/copy-id_en.png"/></li>
+<li>Sau khi scan mặt trước, sẽ hiện <b>"Do you want to scan another page?" (Scan trang khác?)</b>.<br/><b>Chỉ mặt trước</b> — chọn <b>[No] (Không)</b> → thanh toán<br/><b>Cả mặt sau</b> — <span class="r">lật thẻ lại ngay tại chỗ cũ</span>, chọn <b>[Yes] (Có)</b> → bấm lại <b>[Start] (Bắt đầu)</b> → thanh toán<img alt="Cửa sổ Scan More: No là chỉ photo mặt trước, Yes là photo cả mặt sau" class="idfig zoomable" loading="lazy" src="../images/copy/copy-id-more_en.png"/></li>
 </ol>
 <div class="mini-warn">
 <div class="mini-warn-h"><span class="x">!</span>Tuyệt đối không photo hộ chiếu bằng [ID Copy] (Photo thẻ)! Phải dùng [Basic Copy] (Photo cơ bản).</div>
@@ -536,14 +537,14 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 <li><b>Mở nắp máy.</b> Cầm phía bên phải và nhẹ nhàng nâng lên.</li>
 <li><b>Góc trên bên trái mặt kính là điểm chuẩn</b>. Vùng <b>bằng khổ A4</b> tính từ đó sẽ được photo / scan, nên hãy đặt trang cần làm trong vùng đó rồi đóng nắp.</li>
 <li>Chọn menu <b>[Copy] (Photo)</b> hoặc <b>[Scan] (Scan)</b>. Nếu photo, cài đặt ở thẻ <b>[Basic Copy] (Photo cơ bản)</b>, kiểm tra rồi bấm <b>[Start] (Bắt đầu)</b>.</li>
-<li>Khi hiện <b>"다른 면을 스캔하시겠습니까?" (Scan trang khác?)</b> — nếu còn trang cần làm, <span class="r">đặt trang tiếp theo lên mặt kính trước</span> rồi bấm <b>[예] (Có)</b>; nếu hết thì bấm <b>[아니오] (Không)</b>.</li>
+<li>Khi hiện <b>"Do you want to scan another page?" (Scan trang khác?)</b> — nếu còn trang cần làm, <span class="r">đặt trang tiếp theo lên mặt kính trước</span> rồi bấm <b>[Yes] (Có)</b>; nếu hết thì bấm <b>[No] (Không)</b>.</li>
 <li>Ở màn hình <b>[Billing Information] (thông tin thanh toán)</b>, kiểm tra giá tiền và cài đặt rồi thanh toán.</li>
 </ol>
 <div class="mini-warn">
 <div class="mini-warn-h"><span class="x">!</span>Tuyệt đối không photo hộ chiếu bằng [ID Copy] (Photo thẻ)! Phải dùng [Basic Copy] (Photo cơ bản).</div>
 <div class="mini-warn-p">Trong [ID Copy] (Photo thẻ) có nút <b>Hộ chiếu</b>, nhưng nếu bấm thì <b>chỉ một phần hộ chiếu được photo.</b><br/><br/>❌ Đừng photo hộ chiếu bằng <b>[ID Copy]</b>.<br/>✅ Hộ chiếu phải photo bằng <b>[Basic Copy]</b> (Photo cơ bản). Sổ ngân hàng cũng dùng <b>[Basic Copy]</b>.</div>
 </div>
-<div class="mini-note">Có thể photo hoặc scan nhiều trang liên tiếp. Hãy đặt trang tiếp theo <b>trước khi</b> bấm <b>[예] (Có)</b>.</div>
+<div class="mini-note">Có thể photo hoặc scan nhiều trang liên tiếp. Hãy đặt trang tiếp theo <b>trước khi</b> bấm <b>[Yes] (Có)</b>.</div>
 </div>
 </div>
 <div class="mini" id="book">
@@ -555,7 +556,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 <li><b>Mở nắp máy.</b> Cầm phía bên phải và nhẹ nhàng nâng lên.</li>
 <li>Úp sách xuống, <b>trang cần photo · scan hướng về mặt kính</b>, đặt <b>sát góc trên bên trái</b> mặt kính rồi đóng nắp.</li>
 <li>Chọn menu <b>[Copy] (Photo)</b> hoặc <b>[Scan] (Scan)</b>. Nếu photo, cài đặt ở thẻ <b>[Basic Copy] (Photo cơ bản)</b>, kiểm tra rồi bấm <b>[Start] (Bắt đầu)</b>.</li>
-<li>Khi hiện <b>"다른 면을 스캔하시겠습니까?" (Scan trang khác?)</b> — lật sang trang tiếp, <span class="r">đặt lên mặt kính trước</span> rồi bấm <b>[예] (Có)</b>; xong hết thì bấm <b>[아니오] (Không)</b>.</li>
+<li>Khi hiện <b>"Do you want to scan another page?" (Scan trang khác?)</b> — lật sang trang tiếp, <span class="r">đặt lên mặt kính trước</span> rồi bấm <b>[Yes] (Có)</b>; xong hết thì bấm <b>[No] (Không)</b>.</li>
 <li>Ở màn hình <b>[Billing Information] (thông tin thanh toán)</b>, kiểm tra giá tiền và cài đặt rồi thanh toán.</li>
 </ol>
 <div class="mini-note">Sách dày thì không cần đóng kín nắp. Nhưng <b>đừng đè mạnh lên sách.</b> Mặt kính có thể bị vỡ.</div>
@@ -568,7 +569,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 <div class="sec-in">
 <div class="sec-head"><h2 class="sec-h2">Mẹo photo</h2></div>
 <p class="sec-tagline">Trên màn hình photo, bạn có thể đổi kích thước và độ đậm nhạt.</p>
-<a href="../images/copy/copy-zoom-density_en.png?v=2" rel="noopener" target="_blank"><img alt="Màn hình photo. Trong khung đỏ là [Reduce/Enlarge] (Thu nhỏ/Phóng to) và [Darkness] (Độ đậm)" class="tipfig" loading="lazy" src="../images/copy/copy-zoom-density_en.png?v=2"/></a>
+<a href="../images/copy/copy-zoom-density_en.png" rel="noopener" target="_blank"><img alt="Màn hình photo. Trong khung đỏ là [Reduce/Enlarge] (Thu nhỏ/Phóng to) và [Darkness] (Độ đậm)" class="tipfig" loading="lazy" src="../images/copy/copy-zoom-density_en.png"/></a>
 <div class="tips">
 <div class="tip"><div class="tip-h">🔍 Photo to hơn · nhỏ hơn</div><p class="tip-p">Chọn ở <b>[Reduce/Enlarge]</b> (Thu nhỏ/Phóng to).<br/>A4 → A3 to hơn: <b>141%</b><br/>A4 → B4 to hơn: <b>122%</b><br/>A4 → B5 nhỏ hơn: <b>86%</b><br/>A4 → A5 nhỏ hơn: <b>70%</b></p></div>
 <div class="tip"><div class="tip-h">🌗 Nếu quá nhạt hoặc quá đậm</div><p class="tip-p">Kéo thanh <b>[Darkness]</b> (Độ đậm).<br/>Kéo sang phải để <b>đậm hơn</b>, sang trái để <b>nhạt hơn</b>.</p></div>

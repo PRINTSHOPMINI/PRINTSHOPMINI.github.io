@@ -273,14 +273,14 @@ vi: Căn theo <b>góc trên bên trái</b> mặt kính, <b>mặt có ảnh úp x
 en: Choose the <b>[Copy]</b> menu on the screen.
 zh: 在复合机屏幕上选择<b>［复印］</b>菜单。
 vi: Chọn menu <b>[Copy] (Photo)</b> trên màn hình.
-@@897e640050
-en: Press the <b>[ID Copy]</b> tab, choose <b>color or B&amp;W</b>, then press <b>[Start]</b>.
-zh: 按<b>［ID 复印］</b>标签，选择<b>彩色或黑白</b>后，按<b>［开始］</b>。
-vi: Bấm thẻ <b>[ID Copy] (Photo thẻ)</b>, chọn <b>màu hoặc đen trắng</b>, rồi bấm <b>[Start] (Bắt đầu)</b>.
-@@cc52c8bc66
-en: <b>To copy the back too</b> — <span class="r">flip the card over in the same spot</span>, then choose <b>[예] (Yes)</b> → <b>[Start]</b> again → pay<br/><b>Front only</b> — choose <b>[아니오] (No)</b>
-zh: <b>背面也要复印的话</b> — 在原来放的位置<span class="r">直接翻过来</span>放背面，选<b>［예］（是）</b>→ 再按<b>［开始］</b>→ 付款<br/><b>只复印正面的话</b> — 选<b>［아니오］（否）</b>
-vi: <b>Muốn photo cả mặt sau</b> — <span class="r">lật thẻ lại ngay tại chỗ cũ</span>, chọn <b>[예] (Có)</b> → bấm lại <b>[Start] (Bắt đầu)</b> → thanh toán<br/><b>Chỉ mặt trước</b> — chọn <b>[아니오] (Không)</b>
+@@462c8dfe95
+en: Press the <b>[ID Copy]</b> tab, choose <b>[Color] or [Mono]</b>, then press <b>[Start]</b>.<br/>Leave Original Size on <b>[ID]</b>. <span class="r">Do not press the [Passport] button!</span><img alt="ID Copy screen on the machine: 1 is the ID Copy tab, 2 is Color or Mono, 3 is the Start button, and the Passport button has a red X" class="idfig zoomable" loading="lazy" src="images/copy/copy-id.png?v=1"/>
+zh: 按<b>［ID 复印］</b>标签，选择<b>［彩色］或［单色］</b>后，按<b>［开始］</b>。<br/>原始大小保持<b>［ID］</b>不变。<span class="r">不要按［护照］按钮！</span><img alt="复印机的 ID 复印画面：1 是 ID 复印标签，2 是彩色或单色，3 是开始按钮，护照按钮上有红色叉号" class="idfig zoomable" loading="lazy" src="images/copy/copy-id.png?v=1"/>
+vi: Bấm thẻ <b>[ID Copy] (Photo thẻ)</b>, chọn <b>[Color] (màu) hoặc [Mono] (đen trắng)</b>, rồi bấm <b>[Start] (Bắt đầu)</b>.<br/>Original Size giữ nguyên <b>[ID]</b>. <span class="r">Đừng bấm nút [Passport] (Hộ chiếu)!</span><img alt="Màn hình ID Copy: số 1 là thẻ ID Copy, số 2 là Color hoặc Mono, số 3 là nút Start, nút Passport có dấu X đỏ" class="idfig zoomable" loading="lazy" src="images/copy/copy-id.png?v=1"/>
+@@d94c7a6fc0
+en: After the front is scanned, <b>"Do you want to scan another page?"</b> appears.<br/><b>Front only</b> — choose <b>[No]</b> → pay<br/><b>Back too</b> — <span class="r">flip the card over in the same spot</span>, choose <b>[Yes]</b> → <b>[Start]</b> again → pay<img alt="Scan More window: No copies the front only, Yes copies the back side too" class="idfig zoomable" loading="lazy" src="images/copy/copy-id-more.png?v=1"/>
+zh: 扫描正面后，会出现<b>“要扫描另一页吗?”</b>窗口。<br/><b>只复印正面</b> — 选<b>［否］</b>→ 付款<br/><b>背面也复印</b> — 在原来放的位置<span class="r">直接翻过来</span>放好，选<b>［是］</b>→ 再按<b>［开始］</b>→ 付款<img alt="扫描更多窗口：否是只复印正面，是是背面也复印" class="idfig zoomable" loading="lazy" src="images/copy/copy-id-more.png?v=1"/>
+vi: Sau khi scan mặt trước, sẽ hiện <b>"Do you want to scan another page?" (Scan trang khác?)</b>.<br/><b>Chỉ mặt trước</b> — chọn <b>[No] (Không)</b> → thanh toán<br/><b>Cả mặt sau</b> — <span class="r">lật thẻ lại ngay tại chỗ cũ</span>, chọn <b>[Yes] (Có)</b> → bấm lại <b>[Start] (Bắt đầu)</b> → thanh toán<img alt="Cửa sổ Scan More: No là chỉ photo mặt trước, Yes là photo cả mặt sau" class="idfig zoomable" loading="lazy" src="images/copy/copy-id-more.png?v=1"/>
 @@8e747948dd
 en: <span class="x">!</span>Don't use the [ID Copy] tab for passports or bankbooks!
 zh: <span class="x">!</span>护照 · 存折不要用［ID 复印］标签！
@@ -309,18 +309,18 @@ vi: <b>Góc trên bên trái mặt kính là điểm chuẩn</b>. Vùng <b>bằn
 en: Choose the <b>[Copy]</b> or <b>[Scan]</b> menu. For copying, set the options in the <b>[Basic Copy]</b> tab, check them, then press <b>[Start]</b>.
 zh: 选择<b>［复印］</b>或<b>［扫描］</b>菜单。复印的话在<b>［基本复印］</b>标签中设置并确认后，按<b>［开始］</b>。
 vi: Chọn menu <b>[Copy] (Photo)</b> hoặc <b>[Scan] (Scan)</b>. Nếu photo, cài đặt ở thẻ <b>[Basic Copy] (Photo cơ bản)</b>, kiểm tra rồi bấm <b>[Start] (Bắt đầu)</b>.
-@@0964207b1b
-en: When <b>"다른 면을 스캔하시겠습니까?" (Scan another page?)</b> appears — if you have more pages, <span class="r">put the next page on the glass first</span>, then press <b>[예] (Yes)</b>. If not, press <b>[아니오] (No)</b>.
-zh: 出现<b>“다른 면을 스캔하시겠습니까?”（要扫描其他页面吗？）</b>窗口时 — 还有要复印或扫描的页面，就<span class="r">先把下一页放到玻璃板上</span>，再按<b>［예］（是）</b>；没有的话按<b>［아니오］（否）</b>。
-vi: Khi hiện <b>"다른 면을 스캔하시겠습니까?" (Scan trang khác?)</b> — nếu còn trang cần làm, <span class="r">đặt trang tiếp theo lên mặt kính trước</span> rồi bấm <b>[예] (Có)</b>; nếu hết thì bấm <b>[아니오] (Không)</b>.
+@@cc4131f5a5
+en: When <b>"Do you want to scan another page?"</b> appears — if you have more pages, <span class="r">put the next page on the glass first</span>, then press <b>[Yes]</b>. If not, press <b>[No]</b>.
+zh: 出现<b>“要扫描另一页吗?”</b>窗口时 — 还有要复印或扫描的页面，就<span class="r">先把下一页放到玻璃板上</span>，再按<b>［是］</b>；没有的话按<b>［否］</b>。
+vi: Khi hiện <b>"Do you want to scan another page?" (Scan trang khác?)</b> — nếu còn trang cần làm, <span class="r">đặt trang tiếp theo lên mặt kính trước</span> rồi bấm <b>[Yes] (Có)</b>; nếu hết thì bấm <b>[No] (Không)</b>.
 @@bd6308e14d
 en: On the <b>[Billing Information]</b> screen, check the price and settings, then pay.
 zh: 在<b>［开票信息］</b>画面确认金额和设置是否正确，然后付款。
 vi: Ở màn hình <b>[Billing Information] (thông tin thanh toán)</b>, kiểm tra giá tiền và cài đặt rồi thanh toán.
 @@c912f7b0a2
-en: You can copy or scan several pages one after another. Put the next page down <b>before</b> pressing <b>[예] (Yes)</b>.
-zh: 可以连续复印或扫描多页。按<b>［예］（是）</b>之前，请先把下一页放好。
-vi: Có thể photo hoặc scan nhiều trang liên tiếp. Hãy đặt trang tiếp theo <b>trước khi</b> bấm <b>[예] (Có)</b>.
+en: You can copy or scan several pages one after another. Put the next page down <b>before</b> pressing <b>[Yes]</b>.
+zh: 可以连续复印或扫描多页。按<b>［是］</b>之前，请先把下一页放好。
+vi: Có thể photo hoặc scan nhiều trang liên tiếp. Hãy đặt trang tiếp theo <b>trước khi</b> bấm <b>[Yes] (Có)</b>.
 @@a9834e7a51
 en: Book copy / scan
 zh: 书本复印 / 扫描
@@ -333,10 +333,10 @@ vi: Sách úp xuống ở góc trên bên trái mặt kính
 en: Place the book <b>face down, page to copy · scan toward the glass</b>, <b>right at the top-left corner</b> of the glass, then close the cover.
 zh: 把<b>要复印 · 扫描的一面朝向玻璃</b>扣放，<b>对准玻璃板左上角</b>放好后，盖上盖子。
 vi: Úp sách xuống, <b>trang cần photo · scan hướng về mặt kính</b>, đặt <b>sát góc trên bên trái</b> mặt kính rồi đóng nắp.
-@@77176024be
-en: When <b>"다른 면을 스캔하시겠습니까?" (Scan another page?)</b> appears — open to the next page and <span class="r">put it on the glass first</span>, then press <b>[예] (Yes)</b>. When you're done, press <b>[아니오] (No)</b>.
-zh: 出现<b>“다른 면을 스캔하시겠습니까?”（要扫描其他页面吗？）</b>窗口时 — 翻到下一页，<span class="r">先放到玻璃板上</span>，再按<b>［예］（是）</b>；全部完成的话按<b>［아니오］（否）</b>。
-vi: Khi hiện <b>"다른 면을 스캔하시겠습니까?" (Scan trang khác?)</b> — lật sang trang tiếp, <span class="r">đặt lên mặt kính trước</span> rồi bấm <b>[예] (Có)</b>; xong hết thì bấm <b>[아니오] (Không)</b>.
+@@02e1991830
+en: When <b>"Do you want to scan another page?"</b> appears — open to the next page and <span class="r">put it on the glass first</span>, then press <b>[Yes]</b>. When you're done, press <b>[No]</b>.
+zh: 出现<b>“要扫描另一页吗?”</b>窗口时 — 翻到下一页，<span class="r">先放到玻璃板上</span>，再按<b>［是］</b>；全部完成的话按<b>［否］</b>。
+vi: Khi hiện <b>"Do you want to scan another page?" (Scan trang khác?)</b> — lật sang trang tiếp, <span class="r">đặt lên mặt kính trước</span> rồi bấm <b>[Yes] (Có)</b>; xong hết thì bấm <b>[No] (Không)</b>.
 @@dd8d0c14cd
 en: With a thick book, the cover doesn't have to close all the way. But <b>don't press hard on the book.</b> The glass can break.
 zh: 厚书的话盖子不用完全盖上。但是<b>不要用力压书。</b>玻璃板可能会碎。
@@ -445,3 +445,11 @@ vi: 📁 Thư mục có trên <b>màn hình nền của mọi máy tính trong c
 en: Scanned files are <b>deleted automatically after 30 minutes</b>. <b>Copy them to a USB or send them by email</b> from the scan folder on the store PC.
 zh: 扫描的文件<b>30 分钟后会自动删除</b>。请从店内电脑的扫描文件夹<b>复制到 U 盘或用邮件发送</b>带走。
 vi: Tệp scan sẽ <b>tự động bị xóa sau 30 phút</b>. Hãy <b>chép vào USB hoặc gửi qua email</b> từ thư mục scan trên máy tính cửa hàng.
+@@6f000312a8
+en: ID Copy screen on the machine: 1 is the ID Copy tab, 2 is Color or Mono, 3 is the Start button, and the Passport button has a red X
+zh: 复印机的 ID 复印画面：1 是 ID 复印标签，2 是彩色或单色，3 是开始按钮，护照按钮上有红色叉号
+vi: Màn hình ID Copy: số 1 là thẻ ID Copy, số 2 là Color hoặc Mono, số 3 là nút Start, nút Passport có dấu X đỏ
+@@dea23a4a7a
+en: Scan More window: No copies the front only, Yes copies the back side too
+zh: 扫描更多窗口：否是只复印正面，是是背面也复印
+vi: Cửa sổ Scan More: No là chỉ photo mặt trước, Yes là photo cả mặt sau

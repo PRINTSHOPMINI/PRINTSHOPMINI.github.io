@@ -379,14 +379,18 @@ Có hai loại máy ép. Hãy xem cửa hàng có loại nào trước.
 
 1. Put the ID card about 5mm away from the top-left corner of the glass (the white arrow). If it touches the corner, the edges get cut off.
 2. Put it with the ID content facing the glass. (content down)
-3. On the machine screen, choose the [신분증복사] (ID Copy) option inside [복사] (Copy).
+3. On the machine screen, press [Copy], then on the [ID Copy] tab choose [Color] or [Mono].
+4. Leave Original Size on [ID] and press [Start]. Do not press the [Passport] button.
+5. When "Do you want to scan another page?" appears:
+- Front only: press [No] and pay.
+- Back too: flip the card over in the same spot, press [Yes] → [Start] again → pay.
 
 ⚠️ Only an ID-card-sized area is copied. If the position is even a little off, it comes out cut off.
-❌ Never copy a passport with [신분증복사] (ID copy)! Only part of the passport gets copied. Always use [기본복사] (Basic copy) for passports.
+❌ Never copy a passport with [ID Copy]! Only part of the passport gets copied. Always use [Basic Copy] for passports.
 📌 There is a [신분증 복사 방법] (How to copy ID) notice on the wall next to the printer machine. Please follow it.
 
 📖 Tap here for the picture guide.
-[[go:guide-copy.html#glass|How to copy an ID card, with pictures]]
+[[go:guide-copy.html#idcard|How to copy an ID card, with pictures]]
 #q zh: 我想复印身份证。
 #a zh
 🆔 身份证放在玻璃板上复印。
@@ -394,14 +398,18 @@ Có hai loại máy ép. Hãy xem cửa hàng có loại nào trước.
 
 1. 把身份证放在离玻璃板左上角（白色箭头）约 5mm 的地方。紧贴角落的话，边缘会被切掉。
 2. 身份证的内容朝向玻璃板放。（内容朝下）
-3. 在复合机屏幕上选择［복사］（复印）里的［신분증복사］（身份证复印）选项。
+3. 在复合机屏幕上按［复印］，在［ID 复印］标签里选择［彩色］或［单色］。
+4. 原始大小保持［ID］不变，按［开始］。不要按［护照］按钮。
+5. 出现“要扫描另一页吗?”时：
+- 只复印正面：按［否］后付款。
+- 背面也复印：在原来放的位置直接翻过来放好，按［是］→ 再按［开始］→ 付款。
 
 ⚠️ 只复印身份证大小的范围。放的位置稍有偏差就会被切掉。
-❌ 护照绝对不要用［신분증복사］（身份证复印）！只会复印护照的一部分。护照一定要用［기본복사］（基本复印）。
+❌ 护照绝对不要用［ID 复印］！只会复印护照的一部分。护照一定要用［基本复印］。
 📌 复合机旁边的墙上贴着［신분증 복사 방법］（身份证复印方法）的说明。请照着做。
 
 📖 点这里查看详细的图片说明。
-[[go:guide-copy.html#glass|用图片详细查看身份证复印方法]]
+[[go:guide-copy.html#idcard|用图片详细查看身份证复印方法]]
 #q vi: Tôi muốn photo thẻ căn cước.
 #a vi
 🆔 Thẻ căn cước được photo trên mặt kính.
@@ -409,14 +417,18 @@ Có hai loại máy ép. Hãy xem cửa hàng có loại nào trước.
 
 1. Đặt thẻ cách góc trên bên trái mặt kính (mũi tên trắng) khoảng 5mm. Nếu sát góc, mép thẻ sẽ bị cắt mất.
 2. Đặt mặt có thông tin của thẻ úp xuống mặt kính. (nội dung hướng xuống)
-3. Trên màn hình máy, chọn tùy chọn [신분증복사] (Photo thẻ) trong [복사] (Photo).
+3. Trên màn hình máy, bấm [Copy], rồi ở thẻ [ID Copy] (Photo thẻ) chọn [Color] (màu) hoặc [Mono] (đen trắng).
+4. Original Size giữ nguyên [ID] rồi bấm [Start]. Đừng bấm nút [Passport] (Hộ chiếu).
+5. Khi hiện "Do you want to scan another page?" (Scan trang khác?):
+- Chỉ mặt trước: bấm [No] rồi thanh toán.
+- Cả mặt sau: lật thẻ lại ngay tại chỗ cũ, bấm [Yes] → bấm lại [Start] → thanh toán.
 
 ⚠️ Chỉ photo vùng bằng kích thước thẻ. Đặt lệch một chút là sẽ bị cắt mất.
-❌ Tuyệt đối không photo hộ chiếu bằng [신분증복사] (Photo thẻ)! Chỉ một phần hộ chiếu được photo. Hộ chiếu phải dùng [기본복사] (Photo cơ bản).
+❌ Tuyệt đối không photo hộ chiếu bằng [ID Copy] (Photo thẻ)! Chỉ một phần hộ chiếu được photo. Hộ chiếu phải dùng [Basic Copy] (Photo cơ bản).
 📌 Trên tường cạnh máy in đa năng có dán hướng dẫn [신분증 복사 방법] (Cách photo thẻ). Hãy làm theo.
 
 📖 Bấm vào đây để xem hướng dẫn bằng hình.
-[[go:guide-copy.html#glass|Xem cách photo thẻ căn cước bằng hình]]
+[[go:guide-copy.html#idcard|Xem cách photo thẻ căn cước bằng hình]]
 
 @@37
 #q en: How do I put in originals for copy · scan · fax?
@@ -484,38 +496,38 @@ Có hai loại máy ép. Hãy xem cửa hàng có loại nào trước.
 [[go:guide-copy.html#glass|Xem cách đặt bản gốc lên mặt kính]]
 
 @@38
-#q en: When copying/scanning on the glass, it asks 'Scan another page?' (다른 면을 스캔하시겠습니까?).
+#q en: When copying/scanning on the glass, it asks "Do you want to scan another page?"
 #a en
 This message always appears when you work on the glass.
 
-1. If you have more originals: first change the original on the glass, then press [예] (Yes).
-2. If you have no more originals: press [아니오] (No).
+1. If you have more originals: first change the original on the glass, then press [Yes].
+2. If you have no more originals: press [No].
 
-⚠️ If you press [예] (Yes) without changing the original, the same page keeps getting scanned.
+⚠️ If you press [Yes] without changing the original, the same page keeps getting scanned.
 💡 If the extra-scan window doesn't go away, move to the other printer machine and try there. If it still doesn't work, tell us on TalkTalk. (Phone also works weekdays 9 AM–9 PM)
 
 📖 Tap here for the picture guide.
-[[go:guide-copy.html#glass|About the 'Scan another page?' window]]
-#q zh: 放在玻璃板上复印·扫描时，出现“다른 면을 스캔하시겠습니까?”（要扫描其他页面吗？）。
+[[go:guide-copy.html#glass|About the "Do you want to scan another page?" window]]
+#q zh: 放在玻璃板上复印·扫描时，出现“要扫描另一页吗?”。
 #a zh
 放在玻璃板上操作时一定会出现这个提示。
 
-1. 还有原件的话：先在玻璃板上换好原件，再按［예］（是）。
-2. 没有原件了的话：按［아니오］（否）。
+1. 还有原件的话：先在玻璃板上换好原件，再按［是］。
+2. 没有原件了的话：按［否］。
 
-⚠️ 不换原件就按［예］（是）的话，会一直扫描同一页。
+⚠️ 不换原件就按［是］的话，会一直扫描同一页。
 💡 追加扫描的窗口一直不消失的话，请换到旁边的复合机试试。还是不行的话请通过 TalkTalk 告诉我们。（工作日上午 9 点~晚上 9 点也可以打电话）
 
 📖 点这里查看详细的图片说明。
 [[go:guide-copy.html#glass|详细查看“要扫描其他页面吗？”窗口的说明]]
-#q vi: Khi photo/scan trên mặt kính thì hiện 'Scan trang khác?' (다른 면을 스캔하시겠습니까?).
+#q vi: Khi photo/scan trên mặt kính thì hiện "Do you want to scan another page?" (Scan trang khác?).
 #a vi
 Thông báo này luôn hiện ra khi làm trên mặt kính.
 
-1. Nếu còn bản gốc: trước tiên đổi bản gốc trên mặt kính, rồi bấm [예] (Có).
-2. Nếu hết bản gốc: bấm [아니오] (Không).
+1. Nếu còn bản gốc: trước tiên đổi bản gốc trên mặt kính, rồi bấm [Yes] (Có).
+2. Nếu hết bản gốc: bấm [No] (Không).
 
-⚠️ Nếu bấm [예] (Có) mà không đổi bản gốc, cùng một trang sẽ bị scan mãi.
+⚠️ Nếu bấm [Yes] (Có) mà không đổi bản gốc, cùng một trang sẽ bị scan mãi.
 💡 Nếu cửa sổ scan thêm không biến mất, hãy chuyển sang máy in đa năng bên cạnh để thử. Nếu vẫn không được, hãy báo qua TalkTalk. (Ngày thường 9 giờ sáng–9 giờ tối có thể gọi điện)
 
 📖 Bấm vào đây để xem hướng dẫn bằng hình.
