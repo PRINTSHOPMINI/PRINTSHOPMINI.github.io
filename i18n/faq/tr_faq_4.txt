@@ -1649,3 +1649,71 @@ If it still doesn't work, tell us the store name and printer machine number on N
 6. 🔊 Kiểm tra đã nghe tiếng '카드를 대 주세요' (Vui lòng chạm thẻ), rồi chạm thẻ để thanh toán.
 
 Nếu vẫn không được, hãy báo tên cửa hàng và số máy in đa năng qua Naver TalkTalk.
+
+@@75
+#q en: I want to print several pages on one sheet (N-up). How many sheets will it be, and how much will it cost?
+#a en
+⚠️ We can't give guidance on software features like printing several pages on one sheet (N-up).
+This is because we can't know which file you opened or which program you used.
+
+✅ We only explain the basic print settings.
+- Print 1 page per sheet side
+- Double-sided / single-sided
+- Paper size
+For other settings, please look them up online and set them yourself.
+
+👀 Check the final pages to be printed like this.
+1. Check the preview on the PC first. In PDF and MS Office (Word, Excel, PowerPoint), the pages to be printed are shown below the preview. (Except Hangul)
+2. Make sure the options you set are correct, then print.
+3. Before you pay at the printer machine, check the payment info screen [과금정보] again.
+4. If it is correct, pay.
+
+🛑 If it is different, do not pay. Change the settings on the PC again.
+⚠️ Payments made without checking the payment info screen cannot be refunded.
+
+📖 Tap here for a guide with pictures.
+[[go:guide-print.html#ptips|How to check the payment info screen]]
+#q zh: 我想把多页打印在一张纸上（多合一打印）。张数和金额是多少？
+#a zh
+⚠️ 多合一打印这类软件功能，我们无法提供说明。
+因为我们不知道您用什么程序打开了什么文件。
+
+✅ 我们只说明基本的打印设置。
+- 每面打印 1 页
+- 双面／单面
+- 纸张大小
+其他设置请您在网上查找后自行操作。
+
+👀 请这样确认最终要打印的页面。
+1. 先在 PC 上查看预览。PDF 和 MS Office（Word、Excel、PowerPoint）的预览下方会显示要打印的页面。（Hangul 除外）
+2. 确认设置的选项正确后再打印。
+3. 在复合机上付款前，请再次确认收费信息窗口［과금정보］。
+4. 内容正确就付款。
+
+🛑 内容不对就不要付款。请回到 PC 重新设置。
+⚠️ 没有确认收费信息窗口就付款的，不能退款。
+
+📖 点这里查看图文说明。
+[[go:guide-print.html#ptips|详细查看如何确认收费信息窗口]]
+#q vi: Tôi muốn in nhiều trang trên một tờ (in gộp trang). Số tờ và số tiền sẽ thế nào?
+#a vi
+⚠️ Chúng tôi không thể hướng dẫn các chức năng của phần mềm như in gộp trang.
+Vì chúng tôi không biết bạn đã mở tệp nào bằng chương trình nào.
+
+✅ Chúng tôi chỉ hướng dẫn cài đặt in cơ bản.
+- In 1 trang trên mỗi mặt giấy
+- In hai mặt / một mặt
+- Khổ giấy
+Các cài đặt khác, bạn hãy tự tìm trên internet và thực hiện.
+
+👀 Hãy kiểm tra các trang sẽ in như sau.
+1. Trước tiên hãy xem bản xem trước trên PC. Với PDF và MS Office (Word, Excel, PowerPoint), các trang sẽ in hiện ở dưới bản xem trước. (Trừ Hangul)
+2. Kiểm tra các tùy chọn đã đúng chưa rồi mới in.
+3. Trước khi thanh toán ở máy in đa năng, hãy kiểm tra lại màn hình thông tin thanh toán [과금정보].
+4. Nếu đúng thì thanh toán.
+
+🛑 Nếu khác thì đừng thanh toán. Hãy cài đặt lại trên PC.
+⚠️ Nếu thanh toán mà không kiểm tra màn hình thông tin thanh toán thì không được hoàn tiền.
+
+📖 Bấm vào đây để xem hướng dẫn có hình.
+[[go:guide-print.html#ptips|Cách kiểm tra màn hình thông tin thanh toán]]
