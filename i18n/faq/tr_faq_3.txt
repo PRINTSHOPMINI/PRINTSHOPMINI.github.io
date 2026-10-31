@@ -452,8 +452,9 @@ Nhưng tùy dung lượng hoặc phiên bản tệp, bố cục có thể bị v
 @@58
 #q en: Can I print documents from websites (Government24, Hometax, etc.)? What about digital certificates?
 #a en
-⚠️ We don't know whether printing from a website will work.
-Please go to the store and try it yourself. If it works, go ahead. If it doesn't, there is nothing the store can do for you.
+💻 The store has PCs with internet access, and we don't block any particular websites.
+⚠️ However, the store has no way to solve any problem that happens while you use a website.
+👉 The only way to find out is to visit the store and try the website on a store PC.
 
 🔑 Bring your digital certificate on a USB or move it to the PC. (It's erased when the PC restarts)
 
@@ -467,8 +468,9 @@ Please go to the store and try it yourself. If it works, go ahead. If it doesn't
 [[go:guide-print.html#store|How to print]]
 #q zh: 可以从网站（政府 24、Hometax 等）打印文件吗？认证书呢？
 #a zh
-⚠️ 网站上的文件能否打印，我们也不知道。
-请到店里亲自试一试，能用就使用。即使不能用，门店也没有办法为您处理。
+💻 店里有可以上网的电脑，我们没有屏蔽任何特定网站。
+⚠️ 但是，使用网站时发生的任何问题，门店都没有办法为您解决。
+👉 只有亲自到店，在店内电脑上打开要使用的网站操作一下，才能知道。
 
 🔑 认证书请存在 U 盘里带来，或拷到电脑上使用。（电脑重启后会被删除）
 
@@ -482,8 +484,9 @@ Please go to the store and try it yourself. If it works, go ahead. If it doesn't
 [[go:guide-print.html#store|详细查看打印方法]]
 #q vi: Có in được tài liệu từ các trang web (Chính phủ 24, Hometax...) không? Còn chứng thư số thì sao?
 #a vi
-⚠️ Chúng tôi cũng không biết có in được từ trang web hay không.
-Hãy đến cửa hàng và tự thử. Được thì hãy sử dụng. Nếu không được, cửa hàng cũng không có cách nào xử lý giúp bạn.
+💻 Cửa hàng có máy tính kết nối internet và không chặn trang web cụ thể nào.
+⚠️ Tuy nhiên, mọi vấn đề phát sinh khi dùng trang web, cửa hàng không có cách nào giải quyết giúp bạn.
+👉 Bạn phải trực tiếp đến cửa hàng, vào trang web cần dùng trên máy tính của cửa hàng và thử thì mới biết được.
 
 🔑 Chứng thư số hãy mang theo trong USB hoặc chép vào máy tính để dùng. (Khởi động lại máy tính thì sẽ bị xóa)
 
