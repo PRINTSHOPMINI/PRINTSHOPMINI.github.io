@@ -450,9 +450,10 @@ Nhưng tùy dung lượng hoặc phiên bản tệp, bố cục có thể bị v
 [[go:guide-print.html#hancom|Xem cách in tệp Hangul]]
 
 @@58
-#q en: Can I print certificates from Government24 or Hometax? What about digital certificates?
+#q en: Can I print documents from websites (Government24, Hometax, etc.)? What about digital certificates?
 #a en
-✅ Yes, you can use public sites like Government24 and Hometax. You can use digital certificates too.
+⚠️ We don't know whether printing from a website will work.
+Please go to the store and try it yourself. If it works, go ahead. If it doesn't, there is nothing the store can do for you.
 
 🔑 Bring your digital certificate on a USB or move it to the PC. (It's erased when the PC restarts)
 
@@ -464,9 +465,10 @@ Nhưng tùy dung lượng hoặc phiên bản tệp, bố cục có thể bị v
 💳 What you pay on these sites to issue documents has nothing to do with PrintShop Mini. You pay PrintShop Mini at the printer machine, and the document prints at the end after paying.
 🖨️ Open the document you got from the site on the PC, send the print job, then pay at the printer machine.
 [[go:guide-print.html#store|How to print]]
-#q zh: 可以在政府 24 或 Hometax 打印证明吗？认证书呢？
+#q zh: 可以从网站（政府 24、Hometax 等）打印文件吗？认证书呢？
 #a zh
-✅ 可以，政府 24·Hometax 这类公共机关网站都能用。认证书也能用。
+⚠️ 网站上的文件能否打印，我们也不知道。
+请到店里亲自试一试，能用就使用。即使不能用，门店也没有办法为您处理。
 
 🔑 认证书请存在 U 盘里带来，或拷到电脑上使用。（电脑重启后会被删除）
 
@@ -478,9 +480,10 @@ Nhưng tùy dung lượng hoặc phiên bản tệp, bố cục có thể bị v
 💳 在这些网站上为发放文件付的费用，和 PrintShop Mini 无关。PrintShop Mini 的费用在复合机上付，付款后最后才打印出文件。
 🖨️ 从网站获取的文件，请在电脑上打开并发送打印后，在复合机上付款。
 [[go:guide-print.html#store|详细查看打印方法]]
-#q vi: Có in được giấy chứng nhận từ Chính phủ 24 hoặc Hometax không? Còn chứng thư số thì sao?
+#q vi: Có in được tài liệu từ các trang web (Chính phủ 24, Hometax...) không? Còn chứng thư số thì sao?
 #a vi
-✅ Được, có thể dùng các trang của cơ quan công như Chính phủ 24, Hometax. Cũng dùng được chứng thư số.
+⚠️ Chúng tôi cũng không biết có in được từ trang web hay không.
+Hãy đến cửa hàng và tự thử. Được thì hãy sử dụng. Nếu không được, cửa hàng cũng không có cách nào xử lý giúp bạn.
 
 🔑 Chứng thư số hãy mang theo trong USB hoặc chép vào máy tính để dùng. (Khởi động lại máy tính thì sẽ bị xóa)
 
