@@ -630,7 +630,7 @@ Search '프린트샵미니 + store name' on Naver to see the location, building 
 Please help keep it clean and safe. 🙏
 
 📶 Free Wi-Fi
-- Wi-Fi name: PrintshopMini
+- Wi-Fi name: Printshopmini
 - Password: printshopmini
 - Type it exactly, with the same upper and lower case.
 💻 The store PCs have internet too.
@@ -674,7 +674,7 @@ Please help keep it clean and safe. 🙏
 请帮助我们保持干净安全。🙏
 
 📶 免费 Wi-Fi
-- Wi-Fi 名称：PrintshopMini
+- Wi-Fi 名称：Printshopmini
 - 密码：printshopmini
 - 请区分大小写，原样输入。
 💻 店内电脑也能上网。
@@ -718,7 +718,7 @@ Tìm '프린트샵미니 + tên cửa hàng' trên Naver sẽ thấy vị trí, 
 Hãy giúp giữ cửa hàng sạch sẽ và an toàn. 🙏
 
 📶 Wi-Fi miễn phí
-- Tên Wi-Fi: PrintshopMini
+- Tên Wi-Fi: Printshopmini
 - Mật khẩu: printshopmini
 - Hãy nhập đúng chữ hoa, chữ thường.
 💻 Máy tính cửa hàng cũng có internet.
@@ -1225,7 +1225,7 @@ Hãy giúp giữ cửa hàng sạch sẽ và an toàn. 🙏
 #a en
 ✅ Yes, you can use free Wi-Fi.
 
-📶 Wi-Fi name: PrintshopMini
+📶 Wi-Fi name: Printshopmini
 🔑 Password: printshopmini
 
 💡 Type it exactly, with the same upper and lower case.
@@ -1234,7 +1234,7 @@ Hãy giúp giữ cửa hàng sạch sẽ và an toàn. 🙏
 #a zh
 ✅ 可以，能用免费 Wi-Fi。
 
-📶 Wi-Fi 名称：PrintshopMini
+📶 Wi-Fi 名称：Printshopmini
 🔑 密码：printshopmini
 
 💡 请区分大小写，原样输入。
@@ -1243,7 +1243,7 @@ Hãy giúp giữ cửa hàng sạch sẽ và an toàn. 🙏
 #a vi
 ✅ Được, có Wi-Fi miễn phí.
 
-📶 Tên Wi-Fi: PrintshopMini
+📶 Tên Wi-Fi: Printshopmini
 🔑 Mật khẩu: printshopmini
 
 💡 Hãy nhập đúng chữ hoa, chữ thường.
