@@ -27,7 +27,7 @@ Even if you ask by phone or TalkTalk, we can't do it right away. It may take a f
 A manager will contact you separately after checking.
 
 📹 It may be hard to find with footage
-- Footage is kept for 7 days from the time it was recorded. Even within that period, it may not be viewable if there's a problem with the CCTV company's server or viewing equipment.
+- Footage is kept for 10 days from the time it was recorded. Even within that period, it may not be viewable if there's a problem with the CCTV company's server or viewing equipment.
 - There are blind spots, and things like an ID card left inside the scanner may not be visible.
 #q zh: 店里有监控（CCTV）吧？我想看录像。
 #a zh
@@ -57,7 +57,7 @@ A manager will contact you separately after checking.
 管理员确认后会另外联系您。
 
 📹 用录像也可能很难找到
-- 录像从拍摄时间起保存 7 天。即使在保存期内，如果监控公司的服务器或查看设备出了问题，也可能无法查看。
+- 录像从拍摄时间起保存 10 天。即使在保存期内，如果监控公司的服务器或查看设备出了问题，也可能无法查看。
 - 有拍不到的死角，放在复合机扫描仪里面的身份证这类东西可能看不到。
 #q vi: Cửa hàng có camera (CCTV) phải không? Tôi muốn xem video.
 #a vi
@@ -87,7 +87,7 @@ Dù yêu cầu qua điện thoại hay TalkTalk, chúng tôi cũng không làm n
 Quản lý sẽ liên hệ riêng sau khi kiểm tra.
 
 📹 Có thể khó tìm bằng video
-- Video được lưu 7 ngày kể từ lúc quay. Dù trong thời hạn lưu, nếu máy chủ của công ty CCTV hoặc thiết bị xem có sự cố thì cũng có thể không xem được.
+- Video được lưu 10 ngày kể từ lúc quay. Dù trong thời hạn lưu, nếu máy chủ của công ty CCTV hoặc thiết bị xem có sự cố thì cũng có thể không xem được.
 - Có góc khuất, và những thứ như thẻ căn cước để bên trong máy scan có thể không nhìn thấy.
 
 @@29
