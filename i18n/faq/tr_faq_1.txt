@@ -781,13 +781,17 @@ Nếu vẫn không được, hãy báo qua TalkTalk. (Ngày thường 9 giờ s�
 #a en
 😊 Don't worry. Follow these steps.
 
-1. 🔘 Hold down the PC power button. Keep holding until the screen turns off completely.
+1. 🔘 Hold down the PC power button for more than 10 seconds. Keep holding until the screen turns off completely.
 2. When the screen is fully off and you can't see the mouse pointer, it has shut down.
 3. ⏳ Leave it for a moment.
 4. Press the power button just once to turn it back on.
 5. Wait until the desktop appears.
+[[warn:When turning it on, press only once! If you keep holding it because the screen doesn't come on right away, it turns off again.]]
 
-💡 If the screen doesn't come on, hold the power button again to turn it off completely, then press it once to turn it on.
+🔍 The power button is on the screen (monitor). Samsung PC: right side of the screen. HP PC: bottom corner on the back right of the screen.
+[[go:faq.html#faq-76|See where the power button is (pictures)]]
+
+💡 If the screen doesn't come on, hold the power button again for more than 10 seconds to turn it off completely, then press it once to turn it on.
 🖥️ If it's the same after restarting, please use another PC.
 
 📞 And tell us on TalkTalk. A manager checks the PC remotely.
@@ -796,13 +800,17 @@ Nếu vẫn không được, hãy báo qua TalkTalk. (Ngày thường 9 giờ s�
 #a zh
 😊 别慌。请按下面的顺序做。
 
-1. 🔘 长按电脑电源按钮。一直按到屏幕完全关掉。
+1. 🔘 按住电脑电源按钮 10 秒以上。一直按到屏幕完全关掉。
 2. 屏幕全黑、也看不到鼠标指针，就是关机了。
 3. ⏳ 先放一会儿。
 4. 只按一下电源按钮重新开机。
 5. 等到出现桌面。
+[[warn:开机时只按一下！屏幕没马上亮就一直按着的话，电脑会再次关机。]]
 
-💡 开机后屏幕不亮的话，再长按电源按钮完全关掉，然后按一下开机。
+🔍 电源按钮在屏幕（显示器）上。三星电脑在屏幕右侧面，HP 电脑在屏幕右后方的下角。
+[[go:faq.html#faq-76|看图找电源按钮]]
+
+💡 开机后屏幕不亮的话，再按住电源按钮 10 秒以上完全关掉，然后按一下开机。
 🖥️ 重新开机还是一样的话，请用其他电脑。
 
 📞 然后请通过 TalkTalk 告诉我们。管理员会远程检查电脑。
@@ -811,18 +819,21 @@ Nếu vẫn không được, hãy báo qua TalkTalk. (Ngày thường 9 giờ s�
 #a vi
 😊 Đừng lo. Hãy làm theo thứ tự sau.
 
-1. 🔘 Nhấn giữ nút nguồn máy tính. Giữ đến khi màn hình tắt hẳn.
+1. 🔘 Nhấn giữ nút nguồn máy tính hơn 10 giây. Giữ đến khi màn hình tắt hẳn.
 2. Khi màn hình tắt hẳn và không thấy con trỏ chuột là máy đã tắt.
 3. ⏳ Để yên một lúc.
 4. Chỉ bấm nút nguồn một lần để bật lại.
 5. Chờ đến khi màn hình nền hiện ra.
+[[warn:Khi bật máy, chỉ bấm một lần! Nếu màn hình chưa lên mà cứ giữ nút, máy sẽ tắt lại.]]
 
-💡 Nếu bật lên mà màn hình không lên, hãy nhấn giữ nút nguồn lần nữa để tắt hẳn, rồi bấm một lần để bật.
+🔍 Nút nguồn nằm trên màn hình (màn hình máy tính). Máy Samsung: cạnh bên phải màn hình. Máy HP: góc dưới phía sau bên phải màn hình.
+[[go:faq.html#faq-76|Xem hình vị trí nút nguồn]]
+
+💡 Nếu bật lên mà màn hình không lên, hãy nhấn giữ nút nguồn hơn 10 giây để tắt hẳn, rồi bấm một lần để bật.
 🖥️ Nếu bật lại vẫn vậy, hãy dùng máy tính khác.
 
 📞 Và hãy báo qua TalkTalk. Quản lý sẽ kiểm tra máy tính từ xa.
 - Nội dung cần gửi: tên cửa hàng, số máy tính (ví dụ: cửa hàng Gwanggyo, máy tính số 2)
-
 @@51
 #q en: The black laminator won't turn on.
 #a en

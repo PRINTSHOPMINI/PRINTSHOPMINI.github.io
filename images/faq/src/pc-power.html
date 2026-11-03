@@ -1,0 +1,147 @@
+<!doctype html>
+<!-- FAQ 그림: 매장 올인원 PC 전원 버튼 위치 (2026-11-03)
+     ?s=samsung | hp | how  → bash images/faq/src/render_pc_power.sh 로 PNG 만들기 -->
+<html lang="ko"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<style>
+html,body{margin:0;background:#fff}
+body{font-family:'Pretendard','Malgun Gothic',sans-serif}
+svg{display:block}
+.t{font-weight:800;fill:#1f2937}
+.lb{font-weight:800;fill:#fff}
+.red{fill:#dc2626}
+.part{display:none}
+</style></head><body>
+
+<!-- ============ 삼성 올인원 PC: 화면 오른쪽 옆면 ============ -->
+<svg id="samsung" class="part" width="900" height="820" viewBox="0 0 900 820" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <pattern id="dots" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="1.3" fill="#b9bec6"/></pattern>
+  <linearGradient id="silver" x1="0" x2="1"><stop offset="0" stop-color="#c9cdd3"/><stop offset=".5" stop-color="#eef0f3"/><stop offset="1" stop-color="#bfc4ca"/></linearGradient>
+  <filter id="glow" x="-200%" y="-50%" width="500%" height="200%"><feGaussianBlur stdDeviation="4"/></filter>
+  <clipPath id="zoomclip"><circle cx="760" cy="300" r="110"/></clipPath>
+ </defs>
+ <rect width="900" height="820" fill="#f4f6fb"/>
+ <text x="40" y="62" class="t" font-size="44">삼성 PC</text>
+ <text x="232" y="62" class="t" font-size="34" fill="#4b5563">화면 <tspan class="red">오른쪽 옆면</tspan></text>
+
+ <!-- 받침대 -->
+ <polygon points="210,742 560,742 590,770 180,770" fill="#d7dbe0"/>
+ <polygon points="180,770 590,770 590,778 180,778" fill="#b6bbc2"/>
+ <path d="M300,600 L460,600 L478,745 L282,745 Z" fill="url(#silver)" stroke="#aeb3ba" stroke-width="2"/>
+ <rect x="322" y="640" width="116" height="52" rx="26" fill="#f4f6fb" stroke="#aeb3ba" stroke-width="2"/>
+
+ <!-- 모니터 옆면(두께) -->
+ <polygon points="660,110 684,122 684,582 660,592" fill="#d9dde2" stroke="#b8bdc4" stroke-width="2"/>
+ <!-- 모니터 앞면 -->
+ <rect x="40" y="110" width="620" height="482" rx="10" fill="#f7f8fa" stroke="#c3c8cf" stroke-width="2"/>
+ <circle cx="350" cy="122" r="5" fill="#333"/><circle cx="332" cy="122" r="2" fill="#777"/><circle cx="368" cy="122" r="2" fill="#777"/>
+ <rect x="54" y="134" width="592" height="340" fill="#1d4ed8"/>
+ <image x="54" y="134" width="592" height="340" preserveAspectRatio="xMidYMid slice" xlink:href="../../../desktop-wallpaper/프린트샵미니/공통/바탕화면_파란색_24인치_1920x1080.png"/>
+ <rect x="54" y="134" width="592" height="340" fill="none" stroke="#9aa1aa" stroke-width="1.5"/>
+ <!-- 스피커(점무늬) + SAMSUNG -->
+ <rect x="52" y="484" width="596" height="96" rx="4" fill="#e3e6ea"/>
+ <rect x="52" y="484" width="596" height="96" rx="4" fill="url(#dots)"/>
+ <rect x="282" y="496" width="136" height="26" fill="#e3e6ea"/>
+ <text x="350" y="516" text-anchor="middle" font-size="19" font-weight="800" letter-spacing="3" fill="#5b6270" font-family="Arial,sans-serif">SAMSUNG</text>
+
+ <!-- 전원 버튼(파란 불 들어오는 세로 막대) -->
+ <rect x="666" y="420" width="10" height="46" rx="5" fill="#60a5fa" filter="url(#glow)"/>
+ <rect x="667" y="422" width="9" height="42" rx="4.5" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1"/>
+ <circle cx="671" cy="443" r="38" fill="none" stroke="#dc2626" stroke-width="6"/>
+
+ <!-- 크게 보기 -->
+ <line x1="700" y1="420" x2="730" y2="405" stroke="#dc2626" stroke-width="4"/>
+ <circle cx="760" cy="300" r="112" fill="#fff" stroke="#dc2626" stroke-width="6"/>
+ <g clip-path="url(#zoomclip)">
+  <rect x="640" y="180" width="240" height="240" fill="#f4f6fb"/>
+  <polygon points="690,170 770,190 770,440 690,450" fill="#f7f8fa" stroke="#c3c8cf" stroke-width="3"/>
+  <polygon points="770,190 820,214 820,430 770,440" fill="#d9dde2" stroke="#b8bdc4" stroke-width="3"/>
+  <rect x="784" y="262" width="22" height="98" rx="11" fill="#60a5fa" filter="url(#glow)"/>
+  <rect x="785" y="265" width="20" height="92" rx="10" fill="#3b82f6" stroke="#1d4ed8" stroke-width="2"/>
+ </g>
+ <rect x="690" y="420" width="190" height="62" rx="31" fill="#dc2626"/>
+ <text x="785" y="462" text-anchor="middle" class="lb" font-size="32">전원 버튼</text>
+
+ <!-- 키보드·마우스 -->
+ <path d="M70,792 L120,760 L470,760 L460,792 Z" fill="#fff" stroke="#c3c8cf" stroke-width="2" transform="translate(0,-14)"/>
+ <ellipse cx="560" cy="772" rx="44" ry="20" fill="#fff" stroke="#c3c8cf" stroke-width="2"/>
+</svg>
+
+<!-- ============ HP 올인원 PC: 뒷면 오른쪽 아래 ============ -->
+<svg id="hp" class="part" width="900" height="820" viewBox="0 0 900 820" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <linearGradient id="silver2" x1="0" x2="1"><stop offset="0" stop-color="#c9cdd3"/><stop offset=".5" stop-color="#eef0f3"/><stop offset="1" stop-color="#bfc4ca"/></linearGradient>
+ </defs>
+ <rect width="900" height="820" fill="#f4f6fb"/>
+ <text x="40" y="62" class="t" font-size="44">HP PC</text>
+ <text x="196" y="62" class="t" font-size="34" fill="#4b5563">화면 <tspan class="red">오른쪽 뒤, 아래 모서리</tspan></text>
+
+ <!-- 왼쪽: 앞에서 본 모습 -->
+ <text x="185" y="128" text-anchor="middle" class="t" font-size="28" fill="#4b5563">앞에서 보면</text>
+ <rect x="150" y="160" width="70" height="20" rx="4" fill="#e5e7eb" stroke="#b8bdc4" stroke-width="2"/>
+ <rect x="174" y="164" width="22" height="10" rx="3" fill="#374151"/>
+ <rect x="30" y="178" width="310" height="214" rx="8" fill="#f9fafb" stroke="#c3c8cf" stroke-width="2"/>
+ <image x="38" y="186" width="294" height="166" preserveAspectRatio="xMidYMid slice" xlink:href="../../../desktop-wallpaper/프린트샵미니/공통/바탕화면_파란색_24인치_1920x1080.png"/>
+ <rect x="38" y="186" width="294" height="166" fill="none" stroke="#9aa1aa" stroke-width="1"/>
+ <text x="185" y="376" text-anchor="middle" font-size="9" letter-spacing="2" fill="#9ca3af" font-family="Arial,sans-serif">OMNISTUDIO</text>
+ <rect x="172" y="392" width="26" height="118" fill="url(#silver2)" stroke="#aeb3ba" stroke-width="1.5"/>
+ <ellipse cx="185" cy="514" rx="92" ry="16" fill="#e5e7eb" stroke="#b8bdc4" stroke-width="2"/>
+ <!-- 오른쪽 뒤를 가리키는 화살표 -->
+ <path d="M300,440 C350,450 370,420 352,385" fill="none" stroke="#dc2626" stroke-width="6" stroke-linecap="round"/>
+ <polygon points="340,384 360,368 366,392" fill="#dc2626"/>
+ <text x="185" y="570" text-anchor="middle" class="t" font-size="26">오른쪽 <tspan class="red">뒤로</tspan> 손을 넣어요</text>
+
+ <!-- 오른쪽: 뒤에서 본 모습 -->
+ <text x="640" y="128" text-anchor="middle" class="t" font-size="28" fill="#4b5563">뒤에서 보면</text>
+ <rect x="600" y="148" width="80" height="22" rx="4" fill="#e5e7eb" stroke="#b8bdc4" stroke-width="2"/>
+ <rect x="410" y="166" width="460" height="330" rx="12" fill="#f9fafb" stroke="#c3c8cf" stroke-width="2"/>
+ <circle cx="640" cy="262" r="46" fill="#eef0f3" stroke="#d1d5db" stroke-width="2"/>
+ <text x="640" y="279" text-anchor="middle" font-size="46" font-style="italic" font-weight="700" fill="#c9ced5" font-family="Arial,sans-serif">hp</text>
+ <!-- 단자 -->
+ <g fill="#4b5563"><rect x="676" y="356" width="5" height="16"/><rect x="688" y="356" width="5" height="16"/><rect x="700" y="356" width="5" height="16"/><rect x="712" y="356" width="5" height="16"/><circle cx="734" cy="364" r="4"/><rect x="746" y="357" width="14" height="13" rx="2"/><circle cx="772" cy="364" r="3"/></g>
+ <rect x="784" y="352" width="22" height="22" fill="#d1d5db"/>
+ <!-- 받침대 -->
+ <rect x="624" y="308" width="32" height="292" fill="url(#silver2)" stroke="#aeb3ba" stroke-width="1.5"/>
+ <ellipse cx="640" cy="604" rx="120" ry="20" fill="#e5e7eb" stroke="#b8bdc4" stroke-width="2"/>
+ <!-- 전원 버튼(뒤에서 보면 왼쪽 아래) -->
+ <rect x="434" y="452" width="20" height="20" rx="5" fill="#e5e7eb" stroke="#6b7280" stroke-width="2"/>
+ <circle cx="444" cy="462" r="34" fill="none" stroke="#dc2626" stroke-width="6"/>
+ <rect x="420" y="520" width="190" height="62" rx="31" fill="#dc2626"/>
+ <text x="515" y="562" text-anchor="middle" class="lb" font-size="32">전원 버튼</text>
+ <line x1="444" y1="497" x2="470" y2="520" stroke="#dc2626" stroke-width="4"/>
+
+ <!-- 아래 설명 -->
+ <rect x="30" y="650" width="840" height="130" rx="18" fill="#fff" stroke="#e5e7eb" stroke-width="2"/>
+ <text x="450" y="705" text-anchor="middle" class="t" font-size="32">뒤에서 보면 <tspan class="red">왼쪽 아래</tspan>에 작은 네모 버튼</text>
+ <text x="450" y="752" text-anchor="middle" class="t" font-size="28" fill="#4b5563">= 앞에 앉아서 보면 화면 <tspan class="red">오른쪽 뒤, 아래</tspan>예요</text>
+</svg>
+
+<!-- ============ 켜는 법 / 멈췄을 때 끄는 법 ============ -->
+<svg id="how" class="part" width="900" height="560" viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg">
+ <rect width="900" height="560" fill="#f4f6fb"/>
+ <!-- 켤 때 -->
+ <rect x="24" y="24" width="414" height="512" rx="24" fill="#fff" stroke="#16a34a" stroke-width="5"/>
+ <rect x="24" y="24" width="414" height="86" rx="24" fill="#16a34a"/><rect x="24" y="80" width="414" height="30" fill="#16a34a"/>
+ <text x="231" y="82" text-anchor="middle" class="lb" font-size="40">켤 때</text>
+ <text x="231" y="210" text-anchor="middle" font-size="84">👆</text>
+ <text x="231" y="282" text-anchor="middle" class="t" font-size="38">딱 <tspan fill="#16a34a">한 번</tspan>만 눌러요</text>
+ <text x="231" y="380" text-anchor="middle" font-size="64">⏳</text>
+ <text x="231" y="440" text-anchor="middle" class="t" font-size="34">바탕화면이 나올 때까지</text>
+ <text x="231" y="486" text-anchor="middle" class="t" font-size="34">손 떼고 기다려요</text>
+ <!-- 멈췄을 때 -->
+ <rect x="462" y="24" width="414" height="512" rx="24" fill="#fff" stroke="#dc2626" stroke-width="5"/>
+ <rect x="462" y="24" width="414" height="86" rx="24" fill="#dc2626"/><rect x="462" y="80" width="414" height="30" fill="#dc2626"/>
+ <text x="669" y="82" text-anchor="middle" class="lb" font-size="40">PC가 멈췄을 때</text>
+ <text x="669" y="210" text-anchor="middle" font-size="84">✋</text>
+ <text x="669" y="282" text-anchor="middle" class="t" font-size="38"><tspan fill="#dc2626">10초 넘게</tspan> 꾹 눌러요</text>
+ <text x="669" y="330" text-anchor="middle" class="t" font-size="30" fill="#4b5563">화면이 다 꺼질 때까지</text>
+ <text x="669" y="420" text-anchor="middle" class="t" font-size="34">꺼지면 손 떼고</text>
+ <text x="669" y="470" text-anchor="middle" class="t" font-size="34">다시 <tspan fill="#16a34a">한 번</tspan>만 눌러 켜요</text>
+</svg>
+
+<script>
+var s=(location.search.match(/s=(\w+)/)||[])[1]||'samsung';
+document.getElementById(s).style.display='block';
+</script>
+</body></html>

@@ -1717,3 +1717,83 @@ Các cài đặt khác, bạn hãy tự tìm trên internet và thực hiện.
 
 📖 Bấm vào đây để xem hướng dẫn có hình.
 [[go:guide-print.html#ptips|Cách kiểm tra màn hình thông tin thanh toán]]
+
+@@76
+#q en: How do I turn on the PC? Where is the power button?
+#a en
+🖥️ The store PCs have no separate tower. The power button is on the screen (monitor).
+The button is in a different place depending on the PC.
+
+1️⃣ Samsung PC (SAMSUNG is written under the screen)
+👉 A long vertical button on the right side of the screen, near the bottom.
+[[img:images/faq/pc-power-samsung.png]]
+
+2️⃣ HP PC (hp is written on the back of the screen)
+👉 Reach behind the right side of the screen. There is a small square button at the bottom corner.
+[[img:images/faq/pc-power-hp.png]]
+
+🔘 How to turn it on
+1. Press the power button just once.
+2. ⏳ Let go and wait a moment until the desktop appears.
+[[warn:Don't keep holding the button even if the screen doesn't come on right away! The PC turns off again.]]
+
+✋ When the PC is frozen (the screen or mouse doesn't move)
+1. Hold down the power button for more than 10 seconds. Keep holding until the screen turns off completely.
+2. When the screen is fully off, let go.
+3. Press the power button just once to turn it on, and wait a moment.
+[[img:images/faq/pc-power-how.png]]
+
+🔄 When the PC restarts, downloaded programs and login information are all deleted.
+🖥️ If it still doesn't work after restarting, please use another PC. And tell us your store name and PC number on TalkTalk. (e.g. Gwanggyo store, PC 2)
+#q zh: 电脑怎么开机？电源按钮在哪里？
+#a zh
+🖥️ 店里的电脑没有单独的主机。电源按钮在屏幕（显示器）上。
+电脑型号不同，按钮的位置也不同。
+
+1️⃣ 三星电脑（屏幕下方写着 SAMSUNG）
+👉 在屏幕右侧面靠下的地方，有一个竖长的按钮。
+[[img:images/faq/pc-power-samsung.png]]
+
+2️⃣ HP 电脑（屏幕背面写着 hp）
+👉 把手伸到屏幕右后方，下角有一个小方形按钮。
+[[img:images/faq/pc-power-hp.png]]
+
+🔘 开机方法
+1. 电源按钮只按一下。
+2. ⏳ 松开手，稍等一会儿，直到出现桌面。
+[[warn:屏幕没马上亮也不要一直按着按钮！电脑会再次关机。]]
+
+✋ 电脑死机时（屏幕或鼠标不动）
+1. 按住电源按钮 10 秒以上。一直按到屏幕完全关掉。
+2. 屏幕全黑后松开手。
+3. 电源按钮只按一下开机，然后稍等一会儿。
+[[img:images/faq/pc-power-how.png]]
+
+🔄 电脑重新开机后，下载的程序和登录信息都会被删除。
+🖥️ 重新开机还是不行的话，请用其他电脑。然后通过 TalkTalk 告诉我们门店名称和电脑编号。（例：光教店 2 号电脑）
+#q vi: Bật máy tính thế nào? Nút nguồn ở đâu?
+#a vi
+🖥️ Máy tính ở cửa hàng không có thùng máy riêng. Nút nguồn nằm trên màn hình.
+Tùy loại máy mà vị trí nút khác nhau.
+
+1️⃣ Máy Samsung (dưới màn hình có chữ SAMSUNG)
+👉 Nút dài dựng đứng ở cạnh bên phải màn hình, phía dưới.
+[[img:images/faq/pc-power-samsung.png]]
+
+2️⃣ Máy HP (mặt sau màn hình có chữ hp)
+👉 Đưa tay ra phía sau bên phải màn hình, ở góc dưới có một nút vuông nhỏ.
+[[img:images/faq/pc-power-hp.png]]
+
+🔘 Cách bật máy
+1. Chỉ bấm nút nguồn một lần.
+2. ⏳ Bỏ tay ra và chờ một lúc đến khi màn hình nền hiện ra.
+[[warn:Màn hình chưa lên ngay cũng đừng giữ nút mãi! Máy sẽ tắt lại.]]
+
+✋ Khi máy tính bị treo (màn hình hoặc chuột không di chuyển)
+1. Nhấn giữ nút nguồn hơn 10 giây. Giữ đến khi màn hình tắt hẳn.
+2. Khi màn hình tắt hẳn thì bỏ tay ra.
+3. Chỉ bấm nút nguồn một lần để bật, rồi chờ một lúc.
+[[img:images/faq/pc-power-how.png]]
+
+🔄 Khi bật lại máy, chương trình đã tải về và thông tin đăng nhập sẽ bị xóa hết.
+🖥️ Bật lại vẫn không được thì hãy dùng máy tính khác. Và báo tên cửa hàng, số máy tính qua TalkTalk. (ví dụ: cửa hàng Gwanggyo, máy tính số 2)
