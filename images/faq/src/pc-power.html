@@ -54,18 +54,7 @@ svg{display:block}
  <rect x="663.5" y="400" width="8" height="42" rx="4" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1"/>
  <circle cx="668" cy="421" r="36" fill="none" stroke="#dc2626" stroke-width="6"/>
 
- <!-- 크게 보기 -->
- <line x1="694" y1="398" x2="726" y2="388" stroke="#dc2626" stroke-width="4"/>
- <circle cx="760" cy="290" r="112" fill="#fff" stroke="#dc2626" stroke-width="6"/>
- <g clip-path="url(#zoomclip)">
-  <rect x="640" y="170" width="240" height="240" fill="#f4f6fb"/>
-  <rect x="650" y="170" width="120" height="250" fill="#ffffff" stroke="#c3c8cf" stroke-width="3"/>
-  <rect x="650" y="170" width="108" height="170" fill="#2b5fd9"/>
-  <polygon points="770,170 806,182 806,420 770,420" fill="#e9ecf0" stroke="#c3c8cf" stroke-width="3"/>
-  <rect x="778" y="232" width="20" height="98" rx="10" fill="#60a5fa" filter="url(#glow)"/>
-  <rect x="779" y="235" width="18" height="92" rx="9" fill="#3b82f6" stroke="#1d4ed8" stroke-width="2"/>
- </g>
- <text x="760" y="160" text-anchor="middle" class="t" font-size="24" fill="#4b5563">옆에서 보면</text>
+ <line x1="700" y1="430" x2="712" y2="436" stroke="#dc2626" stroke-width="4"/>
  <rect x="690" y="410" width="190" height="62" rx="31" fill="#dc2626"/>
  <text x="785" y="452" text-anchor="middle" class="lb" font-size="32">전원 버튼</text>
 
@@ -77,6 +66,46 @@ svg{display:block}
  </g>
  <ellipse cx="680" cy="744" rx="38" ry="24" fill="#ffffff" stroke="#c3c8cf" stroke-width="2"/>
  <line x1="680" y1="722" x2="680" y2="740" stroke="#dfe3e8" stroke-width="2"/>
+</svg>
+
+<!-- ============ 삼성 올인원 PC 옆모습: 오른쪽 옆면 파란 전원 버튼 (사용자 측면 사진 기준) ============ -->
+<svg id="samsungside" class="part" width="900" height="820" viewBox="0 0 900 820" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <pattern id="dots3" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="1.3" fill="#aeb6c2"/></pattern>
+  <filter id="glow3" x="-200%" y="-50%" width="500%" height="200%"><feGaussianBlur stdDeviation="5"/></filter>
+ </defs>
+ <rect width="900" height="820" fill="#f4f6fb"/>
+ <text x="40" y="62" class="t" font-size="44">삼성 PC</text>
+ <text x="232" y="62" class="t" font-size="34" fill="#4b5563">옆에서 보면 <tspan class="red">파란 버튼</tspan></text>
+
+ <!-- 받침판 -->
+ <polygon points="200,690 560,690 600,770 160,770" fill="#ffffff" stroke="#c9ced6" stroke-width="2"/>
+ <polygon points="160,770 600,770 600,780 160,780" fill="#e6e9ee"/>
+
+ <!-- 오른쪽 옆면(두께) -->
+ <polygon points="640,112 670,124 670,656 640,668" fill="#e4e8ed" stroke="#c3c8cf" stroke-width="2"/>
+ <!-- 앞면 (왼쪽은 잘려서 안 보임) -->
+ <g transform="matrix(0.8,0,0,0.8,80,110)">
+  <rect x="-300" y="0" width="1000" height="694" rx="12" fill="#ffffff" stroke="#c3c8cf" stroke-width="2.5"/>
+  <rect x="-286" y="14" width="975" height="548" fill="#1d4ed8"/>
+  <image x="-286" y="14" width="975" height="548" preserveAspectRatio="xMidYMid slice" xlink:href="../../../desktop-wallpaper/프린트샵미니/공통/바탕화면_파란색_24인치_1920x1080.png"/>
+  <rect x="-286" y="14" width="975" height="548" fill="none" stroke="#9aa1aa" stroke-width="2"/>
+  <text x="200" y="594" text-anchor="middle" font-size="20" font-weight="800" letter-spacing="4" fill="#8a919c" font-family="Arial,sans-serif">SAMSUNG</text>
+  <rect x="-298" y="604" width="996" height="76" fill="#c9d0da"/>
+  <rect x="-298" y="604" width="996" height="76" fill="url(#dots3)" opacity=".6"/>
+ </g>
+
+ <!-- 전원 버튼(옆면, 화면 아래쪽 높이) -->
+ <rect x="648" y="488" width="15" height="66" rx="7.5" fill="#60a5fa" filter="url(#glow3)"/>
+ <rect x="649" y="490" width="13" height="62" rx="6.5" fill="#3b82f6" stroke="#1d4ed8" stroke-width="1.5"/>
+ <circle cx="655" cy="521" r="50" fill="none" stroke="#dc2626" stroke-width="7"/>
+ <!-- 화살표 + 이름표 -->
+ <path d="M770,420 L700,488" stroke="#dc2626" stroke-width="7" stroke-linecap="round"/>
+ <polygon points="690,500 694,474 716,488" fill="#dc2626"/>
+ <rect x="690" y="350" width="190" height="62" rx="31" fill="#dc2626"/>
+ <text x="785" y="392" text-anchor="middle" class="lb" font-size="32">전원 버튼</text>
+ <text x="785" y="610" text-anchor="middle" class="t" font-size="26">화면 오른쪽</text>
+ <text x="785" y="644" text-anchor="middle" class="t" font-size="26">옆면 아래쪽</text>
 </svg>
 
 <!-- ============ HP 올인원 PC: 뒷면 오른쪽 아래 ============ -->

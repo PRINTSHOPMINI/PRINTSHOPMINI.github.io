@@ -1727,6 +1727,8 @@ The button is in a different place depending on the PC.
 1️⃣ Samsung PC (SAMSUNG is written under the screen)
 👉 A long vertical button on the right side of the screen, near the bottom.
 [[img:images/faq/pc-power-samsung.png]]
+🔍 From the side, you can see the blue button like this.
+[[img:images/faq/pc-power-samsung-side.png]]
 
 2️⃣ HP PC (hp is written on the back of the screen)
 👉 Reach behind the right side of the screen. There is a small square button at the bottom corner.
@@ -1753,6 +1755,8 @@ The button is in a different place depending on the PC.
 1️⃣ 三星电脑（屏幕下方写着 SAMSUNG）
 👉 在屏幕右侧面靠下的地方，有一个竖长的按钮。
 [[img:images/faq/pc-power-samsung.png]]
+🔍 从侧面看，可以看到这样的蓝色按钮。
+[[img:images/faq/pc-power-samsung-side.png]]
 
 2️⃣ HP 电脑（屏幕背面写着 hp）
 👉 把手伸到屏幕右后方，下角有一个小方形按钮。
@@ -1779,6 +1783,8 @@ Tùy loại máy mà vị trí nút khác nhau.
 1️⃣ Máy Samsung (dưới màn hình có chữ SAMSUNG)
 👉 Nút dài dựng đứng ở cạnh bên phải màn hình, phía dưới.
 [[img:images/faq/pc-power-samsung.png]]
+🔍 Nhìn từ bên cạnh sẽ thấy nút màu xanh như thế này.
+[[img:images/faq/pc-power-samsung-side.png]]
 
 2️⃣ Máy HP (mặt sau màn hình có chữ hp)
 👉 Đưa tay ra phía sau bên phải màn hình, ở góc dưới có một nút vuông nhỏ.
