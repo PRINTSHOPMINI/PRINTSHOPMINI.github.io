@@ -492,58 +492,11 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 </defs>
 <!-- 배경 -->
 <rect fill="url(#bgGrad)" height="420" width="520"></rect>
-<!-- ── 건물 전체 그룹 (중앙 정렬) ── -->
-<!-- 바닥 -->
-<rect fill="#1976D2" height="14" rx="4" width="320" x="100" y="355"></rect>
-<rect fill="#1565C0" height="8" rx="4" width="344" x="88" y="362"></rect>
-<!-- 건물 외벽 -->
-<rect fill="#F3F8FC" filter="url(#cardShadow)" height="172" rx="4" stroke="#1976D2" stroke-width="3" width="284" x="118" y="185"></rect>
-<!-- 간판 (상단 띠) -->
-<rect fill="#1976D2" height="40" rx="4" width="284" x="118" y="150"></rect>
-<rect fill="none" height="40" rx="4" stroke="#1565C0" stroke-width="3" width="284" x="118" y="150"></rect>
-<text fill="white" font-size="16" font-weight="900" letter-spacing="1" text-anchor="middle" x="260" y="176">PrintShop Mini</text>
-<!-- ── 차양 (어닝) ── -->
-<!-- 차양 베이스 곡선 -->
-<path d="M112,190 L408,190 L408,210 Q370,240 332,210 Q314,196 296,210 Q278,226 260,210 Q242,196 224,210 Q206,226 188,210 Q170,196 152,210 Q134,226 112,210 Z" fill="#1976D2" stroke="#1976D2" stroke-width="2.5"></path>
-<!-- 차양 줄무늬 (흰줄) -->
-<path d="M140,190 Q134,210 128,225" opacity="0.45" stroke="white" stroke-linecap="round" stroke-width="8"></path>
-<path d="M175,190 Q172,215 168,232" opacity="0.45" stroke="white" stroke-linecap="round" stroke-width="8"></path>
-<path d="M224,190 Q224,216 222,233" opacity="0.45" stroke="white" stroke-linecap="round" stroke-width="8"></path>
-<path d="M260,190 Q260,218 260,235" opacity="0.45" stroke="white" stroke-linecap="round" stroke-width="8"></path>
-<path d="M296,190 Q296,216 298,233" opacity="0.45" stroke="white" stroke-linecap="round" stroke-width="8"></path>
-<path d="M345,190 Q348,215 352,232" opacity="0.45" stroke="white" stroke-linecap="round" stroke-width="8"></path>
-<path d="M380,190 Q386,210 392,225" opacity="0.45" stroke="white" stroke-linecap="round" stroke-width="8"></path>
-<!-- 차양 하단 스캘럽 (물결 장식) -->
-<path d="M112,210 Q126,230 140,210 Q154,192 168,210 Q182,230 196,210 Q210,192 224,210 Q238,230 252,210 Q266,192 280,210 Q294,230 308,210 Q322,192 336,210 Q350,230 364,210 Q378,192 392,210 Q406,230 408,210" fill="#1976D2" stroke="#1565C0" stroke-width="1.5"></path>
-<!-- ── 왼쪽 쇼윈도 ── -->
-<rect fill="#DCEBFA" height="90" rx="3" stroke="#1976D2" stroke-width="2.5" width="100" x="132" y="248"></rect>
-<!-- 창문 프레임 십자 -->
-<line stroke="#1976D2" stroke-width="2" x1="182" x2="182" y1="248" y2="338"></line>
-<line stroke="#1976D2" stroke-width="2" x1="132" x2="232" y1="293" y2="293"></line>
-<!-- 창문 광택 -->
-<rect fill="white" height="37" opacity="0.35" rx="2" width="42" x="136" y="252"></rect>
-<rect fill="white" height="37" opacity="0.2" rx="2" width="42" x="186" y="252"></rect>
-<!-- ── 오른쪽 쇼윈도 ── -->
-<rect fill="#DCEBFA" height="90" rx="3" stroke="#1976D2" stroke-width="2.5" width="100" x="288" y="248"></rect>
-<line stroke="#1976D2" stroke-width="2" x1="338" x2="338" y1="248" y2="338"></line>
-<line stroke="#1976D2" stroke-width="2" x1="288" x2="388" y1="293" y2="293"></line>
-<rect fill="white" height="37" opacity="0.35" rx="2" width="42" x="292" y="252"></rect>
-<rect fill="white" height="37" opacity="0.2" rx="2" width="42" x="342" y="252"></rect>
-<!-- ── 자동문 (중앙) ── -->
-<rect fill="#B8D4F0" height="87" rx="3" stroke="#1976D2" stroke-width="2.5" width="84" x="218" y="268"></rect>
-<!-- 왼쪽 문짝 -->
-<rect fill="#DCEBFA" height="81" opacity="0.85" rx="2" width="38" x="221" y="271"></rect>
-<!-- 오른쪽 문짝 -->
-<rect fill="#DCEBFA" height="81" opacity="0.85" rx="2" width="38" x="261" y="271"></rect>
-<!-- 문 중앙선 -->
-<line stroke="#1976D2" stroke-width="2" x1="260" x2="260" y1="271" y2="352"></line>
-<!-- 손잡이 -->
-<rect fill="#1976D2" height="18" opacity="0.6" rx="3.5" width="7" x="251" y="308"></rect>
-<rect fill="#1976D2" height="18" opacity="0.6" rx="3.5" width="7" x="263" y="308"></rect>
-<!-- AUTO 센서 -->
-<rect fill="#1976D2" height="10" opacity="0.5" rx="5" width="44" x="238" y="260"></rect>
-<text fill="white" font-size="6.5" font-weight="700" text-anchor="middle" x="260" y="268">AUTO</text>
-<!-- ── 성장 타임라인 (상단) ── -->
+<!-- ── 가게 모양: 새 로고 뱃지 ── -->
+        <rect x="140" y="104" width="240" height="240" rx="36" fill="white" filter="url(#cardShadow)"/>
+        <image href="../logo.jpg" x="152" y="116" width="216" height="216" preserveAspectRatio="xMidYMid meet"/>
+
+        <!-- ── 성장 타임라인 (상단) ── -->
 <rect fill="white" filter="url(#softShadow)" height="48" rx="10" width="80" x="82" y="48"></rect>
 <text fill="#1976D2" font-size="12" font-weight="900" text-anchor="middle" x="122" y="70">2021</text>
 <text fill="#6B7280" font-size="9" text-anchor="middle" x="122" y="86">光教 1 号店</text>
