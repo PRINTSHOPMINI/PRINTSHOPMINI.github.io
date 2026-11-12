@@ -11,7 +11,7 @@
   '.lbx-box.full img{max-width:none;max-height:none;cursor:zoom-out}'+
   '.lbx-x{position:absolute;top:10px;right:10px;display:flex;align-items:center;gap:8px;background:#fff;color:#111827;border:0;border-radius:50px;padding:12px 22px 12px 16px;font-size:19px;font-weight:900;min-height:52px;font-family:inherit;box-shadow:0 4px 14px rgba(0,0,0,.35);cursor:pointer}'+
   '.lbx-x b{font-size:28px;line-height:1}'+
-  '.lbx-hint{position:absolute;left:0;right:0;bottom:14px;text-align:center;color:#d6deea;font-size:13px;font-weight:600;padding:0 12px}';
+  '.lbx-hint{position:absolute;left:0;right:0;bottom:14px;text-align:center;color:#D6E0EA;font-size:13px;font-weight:600;padding:0 12px}';
   var st=document.createElement('style');st.textContent=css;document.head.appendChild(st);
 
   var ov=null,box=null,imgEl=null,isOpen=false;

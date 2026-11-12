@@ -11,10 +11,10 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --blue:#1B8AC4;--blue-hover:#1470A8;--blue-light:#E8F4FC;--blue-mid:#4AAAD6;
+  --blue:#1976D2;--blue-hover:#1565C0;--blue-light:#E8F2FC;--blue-mid:#1976D2;
   --text:#111827;--text2:#374151;--text3:#6B7280;--border:#E5E7EB;
   --bg:#F9FAFB;--white:#FFFFFF;--radius:14px;
-  --print:#22B24C;--copy:#018FFB;--scan:#12BDB0;--fax:#F3732C;--warn:#D93025;
+  --print:#22B24C;--copy:#1976D2;--scan:#12BDB0;--fax:#F3732C;--warn:#D93025;
 }
 html{scroll-behavior:smooth}
 body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--white);line-height:1.7;overflow-x:hidden}
@@ -163,13 +163,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .omock-bar{height:18px;background:#EEF1F5;display:flex;align-items:center;gap:4px;padding:0 8px;border-bottom:1px solid #E5E7EB}
 .omock-dot{width:5px;height:5px;border-radius:50%;background:#D7DDE3}
 .omock-body{display:flex;height:158px}
-.omock-side{width:58px;flex:0 0 auto;background:var(--oc,#1B8AC4);padding:8px 0;display:flex;flex-direction:column;gap:1px}
+.omock-side{width:58px;flex:0 0 auto;background:var(--oc,#1976D2);padding:8px 0;display:flex;flex-direction:column;gap:1px}
 .omock-side div{color:rgba(255,255,255,.68);font-size:8.6px;font-weight:700;padding:5px 0 5px 10px}
 .omock-side div.on{color:#fff;background:rgba(255,255,255,.18);border-left:3px solid #fff;padding-left:7px}
 .omock-fields{width:124px;flex:0 0 auto;background:#F7F8FA;padding:8px 8px;display:flex;flex-direction:column;gap:5px;border-right:1px solid #E5E7EB;overflow:hidden}
 .omock-cap{font-size:7.6px;color:#9AA5B1;font-weight:800;letter-spacing:.3px;margin-top:3px}
 .omock-cap:first-child{margin-top:0}
-.omock-field{background:#fff;border:1px solid #C9D3DB;border-radius:4px;padding:4px 14px 4px 7px;font-size:8.2px;font-weight:700;color:#374151;position:relative;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.omock-field{background:#fff;border:1px solid #C9D2DB;border-radius:4px;padding:4px 14px 4px 7px;font-size:8.2px;font-weight:700;color:#374151;position:relative;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .omock-field::after{content:'▾';position:absolute;right:5px;top:50%;transform:translateY(-50%);color:#9AA5B1;font-size:6.5px}
 .omock-row.hi .omock-field{border-color:#D93025;background:#FEF2F2;color:#B31E16;box-shadow:0 0 0 2px rgba(217,48,37,.14)}
 .omock-row.hi .omock-cap{color:#D93025}
@@ -180,7 +180,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .omock-fields .omock-row.hi{margin:0 -3px;padding:2px 3px;background:rgba(217,48,37,.06);border-radius:5px}
 
 /* 준비중 */
-.soon{border:1px dashed #C9D3DB;border-radius:var(--radius);padding:44px 24px;text-align:center;background:var(--white)}
+.soon{border:1px dashed #C9D2DB;border-radius:var(--radius);padding:44px 24px;text-align:center;background:var(--white)}
 .soon-h{font-size:16px;font-weight:800;color:var(--text3);margin-bottom:6px}
 .soon-p{font-size:13.5px;color:var(--text3)}
 
@@ -287,8 +287,8 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 .gcard:hover .gcard-pal{transform:translateY(-4px) rotate(-4deg)}
 .gcard-body{position:relative}
 </style>
-<style id="nav-lang-css">.nav-lang{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:#1B8AC4;border:1.5px solid #1B8AC4;border-radius:50px;padding:7px 13px;margin-right:8px;white-space:nowrap;background:#fff}.nav-lang:hover{background:#E8F4FC}.nav-links a{white-space:nowrap}@media(max-width:1180px){.nav-lang .t{display:none}.nav-lang{padding:6px 9px;font-size:15px}}@media(max-width:480px){.nav-lang{padding:4px 6px;margin-right:6px;font-size:14px}.nav-cta{padding:8px 13px!important;font-size:12.5px!important}}@media(max-width:400px){nav{padding-left:12px!important;padding-right:12px!important}.nav-logo-name{font-size:15px!important}.nav-logo{gap:6px!important}.nav-cta{padding:7px 9px!important;font-size:12px!important}.nav-lang,.lang-sel{margin-right:5px!important}.hamburger{margin-left:4px!important}}</style>
-<script defer="" src="../ga.js?v=1"></script><style>.lang-sel{display:inline-flex;align-items:center;gap:4px;margin-right:8px;border:1.5px solid #1B8AC4;border-radius:50px;padding:3px 4px 3px 10px;background:#fff;font-size:15px}.lang-sel select{border:none;background:transparent;font:700 13px sans-serif;color:#1B8AC4;padding:4px 2px;cursor:pointer;outline:none}.nav-links a{padding:8px 11px!important}@media(max-width:1280px){.nav-raccoon{display:none!important}}.lang-sel .cur{display:none}@media(max-width:480px){.nav-cta{display:none!important}.lang-sel{position:relative;margin-right:6px;padding:6px 10px;gap:5px}.lang-sel .cur{display:inline;white-space:nowrap;font:700 13px sans-serif;color:#1B8AC4}.lang-sel select{position:absolute;inset:0;width:100%;opacity:0}}@media(max-width:400px){.lang-sel{padding:5px 6px!important;gap:2px!important;font-size:13px}.lang-sel .cur{font-size:12px}}.lang-sw{position:fixed;right:10px;bottom:12px;z-index:400}.tr-note{max-width:1160px;margin:0 auto;padding:10px 6% 0;font-size:12.5px;color:#9CA3AF}</style></head>
+<style id="nav-lang-css">.nav-lang{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:#1976D2;border:1.5px solid #1976D2;border-radius:50px;padding:7px 13px;margin-right:8px;white-space:nowrap;background:#fff}.nav-lang:hover{background:#E8F2FC}.nav-links a{white-space:nowrap}@media(max-width:1180px){.nav-lang .t{display:none}.nav-lang{padding:6px 9px;font-size:15px}}@media(max-width:480px){.nav-lang{padding:4px 6px;margin-right:6px;font-size:14px}.nav-cta{padding:8px 13px!important;font-size:12.5px!important}}@media(max-width:400px){nav{padding-left:12px!important;padding-right:12px!important}.nav-logo-name{font-size:15px!important}.nav-logo{gap:6px!important}.nav-cta{padding:7px 9px!important;font-size:12px!important}.nav-lang,.lang-sel{margin-right:5px!important}.hamburger{margin-left:4px!important}}</style>
+<script defer="" src="../ga.js?v=1"></script><style>.lang-sel{display:inline-flex;align-items:center;gap:4px;margin-right:8px;border:1.5px solid #1976D2;border-radius:50px;padding:3px 4px 3px 10px;background:#fff;font-size:15px}.lang-sel select{border:none;background:transparent;font:700 13px sans-serif;color:#1976D2;padding:4px 2px;cursor:pointer;outline:none}.nav-links a{padding:8px 11px!important}@media(max-width:1280px){.nav-raccoon{display:none!important}}.lang-sel .cur{display:none}@media(max-width:480px){.nav-cta{display:none!important}.lang-sel{position:relative;margin-right:6px;padding:6px 10px;gap:5px}.lang-sel .cur{display:inline;white-space:nowrap;font:700 13px sans-serif;color:#1976D2}.lang-sel select{position:absolute;inset:0;width:100%;opacity:0}}@media(max-width:400px){.lang-sel{padding:5px 6px!important;gap:2px!important;font-size:13px}.lang-sel .cur{font-size:12px}}.lang-sw{position:fixed;right:10px;bottom:12px;z-index:400}.tr-note{max-width:1160px;margin:0 auto;padding:10px 6% 0;font-size:12.5px;color:#9CA3AF}</style></head>
 <body>
 <!-- NAV -->
 <nav> <a class="nav-logo" href="index.html"> <img alt="Logo" class="logo-img" src="../logo.jpg"/> <span class="nav-logo-name">PrintShop Mini</span> </a> <ul class="nav-links" id="navLinks">
@@ -322,7 +322,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 <div class="sec-in">
 <div class="sec-head"><h2 class="sec-h2">Which service do you need?</h2></div>
 <p class="sec-tagline">Pick a service to see the steps one by one. You can also go there from <b>How to Use</b> in the top menu.</p>
-<p class="brand-note" style="word-break:keep-all;font-size:13.5px;line-height:1.9;color:#6B7280;margin:10px 0 0"><b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1B8AC4)">PrintShop Mini</b> and <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">PrintNow</b> are brands of <span style="white-space:nowrap">Good Learning Partner Co., Ltd.</span></p>
+<p class="brand-note" style="word-break:keep-all;font-size:13.5px;line-height:1.9;color:#6B7280;margin:10px 0 0"><b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1976D2)">PrintShop Mini</b> and <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">PrintNow</b> are brands of <span style="white-space:nowrap">Good Learning Partner Co., Ltd.</span></p>
 <div class="gcards">
 <a class="gcard" href="guide-print.html" style="--tc:var(--print)">
 <div class="gcard-top"><svg fill="none" height="26" viewbox="0 0 48 48" width="26"><g stroke="#fff" stroke-linejoin="round" stroke-width="3.4"><rect height="9" width="18" x="15" y="6"></rect><rect height="17" rx="3" width="34" x="7" y="15"></rect><rect height="10" width="18" x="15" y="32"></rect></g></svg><div class="gcard-name">Print</div><img alt="" aria-hidden="true" class="gcard-pal" src="../img/friends/print.webp"/></div>
@@ -422,10 +422,10 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 <div class="tip">
 <div class="tip-fig">
 <svg fill="none" height="52" viewbox="0 0 48 48" width="52">
-<g stroke="#1B8AC4" stroke-linejoin="round" stroke-width="3.2">
+<g stroke="#1976D2" stroke-linejoin="round" stroke-width="3.2">
 <rect height="9" width="18" x="15" y="6"></rect><rect height="17" rx="3" width="34" x="7" y="15"></rect><rect height="10" width="18" x="15" y="32"></rect>
 </g>
-<rect fill="#018FFB" height="4" width="5" x="18" y="21"></rect><rect fill="#F3732C" height="4" width="5" x="25" y="21"></rect>
+<rect fill="#1976D2" height="4" width="5" x="18" y="21"></rect><rect fill="#F3732C" height="4" width="5" x="25" y="21"></rect>
 </svg>
 </div>
 <div class="tip-h">To print in color</div>
@@ -434,9 +434,9 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 <div class="tip">
 <div class="tip-fig">
 <svg fill="none" height="52" viewbox="0 0 48 48" width="52">
-<path d="M12 5h16l9 9v29H12z" stroke="#1B8AC4" stroke-linejoin="round" stroke-width="3.2"></path>
-<path d="M28 5v9h9" stroke="#1B8AC4" stroke-linejoin="round" stroke-width="3.2"></path>
-<text fill="#1B8AC4" font-family="Noto Sans KR" font-size="11" font-weight="900" text-anchor="middle" x="24" y="35">PDF</text>
+<path d="M12 5h16l9 9v29H12z" stroke="#1976D2" stroke-linejoin="round" stroke-width="3.2"></path>
+<path d="M28 5v9h9" stroke="#1976D2" stroke-linejoin="round" stroke-width="3.2"></path>
+<text fill="#1976D2" font-family="Noto Sans KR" font-size="11" font-weight="900" text-anchor="middle" x="24" y="35">PDF</text>
 </svg>
 </div>
 <div class="tip-h">Hangul (HWP) files</div>
@@ -445,9 +445,9 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 <div class="tip">
 <div class="tip-fig">
 <svg fill="none" height="52" viewbox="0 0 48 48" width="52">
-<circle cx="24" cy="24" r="17" stroke="#1B8AC4" stroke-width="3.2"></circle>
-<ellipse cx="24" cy="24" rx="7.5" ry="17" stroke="#1B8AC4" stroke-width="2.8"></ellipse>
-<path d="M7 24h34M10 15h28M10 33h28" stroke="#1B8AC4" stroke-width="2.8"></path>
+<circle cx="24" cy="24" r="17" stroke="#1976D2" stroke-width="3.2"></circle>
+<ellipse cx="24" cy="24" rx="7.5" ry="17" stroke="#1976D2" stroke-width="2.8"></ellipse>
+<path d="M7 24h34M10 15h28M10 33h28" stroke="#1976D2" stroke-width="2.8"></path>
 </svg>
 </div>
 <div class="tip-h">PDFs made in Canva or on iPad</div>
@@ -490,7 +490,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 </ul>
 </div>
 </div>
-<div class="ft-corp" style="word-break:keep-all;max-width:1160px;margin:0 auto 20px;font-size:13px;line-height:1.9;color:#9CA3AF"><b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1B8AC4)">PrintShop Mini</b> and <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">PrintNow</b> are brands of <span style="white-space:nowrap">Good Learning Partner Co., Ltd.</span></div>
+<div class="ft-corp" style="word-break:keep-all;max-width:1160px;margin:0 auto 20px;font-size:13px;line-height:1.9;color:#9CA3AF"><b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1976D2)">PrintShop Mini</b> and <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">PrintNow</b> are brands of <span style="white-space:nowrap">Good Learning Partner Co., Ltd.</span></div>
 <div class="ft-bottom">
 <p>© 2025 PrintShop Mini. All rights reserved.</p>
 <p><a style="color:inherit;text-decoration:underline" href="../privacy.html">Privacy Policy</a> · Terms of Use</p>

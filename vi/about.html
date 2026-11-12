@@ -16,7 +16,7 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --blue:#1B8AC4;--blue-hover:#1470A8;--blue-light:#E8F4FC;--blue-mid:#4AAAD6;
+  --blue:#1976D2;--blue-hover:#1565C0;--blue-light:#E8F2FC;--blue-mid:#1976D2;
   --text:#111827;--text2:#374151;--text3:#6B7280;--border:#E5E7EB;
   --bg:#F9FAFB;--white:#FFFFFF;--radius:14px;
 }
@@ -72,7 +72,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .story-text .sec-h2{margin-bottom:24px}
 .story-text p{font-size:15px;color:var(--text2);line-height:1.95;margin-bottom:16px}
 .story-text p:last-child{margin-bottom:0}
-.story-visual{border-radius:20px;overflow:hidden;box-shadow:0 8px 40px rgba(27,138,196,0.13);}
+.story-visual{border-radius:20px;overflow:hidden;box-shadow:0 8px 40px rgba(25,118,210,0.13);}
 .story-visual svg{width:100%;height:auto;display:block;}
 
 /* VALUES */
@@ -113,7 +113,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 .ft-col ul li a:hover{color:white}
 .ft-bottom{border-top:1px solid #374151;padding-top:24px;display:flex;justify-content:space-between;font-size:12px;flex-wrap:wrap;gap:8px}
 
-.chat-fab{position:fixed;bottom:28px;right:28px;width:52px;height:52px;background:var(--blue);border:none;border-radius:50%;font-size:20px;cursor:pointer;box-shadow:0 4px 20px rgba(27,138,196,0.4);z-index:200;display:flex;align-items:center;justify-content:center;transition:transform .2s}
+.chat-fab{position:fixed;bottom:28px;right:28px;width:52px;height:52px;background:var(--blue);border:none;border-radius:50%;font-size:20px;cursor:pointer;box-shadow:0 4px 20px rgba(25,118,210,0.4);z-index:200;display:flex;align-items:center;justify-content:center;transition:transform .2s}
 .chat-fab:hover{transform:scale(1.1)}
 
 @media(max-width:900px){
@@ -173,15 +173,15 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 
 /* 히어로 */
 .mf-hero{position:relative;overflow:hidden;text-align:center;padding:56px 6% 44px;
-  background:radial-gradient(circle at 15% 20%,#FFF3C4 0,transparent 38%),radial-gradient(circle at 88% 12%,#FFD9EC 0,transparent 34%),linear-gradient(180deg,#E3F2FB 0%,#F3FAFF 100%)}
+  background:radial-gradient(circle at 15% 20%,#FFF3C4 0,transparent 38%),radial-gradient(circle at 88% 12%,#FFD9EC 0,transparent 34%),linear-gradient(180deg,#E3EFFB 0%,#F3FAFF 100%)}
 .mf-hero::after{content:'';position:absolute;left:-5%;right:-5%;bottom:-22px;height:46px;background:#fff;border-radius:50% 50% 0 0/100% 100% 0 0}
 .mf-deco{position:absolute;font-size:26px;opacity:.85;animation:mfTwinkle 3.2s ease-in-out infinite}
 .mf-deco.d1{left:7%;top:18%}.mf-deco.d2{right:9%;top:30%;animation-delay:.8s}.mf-deco.d3{left:12%;bottom:26%;animation-delay:1.4s}.mf-deco.d4{right:16%;bottom:30%;animation-delay:2s}
 @keyframes mfTwinkle{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(1.25) rotate(12deg)}}
 .mf-hero-inner{position:relative;z-index:1;max-width:1100px;margin:0 auto}
-.mf-badge{display:inline-block;background:#fff;color:var(--blue);font-size:15px;padding:6px 18px;border-radius:50px;box-shadow:0 3px 0 rgba(27,138,196,.18);margin-bottom:14px}
-.mf-title{font-size:clamp(32px,5.4vw,58px);color:#16415C;line-height:1.2;margin-bottom:12px;letter-spacing:-1px}
-.mf-title span{color:#fff;background:var(--blue);padding:0 .28em;border-radius:.35em;display:inline-block;transform:rotate(-2deg);box-shadow:0 5px 0 #14709F}
+.mf-badge{display:inline-block;background:#fff;color:var(--blue);font-size:15px;padding:6px 18px;border-radius:50px;box-shadow:0 3px 0 rgba(25,118,210,.18);margin-bottom:14px}
+.mf-title{font-size:clamp(32px,5.4vw,58px);color:#0D47A1;line-height:1.2;margin-bottom:12px;letter-spacing:-1px}
+.mf-title span{color:#fff;background:var(--blue);padding:0 .28em;border-radius:.35em;display:inline-block;transform:rotate(-2deg);box-shadow:0 5px 0 #1565C0}
 .mf-sub{font-size:16px;color:var(--text2);line-height:1.9;margin-bottom:26px}
 .mf-lineup{display:flex;justify-content:center;align-items:flex-end;gap:6px;flex-wrap:wrap}
 .mf-li{display:flex;flex-direction:column;align-items:center;width:clamp(90px,11vw,132px);transition:transform .25s}
@@ -194,11 +194,11 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 
 /* 소개 문구 말풍선 */
 .about-intro{background:#fff;padding:34px 6% 8px}
-.about-intro .ah-inner{max-width:820px;margin:0 auto;background:var(--blue-light);border:3px dashed #9BD0EC;border-radius:28px;padding:22px 28px;position:relative}
+.about-intro .ah-inner{max-width:820px;margin:0 auto;background:var(--blue-light);border:3px dashed #9BC4EC;border-radius:28px;padding:22px 28px;position:relative}
 .about-intro .ah-desc{margin:8px 0 0;max-width:none;font-size:16px}
 
 /* 친구 카드 */
-.mf-section{padding:70px 6% 80px;background:#fff;background-image:radial-gradient(circle,rgba(27,138,196,.09) 2px,transparent 2.5px);background-size:30px 30px}
+.mf-section{padding:70px 6% 80px;background:#fff;background-image:radial-gradient(circle,rgba(25,118,210,.09) 2px,transparent 2.5px);background-size:30px 30px}
 .mf-wrap{max-width:1160px;margin:0 auto}
 .mf-lead{font-size:16px;color:var(--text2);line-height:1.9;margin-bottom:34px;max-width:720px}
 .mf-card{position:relative;background:#fff;border:3px solid var(--c);border-radius:30px;padding:22px 22px 24px;box-shadow:0 7px 0 var(--c);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
@@ -228,16 +228,16 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 
 /* 기존 섹션 귀엽게 */
 .mission-section{background:linear-gradient(180deg,#fff 0,#FFF9E8 100%)}
-.mission-card{border:3px solid #E5EEF5;border-radius:26px;box-shadow:0 6px 0 #E5EEF5;text-align:center;transition:transform .2s,box-shadow .2s,border-color .2s}
+.mission-card{border:3px solid #E5EDF5;border-radius:26px;box-shadow:0 6px 0 #E5EDF5;text-align:center;transition:transform .2s,box-shadow .2s,border-color .2s}
 .mission-card:hover{transform:translateY(-4px);box-shadow:0 10px 0 var(--blue);border-color:var(--blue)}
-.mission-card:nth-child(1){background:#E3F2FB}.mission-card:nth-child(2){background:#E7F7EC}.mission-card:nth-child(3){background:#FDE7F2}
+.mission-card:nth-child(1){background:#E3EFFB}.mission-card:nth-child(2){background:#E7F7EC}.mission-card:nth-child(3){background:#FDE7F2}
 .mission-icon{font-size:44px}
 .mission-title{font-size:24px}
 .story-section{background:#F3FAFF}
-.story-visual{border-radius:30px;border:3px solid #fff;box-shadow:0 8px 0 #CFE7F6}
-.value-card{border:3px solid #E5EEF5;border-radius:26px;box-shadow:0 6px 0 #E5EEF5}
-.value-card:nth-child(1){background:#E1F1FF}.value-card:nth-child(2){background:#E7F7EC}.value-card:nth-child(3){background:#FFEBDD}.value-card:nth-child(4){background:#EEE6FD}
-.value-card:hover{box-shadow:0 10px 0 #14709F}
+.story-visual{border-radius:30px;border:3px solid #fff;box-shadow:0 8px 0 #CFE3F6}
+.value-card{border:3px solid #E5EDF5;border-radius:26px;box-shadow:0 6px 0 #E5EDF5}
+.value-card:nth-child(1){background:#E1F0FF}.value-card:nth-child(2){background:#E7F7EC}.value-card:nth-child(3){background:#FFEBDD}.value-card:nth-child(4){background:#EEE6FD}
+.value-card:hover{box-shadow:0 10px 0 #1565C0}
 .v-title{font-size:21px}
 .timeline-section{background:linear-gradient(180deg,#FFF9E8 0,#fff 100%)}
 .tl-dot{background:#fff;box-shadow:0 0 0 3px var(--blue)}
@@ -288,7 +288,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 .v-title{color:var(--c)}
 .v-say{margin-top:12px;font-family:var(--hand);font-size:19px;color:var(--c)}
 .timeline2{position:relative;margin-top:40px;display:flex;flex-direction:column;gap:26px}
-.timeline2::before{content:'';position:absolute;left:35px;top:20px;bottom:20px;width:0;border-left:4px dotted #BFDDEF}
+.timeline2::before{content:'';position:absolute;left:35px;top:20px;bottom:20px;width:0;border-left:4px dotted #BFD7EF}
 .tl2-item{position:relative;display:flex;gap:18px;align-items:flex-start}
 .tl2-av{flex:0 0 74px;height:74px;border-radius:50%;background:var(--cl);border:4px solid var(--c);display:flex;align-items:flex-end;justify-content:center;overflow:hidden;position:relative;z-index:1}
 .tl2-av img{height:92%;width:auto;object-fit:contain}
@@ -317,11 +317,11 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
   .v-pic{height:112px}
 }
 </style>
-<style id="nav-lang-css">.nav-lang{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:#1B8AC4;border:1.5px solid #1B8AC4;border-radius:50px;padding:7px 13px;margin-right:8px;white-space:nowrap;background:#fff}.nav-lang:hover{background:#E8F4FC}.nav-links a{white-space:nowrap}@media(max-width:1180px){.nav-lang .t{display:none}.nav-lang{padding:6px 9px;font-size:15px}}@media(max-width:480px){.nav-lang{padding:4px 6px;margin-right:6px;font-size:14px}.nav-cta{padding:8px 13px!important;font-size:12.5px!important}}@media(max-width:400px){nav{padding-left:12px!important;padding-right:12px!important}.nav-logo-name{font-size:15px!important}.nav-logo{gap:6px!important}.nav-cta{padding:7px 9px!important;font-size:12px!important}.nav-lang,.lang-sel{margin-right:5px!important}.hamburger{margin-left:4px!important}}</style>
-<script defer="" src="../ga.js?v=1"></script><style>.lang-sel{display:inline-flex;align-items:center;gap:4px;margin-right:8px;border:1.5px solid #1B8AC4;border-radius:50px;padding:3px 4px 3px 10px;background:#fff;font-size:15px}.lang-sel select{border:none;background:transparent;font:700 13px sans-serif;color:#1B8AC4;padding:4px 2px;cursor:pointer;outline:none}.nav-links a{padding:8px 11px!important}@media(max-width:1280px){.nav-raccoon{display:none!important}}.lang-sel .cur{display:none}@media(max-width:480px){.nav-cta{display:none!important}.lang-sel{position:relative;margin-right:6px;padding:6px 10px;gap:5px}.lang-sel .cur{display:inline;white-space:nowrap;font:700 13px sans-serif;color:#1B8AC4}.lang-sel select{position:absolute;inset:0;width:100%;opacity:0}}@media(max-width:400px){.lang-sel{padding:5px 6px!important;gap:2px!important;font-size:13px}.lang-sel .cur{font-size:12px}}.lang-sw{position:fixed;right:10px;bottom:12px;z-index:400}.tr-note{max-width:1160px;margin:0 auto;padding:10px 6% 0;font-size:12.5px;color:#9CA3AF}</style></head>
+<style id="nav-lang-css">.nav-lang{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:#1976D2;border:1.5px solid #1976D2;border-radius:50px;padding:7px 13px;margin-right:8px;white-space:nowrap;background:#fff}.nav-lang:hover{background:#E8F2FC}.nav-links a{white-space:nowrap}@media(max-width:1180px){.nav-lang .t{display:none}.nav-lang{padding:6px 9px;font-size:15px}}@media(max-width:480px){.nav-lang{padding:4px 6px;margin-right:6px;font-size:14px}.nav-cta{padding:8px 13px!important;font-size:12.5px!important}}@media(max-width:400px){nav{padding-left:12px!important;padding-right:12px!important}.nav-logo-name{font-size:15px!important}.nav-logo{gap:6px!important}.nav-cta{padding:7px 9px!important;font-size:12px!important}.nav-lang,.lang-sel{margin-right:5px!important}.hamburger{margin-left:4px!important}}</style>
+<script defer="" src="../ga.js?v=1"></script><style>.lang-sel{display:inline-flex;align-items:center;gap:4px;margin-right:8px;border:1.5px solid #1976D2;border-radius:50px;padding:3px 4px 3px 10px;background:#fff;font-size:15px}.lang-sel select{border:none;background:transparent;font:700 13px sans-serif;color:#1976D2;padding:4px 2px;cursor:pointer;outline:none}.nav-links a{padding:8px 11px!important}@media(max-width:1280px){.nav-raccoon{display:none!important}}.lang-sel .cur{display:none}@media(max-width:480px){.nav-cta{display:none!important}.lang-sel{position:relative;margin-right:6px;padding:6px 10px;gap:5px}.lang-sel .cur{display:inline;white-space:nowrap;font:700 13px sans-serif;color:#1976D2}.lang-sel select{position:absolute;inset:0;width:100%;opacity:0}}@media(max-width:400px){.lang-sel{padding:5px 6px!important;gap:2px!important;font-size:13px}.lang-sel .cur{font-size:12px}}.lang-sw{position:fixed;right:10px;bottom:12px;z-index:400}.tr-note{max-width:1160px;margin:0 auto;padding:10px 6% 0;font-size:12.5px;color:#9CA3AF}</style></head>
 <body>
 <nav>
-<div class="nav-logo"><a class="nav-logo-name" href="index.html">🦝 PrintShop Mini</a></div>
+<div class="nav-logo"><a class="nav-logo-name" href="index.html"><img src="../logo.jpg" alt="" style="width:32px;height:32px;object-fit:contain;vertical-align:middle;margin-right:8px;border-radius:6px">PrintShop Mini</a></div>
 <ul class="nav-links">
 <li><a href="services.html">Dịch vụ</a></li>
 <li><a href="guide.html">Hướng dẫn</a></li>
@@ -359,11 +359,11 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 <div class="mf-badge">🐾 Linh vật PrintShop Mini</div>
 <h2 class="mf-title">Xin chào~ Chúng mình là <span>Mini Friends</span>!</h2>
 <p class="mf-sub">Mỗi dịch vụ có một bạn phụ trách.<br/>Bấm vào một bạn, bạn ấy sẽ tự giới thiệu!</p>
-<div class="mf-lineup"><a aria-label="Làm quen Peng Print" class="mf-li" href="#friend-penpurin" style="--c:#22B24C;--cl:#E7F7EC"><img alt="Peng Print (chim cánh cụt), phụ trách in" height="170" loading="lazy" src="../img/friends/print.webp" width="150"/><span class="mf-tag">Peng Print</span></a> <a aria-label="Làm quen Polly Copy" class="mf-li" href="#friend-ttarabok" style="--c:#018FFB;--cl:#E1F1FF"><img alt="Polly Copy (vẹt), phụ trách photo" height="170" loading="lazy" src="../img/friends/copy.webp" width="150"/><span class="mf-tag">Polly Copy</span></a> <a aria-label="Làm quen Hoo Scan" class="mf-li" href="#friend-buscan" style="--c:#12BDB0;--cl:#E0F7F5"><img alt="Hoo Scan (cú), phụ trách scan" height="170" loading="lazy" src="../img/friends/scan.webp" width="150"/><span class="mf-tag">Hoo Scan</span></a> <a aria-label="Làm quen Mini Koon" class="mf-li mf-big" href="#friend-minikoon" style="--c:#1B8AC4;--cl:#E3F2FB"><img alt="Mini Koon (gấu mèo), cửa hàng trưởng · hướng dẫn" height="170" loading="lazy" src="../img/friends/raccoon.webp" width="150"/><span class="mf-tag">Mini Koon</span></a> <a aria-label="Làm quen Coo Fax" class="mf-li" href="#friend-pakdul" style="--c:#F3732C;--cl:#FFEBDD"><img alt="Coo Fax (bồ câu), phụ trách fax" height="170" loading="lazy" src="../img/friends/fax.webp" width="150"/><span class="mf-tag">Coo Fax</span></a> <a aria-label="Làm quen Shelly Coat" class="mf-li" href="#friend-kobuki" style="--c:#7C3AED;--cl:#EEE6FD"><img alt="Shelly Coat (rùa), phụ trách ép plastic" height="170" loading="lazy" src="../img/friends/coat.webp" width="150"/><span class="mf-tag">Shelly Coat</span></a> <a aria-label="Làm quen Stacky" class="mf-li" href="#friend-chagoki" style="--c:#EC4899;--cl:#FDE7F2"><img alt="Stacky (hải ly), phụ trách đóng sách" height="170" loading="lazy" src="../img/friends/bind.webp" width="150"/><span class="mf-tag">Stacky</span></a></div>
+<div class="mf-lineup"><a aria-label="Làm quen Peng Print" class="mf-li" href="#friend-penpurin" style="--c:#22B24C;--cl:#E7F7EC"><img alt="Peng Print (chim cánh cụt), phụ trách in" height="170" loading="lazy" src="../img/friends/print.webp" width="150"/><span class="mf-tag">Peng Print</span></a> <a aria-label="Làm quen Polly Copy" class="mf-li" href="#friend-ttarabok" style="--c:#1976D2;--cl:#E1F0FF"><img alt="Polly Copy (vẹt), phụ trách photo" height="170" loading="lazy" src="../img/friends/copy.webp" width="150"/><span class="mf-tag">Polly Copy</span></a> <a aria-label="Làm quen Hoo Scan" class="mf-li" href="#friend-buscan" style="--c:#12BDB0;--cl:#E0F7F5"><img alt="Hoo Scan (cú), phụ trách scan" height="170" loading="lazy" src="../img/friends/scan.webp" width="150"/><span class="mf-tag">Hoo Scan</span></a> <a aria-label="Làm quen Mini Koon" class="mf-li mf-big" href="#friend-minikoon" style="--c:#1976D2;--cl:#E3EFFB"><img alt="Mini Koon (gấu mèo), cửa hàng trưởng · hướng dẫn" height="170" loading="lazy" src="../img/friends/raccoon.webp" width="150"/><span class="mf-tag">Mini Koon</span></a> <a aria-label="Làm quen Coo Fax" class="mf-li" href="#friend-pakdul" style="--c:#F3732C;--cl:#FFEBDD"><img alt="Coo Fax (bồ câu), phụ trách fax" height="170" loading="lazy" src="../img/friends/fax.webp" width="150"/><span class="mf-tag">Coo Fax</span></a> <a aria-label="Làm quen Shelly Coat" class="mf-li" href="#friend-kobuki" style="--c:#7C3AED;--cl:#EEE6FD"><img alt="Shelly Coat (rùa), phụ trách ép plastic" height="170" loading="lazy" src="../img/friends/coat.webp" width="150"/><span class="mf-tag">Shelly Coat</span></a> <a aria-label="Làm quen Stacky" class="mf-li" href="#friend-chagoki" style="--c:#EC4899;--cl:#FDE7F2"><img alt="Stacky (hải ly), phụ trách đóng sách" height="170" loading="lazy" src="../img/friends/bind.webp" width="150"/><span class="mf-tag">Stacky</span></a></div>
 </div>
 </div>
 <div class="about-intro"><div class="ah-inner">
-<p class="brand-note" style="word-break:keep-all;font-size:13.5px;line-height:1.9;color:#6B7280;margin:10px 0 0"><b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1B8AC4)">PrintShop Mini</b> · <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">PrintNow</b> là thương hiệu của công ty <span style="white-space:nowrap">Good Learning Partner</span>.</p>
+<p class="brand-note" style="word-break:keep-all;font-size:13.5px;line-height:1.9;color:#6B7280;margin:10px 0 0"><b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1976D2)">PrintShop Mini</b> · <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">PrintNow</b> là thương hiệu của công ty <span style="white-space:nowrap">Good Learning Partner</span>.</p>
 <p class="ah-desc">PrintShop Mini là cửa hàng in tự phục vụ không người trực mở 24 giờ, ra đời với ý tưởng "ai cũng làm được dễ dàng, dù không có nhân viên". Cửa hàng dành cho tất cả mọi người — sinh viên hoàn thành luận văn lúc nửa đêm, chủ doanh nghiệp cần hợp đồng lúc sáng sớm, hay bất kỳ ai muốn in ảnh.</p>
 </div></div>
 <!-- MINI FRIENDS -->
@@ -372,7 +372,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 <div class="sec-eyebrow">MEET MINI FRIENDS</div>
 <h2 class="sec-h2 cute">Làm quen với Mini Friends 🐾</h2>
 <p class="mf-lead">Bây giờ chào từng bạn nhé! Hãy nghe vì sao mỗi bạn lại phụ trách một trong sáu dịch vụ ở cửa hàng.</p>
-<article class="mf-card mf-boss" id="friend-minikoon" style="--c:#1B8AC4;--cl:#E3F2FB">
+<article class="mf-card mf-boss" id="friend-minikoon" style="--c:#1976D2;--cl:#E3EFFB">
 <div class="mf-pic"><img alt="Mini Koon (gấu mèo), cửa hàng trưởng · hướng dẫn" height="230" loading="lazy" src="../img/friends/raccoon.webp" width="200"/></div>
 <div class="mf-body">
 <div class="mf-pill">🏪 Cửa hàng trưởng · hướng dẫn</div>
@@ -391,7 +391,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 <div class="mf-say-b">"Xếp hàng, từng tờ một! Giấy ra đây."</div>
 <p class="mf-story">Xin chào! Mình là Peng Print, phụ trách <b>in</b> trong nhóm Mini Friends! <span class="why">Vì sao ư?</span> Trông mình đen trắng, giống hệt chữ đen trên giấy trắng đúng không? Hơn nữa chim cánh cụt luôn đi thành hàng ngay ngắn. Nên giấy mình in cũng ra từng tờ thẳng hàng! Đen trắng là cơ bản, màu cũng không thành vấn đề!</p> <a class="mf-go" href="guide-print.html">Xem cách in <span aria-hidden="true">→</span></a> </div>
 </article>
-<article class="mf-card" id="friend-ttarabok" style="--c:#018FFB;--cl:#E1F1FF">
+<article class="mf-card" id="friend-ttarabok" style="--c:#1976D2;--cl:#E1F0FF">
 <div class="mf-pic"><img alt="Polly Copy (vẹt), phụ trách photo" height="230" loading="lazy" src="../img/friends/copy.webp" width="200"/></div>
 <div class="mf-body">
 <div class="mf-pill">📋 Phụ trách photo</div>
@@ -445,7 +445,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 <div class="sec-eyebrow">MISSION &amp; VISION</div>
 <h2 class="sec-h2">Việc chúng tôi làm</h2>
 <div class="mission-grid">
-<div class="mission-card" style="--c:#1B8AC4;--cl:#E3F2FB">
+<div class="mission-card" style="--c:#1976D2;--cl:#E3EFFB">
 <div class="mc-pic"><img alt="Mini Koon (gấu mèo)" class="" loading="lazy" src="../img/friends/raccoon.webp" width="150"/></div>
 <div class="mc-by">Lời hứa của cửa hàng trưởng Mini Koon</div>
 <div class="mission-title">🎯 Sứ mệnh</div>
@@ -457,7 +457,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 <div class="mission-title">🌏 Tầm nhìn</div>
 <p class="mission-desc">Vượt ra ngoài Gyeonggi, chúng tôi hướng tới một thế giới mà ở bất kỳ đâu tại Hàn Quốc, nơi gần nhất cũng có PrintShop Mini.</p>
 </div>
-<div class="mission-card" style="--c:#018FFB;--cl:#E1F1FF">
+<div class="mission-card" style="--c:#1976D2;--cl:#E1F0FF">
 <div class="mc-pic"><img alt="Polly Copy (vẹt)" class="" loading="lazy" src="../img/friends/copy.webp" width="150"/></div>
 <div class="mc-by">Polly Copy nhắc lại</div>
 <div class="mission-title">💡 Khẩu hiệu</div>
@@ -480,11 +480,11 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 <svg font-family="'Noto Sans KR', sans-serif" viewbox="0 0 520 420" xmlns="http://www.w3.org/2000/svg">
 <defs>
 <lineargradient id="bgGrad" x1="0%" x2="100%" y1="0%" y2="100%">
-<stop offset="0%" style="stop-color:#E8F4FC"></stop>
+<stop offset="0%" style="stop-color:#E8F2FC"></stop>
 <stop offset="100%" style="stop-color:#F0F8FF"></stop>
 </lineargradient>
 <filter id="cardShadow">
-<fedropshadow dx="0" dy="6" flood-color="#1B8AC4" flood-opacity="0.15" stddeviation="12"></fedropshadow>
+<fedropshadow dx="0" dy="6" flood-color="#1976D2" flood-opacity="0.15" stddeviation="12"></fedropshadow>
 </filter>
 <filter id="softShadow">
 <fedropshadow dx="0" dy="2" flood-color="#000" flood-opacity="0.08" stddeviation="4"></fedropshadow>
@@ -494,17 +494,17 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 <rect fill="url(#bgGrad)" height="420" width="520"></rect>
 <!-- ── 건물 전체 그룹 (중앙 정렬) ── -->
 <!-- 바닥 -->
-<rect fill="#1B8AC4" height="14" rx="4" width="320" x="100" y="355"></rect>
-<rect fill="#1470A8" height="8" rx="4" width="344" x="88" y="362"></rect>
+<rect fill="#1976D2" height="14" rx="4" width="320" x="100" y="355"></rect>
+<rect fill="#1565C0" height="8" rx="4" width="344" x="88" y="362"></rect>
 <!-- 건물 외벽 -->
-<rect fill="#F3F8FC" filter="url(#cardShadow)" height="172" rx="4" stroke="#1B8AC4" stroke-width="3" width="284" x="118" y="185"></rect>
+<rect fill="#F3F8FC" filter="url(#cardShadow)" height="172" rx="4" stroke="#1976D2" stroke-width="3" width="284" x="118" y="185"></rect>
 <!-- 간판 (상단 띠) -->
-<rect fill="#1B8AC4" height="40" rx="4" width="284" x="118" y="150"></rect>
-<rect fill="none" height="40" rx="4" stroke="#1470A8" stroke-width="3" width="284" x="118" y="150"></rect>
-<text fill="white" font-size="16" font-weight="900" letter-spacing="1" text-anchor="middle" x="260" y="176">PrintShop Mini 🦝</text>
+<rect fill="#1976D2" height="40" rx="4" width="284" x="118" y="150"></rect>
+<rect fill="none" height="40" rx="4" stroke="#1565C0" stroke-width="3" width="284" x="118" y="150"></rect>
+<text fill="white" font-size="16" font-weight="900" letter-spacing="1" text-anchor="middle" x="260" y="176">PrintShop Mini</text>
 <!-- ── 차양 (어닝) ── -->
 <!-- 차양 베이스 곡선 -->
-<path d="M112,190 L408,190 L408,210 Q370,240 332,210 Q314,196 296,210 Q278,226 260,210 Q242,196 224,210 Q206,226 188,210 Q170,196 152,210 Q134,226 112,210 Z" fill="#4AAAD6" stroke="#1B8AC4" stroke-width="2.5"></path>
+<path d="M112,190 L408,190 L408,210 Q370,240 332,210 Q314,196 296,210 Q278,226 260,210 Q242,196 224,210 Q206,226 188,210 Q170,196 152,210 Q134,226 112,210 Z" fill="#1976D2" stroke="#1976D2" stroke-width="2.5"></path>
 <!-- 차양 줄무늬 (흰줄) -->
 <path d="M140,190 Q134,210 128,225" opacity="0.45" stroke="white" stroke-linecap="round" stroke-width="8"></path>
 <path d="M175,190 Q172,215 168,232" opacity="0.45" stroke="white" stroke-linecap="round" stroke-width="8"></path>
@@ -514,56 +514,56 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 <path d="M345,190 Q348,215 352,232" opacity="0.45" stroke="white" stroke-linecap="round" stroke-width="8"></path>
 <path d="M380,190 Q386,210 392,225" opacity="0.45" stroke="white" stroke-linecap="round" stroke-width="8"></path>
 <!-- 차양 하단 스캘럽 (물결 장식) -->
-<path d="M112,210 Q126,230 140,210 Q154,192 168,210 Q182,230 196,210 Q210,192 224,210 Q238,230 252,210 Q266,192 280,210 Q294,230 308,210 Q322,192 336,210 Q350,230 364,210 Q378,192 392,210 Q406,230 408,210" fill="#1B8AC4" stroke="#1470A8" stroke-width="1.5"></path>
+<path d="M112,210 Q126,230 140,210 Q154,192 168,210 Q182,230 196,210 Q210,192 224,210 Q238,230 252,210 Q266,192 280,210 Q294,230 308,210 Q322,192 336,210 Q350,230 364,210 Q378,192 392,210 Q406,230 408,210" fill="#1976D2" stroke="#1565C0" stroke-width="1.5"></path>
 <!-- ── 왼쪽 쇼윈도 ── -->
-<rect fill="#DCEEFA" height="90" rx="3" stroke="#4AAAD6" stroke-width="2.5" width="100" x="132" y="248"></rect>
+<rect fill="#DCEBFA" height="90" rx="3" stroke="#1976D2" stroke-width="2.5" width="100" x="132" y="248"></rect>
 <!-- 창문 프레임 십자 -->
-<line stroke="#4AAAD6" stroke-width="2" x1="182" x2="182" y1="248" y2="338"></line>
-<line stroke="#4AAAD6" stroke-width="2" x1="132" x2="232" y1="293" y2="293"></line>
+<line stroke="#1976D2" stroke-width="2" x1="182" x2="182" y1="248" y2="338"></line>
+<line stroke="#1976D2" stroke-width="2" x1="132" x2="232" y1="293" y2="293"></line>
 <!-- 창문 광택 -->
 <rect fill="white" height="37" opacity="0.35" rx="2" width="42" x="136" y="252"></rect>
 <rect fill="white" height="37" opacity="0.2" rx="2" width="42" x="186" y="252"></rect>
 <!-- ── 오른쪽 쇼윈도 ── -->
-<rect fill="#DCEEFA" height="90" rx="3" stroke="#4AAAD6" stroke-width="2.5" width="100" x="288" y="248"></rect>
-<line stroke="#4AAAD6" stroke-width="2" x1="338" x2="338" y1="248" y2="338"></line>
-<line stroke="#4AAAD6" stroke-width="2" x1="288" x2="388" y1="293" y2="293"></line>
+<rect fill="#DCEBFA" height="90" rx="3" stroke="#1976D2" stroke-width="2.5" width="100" x="288" y="248"></rect>
+<line stroke="#1976D2" stroke-width="2" x1="338" x2="338" y1="248" y2="338"></line>
+<line stroke="#1976D2" stroke-width="2" x1="288" x2="388" y1="293" y2="293"></line>
 <rect fill="white" height="37" opacity="0.35" rx="2" width="42" x="292" y="252"></rect>
 <rect fill="white" height="37" opacity="0.2" rx="2" width="42" x="342" y="252"></rect>
 <!-- ── 자동문 (중앙) ── -->
-<rect fill="#B8DCF0" height="87" rx="3" stroke="#4AAAD6" stroke-width="2.5" width="84" x="218" y="268"></rect>
+<rect fill="#B8D4F0" height="87" rx="3" stroke="#1976D2" stroke-width="2.5" width="84" x="218" y="268"></rect>
 <!-- 왼쪽 문짝 -->
-<rect fill="#DCEEFA" height="81" opacity="0.85" rx="2" width="38" x="221" y="271"></rect>
+<rect fill="#DCEBFA" height="81" opacity="0.85" rx="2" width="38" x="221" y="271"></rect>
 <!-- 오른쪽 문짝 -->
-<rect fill="#DCEEFA" height="81" opacity="0.85" rx="2" width="38" x="261" y="271"></rect>
+<rect fill="#DCEBFA" height="81" opacity="0.85" rx="2" width="38" x="261" y="271"></rect>
 <!-- 문 중앙선 -->
-<line stroke="#4AAAD6" stroke-width="2" x1="260" x2="260" y1="271" y2="352"></line>
+<line stroke="#1976D2" stroke-width="2" x1="260" x2="260" y1="271" y2="352"></line>
 <!-- 손잡이 -->
-<rect fill="#1B8AC4" height="18" opacity="0.6" rx="3.5" width="7" x="251" y="308"></rect>
-<rect fill="#1B8AC4" height="18" opacity="0.6" rx="3.5" width="7" x="263" y="308"></rect>
+<rect fill="#1976D2" height="18" opacity="0.6" rx="3.5" width="7" x="251" y="308"></rect>
+<rect fill="#1976D2" height="18" opacity="0.6" rx="3.5" width="7" x="263" y="308"></rect>
 <!-- AUTO 센서 -->
-<rect fill="#1B8AC4" height="10" opacity="0.5" rx="5" width="44" x="238" y="260"></rect>
+<rect fill="#1976D2" height="10" opacity="0.5" rx="5" width="44" x="238" y="260"></rect>
 <text fill="white" font-size="6.5" font-weight="700" text-anchor="middle" x="260" y="268">AUTO</text>
 <!-- ── 성장 타임라인 (상단) ── -->
 <rect fill="white" filter="url(#softShadow)" height="48" rx="10" width="80" x="82" y="48"></rect>
-<text fill="#1B8AC4" font-size="12" font-weight="900" text-anchor="middle" x="122" y="70">2021</text>
+<text fill="#1976D2" font-size="12" font-weight="900" text-anchor="middle" x="122" y="70">2021</text>
 <text fill="#6B7280" font-size="9" text-anchor="middle" x="122" y="86">Cửa hàng số 1 Gwanggyo</text>
-<polygon fill="#4AAAD6" points="169,72 178,68 178,76"></polygon>
-<line stroke="#4AAAD6" stroke-width="2" x1="162" x2="178" y1="72" y2="72"></line>
+<polygon fill="#1976D2" points="169,72 178,68 178,76"></polygon>
+<line stroke="#1976D2" stroke-width="2" x1="162" x2="178" y1="72" y2="72"></line>
 <rect fill="white" filter="url(#softShadow)" height="48" rx="10" width="80" x="180" y="48"></rect>
-<text fill="#1B8AC4" font-size="12" font-weight="900" text-anchor="middle" x="220" y="70">2023</text>
+<text fill="#1976D2" font-size="12" font-weight="900" text-anchor="middle" x="220" y="70">2023</text>
 <text fill="#6B7280" font-size="9" text-anchor="middle" x="220" y="86">10 cửa hàng</text>
-<polygon fill="#4AAAD6" points="267,72 276,68 276,76"></polygon>
-<line stroke="#4AAAD6" stroke-width="2" x1="260" x2="276" y1="72" y2="72"></line>
-<rect fill="#1B8AC4" filter="url(#softShadow)" height="54" rx="10" width="90" x="278" y="42"></rect>
+<polygon fill="#1976D2" points="267,72 276,68 276,76"></polygon>
+<line stroke="#1976D2" stroke-width="2" x1="260" x2="276" y1="72" y2="72"></line>
+<rect fill="#1976D2" filter="url(#softShadow)" height="54" rx="10" width="90" x="278" y="42"></rect>
 <text fill="white" font-size="12" font-weight="900" text-anchor="middle" x="323" y="65">Hiện nay</text>
 <text fill="white" font-size="10" font-weight="700" opacity="0.9" text-anchor="middle" x="323" y="83"><tspan class="js-rcount">4</tspan>도시 <tspan class="js-bcount">16</tspan>지점</text>
 <!-- ── 플로팅 뱃지 ── -->
 <rect fill="white" filter="url(#softShadow)" height="68" rx="12" width="74" x="30" y="230"></rect>
-<text fill="#1B8AC4" font-size="15" font-weight="900" text-anchor="middle" x="67" y="256">24H</text>
+<text fill="#1976D2" font-size="15" font-weight="900" text-anchor="middle" x="67" y="256">24H</text>
 <text fill="#6B7280" font-size="8" font-weight="700" text-anchor="middle" x="67" y="272">Mở mọi ngày</text>
 <text fill="#6B7280" font-size="8" text-anchor="middle" x="67" y="285">Mở 365 ngày</text>
 <rect fill="white" filter="url(#softShadow)" height="68" rx="12" width="74" x="416" y="230"></rect>
-<text fill="#1B8AC4" font-size="13" font-weight="900" text-anchor="middle" x="453" y="256">Không người trực</text>
+<text fill="#1976D2" font-size="13" font-weight="900" text-anchor="middle" x="453" y="256">Không người trực</text>
 <text fill="#6B7280" font-size="8" font-weight="700" text-anchor="middle" x="453" y="272">Tự phục vụ</text>
 <text fill="#6B7280" font-size="8" text-anchor="middle" x="453" y="285">Không cần nhân viên</text>
 </svg>
@@ -584,7 +584,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 <p class="v-sub">Bất cứ khi nào, ở đâu bạn cần in, chúng tôi ở gần bạn nhất</p>
 <div class="v-say">Coo Fax: Đi đâu mình cũng bay vèo tới!</div>
 </div>
-<div class="value-card" style="--c:#018FFB;--cl:#E1F1FF">
+<div class="value-card" style="--c:#1976D2;--cl:#E1F0FF">
 <div class="v-pic"><img alt="Polly Copy (vẹt)" class="" loading="lazy" src="../img/friends/copy.webp" width="110"/></div>
 <div class="v-title">👆 Tiện lợi</div>
 <p class="v-sub">Tạo môi trường ai cũng dùng được theo trực giác, không cần giải thích phức tạp</p>
@@ -611,7 +611,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 <div class="sec-eyebrow">HISTORY</div>
 <h2 class="sec-h2">Hành trình phát triển</h2>
 <div class="timeline2">
-<div class="tl2-item" style="--c:#1B8AC4;--cl:#E3F2FB">
+<div class="tl2-item" style="--c:#1976D2;--cl:#E3EFFB">
 <div class="tl2-av"><img alt="Mini Koon (gấu mèo)" class="" loading="lazy" src="../img/friends/raccoon.webp" width="70"/></div>
 <div class="tl2-box">
 <div class="tl2-year">2021</div>
@@ -638,7 +638,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 <div class="tl2-say">Coo Fax: Bay thật xa~</div>
 </div>
 </div>
-<div class="tl2-item" style="--c:#018FFB;--cl:#E1F1FF">
+<div class="tl2-item" style="--c:#1976D2;--cl:#E1F0FF">
 <div class="tl2-av"><img alt="Polly Copy (vẹt)" class="" loading="lazy" src="../img/friends/copy.webp" width="70"/></div>
 <div class="tl2-box">
 <div class="tl2-year">2024</div>
@@ -647,7 +647,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 <div class="tl2-say">Polly Copy: Có thắc mắc thì hỏi qua TalkTalk nhé!</div>
 </div>
 </div>
-<div class="tl2-item" style="--c:#1B8AC4;--cl:#E3F2FB">
+<div class="tl2-item" style="--c:#1976D2;--cl:#E3EFFB">
 <div class="tl2-av"><img alt="Mini Koon (gấu mèo)" class="" loading="lazy" src="../img/friends/raccoon.webp" width="70"/></div>
 <div class="tl2-box">
 <div class="tl2-year">2025~</div>
@@ -663,11 +663,11 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 <p class="tr-note">Trang này được dịch từ tiếng Hàn. Nếu có chỗ nào chưa đúng, vui lòng báo cho chúng tôi qua Naver TalkTalk. Màn hình máy là tiếng Hàn — tên nút tiếng Hàn được ghi trong [ngoặc].</p><footer>
 <div class="ft-inner">
 <div class="ft-grid">
-<div class="ft-col"><div class="ft-brand-name">🦝 PrintShop Mini</div><p>Cửa hàng in tự phục vụ không người trực,<br/>mở cửa 24 giờ, 365 ngày.</p></div>
+<div class="ft-col"><div class="ft-brand-name"><img src="../logo.jpg" alt="" style="width:28px;height:28px;object-fit:contain;vertical-align:middle;margin-right:8px;border-radius:6px">PrintShop Mini</div><p>Cửa hàng in tự phục vụ không người trực,<br/>mở cửa 24 giờ, 365 ngày.</p></div>
 <div class="ft-col"><h4>Dịch vụ</h4><ul><li><a href="services.html">In · Photo · Scan</a></li><li><a href="services.html">Fax · Ép plastic · Đóng sách</a></li><li><a href="branches.html">Tìm cửa hàng</a></li><li><a href="community.html">Cộng đồng</a></li></ul></div>
 <div class="ft-col"><h4>Hỗ trợ khách hàng</h4><ul><li><a href="https://naver.me/GJErAoQ7" rel="noopener" target="_blank">💬 Hỏi qua TalkTalk</a></li><li><a href="#">Giờ mở cửa: 24 giờ, mở mọi ngày</a></li><li><a href="#">Công ty vận hành: Good Learning Partner 120-88-22460</a></li></ul></div>
 </div>
-<div class="ft-corp" style="word-break:keep-all;max-width:1160px;margin:0 auto 20px;font-size:13px;line-height:1.9;color:#9CA3AF"><b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1B8AC4)">PrintShop Mini</b> · <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">PrintNow</b> là thương hiệu của công ty <span style="white-space:nowrap">Good Learning Partner</span>.</div>
+<div class="ft-corp" style="word-break:keep-all;max-width:1160px;margin:0 auto 20px;font-size:13px;line-height:1.9;color:#9CA3AF"><b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1976D2)">PrintShop Mini</b> · <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">PrintNow</b> là thương hiệu của công ty <span style="white-space:nowrap">Good Learning Partner</span>.</div>
 <div class="ft-bottom"><p>© 2025 PrintShop Mini. All rights reserved.</p><p><a style="color:inherit;text-decoration:underline" href="../privacy.html">Chính sách bảo mật</a> · Điều khoản sử dụng</p></div>
 </div>
 </footer>

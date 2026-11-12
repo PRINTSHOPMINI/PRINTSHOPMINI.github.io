@@ -9,10 +9,10 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --blue:#1B8AC4;--blue-hover:#1470A8;--blue-light:#E8F4FC;--blue-mid:#4AAAD6;
+  --blue:#1976D2;--blue-hover:#1565C0;--blue-light:#E8F2FC;--blue-mid:#1976D2;
   --text:#111827;--text2:#374151;--text3:#6B7280;--border:#E5E7EB;
   --bg:#F9FAFB;--white:#FFFFFF;--radius:14px;
-  --print:#22B24C;--copy:#018FFB;--scan:#12BDB0;--fax:#F3732C;--warn:#D93025;
+  --print:#22B24C;--copy:#1976D2;--scan:#12BDB0;--fax:#F3732C;--warn:#D93025;
 }
 html{scroll-behavior:smooth}
 body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--white);line-height:1.7;overflow-x:hidden}
@@ -161,13 +161,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .omock-bar{height:18px;background:#EEF1F5;display:flex;align-items:center;gap:4px;padding:0 8px;border-bottom:1px solid #E5E7EB}
 .omock-dot{width:5px;height:5px;border-radius:50%;background:#D7DDE3}
 .omock-body{display:flex;height:158px}
-.omock-side{width:58px;flex:0 0 auto;background:var(--oc,#1B8AC4);padding:8px 0;display:flex;flex-direction:column;gap:1px}
+.omock-side{width:58px;flex:0 0 auto;background:var(--oc,#1976D2);padding:8px 0;display:flex;flex-direction:column;gap:1px}
 .omock-side div{color:rgba(255,255,255,.68);font-size:8.6px;font-weight:700;padding:5px 0 5px 10px}
 .omock-side div.on{color:#fff;background:rgba(255,255,255,.18);border-left:3px solid #fff;padding-left:7px}
 .omock-fields{width:124px;flex:0 0 auto;background:#F7F8FA;padding:8px 8px;display:flex;flex-direction:column;gap:5px;border-right:1px solid #E5E7EB;overflow:hidden}
 .omock-cap{font-size:7.6px;color:#9AA5B1;font-weight:800;letter-spacing:.3px;margin-top:3px}
 .omock-cap:first-child{margin-top:0}
-.omock-field{background:#fff;border:1px solid #C9D3DB;border-radius:4px;padding:4px 14px 4px 7px;font-size:8.2px;font-weight:700;color:#374151;position:relative;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.omock-field{background:#fff;border:1px solid #C9D2DB;border-radius:4px;padding:4px 14px 4px 7px;font-size:8.2px;font-weight:700;color:#374151;position:relative;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .omock-field::after{content:'▾';position:absolute;right:5px;top:50%;transform:translateY(-50%);color:#9AA5B1;font-size:6.5px}
 .omock-row.hi .omock-field{border-color:#D93025;background:#FEF2F2;color:#B31E16;box-shadow:0 0 0 2px rgba(217,48,37,.14)}
 .omock-row.hi .omock-cap{color:#D93025}
@@ -178,7 +178,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .omock-fields .omock-row.hi{margin:0 -3px;padding:2px 3px;background:rgba(217,48,37,.06);border-radius:5px}
 
 /* 준비중 */
-.soon{border:1px dashed #C9D3DB;border-radius:var(--radius);padding:44px 24px;text-align:center;background:var(--white)}
+.soon{border:1px dashed #C9D2DB;border-radius:var(--radius);padding:44px 24px;text-align:center;background:var(--white)}
 .soon-h{font-size:16px;font-weight:800;color:var(--text3);margin-bottom:6px}
 .soon-p{font-size:13.5px;color:var(--text3)}
 

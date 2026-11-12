@@ -73,7 +73,7 @@
     }else if(/\.(mp4|mov|webm|avi)$/i.test(name)){
       bodyEl.innerHTML='<video src="'+esc(url)+'" controls style="width:100%;height:100%;background:#000;display:block"></video>';
     }else{
-      bodyEl.innerHTML='<div style="padding:40px;text-align:center"><a href="'+esc(url)+'" target="_blank" rel="noopener" style="color:#1B8AC4;font-weight:700">파일 열기 →</a></div>';
+      bodyEl.innerHTML='<div style="padding:40px;text-align:center"><a href="'+esc(url)+'" target="_blank" rel="noopener" style="color:#1976D2;font-weight:700">파일 열기 →</a></div>';
     }
     var w=Math.min(window.innerWidth*0.92,900);
     var h=Math.round(window.innerHeight*0.88);
@@ -106,7 +106,7 @@
       holder.innerHTML=data.map(function(f){
         var icon=/\.pdf$/i.test(f.file_name)?'📄':/\.(mp4|mov|webm|avi)$/i.test(f.file_name)?'🎬':'🖼️';
         return '<button type="button" data-url="'+esc(f.file_url)+'" data-name="'+esc(f.file_name)+'" '+
-          'style="background:#E8F4FC;color:#1B8AC4;border:1.5px solid #1B8AC4;border-radius:10px;padding:9px 14px;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:7px;font-family:\'Noto Sans KR\',sans-serif;min-width:0;overflow:hidden;text-align:left">'+
+          'style="background:#E8F2FC;color:#1976D2;border:1.5px solid #1976D2;border-radius:10px;padding:9px 14px;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:7px;font-family:\'Noto Sans KR\',sans-serif;min-width:0;overflow:hidden;text-align:left">'+
           '<span style="flex-shrink:0">'+icon+'</span>'+
           '<span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+esc(f.file_name)+'</span></button>';
       }).join('');

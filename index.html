@@ -16,10 +16,10 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --blue:#1B8AC4;
-  --blue-hover:#1470A8;
-  --blue-light:#E8F4FC;
-  --blue-mid:#4AAAD6;
+  --blue:#1976D2;
+  --blue-hover:#1565C0;
+  --blue-light:#E8F2FC;
+  --blue-mid:#1976D2;
   --text:#111827;
   --text2:#374151;
   --text3:#6B7280;
@@ -79,19 +79,19 @@ nav{
 #hero::before{
   content:'';position:absolute;right:-10%;top:-20%;
   width:600px;height:600px;border-radius:50%;
-  background:radial-gradient(circle,rgba(27,138,196,0.07) 0%,transparent 70%);
+  background:radial-gradient(circle,rgba(25,118,210,0.07) 0%,transparent 70%);
   pointer-events:none;
 }
 #hero::after{
   content:'';position:absolute;left:-5%;bottom:-10%;
   width:400px;height:400px;border-radius:50%;
-  background:radial-gradient(circle,rgba(27,138,196,0.05) 0%,transparent 70%);
+  background:radial-gradient(circle,rgba(25,118,210,0.05) 0%,transparent 70%);
   pointer-events:none;
 }
 .hero-inner{max-width:1160px;width:100%;margin:0 auto;position:relative;z-index:1}
 /* 미니프랜즈 단체 사진 */
 .hero-friends{max-width:600px;margin:4px 0 40px;text-align:center}
-.hf-bubble{display:inline-block;position:relative;background:#fff;border:2px solid var(--blue);color:var(--text);font-weight:900;font-size:15px;padding:8px 16px;border-radius:999px;margin-bottom:14px;box-shadow:0 6px 16px rgba(27,138,196,.15)}
+.hf-bubble{display:inline-block;position:relative;background:#fff;border:2px solid var(--blue);color:var(--text);font-weight:900;font-size:15px;padding:8px 16px;border-radius:999px;margin-bottom:14px;box-shadow:0 6px 16px rgba(25,118,210,.15)}
 .hf-bubble::after{content:'';position:absolute;left:50%;bottom:-9px;width:14px;height:14px;background:#fff;border-right:2px solid var(--blue);border-bottom:2px solid var(--blue);transform:translateX(-50%) rotate(45deg)}
 .hf-row{display:flex;align-items:flex-end;justify-content:center;position:relative;container-type:inline-size}
 .hf{display:flex;flex-direction:column;align-items:center;margin-left:-5.5cqw;position:relative;transition:transform .2s;flex:0 0 auto}
@@ -129,13 +129,13 @@ a.hf:hover{transform:translateY(-6px)}
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:64px;align-items:center}
 .hero-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:600px;margin-bottom:18px}
 .htile{display:flex;align-items:center;gap:12px;background:#fff;border:1.5px solid var(--border);border-radius:18px;padding:14px 16px;color:var(--text);transition:border-color .18s,box-shadow .18s,transform .15s}
-.htile:hover{border-color:var(--blue);box-shadow:0 8px 22px rgba(27,138,196,.18);transform:translateY(-2px)}
+.htile:hover{border-color:var(--blue);box-shadow:0 8px 22px rgba(25,118,210,.18);transform:translateY(-2px)}
 .htile .ic{flex:0 0 auto;width:46px;height:46px;border-radius:14px;background:var(--blue-light);display:flex;align-items:center;justify-content:center;font-size:25px}
 .htile .tx{min-width:0}
 .htile b{display:block;font-size:17px;font-weight:900;line-height:1.3}
 .htile small{display:block;font-size:12px;color:var(--text3);line-height:1.4;white-space:nowrap}
 /* 메인 홍보 자리(배너): 내용은 관리자 > 📢 메인 홍보(inventory_config 의 home_promo)에서 바꿔요 */
-.hero-promo{display:flex;align-items:center;gap:20px;max-width:600px;margin-bottom:18px;background:#fff;border:1.5px solid var(--blue);border-radius:18px;padding:16px 18px;box-shadow:0 8px 22px rgba(27,138,196,.12)}
+.hero-promo{display:flex;align-items:center;gap:20px;max-width:600px;margin-bottom:18px;background:#fff;border:1.5px solid var(--blue);border-radius:18px;padding:16px 18px;box-shadow:0 8px 22px rgba(25,118,210,.12)}
 .hero-promo[hidden]{display:none}
 html:not([lang="ko"]) .hero-promo{display:none}
 .hero-promo .pm-media{position:relative;flex:0 0 auto;width:180px;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#FBF8EE}
@@ -156,7 +156,7 @@ html:not([lang="ko"]) .hero-promo{display:none}
 .btn-primary{
   background:var(--blue);color:white;font-size:15px;font-weight:700;
   padding:15px 36px;border-radius:50px;transition:background .2s,transform .15s;
-  box-shadow:0 4px 20px rgba(27,138,196,0.3);
+  box-shadow:0 4px 20px rgba(25,118,210,0.3);
 }
 .btn-primary:hover{background:var(--blue-hover);transform:translateY(-1px)}
 .btn-secondary{
@@ -197,7 +197,7 @@ section.alt{background:var(--bg)}
   background:var(--blue);transform:scaleX(0);transform-origin:left;
   transition:transform .25s;
 }
-.svc-card:hover{border-color:var(--blue);box-shadow:0 8px 32px rgba(27,138,196,.12);transform:translateY(-4px)}
+.svc-card:hover{border-color:var(--blue);box-shadow:0 8px 32px rgba(25,118,210,.12);transform:translateY(-4px)}
 .svc-card:hover::before{transform:scaleX(1)}
 .svc-icon{
   width:52px;height:52px;background:var(--blue-light);border-radius:12px;
@@ -259,7 +259,7 @@ section.alt{background:var(--bg)}
 .topen{background:var(--blue-light);color:var(--blue)}.ta3{background:#F3E8FF;color:#6B21A8}
 .detail-panel{position:sticky;top:110px}
 .map-box{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;min-height:320px;display:flex;flex-direction:column}
-.map-visual{flex:1;position:relative;overflow:hidden;min-height:260px;background:linear-gradient(135deg,#E8F4FC 0%,#F0F9FF 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px}
+.map-visual{flex:1;position:relative;overflow:hidden;min-height:260px;background:linear-gradient(135deg,#E8F2FC 0%,#F0F9FF 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px}
 .map-pin{font-size:48px;animation:bounce 1.2s ease-in-out infinite}
 @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 .map-name-lbl{font-size:18px;font-weight:900;color:var(--blue)}
@@ -325,11 +325,11 @@ section.alt{background:var(--bg)}
   position:fixed;bottom:32px;right:32px;z-index:999;
   width:60px;height:60px;background:var(--blue);color:white;
   border-radius:50%;border:none;cursor:pointer;font-size:24px;
-  box-shadow:0 4px 20px rgba(27,138,196,.4);
+  box-shadow:0 4px 20px rgba(25,118,210,.4);
   display:flex;align-items:center;justify-content:center;
   transition:transform .2s,box-shadow .2s;
 }
-.chat-fab:hover{transform:scale(1.08);box-shadow:0 8px 28px rgba(27,138,196,.5)}
+.chat-fab:hover{transform:scale(1.08);box-shadow:0 8px 28px rgba(25,118,210,.5)}
 .fab-dot{position:absolute;top:0;right:0;width:14px;height:14px;background:#EF4444;border-radius:50%;border:2px solid white}
 .chat-popup{
   position:fixed;bottom:104px;right:32px;z-index:998;
@@ -429,7 +429,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
   .hero-promo p{font-size:14px}
 }
 </style>
-<style id="nav-lang-css">.nav-lang{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:#1B8AC4;border:1.5px solid #1B8AC4;border-radius:50px;padding:7px 13px;margin-right:8px;white-space:nowrap;background:#fff}.nav-lang:hover{background:#E8F4FC}.nav-links a{white-space:nowrap}@media(max-width:1180px){.nav-lang .t{display:none}.nav-lang{padding:6px 9px;font-size:15px}}@media(max-width:480px){.nav-lang{padding:4px 6px;margin-right:6px;font-size:14px}.nav-cta{padding:8px 13px!important;font-size:12.5px!important}}@media(max-width:400px){nav{padding-left:12px!important;padding-right:12px!important}.nav-logo-name{font-size:15px!important}.nav-logo{gap:6px!important}.nav-cta{padding:7px 9px!important;font-size:12px!important}.nav-lang,.lang-sel{margin-right:5px!important}.hamburger{margin-left:4px!important}}</style>
+<style id="nav-lang-css">.nav-lang{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:#1976D2;border:1.5px solid #1976D2;border-radius:50px;padding:7px 13px;margin-right:8px;white-space:nowrap;background:#fff}.nav-lang:hover{background:#E8F2FC}.nav-links a{white-space:nowrap}@media(max-width:1180px){.nav-lang .t{display:none}.nav-lang{padding:6px 9px;font-size:15px}}@media(max-width:480px){.nav-lang{padding:4px 6px;margin-right:6px;font-size:14px}.nav-cta{padding:8px 13px!important;font-size:12.5px!important}}@media(max-width:400px){nav{padding-left:12px!important;padding-right:12px!important}.nav-logo-name{font-size:15px!important}.nav-logo{gap:6px!important}.nav-cta{padding:7px 9px!important;font-size:12px!important}.nav-lang,.lang-sel{margin-right:5px!important}.hamburger{margin-left:4px!important}}</style>
 <script src="ga.js?v=1" defer></script></head>
 <body>
 
@@ -492,7 +492,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
       </div>
     </div>
     <p class="hero-branch"><a href="#branches">📍 가까운 지점 찾기 →</a></p>
-    <p class="brand-note" style="word-break:keep-all;font-size:13.5px;line-height:1.9;color:#6B7280;margin:14px 0 30px;text-align:center"><b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1B8AC4)">프린트샵미니</b> · <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">프린트나우</b>는 <span style="white-space:nowrap">(주)굿러닝파트너</span> 법인의 브랜드예요.</p>
+    <p class="brand-note" style="word-break:keep-all;font-size:13.5px;line-height:1.9;color:#6B7280;margin:14px 0 30px;text-align:center"><b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1976D2)">프린트샵미니</b> · <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">프린트나우</b>는 <span style="white-space:nowrap">(주)굿러닝파트너</span> 법인의 브랜드예요.</p>
     <div class="hero-friends" aria-label="미니프랜즈 단체 사진">
       <div class="hf-bubble">안녕하세요! 미니프랜즈예요 👋</div>
       <div class="hf-row">
@@ -500,7 +500,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         <a class="hf s2" href="guide-scan.html" style="--c:#12BDB0"><img src="img/friends/scan.webp" alt="스캔 부엉이"><span>스캔</span></a>
         <a class="hf s3" href="guide-print.html" style="--c:#22B24C"><img src="img/friends/print.webp" alt="인쇄 펭귄"><span>인쇄</span></a>
         <span class="hf s4" style="--c:var(--blue)"><img src="img/friends/raccoon.webp" alt="라쿤"><span>프린트샵미니</span></span>
-        <a class="hf s3" href="guide-copy.html" style="--c:#018FFB"><img src="img/friends/copy.webp" alt="복사 앵무새"><span>복사</span></a>
+        <a class="hf s3" href="guide-copy.html" style="--c:#1976D2"><img src="img/friends/copy.webp" alt="복사 앵무새"><span>복사</span></a>
         <a class="hf s2" href="guide-fax.html" style="--c:#F3732C"><img src="img/friends/fax.webp" alt="팩스 비둘기"><span>팩스</span></a>
         <a class="hf s1" href="guide-bind.html" style="--c:#EC4899"><img src="img/friends/bind.webp" alt="제본 비버"><span>제본</span></a>
       </div>
@@ -670,7 +670,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
         </ul>
       </div>
   </div>
-  <div class="ft-corp" style="word-break:keep-all;max-width:1160px;margin:0 auto 20px;font-size:13px;line-height:1.9;color:#9CA3AF"><b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1B8AC4)">프린트샵미니</b> · <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">프린트나우</b>는 <span style="white-space:nowrap">(주)굿러닝파트너</span> 법인의 브랜드예요.</div>
+  <div class="ft-corp" style="word-break:keep-all;max-width:1160px;margin:0 auto 20px;font-size:13px;line-height:1.9;color:#9CA3AF"><b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1976D2)">프린트샵미니</b> · <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">프린트나우</b>는 <span style="white-space:nowrap">(주)굿러닝파트너</span> 법인의 브랜드예요.</div>
   <div class="ft-bottom">
     <p>© 2025 프린트샵미니. All rights reserved.</p>
     <p><a style="color:inherit;text-decoration:underline" href="privacy.html">개인정보처리방침</a> · 이용약관</p>
@@ -785,8 +785,8 @@ function selectBranchById(el,id){
   wrap.style.cssText='';
   wrap.innerHTML=
     '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:36px 24px;width:100%;text-align:center">'+
-      '<div style="font-size:54px;filter:drop-shadow(0 4px 12px rgba(27,138,196,0.25))">📍</div>'+
-      '<div style="font-size:17px;font-weight:900;color:#1B8AC4;letter-spacing:-.3px">'+T('프린트샵미니')+' '+escHtml(b.name)+'</div>'+
+      '<div style="font-size:54px;filter:drop-shadow(0 4px 12px rgba(25,118,210,0.25))">📍</div>'+
+      '<div style="font-size:17px;font-weight:900;color:#1976D2;letter-spacing:-.3px">'+T('프린트샵미니')+' '+escHtml(b.name)+'</div>'+
       '<div style="font-size:12px;color:#6B7280;line-height:1.9;max-width:300px;word-break:keep-all">'+escHtml(b.address)+'</div>'+
       '<a href="'+escHtml(naverUrl)+'" target="_blank" rel="noopener noreferrer" '+
         'style="margin-top:8px;background:#03C75A;color:white;font-size:14px;font-weight:700;padding:13px 32px;border-radius:10px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 16px rgba(3,199,90,0.35);transition:all .2s" '+

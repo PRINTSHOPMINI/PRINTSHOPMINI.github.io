@@ -11,10 +11,10 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --blue:#1B8AC4;--blue-hover:#1470A8;--blue-light:#E8F4FC;--blue-mid:#4AAAD6;
+  --blue:#1976D2;--blue-hover:#1565C0;--blue-light:#E8F2FC;--blue-mid:#1976D2;
   --text:#111827;--text2:#374151;--text3:#6B7280;--border:#E5E7EB;
   --bg:#F9FAFB;--white:#FFFFFF;--radius:14px;
-  --print:#22B24C;--copy:#018FFB;--scan:#12BDB0;--fax:#F3732C;--warn:#D93025;
+  --print:#22B24C;--copy:#1976D2;--scan:#12BDB0;--fax:#F3732C;--warn:#D93025;
 }
 html{scroll-behavior:smooth}
 body{font-family:'Noto Sans KR',sans-serif;color:var(--text);background:var(--white);line-height:1.7;overflow-x:hidden}
@@ -164,13 +164,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .omock-bar{height:18px;background:#EEF1F5;display:flex;align-items:center;gap:4px;padding:0 8px;border-bottom:1px solid #E5E7EB}
 .omock-dot{width:5px;height:5px;border-radius:50%;background:#D7DDE3}
 .omock-body{display:flex;height:158px}
-.omock-side{width:58px;flex:0 0 auto;background:var(--oc,#1B8AC4);padding:8px 0;display:flex;flex-direction:column;gap:1px}
+.omock-side{width:58px;flex:0 0 auto;background:var(--oc,#1976D2);padding:8px 0;display:flex;flex-direction:column;gap:1px}
 .omock-side div{color:rgba(255,255,255,.68);font-size:8.6px;font-weight:700;padding:5px 0 5px 10px}
 .omock-side div.on{color:#fff;background:rgba(255,255,255,.18);border-left:3px solid #fff;padding-left:7px}
 .omock-fields{width:124px;flex:0 0 auto;background:#F7F8FA;padding:8px 8px;display:flex;flex-direction:column;gap:5px;border-right:1px solid #E5E7EB;overflow:hidden}
 .omock-cap{font-size:7.6px;color:#9AA5B1;font-weight:800;letter-spacing:.3px;margin-top:3px}
 .omock-cap:first-child{margin-top:0}
-.omock-field{background:#fff;border:1px solid #C9D3DB;border-radius:4px;padding:4px 14px 4px 7px;font-size:8.2px;font-weight:700;color:#374151;position:relative;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.omock-field{background:#fff;border:1px solid #C9D2DB;border-radius:4px;padding:4px 14px 4px 7px;font-size:8.2px;font-weight:700;color:#374151;position:relative;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .omock-field::after{content:'▾';position:absolute;right:5px;top:50%;transform:translateY(-50%);color:#9AA5B1;font-size:6.5px}
 .omock-row.hi .omock-field{border-color:#D93025;background:#FEF2F2;color:#B31E16;box-shadow:0 0 0 2px rgba(217,48,37,.14)}
 .omock-row.hi .omock-cap{color:#D93025}
@@ -181,7 +181,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .omock-fields .omock-row.hi{margin:0 -3px;padding:2px 3px;background:rgba(217,48,37,.06);border-radius:5px}
 
 /* 준비중 */
-.soon{border:1px dashed #C9D3DB;border-radius:var(--radius);padding:44px 24px;text-align:center;background:var(--white)}
+.soon{border:1px dashed #C9D2DB;border-radius:var(--radius);padding:44px 24px;text-align:center;background:var(--white)}
 .soon-h{font-size:16px;font-weight:800;color:var(--text3);margin-bottom:6px}
 .soon-p{font-size:13.5px;color:var(--text3)}
 
@@ -294,7 +294,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 .adf-fig figcaption .gd b{color:#B4500F}
 .mini1{margin:6px 0 0;padding-left:20px;font-size:14px;line-height:1.75;color:var(--text2)}
 .mini1>li{margin-bottom:7px}
-.mini1 .dir{display:inline-block;margin-top:3px;padding:3px 10px;background:#EEF6FC;border-radius:8px;color:#16507A;font-size:13.4px}
+.mini1 .dir{display:inline-block;margin-top:3px;padding:3px 10px;background:#EEF6FC;border-radius:8px;color:#0D47A1;font-size:13.4px}
 .mini1 .r{color:var(--warn);font-weight:700}
 .adfw-box.ok ul,.adfw-box.no ul{list-style:none;padding-left:0}
 .adfw-box.ok li::before{content:'○ ';color:#1B7A2C;font-weight:900}
@@ -345,15 +345,15 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 </style>
 <style>
 /* 사용방법 동영상 */
-.gvid{max-width:820px;margin:0 0 34px;background:var(--sc-light,#E8F4FC);border:2px solid var(--sc,var(--blue));border-radius:18px;padding:14px 14px 16px}
+.gvid{max-width:820px;margin:0 0 34px;background:var(--sc-light,#E8F2FC);border:2px solid var(--sc,var(--blue));border-radius:18px;padding:14px 14px 16px}
 .gvid-h{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-weight:900;font-size:16px;color:var(--text);margin:0 4px 10px}
 .gvid-h .gvid-play{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--sc,var(--blue));color:#fff;font-size:12px}
 .gvid-h small{font-size:12.5px;font-weight:700;color:var(--text3)}
 .gvid video{display:block;width:100%;aspect-ratio:16/9;border-radius:12px;background:#000}
 </style>
-<style id="mlang-css">.mlang{margin:16px 0;border:2px solid #1B8AC4;border-radius:12px;background:#F2F8FD;padding:16px 18px}.mlang-h{font-size:16px;font-weight:900;color:#12507A;margin-bottom:10px}.mlang ol{margin:0;padding-left:22px;font-size:14px;line-height:1.65;color:#1F2937}.mlang li{margin-bottom:10px}.mlang img{display:block;width:100%;max-width:420px;margin-top:6px;border-radius:8px;border:1px solid #CBD5E1}.mlang .back{color:#B31E16;font-weight:900}.tipfig{display:block;width:100%;max-width:520px;margin:0 auto 18px;border-radius:10px;border:1px solid var(--border)}</style>
-<style id="nav-lang-css">.nav-lang{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:#1B8AC4;border:1.5px solid #1B8AC4;border-radius:50px;padding:7px 13px;margin-right:8px;white-space:nowrap;background:#fff}.nav-lang:hover{background:#E8F4FC}.nav-links a{white-space:nowrap}@media(max-width:1180px){.nav-lang .t{display:none}.nav-lang{padding:6px 9px;font-size:15px}}@media(max-width:480px){.nav-lang{padding:4px 6px;margin-right:6px;font-size:14px}.nav-cta{padding:8px 13px!important;font-size:12.5px!important}}@media(max-width:400px){nav{padding-left:12px!important;padding-right:12px!important}.nav-logo-name{font-size:15px!important}.nav-logo{gap:6px!important}.nav-cta{padding:7px 9px!important;font-size:12px!important}.nav-lang,.lang-sel{margin-right:5px!important}.hamburger{margin-left:4px!important}}</style>
-<script defer="" src="../ga.js?v=1"></script><style>.lang-sel{display:inline-flex;align-items:center;gap:4px;margin-right:8px;border:1.5px solid #1B8AC4;border-radius:50px;padding:3px 4px 3px 10px;background:#fff;font-size:15px}.lang-sel select{border:none;background:transparent;font:700 13px sans-serif;color:#1B8AC4;padding:4px 2px;cursor:pointer;outline:none}.nav-links a{padding:8px 11px!important}@media(max-width:1280px){.nav-raccoon{display:none!important}}.lang-sel .cur{display:none}@media(max-width:480px){.nav-cta{display:none!important}.lang-sel{position:relative;margin-right:6px;padding:6px 10px;gap:5px}.lang-sel .cur{display:inline;white-space:nowrap;font:700 13px sans-serif;color:#1B8AC4}.lang-sel select{position:absolute;inset:0;width:100%;opacity:0}}@media(max-width:400px){.lang-sel{padding:5px 6px!important;gap:2px!important;font-size:13px}.lang-sel .cur{font-size:12px}}.lang-sw{position:fixed;right:10px;bottom:12px;z-index:400}.tr-note{max-width:1160px;margin:0 auto;padding:10px 6% 0;font-size:12.5px;color:#9CA3AF}</style></head>
+<style id="mlang-css">.mlang{margin:16px 0;border:2px solid #1976D2;border-radius:12px;background:#F2F8FD;padding:16px 18px}.mlang-h{font-size:16px;font-weight:900;color:#0D47A1;margin-bottom:10px}.mlang ol{margin:0;padding-left:22px;font-size:14px;line-height:1.65;color:#1F2937}.mlang li{margin-bottom:10px}.mlang img{display:block;width:100%;max-width:420px;margin-top:6px;border-radius:8px;border:1px solid #CBD6E1}.mlang .back{color:#B31E16;font-weight:900}.tipfig{display:block;width:100%;max-width:520px;margin:0 auto 18px;border-radius:10px;border:1px solid var(--border)}</style>
+<style id="nav-lang-css">.nav-lang{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:#1976D2;border:1.5px solid #1976D2;border-radius:50px;padding:7px 13px;margin-right:8px;white-space:nowrap;background:#fff}.nav-lang:hover{background:#E8F2FC}.nav-links a{white-space:nowrap}@media(max-width:1180px){.nav-lang .t{display:none}.nav-lang{padding:6px 9px;font-size:15px}}@media(max-width:480px){.nav-lang{padding:4px 6px;margin-right:6px;font-size:14px}.nav-cta{padding:8px 13px!important;font-size:12.5px!important}}@media(max-width:400px){nav{padding-left:12px!important;padding-right:12px!important}.nav-logo-name{font-size:15px!important}.nav-logo{gap:6px!important}.nav-cta{padding:7px 9px!important;font-size:12px!important}.nav-lang,.lang-sel{margin-right:5px!important}.hamburger{margin-left:4px!important}}</style>
+<script defer="" src="../ga.js?v=1"></script><style>.lang-sel{display:inline-flex;align-items:center;gap:4px;margin-right:8px;border:1.5px solid #1976D2;border-radius:50px;padding:3px 4px 3px 10px;background:#fff;font-size:15px}.lang-sel select{border:none;background:transparent;font:700 13px sans-serif;color:#1976D2;padding:4px 2px;cursor:pointer;outline:none}.nav-links a{padding:8px 11px!important}@media(max-width:1280px){.nav-raccoon{display:none!important}}.lang-sel .cur{display:none}@media(max-width:480px){.nav-cta{display:none!important}.lang-sel{position:relative;margin-right:6px;padding:6px 10px;gap:5px}.lang-sel .cur{display:inline;white-space:nowrap;font:700 13px sans-serif;color:#1976D2}.lang-sel select{position:absolute;inset:0;width:100%;opacity:0}}@media(max-width:400px){.lang-sel{padding:5px 6px!important;gap:2px!important;font-size:13px}.lang-sel .cur{font-size:12px}}.lang-sw{position:fixed;right:10px;bottom:12px;z-index:400}.tr-note{max-width:1160px;margin:0 auto;padding:10px 6% 0;font-size:12.5px;color:#9CA3AF}</style></head>
 <body>
 <!-- NAV -->
 <nav> <a class="nav-logo" href="index.html"> <img alt="Logo" class="logo-img" src="../logo.jpg"/> <span class="nav-logo-name">PrintShop Mini</span> </a> <ul class="nav-links" id="navLinks">
@@ -384,7 +384,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 </div>
 <div class="svc-switch"><div class="svc-switch-in"> <a href="guide.html">Tất cả hướng dẫn</a> <a href="guide-video.html">▶ Video</a> <a href="guide-print.html">🖨️ In</a> <a class="on" href="guide-copy.html">📋 Photo</a> <a href="guide-scan.html">📄 Scan</a> <a href="guide-fax.html"><svg aria-hidden="true" class="fax-ico" fill="none" height="15" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 48 48" width="15"><path d="M9 36V5h18l8 8v9" stroke="currentColor" stroke-width="4.2"></path><path d="M15 15h10M15 22h6" stroke="currentColor" stroke-width="4.2"></path><g transform="translate(20 21) scale(1.04)"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke-width="7" style="stroke:var(--bg)"></path><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="3.99"></path></g></svg> Fax </a> <a href="guide-coat.html">✨ Ép plastic</a> <a href="guide-bind.html">📚 Đóng sách</a> </div></div>
 </div>
-<div class="fr-band" style="--c:#018FFB;--cl:#E1F1FF">
+<div class="fr-band" style="--c:#1976D2;--cl:#E1F0FF">
 <a class="fr-in" href="about.html#friend-ttarabok" title="Làm quen với Mini Friends">
 <img alt="Polly Copy" height="92" src="../img/friends/copy.webp" width="92"/>
 <div class="fr-txt"><b>Polly Copy</b><i>Polly Copy</i><span class="fr-pill">Phụ trách photo</span><br/>Xin chào! Mình là Polly Copy, phụ trách photo. Mình sẽ chỉ bạn cách photo giống hệt bản gốc nhé!</div> <span class="fr-more">Xem thêm các bạn →</span> </a>
@@ -393,10 +393,10 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 <div class="tabs">
 <div class="tabs-in"><button class="tab on" onclick="jump('copy',this)">Cách photo</button> <button class="tab" onclick="jump('adf',this)">Lưu ý ADF</button> <button class="tab" onclick="jump('glass',this)">Photo trên mặt kính (thẻ · sổ · sách)</button> <button class="tab" onclick="jump('ctips',this)">Mẹo photo</button></div>
 </div>
-<div class="sec alt" id="copy" style="--sc:#018FFB;--sc-light:#E6F3FE">
+<div class="sec alt" id="copy" style="--sc:#1976D2;--sc-light:#E6F2FE">
 <div class="sec-in">
 <div class="sec-head">
-<div class="sec-ico"><svg fill="none" height="34" viewbox="0 0 48 48" width="34"><rect height="30" rx="3" stroke="#018FFB" stroke-width="3" width="24" x="7" y="7"></rect><rect fill="#fff" height="27" rx="3" stroke="#018FFB" stroke-width="3" width="24" x="17" y="14"></rect></svg></div>
+<div class="sec-ico"><svg fill="none" height="34" viewbox="0 0 48 48" width="34"><rect height="30" rx="3" stroke="#1976D2" stroke-width="3" width="24" x="7" y="7"></rect><rect fill="#fff" height="27" rx="3" stroke="#1976D2" stroke-width="3" width="24" x="17" y="14"></rect></svg></div>
 <h2 class="sec-h2">Cách photo <span class="pill">COPY</span></h2>
 </div>
 <p class="sec-tagline"><b>Dịch vụ làm thêm một bản giống tờ giấy bạn mang đến.</b> Không dùng máy tính, làm trực tiếp trên máy in đa năng.</p>
@@ -422,8 +422,8 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 <div class="step-no">2</div>
 <div class="step-fig"><svg fill="none" height="80" viewbox="0 0 120 80" width="120">
 <rect fill="#12213D" height="56" rx="5" width="108" x="6" y="12"></rect>
-<rect fill="#018FFB" height="20" rx="4" stroke="#fff" stroke-width="3" width="20" x="16" y="24"></rect>
-<text fill="#018FFB" font-family="Noto Sans KR" font-size="10" font-weight="900" text-anchor="middle" x="26" y="60">Photo</text>
+<rect fill="#1976D2" height="20" rx="4" stroke="#fff" stroke-width="3" width="20" x="16" y="24"></rect>
+<text fill="#1976D2" font-family="Noto Sans KR" font-size="10" font-weight="900" text-anchor="middle" x="26" y="60">Photo</text>
 <rect fill="#22B24C" height="20" opacity="0.35" rx="4" width="20" x="42" y="24"></rect>
 <text fill="#7C8CA6" font-family="Noto Sans KR" font-size="10" font-weight="900" text-anchor="middle" x="52" y="60">In</text>
 <rect fill="#12BDB0" height="20" opacity="0.35" rx="4" width="20" x="68" y="24"></rect>
@@ -448,7 +448,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 <text fill="#374151" font-family="Noto Sans KR" font-size="9" font-weight="900" x="24" y="22">Billing Information</text>
 <text fill="#374151" font-family="Noto Sans KR" font-size="11" font-weight="900" x="24" y="42">총 가격</text>
 <text fill="#111827" font-family="Noto Sans KR" font-size="12" font-weight="900" text-anchor="end" x="96" y="42">250원</text>
-<rect fill="#DCE8FA" height="13" rx="2" stroke="#7E93AE" stroke-width="2.4" width="38" x="62" y="50"></rect>
+<rect fill="#DCEBFA" height="13" rx="2" stroke="#7E93AE" stroke-width="2.4" width="38" x="62" y="50"></rect>
 <text font-family="Noto Sans KR" font-size="9" font-weight="900" text-anchor="middle" x="81" y="60">확인</text>
 </svg></div>
 <div class="step-h">Kiểm tra số tiền [Billing Information] (Thông tin thanh toán)</div>
@@ -565,7 +565,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 </div>
 </div>
 </div>
-<div class="sec alt" id="ctips" style="--sc:#018FFB;--sc-light:#E6F3FE">
+<div class="sec alt" id="ctips" style="--sc:#1976D2;--sc-light:#E6F2FE">
 <div class="sec-in">
 <div class="sec-head"><h2 class="sec-h2">Mẹo photo</h2></div>
 <p class="sec-tagline">Trên màn hình photo, bạn có thể đổi kích thước và độ đậm nhạt.</p>
@@ -606,7 +606,7 @@ footer{background:#111827;color:rgba(255,255,255,.55);padding:60px 6%}
 </ul>
 </div>
 </div>
-<div class="ft-corp" style="word-break:keep-all;max-width:1160px;margin:0 auto 20px;font-size:13px;line-height:1.9;color:#9CA3AF"><b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1B8AC4)">PrintShop Mini</b> · <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">PrintNow</b> là thương hiệu của công ty <span style="white-space:nowrap">Good Learning Partner</span>.</div>
+<div class="ft-corp" style="word-break:keep-all;max-width:1160px;margin:0 auto 20px;font-size:13px;line-height:1.9;color:#9CA3AF"><b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1976D2)">PrintShop Mini</b> · <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">PrintNow</b> là thương hiệu của công ty <span style="white-space:nowrap">Good Learning Partner</span>.</div>
 <div class="ft-bottom">
 <p>© 2025 PrintShop Mini. All rights reserved.</p>
 <p><a style="color:inherit;text-decoration:underline" href="../privacy.html">Chính sách bảo mật</a> · Điều khoản sử dụng</p>

@@ -15,7 +15,7 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --blue:#1B8AC4;--blue-hover:#1470A8;--blue-light:#E8F4FC;--blue-mid:#4AAAD6;
+  --blue:#1976D2;--blue-hover:#1565C0;--blue-light:#E8F2FC;--blue-mid:#1976D2;
   --text:#111827;--text2:#374151;--text3:#6B7280;--border:#E5E7EB;
   --bg:#F9FAFB;--white:#FFFFFF;--radius:14px;
 }
@@ -71,7 +71,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .story-text .sec-h2{margin-bottom:24px}
 .story-text p{font-size:15px;color:var(--text2);line-height:1.95;margin-bottom:16px}
 .story-text p:last-child{margin-bottom:0}
-.story-visual{border-radius:20px;overflow:hidden;box-shadow:0 8px 40px rgba(27,138,196,0.13);}
+.story-visual{border-radius:20px;overflow:hidden;box-shadow:0 8px 40px rgba(25,118,210,0.13);}
 .story-visual svg{width:100%;height:auto;display:block;}
 
 /* VALUES */
@@ -112,7 +112,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 .ft-col ul li a:hover{color:white}
 .ft-bottom{border-top:1px solid #374151;padding-top:24px;display:flex;justify-content:space-between;font-size:12px;flex-wrap:wrap;gap:8px}
 
-.chat-fab{position:fixed;bottom:28px;right:28px;width:52px;height:52px;background:var(--blue);border:none;border-radius:50%;font-size:20px;cursor:pointer;box-shadow:0 4px 20px rgba(27,138,196,0.4);z-index:200;display:flex;align-items:center;justify-content:center;transition:transform .2s}
+.chat-fab{position:fixed;bottom:28px;right:28px;width:52px;height:52px;background:var(--blue);border:none;border-radius:50%;font-size:20px;cursor:pointer;box-shadow:0 4px 20px rgba(25,118,210,0.4);z-index:200;display:flex;align-items:center;justify-content:center;transition:transform .2s}
 .chat-fab:hover{transform:scale(1.1)}
 
 @media(max-width:900px){
@@ -172,15 +172,15 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 
 /* 히어로 */
 .mf-hero{position:relative;overflow:hidden;text-align:center;padding:56px 6% 44px;
-  background:radial-gradient(circle at 15% 20%,#FFF3C4 0,transparent 38%),radial-gradient(circle at 88% 12%,#FFD9EC 0,transparent 34%),linear-gradient(180deg,#E3F2FB 0%,#F3FAFF 100%)}
+  background:radial-gradient(circle at 15% 20%,#FFF3C4 0,transparent 38%),radial-gradient(circle at 88% 12%,#FFD9EC 0,transparent 34%),linear-gradient(180deg,#E3EFFB 0%,#F3FAFF 100%)}
 .mf-hero::after{content:'';position:absolute;left:-5%;right:-5%;bottom:-22px;height:46px;background:#fff;border-radius:50% 50% 0 0/100% 100% 0 0}
 .mf-deco{position:absolute;font-size:26px;opacity:.85;animation:mfTwinkle 3.2s ease-in-out infinite}
 .mf-deco.d1{left:7%;top:18%}.mf-deco.d2{right:9%;top:30%;animation-delay:.8s}.mf-deco.d3{left:12%;bottom:26%;animation-delay:1.4s}.mf-deco.d4{right:16%;bottom:30%;animation-delay:2s}
 @keyframes mfTwinkle{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(1.25) rotate(12deg)}}
 .mf-hero-inner{position:relative;z-index:1;max-width:1100px;margin:0 auto}
-.mf-badge{display:inline-block;background:#fff;color:var(--blue);font-size:15px;padding:6px 18px;border-radius:50px;box-shadow:0 3px 0 rgba(27,138,196,.18);margin-bottom:14px}
-.mf-title{font-size:clamp(32px,5.4vw,58px);color:#16415C;line-height:1.2;margin-bottom:12px;letter-spacing:-1px}
-.mf-title span{color:#fff;background:var(--blue);padding:0 .28em;border-radius:.35em;display:inline-block;transform:rotate(-2deg);box-shadow:0 5px 0 #14709F}
+.mf-badge{display:inline-block;background:#fff;color:var(--blue);font-size:15px;padding:6px 18px;border-radius:50px;box-shadow:0 3px 0 rgba(25,118,210,.18);margin-bottom:14px}
+.mf-title{font-size:clamp(32px,5.4vw,58px);color:#0D47A1;line-height:1.2;margin-bottom:12px;letter-spacing:-1px}
+.mf-title span{color:#fff;background:var(--blue);padding:0 .28em;border-radius:.35em;display:inline-block;transform:rotate(-2deg);box-shadow:0 5px 0 #1565C0}
 .mf-sub{font-size:16px;color:var(--text2);line-height:1.9;margin-bottom:26px}
 .mf-lineup{display:flex;justify-content:center;align-items:flex-end;gap:6px;flex-wrap:wrap}
 .mf-li{display:flex;flex-direction:column;align-items:center;width:clamp(90px,11vw,132px);transition:transform .25s}
@@ -193,11 +193,11 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 
 /* 소개 문구 말풍선 */
 .about-intro{background:#fff;padding:34px 6% 8px}
-.about-intro .ah-inner{max-width:820px;margin:0 auto;background:var(--blue-light);border:3px dashed #9BD0EC;border-radius:28px;padding:22px 28px;position:relative}
+.about-intro .ah-inner{max-width:820px;margin:0 auto;background:var(--blue-light);border:3px dashed #9BC4EC;border-radius:28px;padding:22px 28px;position:relative}
 .about-intro .ah-desc{margin:8px 0 0;max-width:none;font-size:16px}
 
 /* 친구 카드 */
-.mf-section{padding:70px 6% 80px;background:#fff;background-image:radial-gradient(circle,rgba(27,138,196,.09) 2px,transparent 2.5px);background-size:30px 30px}
+.mf-section{padding:70px 6% 80px;background:#fff;background-image:radial-gradient(circle,rgba(25,118,210,.09) 2px,transparent 2.5px);background-size:30px 30px}
 .mf-wrap{max-width:1160px;margin:0 auto}
 .mf-lead{font-size:16px;color:var(--text2);line-height:1.9;margin-bottom:34px;max-width:720px}
 .mf-card{position:relative;background:#fff;border:3px solid var(--c);border-radius:30px;padding:22px 22px 24px;box-shadow:0 7px 0 var(--c);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
@@ -227,16 +227,16 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 
 /* 기존 섹션 귀엽게 */
 .mission-section{background:linear-gradient(180deg,#fff 0,#FFF9E8 100%)}
-.mission-card{border:3px solid #E5EEF5;border-radius:26px;box-shadow:0 6px 0 #E5EEF5;text-align:center;transition:transform .2s,box-shadow .2s,border-color .2s}
+.mission-card{border:3px solid #E5EDF5;border-radius:26px;box-shadow:0 6px 0 #E5EDF5;text-align:center;transition:transform .2s,box-shadow .2s,border-color .2s}
 .mission-card:hover{transform:translateY(-4px);box-shadow:0 10px 0 var(--blue);border-color:var(--blue)}
-.mission-card:nth-child(1){background:#E3F2FB}.mission-card:nth-child(2){background:#E7F7EC}.mission-card:nth-child(3){background:#FDE7F2}
+.mission-card:nth-child(1){background:#E3EFFB}.mission-card:nth-child(2){background:#E7F7EC}.mission-card:nth-child(3){background:#FDE7F2}
 .mission-icon{font-size:44px}
 .mission-title{font-size:24px}
 .story-section{background:#F3FAFF}
-.story-visual{border-radius:30px;border:3px solid #fff;box-shadow:0 8px 0 #CFE7F6}
-.value-card{border:3px solid #E5EEF5;border-radius:26px;box-shadow:0 6px 0 #E5EEF5}
-.value-card:nth-child(1){background:#E1F1FF}.value-card:nth-child(2){background:#E7F7EC}.value-card:nth-child(3){background:#FFEBDD}.value-card:nth-child(4){background:#EEE6FD}
-.value-card:hover{box-shadow:0 10px 0 #14709F}
+.story-visual{border-radius:30px;border:3px solid #fff;box-shadow:0 8px 0 #CFE3F6}
+.value-card{border:3px solid #E5EDF5;border-radius:26px;box-shadow:0 6px 0 #E5EDF5}
+.value-card:nth-child(1){background:#E1F0FF}.value-card:nth-child(2){background:#E7F7EC}.value-card:nth-child(3){background:#FFEBDD}.value-card:nth-child(4){background:#EEE6FD}
+.value-card:hover{box-shadow:0 10px 0 #1565C0}
 .v-title{font-size:21px}
 .timeline-section{background:linear-gradient(180deg,#FFF9E8 0,#fff 100%)}
 .tl-dot{background:#fff;box-shadow:0 0 0 3px var(--blue)}
@@ -287,7 +287,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 .v-title{color:var(--c)}
 .v-say{margin-top:12px;font-family:var(--hand);font-size:19px;color:var(--c)}
 .timeline2{position:relative;margin-top:40px;display:flex;flex-direction:column;gap:26px}
-.timeline2::before{content:'';position:absolute;left:35px;top:20px;bottom:20px;width:0;border-left:4px dotted #BFDDEF}
+.timeline2::before{content:'';position:absolute;left:35px;top:20px;bottom:20px;width:0;border-left:4px dotted #BFD7EF}
 .tl2-item{position:relative;display:flex;gap:18px;align-items:flex-start}
 .tl2-av{flex:0 0 74px;height:74px;border-radius:50%;background:var(--cl);border:4px solid var(--c);display:flex;align-items:flex-end;justify-content:center;overflow:hidden;position:relative;z-index:1}
 .tl2-av img{height:92%;width:auto;object-fit:contain}
@@ -316,12 +316,12 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
   .v-pic{height:112px}
 }
 </style>
-<style id="nav-lang-css">.nav-lang{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:#1B8AC4;border:1.5px solid #1B8AC4;border-radius:50px;padding:7px 13px;margin-right:8px;white-space:nowrap;background:#fff}.nav-lang:hover{background:#E8F4FC}.nav-links a{white-space:nowrap}@media(max-width:1180px){.nav-lang .t{display:none}.nav-lang{padding:6px 9px;font-size:15px}}@media(max-width:480px){.nav-lang{padding:4px 6px;margin-right:6px;font-size:14px}.nav-cta{padding:8px 13px!important;font-size:12.5px!important}}@media(max-width:400px){nav{padding-left:12px!important;padding-right:12px!important}.nav-logo-name{font-size:15px!important}.nav-logo{gap:6px!important}.nav-cta{padding:7px 9px!important;font-size:12px!important}.nav-lang,.lang-sel{margin-right:5px!important}.hamburger{margin-left:4px!important}}</style>
+<style id="nav-lang-css">.nav-lang{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:#1976D2;border:1.5px solid #1976D2;border-radius:50px;padding:7px 13px;margin-right:8px;white-space:nowrap;background:#fff}.nav-lang:hover{background:#E8F2FC}.nav-links a{white-space:nowrap}@media(max-width:1180px){.nav-lang .t{display:none}.nav-lang{padding:6px 9px;font-size:15px}}@media(max-width:480px){.nav-lang{padding:4px 6px;margin-right:6px;font-size:14px}.nav-cta{padding:8px 13px!important;font-size:12.5px!important}}@media(max-width:400px){nav{padding-left:12px!important;padding-right:12px!important}.nav-logo-name{font-size:15px!important}.nav-logo{gap:6px!important}.nav-cta{padding:7px 9px!important;font-size:12px!important}.nav-lang,.lang-sel{margin-right:5px!important}.hamburger{margin-left:4px!important}}</style>
 <script src="ga.js?v=1" defer></script></head>
 <body>
 
 <nav>
-  <div class="nav-logo"><a href="index.html" class="nav-logo-name">🦝 프린트샵미니</a></div>
+  <div class="nav-logo"><a href="index.html" class="nav-logo-name"><img src="logo.jpg" alt="" style="width:32px;height:32px;object-fit:contain;vertical-align:middle;margin-right:8px;border-radius:6px">프린트샵미니</a></div>
   <ul class="nav-links">
     <li><a href="services.html">서비스</a></li>
     <li><a href="guide.html">사용방법</a></li>
@@ -366,9 +366,9 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
     <p class="mf-sub">저희는 서비스마다 한 명씩 담당이 있어요.<br>친구를 누르면 직접 자기소개를 해 줘요!</p>
     <div class="mf-lineup">
 <a class="mf-li" href="#friend-penpurin" style="--c:#22B24C;--cl:#E7F7EC" aria-label="펭프린 소개 보기"><img src="img/friends/print.webp" alt="펭프린 (펭귄) 인쇄 담당" width="150" height="170" loading="lazy"><span class="mf-tag">펭프린</span></a>
-<a class="mf-li" href="#friend-ttarabok" style="--c:#018FFB;--cl:#E1F1FF" aria-label="따라복 소개 보기"><img src="img/friends/copy.webp" alt="따라복 (앵무새) 복사 담당" width="150" height="170" loading="lazy"><span class="mf-tag">따라복</span></a>
+<a class="mf-li" href="#friend-ttarabok" style="--c:#1976D2;--cl:#E1F0FF" aria-label="따라복 소개 보기"><img src="img/friends/copy.webp" alt="따라복 (앵무새) 복사 담당" width="150" height="170" loading="lazy"><span class="mf-tag">따라복</span></a>
 <a class="mf-li" href="#friend-buscan" style="--c:#12BDB0;--cl:#E0F7F5" aria-label="부스캔 소개 보기"><img src="img/friends/scan.webp" alt="부스캔 (부엉이) 스캔 담당" width="150" height="170" loading="lazy"><span class="mf-tag">부스캔</span></a>
-<a class="mf-li mf-big" href="#friend-minikoon" style="--c:#1B8AC4;--cl:#E3F2FB" aria-label="미니쿤 소개 보기"><img src="img/friends/raccoon.webp" alt="미니쿤 (라쿤) 점장 · 안내 담당" width="150" height="170" loading="lazy"><span class="mf-tag">미니쿤</span></a>
+<a class="mf-li mf-big" href="#friend-minikoon" style="--c:#1976D2;--cl:#E3EFFB" aria-label="미니쿤 소개 보기"><img src="img/friends/raccoon.webp" alt="미니쿤 (라쿤) 점장 · 안내 담당" width="150" height="170" loading="lazy"><span class="mf-tag">미니쿤</span></a>
 <a class="mf-li" href="#friend-pakdul" style="--c:#F3732C;--cl:#FFEBDD" aria-label="팩둘이 소개 보기"><img src="img/friends/fax.webp" alt="팩둘이 (비둘기) 팩스 담당" width="150" height="170" loading="lazy"><span class="mf-tag">팩둘이</span></a>
 <a class="mf-li" href="#friend-kobuki" style="--c:#7C3AED;--cl:#EEE6FD" aria-label="코북이 소개 보기"><img src="img/friends/coat.webp" alt="코북이 (거북이) 코팅 담당" width="150" height="170" loading="lazy"><span class="mf-tag">코북이</span></a>
 <a class="mf-li" href="#friend-chagoki" style="--c:#EC4899;--cl:#FDE7F2" aria-label="차곡이 소개 보기"><img src="img/friends/bind.webp" alt="차곡이 (비버) 제본 담당" width="150" height="170" loading="lazy"><span class="mf-tag">차곡이</span></a>
@@ -377,7 +377,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 </div>
 
 <div class="about-intro"><div class="ah-inner">
-  <p class="brand-note" style="word-break:keep-all;font-size:13.5px;line-height:1.9;color:#6B7280;margin:10px 0 0"><b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1B8AC4)">프린트샵미니</b> · <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">프린트나우</b>는 <span style="white-space:nowrap">(주)굿러닝파트너</span> 법인의 브랜드예요.</p>
+  <p class="brand-note" style="word-break:keep-all;font-size:13.5px;line-height:1.9;color:#6B7280;margin:10px 0 0"><b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1976D2)">프린트샵미니</b> · <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">프린트나우</b>는 <span style="white-space:nowrap">(주)굿러닝파트너</span> 법인의 브랜드예요.</p>
     <p class="ah-desc">프린트샵미니는 '직원 없이도 누구나 쉽게'라는 철학으로 만든 24시간 무인 셀프 프린트 전문점입니다. 밤새 논문을 마무리하는 대학생, 새벽에 계약서가 필요한 사업자, 사진을 인쇄하고 싶은 누구에게나 열려 있습니다.</p>
 </div></div>
 
@@ -387,7 +387,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
     <div class="sec-eyebrow">MEET MINI FRIENDS</div>
     <h2 class="sec-h2 cute">미니프랜즈를 소개해요 🐾</h2>
     <p class="mf-lead">자, 이제 한 명씩 인사할게요! 매장에서 만나는 여섯 가지 서비스, 담당 친구들이 왜 그 일을 맡았는지 들어 보세요.</p>
-<article class="mf-card mf-boss" id="friend-minikoon" style="--c:#1B8AC4;--cl:#E3F2FB">
+<article class="mf-card mf-boss" id="friend-minikoon" style="--c:#1976D2;--cl:#E3EFFB">
   <div class="mf-pic"><img src="img/friends/raccoon.webp" alt="미니쿤 (라쿤) 점장 · 안내 담당" width="200" height="230" loading="lazy"></div>
   <div class="mf-body">
     <div class="mf-pill">🏪 점장 · 안내 담당</div>
@@ -410,7 +410,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
     <a class="mf-go" href="guide-print.html">인쇄하는 방법 보기 <span aria-hidden="true">→</span></a>
   </div>
 </article>
-<article class="mf-card" id="friend-ttarabok" style="--c:#018FFB;--cl:#E1F1FF">
+<article class="mf-card" id="friend-ttarabok" style="--c:#1976D2;--cl:#E1F0FF">
   <div class="mf-pic"><img src="img/friends/copy.webp" alt="따라복 (앵무새) 복사 담당" width="200" height="230" loading="lazy"></div>
   <div class="mf-body">
     <div class="mf-pill">📋 복사 담당</div>
@@ -475,7 +475,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
     <div class="sec-eyebrow">MISSION & VISION</div>
     <h2 class="sec-h2">우리가 하는 일</h2>
     <div class="mission-grid">
-      <div class="mission-card" style="--c:#1B8AC4;--cl:#E3F2FB">
+      <div class="mission-card" style="--c:#1976D2;--cl:#E3EFFB">
         <div class="mc-pic"><img class="" src="img/friends/raccoon.webp" alt="미니쿤 (라쿤)" width="150" loading="lazy"></div>
         <div class="mc-by">점장 미니쿤의 약속</div>
         <div class="mission-title">🎯 미션</div>
@@ -487,7 +487,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
         <div class="mission-title">🌏 비전</div>
         <p class="mission-desc">경기권을 넘어 전국 어디서나 가장 가까운 곳에 프린트샵미니가 있는 세상을 만들어 갑니다.</p>
       </div>
-      <div class="mission-card" style="--c:#018FFB;--cl:#E1F1FF">
+      <div class="mission-card" style="--c:#1976D2;--cl:#E1F0FF">
         <div class="mc-pic"><img class="" src="img/friends/copy.webp" alt="따라복 (앵무새)" width="150" loading="lazy"></div>
         <div class="mc-by">따라복이 따라 말해요</div>
         <div class="mission-title">💡 슬로건</div>
@@ -511,11 +511,11 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
       <svg viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans KR', sans-serif">
         <defs>
           <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#E8F4FC"/>
+            <stop offset="0%" style="stop-color:#E8F2FC"/>
             <stop offset="100%" style="stop-color:#F0F8FF"/>
           </linearGradient>
           <filter id="cardShadow">
-            <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#1B8AC4" flood-opacity="0.15"/>
+            <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#1976D2" flood-opacity="0.15"/>
           </filter>
           <filter id="softShadow">
             <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.08"/>
@@ -527,21 +527,21 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 
         <!-- ── 건물 전체 그룹 (중앙 정렬) ── -->
         <!-- 바닥 -->
-        <rect x="100" y="355" width="320" height="14" rx="4" fill="#1B8AC4"/>
-        <rect x="88"  y="362" width="344" height="8"  rx="4" fill="#1470A8"/>
+        <rect x="100" y="355" width="320" height="14" rx="4" fill="#1976D2"/>
+        <rect x="88"  y="362" width="344" height="8"  rx="4" fill="#1565C0"/>
 
         <!-- 건물 외벽 -->
-        <rect x="118" y="185" width="284" height="172" rx="4" fill="#F3F8FC" stroke="#1B8AC4" stroke-width="3" filter="url(#cardShadow)"/>
+        <rect x="118" y="185" width="284" height="172" rx="4" fill="#F3F8FC" stroke="#1976D2" stroke-width="3" filter="url(#cardShadow)"/>
 
         <!-- 간판 (상단 띠) -->
-        <rect x="118" y="150" width="284" height="40" rx="4" fill="#1B8AC4"/>
-        <rect x="118" y="150" width="284" height="40" rx="4" fill="none" stroke="#1470A8" stroke-width="3"/>
-        <text x="260" y="176" text-anchor="middle" font-size="16" font-weight="900" fill="white" letter-spacing="1">프린트샵미니 🦝</text>
+        <rect x="118" y="150" width="284" height="40" rx="4" fill="#1976D2"/>
+        <rect x="118" y="150" width="284" height="40" rx="4" fill="none" stroke="#1565C0" stroke-width="3"/>
+        <text x="260" y="176" text-anchor="middle" font-size="16" font-weight="900" fill="white" letter-spacing="1">프린트샵미니</text>
 
         <!-- ── 차양 (어닝) ── -->
         <!-- 차양 베이스 곡선 -->
         <path d="M112,190 L408,190 L408,210 Q370,240 332,210 Q314,196 296,210 Q278,226 260,210 Q242,196 224,210 Q206,226 188,210 Q170,196 152,210 Q134,226 112,210 Z"
-              fill="#4AAAD6" stroke="#1B8AC4" stroke-width="2.5"/>
+              fill="#1976D2" stroke="#1976D2" stroke-width="2.5"/>
         <!-- 차양 줄무늬 (흰줄) -->
         <path d="M140,190 Q134,210 128,225" stroke="white" stroke-width="8" stroke-linecap="round" opacity="0.45"/>
         <path d="M175,190 Q172,215 168,232" stroke="white" stroke-width="8" stroke-linecap="round" opacity="0.45"/>
@@ -553,66 +553,66 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 
         <!-- 차양 하단 스캘럽 (물결 장식) -->
         <path d="M112,210 Q126,230 140,210 Q154,192 168,210 Q182,230 196,210 Q210,192 224,210 Q238,230 252,210 Q266,192 280,210 Q294,230 308,210 Q322,192 336,210 Q350,230 364,210 Q378,192 392,210 Q406,230 408,210"
-              fill="#1B8AC4" stroke="#1470A8" stroke-width="1.5"/>
+              fill="#1976D2" stroke="#1565C0" stroke-width="1.5"/>
 
         <!-- ── 왼쪽 쇼윈도 ── -->
-        <rect x="132" y="248" width="100" height="90" rx="3" fill="#DCEEFA" stroke="#4AAAD6" stroke-width="2.5"/>
+        <rect x="132" y="248" width="100" height="90" rx="3" fill="#DCEBFA" stroke="#1976D2" stroke-width="2.5"/>
         <!-- 창문 프레임 십자 -->
-        <line x1="182" y1="248" x2="182" y2="338" stroke="#4AAAD6" stroke-width="2"/>
-        <line x1="132" y1="293" x2="232" y2="293" stroke="#4AAAD6" stroke-width="2"/>
+        <line x1="182" y1="248" x2="182" y2="338" stroke="#1976D2" stroke-width="2"/>
+        <line x1="132" y1="293" x2="232" y2="293" stroke="#1976D2" stroke-width="2"/>
         <!-- 창문 광택 -->
         <rect x="136" y="252" width="42" height="37" rx="2" fill="white" opacity="0.35"/>
         <rect x="186" y="252" width="42" height="37" rx="2" fill="white" opacity="0.2"/>
 
         <!-- ── 오른쪽 쇼윈도 ── -->
-        <rect x="288" y="248" width="100" height="90" rx="3" fill="#DCEEFA" stroke="#4AAAD6" stroke-width="2.5"/>
-        <line x1="338" y1="248" x2="338" y2="338" stroke="#4AAAD6" stroke-width="2"/>
-        <line x1="288" y1="293" x2="388" y2="293" stroke="#4AAAD6" stroke-width="2"/>
+        <rect x="288" y="248" width="100" height="90" rx="3" fill="#DCEBFA" stroke="#1976D2" stroke-width="2.5"/>
+        <line x1="338" y1="248" x2="338" y2="338" stroke="#1976D2" stroke-width="2"/>
+        <line x1="288" y1="293" x2="388" y2="293" stroke="#1976D2" stroke-width="2"/>
         <rect x="292" y="252" width="42" height="37" rx="2" fill="white" opacity="0.35"/>
         <rect x="342" y="252" width="42" height="37" rx="2" fill="white" opacity="0.2"/>
 
         <!-- ── 자동문 (중앙) ── -->
-        <rect x="218" y="268" width="84" height="87" rx="3" fill="#B8DCF0" stroke="#4AAAD6" stroke-width="2.5"/>
+        <rect x="218" y="268" width="84" height="87" rx="3" fill="#B8D4F0" stroke="#1976D2" stroke-width="2.5"/>
         <!-- 왼쪽 문짝 -->
-        <rect x="221" y="271" width="38" height="81" rx="2" fill="#DCEEFA" opacity="0.85"/>
+        <rect x="221" y="271" width="38" height="81" rx="2" fill="#DCEBFA" opacity="0.85"/>
         <!-- 오른쪽 문짝 -->
-        <rect x="261" y="271" width="38" height="81" rx="2" fill="#DCEEFA" opacity="0.85"/>
+        <rect x="261" y="271" width="38" height="81" rx="2" fill="#DCEBFA" opacity="0.85"/>
         <!-- 문 중앙선 -->
-        <line x1="260" y1="271" x2="260" y2="352" stroke="#4AAAD6" stroke-width="2"/>
+        <line x1="260" y1="271" x2="260" y2="352" stroke="#1976D2" stroke-width="2"/>
         <!-- 손잡이 -->
-        <rect x="251" y="308" width="7" height="18" rx="3.5" fill="#1B8AC4" opacity="0.6"/>
-        <rect x="263" y="308" width="7" height="18" rx="3.5" fill="#1B8AC4" opacity="0.6"/>
+        <rect x="251" y="308" width="7" height="18" rx="3.5" fill="#1976D2" opacity="0.6"/>
+        <rect x="263" y="308" width="7" height="18" rx="3.5" fill="#1976D2" opacity="0.6"/>
         <!-- AUTO 센서 -->
-        <rect x="238" y="260" width="44" height="10" rx="5" fill="#1B8AC4" opacity="0.5"/>
+        <rect x="238" y="260" width="44" height="10" rx="5" fill="#1976D2" opacity="0.5"/>
         <text x="260" y="268" text-anchor="middle" font-size="6.5" font-weight="700" fill="white">AUTO</text>
 
         <!-- ── 성장 타임라인 (상단) ── -->
         <rect x="82" y="48" width="80" height="48" rx="10" fill="white" filter="url(#softShadow)"/>
-        <text x="122" y="70" text-anchor="middle" font-size="12" font-weight="900" fill="#1B8AC4">2021</text>
+        <text x="122" y="70" text-anchor="middle" font-size="12" font-weight="900" fill="#1976D2">2021</text>
         <text x="122" y="86" text-anchor="middle" font-size="9" fill="#6B7280">광교 1호점</text>
 
-        <polygon points="169,72 178,68 178,76" fill="#4AAAD6"/>
-        <line x1="162" y1="72" x2="178" y2="72" stroke="#4AAAD6" stroke-width="2"/>
+        <polygon points="169,72 178,68 178,76" fill="#1976D2"/>
+        <line x1="162" y1="72" x2="178" y2="72" stroke="#1976D2" stroke-width="2"/>
 
         <rect x="180" y="48" width="80" height="48" rx="10" fill="white" filter="url(#softShadow)"/>
-        <text x="220" y="70" text-anchor="middle" font-size="12" font-weight="900" fill="#1B8AC4">2023</text>
+        <text x="220" y="70" text-anchor="middle" font-size="12" font-weight="900" fill="#1976D2">2023</text>
         <text x="220" y="86" text-anchor="middle" font-size="9" fill="#6B7280">10개 지점</text>
 
-        <polygon points="267,72 276,68 276,76" fill="#4AAAD6"/>
-        <line x1="260" y1="72" x2="276" y2="72" stroke="#4AAAD6" stroke-width="2"/>
+        <polygon points="267,72 276,68 276,76" fill="#1976D2"/>
+        <line x1="260" y1="72" x2="276" y2="72" stroke="#1976D2" stroke-width="2"/>
 
-        <rect x="278" y="42" width="90" height="54" rx="10" fill="#1B8AC4" filter="url(#softShadow)"/>
+        <rect x="278" y="42" width="90" height="54" rx="10" fill="#1976D2" filter="url(#softShadow)"/>
         <text x="323" y="65" text-anchor="middle" font-size="12" font-weight="900" fill="white">현재</text>
         <text x="323" y="83" text-anchor="middle" font-size="10" font-weight="700" fill="white" opacity="0.9"><tspan class="js-rcount">4</tspan>도시 <tspan class="js-bcount">16</tspan>지점</text>
 
         <!-- ── 플로팅 뱃지 ── -->
         <rect x="30" y="230" width="74" height="68" rx="12" fill="white" filter="url(#softShadow)"/>
-        <text x="67" y="256" text-anchor="middle" font-size="15" font-weight="900" fill="#1B8AC4">24H</text>
+        <text x="67" y="256" text-anchor="middle" font-size="15" font-weight="900" fill="#1976D2">24H</text>
         <text x="67" y="272" text-anchor="middle" font-size="8" font-weight="700" fill="#6B7280">연중무휴</text>
         <text x="67" y="285" text-anchor="middle" font-size="8" fill="#6B7280">365일 운영</text>
 
         <rect x="416" y="230" width="74" height="68" rx="12" fill="white" filter="url(#softShadow)"/>
-        <text x="453" y="256" text-anchor="middle" font-size="13" font-weight="900" fill="#1B8AC4">무인</text>
+        <text x="453" y="256" text-anchor="middle" font-size="13" font-weight="900" fill="#1976D2">무인</text>
         <text x="453" y="272" text-anchor="middle" font-size="8" font-weight="700" fill="#6B7280">셀프운영</text>
         <text x="453" y="285" text-anchor="middle" font-size="8" fill="#6B7280">직원 불필요</text>
       </svg>
@@ -634,7 +634,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
         <p class="v-sub">언제, 어디서나 인쇄가 필요한 순간 가장 가까운 곳에 존재합니다</p>
         <div class="v-say">팩둘이: 어디든 슝~ 달려가요!</div>
       </div>
-      <div class="value-card" style="--c:#018FFB;--cl:#E1F1FF">
+      <div class="value-card" style="--c:#1976D2;--cl:#E1F0FF">
         <div class="v-pic"><img class="" src="img/friends/copy.webp" alt="따라복 (앵무새)" width="110" loading="lazy"></div>
         <div class="v-title">👆 편의성</div>
         <p class="v-sub">복잡한 설명 없이 누구나 직관적으로 사용할 수 있는 환경을 만듭니다</p>
@@ -662,7 +662,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
     <div class="sec-eyebrow">HISTORY</div>
     <h2 class="sec-h2">성장 스토리</h2>
     <div class="timeline2">
-      <div class="tl2-item" style="--c:#1B8AC4;--cl:#E3F2FB">
+      <div class="tl2-item" style="--c:#1976D2;--cl:#E3EFFB">
         <div class="tl2-av"><img class="" src="img/friends/raccoon.webp" alt="미니쿤 (라쿤)" width="70" loading="lazy"></div>
         <div class="tl2-box">
           <div class="tl2-year">2021</div>
@@ -689,7 +689,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
           <div class="tl2-say">팩둘이: 멀리멀리 날아가요~</div>
         </div>
       </div>
-      <div class="tl2-item" style="--c:#018FFB;--cl:#E1F1FF">
+      <div class="tl2-item" style="--c:#1976D2;--cl:#E1F0FF">
         <div class="tl2-av"><img class="" src="img/friends/copy.webp" alt="따라복 (앵무새)" width="70" loading="lazy"></div>
         <div class="tl2-box">
           <div class="tl2-year">2024</div>
@@ -698,7 +698,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
           <div class="tl2-say">따라복: 궁금한 건 톡톡으로 물어봐요!</div>
         </div>
       </div>
-      <div class="tl2-item" style="--c:#1B8AC4;--cl:#E3F2FB">
+      <div class="tl2-item" style="--c:#1976D2;--cl:#E3EFFB">
         <div class="tl2-av"><img class="" src="img/friends/raccoon.webp" alt="미니쿤 (라쿤)" width="70" loading="lazy"></div>
         <div class="tl2-box">
           <div class="tl2-year">2025~</div>
@@ -715,11 +715,11 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 <footer>
   <div class="ft-inner">
     <div class="ft-grid">
-      <div class="ft-col"><div class="ft-brand-name">🦝 프린트샵미니</div><p>24시간 365일 운영되는<br>무인 셀프 프린트 전문점입니다.</p></div>
+      <div class="ft-col"><div class="ft-brand-name"><img src="logo.jpg" alt="" style="width:28px;height:28px;object-fit:contain;vertical-align:middle;margin-right:8px;border-radius:6px">프린트샵미니</div><p>24시간 365일 운영되는<br>무인 셀프 프린트 전문점입니다.</p></div>
       <div class="ft-col"><h4>서비스</h4><ul><li><a href="services.html">인쇄 · 복사 · 스캔</a></li><li><a href="services.html">팩스 · 코팅 · 제본</a></li><li><a href="branches.html">지점 찾기</a></li><li><a href="community.html">커뮤니티</a></li></ul></div>
       <div class="ft-col"><h4>고객센터</h4><ul><li><a href="https://naver.me/GJErAoQ7" target="_blank" rel="noopener">💬 톡톡 문의</a></li><li><a href="#">매장운영: 24시간 연중무휴</a></li><li><a href="#">운영사: (주)굿러닝파트너 120-88-22460</a></li></ul></div>
     </div>
-    <div class="ft-corp" style="word-break:keep-all;max-width:1160px;margin:0 auto 20px;font-size:13px;line-height:1.9;color:#9CA3AF"><b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1B8AC4)">프린트샵미니</b> · <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">프린트나우</b>는 <span style="white-space:nowrap">(주)굿러닝파트너</span> 법인의 브랜드예요.</div>
+    <div class="ft-corp" style="word-break:keep-all;max-width:1160px;margin:0 auto 20px;font-size:13px;line-height:1.9;color:#9CA3AF"><b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1976D2)">프린트샵미니</b> · <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">프린트나우</b>는 <span style="white-space:nowrap">(주)굿러닝파트너</span> 법인의 브랜드예요.</div>
   <div class="ft-bottom"><p>© 2025 프린트샵미니. All rights reserved.</p><p><a style="color:inherit;text-decoration:underline" href="privacy.html">개인정보처리방침</a> · 이용약관</p></div>
   </div>
 </footer>
