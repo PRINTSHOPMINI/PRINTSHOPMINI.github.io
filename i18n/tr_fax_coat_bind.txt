@@ -2,13 +2,13 @@
 # 코팅기 그림 속 버튼 글씨(역회전·문서·사진·무열코팅)와 복합기 화면 금액은 실물과 같게 한국어 그대로 둠
 
 @@69b1a9e8e4
-en: PrintShop Mini fax guide — how to send what is on paper to someone's fax number.
-zh: PrintShop Mini 传真使用方法 — 介绍把纸上的内容发送到对方传真号码的方法。
-vi: Hướng dẫn fax của PrintShop Mini — cách gửi nội dung trên giấy đến số fax của người nhận.
+en: PRINTSHOPMINI fax guide — how to send what is on paper to someone's fax number.
+zh: PRINTSHOPMINI 传真使用方法 — 介绍把纸上的内容发送到对方传真号码的方法。
+vi: Hướng dẫn fax của PRINTSHOPMINI — cách gửi nội dung trên giấy đến số fax của người nhận.
 @@b62b17b8fc
-en: How to Send a Fax - PrintShop Mini
-zh: 传真使用方法 - PrintShop Mini
-vi: Cách gửi fax - PrintShop Mini
+en: How to Send a Fax - PRINTSHOPMINI
+zh: 传真使用方法 - PRINTSHOPMINI
+vi: Cách gửi fax - PRINTSHOPMINI
 @@9ced167e44
 en: How to Send a Fax
 zh: 传真使用方法
@@ -126,13 +126,13 @@ en: 👍 <b>If you have many pages, send them 30 at a time.</b>
 zh: 👍 <b>数量多的话，请每 30 张分开发送。</b>
 vi: 👍 <b>Nếu nhiều tờ, hãy chia ra mỗi lần 30 tờ.</b>
 @@b6c1cf6f8e
-en: PrintShop Mini laminating guide — paying, warming up, putting your print in the pouch and feeding it, with photos.
-zh: PrintShop Mini 塑封使用方法 — 用照片介绍付款、预热、放进塑封膜和送入机器的方法。
-vi: Hướng dẫn ép plastic của PrintShop Mini — thanh toán, làm nóng máy, cho giấy vào túi ép và đưa vào máy, có ảnh minh họa.
+en: PRINTSHOPMINI laminating guide — paying, warming up, putting your print in the pouch and feeding it, with photos.
+zh: PRINTSHOPMINI 塑封使用方法 — 用照片介绍付款、预热、放进塑封膜和送入机器的方法。
+vi: Hướng dẫn ép plastic của PRINTSHOPMINI — thanh toán, làm nóng máy, cho giấy vào túi ép và đưa vào máy, có ảnh minh họa.
 @@5f5e2b05d8
-en: How to Laminate - PrintShop Mini
-zh: 塑封使用方法 - PrintShop Mini
-vi: Cách ép plastic - PrintShop Mini
+en: How to Laminate - PRINTSHOPMINI
+zh: 塑封使用方法 - PRINTSHOPMINI
+vi: Cách ép plastic - PRINTSHOPMINI
 @@99fd9c5487
 en: How to Laminate
 zh: 塑封使用方法
@@ -614,13 +614,13 @@ en: 🚫 Don't put a pouch in the <b>top binding-cover slot</b>. (Pouches go <b>
 zh: 🚫 不要把塑封膜放进<b>上方装订封面入口</b>。（塑封膜<b>只能放下方前面入口</b>）
 vi: 🚫 Đừng đưa túi ép vào <b>khe bìa đóng sách phía trên</b>. (Túi ép <b>chỉ đưa vào khe phía dưới phía trước</b>)
 @@6ff99c403e
-en: PrintShop Mini binding guide — warming up the heat binder, putting pages in the cover, feeding it, and cooling for 10+ minutes.
-zh: PrintShop Mini 装订使用方法 — 介绍热熔装订机预热、把纸放进封面、送入机器和冷却 10 分钟以上。
-vi: Hướng dẫn đóng sách của PrintShop Mini — làm nóng máy đóng sách nhiệt, cho giấy vào bìa, đưa vào máy và để nguội từ 10 phút trở lên.
+en: PRINTSHOPMINI binding guide — warming up the heat binder, putting pages in the cover, feeding it, and cooling for 10+ minutes.
+zh: PRINTSHOPMINI 装订使用方法 — 介绍热熔装订机预热、把纸放进封面、送入机器和冷却 10 分钟以上。
+vi: Hướng dẫn đóng sách của PRINTSHOPMINI — làm nóng máy đóng sách nhiệt, cho giấy vào bìa, đưa vào máy và để nguội từ 10 phút trở lên.
 @@b88fb27269
-en: How to Bind - PrintShop Mini
-zh: 装订使用方法 - PrintShop Mini
-vi: Cách đóng sách - PrintShop Mini
+en: How to Bind - PRINTSHOPMINI
+zh: 装订使用方法 - PRINTSHOPMINI
+vi: Cách đóng sách - PRINTSHOPMINI
 @@630cf56eaf
 en: How to Bind
 zh: 装订使用方法

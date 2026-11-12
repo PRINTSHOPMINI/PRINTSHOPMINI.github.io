@@ -1,13 +1,13 @@
 # 자주 묻는 질문(faq.html) 페이지 틀 번역 — 질문·답 자체는 i18n/faq/tr_faq_*.txt
 
 @@03dcac5fc5
-en: FAQ - PrintShop Mini
-zh: 常见问题 - PrintShop Mini
-vi: Câu hỏi thường gặp - PrintShop Mini
+en: FAQ - PRINTSHOPMINI
+zh: 常见问题 - PRINTSHOPMINI
+vi: Câu hỏi thường gặp - PRINTSHOPMINI
 @@fd734e4198
-en: <a class="nav-logo-name" href="index.html">🦝 PrintShop Mini</a>
-zh: <a class="nav-logo-name" href="index.html">🦝 PrintShop Mini</a>
-vi: <a class="nav-logo-name" href="index.html">🦝 PrintShop Mini</a>
+en: <a class="nav-logo-name" href="index.html">🦝 PRINTSHOPMINI</a>
+zh: <a class="nav-logo-name" href="index.html">🦝 PRINTSHOPMINI</a>
+vi: <a class="nav-logo-name" href="index.html">🦝 PRINTSHOPMINI</a>
 @@c0786aecd3
 en: <a href="guide.html">How to Use</a>
 zh: <a href="guide.html">使用方法</a>
@@ -57,9 +57,9 @@ en: 💡 For machine breakdowns or payment problems, <b>TalkTalk</b> is faster. 
 zh: 💡 复合机故障·付款问题用 <b>TalkTalk</b> 更快。请把门店名称和复合机编号一起发过来。
 vi: 💡 Máy hỏng hay lỗi thanh toán thì <b>TalkTalk</b> nhanh hơn. Hãy gửi kèm tên cửa hàng và số máy in đa năng.
 @@f6fbc04a45
-en: 🦝 PrintShop Mini
-zh: 🦝 PrintShop Mini
-vi: 🦝 PrintShop Mini
+en: 🦝 PRINTSHOPMINI
+zh: 🦝 PRINTSHOPMINI
+vi: 🦝 PRINTSHOPMINI
 @@d8ab5eae64
 en: Services
 zh: 服务

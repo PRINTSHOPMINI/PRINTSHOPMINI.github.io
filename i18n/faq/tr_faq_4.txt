@@ -7,7 +7,7 @@
 - Gwonseon store (권선점)
 - Dongbaek Station store (동백역점)
 These two stores have parking lots, but they are paid.
-PrintShop Mini does not give parking discounts there. 🙏
+PRINTSHOPMINI does not give parking discounts there. 🙏
 
 ✅ For other stores, tap the picture below to apply.
 
@@ -56,7 +56,7 @@ Read the policy carefully before applying for the discount.
 - 劝善店（권선점）
 - 冬柏站店（동백역점）
 这两家店有停车场，但是收费的。
-PrintShop Mini 不提供停车优惠。🙏
+PRINTSHOPMINI 不提供停车优惠。🙏
 
 ✅ 其他门店请点下面的图片申请。
 
@@ -105,7 +105,7 @@ PrintShop Mini 不提供停车优惠。🙏
 - Cửa hàng Gwonseon (권선점)
 - Cửa hàng ga Dongbaek (동백역점)
 Hai cửa hàng này có bãi đỗ xe nhưng có thu phí.
-PrintShop Mini không giảm phí gửi xe ở đó. 🙏
+PRINTSHOPMINI không giảm phí gửi xe ở đó. 🙏
 
 ✅ Các cửa hàng khác hãy bấm vào hình dưới đây để đăng ký.
 
@@ -601,7 +601,7 @@ Quản lý sẽ kiểm tra và hướng dẫn cách thanh toán.
 @@72
 #q en: Opening hours and store information (24 hours · phone support · Wi-Fi)
 #a en
-🏪 This is how PrintShop Mini works.
+🏪 This is how PRINTSHOPMINI works.
 
 ⏰ Opening hours
 ✅ Every store is open 24 hours a day, 365 days a year, with no days off.
@@ -635,7 +635,7 @@ Please help keep it clean and safe. 🙏
 - Type it exactly, with the same upper and lower case.
 💻 The store PCs have internet too.
 
-🏪 We don't run franchises yet. All PrintShop Mini stores are directly operated.
+🏪 We don't run franchises yet. All PRINTSHOPMINI stores are directly operated.
 
 📖 To see more
 [[go:faq.html#faq-28|Are stores open on long weekends and temporary holidays?]]
@@ -645,7 +645,7 @@ Please help keep it clean and safe. 🙏
 [[go:faq.html#faq-63|Can I open a franchise store?]]
 #q zh: 营业时间和门店运营说明（24 小时·电话咨询·Wi-Fi）
 #a zh
-🏪 PrintShop Mini 是这样运营的。
+🏪 PRINTSHOPMINI 是这样运营的。
 
 ⏰ 营业时间
 ✅ 所有门店 24 小时、全年 365 天无休营业。
@@ -679,7 +679,7 @@ Please help keep it clean and safe. 🙏
 - 请区分大小写，原样输入。
 💻 店内电脑也能上网。
 
-🏪 目前还不做加盟（特许经营）业务。现在运营的 PrintShop Mini 全部是直营店。
+🏪 目前还不做加盟（特许经营）业务。现在运营的 PRINTSHOPMINI 全部是直营店。
 
 📖 想看更详细的内容
 [[go:faq.html#faq-28|连休、临时公休日门店营业吗？]]
@@ -689,7 +689,7 @@ Please help keep it clean and safe. 🙏
 [[go:faq.html#faq-63|可以开加盟店（特许经营）吗？]]
 #q vi: Giờ mở cửa và thông tin vận hành cửa hàng (24 giờ · tư vấn điện thoại · Wi-Fi)
 #a vi
-🏪 PrintShop Mini hoạt động như sau.
+🏪 PRINTSHOPMINI hoạt động như sau.
 
 ⏰ Giờ mở cửa
 ✅ Tất cả cửa hàng mở 24 giờ, 365 ngày, không nghỉ ngày nào.
@@ -723,7 +723,7 @@ Hãy giúp giữ cửa hàng sạch sẽ và an toàn. 🙏
 - Hãy nhập đúng chữ hoa, chữ thường.
 💻 Máy tính cửa hàng cũng có internet.
 
-🏪 Chúng tôi chưa làm nhượng quyền. Tất cả cửa hàng PrintShop Mini hiện nay đều do công ty trực tiếp vận hành.
+🏪 Chúng tôi chưa làm nhượng quyền. Tất cả cửa hàng PRINTSHOPMINI hiện nay đều do công ty trực tiếp vận hành.
 
 📖 Muốn xem chi tiết hơn
 [[go:faq.html#faq-28|Cửa hàng có mở vào kỳ nghỉ dài, ngày nghỉ tạm thời không?]]
@@ -1138,19 +1138,19 @@ Có thể thất bại do sự cố kết nối tạm thời.
 #a en
 ✅ Yes, we're open 24 hours a day, 365 days a year, with no days off.
 
-Every PrintShop Mini store is registered on Naver Smart Place.
+Every PRINTSHOPMINI store is registered on Naver Smart Place.
 📍 Search on Naver to check the location, building name and floor before you visit.
 #q zh: 连休、临时公休日门店营业吗？
 #a zh
 ✅ 是的，全年 365 天 24 小时无休营业。
 
-PrintShop Mini 运营的所有门店都在 Naver Smart Place 上登记了。
+PRINTSHOPMINI 运营的所有门店都在 Naver Smart Place 上登记了。
 📍 请在 Naver 上搜索，确认位置、建筑名、楼层后再来。
 #q vi: Cửa hàng có mở vào kỳ nghỉ dài, ngày nghỉ tạm thời không?
 #a vi
 ✅ Có, chúng tôi mở 24 giờ, 365 ngày, không nghỉ ngày nào.
 
-Tất cả cửa hàng PrintShop Mini đều đã đăng ký trên Naver Smart Place.
+Tất cả cửa hàng PRINTSHOPMINI đều đã đăng ký trên Naver Smart Place.
 📍 Hãy tìm trên Naver để xem vị trí, tên tòa nhà, tầng rồi mới đến.
 
 @@55
@@ -1449,20 +1449,20 @@ This happens because the PDF file has a page with a different size.
 #q en: Can I open a franchise store?
 #a en
 We don't run a franchise business yet.
-All PrintShop Mini stores now are directly operated. 🏪
+All PRINTSHOPMINI stores now are directly operated. 🏪
 #q zh: 可以开加盟店（特许经营）吗？
 #a zh
 目前还不做加盟·特许经营业务。
-现在运营的 PrintShop Mini 全部是直营店。🏪
+现在运营的 PRINTSHOPMINI 全部是直营店。🏪
 #q vi: Có thể mở cửa hàng nhượng quyền không?
 #a vi
 Chúng tôi chưa làm kinh doanh nhượng quyền.
-Tất cả cửa hàng PrintShop Mini hiện nay đều do công ty trực tiếp vận hành. 🏪
+Tất cả cửa hàng PRINTSHOPMINI hiện nay đều do công ty trực tiếp vận hành. 🏪
 
 @@cat mini
-#c en: Mini programs | Parking · receipts · refunds · fax check · lost items (how to use PrintShop Mini's own sites)
-#c zh: 迷你专用程序 | 停车 · 收据 · 退款 · 传真确认 · 失物确认（PrintShop Mini 专用网站使用方法）
-#c vi: Chương trình riêng | Gửi xe · hóa đơn · hoàn tiền · kiểm tra fax · đồ thất lạc (cách dùng trang riêng của PrintShop Mini)
+#c en: Mini programs | Parking · receipts · refunds · fax check · lost items (how to use PRINTSHOPMINI's own sites)
+#c zh: 迷你专用程序 | 停车 · 收据 · 退款 · 传真确认 · 失物确认（PRINTSHOPMINI 专用网站使用方法）
+#c vi: Chương trình riêng | Gửi xe · hóa đơn · hoàn tiền · kiểm tra fax · đồ thất lạc (cách dùng trang riêng của PRINTSHOPMINI)
 @@cat broken
 #c en: Problems | When the machine acts strange or a print comes out wrong
 #c zh: 故障 | 机器不正常，或打印错了的时候

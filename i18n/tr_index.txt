@@ -1,21 +1,21 @@
 # 메인(index.html) 번역 — 지점 이름·지역·공지 글은 DB 그대로(한국어), 그 둘레 글자만 번역
 
 @@ff1dad3f27
-en: PrintShop Mini - 24-hour self-service print shop
-zh: PrintShop Mini - 24 小时无人自助打印
-vi: PrintShop Mini - In tự phục vụ 24 giờ
+en: PRINTSHOPMINI - 24-hour self-service print shop
+zh: PRINTSHOPMINI - 24 小时无人自助打印
+vi: PRINTSHOPMINI - In tự phục vụ 24 giờ
 @@f754560482
-en: PrintShop Mini, an unmanned self-service print shop open 24/7. Print · copy · scan · fax · laminate · bind. Find a store near you.
-zh: PrintShop Mini，24 小时 365 天无人自助打印店。打印·复印·扫描·传真·塑封·装订，查找附近的门店。
-vi: PrintShop Mini, cửa hàng in tự phục vụ không người trực mở 24/7. In · photo · scan · fax · ép plastic · đóng sách. Tìm cửa hàng gần bạn.
+en: PRINTSHOPMINI, an unmanned self-service print shop open 24/7. Print · copy · scan · fax · laminate · bind. Find a store near you.
+zh: PRINTSHOPMINI，24 小时 365 天无人自助打印店。打印·复印·扫描·传真·塑封·装订，查找附近的门店。
+vi: PRINTSHOPMINI, cửa hàng in tự phục vụ không người trực mở 24/7. In · photo · scan · fax · ép plastic · đóng sách. Tìm cửa hàng gần bạn.
 @@225478f41f
 en: Unmanned self-service print shop, open 24/7. Print · copy · scan · fax · laminate · bind
 zh: 24 小时 365 天无人自助打印店。打印·复印·扫描·传真·塑封·装订
 vi: Cửa hàng in tự phục vụ không người trực, mở 24/7. In · photo · scan · fax · ép plastic · đóng sách
 @@c81b73ac7f
-en: <a class="nav-logo" href="#"> <img alt="Logo" class="logo-img" src="logo.jpg"/> <span class="nav-logo-name">PrintShop Mini</span> </a>
-zh: <a class="nav-logo" href="#"> <img alt="标志" class="logo-img" src="logo.jpg"/> <span class="nav-logo-name">PrintShop Mini</span> </a>
-vi: <a class="nav-logo" href="#"> <img alt="Logo" class="logo-img" src="logo.jpg"/> <span class="nav-logo-name">PrintShop Mini</span> </a>
+en: <a class="nav-logo" href="#"> <img alt="Logo" class="logo-img" src="logo.jpg"/> <span class="nav-logo-name">PRINTSHOPMINI</span> </a>
+zh: <a class="nav-logo" href="#"> <img alt="标志" class="logo-img" src="logo.jpg"/> <span class="nav-logo-name">PRINTSHOPMINI</span> </a>
+vi: <a class="nav-logo" href="#"> <img alt="Logo" class="logo-img" src="logo.jpg"/> <span class="nav-logo-name">PRINTSHOPMINI</span> </a>
 @@b13f9f7661
 en: <a class="nav-cta" href="#branches">Find a Store</a>
 zh: <a class="nav-cta" href="#branches">查找门店</a>
@@ -29,9 +29,9 @@ en: <span class="blue">On your own</span>, easily,<br/> print any time
 zh: <span class="blue">一个人</span>也能轻松，<br/> 随时打印
 vi: <span class="blue">Tự mình</span> làm dễ dàng,<br/> in bất cứ lúc nào
 @@abe639c61d
-en: A 24-hour print shop you use by yourself, with no staff.<br/> When you need it, find the PrintShop Mini nearest you.
-zh: 没有员工、自助使用的 24 小时打印店。<br/> 需要的时候，找找离您最近的 PrintShop Mini。
-vi: Cửa hàng in 24 giờ tự phục vụ, không có nhân viên.<br/> Khi cần, hãy tìm PrintShop Mini gần bạn nhất.
+en: A 24-hour print shop you use by yourself, with no staff.<br/> When you need it, find the PRINTSHOPMINI nearest you.
+zh: 没有员工、自助使用的 24 小时打印店。<br/> 需要的时候，找找离您最近的 PRINTSHOPMINI。
+vi: Cửa hàng in 24 giờ tự phục vụ, không có nhân viên.<br/> Khi cần, hãy tìm PRINTSHOPMINI gần bạn nhất.
 @@b3cf4d71e0
 en: <a class="htile" href="guide-print.html"><span class="ic">🖨️</span><span class="tx"><b>Print</b><small>Your file on paper</small></span></a> <a class="htile" href="guide-copy.html"><span class="ic">📋</span><span class="tx"><b>Copy</b><small>Same as the original</small></span></a> <a class="htile" href="guide-scan.html"><span class="ic">📄</span><span class="tx"><b>Scan</b><small>Paper into a file</small></span></a> <a class="htile" href="guide-fax.html"><span class="ic">📠</span><span class="tx"><b>Fax</b><small>Send · check</small></span></a> <a class="htile" href="guide-coat.html"><span class="ic">✨</span><span class="tx"><b>Laminate</b><small>Shiny protection</small></span></a> <a class="htile" href="guide-bind.html"><span class="ic">📚</span><span class="tx"><b>Bind</b><small>Like a book</small></span></a>
 zh: <a class="htile" href="guide-print.html"><span class="ic">🖨️</span><span class="tx"><b>打印</b><small>把文件印到纸上</small></span></a> <a class="htile" href="guide-copy.html"><span class="ic">📋</span><span class="tx"><b>复印</b><small>和原件一样</small></span></a> <a class="htile" href="guide-scan.html"><span class="ic">📄</span><span class="tx"><b>扫描</b><small>把纸变成文件</small></span></a> <a class="htile" href="guide-fax.html"><span class="ic">📠</span><span class="tx"><b>传真</b><small>发送·确认</small></span></a> <a class="htile" href="guide-coat.html"><span class="ic">✨</span><span class="tx"><b>塑封</b><small>亮晶晶的保护</small></span></a> <a class="htile" href="guide-bind.html"><span class="ic">📚</span><span class="tx"><b>装订</b><small>像书一样</small></span></a>
@@ -49,9 +49,9 @@ en: Hello! We're the Mini Friends 👋
 zh: 你好！我们是迷你朋友 👋
 vi: Xin chào! Chúng mình là Mini Friends 👋
 @@690394359b
-en: <a class="hf s1" href="guide-coat.html" style="--c:#7C3AED"><img alt="Laminating turtle" src="img/friends/coat.webp"/><span>Laminate</span></a> <a class="hf s2" href="guide-scan.html" style="--c:#12BDB0"><img alt="Scanning owl" src="img/friends/scan.webp"/><span>Scan</span></a> <a class="hf s3" href="guide-print.html" style="--c:#22B24C"><img alt="Printing penguin" src="img/friends/print.webp"/><span>Print</span></a> <span class="hf s4" style="--c:var(--blue)"><img alt="Raccoon" src="img/friends/raccoon.webp"/><span>PrintShop Mini</span></span> <a class="hf s3" href="guide-copy.html" style="--c:#018FFB"><img alt="Copying parrot" src="img/friends/copy.webp"/><span>Copy</span></a> <a class="hf s2" href="guide-fax.html" style="--c:#F3732C"><img alt="Fax pigeon" src="img/friends/fax.webp"/><span>Fax</span></a> <a class="hf s1" href="guide-bind.html" style="--c:#EC4899"><img alt="Binding beaver" src="img/friends/bind.webp"/><span>Bind</span></a>
-zh: <a class="hf s1" href="guide-coat.html" style="--c:#7C3AED"><img alt="塑封乌龟" src="img/friends/coat.webp"/><span>塑封</span></a> <a class="hf s2" href="guide-scan.html" style="--c:#12BDB0"><img alt="扫描猫头鹰" src="img/friends/scan.webp"/><span>扫描</span></a> <a class="hf s3" href="guide-print.html" style="--c:#22B24C"><img alt="打印企鹅" src="img/friends/print.webp"/><span>打印</span></a> <span class="hf s4" style="--c:var(--blue)"><img alt="浣熊" src="img/friends/raccoon.webp"/><span>PrintShop Mini</span></span> <a class="hf s3" href="guide-copy.html" style="--c:#018FFB"><img alt="复印鹦鹉" src="img/friends/copy.webp"/><span>复印</span></a> <a class="hf s2" href="guide-fax.html" style="--c:#F3732C"><img alt="传真鸽子" src="img/friends/fax.webp"/><span>传真</span></a> <a class="hf s1" href="guide-bind.html" style="--c:#EC4899"><img alt="装订河狸" src="img/friends/bind.webp"/><span>装订</span></a>
-vi: <a class="hf s1" href="guide-coat.html" style="--c:#7C3AED"><img alt="Rùa ép plastic" src="img/friends/coat.webp"/><span>Ép plastic</span></a> <a class="hf s2" href="guide-scan.html" style="--c:#12BDB0"><img alt="Cú scan" src="img/friends/scan.webp"/><span>Scan</span></a> <a class="hf s3" href="guide-print.html" style="--c:#22B24C"><img alt="Chim cánh cụt in" src="img/friends/print.webp"/><span>In</span></a> <span class="hf s4" style="--c:var(--blue)"><img alt="Gấu mèo" src="img/friends/raccoon.webp"/><span>PrintShop Mini</span></span> <a class="hf s3" href="guide-copy.html" style="--c:#018FFB"><img alt="Vẹt photo" src="img/friends/copy.webp"/><span>Photo</span></a> <a class="hf s2" href="guide-fax.html" style="--c:#F3732C"><img alt="Bồ câu fax" src="img/friends/fax.webp"/><span>Fax</span></a> <a class="hf s1" href="guide-bind.html" style="--c:#EC4899"><img alt="Hải ly đóng sách" src="img/friends/bind.webp"/><span>Đóng sách</span></a>
+en: <a class="hf s1" href="guide-coat.html" style="--c:#7C3AED"><img alt="Laminating turtle" src="img/friends/coat.webp"/><span>Laminate</span></a> <a class="hf s2" href="guide-scan.html" style="--c:#12BDB0"><img alt="Scanning owl" src="img/friends/scan.webp"/><span>Scan</span></a> <a class="hf s3" href="guide-print.html" style="--c:#22B24C"><img alt="Printing penguin" src="img/friends/print.webp"/><span>Print</span></a> <span class="hf s4" style="--c:var(--blue)"><img alt="Raccoon" src="img/friends/raccoon.webp"/><span>PRINTSHOPMINI</span></span> <a class="hf s3" href="guide-copy.html" style="--c:#018FFB"><img alt="Copying parrot" src="img/friends/copy.webp"/><span>Copy</span></a> <a class="hf s2" href="guide-fax.html" style="--c:#F3732C"><img alt="Fax pigeon" src="img/friends/fax.webp"/><span>Fax</span></a> <a class="hf s1" href="guide-bind.html" style="--c:#EC4899"><img alt="Binding beaver" src="img/friends/bind.webp"/><span>Bind</span></a>
+zh: <a class="hf s1" href="guide-coat.html" style="--c:#7C3AED"><img alt="塑封乌龟" src="img/friends/coat.webp"/><span>塑封</span></a> <a class="hf s2" href="guide-scan.html" style="--c:#12BDB0"><img alt="扫描猫头鹰" src="img/friends/scan.webp"/><span>扫描</span></a> <a class="hf s3" href="guide-print.html" style="--c:#22B24C"><img alt="打印企鹅" src="img/friends/print.webp"/><span>打印</span></a> <span class="hf s4" style="--c:var(--blue)"><img alt="浣熊" src="img/friends/raccoon.webp"/><span>PRINTSHOPMINI</span></span> <a class="hf s3" href="guide-copy.html" style="--c:#018FFB"><img alt="复印鹦鹉" src="img/friends/copy.webp"/><span>复印</span></a> <a class="hf s2" href="guide-fax.html" style="--c:#F3732C"><img alt="传真鸽子" src="img/friends/fax.webp"/><span>传真</span></a> <a class="hf s1" href="guide-bind.html" style="--c:#EC4899"><img alt="装订河狸" src="img/friends/bind.webp"/><span>装订</span></a>
+vi: <a class="hf s1" href="guide-coat.html" style="--c:#7C3AED"><img alt="Rùa ép plastic" src="img/friends/coat.webp"/><span>Ép plastic</span></a> <a class="hf s2" href="guide-scan.html" style="--c:#12BDB0"><img alt="Cú scan" src="img/friends/scan.webp"/><span>Scan</span></a> <a class="hf s3" href="guide-print.html" style="--c:#22B24C"><img alt="Chim cánh cụt in" src="img/friends/print.webp"/><span>In</span></a> <span class="hf s4" style="--c:var(--blue)"><img alt="Gấu mèo" src="img/friends/raccoon.webp"/><span>PRINTSHOPMINI</span></span> <a class="hf s3" href="guide-copy.html" style="--c:#018FFB"><img alt="Vẹt photo" src="img/friends/copy.webp"/><span>Photo</span></a> <a class="hf s2" href="guide-fax.html" style="--c:#F3732C"><img alt="Bồ câu fax" src="img/friends/fax.webp"/><span>Fax</span></a> <a class="hf s1" href="guide-bind.html" style="--c:#EC4899"><img alt="Hải ly đóng sách" src="img/friends/bind.webp"/><span>Đóng sách</span></a>
 @@032e05ddc5
 en: Laminating turtle
 zh: 塑封乌龟
@@ -161,9 +161,9 @@ en: No staff means faster<br/>and cheaper
 zh: 无人运营，更快、<br/>更便宜
 vi: Không người trực nên nhanh hơn,<br/>rẻ hơn
 @@69283d1adf
-en: PrintShop Mini is a self-service print shop open 24 hours with no staff. No complicated steps — use the service you want right at the machine.
-zh: PrintShop Mini 是 24 小时无人运营的自助打印店。没有复杂的手续，在机器前就能马上使用想要的服务。
-vi: PrintShop Mini là cửa hàng in tự phục vụ mở 24 giờ, không có nhân viên. Không thủ tục rườm rà — dùng ngay dịch vụ bạn muốn tại máy.
+en: PRINTSHOPMINI is a self-service print shop open 24 hours with no staff. No complicated steps — use the service you want right at the machine.
+zh: PRINTSHOPMINI 是 24 小时无人运营的自助打印店。没有复杂的手续，在机器前就能马上使用想要的服务。
+vi: PRINTSHOPMINI là cửa hàng in tự phục vụ mở 24 giờ, không có nhân viên. Không thủ tục rườm rà — dùng ngay dịch vụ bạn muốn tại máy.
 @@d99c9dfd03
 en: No waiting for staff
 zh: 不用等员工，马上使用
@@ -205,9 +205,9 @@ en: Find a Store
 zh: 查找门店
 vi: Tìm cửa hàng
 @@618e289488
-en: <span class="js-bcount">16</span> stores in the Gyeonggi area — find the PrintShop Mini nearest you.
-zh: 京畿道地区 <span class="js-bcount">16</span> 家门店 — 找找离您最近的 PrintShop Mini。
-vi: <span class="js-bcount">16</span> cửa hàng ở khu vực Gyeonggi — tìm PrintShop Mini gần bạn nhất.
+en: <span class="js-bcount">16</span> stores in the Gyeonggi area — find the PRINTSHOPMINI nearest you.
+zh: 京畿道地区 <span class="js-bcount">16</span> 家门店 — 找找离您最近的 PRINTSHOPMINI。
+vi: <span class="js-bcount">16</span> cửa hàng ở khu vực Gyeonggi — tìm PRINTSHOPMINI gần bạn nhất.
 @@8331050729
 en: <span class="filter-label">Choose area</span>
 zh: <span class="filter-label">选择地区</span>
@@ -261,9 +261,9 @@ en: Notices
 zh: 公告
 vi: Thông báo
 @@af6156d8b3
-en: See PrintShop Mini's latest notices. (Notices are written in Korean.)
-zh: 查看 PrintShop Mini 的最新公告。（公告为韩语。）
-vi: Xem thông báo mới nhất của PrintShop Mini. (Thông báo viết bằng tiếng Hàn.)
+en: See PRINTSHOPMINI's latest notices. (Notices are written in Korean.)
+zh: 查看 PRINTSHOPMINI 的最新公告。（公告为韩语。）
+vi: Xem thông báo mới nhất của PRINTSHOPMINI. (Thông báo viết bằng tiếng Hàn.)
 @@743c71f27a
 en: <a href="community.html" onmouseout="this.style.background='transparent';this.style.color='var(--blue)'" onmouseover="this.style.background='var(--blue)';this.style.color='white'" style="color:var(--blue);font-size:13px;font-weight:700;padding:8px 16px;border-radius:50px;border:1.5px solid var(--blue);transition:all .2s">See all →</a>
 zh: <a href="community.html" onmouseout="this.style.background='transparent';this.style.color='var(--blue)'" onmouseover="this.style.background='var(--blue)';this.style.color='white'" style="color:var(--blue);font-size:13px;font-weight:700;padding:8px 16px;border-radius:50px;border:1.5px solid var(--blue);transition:all .2s">查看全部 →</a>
@@ -281,9 +281,9 @@ en: Contact
 zh: 咨询
 vi: Liên hệ
 @@a5f3b8d81d
-en: For any questions about PrintShop Mini,<br/>please ask us on Naver TalkTalk.
-zh: 有关 PrintShop Mini 的<br/>疑问，请通过 Naver TalkTalk 咨询。
-vi: Mọi thắc mắc về PrintShop Mini,<br/>hãy hỏi chúng tôi qua Naver TalkTalk.
+en: For any questions about PRINTSHOPMINI,<br/>please ask us on Naver TalkTalk.
+zh: 有关 PRINTSHOPMINI 的<br/>疑问，请通过 Naver TalkTalk 咨询。
+vi: Mọi thắc mắc về PRINTSHOPMINI,<br/>hãy hỏi chúng tôi qua Naver TalkTalk.
 @@d3accf3ed1
 en: Raccoon character
 zh: 浣熊角色
@@ -323,9 +323,9 @@ en: {n} stores
 zh: {n} 家门店
 vi: {n} cửa hàng
 @@ui 프린트샵미니
-en: PrintShop Mini
-zh: PrintShop Mini
-vi: PrintShop Mini
+en: PRINTSHOPMINI
+zh: PRINTSHOPMINI
+vi: PRINTSHOPMINI
 @@ui 🚇 역세권
 en: 🚇 Near subway
 zh: 🚇 地铁站附近
@@ -406,9 +406,9 @@ en: <a class="pm-btn" href="faq.html#faq-24">See how to pay →</a>
 zh: <a class="pm-btn" href="faq.html#faq-24">查看付款方法 →</a>
 vi: <a class="pm-btn" href="faq.html#faq-24">Xem cách thanh toán →</a>
 @@7b25d01122
-en: 📢 PrintShop Mini news
-zh: 📢 PrintShop Mini 最新消息
-vi: 📢 Tin mới PrintShop Mini
+en: 📢 PRINTSHOPMINI news
+zh: 📢 PRINTSHOPMINI 最新消息
+vi: 📢 Tin mới PRINTSHOPMINI
 @@7d15f6cc7c
 en: At the Toss kiosk, use [선불충전] (Prepaid top-up) to pay only the amount you need now. From 70 won for 1 black-and-white A4 page. Money left over: 0 won!
 zh: 在 Toss 自助机用［선불충전］（预付充值）只付现在要用的金额。黑白 A4 一张 70 韩元起。剩下的钱：0 韩元！

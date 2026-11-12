@@ -4,7 +4,7 @@
 
 | 한국어 | English | 中文 | Tiếng Việt |
 |---|---|---|---|
-| 프린트샵미니 | PrintShop Mini | PrintShop Mini | PrintShop Mini |
+| 프린트샵미니 | PRINTSHOPMINI | PRINTSHOPMINI | PRINTSHOPMINI |
 | 프린트나우 | PrintNow | PrintNow | PrintNow |
 | 복합기 | printer machine (multifunction printer) | 复合机（打印复印一体机） | máy in đa năng |
 | 개인식별번호(PIN) | PIN (4-digit number you choose) | 个人识别码（PIN，4位数字） | mã PIN (4 số do bạn chọn) |

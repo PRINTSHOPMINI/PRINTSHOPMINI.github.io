@@ -3,17 +3,17 @@
 # 기계·PC 화면에 한국어로 보이는 이름은 [한국어]로 같이 적는다 (glossary.md)
 
 @@4dba876e21
-en: PrintShop Mini How to Use — steps and FAQs for printing, copying, scanning, fax, laminating and binding.
-zh: PrintShop Mini 使用方法 — 介绍打印、复印、扫描、传真、塑封、装订的使用步骤和常见问题。
-vi: Hướng dẫn sử dụng PrintShop Mini — các bước và câu hỏi thường gặp về in, photo, scan, fax, ép plastic và đóng sách.
+en: PRINTSHOPMINI How to Use — steps and FAQs for printing, copying, scanning, fax, laminating and binding.
+zh: PRINTSHOPMINI 使用方法 — 介绍打印、复印、扫描、传真、塑封、装订的使用步骤和常见问题。
+vi: Hướng dẫn sử dụng PRINTSHOPMINI — các bước và câu hỏi thường gặp về in, photo, scan, fax, ép plastic và đóng sách.
 @@1314c4ef52
-en: How to Use - PrintShop Mini
-zh: 使用方法 - PrintShop Mini
-vi: Hướng dẫn sử dụng - PrintShop Mini
+en: How to Use - PRINTSHOPMINI
+zh: 使用方法 - PRINTSHOPMINI
+vi: Hướng dẫn sử dụng - PRINTSHOPMINI
 @@571f758a4a
-en: <a class="nav-logo" href="index.html"> <img alt="Logo" class="logo-img" src="logo.jpg"/> <span class="nav-logo-name">PrintShop Mini</span> </a>
-zh: <a class="nav-logo" href="index.html"> <img alt="标志" class="logo-img" src="logo.jpg"/> <span class="nav-logo-name">PrintShop Mini</span> </a>
-vi: <a class="nav-logo" href="index.html"> <img alt="Logo" class="logo-img" src="logo.jpg"/> <span class="nav-logo-name">PrintShop Mini</span> </a>
+en: <a class="nav-logo" href="index.html"> <img alt="Logo" class="logo-img" src="logo.jpg"/> <span class="nav-logo-name">PRINTSHOPMINI</span> </a>
+zh: <a class="nav-logo" href="index.html"> <img alt="标志" class="logo-img" src="logo.jpg"/> <span class="nav-logo-name">PRINTSHOPMINI</span> </a>
+vi: <a class="nav-logo" href="index.html"> <img alt="Logo" class="logo-img" src="logo.jpg"/> <span class="nav-logo-name">PRINTSHOPMINI</span> </a>
 @@0d69c1799d
 en: Logo
 zh: 标志
@@ -43,9 +43,9 @@ en: <a class="nav-cta" href="branches.html">Find a Store</a>
 zh: <a class="nav-cta" href="branches.html">查找门店</a>
 vi: <a class="nav-cta" href="branches.html">Tìm cửa hàng</a>
 @@72ec26f778
-en: PrintShop Mini mascot
-zh: PrintShop Mini 吉祥物
-vi: Linh vật PrintShop Mini
+en: PRINTSHOPMINI mascot
+zh: PRINTSHOPMINI 吉祥物
+vi: Linh vật PRINTSHOPMINI
 @@ca29d61d1c
 en: Raccoon mascot
 zh: 浣熊吉祥物
@@ -79,9 +79,9 @@ en: Pick a service to see the steps one by one. You can also go there from <b>Ho
 zh: 选择服务后，会一步一步告诉您怎么用。也可以从上方菜单的<b>使用方法</b>直接进入。
 vi: Chọn dịch vụ để xem từng bước. Bạn cũng có thể vào từ mục <b>Hướng dẫn</b> ở menu trên cùng.
 @@5657eccbe1
-en: <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1B8AC4)">PrintShop Mini</b> and <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">PrintNow</b> are brands of <span style="white-space:nowrap">Good Learning Partner Co., Ltd.</span>
-zh: <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1B8AC4)">PrintShop Mini</b> · <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">PrintNow</b> 是 <span style="white-space:nowrap">(株)Good Learning Partner</span> 公司的品牌。
-vi: <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1B8AC4)">PrintShop Mini</b> · <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">PrintNow</b> là thương hiệu của công ty <span style="white-space:nowrap">Good Learning Partner</span>.
+en: <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1B8AC4)">PRINTSHOPMINI</b> and <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">PrintNow</b> are brands of <span style="white-space:nowrap">Good Learning Partner Co., Ltd.</span>
+zh: <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1B8AC4)">PRINTSHOPMINI</b> · <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">PrintNow</b> 是 <span style="white-space:nowrap">(株)Good Learning Partner</span> 公司的品牌。
+vi: <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1B8AC4)">PRINTSHOPMINI</b> · <b style="display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28">PrintNow</b> là thương hiệu của công ty <span style="white-space:nowrap">Good Learning Partner</span>.
 @@1d79be91bd
 en: Print
 zh: 打印
@@ -231,9 +231,9 @@ en: We put common questions in one place. If you can't find your answer, please 
 zh: 我们把常见问题集中在一起。如果没有您要的答案，请发邮件咨询。
 vi: Chúng tôi gom các câu hỏi thường gặp vào một chỗ. Nếu không có câu trả lời, hãy gửi email cho chúng tôi.
 @@62bc150866
-en: PrintShop Mini
-zh: PrintShop Mini
-vi: PrintShop Mini
+en: PRINTSHOPMINI
+zh: PRINTSHOPMINI
+vi: PRINTSHOPMINI
 @@08279ea9f2
 en: An unmanned self-service print shop<br/>open 24 hours, 365 days.
 zh: 24 小时 365 天营业的<br/>无人自助打印店。
@@ -283,21 +283,21 @@ en: <a href="about.html">About us</a>
 zh: <a href="about.html">品牌介绍</a>
 vi: <a href="about.html">Giới thiệu</a>
 @@c6722e45cb
-en: © 2025 PrintShop Mini. All rights reserved.
-zh: © 2025 PrintShop Mini. All rights reserved.
-vi: © 2025 PrintShop Mini. All rights reserved.
+en: © 2025 PRINTSHOPMINI. All rights reserved.
+zh: © 2025 PRINTSHOPMINI. All rights reserved.
+vi: © 2025 PRINTSHOPMINI. All rights reserved.
 @@43a7d82cbf
 en: Privacy Policy · Terms of Use
 zh: 隐私政策 · 使用条款
 vi: Chính sách bảo mật · Điều khoản sử dụng
 @@83973dda29
-en: PrintShop Mini printing guide — the printing steps and print settings for PDF, Hangul (HWP), MS Office, Chrome and ALSee.
-zh: PrintShop Mini 打印使用方法 — 介绍打印步骤，以及 PDF、韩文（HWP）、MS Office、Chrome、ALSee 的打印设置。
-vi: Hướng dẫn in của PrintShop Mini — các bước in và cài đặt in cho PDF, Hangul (HWP), MS Office, Chrome và ALSee.
+en: PRINTSHOPMINI printing guide — the printing steps and print settings for PDF, Hangul (HWP), MS Office, Chrome and ALSee.
+zh: PRINTSHOPMINI 打印使用方法 — 介绍打印步骤，以及 PDF、韩文（HWP）、MS Office、Chrome、ALSee 的打印设置。
+vi: Hướng dẫn in của PRINTSHOPMINI — các bước in và cài đặt in cho PDF, Hangul (HWP), MS Office, Chrome và ALSee.
 @@7231005cec
-en: How to Print - PrintShop Mini
-zh: 打印使用方法 - PrintShop Mini
-vi: Cách in - PrintShop Mini
+en: How to Print - PRINTSHOPMINI
+zh: 打印使用方法 - PRINTSHOPMINI
+vi: Cách in - PRINTSHOPMINI
 @@bc4572e806
 en: How to Print
 zh: 打印使用方法

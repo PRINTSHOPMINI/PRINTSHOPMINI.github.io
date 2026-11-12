@@ -463,7 +463,7 @@ Nhưng tùy dung lượng hoặc phiên bản tệp, bố cục có thể bị v
 🆘 We recommend not using documents you have to pay for or documents with a limited number of prints.
 
 🚫 Don't use [증명서전용PIN9999] (certificate printer) for Government24 · Hometax · court (Internet Registry Office) documents.
-💳 What you pay on these sites to issue documents has nothing to do with PrintShop Mini. You pay PrintShop Mini at the printer machine, and the document prints at the end after paying.
+💳 What you pay on these sites to issue documents has nothing to do with PRINTSHOPMINI. You pay PRINTSHOPMINI at the printer machine, and the document prints at the end after paying.
 🖨️ Open the document you got from the site on the PC, send the print job, then pay at the printer machine.
 [[go:guide-print.html#store|How to print]]
 #q zh: 可以从网站（政府 24、Hometax 等）打印文件吗？认证书呢？
@@ -479,7 +479,7 @@ Nhưng tùy dung lượng hoặc phiên bản tệp, bố cục có thể bị v
 🆘 建议不要用需要付费才能获取的文件，或限制打印次数的文件。
 
 🚫 政府 24·Hometax·法院（互联网登记所）的文件不用［증명서전용PIN9999］（证书专用）。
-💳 在这些网站上为发放文件付的费用，和 PrintShop Mini 无关。PrintShop Mini 的费用在复合机上付，付款后最后才打印出文件。
+💳 在这些网站上为发放文件付的费用，和 PRINTSHOPMINI 无关。PRINTSHOPMINI 的费用在复合机上付，付款后最后才打印出文件。
 🖨️ 从网站获取的文件，请在电脑上打开并发送打印后，在复合机上付款。
 [[go:guide-print.html#store|详细查看打印方法]]
 #q vi: Có in được tài liệu từ các trang web (Chính phủ 24, Hometax...) không? Còn chứng thư số thì sao?
@@ -495,7 +495,7 @@ Nhưng tùy dung lượng hoặc phiên bản tệp, bố cục có thể bị v
 🆘 Chúng tôi khuyên không nên dùng tài liệu phải trả tiền mới nhận được hoặc tài liệu giới hạn số lần in.
 
 🚫 Tài liệu của Chính phủ 24 · Hometax · tòa án (Đăng ký trực tuyến) không dùng [증명서전용PIN9999] (máy in chứng chỉ).
-💳 Tiền bạn trả trên các trang này để cấp tài liệu không liên quan đến PrintShop Mini. Tiền của PrintShop Mini trả ở máy in đa năng, và tài liệu in ra sau cùng khi đã thanh toán.
+💳 Tiền bạn trả trên các trang này để cấp tài liệu không liên quan đến PRINTSHOPMINI. Tiền của PRINTSHOPMINI trả ở máy in đa năng, và tài liệu in ra sau cùng khi đã thanh toán.
 🖨️ Tài liệu nhận từ trang web hãy mở trên máy tính và gửi lệnh in, rồi thanh toán ở máy in đa năng.
 [[go:guide-print.html#store|Xem cách in]]
 

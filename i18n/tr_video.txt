@@ -2,13 +2,13 @@
 # 영상 자체는 아직 한국어 자막 (외국어 영상은 다음 단계)
 
 @@debcfc9c8b
-en: PrintShop Mini how-to videos — picture videos showing the steps for printing, copying, scanning, fax, laminating and binding.
-zh: PrintShop Mini 使用方法视频 — 用图片视频介绍打印、复印、扫描、传真、塑封、装订的使用步骤。
-vi: Video hướng dẫn PrintShop Mini — video hình vẽ chỉ các bước in, photo, scan, fax, ép plastic và đóng sách.
+en: PRINTSHOPMINI how-to videos — picture videos showing the steps for printing, copying, scanning, fax, laminating and binding.
+zh: PRINTSHOPMINI 使用方法视频 — 用图片视频介绍打印、复印、扫描、传真、塑封、装订的使用步骤。
+vi: Video hướng dẫn PRINTSHOPMINI — video hình vẽ chỉ các bước in, photo, scan, fax, ép plastic và đóng sách.
 @@002879e1cd
-en: How-to Videos - PrintShop Mini
-zh: 使用方法视频 - PrintShop Mini
-vi: Video hướng dẫn - PrintShop Mini
+en: How-to Videos - PRINTSHOPMINI
+zh: 使用方法视频 - PRINTSHOPMINI
+vi: Video hướng dẫn - PRINTSHOPMINI
 @@44badd129f
 en: How-to Videos
 zh: 使用方法视频

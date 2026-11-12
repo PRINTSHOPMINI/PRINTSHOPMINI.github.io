@@ -2,13 +2,13 @@
 # 그림 속 복합기 화면 글씨(과금정보·총 가격·250원·확인)와 PC 폴더 이름은 실제 화면과 같게 한국어 그대로 둠
 
 @@3aaf1003ba
-en: PrintShop Mini copy guide — copying steps on the printer machine, and how to copy ID cards, bankbooks, passports and books.
-zh: PrintShop Mini 复印使用方法 — 介绍复合机复印步骤，以及身份证、存折、护照、书本的复印方法。
-vi: Hướng dẫn photo của PrintShop Mini — các bước photo trên máy in đa năng và cách photo thẻ căn cước, sổ ngân hàng, hộ chiếu, sách.
+en: PRINTSHOPMINI copy guide — copying steps on the printer machine, and how to copy ID cards, bankbooks, passports and books.
+zh: PRINTSHOPMINI 复印使用方法 — 介绍复合机复印步骤，以及身份证、存折、护照、书本的复印方法。
+vi: Hướng dẫn photo của PRINTSHOPMINI — các bước photo trên máy in đa năng và cách photo thẻ căn cước, sổ ngân hàng, hộ chiếu, sách.
 @@afa7d1e3cf
-en: How to Copy - PrintShop Mini
-zh: 复印使用方法 - PrintShop Mini
-vi: Cách photo - PrintShop Mini
+en: How to Copy - PRINTSHOPMINI
+zh: 复印使用方法 - PRINTSHOPMINI
+vi: Cách photo - PRINTSHOPMINI
 @@8301a4c653
 en: How to Copy
 zh: 复印使用方法
@@ -342,13 +342,13 @@ en: With a thick book, the cover doesn't have to close all the way. But <b>don't
 zh: 厚书的话盖子不用完全盖上。但是<b>不要用力压书。</b>玻璃板可能会碎。
 vi: Sách dày thì không cần đóng kín nắp. Nhưng <b>đừng đè mạnh lên sách.</b> Mặt kính có thể bị vỡ.
 @@84c16941f0
-en: PrintShop Mini scan guide — how to turn paper into a file and get it from the scan folder on the store PC.
-zh: PrintShop Mini 扫描使用方法 — 介绍把纸变成文件，并在店内电脑的扫描文件夹里取文件的方法。
-vi: Hướng dẫn scan của PrintShop Mini — cách biến giấy thành tệp và lấy tệp ở thư mục scan trên máy tính cửa hàng.
+en: PRINTSHOPMINI scan guide — how to turn paper into a file and get it from the scan folder on the store PC.
+zh: PRINTSHOPMINI 扫描使用方法 — 介绍把纸变成文件，并在店内电脑的扫描文件夹里取文件的方法。
+vi: Hướng dẫn scan của PRINTSHOPMINI — cách biến giấy thành tệp và lấy tệp ở thư mục scan trên máy tính cửa hàng.
 @@46ebc117fe
-en: How to Scan - PrintShop Mini
-zh: 扫描使用方法 - PrintShop Mini
-vi: Cách scan - PrintShop Mini
+en: How to Scan - PRINTSHOPMINI
+zh: 扫描使用方法 - PRINTSHOPMINI
+vi: Cách scan - PRINTSHOPMINI
 @@365924e162
 en: How to Scan
 zh: 扫描使用方法
