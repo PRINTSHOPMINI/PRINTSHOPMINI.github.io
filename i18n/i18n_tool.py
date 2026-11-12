@@ -150,11 +150,11 @@ def switcher_html(page, cur):
             '<span class="cur" aria-hidden="true">%s ▾</span>' % cur.upper() +
             '<select aria-label="Language" onchange="location.href=this.value">' + ''.join(opts) + '</select></label>')
 
-SW_CSS = ('<style>.lang-sel{display:inline-flex;align-items:center;gap:4px;margin-right:8px;border:1.5px solid #1B8AC4;border-radius:50px;'
+SW_CSS = ('<style>.lang-sel{display:inline-flex;align-items:center;gap:4px;margin-right:8px;border:1.5px solid #1976D2;border-radius:50px;'
           'padding:3px 4px 3px 10px;background:#fff;font-size:15px}.lang-sel select{border:none;background:transparent;font:700 13px sans-serif;'
-          'color:#1B8AC4;padding:4px 2px;cursor:pointer;outline:none}.nav-links a{padding:8px 11px!important}@media(max-width:1280px){.nav-raccoon{display:none!important}}'
+          'color:#1976D2;padding:4px 2px;cursor:pointer;outline:none}.nav-links a{padding:8px 11px!important}@media(max-width:1280px){.nav-raccoon{display:none!important}}'
           '.lang-sel .cur{display:none}@media(max-width:480px){.nav-cta{display:none!important}'
-          '.lang-sel{position:relative;margin-right:6px;padding:6px 10px;gap:5px}.lang-sel .cur{display:inline;white-space:nowrap;font:700 13px sans-serif;color:#1B8AC4}'
+          '.lang-sel{position:relative;margin-right:6px;padding:6px 10px;gap:5px}.lang-sel .cur{display:inline;white-space:nowrap;font:700 13px sans-serif;color:#1976D2}'
           '.lang-sel select{position:absolute;inset:0;width:100%;opacity:0}}'
           '@media(max-width:400px){.lang-sel{padding:5px 6px!important;gap:2px!important;font-size:13px}.lang-sel .cur{font-size:12px}}'
           '.lang-sw{position:fixed;right:10px;bottom:12px;z-index:400}'

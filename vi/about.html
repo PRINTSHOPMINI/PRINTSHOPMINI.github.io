@@ -316,6 +316,55 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
   .tl2-box{padding:12px 14px 14px}
   .v-pic{height:112px}
 }
+/* BRAND CI */
+.ci-section{padding:96px 6%;background:var(--blue-light,#E8F2FC)}
+.ci-inner{max-width:1160px;margin:0 auto}
+.ci-inner .sec-h2{margin-bottom:16px}
+.ci-lead{font-size:15.5px;color:var(--text2);line-height:1.9;margin:0 0 40px;max-width:760px}
+.ci-h3{font-size:20px;font-weight:900;color:var(--text);margin:44px 0 16px;letter-spacing:-.5px}
+.ci-logo-row{display:grid;grid-template-columns:280px 1fr;gap:32px;align-items:start;background:#fff;border-radius:20px;padding:28px}
+.ci-logo-box{position:relative;width:100%;max-width:260px;margin:12px auto 0}
+.ci-logo-box img{display:block;width:100%;height:auto}
+.ci-mark{position:absolute;border:2px dashed #EF4444;border-radius:4px;pointer-events:none}
+.ci-mark i{position:absolute;top:-11px;left:4px;font-style:normal;font-size:10.5px;font-weight:800;color:#fff;background:#EF4444;border-radius:4px;padding:0 5px;line-height:18px;white-space:nowrap}
+.ci-m-printer,.ci-m-24{border-color:#F59E0B}.ci-m-printer i,.ci-m-24 i{background:#F59E0B}
+.ci-m-mini{border-color:#10B981}.ci-m-mini i{background:#10B981}
+.ci-mean{list-style:none;padding:0;margin:0 0 18px;display:grid;gap:8px}
+.ci-mean li{font-size:14.5px;color:var(--text2);line-height:1.7}
+.ci-mean b{display:inline-block;min-width:118px;color:var(--blue)}
+.ci-table{width:100%;border-collapse:collapse;font-size:14px;background:#fff;border-radius:12px;overflow:hidden}
+.ci-table caption{text-align:left;font-size:13px;font-weight:700;color:var(--text3);padding:0 0 8px}
+.ci-table th,.ci-table td{padding:9px 12px;border-bottom:1px solid var(--border);text-align:left}
+.ci-table th{background:#F3F8FC;font-weight:800;color:var(--text)}
+.ci-table td{color:var(--text2)}
+.ci-colors{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.ci-chip{background:#fff;border-radius:16px;padding:16px;display:grid;grid-template-columns:56px 1fr;column-gap:14px;row-gap:2px;align-items:center}
+.ci-sw{grid-row:span 4;width:56px;height:56px;border-radius:12px}
+.ci-sw-line{box-shadow:inset 0 0 0 1px var(--border)}
+.ci-chip b{font-size:14.5px;color:var(--text)}
+.ci-chip code,.ci-rules code{font-family:ui-monospace,Consolas,monospace;font-size:13.5px;font-weight:700;color:var(--text)}
+.ci-chip small{font-size:12px;color:var(--text3)}
+.ci-chip em{font-style:normal;font-size:12.5px;color:var(--text3)}
+.ci-word{background:#fff;border-radius:20px;padding:24px 28px;display:grid;grid-template-columns:auto auto 1fr;gap:28px;align-items:center}
+.ci-word-sample{display:flex;align-items:center;gap:8px}
+.ci-word-sample img{width:36px;height:auto}
+.ci-word-sample span{font-size:17px;font-weight:900;color:#1976D2;letter-spacing:-.5px;white-space:nowrap}
+.ci-rules{margin:0;padding-left:18px;font-size:14px;color:var(--text2);line-height:1.9}
+.ci-table-wide{border-radius:16px}
+.ci-note{font-size:13.5px;color:var(--text3);line-height:1.8;margin:0 0 14px}
+.ci-chars{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-bottom:14px}
+.ci-char{background:#fff;border-radius:18px;padding:16px;border-top:5px solid var(--c)}
+.ci-char>img{display:block;width:90px;height:100px;object-fit:contain;margin:0 auto 8px}
+.ci-char>b{display:block;text-align:center;font-size:16px;font-weight:900;color:var(--text);margin-bottom:10px}
+.ci-char>b small{display:block;font-size:12px;font-weight:700;color:var(--c)}
+.ci-char dl{display:grid;grid-template-columns:64px 1fr;gap:6px 8px;margin:0;font-size:12.5px}
+.ci-char dt{font-weight:800;color:var(--text3)}
+.ci-char dd{margin:0;color:var(--text2);font-family:ui-monospace,Consolas,monospace;font-size:12px;line-height:1.7}
+.ci-char dd:first-of-type{font-family:inherit}
+.ci-char dd i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:3px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.12)}
+.ci-dont{margin:0;padding:20px 24px 20px 40px;background:#fff;border-radius:16px;font-size:14.5px;color:var(--text2);line-height:2}
+@media(max-width:900px){.ci-logo-row{grid-template-columns:1fr}.ci-colors{grid-template-columns:repeat(2,1fr)}.ci-word{grid-template-columns:1fr;gap:14px}}
+@media(max-width:560px){.ci-section{padding:64px 16px}.ci-logo-row{padding:20px}.ci-colors{grid-template-columns:1fr}.ci-table th,.ci-table td{padding:8px;font-size:13px}.ci-mean b{min-width:0;display:block}.ci-table-wide{display:block;overflow-x:auto}}
 </style>
 <style id="nav-lang-css">.nav-lang{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:#1976D2;border:1.5px solid #1976D2;border-radius:50px;padding:7px 13px;margin-right:8px;white-space:nowrap;background:#fff}.nav-lang:hover{background:#E8F2FC}.nav-links a{white-space:nowrap}@media(max-width:1180px){.nav-lang .t{display:none}.nav-lang{padding:6px 9px;font-size:15px}}@media(max-width:480px){.nav-lang{padding:4px 6px;margin-right:6px;font-size:14px}.nav-cta{padding:8px 13px!important;font-size:12.5px!important}}@media(max-width:400px){nav{padding-left:12px!important;padding-right:12px!important}.nav-logo-name{font-size:15px!important}.nav-logo{gap:6px!important}.nav-cta{padding:7px 9px!important;font-size:12px!important}.nav-lang,.lang-sel{margin-right:5px!important}.hamburger{margin-left:4px!important}}</style>
 <script defer="" src="../ga.js?v=1"></script><style>.lang-sel{display:inline-flex;align-items:center;gap:4px;margin-right:8px;border:1.5px solid #1976D2;border-radius:50px;padding:3px 4px 3px 10px;background:#fff;font-size:15px}.lang-sel select{border:none;background:transparent;font:700 13px sans-serif;color:#1976D2;padding:4px 2px;cursor:pointer;outline:none}.nav-links a{padding:8px 11px!important}@media(max-width:1280px){.nav-raccoon{display:none!important}}.lang-sel .cur{display:none}@media(max-width:480px){.nav-cta{display:none!important}.lang-sel{position:relative;margin-right:6px;padding:6px 10px;gap:5px}.lang-sel .cur{display:inline;white-space:nowrap;font:700 13px sans-serif;color:#1976D2}.lang-sel select{position:absolute;inset:0;width:100%;opacity:0}}@media(max-width:400px){.lang-sel{padding:5px 6px!important;gap:2px!important;font-size:13px}.lang-sel .cur{font-size:12px}}.lang-sw{position:fixed;right:10px;bottom:12px;z-index:400}.tr-note{max-width:1160px;margin:0 auto;padding:10px 6% 0;font-size:12.5px;color:#9CA3AF}</style></head>
@@ -612,7 +661,83 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 </div>
 </div>
 <!-- FOOTER -->
-<p class="tr-note">Trang này được dịch từ tiếng Hàn. Nếu có chỗ nào chưa đúng, vui lòng báo cho chúng tôi qua Naver TalkTalk. Màn hình máy là tiếng Hàn — tên nút tiếng Hàn được ghi trong [ngoặc].</p><footer>
+<p class="tr-note">Trang này được dịch từ tiếng Hàn. Nếu có chỗ nào chưa đúng, vui lòng báo cho chúng tôi qua Naver TalkTalk. Màn hình máy là tiếng Hàn — tên nút tiếng Hàn được ghi trong [ngoặc].</p><!-- BRAND CI -->
+<section class="ci-section" id="ci">
+<div class="ci-inner">
+<div class="sec-eyebrow">BRAND CI</div>
+<h2 class="sec-h2">CI của PRINTSHOPMINI</h2>
+<p class="ci-lead">Đây là logo, màu sắc, chữ và nhân vật của PRINTSHOPMINI. Khi làm biển hiệu, áp phích hay video, hãy dùng đúng theo các quy chuẩn này.</p>
+<h3 class="ci-h3">1. Logo</h3>
+<div class="ci-logo-row">
+<div class="ci-logo-fig">
+<div class="ci-logo-box"><img alt="Logo PRINTSHOPMINI" height="923" loading="lazy" src="../img/logo-badge.png" width="815"/> <span class="ci-mark ci-m-store" style="left:0;top:0;width:100%;height:72.9%"><i>Cửa hàng</i></span> <span class="ci-mark ci-m-printer" style="left:30.7%;top:33.3%;width:38.7%;height:32.2%"><i>Máy in</i></span> <span class="ci-mark ci-m-24" style="left:77.7%;top:54.6%;width:18.4%;height:16.3%"><i>24</i></span> <span class="ci-mark ci-m-mini" style="left:17.1%;top:82.9%;width:65.9%;height:17%"><i>mini</i></span></div>
+</div>
+<div class="ci-logo-info">
+<ul class="ci-mean">
+<li><b>Hình cửa hàng (mái hiên)</b> Một tiệm in nhỏ ngay trong khu phố.</li>
+<li><b>Máy in bên trong</b> Tự phục vụ, khách tự in.</li>
+<li><b>Vòng tròn 24</b> Mở cửa 24 giờ, 365 ngày.</li>
+<li><b>mini</b> Tên của chúng tôi, PRINTSHOPMINI.</li>
+</ul>
+<table class="ci-table"> <caption>Tỷ lệ logo (theo ảnh gốc 1024 × 1024)</caption> <tr><th>Phần</th><th>Kích thước (px)</th><th>Tỷ lệ</th></tr>
+<tr><td>Toàn bộ logo</td><td>815 × 921</td><td>Rộng : cao = 0,88 : 1</td></tr>
+<tr><td>Hình cửa hàng</td><td>815 × 672</td><td>73% chiều cao logo</td></tr>
+<tr><td>Máy in bên trong</td><td>315 × 297</td><td>39% chiều rộng cửa hàng</td></tr>
+<tr><td>Vòng tròn 24</td><td>150 × 150</td><td>18% chiều rộng cửa hàng</td></tr>
+<tr><td>Chữ mini</td><td>537 × 157</td><td>66% chiều rộng cửa hàng</td></tr>
+<tr><td>Khoảng cách cửa hàng – mini</td><td>92</td><td>10% chiều cao logo</td></tr>
+</table>
+</div>
+</div>
+<h3 class="ci-h3">2. Màu sắc</h3>
+<div class="ci-colors">
+<div class="ci-chip"><span class="ci-sw" style="background:#1976D2"></span><b>Xanh Mini (màu chính)</b><code>#1976D2</code><small>RGB 25, 118, 210 · CMYK 88, 44, 0, 18</small><em>Logo, tên thương hiệu, nút</em></div>
+<div class="ci-chip"><span class="ci-sw" style="background:#1565C0"></span><b>Xanh đậm</b><code>#1565C0</code><small>RGB 21, 101, 192 · CMYK 89, 47, 0, 25</small><em>Khi bấm nút, bóng đổ</em></div>
+<div class="ci-chip"><span class="ci-sw" style="background:#E8F2FC"></span><b>Xanh nhạt</b><code>#E8F2FC</code><small>RGB 232, 242, 252</small><em>Nền</em></div>
+<div class="ci-chip"><span class="ci-sw ci-sw-line" style="background:#FFFFFF"></span><b>Trắng</b><code>#FFFFFF</code><small>RGB 255, 255, 255</small><em>Bên trong logo, nền</em></div>
+<div class="ci-chip"><span class="ci-sw" style="background:#111827"></span><b>Đen chữ</b><code>#111827</code><small>RGB 17, 24, 39</small><em>Chữ nội dung</em></div>
+<div class="ci-chip"><span class="ci-sw" style="background:#F28C28"></span><b>Cam PrintNow</b><code>#F28C28</code><small>RGB 242, 140, 40</small><em>Thương hiệu cùng công ty</em></div>
+</div>
+<h3 class="ci-h3">3. Chữ tên thương hiệu</h3>
+<div class="ci-word">
+<div class="ci-word-sample"><img alt="" height="41" src="../img/logo-badge.png" width="36"/><span>프린트샵미니</span></div>
+<div class="ci-word-sample"><img alt="" height="41" src="../img/logo-badge.png" width="36"/><span>PRINTSHOPMINI</span></div>
+<ul class="ci-rules">
+<li>Phông chữ: <b>Noto Sans KR</b>, đậm nhất (Black, 900)</li>
+<li>Khoảng cách chữ: -0,5px · Màu: Xanh Mini <code>#1976D2</code></li>
+<li>Tiếng Hàn viết là <b>프린트샵미니</b>, viết liền.</li>
+<li>Tiếng Anh, Trung, Việt đều viết <b>PRINTSHOPMINI</b>: viết hoa toàn bộ, viết liền.</li>
+</ul>
+</div>
+<h3 class="ci-h3">4. Quy tắc kích thước trên trang web</h3>
+<table class="ci-table ci-table-wide">
+<tr><th>Vị trí</th><th>Logo</th><th>Máy in trong logo</th><th>Chữ tên thương hiệu</th></tr>
+<tr><td>Menu trên cùng</td><td>36 × 36px, bo góc 8px</td><td>khoảng 11 × 10px</td><td>17px (điện thoại 15px), cách logo 8px</td></tr>
+<tr><td>Cuối trang (chân trang)</td><td>32 × 32px, bo góc 6px</td><td>khoảng 10 × 9px</td><td>17px</td></tr>
+</table>
+<h3 class="ci-h3">5. Nhân vật Mini Friends</h3>
+<p class="ci-note">Tất cả mặc cùng một bộ đồ: áo polo ngắn tay + quần short xanh đậm, trên ngực có chữ trắng "PRINTSHOP / mini". Chỉ màu áo khác nhau theo từng dịch vụ. Kích thước theo ảnh gốc 1024 × 1024, tỷ lệ đầu-thân = chiều cao ÷ chiều cao đầu.</p>
+<div class="ci-chars">
+<div class="ci-char" style="--c:#1976D2"><img alt="Mini Koon" loading="lazy" src="../img/friends/raccoon.webp" width="110"/> <b>Mini Koon <small>Gấu mèo · Cửa hàng trưởng</small></b> <dl><dt>Cơ thể</dt><dd>795 × 918px · 1,87 đầu · đầu chiếm 53% chiều cao</dd><dt>Màu dịch vụ</dt><dd><i style="background:#1976D2"></i>#1976D2</dd><dt>Áo</dt><dd><i style="background:#80A9C2"></i>#80A9C2</dd><dt>Lông</dt><dd><i style="background:#B5A698"></i>#B5A698 <i style="background:#D7C1A1"></i>#D7C1A1 (mặt) <i style="background:#6D645A"></i>#6D645A (quanh mắt)</dd></dl></div>
+<div class="ci-char" style="--c:#22B24C"><img alt="Peng Print" loading="lazy" src="../img/friends/print.webp" width="110"/> <b>Peng Print <small>Chim cánh cụt · In</small></b> <dl><dt>Cơ thể</dt><dd>788 × 840px · 2,33 đầu · đầu chiếm 43% chiều cao</dd><dt>Màu dịch vụ</dt><dd><i style="background:#22B24C"></i>#22B24C</dd><dt>Áo</dt><dd><i style="background:#53A464"></i>#53A464</dd><dt>Lông vũ</dt><dd><i style="background:#45474D"></i>#45474D (đầu) <i style="background:#E7E6E2"></i>#E7E6E2 (mặt) <i style="background:#EDA559"></i>#EDA559 (mỏ)</dd></dl></div>
+<div class="ci-char" style="--c:#1976D2"><img alt="Polly Copy" loading="lazy" src="../img/friends/copy.webp" width="110"/> <b>Polly Copy <small>Vẹt · Photo</small></b> <dl><dt>Cơ thể</dt><dd>873 × 812px · 3,22 đầu · đầu chiếm 31% chiều cao</dd><dt>Màu dịch vụ</dt><dd><i style="background:#1976D2"></i>#1976D2</dd><dt>Áo</dt><dd><i style="background:#3580C1"></i>#3580C1</dd><dt>Lông vũ</dt><dd><i style="background:#8EBD82"></i>#8EBD82 (đầu) <i style="background:#DC524F"></i>#DC524F <i style="background:#D7BA57"></i>#D7BA57 (mào)</dd></dl></div>
+<div class="ci-char" style="--c:#12BDB0"><img alt="Hoo Scan" loading="lazy" src="../img/friends/scan.webp" width="110"/> <b>Hoo Scan <small>Cú · Scan</small></b> <dl><dt>Cơ thể</dt><dd>782 × 791px · 2,4 đầu · đầu chiếm 42% chiều cao</dd><dt>Màu dịch vụ</dt><dd><i style="background:#12BDB0"></i>#12BDB0</dd><dt>Áo</dt><dd><i style="background:#3DACA9"></i>#3DACA9</dd><dt>Lông</dt><dd><i style="background:#9A6950"></i>#9A6950 <i style="background:#B89278"></i>#B89278 (mặt) <i style="background:#5B494B"></i>#5B494B (kính)</dd></dl></div>
+<div class="ci-char" style="--c:#F3732C"><img alt="Coo Fax" loading="lazy" src="../img/friends/fax.webp" width="110"/> <b>Coo Fax <small>Bồ câu · Fax</small></b> <dl><dt>Cơ thể</dt><dd>697 × 782px · 2,37 đầu · đầu chiếm 42% chiều cao</dd><dt>Màu dịch vụ</dt><dd><i style="background:#F3732C"></i>#F3732C</dd><dt>Áo</dt><dd><i style="background:#C96A1A"></i>#C96A1A</dd><dt>Lông vũ</dt><dd><i style="background:#BDC1C7"></i>#BDC1C7 <i style="background:#C6C5C9"></i>#C6C5C9 (cánh) <i style="background:#D2A49E"></i>#D2A49E (mỏ)</dd></dl></div>
+<div class="ci-char" style="--c:#7C3AED"><img alt="Shelly Coat" loading="lazy" src="../img/friends/coat.webp" width="110"/> <b>Shelly Coat <small>Rùa · Ép plastic</small></b> <dl><dt>Cơ thể</dt><dd>680 × 860px · 2,18 đầu · đầu chiếm 46% chiều cao</dd><dt>Màu dịch vụ</dt><dd><i style="background:#7C3AED"></i>#7C3AED</dd><dt>Áo</dt><dd><i style="background:#7A4EC3"></i>#7A4EC3</dd><dt>Da</dt><dd><i style="background:#94B873"></i>#94B873 <i style="background:#677251"></i>#677251 (mai)</dd></dl></div>
+<div class="ci-char" style="--c:#EC4899"><img alt="Stacky" loading="lazy" src="../img/friends/bind.webp" width="110"/> <b>Stacky <small>Hải ly · Đóng sách</small></b> <dl><dt>Cơ thể</dt><dd>799 × 863px · 2,08 đầu · đầu chiếm 48% chiều cao</dd><dt>Màu dịch vụ</dt><dd><i style="background:#EC4899"></i>#EC4899</dd><dt>Áo</dt><dd><i style="background:#CC4B72"></i>#CC4B72</dd><dt>Lông</dt><dd><i style="background:#B38161"></i>#B38161 <i style="background:#7C5B47"></i>#7C5B47 (đuôi) <i style="background:#DDC5A0"></i>#DDC5A0 (răng cửa)</dd></dl></div>
+</div>
+<p class="ci-note">Màu dịch vụ là màu dùng để đánh dấu dịch vụ đó trên trang web và áp phích. Màu áo là màu đo thực tế trên hình nhân vật. Do ánh sáng và bóng, cùng một bộ phận có thể trông hơi khác nhau.</p>
+<h3 class="ci-h3">6. Hãy luôn tuân thủ</h3>
+<ul class="ci-dont">
+<li>Không kéo giãn hay bóp méo logo và nhân vật!</li>
+<li>Không đổi màu logo! Chỉ dùng Xanh Mini.</li>
+<li>Đặt trên nền sáng và chừa đủ khoảng trống quanh logo.</li>
+<li>Không thay đổi mắt, miệng hay chữ trên áo của nhân vật!</li>
+</ul>
+</div>
+</section>
+
+<footer>
 <div class="ft-inner">
 <div class="ft-grid">
 <div class="ft-col"><div class="ft-brand-name"><img src="../logo.jpg" alt="" style="width:32px;height:32px;object-fit:contain;vertical-align:middle;margin-right:8px;border-radius:6px">PRINTSHOPMINI</div><p>Cửa hàng in tự phục vụ không người trực,<br/>mở cửa 24 giờ, 365 ngày.</p></div>

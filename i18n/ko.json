@@ -6369,5 +6369,626 @@
   "pages": [
    "guide-copy.html"
   ]
+ },
+ "4725bd85ff": {
+  "ko": "<b style=\"display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1976D2)\">프린트샵미니</b> · <b style=\"display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28\">프린트나우</b>는 <span style=\"white-space:nowrap\">(주)굿러닝파트너</span> 법인의 브랜드예요.",
+  "pages": [
+   "guide.html",
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html",
+   "faq.html",
+   "index.html",
+   "services.html",
+   "about.html",
+   "branches.html",
+   "community.html"
+  ]
+ },
+ "546053c98d": {
+  "ko": "<a href=\"privacy.html\" style=\"color:inherit;text-decoration:underline\">개인정보처리방침</a> · 이용약관",
+  "pages": [
+   "guide.html",
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html",
+   "faq.html",
+   "index.html",
+   "services.html",
+   "about.html",
+   "branches.html",
+   "community.html"
+  ]
+ },
+ "0b60939c60": {
+  "ko": "<a class=\"nav-logo-name\" href=\"index.html\"><img alt=\"\" src=\"logo.jpg\" style=\"width:36px;height:36px;object-fit:contain;vertical-align:middle;margin-right:8px;border-radius:8px\"/>프린트샵미니</a>",
+  "pages": [
+   "faq.html",
+   "services.html",
+   "about.html"
+  ]
+ },
+ "881c9a467d": {
+  "ko": "<img alt=\"\" src=\"logo.jpg\" style=\"width:32px;height:32px;object-fit:contain;vertical-align:middle;margin-right:8px;border-radius:6px\"/>프린트샵미니",
+  "pages": [
+   "faq.html",
+   "services.html",
+   "about.html",
+   "branches.html",
+   "community.html"
+  ]
+ },
+ "712cf030e4": {
+  "ko": "<a class=\"hf s1\" href=\"guide-coat.html\" style=\"--c:#7C3AED\"><img alt=\"코팅 거북이\" src=\"img/friends/coat.webp\"/><span>코팅</span></a> <a class=\"hf s2\" href=\"guide-scan.html\" style=\"--c:#12BDB0\"><img alt=\"스캔 부엉이\" src=\"img/friends/scan.webp\"/><span>스캔</span></a> <a class=\"hf s3\" href=\"guide-print.html\" style=\"--c:#22B24C\"><img alt=\"인쇄 펭귄\" src=\"img/friends/print.webp\"/><span>인쇄</span></a> <span class=\"hf s4\" style=\"--c:var(--blue)\"><img alt=\"라쿤\" src=\"img/friends/raccoon.webp\"/><span>프린트샵미니</span></span> <a class=\"hf s3\" href=\"guide-copy.html\" style=\"--c:#1976D2\"><img alt=\"복사 앵무새\" src=\"img/friends/copy.webp\"/><span>복사</span></a> <a class=\"hf s2\" href=\"guide-fax.html\" style=\"--c:#F3732C\"><img alt=\"팩스 비둘기\" src=\"img/friends/fax.webp\"/><span>팩스</span></a> <a class=\"hf s1\" href=\"guide-bind.html\" style=\"--c:#EC4899\"><img alt=\"제본 비버\" src=\"img/friends/bind.webp\"/><span>제본</span></a>",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "c8ebf717f8": {
+  "ko": "<a aria-label=\"펭프린 소개 보기\" class=\"mf-li\" href=\"#friend-penpurin\" style=\"--c:#22B24C;--cl:#E7F7EC\"><img alt=\"펭프린 (펭귄) 인쇄 담당\" height=\"170\" loading=\"lazy\" src=\"img/friends/print.webp\" width=\"150\"/><span class=\"mf-tag\">펭프린</span></a> <a aria-label=\"따라복 소개 보기\" class=\"mf-li\" href=\"#friend-ttarabok\" style=\"--c:#1976D2;--cl:#E1F0FF\"><img alt=\"따라복 (앵무새) 복사 담당\" height=\"170\" loading=\"lazy\" src=\"img/friends/copy.webp\" width=\"150\"/><span class=\"mf-tag\">따라복</span></a> <a aria-label=\"부스캔 소개 보기\" class=\"mf-li\" href=\"#friend-buscan\" style=\"--c:#12BDB0;--cl:#E0F7F5\"><img alt=\"부스캔 (부엉이) 스캔 담당\" height=\"170\" loading=\"lazy\" src=\"img/friends/scan.webp\" width=\"150\"/><span class=\"mf-tag\">부스캔</span></a> <a aria-label=\"미니쿤 소개 보기\" class=\"mf-li mf-big\" href=\"#friend-minikoon\" style=\"--c:#1976D2;--cl:#E3EFFB\"><img alt=\"미니쿤 (라쿤) 점장 · 안내 담당\" height=\"170\" loading=\"lazy\" src=\"img/friends/raccoon.webp\" width=\"150\"/><span class=\"mf-tag\">미니쿤</span></a> <a aria-label=\"팩둘이 소개 보기\" class=\"mf-li\" href=\"#friend-pakdul\" style=\"--c:#F3732C;--cl:#FFEBDD\"><img alt=\"팩둘이 (비둘기) 팩스 담당\" height=\"170\" loading=\"lazy\" src=\"img/friends/fax.webp\" width=\"150\"/><span class=\"mf-tag\">팩둘이</span></a> <a aria-label=\"코북이 소개 보기\" class=\"mf-li\" href=\"#friend-kobuki\" style=\"--c:#7C3AED;--cl:#EEE6FD\"><img alt=\"코북이 (거북이) 코팅 담당\" height=\"170\" loading=\"lazy\" src=\"img/friends/coat.webp\" width=\"150\"/><span class=\"mf-tag\">코북이</span></a> <a aria-label=\"차곡이 소개 보기\" class=\"mf-li\" href=\"#friend-chagoki\" style=\"--c:#EC4899;--cl:#FDE7F2\"><img alt=\"차곡이 (비버) 제본 담당\" height=\"170\" loading=\"lazy\" src=\"img/friends/bind.webp\" width=\"150\"/><span class=\"mf-tag\">차곡이</span></a>",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "7e500d32c2": {
+  "ko": "프린트샵미니 CI",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "5941a1b33b": {
+  "ko": "프린트샵미니의 로고, 색, 글자, 캐릭터를 한곳에 모았어요. 간판·포스터·영상을 만들 때 이 기준을 그대로 써 주세요.",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "b2738517c6": {
+  "ko": "1. 로고",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "0aa656cffc": {
+  "ko": "<img alt=\"프린트샵미니 로고\" height=\"923\" loading=\"lazy\" src=\"img/logo-badge.png\" width=\"815\"/> <span class=\"ci-mark ci-m-store\" style=\"left:0;top:0;width:100%;height:72.9%\"><i>가게</i></span> <span class=\"ci-mark ci-m-printer\" style=\"left:30.7%;top:33.3%;width:38.7%;height:32.2%\"><i>프린터</i></span> <span class=\"ci-mark ci-m-24\" style=\"left:77.7%;top:54.6%;width:18.4%;height:16.3%\"><i>24</i></span> <span class=\"ci-mark ci-m-mini\" style=\"left:17.1%;top:82.9%;width:65.9%;height:17%\"><i>mini</i></span>",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "0ecf59fa2a": {
+  "ko": "프린트샵미니 로고",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "a33a573b41": {
+  "ko": "<b>가게 모양 (차양)</b> 동네에 있는 작은 프린트 가게예요.",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "e58e19dedc": {
+  "ko": "<b>안의 프린터</b> 손님이 직접 뽑는 셀프 프린트예요.",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "dddd3743e2": {
+  "ko": "<b>24 동그라미</b> 24시간, 365일 열려 있어요.",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "3712144b35": {
+  "ko": "<b>mini</b> 프린트샵미니의 이름이에요.",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "20dc28ff4f": {
+  "ko": "<caption>로고 비율 (원본 1024 × 1024 그림 기준)</caption>",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "e922cf5bb3": {
+  "ko": "부분",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "81c150c61b": {
+  "ko": "크기 (px)",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "e1cfdb9de9": {
+  "ko": "비율",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "3079c3e405": {
+  "ko": "로고 전체",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "7eb7de6e94": {
+  "ko": "가로 : 세로 = 0.88 : 1",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "08768a99b0": {
+  "ko": "가게 모양",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "59cfd52bcb": {
+  "ko": "로고 높이의 73%",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "6b86406952": {
+  "ko": "안의 프린터",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "67cfa0a40f": {
+  "ko": "가게 폭의 39%",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "5538ec06c7": {
+  "ko": "24 동그라미",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "cd734d1af2": {
+  "ko": "가게 폭의 18%",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "72d9d60fbb": {
+  "ko": "mini 글자",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "abaee12081": {
+  "ko": "가게 폭의 66%",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "d946f3c824": {
+  "ko": "가게와 mini 사이",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "34468ecca7": {
+  "ko": "로고 높이의 10%",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "a89b72462a": {
+  "ko": "2. 색",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "a4883b765a": {
+  "ko": "<span class=\"ci-sw\" style=\"background:#1976D2\"></span><b>미니 블루 (대표색)</b><code>#1976D2</code><small>RGB 25, 118, 210 · CMYK 88, 44, 0, 18</small><em>로고, 상호 글자, 버튼</em>",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "80dd2c73f8": {
+  "ko": "<span class=\"ci-sw\" style=\"background:#1565C0\"></span><b>진한 블루</b><code>#1565C0</code><small>RGB 21, 101, 192 · CMYK 89, 47, 0, 25</small><em>버튼을 눌렀을 때, 그림자</em>",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "4e3517b1c5": {
+  "ko": "<span class=\"ci-sw\" style=\"background:#E8F2FC\"></span><b>연한 블루</b><code>#E8F2FC</code><small>RGB 232, 242, 252</small><em>배경</em>",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "10bf26ed43": {
+  "ko": "<span class=\"ci-sw ci-sw-line\" style=\"background:#FFFFFF\"></span><b>흰색</b><code>#FFFFFF</code><small>RGB 255, 255, 255</small><em>로고 안쪽, 바탕</em>",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "7f4efbfe0e": {
+  "ko": "<span class=\"ci-sw\" style=\"background:#111827\"></span><b>글자 검정</b><code>#111827</code><small>RGB 17, 24, 39</small><em>본문 글자</em>",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "a02edf9411": {
+  "ko": "<span class=\"ci-sw\" style=\"background:#F28C28\"></span><b>프린트나우 주황</b><code>#F28C28</code><small>RGB 242, 140, 40</small><em>함께 운영하는 브랜드 표시</em>",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "4b35ca0b76": {
+  "ko": "3. 상호 글자",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "0493d83e63": {
+  "ko": "<img alt=\"\" height=\"41\" src=\"img/logo-badge.png\" width=\"36\"/><span>프린트샵미니</span>",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "1506b7503c": {
+  "ko": "글씨체: <b>Noto Sans KR</b>, 가장 굵게 (Black, 900)",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "d16e337978": {
+  "ko": "글자 사이: -0.5px · 색: 미니 블루 <code>#1976D2</code>",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "0a5f91556c": {
+  "ko": "한국어는 <b>프린트샵미니</b>, 띄어 쓰지 않아요.",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "b964f4e2ad": {
+  "ko": "외국어는 영어·중국어·베트남어 모두 <b>PRINTSHOPMINI</b>, 전부 대문자로 붙여 써요.",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "eee1e80602": {
+  "ko": "4. 홈페이지 크기 규칙",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "576af02089": {
+  "ko": "자리",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "96089ba31f": {
+  "ko": "로고 속 프린터",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "e4a2396e64": {
+  "ko": "상호 글자",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "f585e80b1d": {
+  "ko": "위쪽 메뉴",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "9f6db2fbc8": {
+  "ko": "36 × 36px, 모서리 8px",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "9ebb9c8c18": {
+  "ko": "약 11 × 10px",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "f7787f6a18": {
+  "ko": "17px (휴대폰 15px), 로고와 8px 띄움",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "5a3da1082d": {
+  "ko": "맨 아래 (바닥글)",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "7afe163baa": {
+  "ko": "32 × 32px, 모서리 6px",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "952bab3d3c": {
+  "ko": "약 10 × 9px",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "2fed8af7c5": {
+  "ko": "5. 미니프랜즈 캐릭터",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "ce73397534": {
+  "ko": "모두 같은 옷을 입어요: 짧은 소매 폴로 셔츠 + 짙은 남색 반바지, 가슴에 흰 글씨 「PRINTSHOP / mini」. 셔츠 색만 맡은 서비스마다 달라요. 크기는 원본 그림(1024 × 1024) 기준이고, 등신은 키 ÷ 머리 높이예요.",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "c0367d3fa3": {
+  "ko": "<b>미니쿤 <small>라쿤 · 점장</small></b>",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "1bd090ddf2": {
+  "ko": "미니쿤",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "0c0a63a95f": {
+  "ko": "몸",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "052360d4c7": {
+  "ko": "795 × 918px · 1.87등신 · 머리가 키의 53%",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "d369537bf4": {
+  "ko": "서비스 색",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "9e2f594ae7": {
+  "ko": "셔츠",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "b22af4680b": {
+  "ko": "털",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "2461be12fd": {
+  "ko": "<i style=\"background:#B5A698\"></i>#B5A698 <i style=\"background:#D7C1A1\"></i>#D7C1A1 (얼굴) <i style=\"background:#6D645A\"></i>#6D645A (눈가)",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "f2944c6c4c": {
+  "ko": "<b>펭프린 <small>펭귄 · 인쇄</small></b>",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "2cc379a91a": {
+  "ko": "펭프린",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "7b1292e62a": {
+  "ko": "788 × 840px · 2.33등신 · 머리가 키의 43%",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "b866f3f454": {
+  "ko": "깃털",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "7a88dfd96d": {
+  "ko": "<i style=\"background:#45474D\"></i>#45474D (머리) <i style=\"background:#E7E6E2\"></i>#E7E6E2 (얼굴) <i style=\"background:#EDA559\"></i>#EDA559 (부리)",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "a2e4c6c434": {
+  "ko": "<b>따라복 <small>앵무새 · 복사</small></b>",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "0a7ac2d27f": {
+  "ko": "따라복",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "a4eee7ecc1": {
+  "ko": "873 × 812px · 3.22등신 · 머리가 키의 31%",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "fba61834b7": {
+  "ko": "<i style=\"background:#8EBD82\"></i>#8EBD82 (머리) <i style=\"background:#DC524F\"></i>#DC524F <i style=\"background:#D7BA57\"></i>#D7BA57 (볏)",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "6bd4ac0aab": {
+  "ko": "<b>부스캔 <small>부엉이 · 스캔</small></b>",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "b82f48cbe4": {
+  "ko": "부스캔",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "9a56201507": {
+  "ko": "782 × 791px · 2.4등신 · 머리가 키의 42%",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "a3fc1dcade": {
+  "ko": "<i style=\"background:#9A6950\"></i>#9A6950 <i style=\"background:#B89278\"></i>#B89278 (얼굴) <i style=\"background:#5B494B\"></i>#5B494B (안경)",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "fda8210700": {
+  "ko": "<b>팩둘이 <small>비둘기 · 팩스</small></b>",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "2e7135e6a8": {
+  "ko": "팩둘이",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "390f249c6d": {
+  "ko": "697 × 782px · 2.37등신 · 머리가 키의 42%",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "7f9ef448b1": {
+  "ko": "<i style=\"background:#BDC1C7\"></i>#BDC1C7 <i style=\"background:#C6C5C9\"></i>#C6C5C9 (날개) <i style=\"background:#D2A49E\"></i>#D2A49E (부리)",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "2413f285cc": {
+  "ko": "<b>코북이 <small>거북이 · 코팅</small></b>",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "fc5f3c874d": {
+  "ko": "코북이",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "d5ffa56cff": {
+  "ko": "680 × 860px · 2.18등신 · 머리가 키의 46%",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "131c697160": {
+  "ko": "피부",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "68f5ab3465": {
+  "ko": "<i style=\"background:#94B873\"></i>#94B873 <i style=\"background:#677251\"></i>#677251 (등껍질)",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "b7e191ac09": {
+  "ko": "<b>차곡이 <small>비버 · 제본</small></b>",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "f9745afbce": {
+  "ko": "차곡이",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "e364b7dbd2": {
+  "ko": "799 × 863px · 2.08등신 · 머리가 키의 48%",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "acb02df9f0": {
+  "ko": "<i style=\"background:#B38161\"></i>#B38161 <i style=\"background:#7C5B47\"></i>#7C5B47 (꼬리) <i style=\"background:#DDC5A0\"></i>#DDC5A0 (앞니)",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "80f637fd9a": {
+  "ko": "서비스 색은 홈페이지·포스터에서 그 서비스를 표시하는 색이고, 셔츠 색은 캐릭터 그림에서 잰 실제 색이에요. 그림은 빛과 그림자가 있어서 같은 부위도 조금씩 다르게 보여요.",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "728ce668ae": {
+  "ko": "6. 꼭 지켜 주세요",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "5c96ddca93": {
+  "ko": "로고와 캐릭터를 늘이거나 찌그러뜨리지 마세요!",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "b962eafbf1": {
+  "ko": "로고 색을 바꾸지 마세요! 미니 블루 하나만 써요.",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "35031c0ada": {
+  "ko": "밝은 바탕 위에 쓰고, 로고 둘레를 넉넉히 비워 주세요.",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "9d26f751dc": {
+  "ko": "캐릭터의 눈·입·셔츠 글자를 바꾸지 마세요!",
+  "pages": [
+   "about.html"
+  ]
+ },
+ "a116b09493": {
+  "ko": "<img alt=\"\" src=\"logo.jpg\" style=\"width:36px;height:36px;object-fit:contain;vertical-align:middle;margin-right:8px;border-radius:8px\"/>프린트샵미니",
+  "pages": [
+   "branches.html",
+   "community.html"
+  ]
  }
 }

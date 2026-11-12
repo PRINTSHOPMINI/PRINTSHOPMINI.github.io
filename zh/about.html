@@ -316,6 +316,55 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
   .tl2-box{padding:12px 14px 14px}
   .v-pic{height:112px}
 }
+/* BRAND CI */
+.ci-section{padding:96px 6%;background:var(--blue-light,#E8F2FC)}
+.ci-inner{max-width:1160px;margin:0 auto}
+.ci-inner .sec-h2{margin-bottom:16px}
+.ci-lead{font-size:15.5px;color:var(--text2);line-height:1.9;margin:0 0 40px;max-width:760px}
+.ci-h3{font-size:20px;font-weight:900;color:var(--text);margin:44px 0 16px;letter-spacing:-.5px}
+.ci-logo-row{display:grid;grid-template-columns:280px 1fr;gap:32px;align-items:start;background:#fff;border-radius:20px;padding:28px}
+.ci-logo-box{position:relative;width:100%;max-width:260px;margin:12px auto 0}
+.ci-logo-box img{display:block;width:100%;height:auto}
+.ci-mark{position:absolute;border:2px dashed #EF4444;border-radius:4px;pointer-events:none}
+.ci-mark i{position:absolute;top:-11px;left:4px;font-style:normal;font-size:10.5px;font-weight:800;color:#fff;background:#EF4444;border-radius:4px;padding:0 5px;line-height:18px;white-space:nowrap}
+.ci-m-printer,.ci-m-24{border-color:#F59E0B}.ci-m-printer i,.ci-m-24 i{background:#F59E0B}
+.ci-m-mini{border-color:#10B981}.ci-m-mini i{background:#10B981}
+.ci-mean{list-style:none;padding:0;margin:0 0 18px;display:grid;gap:8px}
+.ci-mean li{font-size:14.5px;color:var(--text2);line-height:1.7}
+.ci-mean b{display:inline-block;min-width:118px;color:var(--blue)}
+.ci-table{width:100%;border-collapse:collapse;font-size:14px;background:#fff;border-radius:12px;overflow:hidden}
+.ci-table caption{text-align:left;font-size:13px;font-weight:700;color:var(--text3);padding:0 0 8px}
+.ci-table th,.ci-table td{padding:9px 12px;border-bottom:1px solid var(--border);text-align:left}
+.ci-table th{background:#F3F8FC;font-weight:800;color:var(--text)}
+.ci-table td{color:var(--text2)}
+.ci-colors{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.ci-chip{background:#fff;border-radius:16px;padding:16px;display:grid;grid-template-columns:56px 1fr;column-gap:14px;row-gap:2px;align-items:center}
+.ci-sw{grid-row:span 4;width:56px;height:56px;border-radius:12px}
+.ci-sw-line{box-shadow:inset 0 0 0 1px var(--border)}
+.ci-chip b{font-size:14.5px;color:var(--text)}
+.ci-chip code,.ci-rules code{font-family:ui-monospace,Consolas,monospace;font-size:13.5px;font-weight:700;color:var(--text)}
+.ci-chip small{font-size:12px;color:var(--text3)}
+.ci-chip em{font-style:normal;font-size:12.5px;color:var(--text3)}
+.ci-word{background:#fff;border-radius:20px;padding:24px 28px;display:grid;grid-template-columns:auto auto 1fr;gap:28px;align-items:center}
+.ci-word-sample{display:flex;align-items:center;gap:8px}
+.ci-word-sample img{width:36px;height:auto}
+.ci-word-sample span{font-size:17px;font-weight:900;color:#1976D2;letter-spacing:-.5px;white-space:nowrap}
+.ci-rules{margin:0;padding-left:18px;font-size:14px;color:var(--text2);line-height:1.9}
+.ci-table-wide{border-radius:16px}
+.ci-note{font-size:13.5px;color:var(--text3);line-height:1.8;margin:0 0 14px}
+.ci-chars{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-bottom:14px}
+.ci-char{background:#fff;border-radius:18px;padding:16px;border-top:5px solid var(--c)}
+.ci-char>img{display:block;width:90px;height:100px;object-fit:contain;margin:0 auto 8px}
+.ci-char>b{display:block;text-align:center;font-size:16px;font-weight:900;color:var(--text);margin-bottom:10px}
+.ci-char>b small{display:block;font-size:12px;font-weight:700;color:var(--c)}
+.ci-char dl{display:grid;grid-template-columns:64px 1fr;gap:6px 8px;margin:0;font-size:12.5px}
+.ci-char dt{font-weight:800;color:var(--text3)}
+.ci-char dd{margin:0;color:var(--text2);font-family:ui-monospace,Consolas,monospace;font-size:12px;line-height:1.7}
+.ci-char dd:first-of-type{font-family:inherit}
+.ci-char dd i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:3px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.12)}
+.ci-dont{margin:0;padding:20px 24px 20px 40px;background:#fff;border-radius:16px;font-size:14.5px;color:var(--text2);line-height:2}
+@media(max-width:900px){.ci-logo-row{grid-template-columns:1fr}.ci-colors{grid-template-columns:repeat(2,1fr)}.ci-word{grid-template-columns:1fr;gap:14px}}
+@media(max-width:560px){.ci-section{padding:64px 16px}.ci-logo-row{padding:20px}.ci-colors{grid-template-columns:1fr}.ci-table th,.ci-table td{padding:8px;font-size:13px}.ci-mean b{min-width:0;display:block}.ci-table-wide{display:block;overflow-x:auto}}
 </style>
 <style id="nav-lang-css">.nav-lang{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:#1976D2;border:1.5px solid #1976D2;border-radius:50px;padding:7px 13px;margin-right:8px;white-space:nowrap;background:#fff}.nav-lang:hover{background:#E8F2FC}.nav-links a{white-space:nowrap}@media(max-width:1180px){.nav-lang .t{display:none}.nav-lang{padding:6px 9px;font-size:15px}}@media(max-width:480px){.nav-lang{padding:4px 6px;margin-right:6px;font-size:14px}.nav-cta{padding:8px 13px!important;font-size:12.5px!important}}@media(max-width:400px){nav{padding-left:12px!important;padding-right:12px!important}.nav-logo-name{font-size:15px!important}.nav-logo{gap:6px!important}.nav-cta{padding:7px 9px!important;font-size:12px!important}.nav-lang,.lang-sel{margin-right:5px!important}.hamburger{margin-left:4px!important}}</style>
 <script defer="" src="../ga.js?v=1"></script><style>.lang-sel{display:inline-flex;align-items:center;gap:4px;margin-right:8px;border:1.5px solid #1976D2;border-radius:50px;padding:3px 4px 3px 10px;background:#fff;font-size:15px}.lang-sel select{border:none;background:transparent;font:700 13px sans-serif;color:#1976D2;padding:4px 2px;cursor:pointer;outline:none}.nav-links a{padding:8px 11px!important}@media(max-width:1280px){.nav-raccoon{display:none!important}}.lang-sel .cur{display:none}@media(max-width:480px){.nav-cta{display:none!important}.lang-sel{position:relative;margin-right:6px;padding:6px 10px;gap:5px}.lang-sel .cur{display:inline;white-space:nowrap;font:700 13px sans-serif;color:#1976D2}.lang-sel select{position:absolute;inset:0;width:100%;opacity:0}}@media(max-width:400px){.lang-sel{padding:5px 6px!important;gap:2px!important;font-size:13px}.lang-sel .cur{font-size:12px}}.lang-sw{position:fixed;right:10px;bottom:12px;z-index:400}.tr-note{max-width:1160px;margin:0 auto;padding:10px 6% 0;font-size:12.5px;color:#9CA3AF}</style></head>
@@ -612,7 +661,83 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 </div>
 </div>
 <!-- FOOTER -->
-<p class="tr-note">本页由韩语翻译而来。如有不准确之处，请通过 Naver TalkTalk 告诉我们。机器屏幕为韩语，韩语按钮名称写在［括号］里。</p><footer>
+<p class="tr-note">本页由韩语翻译而来。如有不准确之处，请通过 Naver TalkTalk 告诉我们。机器屏幕为韩语，韩语按钮名称写在［括号］里。</p><!-- BRAND CI -->
+<section class="ci-section" id="ci">
+<div class="ci-inner">
+<div class="sec-eyebrow">BRAND CI</div>
+<h2 class="sec-h2">PRINTSHOPMINI CI</h2>
+<p class="ci-lead">这里汇总了 PRINTSHOPMINI 的标志、颜色、文字和角色。制作招牌、海报或视频时，请按照这些标准使用。</p>
+<h3 class="ci-h3">1. 标志</h3>
+<div class="ci-logo-row">
+<div class="ci-logo-fig">
+<div class="ci-logo-box"><img alt="PRINTSHOPMINI 标志" height="923" loading="lazy" src="../img/logo-badge.png" width="815"/> <span class="ci-mark ci-m-store" style="left:0;top:0;width:100%;height:72.9%"><i>店铺</i></span> <span class="ci-mark ci-m-printer" style="left:30.7%;top:33.3%;width:38.7%;height:32.2%"><i>打印机</i></span> <span class="ci-mark ci-m-24" style="left:77.7%;top:54.6%;width:18.4%;height:16.3%"><i>24</i></span> <span class="ci-mark ci-m-mini" style="left:17.1%;top:82.9%;width:65.9%;height:17%"><i>mini</i></span></div>
+</div>
+<div class="ci-logo-info">
+<ul class="ci-mean">
+<li><b>店铺形状（遮阳棚）</b> 社区里的小打印店。</li>
+<li><b>里面的打印机</b> 顾客自己动手的自助打印。</li>
+<li><b>24 圆圈</b> 24 小时、365 天营业。</li>
+<li><b>mini</b> 代表我们的名字 PRINTSHOPMINI。</li>
+</ul>
+<table class="ci-table"> <caption>标志比例（以 1024 × 1024 原图为准）</caption> <tr><th>部分</th><th>尺寸 (px)</th><th>比例</th></tr>
+<tr><td>整个标志</td><td>815 × 921</td><td>宽 : 高 = 0.88 : 1</td></tr>
+<tr><td>店铺形状</td><td>815 × 672</td><td>标志高度的 73%</td></tr>
+<tr><td>里面的打印机</td><td>315 × 297</td><td>店铺宽度的 39%</td></tr>
+<tr><td>24 圆圈</td><td>150 × 150</td><td>店铺宽度的 18%</td></tr>
+<tr><td>mini 文字</td><td>537 × 157</td><td>店铺宽度的 66%</td></tr>
+<tr><td>店铺与 mini 之间</td><td>92</td><td>标志高度的 10%</td></tr>
+</table>
+</div>
+</div>
+<h3 class="ci-h3">2. 颜色</h3>
+<div class="ci-colors">
+<div class="ci-chip"><span class="ci-sw" style="background:#1976D2"></span><b>迷你蓝（主色）</b><code>#1976D2</code><small>RGB 25, 118, 210 · CMYK 88, 44, 0, 18</small><em>标志、店名文字、按钮</em></div>
+<div class="ci-chip"><span class="ci-sw" style="background:#1565C0"></span><b>深蓝</b><code>#1565C0</code><small>RGB 21, 101, 192 · CMYK 89, 47, 0, 25</small><em>按下按钮时、阴影</em></div>
+<div class="ci-chip"><span class="ci-sw" style="background:#E8F2FC"></span><b>浅蓝</b><code>#E8F2FC</code><small>RGB 232, 242, 252</small><em>背景</em></div>
+<div class="ci-chip"><span class="ci-sw ci-sw-line" style="background:#FFFFFF"></span><b>白色</b><code>#FFFFFF</code><small>RGB 255, 255, 255</small><em>标志内部、底色</em></div>
+<div class="ci-chip"><span class="ci-sw" style="background:#111827"></span><b>文字黑</b><code>#111827</code><small>RGB 17, 24, 39</small><em>正文文字</em></div>
+<div class="ci-chip"><span class="ci-sw" style="background:#F28C28"></span><b>PrintNow 橙色</b><code>#F28C28</code><small>RGB 242, 140, 40</small><em>同公司运营的品牌标识</em></div>
+</div>
+<h3 class="ci-h3">3. 店名文字</h3>
+<div class="ci-word">
+<div class="ci-word-sample"><img alt="" height="41" src="../img/logo-badge.png" width="36"/><span>프린트샵미니</span></div>
+<div class="ci-word-sample"><img alt="" height="41" src="../img/logo-badge.png" width="36"/><span>PRINTSHOPMINI</span></div>
+<ul class="ci-rules">
+<li>字体：<b>Noto Sans KR</b>，最粗（Black, 900）</li>
+<li>字间距：-0.5px · 颜色：迷你蓝 <code>#1976D2</code></li>
+<li>韩语写作 <b>프린트샵미니</b>，中间不加空格。</li>
+<li>英语、中文、越南语一律写作 <b>PRINTSHOPMINI</b>：全部大写，连写。</li>
+</ul>
+</div>
+<h3 class="ci-h3">4. 网站尺寸规则</h3>
+<table class="ci-table ci-table-wide">
+<tr><th>位置</th><th>标志</th><th>标志里的打印机</th><th>店名文字</th></tr>
+<tr><td>顶部菜单</td><td>36 × 36px，圆角 8px</td><td>约 11 × 10px</td><td>17px（手机 15px），与标志间隔 8px</td></tr>
+<tr><td>页面底部（页脚）</td><td>32 × 32px，圆角 6px</td><td>约 10 × 9px</td><td>17px</td></tr>
+</table>
+<h3 class="ci-h3">5. 迷你朋友角色</h3>
+<p class="ci-note">大家穿着同样的衣服：短袖 Polo 衫 + 深藏青色短裤，胸前有白色文字「PRINTSHOP / mini」。只有衬衫颜色按负责的服务不同。尺寸以 1024 × 1024 原图为准，头身比 = 身高 ÷ 头部高度。</p>
+<div class="ci-chars">
+<div class="ci-char" style="--c:#1976D2"><img alt="迷你酷" loading="lazy" src="../img/friends/raccoon.webp" width="110"/> <b>迷你酷 <small>浣熊 · 店长</small></b> <dl><dt>身体</dt><dd>795 × 918px · 1.87 头身 · 头部占身高 53%</dd><dt>服务颜色</dt><dd><i style="background:#1976D2"></i>#1976D2</dd><dt>衬衫</dt><dd><i style="background:#80A9C2"></i>#80A9C2</dd><dt>毛色</dt><dd><i style="background:#B5A698"></i>#B5A698 <i style="background:#D7C1A1"></i>#D7C1A1 （脸） <i style="background:#6D645A"></i>#6D645A （眼周）</dd></dl></div>
+<div class="ci-char" style="--c:#22B24C"><img alt="企鹅小印" loading="lazy" src="../img/friends/print.webp" width="110"/> <b>企鹅小印 <small>企鹅 · 打印</small></b> <dl><dt>身体</dt><dd>788 × 840px · 2.33 头身 · 头部占身高 43%</dd><dt>服务颜色</dt><dd><i style="background:#22B24C"></i>#22B24C</dd><dt>衬衫</dt><dd><i style="background:#53A464"></i>#53A464</dd><dt>羽毛</dt><dd><i style="background:#45474D"></i>#45474D （头） <i style="background:#E7E6E2"></i>#E7E6E2 （脸） <i style="background:#EDA559"></i>#EDA559 （喙）</dd></dl></div>
+<div class="ci-char" style="--c:#1976D2"><img alt="鹦鹉小复" loading="lazy" src="../img/friends/copy.webp" width="110"/> <b>鹦鹉小复 <small>鹦鹉 · 复印</small></b> <dl><dt>身体</dt><dd>873 × 812px · 3.22 头身 · 头部占身高 31%</dd><dt>服务颜色</dt><dd><i style="background:#1976D2"></i>#1976D2</dd><dt>衬衫</dt><dd><i style="background:#3580C1"></i>#3580C1</dd><dt>羽毛</dt><dd><i style="background:#8EBD82"></i>#8EBD82 （头） <i style="background:#DC524F"></i>#DC524F <i style="background:#D7BA57"></i>#D7BA57 （冠羽）</dd></dl></div>
+<div class="ci-char" style="--c:#12BDB0"><img alt="猫头鹰小扫" loading="lazy" src="../img/friends/scan.webp" width="110"/> <b>猫头鹰小扫 <small>猫头鹰 · 扫描</small></b> <dl><dt>身体</dt><dd>782 × 791px · 2.4 头身 · 头部占身高 42%</dd><dt>服务颜色</dt><dd><i style="background:#12BDB0"></i>#12BDB0</dd><dt>衬衫</dt><dd><i style="background:#3DACA9"></i>#3DACA9</dd><dt>毛色</dt><dd><i style="background:#9A6950"></i>#9A6950 <i style="background:#B89278"></i>#B89278 （脸） <i style="background:#5B494B"></i>#5B494B （眼镜）</dd></dl></div>
+<div class="ci-char" style="--c:#F3732C"><img alt="鸽子小传" loading="lazy" src="../img/friends/fax.webp" width="110"/> <b>鸽子小传 <small>鸽子 · 传真</small></b> <dl><dt>身体</dt><dd>697 × 782px · 2.37 头身 · 头部占身高 42%</dd><dt>服务颜色</dt><dd><i style="background:#F3732C"></i>#F3732C</dd><dt>衬衫</dt><dd><i style="background:#C96A1A"></i>#C96A1A</dd><dt>羽毛</dt><dd><i style="background:#BDC1C7"></i>#BDC1C7 <i style="background:#C6C5C9"></i>#C6C5C9 （翅膀） <i style="background:#D2A49E"></i>#D2A49E （喙）</dd></dl></div>
+<div class="ci-char" style="--c:#7C3AED"><img alt="乌龟小封" loading="lazy" src="../img/friends/coat.webp" width="110"/> <b>乌龟小封 <small>乌龟 · 塑封</small></b> <dl><dt>身体</dt><dd>680 × 860px · 2.18 头身 · 头部占身高 46%</dd><dt>服务颜色</dt><dd><i style="background:#7C3AED"></i>#7C3AED</dd><dt>衬衫</dt><dd><i style="background:#7A4EC3"></i>#7A4EC3</dd><dt>皮肤</dt><dd><i style="background:#94B873"></i>#94B873 <i style="background:#677251"></i>#677251 （龟壳）</dd></dl></div>
+<div class="ci-char" style="--c:#EC4899"><img alt="小叠" loading="lazy" src="../img/friends/bind.webp" width="110"/> <b>小叠 <small>河狸 · 装订</small></b> <dl><dt>身体</dt><dd>799 × 863px · 2.08 头身 · 头部占身高 48%</dd><dt>服务颜色</dt><dd><i style="background:#EC4899"></i>#EC4899</dd><dt>衬衫</dt><dd><i style="background:#CC4B72"></i>#CC4B72</dd><dt>毛色</dt><dd><i style="background:#B38161"></i>#B38161 <i style="background:#7C5B47"></i>#7C5B47 （尾巴） <i style="background:#DDC5A0"></i>#DDC5A0 （门牙）</dd></dl></div>
+</div>
+<p class="ci-note">服务颜色是在网站和海报上代表该服务的颜色；衬衫颜色是从角色图中实际测得的颜色。图中有光影，同一部位看起来也会略有不同。</p>
+<h3 class="ci-h3">6. 请务必遵守</h3>
+<ul class="ci-dont">
+<li>不要拉伸或压扁标志和角色！</li>
+<li>不要更改标志颜色！只使用迷你蓝。</li>
+<li>请放在浅色底上，并在标志周围留出足够空白。</li>
+<li>不要更改角色的眼睛、嘴巴和衬衫文字！</li>
+</ul>
+</div>
+</section>
+
+<footer>
 <div class="ft-inner">
 <div class="ft-grid">
 <div class="ft-col"><div class="ft-brand-name"><img src="../logo.jpg" alt="" style="width:32px;height:32px;object-fit:contain;vertical-align:middle;margin-right:8px;border-radius:6px">PRINTSHOPMINI</div><p>24 小时 365 天营业的<br/>无人自助打印店。</p></div>
