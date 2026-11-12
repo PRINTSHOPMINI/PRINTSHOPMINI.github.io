@@ -474,7 +474,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 <h2 class="sec-h2">PrintShop Mini<br/>的故事</h2>
 <p>2021 年，从新城光教开始。随着京畿道厅和政府机关入驻、新盆唐线光教中央站开通，年轻人口快速流入，光教正在成长为充满活力的新城。在这座以周边大学和大型公寓小区为中心、聚集了 20~40 岁年轻人的城市里，我们坚信需要一个随时都能方便使用的打印服务，于是 PrintShop Mini 诞生了。</p>
 <p>一开始只有 A4 黑白打印一项，后来听取顾客的意见，扩展到复印、扫描、传真、塑封、装订共 6 项服务。</p>
-<p>目前在<span class="js-rnames">수원·화성·용인·평택</span> <span class="js-rcount">4</span> 个地区运营 <span class="js-bcount">16</span> 家门店，每月有数千名顾客使用。</p>
+<p>目前在<span class="js-rnames">水原·华城·龙仁·平泽</span> <span class="js-rcount">4</span> 个地区运营 <span class="js-bcount">16</span> 家门店，每月有数千名顾客使用。</p>
 </div>
 <div class="story-visual-wrap"><div class="story-visual">
 <svg font-family="'Noto Sans KR', sans-serif" viewbox="0 0 520 420" xmlns="http://www.w3.org/2000/svg">
@@ -508,7 +508,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 <line stroke="#1976D2" stroke-width="2" x1="310" x2="312" y1="56" y2="56"></line>
 <rect fill="#1976D2" filter="url(#softShadow)" height="52" rx="10" width="100" x="318" y="30"></rect>
 <text fill="white" font-size="12" font-weight="900" text-anchor="middle" x="368" y="51">现在</text>
-<text fill="white" font-size="10" font-weight="700" opacity="0.9" text-anchor="middle" x="368" y="69"><tspan class="js-rcount">4</tspan>도시 <tspan class="js-bcount">16</tspan>지점</text>
+<text fill="white" font-size="10" font-weight="700" opacity="0.9" text-anchor="middle" x="368" y="69"><tspan class="js-rcount">4</tspan>个地区 <tspan class="js-bcount">16</tspan>家门店</text>
 <!-- ── 플로팅 뱃지 ── -->
 <rect fill="white" filter="url(#softShadow)" height="68" rx="12" width="114" x="26" y="180"></rect>
 <text fill="#1976D2" font-size="15" font-weight="900" text-anchor="middle" x="83" y="206">24H</text>
@@ -635,7 +635,23 @@ function toggleMenu(){
 (function(){
 var SB_URL='https://wbcfciiuiootbdezxfwy.supabase.co';
 var SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndiY2ZjaWl1aW9vdGJkZXp4Znd5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc1MjkyMTQsImV4cCI6MjA5MzEwNTIxNH0.UV4ukUXuAYKAqq85B4FTHO2BtIOqPaBHgAJN5lqyU5s';
+  /* 외국어판: '현재' 상자 문구·지역 이름 번역 (번역 빌드가 이 스크립트를 그대로 복사하므로 여기서 처리) */
+  var L=window.I18N_LANG;
+  var BOX={en:['9','{r} areas · {b} stores'],zh:['10','{r}个地区 {b}家门店'],vi:['7.5','{r} khu vực · {b} cửa hàng']};
+  var RN={en:{'수원':'Suwon','화성':'Hwaseong','용인':'Yongin','평택':'Pyeongtaek','오산':'Osan','안성':'Anseong','성남':'Seongnam','서울':'Seoul'},
+          zh:{'수원':'水原','화성':'华城','용인':'龙仁','평택':'平泽','오산':'乌山','안성':'安城','성남':'城南','서울':'首尔'}};
+  RN.vi=RN.en;
+  function rname(r){return (RN[L]&&RN[L][r])||r;}
   function setAll(sel,val){document.querySelectorAll(sel).forEach(function(e){e.textContent=val;});}
+  if(BOX[L]){
+    document.querySelectorAll('svg text').forEach(function(t){
+      var rc=t.querySelector('.js-rcount'),bc=t.querySelector('.js-bcount');if(!rc||!bc)return;
+      var r=rc.textContent,b=bc.textContent;
+      t.setAttribute('font-size',BOX[L][0]);
+      t.innerHTML=BOX[L][1].replace('{r}','<tspan class="js-rcount">'+r+'</tspan>').replace('{b}','<tspan class="js-bcount">'+b+'</tspan>');
+    });
+    document.querySelectorAll('.js-rnames').forEach(function(e){e.textContent=e.textContent.split('·').map(rname).join('·');});
+  }
   fetch(SB_URL+'/rest/v1/branches?select=region&order=region,sort_order',{headers:{'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY}})
     .then(function(r){return r.json();})
     .then(function(d){
@@ -644,7 +660,7 @@ var SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI
       var seen=Object.keys(cnt).sort(function(a,b){return cnt[b]-cnt[a]||a.localeCompare(b,'ko');});
       setAll('.js-bcount',d.length);
       setAll('.js-rcount',seen.length);
-      setAll('.js-rnames',seen.join('·'));
+      setAll('.js-rnames',seen.map(rname).join('·'));
     }).catch(function(){});
 })();
 </script>

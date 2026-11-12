@@ -678,7 +678,23 @@ function toggleMenu(){
 (function(){
 var SB_URL='https://wbcfciiuiootbdezxfwy.supabase.co';
 var SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndiY2ZjaWl1aW9vdGJkZXp4Znd5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc1MjkyMTQsImV4cCI6MjA5MzEwNTIxNH0.UV4ukUXuAYKAqq85B4FTHO2BtIOqPaBHgAJN5lqyU5s';
+  /* 외국어판: '현재' 상자 문구·지역 이름 번역 (번역 빌드가 이 스크립트를 그대로 복사하므로 여기서 처리) */
+  var L=window.I18N_LANG;
+  var BOX={en:['9','{r} areas · {b} stores'],zh:['10','{r}个地区 {b}家门店'],vi:['7.5','{r} khu vực · {b} cửa hàng']};
+  var RN={en:{'수원':'Suwon','화성':'Hwaseong','용인':'Yongin','평택':'Pyeongtaek','오산':'Osan','안성':'Anseong','성남':'Seongnam','서울':'Seoul'},
+          zh:{'수원':'水原','화성':'华城','용인':'龙仁','평택':'平泽','오산':'乌山','안성':'安城','성남':'城南','서울':'首尔'}};
+  RN.vi=RN.en;
+  function rname(r){return (RN[L]&&RN[L][r])||r;}
   function setAll(sel,val){document.querySelectorAll(sel).forEach(function(e){e.textContent=val;});}
+  if(BOX[L]){
+    document.querySelectorAll('svg text').forEach(function(t){
+      var rc=t.querySelector('.js-rcount'),bc=t.querySelector('.js-bcount');if(!rc||!bc)return;
+      var r=rc.textContent,b=bc.textContent;
+      t.setAttribute('font-size',BOX[L][0]);
+      t.innerHTML=BOX[L][1].replace('{r}','<tspan class="js-rcount">'+r+'</tspan>').replace('{b}','<tspan class="js-bcount">'+b+'</tspan>');
+    });
+    document.querySelectorAll('.js-rnames').forEach(function(e){e.textContent=e.textContent.split('·').map(rname).join('·');});
+  }
   fetch(SB_URL+'/rest/v1/branches?select=region&order=region,sort_order',{headers:{'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY}})
     .then(function(r){return r.json();})
     .then(function(d){
@@ -687,7 +703,7 @@ var SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI
       var seen=Object.keys(cnt).sort(function(a,b){return cnt[b]-cnt[a]||a.localeCompare(b,'ko');});
       setAll('.js-bcount',d.length);
       setAll('.js-rcount',seen.length);
-      setAll('.js-rnames',seen.join('·'));
+      setAll('.js-rnames',seen.map(rname).join('·'));
     }).catch(function(){});
 })();
 </script>
