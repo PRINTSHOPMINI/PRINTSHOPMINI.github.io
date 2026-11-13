@@ -1838,10 +1838,11 @@ You can prevent them by checking the preview, following the how-to guide, and ch
 ⑦ Color and black-and-white came out mixed
 (Especially for PDFs converted in web design tools → open the file in a browser and check in the preview that the colors appear in color before printing)
 
-💡 In these cases, do this.
-★ From 8 a.m. to 9 p.m., please call us. (At PrintNow stores, please contact us on Naver TalkTalk.)
-☆ At other times, send the store name, your contact number and the problem on Naver TalkTalk!
-☆ We will check TalkTalk and contact you individually.
+❗ When you file a refund request, please follow these.
+★ You must leave the wrongly printed pages in the store.
+★ Depending on the case, you must submit the original file.
+[[warn:If you don't leave the printed pages or can't submit the original file, you may not get a refund.]]
+☆ For materials whose printouts or files are hard to submit (because of personal information, etc.), we recommend not printing them at our store.
 
 📖 For more details, tap below.
 [[go:faq.html#faq-70|Refunds at a glance: what is and isn't refunded]]
@@ -1879,10 +1880,11 @@ You can prevent them by checking the preview, following the how-to guide, and ch
 ⑦ 彩色和黑白混在一起打印
 （特别是用网页设计工具转换的 PDF → 请在浏览器中打开，先在预览中确认颜色是彩色的，再打印）
 
-💡 遇到这些情况，请这样做。
-★ 上午 8 点～晚上 9 点请打电话。（PrintNow 门店请通过 Naver TalkTalk 联系。）
-☆ 其他时间请通过 Naver TalkTalk 发送门店名称、联系方式和问题情况！
-☆ 我们确认 TalkTalk 后会单独联系您。
+❗ 申请退款时请一定遵守。
+★ 打错的打印件必须留在门店。
+★ 根据情况，需要提交原文件。
+[[warn:不留下打印件或难以提交原文件的，可能无法退款。]]
+☆ 因个人信息等原因难以提交打印件·文件的资料，建议不要在本店打印。
 
 📖 更详细的内容请点击下面。
 [[go:faq.html#faq-70|一眼看懂能退款和不能退款的情况]]
@@ -1920,10 +1922,11 @@ Có thể phòng tránh bằng cách xem trước, làm theo hướng dẫn sử
 ⑦ In ra lẫn lộn màu và đen trắng
 (Đặc biệt là PDF chuyển đổi từ công cụ thiết kế web → hãy mở bằng trình duyệt, kiểm tra ở phần xem trước xem màu có hiện đúng màu không rồi mới in)
 
-💡 Những trường hợp này, hãy làm như sau.
-★ Từ 8 giờ sáng đến 9 giờ tối, hãy gọi điện. (Cửa hàng PrintNow thì hãy liên hệ qua Naver TalkTalk.)
-☆ Ngoài giờ đó, hãy gửi tên cửa hàng, số liên lạc và tình trạng vấn đề qua Naver TalkTalk!
-☆ Chúng tôi sẽ xem TalkTalk rồi liên hệ riêng với bạn.
+❗ Khi đăng ký hoàn tiền, xin hãy tuân thủ.
+★ Bản in bị sai phải để lại ở cửa hàng.
+★ Tùy trường hợp, bạn phải nộp tệp gốc.
+[[warn:Nếu không để lại bản in hoặc khó nộp tệp gốc thì có thể không được hoàn tiền.]]
+☆ Tài liệu khó nộp bản in·tệp (vì thông tin cá nhân, v.v.) thì chúng tôi khuyên không nên in ở cửa hàng.
 
 📖 Xem chi tiết hơn ở bên dưới.
 [[go:faq.html#faq-70|Xem nhanh: trường hợp được và không được hoàn tiền]]
