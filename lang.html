@@ -38,5 +38,17 @@ h1{margin:26px 0 6px;font-size:30px;font-weight:900;text-align:center}
 </div>
 
 <p class="note">The machine screens are in Korean. Our guides show the Korean button names in [brackets].<br>机器屏幕是韩语，说明里用［括号］写出韩语按钮名称。<br>Màn hình máy là tiếng Hàn. Hướng dẫn ghi tên nút tiếng Hàn trong [ngoặc].</p>
+<script>
+// 포스터 QR용: lang.html?to=faq-77 로 오면 언어를 고른 뒤 그 FAQ(번역본)로 바로 가요. (인쇄 주의사항 포스터)
+(function(){
+  var m=/[?&]to=faq-(\d+)/.exec(location.search);if(!m)return;
+  var L=m[1]==='77'?{en:'Please read before printing',zh:'打印前请先阅读',vi:'Hãy đọc trước khi in',ko:'인쇄 주의사항 보기'}:{};
+  document.querySelectorAll('a.lang').forEach(function(a){
+    var ko=a.classList.contains('ko'),l=ko?'ko':(a.getAttribute('lang')||'').slice(0,2);
+    a.href=(ko?'':l+'/')+'faq.html#faq-'+m[1];
+    var s=a.querySelector('small');if(s&&L[l])s.textContent=L[l];
+  });
+})();
+</script>
 </body>
 </html>

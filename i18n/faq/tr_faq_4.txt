@@ -1803,3 +1803,128 @@ Tùy loại máy mà vị trí nút khác nhau.
 
 🔄 Khi bật lại máy, chương trình đã tải về và thông tin đăng nhập sẽ bị xóa hết.
 🖥️ Bật lại vẫn không được thì hãy dùng máy tính khác. Và báo tên cửa hàng, số máy tính qua TalkTalk. (ví dụ: cửa hàng Gwanggyo, máy tính số 2)
+
+@@77
+#q en: Printing? Please be careful about these things.
+#a en
+1️⃣ Be sure to read the how-to guide and the cautions posted in the store and on the PC.
+
+2️⃣ Save the file you want to print on the PC.
+Unzip compressed (ZIP) files first, then print.
+
+3️⃣ For language test certificates such as TOEIC, and school transcripts or graduation certificates, choose [증명서전용PIN9999] (certificate printer).
+
+4️⃣ If an error happens while printing from an internet site
+[[warn:No refund]]
+- Errors such as the job not being sent from the PC, downloads or program installs not working, and print errors such as blank pages or different content coming out of the printer machine
+- Gov24 (정부24), Hometax (홈택스), the Internet Registry Office (인터넷등기소), sites that issue university or language test (TOEIC etc.) certificates, and so on
+✅ A refund is possible only when a problem happens after you saved the file on the PC, opened it, and printed it.
+※ We do not compensate for any problem that happens while using paid sites where you pay and then print a specific document (such as revenue stamps), or sites that limit the number of printouts. Please use them only if you agree!
+
+5️⃣ Even if nothing prints after you pay, do not pay again!
+[[warn:No refund for duplicate payments]]
+Wait about 10 minutes, and if it still doesn't come out, contact us on TalkTalk.
+
+6️⃣ The cases below get
+[[warn:No refund.]]
+① The content was cut off or printed smaller
+② You chose the color printer but it printed in black and white
+③ The paper size came out wrong
+④ A blank page came out
+⑤ Double-sided / single-sided came out wrong
+The 5 cases above happen because of the user's mistake in the print option settings.
+You can prevent them by checking the preview, following the how-to guide, and checking the payment info screen [과금정보] at the printer machine before you pay.
+⑥ In color printing, the color you see on the PC and the actual printed color are different
+⑦ Color and black-and-white came out mixed
+(Especially for PDFs converted in web design tools → open the file in a browser and check in the preview that the colors appear in color before printing)
+
+💡 In these cases, do this.
+★ From 8 a.m. to 9 p.m., please call us. (At PrintNow stores, please contact us on Naver TalkTalk.)
+☆ At other times, send the store name, your contact number and the problem on Naver TalkTalk!
+☆ We will check TalkTalk and contact you individually.
+
+📖 For more details, tap below.
+[[go:faq.html#faq-70|Refunds at a glance: what is and isn't refunded]]
+[[go:guide-print.html|See how to print in detail]]
+#q zh: 要打印吗？这些事项请一定注意。
+#a zh
+1️⃣ 请务必阅读使用方法说明，以及门店和电脑上的注意事项。
+
+2️⃣ 要打印的文件请先保存到电脑。
+压缩文件请先解压再打印。
+
+3️⃣ TOEIC 等语言成绩证明、学校成绩·毕业证明，请选择［증명서전용PIN9999］（证书专用）。
+
+4️⃣ 在网站上打印时发生错误的情况
+[[warn:不予退款]]
+- 电脑无法发送打印任务、无法下载·无法安装程序等错误，复合机打出白纸·其他内容等打印错误
+- 政府24（정부24）、Hometax（홈택스）、网上登记所（인터넷등기소）、大学·TOEIC 等语言证明的发放网站等
+✅ 只有把文件保存到电脑、打开后打印时出了问题，才可以退款。
+※ 使用付款后才能打印特定文件（印花税票等）的收费网站，或限制打印次数的网站时发生的一切问题，我们不予赔偿。同意的顾客才请使用！
+
+5️⃣ 付款后即使没有打印出来，也不要重复付款！
+[[warn:重复付款不予退款]]
+请等 10 分钟左右，还不出来的话请通过 TalkTalk 联系我们。
+
+6️⃣ 下面的情况
+[[warn:不予退款。]]
+① 内容被截掉或被缩小
+② 选了彩色打印机却打成黑白
+③ 纸张大小不对
+④ 打出白纸
+⑤ 双面、单面不对
+以上 5 项是使用者打印选项设置失误造成的。
+先看预览、按使用方法说明操作、在复合机付款前确认收费信息窗口［과금정보］，就可以避免。
+⑥ 彩色打印时，电脑上看到的颜色和实际打印的颜色不同
+⑦ 彩色和黑白混在一起打印
+（特别是用网页设计工具转换的 PDF → 请在浏览器中打开，先在预览中确认颜色是彩色的，再打印）
+
+💡 遇到这些情况，请这样做。
+★ 上午 8 点～晚上 9 点请打电话。（PrintNow 门店请通过 Naver TalkTalk 联系。）
+☆ 其他时间请通过 Naver TalkTalk 发送门店名称、联系方式和问题情况！
+☆ 我们确认 TalkTalk 后会单独联系您。
+
+📖 更详细的内容请点击下面。
+[[go:faq.html#faq-70|一眼看懂能退款和不能退款的情况]]
+[[go:guide-print.html|查看详细的打印方法]]
+#q vi: Bạn muốn in? Xin hãy chú ý những điều này.
+#a vi
+1️⃣ Nhất định phải đọc hướng dẫn sử dụng và các lưu ý ghi trong cửa hàng và trên máy tính.
+
+2️⃣ Hãy lưu tệp cần in vào máy tính.
+Tệp nén thì giải nén trước rồi mới in.
+
+3️⃣ Giấy chứng nhận điểm ngoại ngữ như TOEIC, bảng điểm·giấy chứng nhận tốt nghiệp của trường thì chọn [증명서전용PIN9999] (máy in chứng chỉ).
+
+4️⃣ Khi xảy ra lỗi lúc in từ trang web trên internet
+[[warn:Không được hoàn tiền]]
+- Các lỗi như không gửi được lệnh in từ máy tính, không tải xuống được·không cài được chương trình, lỗi in như máy in đa năng ra giấy trắng·ra nội dung khác
+- Gov24 (정부24), Hometax (홈택스), Đăng ký trực tuyến (인터넷등기소), các trang cấp chứng chỉ của trường đại học·chứng chỉ ngoại ngữ như TOEIC, v.v.
+✅ Chỉ khi lưu tệp vào máy tính, mở tệp ra rồi in mà có vấn đề thì mới được hoàn tiền.
+※ Mọi vấn đề xảy ra khi dùng trang web trả phí (phải thanh toán rồi mới in được tài liệu, ví dụ tem thuế) hoặc trang web giới hạn số lần in, chúng tôi không bồi thường. Chỉ những ai đồng ý mới sử dụng!
+
+5️⃣ Dù đã thanh toán mà không in ra, cũng đừng thanh toán lần nữa!
+[[warn:Thanh toán trùng không được hoàn tiền]]
+Hãy chờ khoảng 10 phút, nếu vẫn không ra thì liên hệ qua TalkTalk.
+
+6️⃣ Các trường hợp dưới đây
+[[warn:Không được hoàn tiền.]]
+① Nội dung bị cắt hoặc bị thu nhỏ
+② Đã chọn máy in màu nhưng in ra đen trắng
+③ Khổ giấy ra sai
+④ Ra giấy trắng
+⑤ In hai mặt, một mặt ra sai
+5 trường hợp trên xảy ra do người dùng cài đặt tùy chọn in sai.
+Có thể phòng tránh bằng cách xem trước, làm theo hướng dẫn sử dụng, và kiểm tra màn hình thông tin thanh toán [과금정보] ở máy in đa năng trước khi thanh toán.
+⑥ Khi in màu, màu nhìn thấy trên máy tính khác với màu in ra thực tế
+⑦ In ra lẫn lộn màu và đen trắng
+(Đặc biệt là PDF chuyển đổi từ công cụ thiết kế web → hãy mở bằng trình duyệt, kiểm tra ở phần xem trước xem màu có hiện đúng màu không rồi mới in)
+
+💡 Những trường hợp này, hãy làm như sau.
+★ Từ 8 giờ sáng đến 9 giờ tối, hãy gọi điện. (Cửa hàng PrintNow thì hãy liên hệ qua Naver TalkTalk.)
+☆ Ngoài giờ đó, hãy gửi tên cửa hàng, số liên lạc và tình trạng vấn đề qua Naver TalkTalk!
+☆ Chúng tôi sẽ xem TalkTalk rồi liên hệ riêng với bạn.
+
+📖 Xem chi tiết hơn ở bên dưới.
+[[go:faq.html#faq-70|Xem nhanh: trường hợp được và không được hoàn tiền]]
+[[go:guide-print.html|Xem chi tiết cách in]]
