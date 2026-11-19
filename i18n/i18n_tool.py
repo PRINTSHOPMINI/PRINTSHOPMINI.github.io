@@ -12,7 +12,7 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 I18N = os.path.join(ROOT, 'i18n')
-PAGES = ['guide.html', 'guide-print.html', 'guide-copy.html', 'guide-scan.html', 'guide-fax.html', 'guide-coat.html', 'guide-bind.html', 'guide-video.html', 'faq.html', 'index.html', 'services.html', 'about.html', 'branches.html', 'branch-status.html', 'community.html']          # 번역할 페이지 (차례로 늘려 감)
+PAGES = ['guide.html', 'guide-print.html', 'guide-copy.html', 'guide-scan.html', 'guide-fax.html', 'guide-coat.html', 'guide-bind.html', 'guide-video.html', 'faq.html', 'index.html', 'services.html', 'about.html', 'branch-status.html', 'community.html']          # 번역할 페이지 (차례로 늘려 감)
 LANGS = {'en': ('English', 'en'), 'zh': ('中文', 'zh-Hans'), 'vi': ('Tiếng Việt', 'vi')}
 HANGUL = re.compile('[가-힣]')
 BLOCK = {'div', 'p', 'li', 'ul', 'ol', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'table', 'thead', 'tbody', 'tr', 'td', 'th',

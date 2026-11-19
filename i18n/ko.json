@@ -6909,24 +6909,6 @@
    "branch-status.html"
   ]
  },
- "777bdda1f1": {
-  "ko": "<a href=\"branches.html\">지점정보</a>",
-  "pages": [
-   "guide.html",
-   "guide-print.html",
-   "guide-copy.html",
-   "guide-scan.html",
-   "guide-fax.html",
-   "guide-coat.html",
-   "guide-bind.html",
-   "guide-video.html",
-   "faq.html",
-   "index.html",
-   "services.html",
-   "about.html",
-   "community.html"
-  ]
- },
  "8bb244e987": {
   "ko": "지점정보 - 프린트샵미니",
   "pages": [
@@ -6971,12 +6953,6 @@
    "branch-status.html"
   ]
  },
- "ec0f122c0d": {
-  "ko": "<a href=\"branches.html\">📍 지점 찾기</a> <a class=\"on\" href=\"branch-status.html\">🏪 지점현황</a>",
-  "pages": [
-   "branch-status.html"
-  ]
- },
  "861d9054c8": {
   "ko": "전체 <b id=\"cnt\">-</b>개",
   "pages": [
@@ -7003,6 +6979,66 @@
  },
  "1ef42d084b": {
   "ko": "<button class=\"back\" onclick=\"goList()\">← 지점 목록으로</button>",
+  "pages": [
+   "branch-status.html"
+  ]
+ },
+ "fc2077d002": {
+  "ko": "<a href=\"branch-status.html\">지점정보</a>",
+  "pages": [
+   "guide.html",
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html",
+   "faq.html",
+   "index.html",
+   "services.html",
+   "about.html",
+   "community.html"
+  ]
+ },
+ "89db4275fc": {
+  "ko": "<a class=\"nav-cta\" href=\"branch-status.html\">지점 찾기</a>",
+  "pages": [
+   "guide.html",
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html",
+   "faq.html",
+   "services.html",
+   "about.html",
+   "branch-status.html",
+   "community.html"
+  ]
+ },
+ "1549b8987c": {
+  "ko": "<a href=\"branch-status.html\">지점 찾기</a>",
+  "pages": [
+   "guide.html",
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html",
+   "faq.html",
+   "services.html",
+   "about.html",
+   "branch-status.html",
+   "community.html"
+  ]
+ },
+ "0d406a062e": {
+  "ko": "<a class=\"active\" href=\"branch-status.html\">지점정보</a>",
   "pages": [
    "branch-status.html"
   ]

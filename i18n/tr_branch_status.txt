@@ -1,10 +1,6 @@
 # 지점정보 메뉴 · 지점현황(branch-status.html) 번역 (2026-11-19)
 # 지점정보 = Store Info / 门店信息 / Thông tin cửa hàng, 지점현황 = All Stores / 门店一览 / Danh sách cửa hàng
 
-@@777bdda1f1
-en: <a href="branches.html">Store Info</a>
-zh: <a href="branches.html">门店信息</a>
-vi: <a href="branches.html">Thông tin cửa hàng</a>
 @@8bb244e987
 en: Store Info - PRINTSHOPMINI
 zh: 门店信息 - PRINTSHOPMINI
@@ -33,10 +29,6 @@ vi: Xem nhanh địa chỉ, số điện thoại, giờ mở cửa và dịch v�
 en: Address · phone · hours · services of each store at a glance
 zh: 一目了然地查看各门店的地址 · 电话 · 营业时间 · 服务
 vi: Địa chỉ · điện thoại · giờ mở cửa · dịch vụ của từng cửa hàng
-@@ec0f122c0d
-en: <a href="branches.html">📍 Find a Store</a> <a class="on" href="branch-status.html">🏪 All Stores</a>
-zh: <a href="branches.html">📍 查找门店</a> <a class="on" href="branch-status.html">🏪 门店一览</a>
-vi: <a href="branches.html">📍 Tìm cửa hàng</a> <a class="on" href="branch-status.html">🏪 Danh sách cửa hàng</a>
 @@861d9054c8
 en: Total <b id="cnt">-</b>
 zh: 共 <b id="cnt">-</b> 家
@@ -162,3 +154,31 @@ vi: Đang chuẩn bị đăng ký Naver Map
 en: Call
 zh: 拨打电话
 vi: Gọi điện
+@@fc2077d002
+en: <a href="branch-status.html">Store Info</a>
+zh: <a href="branch-status.html">门店信息</a>
+vi: <a href="branch-status.html">Thông tin cửa hàng</a>
+@@0d406a062e
+en: <a class="active" href="branch-status.html">Store Info</a>
+zh: <a class="active" href="branch-status.html">门店信息</a>
+vi: <a class="active" href="branch-status.html">Thông tin cửa hàng</a>
+@@89db4275fc
+en: <a class="nav-cta" href="branch-status.html">Find a Store</a>
+zh: <a class="nav-cta" href="branch-status.html">查找门店</a>
+vi: <a class="nav-cta" href="branch-status.html">Tìm cửa hàng</a>
+@@1549b8987c
+en: <a href="branch-status.html">Find a Store</a>
+zh: <a href="branch-status.html">查找门店</a>
+vi: <a href="branch-status.html">Tìm cửa hàng</a>
+@@ui 🅿️ 주차 가능
+en: 🅿️ Parking
+zh: 🅿️ 可停车
+vi: 🅿️ Có chỗ đỗ xe
+@@ui 교통 · 주차
+en: Transit · parking
+zh: 交通 · 停车
+vi: Giao thông · đỗ xe
+@@ui 신규 오픈
+en: New
+zh: 新店
+vi: Mới
