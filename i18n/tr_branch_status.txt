@@ -254,3 +254,11 @@ vi: Nhận hóa đơn
 en: How to get it
 zh: 查看领取方法
 vi: Xem cách nhận
+@@ui 사진으로 보기
+en: See with photos
+zh: 看照片
+vi: Xem bằng ảnh
+@@ui 처음 오시는 분은 차례대로 따라오세요
+en: First time? Just follow the steps in order.
+zh: 第一次来的话，请按顺序跟着走。
+vi: Lần đầu đến? Hãy đi theo từng bước.

@@ -135,6 +135,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .rc-btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
 .rc-btn{display:inline-flex;align-items:center;gap:6px;background:#111827;color:#fff;font-size:14px;font-weight:900;padding:8px 16px;border-radius:10px}
 .rc-how{display:inline-flex;align-items:center;font-size:14px;font-weight:700;color:var(--blue);padding:8px 6px}
+.dir-list{margin:0;padding-left:22px;font-size:14.5px;color:var(--text2);line-height:1.8}
+.dir-list li::marker{color:var(--blue);font-weight:900}
+.dir-video{display:block;width:100%;max-width:720px;border-radius:12px;background:#000;margin-bottom:14px}
+.dir-photos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.dir-photos a{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--border);background:#fff;cursor:zoom-in}
+.dir-photos img{display:block;width:100%;height:auto}
+@media(max-width:760px){.dir-photos{grid-template-columns:1fr}}
 .copy-btn{margin-left:6px;font-size:12px;font-weight:700;color:var(--text3);background:#fff;border:1px solid var(--border);border-radius:6px;padding:1px 8px;cursor:pointer;vertical-align:1px}
 .copy-btn:hover{color:var(--blue);border-color:var(--blue)}
 .svcs{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:4px}
@@ -299,6 +306,8 @@ function info(b){
     color:i.color!==false,
     extras:i.extras||'',
     directions:i.directions||'',
+    dirPhotos:(i.directions_photos||[]).filter(Boolean),
+    dirVideo:i.directions_video||'',
     parkNote:i.parking_note||'',
     hours:i.hours||(b.hours24!==false?'24시간 · 연중무휴':'')
   };
@@ -416,7 +425,7 @@ function renderDetail(b){
       (b.parking&&x.parkNote?'<a class="park-btn" href="https://fax.printnuri.com/parking" target="_blank" rel="noopener"><i>P</i>'+T('주차 할인 받기')+'</a>':'')],
     [T('이용 가능 서비스'),svcs?'<div class="svcs">'+svcs+'</div>':''],
     [T('주소'),b.address?esc(b.address)+'<button class="copy-btn" onclick="copyAddr(this)" data-a="'+esc(b.address)+'">'+T('복사')+'</button>':''],
-    [T('찾아오는 길'),x.directions?esc(x.directions).replace(/\n/g,'<br>'):''],
+    [T('찾아오는 길'),x.directions?'<ol class="dir-list">'+x.directions.split('\n').filter(function(l){return l.trim();}).map(function(l){return '<li>'+esc(l)+'</li>';}).join('')+'</ol>'+((x.dirPhotos.length||x.dirVideo)?'<a class="rc-how" href="#dirBox" onclick="document.getElementById(\'dirBox\').scrollIntoView({behavior:\'smooth\'});return false;">'+T('사진으로 보기')+' ›</a>':''):''],
     [T('전화번호'),tel?'<a class="tel" href="tel:'+tel.replace(/[^0-9]/g,'')+'">'+esc(tel)+'</a>':''],
     [T('운영시간'),esc(T(x.hours))],
     [T('출력 용지'),esc(x.papers)],
@@ -440,6 +449,14 @@ function renderDetail(b){
 // 상세 아래: 처음 온 손님용 사용방법, 도움이 필요할 때, 같은 지역 다른 지점 (모두 홈피 안 페이지·DB로 자동)
 var GUIDES=[['guide-print.html','🖨️','인쇄','--print'],['guide-copy.html','📋','복사','--copy'],['guide-scan.html','📄','스캔','--scan'],['guide-fax.html','📠','팩스','--fax'],['guide-coat.html','✨','코팅','--coat'],['guide-bind.html','📚','제본','--bind']];
 function renderExtra(b){
+  var xi=info(b),dh='';
+  // 찾아오는 길: 영상(있으면) + 단계 사진 — 관리자 > 지점 수정에서 올림
+  if(xi.dirVideo||xi.dirPhotos.length){
+    var steps=xi.directions.split('\n').filter(function(l){return l.trim();});
+    dh='<div class="ex-box full" id="dirBox"><div class="ex-h">🧭 '+T('찾아오는 길')+'</div><div class="ex-sub">'+T('처음 오시는 분은 차례대로 따라오세요')+'</div>'+
+      (xi.dirVideo?'<video class="dir-video" src="'+esc(xi.dirVideo)+'" controls playsinline preload="metadata"></video>':'')+
+      '<div class="dir-photos">'+xi.dirPhotos.map(function(u,i){return '<a href="'+esc(u)+'" target="_blank" rel="noopener"><img src="'+esc(u)+'" alt="'+esc(steps[i]||(T('찾아오는 길')+' '+(i+1)))+'" loading="lazy"></a>';}).join('')+'</div></div>';
+  }
   var g=GUIDES.map(function(x){return '<a href="'+x[0]+'"><i style="--c:color-mix(in srgb,var('+x[3]+') 18%,#fff)">'+x[1]+'</i>'+T(x[2])+'</a>';}).join('')+
     '<a href="guide-video.html"><i>▶</i>'+T('동영상으로 보기')+'</a>';
   var h='<div class="ex-box"><div class="ex-h">🙋 '+T('처음 오셨나요?')+'</div><div class="ex-sub">'+T('서비스를 고르면 이용 순서를 그림으로 보여 드려요')+'</div><div class="ex-links">'+g+'</div></div>';
@@ -451,7 +468,7 @@ function renderExtra(b){
   var near=ALL.filter(function(x){return x.region===b.region&&x.id!==b.id;});
   if(near.length)h+='<div class="ex-box full"><div class="ex-h">📍 '+T('근처 다른 지점')+' <span style="font-size:13px;color:var(--text3);font-weight:700">('+esc(b.region)+')</span></div><div class="ex-sub">'+T('이 지점을 이용하기 어려울 때 가까운 지점도 있어요')+'</div><div class="ex-links">'+
     near.map(function(x){return '<a href="#b'+x.id+'">'+esc(x.name)+'</a>';}).join('')+'</div></div>';
-  document.getElementById('dExtra').innerHTML=h;
+  document.getElementById('dExtra').innerHTML=dh+h;
 }
 function slideTo(i){
   var s=document.querySelectorAll('#slider .slide'),d=document.querySelectorAll('#slider .dots button');
