@@ -296,6 +296,7 @@ input::-ms-reveal,input::-ms-clear{display:none}   /* 브라우저(엣지)가 �
         <input type="checkbox" id="bAddParking" style="width:16px;height:16px;accent-color:var(--blue)"> 🅿️ 주차 가능
       </label>
     </div>
+    <div id="bAddInfo"></div>
     <div class="form-actions">
       <button class="btn-primary" id="bAddBtn" onclick="addBranch()">지점 등록</button>
     </div>
@@ -548,6 +549,7 @@ input::-ms-reveal,input::-ms-clear{display:none}   /* 브라우저(엣지)가 �
         <input type="checkbox" id="bEditParking" style="width:16px;height:16px;accent-color:var(--blue)"> 🅿️ 주차 가능
       </label>
     </div>
+    <div id="bEditInfo"></div>
     <div class="form-actions">
       <button class="btn-cancel" onclick="closeBranchEditModal()">취소</button>
       <button class="btn-primary" id="bEditBtn" onclick="saveBranchEdit()">저장하기</button>
@@ -1073,16 +1075,129 @@ async function writeBranchPhone(id,tel){
   var r=await fetch(SB_URL+'/rest/v1/inventory_config?on_conflict=key',{method:'POST',headers:h,body:JSON.stringify({key:'branch_phones',value:m})});
   if(!r.ok)throw new Error('phone save failed');
 }
+/* 지점현황(branch-status.html)에 보이는 추가 정보는 inventory_config 의 branch_info({지점id: {...}})에 보관해요
+   no 호점 번호 · status 영업중/오픈 예정/임시 휴업 · open_note 배지 글자 · photos 사진 주소들 · services · papers · color · extras · hours */
+var BI_SVCS=[['print','🖨️ 인쇄'],['copy','📋 복사'],['scan','📄 스캔'],['fax','📠 팩스'],['coat','✨ 코팅'],['bind','📚 제본']];
+var BI_STATUS=['영업중','오픈 예정','임시 휴업'];
+var editPhotos=[];
+async function readBranchInfo(){
+  try{
+    var r=await fetch(SB_URL+'/rest/v1/inventory_config?key=eq.branch_info',{headers:SB_HDR});
+    var j=await r.json();
+    return (j[0]&&j[0].value)||{};
+  }catch(e){return {};}
+}
+async function writeBranchInfo(id,obj){
+  var m=await readBranchInfo();
+  if(obj)m[String(id)]=obj;else delete m[String(id)];
+  var h=Object.assign({},SB_HDR,{'Prefer':'resolution=merge-duplicates,return=minimal'});
+  var r=await fetch(SB_URL+'/rest/v1/inventory_config?on_conflict=key',{method:'POST',headers:h,body:JSON.stringify({key:'branch_info',value:m})});
+  if(!r.ok)throw new Error('info save failed');
+}
+function biFormHtml(p,withPhotos){
+  var lab='display:flex;align-items:center;gap:6px;font-size:14px;cursor:pointer';
+  var cb='width:16px;height:16px;accent-color:var(--blue)';
+  return '<div style="border-top:1px dashed var(--border);margin:4px 0 16px;padding-top:16px">'+
+    '<div style="font-size:14px;font-weight:900;margin-bottom:4px">🏪 지점현황 페이지 정보</div>'+
+    '<div style="font-size:12px;color:var(--text3);margin-bottom:12px">지점정보 &gt; 지점현황 카드와 상세에 보여요. 호점 번호가 큰 지점이 맨 앞에 나와요.</div>'+
+    '<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">'+
+      '<div class="form-row" style="margin-bottom:0"><label>호점 번호 <span style="font-weight:400;color:var(--text3)">(예: 17)</span></label><input type="number" min="1" id="'+p+'No"></div>'+
+      '<div class="form-row" style="margin-bottom:0"><label>영업 상태</label><select id="'+p+'Status">'+BI_STATUS.map(function(s){return '<option>'+s+'</option>';}).join('')+'</select></div>'+
+    '</div>'+
+    '<div class="form-row" style="margin-top:12px"><label>오픈 예정 배지 글자 <span style="font-weight:400;color:var(--text3)">(오픈 예정일 때만, 예: 12월 오픈 예정)</span></label><input type="text" id="'+p+'OpenNote" placeholder="12월 오픈 예정"></div>'+
+    '<div class="form-row"><label>이용 가능 서비스</label><div style="display:flex;gap:14px;flex-wrap:wrap">'+
+      BI_SVCS.map(function(s){return '<label style="'+lab+';font-weight:500;margin:0"><input type="checkbox" class="'+p+'Svc" value="'+s[0]+'" checked style="'+cb+'"> '+s[1]+'</label>';}).join('')+
+      '<label style="'+lab+';font-weight:500;margin:0"><input type="checkbox" id="'+p+'Color" checked style="'+cb+'"> 🌈 컬러 출력</label>'+
+    '</div></div>'+
+    '<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">'+
+      '<div class="form-row" style="margin-bottom:0"><label>출력 용지</label><input type="text" id="'+p+'Papers" value="A4, A3"></div>'+
+      '<div class="form-row" style="margin-bottom:0"><label>운영시간 <span style="font-weight:400;color:var(--text3)">(비우면 24시간 · 연중무휴)</span></label><input type="text" id="'+p+'Hours" placeholder="24시간 · 연중무휴"></div>'+
+    '</div>'+
+    '<div class="form-row" style="margin-top:12px"><label>부가 서비스 <span style="font-weight:400;color:var(--text3)">(없으면 비워 두세요 — 상세에서 줄이 안 보여요)</span></label><input type="text" id="'+p+'Extras"></div>'+
+    (withPhotos?
+      '<div class="form-row"><label>매장 사진 <span style="font-weight:400;color:var(--text3)">(없으면 로고가 보여요 · 첫 사진이 카드 사진 · 정면 사진 추천)</span></label>'+
+      '<div id="'+p+'Photos" style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:8px"></div>'+
+      '<label class="btn-edit" style="display:inline-block;cursor:pointer;font-size:13px;padding:7px 14px">📷 사진 올리기<input type="file" accept="image/*" multiple style="display:none" onchange="uploadBranchPhotos(this)"></label>'+
+      '<span id="'+p+'PhotoSt" style="font-size:12px;color:var(--text3);margin-left:8px"></span></div>'
+      :'<div style="font-size:12px;color:var(--text3)">📷 매장 사진은 등록한 뒤 목록의 [수정]에서 올릴 수 있어요. (그 전엔 로고가 보여요)</div>')+
+  '</div>';
+}
+function biFill(p,i){
+  i=i||{};
+  document.getElementById(p+'No').value=i.no||'';
+  document.getElementById(p+'Status').value=i.status||'영업중';
+  document.getElementById(p+'OpenNote').value=i.open_note||'';
+  var sv=i.services||BI_SVCS.map(function(s){return s[0];});
+  document.querySelectorAll('.'+p+'Svc').forEach(function(c){c.checked=sv.indexOf(c.value)>=0;});
+  document.getElementById(p+'Color').checked=i.color!==false;
+  document.getElementById(p+'Papers').value=i.papers!=null?i.papers:'A4, A3';
+  document.getElementById(p+'Hours').value=i.hours||'';
+  document.getElementById(p+'Extras').value=i.extras||'';
+}
+function biRead(p,photos){
+  var o={
+    no:parseInt(document.getElementById(p+'No').value,10)||0,
+    status:document.getElementById(p+'Status').value,
+    open_note:document.getElementById(p+'OpenNote').value.trim(),
+    services:[].map.call(document.querySelectorAll('.'+p+'Svc:checked'),function(c){return c.value;}),
+    color:document.getElementById(p+'Color').checked,
+    papers:document.getElementById(p+'Papers').value.trim(),
+    hours:document.getElementById(p+'Hours').value.trim(),
+    extras:document.getElementById(p+'Extras').value.trim(),
+    photos:photos||[]
+  };
+  Object.keys(o).forEach(function(k){if(o[k]===''||(k==='no'&&!o[k]))delete o[k];});
+  return o;
+}
+function renderEditPhotos(){
+  var box=document.getElementById('bEditPhotos');
+  if(!editPhotos.length){box.innerHTML='<div style="width:84px;height:84px;border:1px dashed var(--border);border-radius:10px;display:flex;align-items:center;justify-content:center;background:#F3F8FE"><img src="logo.jpg" style="width:46px;opacity:.8" alt=""></div>';return;}
+  box.innerHTML=editPhotos.map(function(u,i){
+    return '<div style="position:relative;width:84px">'+
+      '<img src="'+escHtml(u)+'" style="width:84px;height:84px;object-fit:cover;border-radius:10px;border:'+(i===0?'2px solid var(--blue)':'1px solid var(--border)')+'" alt="">'+
+      '<div style="display:flex;justify-content:space-between;margin-top:3px">'+
+        '<button type="button" onclick="moveBranchPhoto('+i+',-1)" style="border:1px solid var(--border);background:#fff;border-radius:6px;font-size:11px;padding:0 6px;cursor:pointer"'+(i===0?' disabled':'')+'>◀</button>'+
+        '<button type="button" onclick="removeBranchPhoto('+i+')" style="border:1px solid #FCA5A5;color:#DC2626;background:#fff;border-radius:6px;font-size:11px;padding:0 6px;cursor:pointer">삭제</button>'+
+        '<button type="button" onclick="moveBranchPhoto('+i+',1)" style="border:1px solid var(--border);background:#fff;border-radius:6px;font-size:11px;padding:0 6px;cursor:pointer"'+(i===editPhotos.length-1?' disabled':'')+'>▶</button>'+
+      '</div></div>';
+  }).join('');
+}
+function moveBranchPhoto(i,d){var j=i+d;if(j<0||j>=editPhotos.length)return;var t=editPhotos[i];editPhotos[i]=editPhotos[j];editPhotos[j]=t;renderEditPhotos();}
+function removeBranchPhoto(i){if(!confirm('이 사진을 빼시겠습니까? ([저장하기]를 눌러야 반영돼요)'))return;editPhotos.splice(i,1);renderEditPhotos();}
+async function uploadBranchPhotos(input){
+  var files=[].slice.call(input.files||[]);input.value='';
+  if(!files.length)return;
+  var id=document.getElementById('bEditId').value,st=document.getElementById('bEditPhotoSt');
+  for(var k=0;k<files.length;k++){
+    var f=files[k];
+    st.textContent='⏳ 올리는 중... ('+(k+1)+'/'+files.length+')';
+    var ext=f.name.lastIndexOf('.')>=0?f.name.slice(f.name.lastIndexOf('.')).toLowerCase():'.jpg';
+    var path='branches/'+id+'/'+Date.now()+'_'+k+ext;
+    try{
+      var r=await fetch(SB_URL+'/storage/v1/object/service-guides/'+path,{method:'POST',headers:{'Authorization':'Bearer '+SB_KEY,'Content-Type':(f.type||'image/jpeg'),'x-upsert':'false'},body:f});
+      if(!r.ok)throw new Error(r.status);
+      editPhotos.push(SB_URL+'/storage/v1/object/public/service-guides/'+path);
+    }catch(e){st.textContent='❌ 올리기 실패: '+f.name;return;}
+  }
+  renderEditPhotos();
+  st.textContent='✅ 올렸어요. [저장하기]를 눌러야 홈피에 보여요.';
+}
+document.getElementById('bAddInfo').innerHTML=biFormHtml('bAdd',false);
+document.getElementById('bEditInfo').innerHTML=biFormHtml('bEdit',true);
+
 async function loadBranches(){
   var r=await fetch(SB_URL+'/rest/v1/branches?order=region,sort_order,name',{headers:SB_HDR});
   var data=await r.json();
   var phones=await readBranchPhones();
+  var binfo=await readBranchInfo();
+  data.sort(function(a,b){var na=(binfo[a.id]||{}).no||0,nb=(binfo[b.id]||{}).no||0;return (nb||-1)-(na||-1)||a.name.localeCompare(b.name,'ko');});
   document.getElementById('branchCount').textContent='총 '+data.length+'개';
   if(!data.length){document.getElementById('branchList').innerHTML='<div class="list-empty">등록된 지점이 없습니다.</div>';return;}
   document.getElementById('branchList').innerHTML=data.map(function(b){
     return '<div class="notice-card">'+
       '<div class="nc-top">'+
-        '<div class="nc-title">📍 프린트샵미니 '+escHtml(b.name)+' <span style="font-size:12px;font-weight:500;color:var(--text3)">['+escHtml(b.region)+']</span></div>'+
+        '<div class="nc-title">'+((binfo[b.id]||{}).no?'<span style="font-size:12px;font-weight:700;color:#fff;background:#374151;border-radius:50px;padding:1px 8px;margin-right:6px">'+binfo[b.id].no+'호점</span>':'')+'📍 프린트샵미니 '+escHtml(b.name)+' <span style="font-size:12px;font-weight:500;color:var(--text3)">['+escHtml(b.region)+']</span>'+
+          (((binfo[b.id]||{}).status||'영업중')!=='영업중'?' <span style="font-size:12px;font-weight:700;color:#fff;background:#EA580C;border-radius:50px;padding:1px 8px">'+escHtml(binfo[b.id].open_note||binfo[b.id].status)+'</span>':'')+'</div>'+
         '<div class="nc-actions">'+
           '<button class="btn-edit" onclick="openBranchEditModal('+b.id+')">수정</button>'+
           '<button class="btn-del" onclick="deleteBranch('+b.id+',\''+escAttr(b.name)+'\')">삭제</button>'+
@@ -1109,7 +1224,7 @@ async function addBranch(){
   var subway=document.getElementById('bAddSubway').checked;
   var parking=document.getElementById('bAddParking').checked;
   var st=document.getElementById('branchAddStatus');
-  if(!name||!region||!addr||!placeId){showStatus(st,'err','모든 항목을 입력해 주세요.');return;}
+  if(!name||!region||!addr){showStatus(st,'err','지점명·지역·주소를 입력해 주세요. (네이버 지도는 아직 없으면 비워도 돼요)');return;}
   var btn=document.getElementById('bAddBtn');
   btn.disabled=true;btn.textContent='등록 중...';
   try{
@@ -1117,6 +1232,7 @@ async function addBranch(){
     if(!r.ok)throw new Error();
     var created=await r.json();
     if(tel&&created&&created[0]&&created[0].id){try{await writeBranchPhone(created[0].id,tel);}catch(e3){}}
+    if(created&&created[0]&&created[0].id){try{await writeBranchInfo(created[0].id,biRead('bAdd',[]));}catch(e5){}}
     showStatus(st,'ok','✅ 지점이 등록되었습니다!');
     document.getElementById('bAddName').value='';
     document.getElementById('bAddAddr').value='';
@@ -1124,6 +1240,7 @@ async function addBranch(){
     document.getElementById('bAddPlaceId').value='';
     document.getElementById('bAddSubway').checked=false;
     document.getElementById('bAddParking').checked=false;
+    biFill('bAdd',{});
     loadBranches();
   }catch(e){showStatus(st,'err','❌ 등록에 실패했습니다.');}
   btn.disabled=false;btn.textContent='지점 등록';
@@ -1144,6 +1261,10 @@ async function openBranchEditModal(id){
   document.getElementById('bEditHours24').checked=b.hours24!==false;
   document.getElementById('bEditSubway').checked=b.subway;
   document.getElementById('bEditParking').checked=b.parking;
+  var bi=(await readBranchInfo())[String(b.id)]||{};
+  biFill('bEdit',bi);
+  editPhotos=(bi.photos||[]).slice();renderEditPhotos();
+  document.getElementById('bEditPhotoSt').textContent='';
   document.getElementById('branchEditStatus').style.display='none';
   document.getElementById('branchEditModal').classList.add('open');
 }
@@ -1160,13 +1281,14 @@ async function saveBranchEdit(){
   var subway=document.getElementById('bEditSubway').checked;
   var parking=document.getElementById('bEditParking').checked;
   var st=document.getElementById('branchEditStatus');
-  if(!name||!region||!addr||!placeId){showStatus(st,'err','모든 항목을 입력해 주세요.');return;}
+  if(!name||!region||!addr){showStatus(st,'err','지점명·지역·주소를 입력해 주세요. (네이버 지도는 아직 없으면 비워도 돼요)');return;}
   var btn=document.getElementById('bEditBtn');
   btn.disabled=true;btn.textContent='저장 중...';
   try{
     var r=await fetch(SB_URL+'/rest/v1/branches?id=eq.'+id,{method:'PATCH',headers:SB_HDR,body:JSON.stringify({name:name,region:region,address:addr,naver_place_id:placeId,hours24:hours24,subway:subway,parking:parking})});
     if(!r.ok)throw new Error();
     await writeBranchPhone(id,tel);
+    await writeBranchInfo(id,biRead('bEdit',editPhotos));
     showToast('지점 정보가 수정되었습니다.');
     closeBranchEditModal();
     loadBranches();
@@ -1180,6 +1302,7 @@ async function deleteBranch(id,name){
     var r=await fetch(SB_URL+'/rest/v1/branches?id=eq.'+id,{method:'DELETE',headers:SB_HDR});
     if(!r.ok)throw new Error();
     try{await writeBranchPhone(id,'');}catch(e4){}
+    try{await writeBranchInfo(id,null);}catch(e6){}
     showToast('지점이 삭제되었습니다.');
     loadBranches();
   }catch(e){showToast('삭제에 실패했습니다.');}

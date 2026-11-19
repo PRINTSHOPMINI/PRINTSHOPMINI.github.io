@@ -1,0 +1,164 @@
+# 지점정보 메뉴 · 지점현황(branch-status.html) 번역 (2026-11-19)
+# 지점정보 = Store Info / 门店信息 / Thông tin cửa hàng, 지점현황 = All Stores / 门店一览 / Danh sách cửa hàng
+
+@@777bdda1f1
+en: <a href="branches.html">Store Info</a>
+zh: <a href="branches.html">门店信息</a>
+vi: <a href="branches.html">Thông tin cửa hàng</a>
+@@8bb244e987
+en: Store Info - PRINTSHOPMINI
+zh: 门店信息 - PRINTSHOPMINI
+vi: Thông tin cửa hàng - PRINTSHOPMINI
+@@fd890c9f4c
+en: <a class="active" href="branches.html">Store Info</a>
+zh: <a class="active" href="branches.html">门店信息</a>
+vi: <a class="active" href="branches.html">Thông tin cửa hàng</a>
+@@f307dfeb2f
+en: Store Info
+zh: 门店信息
+vi: Thông tin cửa hàng
+@@eef9c4b081
+en: <a class="on" href="branches.html">📍 Find a Store</a> <a href="branch-status.html">🏪 All Stores</a>
+zh: <a class="on" href="branches.html">📍 查找门店</a> <a href="branch-status.html">🏪 门店一览</a>
+vi: <a class="on" href="branches.html">📍 Tìm cửa hàng</a> <a href="branch-status.html">🏪 Danh sách cửa hàng</a>
+@@7a78be0662
+en: All Stores - PRINTSHOPMINI
+zh: 门店一览 - PRINTSHOPMINI
+vi: Danh sách cửa hàng - PRINTSHOPMINI
+@@29009bd36b
+en: See the address, phone number, opening hours and services of every PRINTSHOPMINI store at a glance.
+zh: 一目了然地查看 PRINTSHOPMINI 所有门店的地址、电话、营业时间和可用服务。
+vi: Xem nhanh địa chỉ, số điện thoại, giờ mở cửa và dịch vụ của tất cả cửa hàng PRINTSHOPMINI.
+@@08bb83e2bc
+en: Address · phone · hours · services of each store at a glance
+zh: 一目了然地查看各门店的地址 · 电话 · 营业时间 · 服务
+vi: Địa chỉ · điện thoại · giờ mở cửa · dịch vụ của từng cửa hàng
+@@ec0f122c0d
+en: <a href="branches.html">📍 Find a Store</a> <a class="on" href="branch-status.html">🏪 All Stores</a>
+zh: <a href="branches.html">📍 查找门店</a> <a class="on" href="branch-status.html">🏪 门店一览</a>
+vi: <a href="branches.html">📍 Tìm cửa hàng</a> <a class="on" href="branch-status.html">🏪 Danh sách cửa hàng</a>
+@@861d9054c8
+en: Total <b id="cnt">-</b>
+zh: 共 <b id="cnt">-</b> 家
+vi: Tổng <b id="cnt">-</b> cửa hàng
+@@6519e4e1f4
+en: Type a store name or area
+zh: 请输入门店名称或地区
+vi: Nhập tên cửa hàng hoặc khu vực
+@@215f940078
+en: Search stores
+zh: 搜索门店
+vi: Tìm cửa hàng
+@@ab457137f4
+en: Search
+zh: 搜索
+vi: Tìm
+@@1ef42d084b
+en: <button class="back" onclick="goList()">← Back to store list</button>
+zh: <button class="back" onclick="goList()">← 返回门店列表</button>
+vi: <button class="back" onclick="goList()">← Quay lại danh sách</button>
+
+@@ui 지점현황
+en: All Stores
+zh: 门店一览
+vi: Danh sách cửa hàng
+@@ui {n}호점
+en: Store No. {n}
+zh: {n}号店
+vi: Cửa hàng số {n}
+@@ui 영업중
+en: Open
+zh: 营业中
+vi: Đang mở cửa
+@@ui 오픈 예정
+en: Opening soon
+zh: 即将开业
+vi: Sắp khai trương
+@@ui 12월 오픈 예정
+en: Opening in December
+zh: 12月开业
+vi: Khai trương tháng 12
+@@ui 임시 휴업
+en: Temporarily closed
+zh: 暂停营业
+vi: Tạm đóng cửa
+@@ui 매장 사진 준비 중
+en: Store photo coming soon
+zh: 门店照片准备中
+vi: Ảnh cửa hàng sắp có
+@@ui 찾는 지점이 없어요. 다른 말로 찾아보세요.
+en: No store found. Try other words.
+zh: 没有找到门店，请换个词搜索。
+vi: Không tìm thấy cửa hàng. Hãy thử từ khác.
+@@ui 컬러
+en: Color
+zh: 彩色
+vi: In màu
+@@ui 이용 가능 서비스
+en: Available services
+zh: 可用服务
+vi: Dịch vụ có sẵn
+@@ui 인쇄
+en: Print
+zh: 打印
+vi: In
+@@ui 복사
+en: Copy
+zh: 复印
+vi: Sao chụp
+@@ui 스캔
+en: Scan
+zh: 扫描
+vi: Quét
+@@ui 팩스
+en: Fax
+zh: 传真
+vi: Fax
+@@ui 주소
+en: Address
+zh: 地址
+vi: Địa chỉ
+@@ui 복사됨
+en: Copied
+zh: 已复制
+vi: Đã sao chép
+@@ui 전화번호
+en: Phone
+zh: 电话
+vi: Điện thoại
+@@ui 운영시간
+en: Opening hours
+zh: 营业时间
+vi: Giờ mở cửa
+@@ui 24시간 · 연중무휴
+en: 24 hours · open every day
+zh: 24小时 · 全年无休
+vi: 24 giờ · mở cửa mỗi ngày
+@@ui 출력 용지
+en: Paper sizes
+zh: 纸张尺寸
+vi: Khổ giấy
+@@ui 부가 서비스
+en: Extra services
+zh: 附加服务
+vi: Dịch vụ thêm
+@@ui 영업 여부
+en: Status
+zh: 营业状态
+vi: Tình trạng
+@@ui 스마트플레이스로 보기
+en: See on Naver Smart Place
+zh: 在 Naver 智能地点查看
+vi: Xem trên Naver Smart Place
+@@ui 네이버 스마트플레이스는 등록 준비 중이에요
+en: Naver Smart Place listing is being prepared
+zh: Naver 智能地点正在准备登记
+vi: Đang chuẩn bị đăng ký Naver Smart Place
+@@ui 네이버 지도 등록 준비 중이에요
+en: Naver Map listing is being prepared
+zh: Naver 地图正在准备登记
+vi: Đang chuẩn bị đăng ký Naver Map
+@@ui 전화 걸기
+en: Call
+zh: 拨打电话
+vi: Gọi điện

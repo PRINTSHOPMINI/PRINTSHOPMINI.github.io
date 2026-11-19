@@ -35,7 +35,8 @@
    "guide-coat.html",
    "guide-bind.html",
    "guide-video.html",
-   "index.html"
+   "index.html",
+   "about.html"
   ]
  },
  "746bce6b91": {
@@ -53,7 +54,8 @@
    "index.html",
    "about.html",
    "branches.html",
-   "community.html"
+   "community.html",
+   "branch-status.html"
   ]
  },
  "5974784a0b": {
@@ -84,25 +86,8 @@
    "index.html",
    "services.html",
    "branches.html",
-   "community.html"
-  ]
- },
- "e1eaf72438": {
-  "ko": "<a href=\"branches.html\">지점찾기</a>",
-  "pages": [
-   "guide.html",
-   "guide-print.html",
-   "guide-copy.html",
-   "guide-scan.html",
-   "guide-fax.html",
-   "guide-coat.html",
-   "guide-bind.html",
-   "guide-video.html",
-   "faq.html",
-   "index.html",
-   "services.html",
-   "about.html",
-   "community.html"
+   "community.html",
+   "branch-status.html"
   ]
  },
  "2cc04eb419": {
@@ -121,7 +106,8 @@
    "services.html",
    "about.html",
    "branches.html",
-   "community.html"
+   "community.html",
+   "branch-status.html"
   ]
  },
  "b7b43e0773": {
@@ -139,7 +125,8 @@
    "services.html",
    "about.html",
    "branches.html",
-   "community.html"
+   "community.html",
+   "branch-status.html"
   ]
  },
  "72ec26f778": {
@@ -231,25 +218,6 @@
   "ko": "서비스를 고르면 이용 순서를 단계별로 안내합니다. 상단 메뉴 <b>사용방법</b>에서도 바로 이동할 수 있습니다.",
   "pages": [
    "guide.html"
-  ]
- },
- "5657eccbe1": {
-  "ko": "<b style=\"display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:var(--blue,#1B8AC4)\">프린트샵미니</b> · <b style=\"display:inline-block;color:#fff;border-radius:8px;padding:1px 9px;font-weight:800;font-size:12.5px;line-height:1.7;vertical-align:1px;white-space:nowrap;background:#F28C28\">프린트나우</b>는 <span style=\"white-space:nowrap\">(주)굿러닝파트너</span> 법인의 브랜드예요.",
-  "pages": [
-   "guide.html",
-   "guide-print.html",
-   "guide-copy.html",
-   "guide-scan.html",
-   "guide-fax.html",
-   "guide-coat.html",
-   "guide-bind.html",
-   "guide-video.html",
-   "faq.html",
-   "index.html",
-   "services.html",
-   "about.html",
-   "branches.html",
-   "community.html"
   ]
  },
  "1d79be91bd": {
@@ -523,7 +491,8 @@
    "services.html",
    "about.html",
    "branches.html",
-   "community.html"
+   "community.html",
+   "branch-status.html"
   ]
  },
  "0af74d46ed": {
@@ -658,7 +627,8 @@
    "services.html",
    "about.html",
    "branches.html",
-   "community.html"
+   "community.html",
+   "branch-status.html"
   ]
  },
  "5ade7fd923": {
@@ -690,26 +660,8 @@
    "services.html",
    "about.html",
    "branches.html",
-   "community.html"
-  ]
- },
- "691ca4bf48": {
-  "ko": "<a style=\"color:inherit;text-decoration:underline\" href=\"privacy.html\">개인정보처리방침</a> · 이용약관",
-  "pages": [
-   "guide.html",
-   "guide-print.html",
-   "guide-copy.html",
-   "guide-scan.html",
-   "guide-fax.html",
-   "guide-coat.html",
-   "guide-bind.html",
-   "guide-video.html",
-   "faq.html",
-   "index.html",
-   "services.html",
-   "about.html",
-   "branches.html",
-   "community.html"
+   "community.html",
+   "branch-status.html"
   ]
  },
  "83973dda29": {
@@ -4259,14 +4211,6 @@
    "faq.html"
   ]
  },
- "fd734e4198": {
-  "ko": "<a class=\"nav-logo-name\" href=\"index.html\">🦝 프린트샵미니</a>",
-  "pages": [
-   "faq.html",
-   "services.html",
-   "about.html"
-  ]
- },
  "c0786aecd3": {
   "ko": "<a href=\"guide.html\">사용방법</a>",
   "pages": [
@@ -4275,7 +4219,8 @@
    "services.html",
    "about.html",
    "branches.html",
-   "community.html"
+   "community.html",
+   "branch-status.html"
   ]
  },
  "19e45f0055": {
@@ -4286,7 +4231,8 @@
    "services.html",
    "about.html",
    "branches.html",
-   "community.html"
+   "community.html",
+   "branch-status.html"
   ]
  },
  "8563a5eade": {
@@ -4351,16 +4297,6 @@
    "faq.html"
   ]
  },
- "f6fbc04a45": {
-  "ko": "🦝 프린트샵미니",
-  "pages": [
-   "faq.html",
-   "services.html",
-   "about.html",
-   "branches.html",
-   "community.html"
-  ]
- },
  "d8ab5eae64": {
   "ko": "서비스",
   "pages": [
@@ -4369,7 +4305,8 @@
    "services.html",
    "about.html",
    "branches.html",
-   "community.html"
+   "community.html",
+   "branch-status.html"
   ]
  },
  "abf7b840d0": {
@@ -4379,7 +4316,8 @@
    "services.html",
    "about.html",
    "branches.html",
-   "community.html"
+   "community.html",
+   "branch-status.html"
   ]
  },
  "f7b7d01a45": {
@@ -4389,7 +4327,8 @@
    "services.html",
    "about.html",
    "branches.html",
-   "community.html"
+   "community.html",
+   "branch-status.html"
   ]
  },
  "95537cc1c0": {
@@ -4400,7 +4339,8 @@
    "services.html",
    "about.html",
    "branches.html",
-   "community.html"
+   "community.html",
+   "branch-status.html"
   ]
  },
  "2bf3058b2f": {
@@ -4411,7 +4351,8 @@
    "services.html",
    "about.html",
    "branches.html",
-   "community.html"
+   "community.html",
+   "branch-status.html"
   ]
  },
  "dcb4f896f9": {
@@ -4422,7 +4363,8 @@
    "services.html",
    "about.html",
    "branches.html",
-   "community.html"
+   "community.html",
+   "branch-status.html"
   ]
  },
  "2a3c32033f": {
@@ -4433,7 +4375,8 @@
    "services.html",
    "about.html",
    "branches.html",
-   "community.html"
+   "community.html",
+   "branch-status.html"
   ]
  },
  "ff1dad3f27": {
@@ -4504,12 +4447,6 @@
  },
  "e84c98526f": {
   "ko": "안녕하세요! 미니프랜즈예요 👋",
-  "pages": [
-   "index.html"
-  ]
- },
- "690394359b": {
-  "ko": "<a class=\"hf s1\" href=\"guide-coat.html\" style=\"--c:#7C3AED\"><img alt=\"코팅 거북이\" src=\"img/friends/coat.webp\"/><span>코팅</span></a> <a class=\"hf s2\" href=\"guide-scan.html\" style=\"--c:#12BDB0\"><img alt=\"스캔 부엉이\" src=\"img/friends/scan.webp\"/><span>스캔</span></a> <a class=\"hf s3\" href=\"guide-print.html\" style=\"--c:#22B24C\"><img alt=\"인쇄 펭귄\" src=\"img/friends/print.webp\"/><span>인쇄</span></a> <span class=\"hf s4\" style=\"--c:var(--blue)\"><img alt=\"라쿤\" src=\"img/friends/raccoon.webp\"/><span>프린트샵미니</span></span> <a class=\"hf s3\" href=\"guide-copy.html\" style=\"--c:#018FFB\"><img alt=\"복사 앵무새\" src=\"img/friends/copy.webp\"/><span>복사</span></a> <a class=\"hf s2\" href=\"guide-fax.html\" style=\"--c:#F3732C\"><img alt=\"팩스 비둘기\" src=\"img/friends/fax.webp\"/><span>팩스</span></a> <a class=\"hf s1\" href=\"guide-bind.html\" style=\"--c:#EC4899\"><img alt=\"제본 비버\" src=\"img/friends/bind.webp\"/><span>제본</span></a>",
   "pages": [
    "index.html"
   ]
@@ -4776,7 +4713,8 @@
   "ko": "지점 정보를 불러오는 중...",
   "pages": [
    "index.html",
-   "branches.html"
+   "branches.html",
+   "branch-status.html"
   ]
  },
  "4dafc68c85": {
@@ -5152,12 +5090,6 @@
  },
  "df2bca810d": {
   "ko": "저희는 서비스마다 한 명씩 담당이 있어요.<br/>친구를 누르면 직접 자기소개를 해 줘요!",
-  "pages": [
-   "about.html"
-  ]
- },
- "243bdadd06": {
-  "ko": "<a aria-label=\"펭프린 소개 보기\" class=\"mf-li\" href=\"#friend-penpurin\" style=\"--c:#22B24C;--cl:#E7F7EC\"><img alt=\"펭프린 (펭귄) 인쇄 담당\" height=\"170\" loading=\"lazy\" src=\"img/friends/print.webp\" width=\"150\"/><span class=\"mf-tag\">펭프린</span></a> <a aria-label=\"따라복 소개 보기\" class=\"mf-li\" href=\"#friend-ttarabok\" style=\"--c:#018FFB;--cl:#E1F1FF\"><img alt=\"따라복 (앵무새) 복사 담당\" height=\"170\" loading=\"lazy\" src=\"img/friends/copy.webp\" width=\"150\"/><span class=\"mf-tag\">따라복</span></a> <a aria-label=\"부스캔 소개 보기\" class=\"mf-li\" href=\"#friend-buscan\" style=\"--c:#12BDB0;--cl:#E0F7F5\"><img alt=\"부스캔 (부엉이) 스캔 담당\" height=\"170\" loading=\"lazy\" src=\"img/friends/scan.webp\" width=\"150\"/><span class=\"mf-tag\">부스캔</span></a> <a aria-label=\"미니쿤 소개 보기\" class=\"mf-li mf-big\" href=\"#friend-minikoon\" style=\"--c:#1B8AC4;--cl:#E3F2FB\"><img alt=\"미니쿤 (라쿤) 점장 · 안내 담당\" height=\"170\" loading=\"lazy\" src=\"img/friends/raccoon.webp\" width=\"150\"/><span class=\"mf-tag\">미니쿤</span></a> <a aria-label=\"팩둘이 소개 보기\" class=\"mf-li\" href=\"#friend-pakdul\" style=\"--c:#F3732C;--cl:#FFEBDD\"><img alt=\"팩둘이 (비둘기) 팩스 담당\" height=\"170\" loading=\"lazy\" src=\"img/friends/fax.webp\" width=\"150\"/><span class=\"mf-tag\">팩둘이</span></a> <a aria-label=\"코북이 소개 보기\" class=\"mf-li\" href=\"#friend-kobuki\" style=\"--c:#7C3AED;--cl:#EEE6FD\"><img alt=\"코북이 (거북이) 코팅 담당\" height=\"170\" loading=\"lazy\" src=\"img/friends/coat.webp\" width=\"150\"/><span class=\"mf-tag\">코북이</span></a> <a aria-label=\"차곡이 소개 보기\" class=\"mf-li\" href=\"#friend-chagoki\" style=\"--c:#EC4899;--cl:#FDE7F2\"><img alt=\"차곡이 (비버) 제본 담당\" height=\"170\" loading=\"lazy\" src=\"img/friends/bind.webp\" width=\"150\"/><span class=\"mf-tag\">차곡이</span></a>",
   "pages": [
    "about.html"
   ]
@@ -5618,12 +5550,6 @@
    "about.html"
   ]
  },
- "3188741baa": {
-  "ko": "프린트샵미니 🦝",
-  "pages": [
-   "about.html"
-  ]
- },
  "24599c2ab8": {
   "ko": "광교 1호점",
   "pages": [
@@ -5868,18 +5794,6 @@
   "ko": "미니쿤: 친구들과 함께 경기권 전체로 갈게요!",
   "pages": [
    "about.html"
-  ]
- },
- "80603746cc": {
-  "ko": "지점 찾기 - 프린트샵미니",
-  "pages": [
-   "branches.html"
-  ]
- },
- "e995484d6a": {
-  "ko": "<a class=\"active\" href=\"branches.html\">지점찾기</a>",
-  "pages": [
-   "branches.html"
   ]
  },
  "5bae728596": {
@@ -6386,7 +6300,8 @@
    "services.html",
    "about.html",
    "branches.html",
-   "community.html"
+   "community.html",
+   "branch-status.html"
   ]
  },
  "546053c98d": {
@@ -6405,7 +6320,8 @@
    "services.html",
    "about.html",
    "branches.html",
-   "community.html"
+   "community.html",
+   "branch-status.html"
   ]
  },
  "0b60939c60": {
@@ -6423,7 +6339,8 @@
    "services.html",
    "about.html",
    "branches.html",
-   "community.html"
+   "community.html",
+   "branch-status.html"
   ]
  },
  "712cf030e4": {
@@ -6988,7 +6905,106 @@
   "ko": "<img alt=\"\" src=\"logo.jpg\" style=\"width:36px;height:36px;object-fit:contain;vertical-align:middle;margin-right:8px;border-radius:8px\"/>프린트샵미니",
   "pages": [
    "branches.html",
+   "community.html",
+   "branch-status.html"
+  ]
+ },
+ "777bdda1f1": {
+  "ko": "<a href=\"branches.html\">지점정보</a>",
+  "pages": [
+   "guide.html",
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html",
+   "faq.html",
+   "index.html",
+   "services.html",
+   "about.html",
    "community.html"
+  ]
+ },
+ "8bb244e987": {
+  "ko": "지점정보 - 프린트샵미니",
+  "pages": [
+   "branches.html"
+  ]
+ },
+ "fd890c9f4c": {
+  "ko": "<a class=\"active\" href=\"branches.html\">지점정보</a>",
+  "pages": [
+   "branches.html",
+   "branch-status.html"
+  ]
+ },
+ "f307dfeb2f": {
+  "ko": "지점정보",
+  "pages": [
+   "branches.html",
+   "branch-status.html"
+  ]
+ },
+ "eef9c4b081": {
+  "ko": "<a class=\"on\" href=\"branches.html\">📍 지점 찾기</a> <a href=\"branch-status.html\">🏪 지점현황</a>",
+  "pages": [
+   "branches.html"
+  ]
+ },
+ "7a78be0662": {
+  "ko": "지점현황 - 프린트샵미니",
+  "pages": [
+   "branch-status.html"
+  ]
+ },
+ "29009bd36b": {
+  "ko": "프린트샵미니 전 지점의 주소, 전화번호, 운영시간, 이용 가능한 서비스를 한눈에 볼 수 있어요.",
+  "pages": [
+   "branch-status.html"
+  ]
+ },
+ "08bb83e2bc": {
+  "ko": "지점마다 주소 · 전화번호 · 운영시간 · 서비스를 한눈에 볼 수 있어요",
+  "pages": [
+   "branch-status.html"
+  ]
+ },
+ "ec0f122c0d": {
+  "ko": "<a href=\"branches.html\">📍 지점 찾기</a> <a class=\"on\" href=\"branch-status.html\">🏪 지점현황</a>",
+  "pages": [
+   "branch-status.html"
+  ]
+ },
+ "861d9054c8": {
+  "ko": "전체 <b id=\"cnt\">-</b>개",
+  "pages": [
+   "branch-status.html"
+  ]
+ },
+ "6519e4e1f4": {
+  "ko": "지점 이름이나 동네를 입력해 주세요",
+  "pages": [
+   "branch-status.html"
+  ]
+ },
+ "215f940078": {
+  "ko": "지점 검색",
+  "pages": [
+   "branch-status.html"
+  ]
+ },
+ "ab457137f4": {
+  "ko": "검색",
+  "pages": [
+   "branch-status.html"
+  ]
+ },
+ "1ef42d084b": {
+  "ko": "<button class=\"back\" onclick=\"goList()\">← 지점 목록으로</button>",
+  "pages": [
+   "branch-status.html"
   ]
  }
 }
