@@ -156,23 +156,23 @@ Hãy đọc kỹ chính sách rồi mới đăng ký giảm phí.
 💻 There is also a [영수증신청] (Receipt request) icon on the store PC desktop. You can apply there too.
 
 📝 Do this
+[[img:images/faq/receipt-steps.jpg]]
 1. In [지점명] (Store name), choose the store where you paid.
 2. In [결제일자] (Payment date), choose the date you paid.
 3. In [카드 구분] (Card type), choose how you paid.
    - Samsung Pay · Apple Pay · kiosk payment (binding · laminating): enter the [승인번호(8자리)] (8-digit approval number).
    - Credit card (physical card): enter the [앞 4자리] (first 4 digits) and [뒤 4자리] (last 4 digits) of the card number.
 4. Press [검색] (Search). When your payments appear, check the one you need a receipt for.
-5. Choose the receipt type you want.
+5. In [영수증 형태] (Receipt type), choose the receipt you want.
    - Card receipt (image)
-   - Statement of transaction (PDF)
-6. Enter [고객명] (Customer name) and [고객연락처] (Customer contact). Add [비고] (Notes) if needed.
-7. Press [발급하기] (Issue), and when the window opens, press [다운로드] (Download) to save the file. Please wait a moment while the file is made.
+   - Statement of transaction (PDF): also enter [고객명] (Customer name) and [고객연락처] (Customer contact). Add [비고] (Notes) if needed.
+6. Press [발급하기] (Issue), and when the window opens, press [다운로드] (Download) to save the file. Please wait a moment while the file is made.
 
 🔎 Where do I find the approval number?
-If you paid with Samsung Pay, tap the payment in the Samsung Pay app. The 8-digit [승인번호] (approval number) at ③ appears.
-[[img:images/faq/pay-approve-samsung.jpg]]
-If you paid with Apple Pay, check it in the Hyundai Card app as shown below.
-[[img:images/faq/pay-approve-apple.jpg]]
+If you paid with Samsung Pay, in the Samsung Pay app tap the card you used → the payment. The 8-digit [승인번호] (approval number) appears.
+[[img:images/faq/pay-approve-samsung2.jpg]]
+If you paid with Apple Pay, check it in the Hyundai Card app: ≡ menu → [카드 이용 내역] (Card usage) → [최근 이용 내역] (Recent usage) → tap the 굿러닝파트너 payment to see the [승인번호] (approval number).
+[[img:images/faq/pay-approve-apple2.jpg]]
 
 ⚠️ If "결제 정보를 찾을 수가 없습니다" (Payment info not found) appears, check the store, payment date and card number (approval number) again and search.
 💡 If you paid several times with the same card, the receipts may come out combined.
@@ -184,23 +184,23 @@ If you paid with Apple Pay, check it in the Hyundai Card app as shown below.
 💻 店内电脑桌面上也有［영수증신청］（申请收据）图标，也可以在那里申请。
 
 📝 请这样做
+[[img:images/faq/receipt-steps.jpg]]
 1. 在［지점명］（门店名称）中选择付款的门店。
 2. 在［결제일자］（付款日期）中选择付款的日期。
 3. 在［카드 구분］（卡类型）中选择自己的付款方式。
    - 三星支付·Apple Pay·自助机付款（装订·塑封）：输入［승인번호(8자리)］（批准号 8 位）。
    - 信用卡（实体卡）：输入卡号的［앞 4자리］（前 4 位）和［뒤 4자리］（后 4 位）。
 4. 按［검색］（搜索）。出现付款记录后，确认需要收据的那一笔。
-5. 选择想要的收据样式。
+5. 在［영수증 형태］（收据样式）中选择想要的收据。
    - 刷卡收据（图片）
-   - 交易明细单（PDF）
-6. 输入［고객명］（顾客姓名）和［고객연락처］（顾客联系方式）。需要的话也填写［비고］（备注）。
-7. 按［발급하기］（开具），出现窗口后按［다운로드］（下载）保存文件。生成文件期间请稍等。
+   - 交易明细单（PDF）：还要输入［고객명］（顾客姓名）和［고객연락처］（顾客联系方式）。需要的话也填写［비고］（备注）。
+6. 按［발급하기］（开具），出现窗口后按［다운로드］（下载）保存文件。生成文件期间请稍等。
 
 🔎 批准号在哪里看？
-用三星支付付款的话，在三星支付应用里点付款记录，会出现 ③ 号的 8 位［승인번호］（批准号）。
-[[img:images/faq/pay-approve-samsung.jpg]]
-用 Apple Pay 付款的话，像下图一样在现代卡应用里确认。
-[[img:images/faq/pay-approve-apple.jpg]]
+用三星支付付款的话，在三星支付应用里点付款用的卡 → 付款记录，会出现 8 位［승인번호］（批准号）。
+[[img:images/faq/pay-approve-samsung2.jpg]]
+用 Apple Pay 付款的话，在现代卡应用里确认：≡ 菜单 →［카드 이용 내역］（刷卡记录）→［최근 이용 내역］（最近记录）→ 点 굿러닝파트너 的付款，就会出现［승인번호］（批准号）。
+[[img:images/faq/pay-approve-apple2.jpg]]
 
 ⚠️ 出现“결제 정보를 찾을 수가 없습니다”（找不到付款信息）的话，请重新确认门店、付款日期、卡号（批准号）再查询。
 💡 用同一张卡付了好几次款的话，收据可能会合并开出。
@@ -212,23 +212,23 @@ If you paid with Apple Pay, check it in the Hyundai Card app as shown below.
 💻 Trên màn hình nền máy tính cửa hàng cũng có biểu tượng [영수증신청] (Yêu cầu hóa đơn). Có thể yêu cầu ở đó.
 
 📝 Hãy làm thế này
+[[img:images/faq/receipt-steps.jpg]]
 1. Ở [지점명] (Tên cửa hàng), chọn cửa hàng bạn đã thanh toán.
 2. Ở [결제일자] (Ngày thanh toán), chọn ngày đã thanh toán.
 3. Ở [카드 구분] (Loại thẻ), chọn cách bạn đã thanh toán.
    - Samsung Pay · Apple Pay · thanh toán ở kiosk (đóng sách · ép): nhập [승인번호(8자리)] (số phê duyệt 8 số).
    - Thẻ tín dụng (thẻ vật lý): nhập [앞 4자리] (4 số đầu) và [뒤 4자리] (4 số cuối) của số thẻ.
 4. Bấm [검색] (Tìm kiếm). Khi lịch sử thanh toán hiện ra, kiểm tra giao dịch cần hóa đơn.
-5. Chọn kiểu hóa đơn bạn muốn.
+5. Ở [영수증 형태] (Kiểu hóa đơn), chọn hóa đơn bạn muốn.
    - Hóa đơn thẻ (hình ảnh)
-   - Bảng kê giao dịch (PDF)
-6. Nhập [고객명] (Tên khách) và [고객연락처] (Số liên lạc). Nếu cần, ghi thêm [비고] (Ghi chú).
-7. Bấm [발급하기] (Xuất), khi cửa sổ hiện ra thì bấm [다운로드] (Tải xuống) để lưu tệp. Chờ một chút trong lúc tạo tệp.
+   - Bảng kê giao dịch (PDF): nhập thêm [고객명] (Tên khách) và [고객연락처] (Số liên lạc). Nếu cần, ghi thêm [비고] (Ghi chú).
+6. Bấm [발급하기] (Xuất), khi cửa sổ hiện ra thì bấm [다운로드] (Tải xuống) để lưu tệp. Chờ một chút trong lúc tạo tệp.
 
 🔎 Số phê duyệt xem ở đâu?
-Nếu thanh toán bằng Samsung Pay, bấm vào giao dịch trong ứng dụng Samsung Pay. Số [승인번호] (số phê duyệt) 8 chữ số ở mục ③ sẽ hiện ra.
-[[img:images/faq/pay-approve-samsung.jpg]]
-Nếu thanh toán bằng Apple Pay, hãy xem trong ứng dụng thẻ Hyundai như hình dưới đây.
-[[img:images/faq/pay-approve-apple.jpg]]
+Nếu thanh toán bằng Samsung Pay, trong ứng dụng Samsung Pay bấm vào thẻ đã dùng → giao dịch. Số [승인번호] (số phê duyệt) 8 chữ số sẽ hiện ra.
+[[img:images/faq/pay-approve-samsung2.jpg]]
+Nếu thanh toán bằng Apple Pay, hãy xem trong ứng dụng thẻ Hyundai: menu ≡ → [카드 이용 내역] (Lịch sử dùng thẻ) → [최근 이용 내역] (Gần đây) → bấm giao dịch 굿러닝파트너 để thấy [승인번호] (số phê duyệt).
+[[img:images/faq/pay-approve-apple2.jpg]]
 
 ⚠️ Nếu hiện "결제 정보를 찾을 수가 없습니다" (Không tìm thấy thông tin thanh toán), hãy kiểm tra lại cửa hàng, ngày thanh toán, số thẻ (số phê duyệt) rồi tìm lại.
 💡 Nếu thanh toán nhiều lần bằng cùng một thẻ, hóa đơn có thể được gộp lại.
