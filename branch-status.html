@@ -135,6 +135,18 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .sp-btn:hover{transform:translateY(-2px)}
 .sp-btn b{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;background:#fff;color:#03C75A;border-radius:4px;font-size:13px;font-weight:900}
 .sp-wait{font-size:13.5px;color:var(--text3);background:var(--bg);border:1px dashed var(--border);border-radius:10px;padding:11px 16px}
+.map-btn{display:inline-flex;align-items:center;gap:6px;background:#fff;color:#03A04B;border:1.5px solid #03C75A;font-size:14.5px;font-weight:700;padding:11px 20px;border-radius:10px}
+/* 상세 아래: 사용방법 · 도움 · 근처 지점 */
+.extra{margin-top:36px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.ex-box{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:20px 22px}
+.ex-box.full{grid-column:1/-1}
+.ex-h{font-size:16px;font-weight:900;margin-bottom:4px}
+.ex-sub{font-size:13px;color:var(--text3);margin-bottom:12px}
+.ex-links{display:flex;flex-wrap:wrap;gap:8px}
+.ex-links a{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1.5px solid var(--border);border-radius:50px;padding:7px 15px;font-size:14px;font-weight:700;color:var(--text2);transition:all .15s}
+.ex-links a:hover{border-color:var(--blue);color:var(--blue)}
+.ex-links a i{font-style:normal;width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:13px;background:var(--c,var(--blue-light))}
+.ex-links a.talk{background:#03C75A;border-color:#03C75A;color:#fff}
 .call-btn{display:inline-flex;align-items:center;gap:6px;background:#fff;color:var(--blue);border:1.5px solid var(--blue);font-size:14.5px;font-weight:700;padding:11px 20px;border-radius:10px}
 
 footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
@@ -153,6 +165,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
   .nav-links{display:none;max-height:calc(100vh - 70px);overflow-y:auto}
   .hamburger{display:flex}
   .dt{grid-template-columns:1fr;gap:24px}
+  .slider{aspect-ratio:4/3}
 }
 @media(max-width:760px){
   .page-header{padding:10px 5% 8px}
@@ -173,6 +186,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
   .open-mark{font-size:11.5px;padding:3px 8px;top:8px;right:8px}
   .photo .ph-note{display:none}
   .d-name{font-size:19px}
+  .extra{grid-template-columns:1fr;gap:14px;margin-top:26px}
 }
 @media(max-width:420px){.cb-go{display:none}}
 @media(max-width:600px){.ft-grid{grid-template-columns:1fr 1fr;gap:24px}.ft-grid>.ft-col:first-child{grid-column:1/-1}}
@@ -233,6 +247,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
         <div class="d-btns" id="dBtns"></div>
       </div>
     </div>
+    <div class="extra" id="dExtra"></div>
   </div>
 </div>
 
@@ -401,8 +416,25 @@ function renderDetail(b){
   var btns='';
   if(b.naver_place_id)btns+='<a class="sp-btn" href="https://m.place.naver.com/place/'+encodeURIComponent(b.naver_place_id)+'/home" target="_blank" rel="noopener"><b>N</b>'+T('스마트플레이스로 보기')+'</a>';
   else btns+='<span class="sp-wait">'+T('네이버 스마트플레이스는 등록 준비 중이에요')+'</span>';
+  if(b.naver_place_id)btns+='<a class="map-btn" href="https://map.naver.com/p/entry/place/'+encodeURIComponent(b.naver_place_id)+'" target="_blank" rel="noopener">🗺️ '+T('네이버 지도 길찾기')+'</a>';
   if(tel)btns+='<a class="call-btn" href="tel:'+tel.replace(/[^0-9]/g,'')+'">📞 '+T('전화 걸기')+'</a>';
   document.getElementById('dBtns').innerHTML=btns;
+  renderExtra(b);
+}
+// 상세 아래: 처음 온 손님용 사용방법, 도움이 필요할 때, 같은 지역 다른 지점 (모두 홈피 안 페이지·DB로 자동)
+var GUIDES=[['guide-print.html','🖨️','인쇄','--print'],['guide-copy.html','📋','복사','--copy'],['guide-scan.html','📄','스캔','--scan'],['guide-fax.html','📠','팩스','--fax'],['guide-coat.html','✨','코팅','--coat'],['guide-bind.html','📚','제본','--bind']];
+function renderExtra(b){
+  var g=GUIDES.map(function(x){return '<a href="'+x[0]+'"><i style="--c:color-mix(in srgb,var('+x[3]+') 18%,#fff)">'+x[1]+'</i>'+T(x[2])+'</a>';}).join('')+
+    '<a href="guide-video.html"><i>▶</i>'+T('동영상으로 보기')+'</a>';
+  var h='<div class="ex-box"><div class="ex-h">🙋 '+T('처음 오셨나요?')+'</div><div class="ex-sub">'+T('서비스를 고르면 이용 순서를 그림으로 보여 드려요')+'</div><div class="ex-links">'+g+'</div></div>';
+  h+='<div class="ex-box"><div class="ex-h">🆘 '+T('도움이 필요하세요?')+'</div><div class="ex-sub">'+T('기계가 멈추거나 잘못 나왔을 때 확인하세요')+'</div><div class="ex-links">'+
+    '<a href="faq.html#faq-4"><i>🔧</i>'+T('고장 났어요')+'</a>'+
+    '<a href="faq.html#faq-12"><i>💳</i>'+T('환불')+'</a>'+
+    '<a class="talk" href="https://naver.me/GJErAoQ7" target="_blank" rel="noopener">💬 '+T('톡톡 문의')+'</a></div></div>';
+  var near=ALL.filter(function(x){return x.region===b.region&&x.id!==b.id;});
+  if(near.length)h+='<div class="ex-box full"><div class="ex-h">📍 '+T('근처 다른 지점')+' <span style="font-size:13px;color:var(--text3);font-weight:700">('+esc(b.region)+')</span></div><div class="ex-sub">'+T('이 지점을 이용하기 어려울 때 가까운 지점도 있어요')+'</div><div class="ex-links">'+
+    near.map(function(x){return '<a href="#b'+x.id+'">'+esc(x.name)+'</a>';}).join('')+'</div></div>';
+  document.getElementById('dExtra').innerHTML=h;
 }
 function slideTo(i){
   var s=document.querySelectorAll('#slider .slide'),d=document.querySelectorAll('#slider .dots button');

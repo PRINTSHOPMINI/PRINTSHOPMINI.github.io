@@ -182,3 +182,47 @@ vi: Giao thông · đỗ xe
 en: New
 zh: 新店
 vi: Mới
+@@ui 네이버 지도 길찾기
+en: Directions on Naver Map
+zh: Naver 地图导航
+vi: Chỉ đường trên Naver Map
+@@ui 동영상으로 보기
+en: Watch videos
+zh: 观看视频
+vi: Xem video
+@@ui 처음 오셨나요?
+en: First time here?
+zh: 第一次来吗？
+vi: Lần đầu đến?
+@@ui 서비스를 고르면 이용 순서를 그림으로 보여 드려요
+en: Pick a service to see the steps with pictures
+zh: 选择服务，用图片查看使用步骤
+vi: Chọn dịch vụ để xem các bước bằng hình ảnh
+@@ui 도움이 필요하세요?
+en: Need help?
+zh: 需要帮助吗？
+vi: Cần trợ giúp?
+@@ui 기계가 멈추거나 잘못 나왔을 때 확인하세요
+en: Check here if a machine stops or prints wrong
+zh: 机器停止或出错时请看这里
+vi: Xem tại đây khi máy dừng hoặc in sai
+@@ui 고장 났어요
+en: Machine problem
+zh: 机器故障
+vi: Máy bị lỗi
+@@ui 환불
+en: Refund
+zh: 退款
+vi: Hoàn tiền
+@@ui 톡톡 문의
+en: Ask on TalkTalk
+zh: TalkTalk 咨询
+vi: Hỏi qua TalkTalk
+@@ui 근처 다른 지점
+en: Other stores nearby
+zh: 附近其他门店
+vi: Cửa hàng khác gần đây
+@@ui 이 지점을 이용하기 어려울 때 가까운 지점도 있어요
+en: If this store doesn't work for you, try a store nearby
+zh: 不方便使用本店时，也可以去附近门店
+vi: Nếu không tiện dùng cửa hàng này, hãy thử cửa hàng gần đó
