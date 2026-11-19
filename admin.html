@@ -1114,6 +1114,8 @@ function biFormHtml(p,withPhotos){
       '<div class="form-row" style="margin-bottom:0"><label>운영시간 <span style="font-weight:400;color:var(--text3)">(비우면 24시간 · 연중무휴)</span></label><input type="text" id="'+p+'Hours" placeholder="24시간 · 연중무휴"></div>'+
     '</div>'+
     '<div class="form-row" style="margin-top:12px"><label>부가 서비스 <span style="font-weight:400;color:var(--text3)">(없으면 비워 두세요 — 상세에서 줄이 안 보여요)</span></label><input type="text" id="'+p+'Extras"></div>'+
+    '<div class="form-row"><label>찾아오는 길 <span style="font-weight:400;color:var(--text3)">(예: 판교역 ○번 출구 앞 건물 지하 1층 — 비우면 안 보여요)</span></label><textarea id="'+p+'Directions" rows="2" style="width:100%;border:1.5px solid var(--border);border-radius:10px;padding:10px 14px;font-size:14px;font-family:inherit;line-height:1.6;resize:vertical"></textarea></div>'+
+    '<div class="form-row"><label>주차 안내 <span style="font-weight:400;color:var(--text3)">(한 줄에 하나씩 — 주차 할인 사이트 내용을 쉬운 말로, 비우면 안 보여요)</span></label><textarea id="'+p+'ParkNote" rows="4" style="width:100%;border:1.5px solid var(--border);border-radius:10px;padding:10px 14px;font-size:14px;font-family:inherit;line-height:1.6;resize:vertical"></textarea></div>'+
     (withPhotos?
       '<div class="form-row"><label>매장 사진 <span style="font-weight:400;color:var(--text3)">(없으면 로고가 보여요 · 첫 사진이 카드 사진 · 정면 사진 추천)</span></label>'+
       '<div id="'+p+'Photos" style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:8px"></div>'+
@@ -1133,6 +1135,8 @@ function biFill(p,i){
   document.getElementById(p+'Papers').value=i.papers!=null?i.papers:'A4, B4, A3';
   document.getElementById(p+'Hours').value=i.hours||'';
   document.getElementById(p+'Extras').value=i.extras||'';
+  document.getElementById(p+'Directions').value=i.directions||'';
+  document.getElementById(p+'ParkNote').value=i.parking_note||'';
 }
 function biRead(p,photos){
   var o={
@@ -1144,6 +1148,8 @@ function biRead(p,photos){
     papers:document.getElementById(p+'Papers').value.trim(),
     hours:document.getElementById(p+'Hours').value.trim(),
     extras:document.getElementById(p+'Extras').value.trim(),
+    directions:document.getElementById(p+'Directions').value.trim(),
+    parking_note:document.getElementById(p+'ParkNote').value.trim(),
     photos:photos||[]
   };
   Object.keys(o).forEach(function(k){if(o[k]===''||(k==='no'&&!o[k]))delete o[k];});

@@ -226,3 +226,11 @@ vi: Cửa hàng khác gần đây
 en: If this store doesn't work for you, try a store nearby
 zh: 不方便使用本店时，也可以去附近门店
 vi: Nếu không tiện dùng cửa hàng này, hãy thử cửa hàng gần đó
+@@ui 찾아오는 길
+en: How to get here
+zh: 怎么走
+vi: Đường đến
+@@ui 주차 할인 받기
+en: Get parking discount
+zh: 领取停车优惠
+vi: Nhận giảm giá đỗ xe
