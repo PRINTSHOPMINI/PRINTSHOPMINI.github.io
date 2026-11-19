@@ -234,3 +234,23 @@ vi: Đường đến
 en: Get parking discount
 zh: 领取停车优惠
 vi: Nhận giảm giá đỗ xe
+@@ui 영수증
+en: Receipt
+zh: 收据
+vi: Hóa đơn
+@@ui 영수증이 필요하면 영수증 신청 사이트에서 바로 받을 수 있어요
+en: Need a receipt? You can get it right away on the receipt website.
+zh: 需要收据时，可以在收据申请网站直接领取。
+vi: Cần hóa đơn? Bạn có thể nhận ngay trên trang yêu cầu hóa đơn.
+@@ui 카드영수증(이미지) · 거래명세서(PDF)
+en: Card receipt (image) · Statement (PDF)
+zh: 刷卡收据（图片）· 交易明细（PDF）
+vi: Hóa đơn thẻ (ảnh) · Bảng kê giao dịch (PDF)
+@@ui 영수증 받기
+en: Get a receipt
+zh: 领取收据
+vi: Nhận hóa đơn
+@@ui 받는 방법 보기
+en: How to get it
+zh: 查看领取方法
+vi: Xem cách nhận
