@@ -1556,6 +1556,10 @@ Tất cả cửa hàng PRINTSHOPMINI hiện nay đều do công ty trực tiếp
 #u en: Explanation picture
 #u zh: 说明图片
 #u vi: Hình minh họa
+@@ui 누르면 크게 보여요
+#u en: Tap to see it bigger
+#u zh: 点一下可以放大
+#u vi: Bấm để xem lớn hơn
 @@ui 렌즈 모양 아이콘
 #u en: Lens icon
 #u zh: 镜头图标

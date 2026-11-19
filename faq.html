@@ -79,6 +79,8 @@ mark{background:#FFE08A;color:inherit;border-radius:3px;padding:0 2px}
 .faq-btnimg:hover img{transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,.25)}
 .faq-btnimg span{font-size:12.5px;font-weight:700;color:var(--blue)}
 .faq-img.faq-img-sm{width:240px}
+.faq-img.faq-img-wide{width:720px}
+.faq-img-a{display:block;width:max-content;max-width:100%;cursor:zoom-in}
 .faq-ico{display:inline-block;height:1.5em;width:auto;vertical-align:-0.38em;margin:0 3px;padding:2px;border:1px solid var(--border);border-radius:6px;background:#fff}
 .faq-item.open .q-icon{transform:rotate(45deg);background:var(--blue);color:#fff}
 .faq-item.flash{animation:faqFlash 2.4s ease-out}
@@ -257,12 +259,13 @@ function renderAnswer(text,terms){
   // [[img:이미지]] 큰 그림, [[ico:이미지]] 글 속 작은 그림, [[btn:이미지|https://주소|설명]] 누르면 사이트로 가는 그림 버튼
   // [[vid:videos/이름.mp4]] 사용방법 동영상 (누를 때만 불러옴, 미리보기 그림은 같은 이름의 .jpg)
   // [[warn:문구]] 크게 보이는 빨간 경고 상자
-  var re=/(\[\[warn:[^\]]+\]\]|\[\[vid:videos\/[A-Za-z0-9_\-]+\.mp4\]\]|\[\[(?:img|ico|sm):images\/[A-Za-z0-9_\-\/\.]+\]\]|\[\[btn:images\/[A-Za-z0-9_\-\/\.]+\|https:\/\/[A-Za-z0-9.\-]+\/[A-Za-z0-9_\-\/\.?=&%#]*\|[^\]|]+\]\]|\[\[go:[A-Za-z0-9_\-]+\.html(?:#[A-Za-z0-9_\-]+)?\|[^\]|]+\]\])/;
+  var re=/(\[\[warn:[^\]]+\]\]|\[\[vid:videos\/[A-Za-z0-9_\-]+\.mp4\]\]|\[\[(?:img|ico|sm|wide):images\/[A-Za-z0-9_\-\/\.]+\]\]|\[\[btn:images\/[A-Za-z0-9_\-\/\.]+\|https:\/\/[A-Za-z0-9.\-]+\/[A-Za-z0-9_\-\/\.?=&%#]*\|[^\]|]+\]\]|\[\[go:[A-Za-z0-9_\-]+\.html(?:#[A-Za-z0-9_\-]+)?\|[^\]|]+\]\])/;
   return String(text||'').split(re).map(function(part){
     var w=/^\[\[warn:([^\]]+)\]\]$/.exec(part);
     if(w) return '<span class="faq-warn">'+hl(w[1],terms)+'</span>';
-    var m=/^\[\[(img|ico|sm):(images\/[A-Za-z0-9_\-\/\.]+)\]\]$/.exec(part);
+    var m=/^\[\[(img|ico|sm|wide):(images\/[A-Za-z0-9_\-\/\.]+)\]\]$/.exec(part);
     if(m&&m[1]==='img') return '<img class="faq-img" src="'+ROOT+m[2]+'" alt="'+T('설명 그림')+'" loading="lazy">';
+    if(m&&m[1]==='wide') return '<a class="faq-img-a" href="'+ROOT+m[2]+'" target="_blank" rel="noopener" title="'+T('누르면 크게 보여요')+'"><img class="faq-img faq-img-wide" src="'+ROOT+m[2]+'" alt="'+T('설명 그림')+'" loading="lazy"></a>';
     if(m&&m[1]==='sm') return '<img class="faq-img faq-img-sm" src="'+ROOT+m[2]+'" alt="'+T('설명 그림')+'" loading="lazy">';
     if(m&&m[1]==='ico') return '<img class="faq-ico" src="'+ROOT+m[2]+'" alt="'+T('렌즈 모양 아이콘')+'">';
     var v=/^\[\[vid:(videos\/[A-Za-z0-9_\-]+)\.mp4\]\]$/.exec(part);
