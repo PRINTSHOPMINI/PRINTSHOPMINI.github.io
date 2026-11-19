@@ -234,10 +234,10 @@ vi: Chúng tôi gom các câu hỏi thường gặp vào một chỗ. Nếu khô
 en: PRINTSHOPMINI
 zh: PRINTSHOPMINI
 vi: PRINTSHOPMINI
-@@08279ea9f2
-en: An unmanned self-service print shop<br/>open 24 hours, 365 days.
-zh: 24 小时 365 天营业的<br/>无人自助打印店。
-vi: Cửa hàng in tự phục vụ không người trực,<br/>mở cửa 24 giờ, 365 ngày.
+@@97992b4e0c
+en: An unmanned self-service print shop<br/>open 365 days, 24 hours.
+zh: 365 天 24 小时营业的<br/>无人自助打印店。
+vi: Cửa hàng in tự phục vụ không người trực,<br/>mở cửa 365 ngày, 24 giờ.
 @@0af74d46ed
 en: <a href="guide-print.html">How to print</a>
 zh: <a href="guide-print.html">打印方法</a>

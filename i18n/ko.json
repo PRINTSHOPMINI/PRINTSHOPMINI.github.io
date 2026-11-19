@@ -7042,5 +7042,24 @@
   "pages": [
    "branch-status.html"
   ]
+ },
+ "97992b4e0c": {
+  "ko": "365일 24시간 운영되는<br/>무인 셀프 프린트 전문점입니다.",
+  "pages": [
+   "guide.html",
+   "guide-print.html",
+   "guide-copy.html",
+   "guide-scan.html",
+   "guide-fax.html",
+   "guide-coat.html",
+   "guide-bind.html",
+   "guide-video.html",
+   "faq.html",
+   "index.html",
+   "services.html",
+   "about.html",
+   "branch-status.html",
+   "community.html"
+  ]
  }
 }
