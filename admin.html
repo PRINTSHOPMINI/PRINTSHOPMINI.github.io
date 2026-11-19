@@ -1114,21 +1114,16 @@ function biFormHtml(p,withPhotos){
       '<div class="form-row" style="margin-bottom:0"><label>운영시간 <span style="font-weight:400;color:var(--text3)">(비우면 24시간 · 연중무휴)</span></label><input type="text" id="'+p+'Hours" placeholder="24시간 · 연중무휴"></div>'+
     '</div>'+
     '<div class="form-row" style="margin-top:12px"><label>부가 서비스 <span style="font-weight:400;color:var(--text3)">(없으면 비워 두세요 — 상세에서 줄이 안 보여요)</span></label><input type="text" id="'+p+'Extras"></div>'+
-    '<div class="form-row"><label>찾아오는 길 <span style="font-weight:400;color:var(--text3)">(예: 판교역 ○번 출구 앞 건물 지하 1층 — 비우면 안 보여요)</span></label><textarea id="'+p+'Directions" rows="2" style="width:100%;border:1.5px solid var(--border);border-radius:10px;padding:10px 14px;font-size:14px;font-family:inherit;line-height:1.6;resize:vertical"></textarea></div>'+
+    (withPhotos?'':'<div class="form-row"><label>찾아오는 길 <span style="font-weight:400;color:var(--text3)">(한 줄에 한 단계 — 사진·영상·여러 길은 등록 뒤 [수정]에서, 비우면 안 보여요)</span></label><textarea id="'+p+'Directions" rows="3" style="width:100%;border:1.5px solid var(--border);border-radius:10px;padding:10px 14px;font-size:14px;font-family:inherit;line-height:1.6;resize:vertical"></textarea></div>')+
     '<div class="form-row"><label>주차 안내 <span style="font-weight:400;color:var(--text3)">(한 줄에 하나씩 — 주차 할인 사이트 내용을 쉬운 말로, 비우면 안 보여요)</span></label><textarea id="'+p+'ParkNote" rows="4" style="width:100%;border:1.5px solid var(--border);border-radius:10px;padding:10px 14px;font-size:14px;font-family:inherit;line-height:1.6;resize:vertical"></textarea></div>'+
     (withPhotos?
       '<div class="form-row"><label>매장 사진 <span style="font-weight:400;color:var(--text3)">(없으면 로고가 보여요 · 첫 사진이 카드 사진 · 정면 사진 추천)</span></label>'+
       '<div id="'+p+'Photos" style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:8px"></div>'+
       '<label class="btn-edit" style="display:inline-block;cursor:pointer;font-size:13px;padding:7px 14px">📷 사진 올리기<input type="file" accept="image/*" multiple style="display:none" onchange="uploadBranchPhotos(this)"></label>'+
       '<span id="'+p+'PhotoSt" style="font-size:12px;color:var(--text3);margin-left:8px"></span></div>'+
-      '<div class="form-row"><label>찾아오는 길 사진 <span style="font-weight:400;color:var(--text3)">(위 \'찾아오는 길\' 한 줄에 사진 한 장, 순서대로 · 누르면 크게 보여요)</span></label>'+
-      '<div id="bEditDirPhotos" style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:8px"></div>'+
-      '<label class="btn-edit" style="display:inline-block;cursor:pointer;font-size:13px;padding:7px 14px">🧭 길 사진 올리기<input type="file" accept="image/*" multiple style="display:none" onchange="uploadDirPhotos(this)"></label>'+
-      '<span id="bEditDirSt" style="font-size:12px;color:var(--text3);margin-left:8px"></span></div>'+
-      '<div class="form-row"><label>찾아오는 길 영상 <span style="font-weight:400;color:var(--text3)">(mp4 · 휴대폰 영상 그대로 OK, 50MB 넘으면 줄여서 · 없으면 안 보여요)</span></label>'+
-      '<div id="bEditDirVideo" style="margin-bottom:8px"></div>'+
-      '<label class="btn-edit" style="display:inline-block;cursor:pointer;font-size:13px;padding:7px 14px">🎬 영상 올리기<input type="file" accept="video/mp4,video/*" style="display:none" onchange="uploadDirVideo(this)"></label>'+
-      '<span id="bEditVidSt" style="font-size:12px;color:var(--text3);margin-left:8px"></span></div>'
+      '<div class="form-row"><label>🧭 찾아오는 길 <span style="font-weight:400;color:var(--text3)">(가장 찾기 쉬운 길을 1~3개 · 길마다 단계 글 + 사진 또는 영상 · 상세 화면에 탭으로 나와요)</span></label>'+
+      '<div id="bEditRoutes"></div>'+
+      '<button type="button" class="btn-edit" style="font-size:13px;padding:7px 14px" onclick="addRoute()">+ 길 추가</button></div>'
       :'<div style="font-size:12px;color:var(--text3)">📷 매장 사진은 등록한 뒤 목록의 [수정]에서 올릴 수 있어요. (그 전엔 로고가 보여요)</div>')+
   '</div>';
 }
@@ -1143,7 +1138,7 @@ function biFill(p,i){
   document.getElementById(p+'Papers').value=i.papers!=null?i.papers:'A4, B4, A3';
   document.getElementById(p+'Hours').value=i.hours||'';
   document.getElementById(p+'Extras').value=i.extras||'';
-  document.getElementById(p+'Directions').value=i.directions||'';
+  var dEl=document.getElementById(p+'Directions');if(dEl)dEl.value=i.directions||'';
   document.getElementById(p+'ParkNote').value=i.parking_note||'';
 }
 function biRead(p,photos){
@@ -1156,36 +1151,66 @@ function biRead(p,photos){
     papers:document.getElementById(p+'Papers').value.trim(),
     hours:document.getElementById(p+'Hours').value.trim(),
     extras:document.getElementById(p+'Extras').value.trim(),
-    directions:document.getElementById(p+'Directions').value.trim(),
     parking_note:document.getElementById(p+'ParkNote').value.trim(),
     photos:photos||[]
   };
-  if(p==='bEdit'){o.directions_photos=editDirPhotos.slice();o.directions_video=editDirVideo;}
+  if(p==='bEdit'){o.routes=readRoutes();}
+  else{var dv=(document.getElementById(p+'Directions')||{}).value||'';if(dv.trim())o.routes=[{title:'',sub:'',steps:dv.trim(),photos:[],video:''}];}
+  if(o.routes&&!o.routes.length)delete o.routes;
   Object.keys(o).forEach(function(k){if(o[k]===''||(k==='no'&&!o[k]))delete o[k];});
   return o;
 }
-/* 찾아오는 길 사진·영상 (지점정보 상세의 '찾아오는 길' 상자) */
-var editDirPhotos=[],editDirVideo='';
-function renderDirPhotos(){
-  var box=document.getElementById('bEditDirPhotos');
-  if(!editDirPhotos.length){box.innerHTML='<div style="font-size:12px;color:var(--text3)">아직 없어요</div>';return;}
-  box.innerHTML=editDirPhotos.map(function(u,i){
-    var b='border:1px solid var(--border);background:#fff;border-radius:6px;font-size:11px;padding:0 6px;cursor:pointer';
-    return '<div style="width:110px"><div style="position:relative"><img src="'+escHtml(u)+'" style="width:110px;height:82px;object-fit:cover;border-radius:10px;border:1px solid var(--border)" alt="">'+
-      '<span style="position:absolute;left:4px;top:4px;background:#1976D2;color:#fff;border-radius:50%;width:20px;height:20px;font-size:12px;font-weight:900;display:flex;align-items:center;justify-content:center">'+(i+1)+'</span></div>'+
-      '<div style="display:flex;justify-content:space-between;margin-top:3px">'+
-      '<button type="button" onclick="moveDirPhoto('+i+',-1)" style="'+b+'"'+(i===0?' disabled':'')+'>◀</button>'+
-      '<button type="button" onclick="removeDirPhoto('+i+')" style="'+b+';border-color:#FCA5A5;color:#DC2626">삭제</button>'+
-      '<button type="button" onclick="moveDirPhoto('+i+',1)" style="'+b+'"'+(i===editDirPhotos.length-1?' disabled':'')+'>▶</button></div></div>';
+/* 찾아오는 길 (길별: 이름·한 줄 설명·단계 글·사진·영상) — 지점정보 상세의 '찾아오는 길' 탭 */
+var editRoutes=[];
+function legacyRoutes(bi){
+  if(bi.routes&&bi.routes.length)return JSON.parse(JSON.stringify(bi.routes));
+  if(bi.directions||(bi.directions_photos||[]).length||bi.directions_video)return [{title:'',sub:'',steps:bi.directions||'',photos:(bi.directions_photos||[]).slice(),video:bi.directions_video||''}];
+  return [];
+}
+function syncRoutes(){
+  editRoutes.forEach(function(r,k){
+    var t=document.getElementById('rtTitle'+k);if(!t)return;
+    r.title=t.value.trim();r.sub=document.getElementById('rtSub'+k).value.trim();r.steps=document.getElementById('rtSteps'+k).value.trim();
+  });
+}
+function readRoutes(){syncRoutes();return editRoutes.filter(function(r){return r.title||r.steps||(r.photos||[]).length||r.video;});}
+function renderRoutes(){
+  var box=document.getElementById('bEditRoutes');if(!box)return;
+  var inp='width:100%;border:1.5px solid var(--border);border-radius:8px;padding:7px 10px;font-size:13.5px;font-family:inherit';
+  var sb='border:1px solid var(--border);background:#fff;border-radius:6px;font-size:11px;padding:1px 7px;cursor:pointer';
+  if(!editRoutes.length){box.innerHTML='<div style="font-size:12px;color:var(--text3);margin-bottom:8px">아직 없어요. [+ 길 추가]를 눌러 주세요.</div>';return;}
+  box.innerHTML=editRoutes.map(function(r,k){
+    var ph=(r.photos||[]).map(function(u,i){
+      return '<div style="width:96px"><div style="position:relative"><img src="'+escHtml(u)+'" style="width:96px;height:72px;object-fit:cover;border-radius:8px;border:1px solid var(--border)" alt="">'+
+        '<span style="position:absolute;left:3px;top:3px;background:#1976D2;color:#fff;border-radius:50%;width:18px;height:18px;font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center">'+(i+1)+'</span></div>'+
+        '<div style="display:flex;justify-content:space-between;margin-top:2px"><button type="button" style="'+sb+'" onclick="moveRoutePhoto('+k+','+i+',-1)"'+(i===0?' disabled':'')+'>◀</button>'+
+        '<button type="button" style="'+sb+';border-color:#FCA5A5;color:#DC2626" onclick="removeRoutePhoto('+k+','+i+')">삭제</button>'+
+        '<button type="button" style="'+sb+'" onclick="moveRoutePhoto('+k+','+i+',1)"'+(i===r.photos.length-1?' disabled':'')+'>▶</button></div></div>';
+    }).join('');
+    return '<div style="border:1.5px solid var(--border);border-radius:12px;padding:12px;margin-bottom:10px;background:#FAFCFF">'+
+      '<div style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><b style="font-size:14px">길 '+(k+1)+'</b><span style="flex:1"></span>'+
+        '<button type="button" style="'+sb+'" onclick="moveRoute('+k+',-1)"'+(k===0?' disabled':'')+'>▲</button>'+
+        '<button type="button" style="'+sb+'" onclick="moveRoute('+k+',1)"'+(k===editRoutes.length-1?' disabled':'')+'>▼</button>'+
+        '<button type="button" style="'+sb+';border-color:#FCA5A5;color:#DC2626" onclick="removeRoute('+k+')">길 삭제</button></div>'+
+      '<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px">'+
+        '<input id="rtTitle'+k+'" style="'+inp+'" placeholder="길 이름 (예: GATE 3로 오기)" value="'+escHtml(r.title||'')+'">'+
+        '<input id="rtSub'+k+'" style="'+inp+'" placeholder="한 줄 설명 (예: 가장 가까워요)" value="'+escHtml(r.sub||'')+'"></div>'+
+      '<textarea id="rtSteps'+k+'" rows="3" style="'+inp+';line-height:1.6;resize:vertical" placeholder="한 줄에 한 단계씩 (사진이 있으면 한 줄에 사진 한 장)">'+escHtml(r.steps||'')+'</textarea>'+
+      '<div style="display:flex;gap:8px;flex-wrap:wrap;margin:8px 0">'+ph+'</div>'+
+      '<label class="btn-edit" style="display:inline-block;cursor:pointer;font-size:12.5px;padding:5px 12px">📷 사진 올리기<input type="file" accept="image/*" multiple style="display:none" onchange="uploadRoutePhotos(this,'+k+')"></label> '+
+      '<label class="btn-edit" style="display:inline-block;cursor:pointer;font-size:12.5px;padding:5px 12px">🎬 '+(r.video?'영상 바꾸기':'영상 올리기')+'<input type="file" accept="video/mp4,video/*" style="display:none" onchange="uploadRouteVideo(this,'+k+')"></label> '+
+      (r.video?'<button type="button" style="'+sb+';font-size:12px;padding:3px 10px;border-color:#FCA5A5;color:#DC2626" onclick="removeRouteVideo('+k+')">영상 빼기</button>':'')+
+      '<span id="rtSt'+k+'" style="font-size:12px;color:var(--text3);margin-left:6px"></span>'+
+      (r.video?'<video src="'+escHtml(r.video)+'" controls muted preload="metadata" style="display:block;margin-top:8px;width:180px;border-radius:8px;background:#000"></video>':'')+
+    '</div>';
   }).join('');
 }
-function moveDirPhoto(i,d){var j=i+d;if(j<0||j>=editDirPhotos.length)return;var t=editDirPhotos[i];editDirPhotos[i]=editDirPhotos[j];editDirPhotos[j]=t;renderDirPhotos();}
-function removeDirPhoto(i){if(!confirm('이 사진을 빼시겠습니까? ([저장하기]를 눌러야 반영돼요)'))return;editDirPhotos.splice(i,1);renderDirPhotos();}
-function renderDirVideo(){
-  var box=document.getElementById('bEditDirVideo');
-  box.innerHTML=editDirVideo?'<video src="'+escHtml(editDirVideo)+'" controls preload="metadata" style="width:260px;border-radius:10px;background:#000;display:block"></video><button type="button" onclick="removeDirVideo()" style="margin-top:4px;border:1px solid #FCA5A5;color:#DC2626;background:#fff;border-radius:6px;font-size:12px;padding:2px 10px;cursor:pointer">영상 빼기</button>':'<div style="font-size:12px;color:var(--text3)">아직 없어요</div>';
-}
-function removeDirVideo(){if(!confirm('영상을 빼시겠습니까? ([저장하기]를 눌러야 반영돼요)'))return;editDirVideo='';renderDirVideo();}
+function addRoute(){syncRoutes();editRoutes.push({title:'',sub:'',steps:'',photos:[],video:''});renderRoutes();}
+function removeRoute(k){if(!confirm('길 '+(k+1)+'을(를) 지우시겠습니까? ([저장하기]를 눌러야 반영돼요)'))return;syncRoutes();editRoutes.splice(k,1);renderRoutes();}
+function moveRoute(k,d){syncRoutes();var j=k+d;if(j<0||j>=editRoutes.length)return;var t=editRoutes[k];editRoutes[k]=editRoutes[j];editRoutes[j]=t;renderRoutes();}
+function moveRoutePhoto(k,i,d){syncRoutes();var a=editRoutes[k].photos,j=i+d;if(j<0||j>=a.length)return;var t=a[i];a[i]=a[j];a[j]=t;renderRoutes();}
+function removeRoutePhoto(k,i){if(!confirm('이 사진을 빼시겠습니까? ([저장하기]를 눌러야 반영돼요)'))return;syncRoutes();editRoutes[k].photos.splice(i,1);renderRoutes();}
+function removeRouteVideo(k){if(!confirm('영상을 빼시겠습니까? ([저장하기]를 눌러야 반영돼요)'))return;syncRoutes();editRoutes[k].video='';renderRoutes();}
 async function uploadToBranch(f,prefix){
   var id=document.getElementById('bEditId').value;
   var ext=f.name.lastIndexOf('.')>=0?f.name.slice(f.name.lastIndexOf('.')).toLowerCase():'';
@@ -1194,26 +1219,27 @@ async function uploadToBranch(f,prefix){
   if(!r.ok){var t=await r.text();throw new Error(r.status+' '+t.slice(0,120));}
   return SB_URL+'/storage/v1/object/public/service-guides/'+path;
 }
-async function uploadDirPhotos(input){
+async function uploadRoutePhotos(input,k){
   var files=[].slice.call(input.files||[]);input.value='';
   if(!files.length)return;
-  var st=document.getElementById('bEditDirSt');
-  for(var k=0;k<files.length;k++){
-    st.textContent='⏳ 올리는 중... ('+(k+1)+'/'+files.length+')';
-    try{editDirPhotos.push(await uploadToBranch(files[k],'dir'));}catch(e){st.textContent='❌ 올리기 실패: '+files[k].name;return;}
+  syncRoutes();
+  for(var i=0;i<files.length;i++){
+    document.getElementById('rtSt'+k).textContent='⏳ 올리는 중... ('+(i+1)+'/'+files.length+')';
+    try{editRoutes[k].photos.push(await uploadToBranch(files[i],'dir'));}catch(e){document.getElementById('rtSt'+k).textContent='❌ 올리기 실패: '+files[i].name;return;}
   }
-  renderDirPhotos();
-  st.textContent='✅ 올렸어요. [저장하기]를 눌러야 홈피에 보여요.';
+  renderRoutes();
+  document.getElementById('rtSt'+k).textContent='✅ 올렸어요. [저장하기]를 눌러야 홈피에 보여요.';
 }
-async function uploadDirVideo(input){
+async function uploadRouteVideo(input,k){
   var f=(input.files||[])[0];input.value='';
   if(!f)return;
-  var st=document.getElementById('bEditVidSt');
+  var st=document.getElementById('rtSt'+k);
   if(f.size>50*1024*1024){st.textContent='❌ 50MB가 넘어요 ('+Math.round(f.size/1048576)+'MB). 영상을 줄여서 올려 주세요.';return;}
+  syncRoutes();
   st.textContent='⏳ 영상 올리는 중... ('+Math.round(f.size/1048576)+'MB, 조금 걸려요)';
-  try{editDirVideo=await uploadToBranch(f,'video');}catch(e){st.textContent='❌ 올리기 실패: '+e.message;return;}
-  renderDirVideo();
-  st.textContent='✅ 올렸어요. [저장하기]를 눌러야 홈피에 보여요.';
+  try{editRoutes[k].video=await uploadToBranch(f,'video');}catch(e){st.textContent='❌ 올리기 실패: '+e.message;return;}
+  renderRoutes();
+  document.getElementById('rtSt'+k).textContent='✅ 올렸어요. [저장하기]를 눌러야 홈피에 보여요.';
 }
 function renderEditPhotos(){
   var box=document.getElementById('bEditPhotos');
@@ -1330,9 +1356,7 @@ async function openBranchEditModal(id){
   var bi=(await readBranchInfo())[String(b.id)]||{};
   biFill('bEdit',bi);
   editPhotos=(bi.photos||[]).slice();renderEditPhotos();
-  editDirPhotos=(bi.directions_photos||[]).slice();renderDirPhotos();
-  editDirVideo=bi.directions_video||'';renderDirVideo();
-  document.getElementById('bEditDirSt').textContent='';document.getElementById('bEditVidSt').textContent='';
+  editRoutes=legacyRoutes(bi);renderRoutes();
   document.getElementById('bEditPhotoSt').textContent='';
   document.getElementById('branchEditStatus').style.display='none';
   document.getElementById('branchEditModal').classList.add('open');

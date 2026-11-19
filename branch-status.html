@@ -137,7 +137,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .rc-how{display:inline-flex;align-items:center;font-size:14px;font-weight:700;color:var(--blue);padding:8px 6px}
 .dir-list{margin:0;padding-left:22px;font-size:14.5px;color:var(--text2);line-height:1.8}
 .dir-list li::marker{color:var(--blue);font-weight:900}
-.dir-video{display:block;width:100%;max-width:720px;border-radius:12px;background:#000;margin-bottom:14px}
+.dir-video{display:block;width:100%;max-width:400px;max-height:72vh;border-radius:12px;background:#000;margin-bottom:14px}
+.rt-tabs{display:flex;gap:0;border-bottom:1px solid var(--border);margin:4px 0 16px;overflow-x:auto;scrollbar-width:none}
+.rt-tabs a{flex:0 0 auto;padding:10px 16px;font-size:15px;font-weight:800;color:var(--text3);border-bottom:3px solid transparent;text-align:center;line-height:1.3}
+.rt-tabs a small{display:block;font-size:11.5px;font-weight:600;color:var(--text3)}
+.rt-tabs a.on{color:var(--blue);border-bottom-color:var(--blue)}
+.rt-links{display:flex;flex-wrap:wrap;gap:8px}
+.rt-links a{background:#fff;border:1.5px solid var(--blue);color:var(--blue);border-radius:50px;padding:5px 14px;font-size:14px;font-weight:800}
 .dir-photos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .dir-photos a{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--border);background:#fff;cursor:zoom-in}
 .dir-photos img{display:block;width:100%;height:auto}
@@ -306,8 +312,7 @@ function info(b){
     color:i.color!==false,
     extras:i.extras||'',
     directions:i.directions||'',
-    dirPhotos:(i.directions_photos||[]).filter(Boolean),
-    dirVideo:i.directions_video||'',
+    routes:(i.routes&&i.routes.length?i.routes:((i.directions||(i.directions_photos||[]).length||i.directions_video)?[{title:'',steps:i.directions||'',photos:i.directions_photos||[],video:i.directions_video||''}]:[])).filter(function(r){return r&&(r.steps||r.title||(r.photos||[]).length||r.video);}),
     parkNote:i.parking_note||'',
     hours:i.hours||(b.hours24!==false?'24시간 · 연중무휴':'')
   };
@@ -382,14 +387,17 @@ function renderList(){
 var slideIdx=0,slideN=0;
 function openBranch(id){location.hash='b'+id;}
 function goList(){history.pushState('',document.title,location.pathname+location.search);route();}
+var ROUTE_SEL=0;
 function route(){
-  var m=/^#b(\d+)$/.exec(location.hash);
+  var m=/^#b(\d+)(?:-(\d+))?$/.exec(location.hash);
+  ROUTE_SEL=m&&m[2]?(+m[2]-1):0;
   var b=m&&ALL.find(function(x){return x.id===+m[1];});
   document.getElementById('listView').style.display=b?'none':'';
   document.getElementById('filterBar').style.display=b?'none':'';
   document.getElementById('detailView').style.display=b?'block':'none';
   if(b)renderDetail(b);else{document.title=TITLE0;renderList();}
   window.scrollTo(0,0);
+  if(b&&m[2]){var db=document.getElementById('dirBox');if(db)setTimeout(function(){window.scrollTo({top:db.getBoundingClientRect().top+window.scrollY-150,behavior:'instant'});},80);}
 }
 window.addEventListener('hashchange',route);
 try{history.scrollRestoration='manual';}catch(e){}
@@ -425,7 +433,8 @@ function renderDetail(b){
       (b.parking&&x.parkNote?'<a class="park-btn" href="https://fax.printnuri.com/parking" target="_blank" rel="noopener"><i>P</i>'+T('주차 할인 받기')+'</a>':'')],
     [T('이용 가능 서비스'),svcs?'<div class="svcs">'+svcs+'</div>':''],
     [T('주소'),b.address?esc(b.address)+'<button class="copy-btn" onclick="copyAddr(this)" data-a="'+esc(b.address)+'">'+T('복사')+'</button>':''],
-    [T('찾아오는 길'),x.directions?'<ol class="dir-list">'+x.directions.split('\n').filter(function(l){return l.trim();}).map(function(l){return '<li>'+esc(l)+'</li>';}).join('')+'</ol>'+((x.dirPhotos.length||x.dirVideo)?'<a class="rc-how" href="#dirBox" onclick="document.getElementById(\'dirBox\').scrollIntoView({behavior:\'smooth\'});return false;">'+T('사진으로 보기')+' ›</a>':''):''],
+    [T('찾아오는 길'),x.routes.length?(x.routes.length>1?'<div class="rt-links">'+x.routes.map(function(r,k){return '<a href="#b'+b.id+'-'+(k+1)+'">'+esc(r.title||(T('찾아오는 길')+' '+(k+1)))+(r.video?' 🎬':(r.photos||[]).length?' 📷':'')+'</a>';}).join('')+'</div><div class="note" style="font-size:13px;color:var(--text3);margin-top:6px">'+T('가장 찾기 쉬운 길이에요. 누르면 사진·영상으로 볼 수 있어요')+'</div>'
+      :'<ol class="dir-list">'+x.routes[0].steps.split('\n').filter(function(l){return l.trim();}).map(function(l){return '<li>'+esc(l)+'</li>';}).join('')+'</ol>'+(((x.routes[0].photos||[]).length||x.routes[0].video)?'<a class="rc-how" href="#b'+b.id+'-1">'+T('사진으로 보기')+' ›</a>':'')):''],
     [T('전화번호'),tel?'<a class="tel" href="tel:'+tel.replace(/[^0-9]/g,'')+'">'+esc(tel)+'</a>':''],
     [T('운영시간'),esc(T(x.hours))],
     [T('출력 용지'),esc(x.papers)],
@@ -450,12 +459,15 @@ function renderDetail(b){
 var GUIDES=[['guide-print.html','🖨️','인쇄','--print'],['guide-copy.html','📋','복사','--copy'],['guide-scan.html','📄','스캔','--scan'],['guide-fax.html','📠','팩스','--fax'],['guide-coat.html','✨','코팅','--coat'],['guide-bind.html','📚','제본','--bind']];
 function renderExtra(b){
   var xi=info(b),dh='';
-  // 찾아오는 길: 영상(있으면) + 단계 사진 — 관리자 > 지점 수정에서 올림
-  if(xi.dirVideo||xi.dirPhotos.length){
-    var steps=xi.directions.split('\n').filter(function(l){return l.trim();});
+  // 찾아오는 길: 길(GATE)마다 탭 — 단계 글 + 영상 + 사진 (관리자 > 지점 수정에서 길별로 올림)
+  if(xi.routes.length){
+    var sel=Math.min(Math.max(ROUTE_SEL,0),xi.routes.length-1);
     dh='<div class="ex-box full" id="dirBox"><div class="ex-h">🧭 '+T('찾아오는 길')+'</div><div class="ex-sub">'+T('처음 오시는 분은 차례대로 따라오세요')+'</div>'+
-      (xi.dirVideo?'<video class="dir-video" src="'+esc(xi.dirVideo)+'" controls playsinline preload="metadata"></video>':'')+
-      '<div class="dir-photos">'+xi.dirPhotos.map(function(u,i){return '<a href="'+esc(u)+'" target="_blank" rel="noopener"><img src="'+esc(u)+'" alt="'+esc(steps[i]||(T('찾아오는 길')+' '+(i+1)))+'" loading="lazy"></a>';}).join('')+'</div></div>';
+      (xi.routes.length>1?'<div class="rt-tabs">'+xi.routes.map(function(r,k){return '<a href="#b'+b.id+'-'+(k+1)+'" class="'+(k===sel?'on':'')+'">'+esc(r.title||(T('찾아오는 길')+' '+(k+1)))+(r.sub?'<small>'+esc(r.sub)+'</small>':'')+'</a>';}).join('')+'</div>':'');
+    var r=xi.routes[sel],steps=(r.steps||'').split('\n').filter(function(l){return l.trim();});
+    dh+=(steps.length?'<ol class="dir-list" style="margin-bottom:14px">'+steps.map(function(l){return '<li>'+esc(l)+'</li>';}).join('')+'</ol>':'')+
+      (r.video?'<video class="dir-video" src="'+esc(r.video)+'" controls playsinline muted preload="metadata"></video>':'')+
+      ((r.photos||[]).length?'<div class="dir-photos">'+r.photos.map(function(u,i){return '<a href="'+esc(u)+'" target="_blank" rel="noopener"><img src="'+esc(u)+'" alt="'+esc(steps[i]||(T('찾아오는 길')+' '+(i+1)))+'" loading="lazy"></a>';}).join('')+'</div>':'')+'</div>';
   }
   var g=GUIDES.map(function(x){return '<a href="'+x[0]+'"><i style="--c:color-mix(in srgb,var('+x[3]+') 18%,#fff)">'+x[1]+'</i>'+T(x[2])+'</a>';}).join('')+
     '<a href="guide-video.html"><i>▶</i>'+T('동영상으로 보기')+'</a>';
