@@ -4241,18 +4241,6 @@
    "faq.html"
   ]
  },
- "bf4e3d7581": {
-  "ko": "<input aria-label=\"FAQ 검색\" autocomplete=\"off\" id=\"faqQ\" oninput=\"onFaqSearch()\" placeholder=\"궁금한 키워드를 입력하세요 (예: 환불, 코팅, 팩스)\" type=\"search\"/> <button class=\"s-clear\" onclick=\"clearFaqSearch()\" type=\"button\">지우기</button>",
-  "pages": [
-   "faq.html"
-  ]
- },
- "4452de19e1": {
-  "ko": "궁금한 키워드를 입력하세요 (예: 환불, 코팅, 팩스)",
-  "pages": [
-   "faq.html"
-  ]
- },
  "f78a39ec0c": {
   "ko": "FAQ 검색",
   "pages": [
@@ -7060,6 +7048,18 @@
    "about.html",
    "branch-status.html",
    "community.html"
+  ]
+ },
+ "7b09d53a91": {
+  "ko": "<input aria-label=\"FAQ 검색\" autocomplete=\"off\" id=\"faqQ\" oninput=\"onFaqSearch()\" placeholder=\"궁금한 키워드나 FAQ 번호를 입력하세요 (예: 환불, 코팅, 6)\" type=\"search\"/> <button class=\"s-clear\" onclick=\"clearFaqSearch()\" type=\"button\">지우기</button>",
+  "pages": [
+   "faq.html"
+  ]
+ },
+ "fccf93fa33": {
+  "ko": "궁금한 키워드나 FAQ 번호를 입력하세요 (예: 환불, 코팅, 6)",
+  "pages": [
+   "faq.html"
   ]
  }
 }

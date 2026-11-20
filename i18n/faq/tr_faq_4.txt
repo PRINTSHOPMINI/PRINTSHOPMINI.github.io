@@ -1556,6 +1556,22 @@ Tất cả cửa hàng PRINTSHOPMINI hiện nay đều do công ty trực tiếp
 #u en: Explanation picture
 #u zh: 说明图片
 #u vi: Hình minh họa
+@@ui {n}번
+#u en: No. {n}
+#u zh: {n}号
+#u vi: Số {n}
+@@ui {n}번 FAQ예요.
+#u en: This is FAQ No. {n}.
+#u zh: 这是第{n}号FAQ。
+#u vi: Đây là FAQ số {n}.
+@@ui {n}번 FAQ는 없어요.
+#u en: There is no FAQ No. {n}.
+#u zh: 没有第{n}号FAQ。
+#u vi: Không có FAQ số {n}.
+@@ui 번호를 다시 확인하거나, 키워드로 검색해 주세요.
+#u en: Check the number again, or search with a keyword.
+#u zh: 请再确认一下编号，或用关键词搜索。
+#u vi: Hãy kiểm tra lại số, hoặc tìm bằng từ khóa.
 @@ui 누르면 크게 보여요
 #u en: Tap to see it bigger
 #u zh: 点一下可以放大

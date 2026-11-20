@@ -90,6 +90,7 @@ mark{background:#FFE08A;color:inherit;border-radius:3px;padding:0 2px}
 .q-copy-row{margin-top:16px;text-align:right}
 .q-copy{background:#fff;border:1px solid var(--border);color:var(--text3);font-size:12px;font-weight:700;border-radius:50px;padding:5px 13px;cursor:pointer;font-family:inherit}
 .q-copy:hover{color:var(--blue);border-color:var(--blue)}
+.q-num{display:inline-block;background:var(--blue);color:#fff;font-size:13.5px;font-weight:900;border-radius:7px;padding:2px 9px;margin-right:9px;vertical-align:1px;white-space:nowrap;letter-spacing:-.2px}
 .q-no{display:inline-block;background:#1E293B;color:#fff;font-size:11.5px;font-weight:800;border-radius:6px;padding:1px 7px;margin-right:8px;vertical-align:1px;white-space:nowrap}
 .q-tag{display:inline-block;font-size:11.5px;font-weight:700;color:var(--blue);background:var(--blue-light);border-radius:50px;padding:1px 9px;margin-right:8px;white-space:nowrap;vertical-align:1px}
 
@@ -192,7 +193,7 @@ footer{background:#111827;color:#9CA3AF;padding:60px 6% 32px}
 <h1 class="ph-h1">常见问题</h1>
 <div class="ph-search">
 <div class="faq-search" id="faqSearch">
-<svg aria-hidden="true" class="s-ico" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg> <input aria-label="搜索常见问题" autocomplete="off" id="faqQ" oninput="onFaqSearch()" placeholder="请输入关键词（例：退款、塑封、传真）" type="search"/> <button class="s-clear" onclick="clearFaqSearch()" type="button">清除</button> </div>
+<svg aria-hidden="true" class="s-ico" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg> <input aria-label="搜索常见问题" autocomplete="off" id="faqQ" oninput="onFaqSearch()" placeholder="请输入关键词或FAQ编号（例：退款、塑封、6）" type="search"/> <button class="s-clear" onclick="clearFaqSearch()" type="button">清除</button> </div>
 <div aria-live="polite" class="faq-count" id="faqCount"></div>
 </div>
 </div>
@@ -286,13 +287,16 @@ function scrollToListTop(){
 function renderFaqs(){
   var list=document.getElementById('faqList'),count=document.getElementById('faqCount');
   var raw=document.getElementById('faqQ').value.trim();
-  var terms=raw.toLowerCase().split(/\s+/).filter(Boolean);
+  var numM=/^(?:no\.?|#|faq)?\s*(\d{1,3})\s*(?:번|号|號)?$/i.exec(raw);  // 번호만 넣으면 그 FAQ
+  var terms=numM?[]:raw.toLowerCase().split(/\s+/).filter(Boolean);
   document.getElementById('faqSearch').classList.toggle('has-text',!!raw);
   var hit=FAQS.filter(function(f){
+    if(numM)return f.id===+numM[1];
     if(!terms.length)return true;
     var hay=((f.question||'')+' '+(f.answer||'')).toLowerCase();
     return terms.every(function(w){return hay.indexOf(w)>-1;});
   });
+  if(numM)CUR='all';
   // 검색어에 해당하는 종합 안내가 있으면 결과 맨 위로 (예: 환불 → FAQ 70)
   var pinId=null;
   terms.forEach(function(w){Object.keys(SEARCH_PIN).forEach(function(k){if(w.indexOf(k)>-1&&pinId===null)pinId=SEARCH_PIN[k];});});
@@ -336,6 +340,8 @@ function renderFaqs(){
     var msg;
     if(terms.length&&hit.length&&CUR!=='all'){
       msg='<b>'+T('이 묶음에는 없어요 🙈')+'</b>'+T('다른 묶음에 {n}가 있어요.').replace('{n}','<b style="display:inline;color:var(--blue);font-size:inherit">'+hit.length+T('개')+'</b>')+'<br><button type="button" onclick="setCat(\'all\')">'+T('전체에서 보기')+'</button>';
+    }else if(numM){
+      msg='<b>'+T('{n}번 FAQ는 없어요.').replace('{n}',escH(numM[1]))+'</b>'+T('번호를 다시 확인하거나, 키워드로 검색해 주세요.');
     }else if(terms.length){
       msg='<b>'+T('"{q}"에 대한 검색 결과가 없습니다.').replace('{q}',escH(raw))+'</b>'+T('다른 키워드로 검색하거나, 아래 톡톡으로 문의해 주세요.');
     }else{
@@ -344,12 +350,12 @@ function renderFaqs(){
     list.innerHTML='<div class="faq-empty">'+msg+'</div>';
     return;
   }
-  count.innerHTML=terms.length?T('{n}의 질문을 찾았습니다.').replace('{n}','<b>'+rows.length+T('개')+'</b>'):'';
+  count.innerHTML=numM?T('{n}번 FAQ예요.').replace('{n}','<b>'+escH(numM[1])+'</b>'):terms.length?T('{n}의 질문을 찾았습니다.').replace('{n}','<b>'+rows.length+T('개')+'</b>'):'';
   list.innerHTML=rows.map(function(f){
-    var open=terms.length?' open':'';
+    var open=(terms.length||numM)?' open':'';
     var c=catOf(f);
     var tag=(CUR==='all'&&c)?'<span class="q-tag">'+escH(catLabel(c))+'</span>':'';
-    if(SHOW_NO)tag='<span class="q-no">No.'+(FAQS.indexOf(f)+1)+'</span>'+tag;
+    tag='<span class="q-num">'+T('{n}번').replace('{n}',f.id)+'</span>'+tag;  // FAQ 고유 번호 (링크 #faq-번호와 같아요, 전화 안내용)
     return '<div class="faq-item'+open+'" id="faq-'+f.id+'" onclick="toggleFaq(this,event)">'+
       '<div class="faq-q"><span>'+tag+hl(f.question,terms)+'</span> <span class="q-icon">+</span></div>'+
       '<div class="faq-a">'+renderAnswer(f.answer,terms)+'<div class="q-copy-row"><button type="button" class="q-copy" onclick="copyFaqLink('+f.id+',this,event)">'+T('🔗 이 질문 링크 복사')+'</button></div></div>'+

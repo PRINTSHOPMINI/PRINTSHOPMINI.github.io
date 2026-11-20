@@ -20,14 +20,14 @@ vi: Gấu mèo
 en: FAQ
 zh: 常见问题
 vi: Câu hỏi thường gặp
-@@bf4e3d7581
-en: <input aria-label="Search FAQ" autocomplete="off" id="faqQ" oninput="onFaqSearch()" placeholder="Type a keyword (e.g. refund, laminate, fax)" type="search"/> <button class="s-clear" onclick="clearFaqSearch()" type="button">Clear</button>
-zh: <input aria-label="搜索常见问题" autocomplete="off" id="faqQ" oninput="onFaqSearch()" placeholder="请输入关键词（例：退款、塑封、传真）" type="search"/> <button class="s-clear" onclick="clearFaqSearch()" type="button">清除</button>
-vi: <input aria-label="Tìm câu hỏi" autocomplete="off" id="faqQ" oninput="onFaqSearch()" placeholder="Nhập từ khóa (ví dụ: hoàn tiền, ép, fax)" type="search"/> <button class="s-clear" onclick="clearFaqSearch()" type="button">Xóa</button>
-@@4452de19e1
-en: Type a keyword (e.g. refund, laminate, fax)
-zh: 请输入关键词（例：退款、塑封、传真）
-vi: Nhập từ khóa (ví dụ: hoàn tiền, ép, fax)
+@@7b09d53a91
+en: <input aria-label="Search FAQ" autocomplete="off" id="faqQ" oninput="onFaqSearch()" placeholder="Type a keyword or FAQ number (e.g. refund, laminate, 6)" type="search"/> <button class="s-clear" onclick="clearFaqSearch()" type="button">Clear</button>
+zh: <input aria-label="搜索常见问题" autocomplete="off" id="faqQ" oninput="onFaqSearch()" placeholder="请输入关键词或FAQ编号（例：退款、塑封、6）" type="search"/> <button class="s-clear" onclick="clearFaqSearch()" type="button">清除</button>
+vi: <input aria-label="Tìm câu hỏi" autocomplete="off" id="faqQ" oninput="onFaqSearch()" placeholder="Nhập từ khóa hoặc số FAQ (ví dụ: hoàn tiền, ép, 6)" type="search"/> <button class="s-clear" onclick="clearFaqSearch()" type="button">Xóa</button>
+@@fccf93fa33
+en: Type a keyword or FAQ number (e.g. refund, laminate, 6)
+zh: 请输入关键词或FAQ编号（例：退款、塑封、6）
+vi: Nhập từ khóa hoặc số FAQ (ví dụ: hoàn tiền, ép, 6)
 @@f78a39ec0c
 en: Search FAQ
 zh: 搜索常见问题
