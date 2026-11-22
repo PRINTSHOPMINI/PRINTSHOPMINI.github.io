@@ -541,9 +541,9 @@ Thông báo này luôn hiện ra khi làm trên mặt kính.
 - If you scanned on machine 2: the [2번복합기스캔함] (Machine 2 scan folder) folder
 📍 They're in the '미니 전용 프로그램' (MINI programs) box on the desktop.
 [[wide:images/faq/scanbox-desktop.jpg]]
+📌 Depending on the PC, the scan folder icon may look like a yellow folder or a blank document. If the name is the same, it's the same scan folder. Just double-click to open it.
 
 🖥️ Every PC in the store has the scan folders on its desktop. You can open them on any PC and see the same scanned files.
-📌 Depending on the PC, the scan folder icon may look like a yellow folder or a blank document. If the name is the same, it's the same scan folder. Just double-click to open it.
 
 📁 You can choose PDF or JPG for the file type. (Searchable-text PDFs are not available)
 ⏳ Files are deleted 30 minutes after you pay. Move the file somewhere else as soon as it's made.
@@ -556,9 +556,9 @@ Thông báo này luôn hiện ra khi làm trên mặt kính.
 - 在 2 号复合机扫描的话：［2번복합기스캔함］（2 号复合机扫描文件夹）文件夹
 📍 在桌面上的“미니 전용 프로그램”（MINI 专用程序）栏里。
 [[wide:images/faq/scanbox-desktop.jpg]]
+📌 根据电脑不同，扫描文件夹的图标可能显示为黄色文件夹或空白文档的样子。名字相同就是同一个扫描文件夹，双击打开即可。
 
 🖥️ 店内所有电脑的桌面上都有扫描文件夹。在任何一台电脑上打开，都能看到同样的扫描文件。
-📌 根据电脑不同，扫描文件夹的图标可能显示为黄色文件夹或空白文档的样子。名字相同就是同一个扫描文件夹，双击打开即可。
 
 📁 文件格式可以选 PDF 或 JPG。（不支持可以搜索文字的 PDF）
 ⏳ 从付款时间起 30 分钟后文件会被删除。文件生成后请马上移到别的地方。
@@ -571,9 +571,9 @@ Thông báo này luôn hiện ra khi làm trên mặt kính.
 - Scan ở máy số 2: thư mục [2번복합기스캔함] (thư mục scan máy số 2)
 📍 Nằm trong ô '미니 전용 프로그램' (chương trình riêng của MINI) trên màn hình nền.
 [[wide:images/faq/scanbox-desktop.jpg]]
+📌 Tùy máy tính, biểu tượng thư mục scan có thể trông như thư mục màu vàng hoặc tài liệu trống. Nếu tên giống nhau thì là cùng một thư mục scan. Chỉ cần nhấp đúp để mở.
 
 🖥️ Màn hình nền của mọi máy tính trong cửa hàng đều có thư mục scan. Mở ở máy tính nào cũng thấy cùng các tệp đã scan.
-📌 Tùy máy tính, biểu tượng thư mục scan có thể trông như thư mục màu vàng hoặc tài liệu trống. Nếu tên giống nhau thì là cùng một thư mục scan. Chỉ cần nhấp đúp để mở.
 
 📁 Có thể chọn loại tệp PDF hoặc JPG. (Không có PDF tìm kiếm được chữ)
 ⏳ Tệp sẽ bị xóa 30 phút sau khi thanh toán. Khi tệp được tạo, hãy chuyển ngay sang chỗ khác.
