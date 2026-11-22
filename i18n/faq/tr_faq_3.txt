@@ -576,7 +576,7 @@ It's on the desk with the white binding·laminating machine (SAFA-BM100). Produc
 1. After paying, go to the printer machine. For copy · scan · fax, put in the originals following the guide, do the job, and press [확인] (OK) on the price screen.
 2. When it says "카드를 대 주세요" (Please tap your card), take the white charge card hanging on a string next to the card reader.
 [[img:images/faq/pay-card-tap1.png]]
-3. Place the card on the Wi-Fi-like mark on the reader. When it beeps, the payment is done.
+3. Place the card on the Wi-Fi-like mark on the reader (don't insert it, just tap). When it beeps, the payment is done.
 [[img:images/faq/pay-card-tap2.png]]
 
 ✅ After paying, prints and copies come out, scans become files, and faxes turn the originals into a file and start sending.
@@ -644,7 +644,7 @@ It's on the desk with the white binding·laminating machine (SAFA-BM100). Produc
 1. 付款后到复合机前。复印·扫描·传真请按使用方法放好原件操作后，在金额确认窗口按［확인］（确认）。
 2. 听到“카드를 대 주세요”（请刷卡）的声音后，拿起用绳子挂在刷卡机旁边的白色充值卡。
 [[img:images/faq/pay-card-tap1.png]]
-3. 把卡放在刷卡机上像 Wi-Fi 一样的标志上。听到“嘀”的一声就付款完成了。
+3. 把卡放在刷卡机上像 Wi-Fi 一样的标志上（不要插卡，贴一下就行）。听到“嘀”的一声就付款完成了。
 [[img:images/faq/pay-card-tap2.png]]
 
 ✅ 付款完成后，打印·复印会打印出来，扫描会生成文件，传真会把原件变成文件开始发送。
@@ -712,7 +712,7 @@ It's on the desk with the white binding·laminating machine (SAFA-BM100). Produc
 1. Thanh toán xong, đến máy in đa năng. Photo · scan · fax thì đặt bản gốc theo hướng dẫn, làm xong bấm [확인] (Xác nhận) ở màn hình giá tiền.
 2. Khi nghe "카드를 대 주세요" (Hãy chạm thẻ), cầm chiếc thẻ nạp tiền màu trắng treo bằng dây bên cạnh máy quẹt thẻ.
 [[img:images/faq/pay-card-tap1.png]]
-3. Đặt thẻ lên biểu tượng giống Wi-Fi trên máy. Khi nghe tiếng "bíp" là thanh toán xong.
+3. Đặt thẻ lên biểu tượng giống Wi-Fi trên máy (đừng cắm thẻ, chỉ chạm). Khi nghe tiếng "bíp" là thanh toán xong.
 [[img:images/faq/pay-card-tap2.png]]
 
 ✅ Thanh toán xong, in·photo sẽ in ra, scan sẽ tạo tệp, fax sẽ chuyển bản gốc thành tệp và bắt đầu gửi.
