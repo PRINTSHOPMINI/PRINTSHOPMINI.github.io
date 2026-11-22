@@ -540,6 +540,9 @@ Thông báo này luôn hiện ra khi làm trên mặt kính.
 - If you scanned on machine 1: the [1번복합기스캔함] (Machine 1 scan folder) folder
 - If you scanned on machine 2: the [2번복합기스캔함] (Machine 2 scan folder) folder
 
+🖥️ Every PC in the store has the scan folders on its desktop. You can open them on any PC and see the same scanned files.
+📌 Depending on the PC, the scan folder icon may look like a yellow folder or a blank document. If the name is the same, it's the same scan folder. Just double-click to open it.
+
 📁 You can choose PDF or JPG for the file type. (Searchable-text PDFs are not available)
 ⏳ Files are deleted 30 minutes after you pay. Move the file somewhere else as soon as it's made.
 🔌 If you have a USB, move it there. If not, send it to your email over the internet.
@@ -553,6 +556,9 @@ Thông báo này luôn hiện ra khi làm trên mặt kính.
 - 在 1 号复合机扫描的话：［1번복합기스캔함］（1 号复合机扫描文件夹）文件夹
 - 在 2 号复合机扫描的话：［2번복합기스캔함］（2 号复合机扫描文件夹）文件夹
 
+🖥️ 店内所有电脑的桌面上都有扫描文件夹。在任何一台电脑上打开，都能看到同样的扫描文件。
+📌 根据电脑不同，扫描文件夹的图标可能显示为黄色文件夹或空白文档的样子。名字相同就是同一个扫描文件夹，双击打开即可。
+
 📁 文件格式可以选 PDF 或 JPG。（不支持可以搜索文字的 PDF）
 ⏳ 从付款时间起 30 分钟后文件会被删除。文件生成后请马上移到别的地方。
 🔌 有 U 盘的话移到 U 盘里，没有的话用网络发到邮箱带走。
@@ -565,6 +571,9 @@ Thông báo này luôn hiện ra khi làm trên mặt kính.
 💻 Tệp đã scan nằm trên màn hình nền máy tính cửa hàng.
 - Scan ở máy số 1: thư mục [1번복합기스캔함] (thư mục scan máy số 1)
 - Scan ở máy số 2: thư mục [2번복합기스캔함] (thư mục scan máy số 2)
+
+🖥️ Màn hình nền của mọi máy tính trong cửa hàng đều có thư mục scan. Mở ở máy tính nào cũng thấy cùng các tệp đã scan.
+📌 Tùy máy tính, biểu tượng thư mục scan có thể trông như thư mục màu vàng hoặc tài liệu trống. Nếu tên giống nhau thì là cùng một thư mục scan. Chỉ cần nhấp đúp để mở.
 
 📁 Có thể chọn loại tệp PDF hoặc JPG. (Không có PDF tìm kiếm được chữ)
 ⏳ Tệp sẽ bị xóa 30 phút sau khi thanh toán. Khi tệp được tạo, hãy chuyển ngay sang chỗ khác.
