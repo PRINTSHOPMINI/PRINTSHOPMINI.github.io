@@ -536,12 +536,15 @@ Thông báo này luôn hiện ra khi làm trên mặt kính.
 @@39
 #q en: Where is my scanned file?
 #a en
-💻 Scanned files are on the store PC desktop.
-- If you scanned on machine 1: the [1번복합기스캔함] (Machine 1 scan folder) folder
-- If you scanned on machine 2: the [2번복합기스캔함] (Machine 2 scan folder) folder
-📍 They're in the '미니 전용 프로그램' (MINI programs) box on the desktop.
+💻 Scanned files are in the scan folders on the store PC desktop.
+
+1️⃣ Find the '미니 전용 프로그램' (MINI programs) box near the top of the desktop. (Red box in the picture)
 [[wide:images/faq/scanbox-desktop-full.jpg]]
-📌 Depending on the PC, the scan folder icon may look like a yellow folder or a blank document. If the name is the same, it's the same scan folder. Just double-click to open it.
+2️⃣ Double-click the scan folder icon with the number of the machine you scanned on.
+- Scanned on machine 1: [1번복합기스캔함] (Machine 1 scan folder)
+- Scanned on machine 2: [2번복합기스캔함] (Machine 2 scan folder)
+👆 It's OK if the icon looks like a yellow folder or a blank document. Just double-click it.
+3️⃣ Find your scanned file in the folder that opens and move it to a USB or your email.
 
 🖥️ Every PC in the store has the scan folders on its desktop. You can open them on any PC and see the same scanned files.
 
@@ -551,12 +554,15 @@ Thông báo này luôn hiện ra khi làm trên mặt kính.
 💰 Scanning costs 100 won per side, no matter the size or color/B&W.
 #q zh: 扫描的文件在哪里？
 #a zh
-💻 扫描的文件在店内电脑的桌面上。
-- 在 1 号复合机扫描的话：［1번복합기스캔함］（1 号复合机扫描文件夹）文件夹
-- 在 2 号复合机扫描的话：［2번복합기스캔함］（2 号复合机扫描文件夹）文件夹
-📍 在桌面上的“미니 전용 프로그램”（MINI 专用程序）栏里。
+💻 扫描的文件在店内电脑桌面上的扫描文件夹里。
+
+1️⃣ 在桌面上方找到“미니 전용 프로그램”（MINI 专用程序）栏。（图中红框）
 [[wide:images/faq/scanbox-desktop-full.jpg]]
-📌 根据电脑不同，扫描文件夹的图标可能显示为黄色文件夹或空白文档的样子。名字相同就是同一个扫描文件夹，双击打开即可。
+2️⃣ 双击与您扫描的复合机号码相同的扫描文件夹图标。
+- 在 1 号复合机扫描的话：［1번복합기스캔함］（1 号复合机扫描文件夹）
+- 在 2 号复合机扫描的话：［2번복합기스캔함］（2 号复合机扫描文件夹）
+👆 图标显示为黄色文件夹或空白文档的样子也没关系，直接双击即可。
+3️⃣ 在打开的文件夹里找到扫描的文件，移到 U 盘或邮箱。
 
 🖥️ 店内所有电脑的桌面上都有扫描文件夹。在任何一台电脑上打开，都能看到同样的扫描文件。
 
@@ -566,12 +572,15 @@ Thông báo này luôn hiện ra khi làm trên mặt kính.
 💰 扫描费用不管尺寸和彩色·黑白，每面 100 韩元。
 #q vi: Tệp đã scan ở đâu?
 #a vi
-💻 Tệp đã scan nằm trên màn hình nền máy tính cửa hàng.
-- Scan ở máy số 1: thư mục [1번복합기스캔함] (thư mục scan máy số 1)
-- Scan ở máy số 2: thư mục [2번복합기스캔함] (thư mục scan máy số 2)
-📍 Nằm trong ô '미니 전용 프로그램' (chương trình riêng của MINI) trên màn hình nền.
+💻 Tệp đã scan nằm trong thư mục scan trên màn hình nền máy tính cửa hàng.
+
+1️⃣ Tìm ô '미니 전용 프로그램' (chương trình riêng của MINI) ở phía trên màn hình nền. (Khung đỏ trong hình)
 [[wide:images/faq/scanbox-desktop-full.jpg]]
-📌 Tùy máy tính, biểu tượng thư mục scan có thể trông như thư mục màu vàng hoặc tài liệu trống. Nếu tên giống nhau thì là cùng một thư mục scan. Chỉ cần nhấp đúp để mở.
+2️⃣ Nhấp đúp vào biểu tượng thư mục scan có số của máy bạn đã scan.
+- Scan ở máy số 1: [1번복합기스캔함] (thư mục scan máy số 1)
+- Scan ở máy số 2: [2번복합기스캔함] (thư mục scan máy số 2)
+👆 Biểu tượng trông như thư mục màu vàng hay tài liệu trống cũng không sao. Cứ nhấp đúp vào.
+3️⃣ Tìm tệp đã scan trong thư mục vừa mở rồi chuyển sang USB hoặc email.
 
 🖥️ Màn hình nền của mọi máy tính trong cửa hàng đều có thư mục scan. Mở ở máy tính nào cũng thấy cùng các tệp đã scan.
 
