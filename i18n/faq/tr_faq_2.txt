@@ -549,7 +549,7 @@ Thông báo này luôn hiện ra khi làm trên mặt kính.
 💰 Scanning costs 100 won per side, no matter the size or color/B&W.
 
 📖 Tap here for the picture guide.
-[[go:guide-scan.html#scan|How to find your scanned file]]
+[[go:guide-scan.html#scan-files|How to find your scanned file]]
 #q zh: 扫描的文件在哪里？
 #a zh
 💻 扫描的文件在店内电脑的桌面上。
@@ -565,7 +565,7 @@ Thông báo này luôn hiện ra khi làm trên mặt kính.
 💰 扫描费用不管尺寸和彩色·黑白，每面 100 韩元。
 
 📖 点这里查看详细的图片说明。
-[[go:guide-scan.html#scan|详细查看找扫描文件的方法]]
+[[go:guide-scan.html#scan-files|详细查看找扫描文件的方法]]
 #q vi: Tệp đã scan ở đâu?
 #a vi
 💻 Tệp đã scan nằm trên màn hình nền máy tính cửa hàng.
@@ -581,7 +581,7 @@ Thông báo này luôn hiện ra khi làm trên mặt kính.
 💰 Phí scan là 100 won mỗi mặt, không phân biệt khổ giấy hay màu·đen trắng.
 
 📖 Bấm vào đây để xem hướng dẫn bằng hình.
-[[go:guide-scan.html#scan|Xem cách tìm tệp đã scan]]
+[[go:guide-scan.html#scan-files|Xem cách tìm tệp đã scan]]
 
 @@40
 #q en: Is it cheaper to print two-sided?
