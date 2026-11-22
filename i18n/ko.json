@@ -4373,18 +4373,6 @@
    "index.html"
   ]
  },
- "f754560482": {
-  "ko": "24시간 365일 무인 셀프 프린트 전문점 프린트샵미니. 인쇄·복사·스캔·팩스·코팅·제본, 가까운 지점을 찾아보세요.",
-  "pages": [
-   "index.html"
-  ]
- },
- "225478f41f": {
-  "ko": "24시간 365일 무인 셀프 프린트 전문점. 인쇄·복사·스캔·팩스·코팅·제본",
-  "pages": [
-   "index.html"
-  ]
- },
  "c81b73ac7f": {
   "ko": "<a class=\"nav-logo\" href=\"#\"> <img alt=\"로고\" class=\"logo-img\" src=\"logo.jpg\"/> <span class=\"nav-logo-name\">프린트샵미니</span> </a>",
   "pages": [
@@ -4393,12 +4381,6 @@
  },
  "b13f9f7661": {
   "ko": "<a class=\"nav-cta\" href=\"#branches\">지점 찾기</a>",
-  "pages": [
-   "index.html"
-  ]
- },
- "e1b3ae6f30": {
-  "ko": "24시간 365일 무인 운영",
   "pages": [
    "index.html"
   ]
@@ -6385,12 +6367,6 @@
    "about.html"
   ]
  },
- "dddd3743e2": {
-  "ko": "<b>24 동그라미</b> 24시간, 365일 열려 있어요.",
-  "pages": [
-   "about.html"
-  ]
- },
  "3712144b35": {
   "ko": "<b>mini</b> 프린트샵미니의 이름이에요.",
   "pages": [
@@ -7060,6 +7036,36 @@
   "ko": "궁금한 키워드나 FAQ 번호를 입력하세요 (예: 환불, 코팅, 6)",
   "pages": [
    "faq.html"
+  ]
+ },
+ "10e128d496": {
+  "ko": "365일 24시간 무인 셀프 프린트 전문점 프린트샵미니. 인쇄·복사·스캔·팩스·코팅·제본, 가까운 지점을 찾아보세요.",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "6999c4b93c": {
+  "ko": "365일 24시간 무인 셀프 프린트 전문점. 인쇄·복사·스캔·팩스·코팅·제본",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "4ad4a19090": {
+  "ko": "365일 24시간 무인 운영",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "40932ac5b2": {
+  "ko": "<span class=\"bd-key\">⏰ 운영</span><span class=\"bd-val\">365일 24시간 연중무휴</span>",
+  "pages": [
+   "index.html"
+  ]
+ },
+ "344d9adcd2": {
+  "ko": "<b>24 동그라미</b> 365일, 24시간 열려 있어요.",
+  "pages": [
+   "about.html"
   ]
  }
 }

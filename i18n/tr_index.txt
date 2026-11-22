@@ -4,13 +4,13 @@
 en: PRINTSHOPMINI - 24-hour self-service print shop
 zh: PRINTSHOPMINI - 24 小时无人自助打印
 vi: PRINTSHOPMINI - In tự phục vụ 24 giờ
-@@f754560482
+@@10e128d496
 en: PRINTSHOPMINI, an unmanned self-service print shop open 24/7. Print · copy · scan · fax · laminate · bind. Find a store near you.
-zh: PRINTSHOPMINI，24 小时 365 天无人自助打印店。打印·复印·扫描·传真·塑封·装订，查找附近的门店。
+zh: PRINTSHOPMINI，365 天 24 小时无人自助打印店。打印·复印·扫描·传真·塑封·装订，查找附近的门店。
 vi: PRINTSHOPMINI, cửa hàng in tự phục vụ không người trực mở 24/7. In · photo · scan · fax · ép plastic · đóng sách. Tìm cửa hàng gần bạn.
-@@225478f41f
+@@6999c4b93c
 en: Unmanned self-service print shop, open 24/7. Print · copy · scan · fax · laminate · bind
-zh: 24 小时 365 天无人自助打印店。打印·复印·扫描·传真·塑封·装订
+zh: 365 天 24 小时无人自助打印店。打印·复印·扫描·传真·塑封·装订
 vi: Cửa hàng in tự phục vụ không người trực, mở 24/7. In · photo · scan · fax · ép plastic · đóng sách
 @@c81b73ac7f
 en: <a class="nav-logo" href="#"> <img alt="Logo" class="logo-img" src="logo.jpg"/> <span class="nav-logo-name">PRINTSHOPMINI</span> </a>
@@ -20,9 +20,9 @@ vi: <a class="nav-logo" href="#"> <img alt="Logo" class="logo-img" src="logo.jpg
 en: <a class="nav-cta" href="#branches">Find a Store</a>
 zh: <a class="nav-cta" href="#branches">查找门店</a>
 vi: <a class="nav-cta" href="#branches">Tìm cửa hàng</a>
-@@e1b3ae6f30
+@@4ad4a19090
 en: Open 24/7, no staff
-zh: 24 小时 365 天无人营业
+zh: 365 天 24 小时无人营业
 vi: Mở 24/7, không người trực
 @@439b307634
 en: <span class="blue">On your own</span>, easily,<br/> print any time
@@ -248,10 +248,10 @@ vi: <span class="bd-key">📍 Địa chỉ</span><span class="bd-val" id="detail
 en: <span class="bd-key">📞 Phone</span><span class="bd-val"><a href="#" id="detailTel" style="color:inherit;font-weight:700;text-decoration:none"></a></span>
 zh: <span class="bd-key">📞 电话</span><span class="bd-val"><a href="#" id="detailTel" style="color:inherit;font-weight:700;text-decoration:none"></a></span>
 vi: <span class="bd-key">📞 Điện thoại</span><span class="bd-val"><a href="#" id="detailTel" style="color:inherit;font-weight:700;text-decoration:none"></a></span>
-@@75174f56c8
-en: <span class="bd-key">⏰ Hours</span><span class="bd-val">24 hours, 365 days, no days off</span>
-zh: <span class="bd-key">⏰ 营业</span><span class="bd-val">24 小时 365 天全年无休</span>
-vi: <span class="bd-key">⏰ Giờ mở cửa</span><span class="bd-val">24 giờ, 365 ngày, không nghỉ</span>
+@@40932ac5b2
+en: <span class="bd-key">⏰ Hours</span><span class="bd-val">365 days, 24 hours, no days off</span>
+zh: <span class="bd-key">⏰ 营业</span><span class="bd-val">365 天 24 小时全年无休</span>
+vi: <span class="bd-key">⏰ Giờ mở cửa</span><span class="bd-val">365 ngày, 24 giờ, không nghỉ</span>
 @@f58fb3075e
 en: <span class="bd-key">🖨️ Services</span><span class="bd-val">Print · Copy · Scan · Fax · Laminate · Bind</span>
 zh: <span class="bd-key">🖨️ 服务</span><span class="bd-val">打印 · 复印 · 扫描 · 传真 · 塑封 · 装订</span>
