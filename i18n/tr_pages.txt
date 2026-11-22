@@ -860,7 +860,7 @@ vi: Sản phẩm
 en: L-folder A4
 zh: L 型文件夹 A4
 vi: Bìa kẹp chữ L A4
-@@ui 폴대파일 A4
+@@ui 쫄대파일 A4
 en: Slide-binder file A4
 zh: 抽杆文件夹 A4
 vi: Bìa kẹp thanh trượt A4
