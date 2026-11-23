@@ -266,3 +266,7 @@ vi: Lần đầu đến? Hãy đi theo từng bước.
 en: These are the easiest ways. Tap one to see photos or a video.
 zh: 这些是最容易找到的路线，点一下可以看照片或视频。
 vi: Đây là những đường dễ tìm nhất. Bấm vào để xem ảnh hoặc video.
+@@ui 오픈 준비중
+en: Getting ready to open
+zh: 开业准备中
+vi: Đang chuẩn bị khai trương
