@@ -270,3 +270,7 @@ vi: Đây là những đường dễ tìm nhất. Bấm vào để xem ảnh ho�
 en: Getting ready to open
 zh: 开业准备中
 vi: Đang chuẩn bị khai trương
+@@ui {y}년 {m}월 {d}일 오픈
+en: Opening {y}-{m}-{d}
+zh: {y}年{m}月{d}日开业
+vi: Khai trương ngày {d}/{m}/{y}

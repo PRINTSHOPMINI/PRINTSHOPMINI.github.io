@@ -1105,6 +1105,7 @@ function biFormHtml(p,withPhotos){
       '<div class="form-row" style="margin-bottom:0"><label>영업 상태</label><select id="'+p+'Status">'+BI_STATUS.map(function(s){return '<option>'+s+'</option>';}).join('')+'</select></div>'+
     '</div>'+
     '<div class="form-row" style="margin-top:12px"><label>오픈 예정 배지 글자 <span style="font-weight:400;color:var(--text3)">(오픈 예정일 때만, 예: 12월 오픈 예정)</span></label><input type="text" id="'+p+'OpenNote" placeholder="12월 오픈 예정"></div>'+
+    '<div class="form-row"><label>오픈 날짜 <span style="font-weight:400;color:var(--text3)">(오픈 예정일 때만 · 영업 여부 줄에 \'2026년 12월 8일 오픈\'처럼 보여요)</span></label><input type="date" id="'+p+'OpenDate"></div>'+
     '<div class="form-row"><label>이용 가능 서비스</label><div style="display:flex;gap:14px;flex-wrap:wrap">'+
       BI_SVCS.map(function(s){return '<label style="'+lab+';font-weight:500;margin:0"><input type="checkbox" class="'+p+'Svc" value="'+s[0]+'" checked style="'+cb+'"> '+s[1]+'</label>';}).join('')+
       '<label style="'+lab+';font-weight:500;margin:0"><input type="checkbox" id="'+p+'Color" checked style="'+cb+'"> 🌈 컬러 출력</label>'+
@@ -1132,6 +1133,7 @@ function biFill(p,i){
   document.getElementById(p+'No').value=i.no||'';
   document.getElementById(p+'Status').value=i.status||'영업중';
   document.getElementById(p+'OpenNote').value=i.open_note||'';
+  document.getElementById(p+'OpenDate').value=i.open_date||'';
   var sv=i.services||BI_SVCS.map(function(s){return s[0];});
   document.querySelectorAll('.'+p+'Svc').forEach(function(c){c.checked=sv.indexOf(c.value)>=0;});
   document.getElementById(p+'Color').checked=i.color!==false;
@@ -1146,6 +1148,7 @@ function biRead(p,photos){
     no:parseInt(document.getElementById(p+'No').value,10)||0,
     status:document.getElementById(p+'Status').value,
     open_note:document.getElementById(p+'OpenNote').value.trim(),
+    open_date:document.getElementById(p+'OpenDate').value,
     services:[].map.call(document.querySelectorAll('.'+p+'Svc:checked'),function(c){return c.value;}),
     color:document.getElementById(p+'Color').checked,
     papers:document.getElementById(p+'Papers').value.trim(),

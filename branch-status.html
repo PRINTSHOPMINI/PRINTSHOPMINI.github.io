@@ -148,6 +148,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,
 .dir-photos a{display:block;border-radius:12px;overflow:hidden;border:1px solid var(--border);background:#fff;cursor:zoom-in}
 .dir-photos img{display:block;width:100%;height:auto}
 @media(max-width:760px){.dir-photos{grid-template-columns:1fr}}
+.open-date{display:inline-block;margin-left:8px;background:#FFF7ED;color:#C2410C;border:1.5px solid #FDBA74;border-radius:50px;padding:0 10px;font-size:13.5px;font-weight:800}
 .copy-btn{margin-left:6px;font-size:12px;font-weight:700;color:var(--text3);background:#fff;border:1px solid var(--border);border-radius:6px;padding:1px 8px;cursor:pointer;vertical-align:1px}
 .copy-btn:hover{color:var(--blue);border-color:var(--blue)}
 .svcs{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:4px}
@@ -306,6 +307,7 @@ function info(b){
     no:i.no||0,
     status:i.status||'영업중',
     openNote:i.open_note||'',
+    openDate:i.open_date||'',
     photos:(i.photos||[]).filter(Boolean),
     services:i.services||SVCS.map(function(s){return s[0];}),
     papers:i.papers!=null?i.papers:'A4, B4, A3',
@@ -343,6 +345,8 @@ function stateHtml(x){
   if(x.status==='임시 휴업')return '<span class="state rest">'+T('임시 휴업')+'</span>';
   return '<span class="state">'+T('영업중')+'</span>';
 }
+// 오픈 날짜 2026-12-08 → '2026년 12월 8일 오픈' (외국어는 번역 문구 {y}{m}{d})
+function openDateText(d){var m=/^(\d{4})-(\d{1,2})-(\d{1,2})$/.exec(d||'');if(!m)return d;return T('{y}년 {m}월 {d}일 오픈').replace('{y}',m[1]).replace('{m}',+m[2]).replace('{d}',+m[3]);}
 function noText(n){return n?T('{n}호점').replace('{n}',n):'';}
 
 var REGION='전체';
@@ -441,7 +445,7 @@ function renderDetail(b){
     [T('영수증'),x.status==='오픈 예정'?'':'<div class="rc-note">'+T('영수증이 필요하면 영수증 신청 사이트에서 바로 받을 수 있어요')+'<br><small>'+T('카드영수증(이미지) · 거래명세서(PDF)')+'</small></div>'+
       '<div class="rc-btns"><a class="rc-btn" href="https://fax.printnuri.com/receipt" target="_blank" rel="noopener">🧾 '+T('영수증 받기')+'</a><a class="rc-how" href="faq.html#faq-6">'+T('받는 방법 보기')+' ›</a></div>'],
     [T('부가 서비스'),esc(x.extras)],
-    [T('영업 여부'),x.status==='오픈 예정'?esc(x.openNote?T(x.openNote):T('오픈 예정')):T(x.status)]
+    [T('영업 여부'),x.status==='오픈 예정'?esc(x.openNote?T(x.openNote):T('오픈 예정'))+(x.openDate?' <span class="open-date">'+esc(openDateText(x.openDate))+'</span>':''):T(x.status)]
   ];
   document.getElementById('dRows').innerHTML=rows.filter(function(r){return r[1];}).map(function(r){
     return '<div class="d-row"><div class="d-key">'+r[0]+'</div><div class="d-val">'+r[1]+'</div></div>';
